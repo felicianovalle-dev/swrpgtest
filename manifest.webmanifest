@@ -1,9 +1,9 @@
 {
   "id": "./",
-  "name": "Sable Reach \u2014 Frontier Pixel Art",
+  "name": "Sable Reach \u2014 Expanded World",
   "short_name": "Sable Reach",
-  "description": "Reference-directed 16-bit pixel art with iPhone-safe startup.",
-  "start_url": "./index.html?v=93",
+  "description": "Full-screen exploration, corrected sprites, and handcrafted frontier architecture.",
+  "start_url": "./index.html?v=94",
   "scope": "./",
   "display": "standalone",
   "background_color": "#080b11",
