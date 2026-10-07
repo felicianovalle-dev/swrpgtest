@@ -1,20 +1,26 @@
 {
-  "name": "Star Wars: Sable Reach",
-  "short_name": "Sable Reach",
-  "description": "A browser-based FFG-style Star Wars roleplaying game.",
   "id": "./",
-  "start_url": "./",
+  "name": "Sable Reach \u2014 Frontier Pixel Art",
+  "short_name": "Sable Reach",
+  "description": "Reference-directed 16-bit pixel art with iPhone-safe startup.",
+  "start_url": "./index.html?v=93",
   "scope": "./",
   "display": "standalone",
-  "orientation": "any",
   "background_color": "#080b11",
   "theme_color": "#080b11",
+  "orientation": "any",
   "icons": [
     {
-      "src": "./icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
