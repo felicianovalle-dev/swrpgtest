@@ -14286,6 +14286,14 @@ window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version,dia
 @media(max-width:600px){#pixelworld67 .pixel-shell67{grid-template-columns:1fr!important}.location-plaque90{font-size:9px!important}#pixelworld67 .pixel-stage67{border-width:2px}}
 
 @media(min-width:1180px){.top{padding:10px 16px!important}.top h1{font-size:20px!important;margin:0!important}.top p{display:none}.rc-banner{display:none}#quickHud{margin-top:10px!important;padding:8px!important}#sidebarInner78{flex:1;min-height:0}#desktopShell78{margin-top:10px;overflow:hidden}.wrap{height:100dvh!important}#pixelworld67 .pixel-side67{max-height:calc(100dvh - 300px)}}
+@media(min-width:1180px){
+ #pixelworld67:not(.hidden){display:flex!important;flex-direction:column;gap:10px;overflow:hidden!important}
+ #pixelworld67>.row:first-child,#pixelworld67>.pixel-mapbar67{display:none!important}
+ #pixelworld67>.toolbar80{position:static!important;flex:none;margin:0!important}
+ #pixelworld67>.pixel-shell67{flex:1;min-height:0;grid-template-rows:minmax(0,1fr)}
+ #pixelworld67 .pixel-stage67{position:relative!important;top:auto!important;align-self:start}
+ #pixelworld67 .pixel-side67{height:100%;max-height:100%;overflow:auto}
+}
 </style><script id="referenceArt93Script">/* Reference-directed 32px material art; coordinates retain the 16px gameplay grid. */
 const previousMap93=pixelMap67;
 pixelMap67=function(id){let m;if(id?.startsWith('hub:')){let hub=id.slice(4);m=hub==='sable'?buildSableTown86():buildHubMap74(hub)}else m=previousMap93(id);
