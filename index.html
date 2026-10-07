@@ -14421,5 +14421,14 @@ document.title='Star Wars: Sable Reach — Reference Art Pass';
 const art93Header=document.querySelector('.top h1');if(art93Header)art93Header.textContent='STAR WARS: SABLE REACH · FRONTIER PIXEL ART';
 const art93Intro=document.querySelector('.top p');if(art93Intro)art93Intro.textContent='Explore Sable Reach in richer 16-bit pixel art: textured frontier stone, crimson rugs, bottle racks, amber lanterns, and blue steel ship interiors.';
 window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version,art93:ART93};
+/* Keep late-added historical guide cards inside Guide instead of covering the game workspace. */
+function tidyWorkspace93(){
+ const guide=$('guide'),host=$('tabHost78');if(!guide||!host)return;
+ document.querySelectorAll('.wrap > section').forEach(section=>{if(section.id==='combat'){host.appendChild(section);return}if(!section.classList.contains('tab'))guide.appendChild(section)});
+}
+const previousRender93=renderAll;
+renderAll=function(){let r=previousRender93();tidyWorkspace93();return r};
+const previousNav93=renderNavTab;
+renderNavTab=function(id){let r=previousNav93(id);tidyWorkspace93();return r};
 
 try{renderAll();markBoot90('Visual layer loaded successfully · Reference Art Pass · iPhone-safe startup.',true)}catch(e){showRuntimeError(`Recovered on opening: ${e.message}`);markBoot90('Core RPG opened; visual recovery active.',false)}</script></body></html>
