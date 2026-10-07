@@ -1,4 +1,4 @@
-const CACHE='sable-reach-v1-9-reference-art93-layout';
+const CACHE='sable-reach-v1-9-reference-art93-final';
 const SHELL=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 
 self.addEventListener('install',event=>{
