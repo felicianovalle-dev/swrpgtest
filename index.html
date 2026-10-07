@@ -14288,7 +14288,8 @@ window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version,dia
 @media(min-width:1180px){.top{padding:10px 16px!important}.top h1{font-size:20px!important;margin:0!important}.top p{display:none}.rc-banner{display:none}#quickHud{margin-top:10px!important;padding:8px!important}#sidebarInner78{flex:1;min-height:0}#desktopShell78{margin-top:10px;overflow:hidden}.wrap{height:100dvh!important}#pixelworld67 .pixel-side67{max-height:calc(100dvh - 300px)}}
 </style><script id="referenceArt93Script">/* Reference-directed 32px material art; coordinates retain the 16px gameplay grid. */
 const previousMap93=pixelMap67;
-pixelMap67=function(id){if(id?.startsWith('hub:')){let hub=id.slice(4);return hub==='sable'?buildSableTown86():buildHubMap74(hub)}return previousMap93(id)};
+pixelMap67=function(id){let m;if(id?.startsWith('hub:')){let hub=id.slice(4);m=hub==='sable'?buildSableTown86():buildHubMap74(hub)}else m=previousMap93(id);
+ if(m.id!=='ship'){m.hubId=m.hubId||S.world?.currentHub||'sable';if(m.id==='sableTown'){let q=visualQuestObject73(m);if(q&&!m.objects.some(o=>o.kind==='quest73'))m.objects.push(q)}}return m};
 const previousCantina93=buildCantinaInterior86;
 buildCantinaInterior86=function(){let m=previousCantina93();for(let o of m.objects)if(o.kind==='booth92'){o.w=2;o.h=2}
  for(let x of [18,20,22,23])m.objects.push({id:'barJoin93-'+x,kind:'counter92',x,y:5,label:'Cantina Bar',prompt:'A worn brass-edged counter',action:'noop',block:true});
