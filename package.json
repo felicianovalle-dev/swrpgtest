@@ -1,7 +1,7 @@
 {
   "name": "sable-reach-pwa",
-  "version": "1.9.4",
+  "version": "1.9.6",
   "private": true,
-  "scripts": {"build": "python3 scripts/build_world94.py", "test": "node scripts/check_world94.cjs"},
+  "scripts": {"build": "python3 scripts/build_world96.py", "test": "node scripts/check_world94.cjs && node scripts/check_work96.cjs"},
   "devDependencies": {"@napi-rs/canvas": "1.0.10", "jsdom": "30.1.2"}
 }

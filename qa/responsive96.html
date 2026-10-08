@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sable Reach · Responsive layout check</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#07111b;color:#e3edf4;font:14px system-ui,sans-serif}header{padding:18px 24px;background:#112333;border-bottom:1px solid #405970}h1{font-size:20px;margin:0 0 8px}p{margin:7px 0;color:#b8cbd9}label{display:inline-flex;align-items:center;gap:8px;margin:8px 18px 0 0}select{padding:9px;background:#20384a;border:1px solid #577084;color:#fff;border-radius:4px}main{display:grid;justify-content:center;padding:20px;overflow:auto}iframe{display:block;width:390px;height:844px;border:1px solid #5b788c;border-radius:10px;background:#0b111a}
+</style></head><body><header><h1>Sable Reach · Mobile layout check</h1><p>Real game in a narrow browser viewport. This checks responsive layout, not Safari or physical iPhone hardware.</p><label for="size96">Viewport<select id="size96"><option value="390,844">390 × 844 · portrait</option><option value="375,667">375 × 667 · compact portrait</option><option value="430,932">430 × 932 · large portrait</option><option value="844,390">844 × 390 · landscape</option><option value="1280,720">1280 × 720 · laptop</option></select></label><label for="standalone96"><input id="standalone96" type="checkbox" checked>Standalone safe-area fallback</label></header><main><iframe id="game96" title="Responsive game preview" src="../index.html?v=96&amp;layoutQA=standalone"></iframe></main><script>
+const frame=document.getElementById('game96'),size=document.getElementById('size96'),mode=document.getElementById('standalone96');
+size.onchange=()=>{const [w,h]=size.value.split(',');frame.style.width=w+'px';frame.style.height=h+'px'};
+mode.onchange=()=>{frame.src='../index.html?v=96'+(mode.checked?'&layoutQA=standalone':'')};
+</script></body></html>

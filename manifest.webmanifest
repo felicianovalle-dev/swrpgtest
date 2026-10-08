@@ -1,9 +1,9 @@
 {
   "id": "./",
-  "name": "Sable Reach \u2014 Expanded World",
+  "name": "Sable Reach \u2014 Jobs & Training",
   "short_name": "Sable Reach",
-  "description": "Full-screen exploration, corrected sprites, and handcrafted frontier architecture.",
-  "start_url": "./index.html?v=94",
+  "description": "Full-screen pixel exploration, accessible paid work and training, and an iPhone-safe mobile interface.",
+  "start_url": "./index.html?v=96",
   "scope": "./",
   "display": "standalone",
   "background_color": "#080b11",
