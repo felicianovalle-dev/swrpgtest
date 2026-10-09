@@ -1,4 +1,4 @@
-const CACHE='sable-reach-v1-9-phase96-jobs-mobile';
+const CACHE='sable-reach-v1-9-phase96-navigation-r2';
 const SHELL=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 
 self.addEventListener('install',event=>{

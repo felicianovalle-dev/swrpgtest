@@ -14838,6 +14838,35 @@ try{renderAll();markBoot90('Visual layer loaded successfully · Expanded World �
  .work-balance96{gap:14px;font-size:12px}.work-head96>.btn{font-size:12px;padding:8px;min-width:58px}
  .work-result96{font-size:13px}.work-tabs96{margin:16px 0}.work-note96{font-size:12px}
 }
+
+/* Navigation-only follow-up: visible World shortcuts and measured menu bounds. */
+@media(max-width:850px), (orientation:landscape) and (max-height:520px) and (max-width:950px){
+ body.world-play94.menu-open94 #nav.nav.nav78{position:static!important;max-height:none;overflow:visible;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+ /* The full-screen world has its own navigation: two dedicated shortcuts above the compact utility row. */
+ body.world-play94 #worldFooter94{display:grid;grid-template-columns:minmax(0,1fr) 82px;gap:5px 7px;align-items:stretch;min-height:0;padding:6px 8px}
+ body.world-play94 #worldFooter94 .world-worklinks95{grid-column:1 / -1;grid-row:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ body.world-play94 #worldFooter94 .world-links94{grid-column:1;grid-row:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;min-width:0}
+ body.world-play94 #worldFooter94 .world-prompt94{display:none}
+ body.world-play94 #worldFooter94 #worldInteract94{grid-column:2;grid-row:2;min-width:0;width:100%;height:42px}
+ body.world-play94 #pixelworld67 #worldFooter94 .world-button94{box-sizing:border-box;min-width:0;width:100%;min-height:42px;white-space:nowrap;font-size:10px;padding:5px 2px;line-height:1.2}
+ body.world-play94 #pixelworld67 #worldFooter94 .world-worklinks95 .world-button94{font-size:13px;font-weight:800;background:#203047;border-color:#8d7548;color:#ffe0a0}
+ body.world-play94.menu-open94 #sidebar78{left:8px;width:min(350px,calc(100vw - 16px));max-height:none;min-width:0;top:var(--world-menu-top95,calc(78px + env(safe-area-inset-top)))!important;bottom:var(--world-menu-bottom95,calc(112px + env(safe-area-inset-bottom)))!important;}
+}
+@media(min-width:481px) and (max-width:850px){body.world-play94 #worldFooter94 .world-links94{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:850px) and (max-height:520px) and (orientation:landscape){body.world-play94 #worldFooter94{padding:4px 8px;gap:3px 6px}body.world-play94 #pixelworld67 #worldFooter94 .world-button94{min-height:34px;height:34px}}
+@media(min-width:851px){.world-worklinks95{display:flex;gap:6px}.world-worklinks95 .world-button94{font-weight:800;border-color:#8d7548!important;color:#ffe0a0!important}}
+@media(min-width:851px) and (max-width:950px) and (max-height:520px) and (orientation:landscape){
+ body:not(.world-play94){overflow-x:hidden;padding-bottom:0!important}
+ body:not(.world-play94) .wrap{display:block!important;width:100%;max-width:100%;padding:10px 10px 92px!important}
+ body:not(.world-play94) #sidebar78,body:not(.world-play94) #quickHud,body:not(.world-play94) .toolbar80{display:none!important}
+ body:not(.world-play94) #desktopShell78{display:block!important;margin-top:0!important}
+ body:not(.world-play94) #main78,body:not(.world-play94) #tabHost78{width:100%;min-width:0}
+ body.world-play94 #worldFooter94 .world-links94{grid-template-columns:repeat(5,minmax(0,1fr))}
+ #mobileDock52.mobile-dock52{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:100;padding:5px 7px calc(7px + env(safe-area-inset-bottom));background:#080c13;border-top:1px solid var(--line)}
+ #mobileDock52 button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:43px;padding:4px;border:0;background:transparent;color:var(--text)}
+ #mobileDock52 button span{color:var(--gold)}
+ #mobileSheet52:not(.hidden){display:grid}
+}
 </style><script id="downtime96Script">
 /* Phases 95–96. Existing formulas and schema-92 saves remain authoritative. */
 const WORK96={busy:false,notice:null};
@@ -14952,7 +14981,7 @@ function renderWorkHub96(){
 function installDowntimeDock96(){
  const dock=$('mobileDock52');if(!dock||dock.dataset.phase96)return;
  dock.dataset.phase96='true';delete dock.dataset.ready;
- dock.innerHTML='<button data-mobiletab52="playhub80"><span>⌂</span><small>Home</small></button><button data-mobiletab52="pixelworld67"><span>◎</span><small>World</small></button><button data-mobiletab52="worktraining96" data-workpanel96="jobs"><span>Cr</span><small>Jobs</small></button><button data-mobiletab52="worktraining96" data-workpanel96="training"><span>↑</span><small>Train</small></button><button id="mobileMore52"><span>☰</span><small>More</small></button>';
+ dock.innerHTML='<button data-mobiletab52="playhub80"><span>⌂</span><small>Home</small></button><button data-mobiletab52="pixelworld67"><span>◎</span><small>World</small></button><button data-mobiletab52="worktraining96" data-workpanel96="jobs"><span>Cr</span><small>Jobs</small></button><button data-mobiletab52="worktraining96" data-workpanel96="training"><span>↑</span><small>Training</small></button><button id="mobileMore52"><span>☰</span><small>More</small></button>';
  initMobile52();dock.querySelectorAll('[data-workpanel96]').forEach(b=>b.onclick=()=>openWorkHub96(b.dataset.workpanel96));
 }
 const priorSyncMobile96=syncMobileNav52;
@@ -15007,6 +15036,47 @@ const priorDiagnostics96=phase45Diagnostics;
 phase45Diagnostics=function(){const rows=priorDiagnostics96();rows.push({name:'Phase 95 local-map styles',ok:!!$('downtime96Styles')},{name:'Phase 96 Jobs and Training hub',ok:!!$('worktraining96')&&document.querySelectorAll('#mobileDock52 [data-workpanel96]').length===2},{name:'Phase 96 saved downtime state',ok:!!serializableState().downtime96&&serializableState().schemaVersion===92});return rows};
 BUILD_INFO.version='96.0-jobs-training-mobile';BUILD_INFO.saveSchema=92;
 window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
+
+/* Navigation-only follow-up. Existing Jobs & Training workflows remain authoritative. */
+(function(){
+  'use strict';
+  function installWorldShortcuts95(){
+    const footer=document.getElementById('worldFooter94');if(!footer||footer.querySelector('.world-worklinks95'))return;
+    const work=document.createElement('div');work.className='world-worklinks95';work.setAttribute('aria-label','Jobs and training shortcuts');
+    work.innerHTML='<button type="button" class="world-button94" data-world-shortcut95="jobs">◆ Jobs</button><button type="button" class="world-button94" data-world-shortcut95="training">✦ Training</button>';
+    footer.insertBefore(work,footer.firstChild);
+    work.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>openWorkHub96(b.dataset.worldShortcut95)));
+  }
+  // Measure the actual world controls: landscape, safe areas and larger text
+  // can change their height. Keep the menu inside the gap between them.
+  function fitWorldMenu95(){
+    if(!window.matchMedia('(max-width:850px), (orientation:landscape) and (max-height:520px) and (max-width:950px)').matches||!document.body.classList.contains('world-play94'))return;
+    const bar=document.getElementById('worldBar94'),footer=document.getElementById('worldFooter94');
+    if(!bar||!footer)return;
+    const top=Math.ceil(bar.getBoundingClientRect().bottom+8);
+    const bottom=Math.ceil(window.innerHeight-footer.getBoundingClientRect().top+8);
+    document.documentElement.style.setProperty('--world-menu-top95',top+'px');
+    document.documentElement.style.setProperty('--world-menu-bottom95',bottom+'px');
+  }
+  if(typeof syncWorldUI94==='function'){
+    const originalSync=syncWorldUI94;
+    syncWorldUI94=function(){const result=originalSync.apply(this,arguments);fitWorldMenu95();return result};
+  }
+  let menuResize95;
+  function observeWorldControls95(){
+    if(menuResize95||typeof ResizeObserver==='undefined')return;
+    const bar=document.getElementById('worldBar94'),footer=document.getElementById('worldFooter94');
+    if(!bar||!footer)return;
+    menuResize95=new ResizeObserver(fitWorldMenu95);
+    menuResize95.observe(bar);menuResize95.observe(footer);
+  }
+  window.addEventListener('resize',fitWorldMenu95);
+  if(typeof ensureWorldUI94==='function'){
+    const original=ensureWorldUI94;
+    ensureWorldUI94=function(){const result=original.apply(this,arguments);installWorldShortcuts95();observeWorldControls95();return result};
+    installWorldShortcuts95();observeWorldControls95();fitWorldMenu95();
+  }
+})();
 
 try{renderAll();markBoot90('Ready · Jobs & Training · mobile layout repaired.',true)}catch(e){showRuntimeError(`Recovered on opening: ${e.message}`);markBoot90('Core RPG opened; downtime recovery active.',false)}</script>
 </body></html>

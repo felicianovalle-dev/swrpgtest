@@ -91,6 +91,6 @@ function economicState(){return run('JSON.stringify({credits:S.credits,xp:S.earn
  check('Save import preserves selection, activity history, and practice',()=>run('S.downtime96.studySkill==="Medicine"&&S.downtime96.panel==="training"&&S.downtime96.history.length>0&&S.training.skills.Medicine.progress===2'));
  run(`globalThis.oldSave96=JSON.parse(${JSON.stringify(original)});delete oldSave96.downtime96;oldSave96.training={skills:{Mechanics:{progress:1}},sessions:8};hydrateState(oldSave96,"legacy schema92");`);
  check('Older saves initialize the new hub without losing old training',()=>run('S.downtime96.shifts===0&&S.downtime96.history.length===0&&S.training.skills.Mechanics.progress===1&&S.training.sessions===8'));
- check('Versioned PWA update does not change save keys',()=>fs.readFileSync(path.join(root,'sw.js'),'utf8').includes('phase96-jobs-mobile')&&run('serializableState().schemaVersion===92'));
+ check('Versioned PWA update does not change save keys',()=>fs.readFileSync(path.join(root,'sw.js'),'utf8').includes('phase96-navigation-r2')&&run("serializableState().schemaVersion===92&&RC_SAVE_KEY==='swrpg-phase92'"));
  assert.deepEqual(errors,[]);const result={targeted:checks.length,checks,errors};fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));w.close();
 })().catch(e=>{console.error(e);w.close();process.exit(1)});

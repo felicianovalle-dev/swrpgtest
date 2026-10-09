@@ -111,7 +111,7 @@ function renderWorkHub96(){
 function installDowntimeDock96(){
  const dock=$('mobileDock52');if(!dock||dock.dataset.phase96)return;
  dock.dataset.phase96='true';delete dock.dataset.ready;
- dock.innerHTML='<button data-mobiletab52="playhub80"><span>⌂</span><small>Home</small></button><button data-mobiletab52="pixelworld67"><span>◎</span><small>World</small></button><button data-mobiletab52="worktraining96" data-workpanel96="jobs"><span>Cr</span><small>Jobs</small></button><button data-mobiletab52="worktraining96" data-workpanel96="training"><span>↑</span><small>Train</small></button><button id="mobileMore52"><span>☰</span><small>More</small></button>';
+ dock.innerHTML='<button data-mobiletab52="playhub80"><span>⌂</span><small>Home</small></button><button data-mobiletab52="pixelworld67"><span>◎</span><small>World</small></button><button data-mobiletab52="worktraining96" data-workpanel96="jobs"><span>Cr</span><small>Jobs</small></button><button data-mobiletab52="worktraining96" data-workpanel96="training"><span>↑</span><small>Training</small></button><button id="mobileMore52"><span>☰</span><small>More</small></button>';
  initMobile52();dock.querySelectorAll('[data-workpanel96]').forEach(b=>b.onclick=()=>openWorkHub96(b.dataset.workpanel96));
 }
 const priorSyncMobile96=syncMobileNav52;

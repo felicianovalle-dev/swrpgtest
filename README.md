@@ -51,3 +51,12 @@ using the Mos Dara cantina as a style reference. See the adjacent prompt file.
 script embeds that layer and the checked-in atlases in the standalone game.
 `src/mobile95.css`, `src/work96.css`, and `src/work96.js` are the editable mobile
 and downtime layers; `scripts/build_world96.py` embeds both phases after World.
+
+## Navigation-only follow-up, October 9, 2026
+
+Jobs and Training now remain directly visible in the World footer as well as
+the phone dock. The World menu scrolls within the space between its measured
+header and footer, including landscape and rotation; its section grid stays
+inside the menu instead of covering footer buttons. Both shortcuts use the
+existing Jobs & Training workflows. The offline cache revision changes; the
+release version, schema-92 saves and gameplay rules remain unchanged.

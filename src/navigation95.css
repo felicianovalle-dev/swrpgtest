@@ -1,0 +1,28 @@
+/* Navigation-only follow-up: visible World shortcuts and measured menu bounds. */
+@media(max-width:850px), (orientation:landscape) and (max-height:520px) and (max-width:950px){
+ body.world-play94.menu-open94 #nav.nav.nav78{position:static!important;max-height:none;overflow:visible;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+ /* The full-screen world has its own navigation: two dedicated shortcuts above the compact utility row. */
+ body.world-play94 #worldFooter94{display:grid;grid-template-columns:minmax(0,1fr) 82px;gap:5px 7px;align-items:stretch;min-height:0;padding:6px 8px}
+ body.world-play94 #worldFooter94 .world-worklinks95{grid-column:1 / -1;grid-row:1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+ body.world-play94 #worldFooter94 .world-links94{grid-column:1;grid-row:2;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:3px;min-width:0}
+ body.world-play94 #worldFooter94 .world-prompt94{display:none}
+ body.world-play94 #worldFooter94 #worldInteract94{grid-column:2;grid-row:2;min-width:0;width:100%;height:42px}
+ body.world-play94 #pixelworld67 #worldFooter94 .world-button94{box-sizing:border-box;min-width:0;width:100%;min-height:42px;white-space:nowrap;font-size:10px;padding:5px 2px;line-height:1.2}
+ body.world-play94 #pixelworld67 #worldFooter94 .world-worklinks95 .world-button94{font-size:13px;font-weight:800;background:#203047;border-color:#8d7548;color:#ffe0a0}
+ body.world-play94.menu-open94 #sidebar78{left:8px;width:min(350px,calc(100vw - 16px));max-height:none;min-width:0;top:var(--world-menu-top95,calc(78px + env(safe-area-inset-top)))!important;bottom:var(--world-menu-bottom95,calc(112px + env(safe-area-inset-bottom)))!important;}
+}
+@media(min-width:481px) and (max-width:850px){body.world-play94 #worldFooter94 .world-links94{grid-template-columns:repeat(5,minmax(0,1fr))}}
+@media(max-width:850px) and (max-height:520px) and (orientation:landscape){body.world-play94 #worldFooter94{padding:4px 8px;gap:3px 6px}body.world-play94 #pixelworld67 #worldFooter94 .world-button94{min-height:34px;height:34px}}
+@media(min-width:851px){.world-worklinks95{display:flex;gap:6px}.world-worklinks95 .world-button94{font-weight:800;border-color:#8d7548!important;color:#ffe0a0!important}}
+@media(min-width:851px) and (max-width:950px) and (max-height:520px) and (orientation:landscape){
+ body:not(.world-play94){overflow-x:hidden;padding-bottom:0!important}
+ body:not(.world-play94) .wrap{display:block!important;width:100%;max-width:100%;padding:10px 10px 92px!important}
+ body:not(.world-play94) #sidebar78,body:not(.world-play94) #quickHud,body:not(.world-play94) .toolbar80{display:none!important}
+ body:not(.world-play94) #desktopShell78{display:block!important;margin-top:0!important}
+ body:not(.world-play94) #main78,body:not(.world-play94) #tabHost78{width:100%;min-width:0}
+ body.world-play94 #worldFooter94 .world-links94{grid-template-columns:repeat(5,minmax(0,1fr))}
+ #mobileDock52.mobile-dock52{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:100;padding:5px 7px calc(7px + env(safe-area-inset-bottom));background:#080c13;border-top:1px solid var(--line)}
+ #mobileDock52 button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;min-height:43px;padding:4px;border:0;background:transparent;color:var(--text)}
+ #mobileDock52 button span{color:var(--gold)}
+ #mobileSheet52:not(.hidden){display:grid}
+}
