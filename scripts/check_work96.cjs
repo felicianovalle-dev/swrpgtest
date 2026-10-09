@@ -30,6 +30,13 @@ function economicState(){return run('JSON.stringify({credits:S.credits,xp:S.earn
  run('S.dead=false;S.wounds=0;S.strain=0;S.earnedXp=30;S.skills.Mechanics=0;S.training.skills.Mechanics={progress:0};ensureDowntime96();');
  const valid=economicState();
  check('Unknown skill IDs are rejected without mutation',()=>run("workShift96('bogus')===false&&practiceSkill96('bogus')===false&&advanceSkill96('bogus')===false")&&economicState()===valid);
+ run('openWorkHub96("jobs");S.gmDestinyMode="off"');
+ const liveWorkBefore=run('({day:S.world.day,shifts:S.downtime96.shifts})');
+ w.document.getElementById('workShift96').click();
+ check('Real paid-work button completes the unmocked dice flow',()=>run('S.downtime96.shifts')===liveWorkBefore.shifts+1&&run('S.world.day')===liveWorkBefore.day+1&&w.document.querySelector('.work-result96')?.textContent.includes('Shift complete'));
+ run('openWorkHub96("training")');const livePracticeBefore=run('S.training.sessions');
+ w.document.getElementById('practiceSkill96').click();
+ check('Real practice button completes the unmocked dice flow',()=>run('S.training.sessions')===livePracticeBefore+1&&w.document.querySelector('.work-result96')?.textContent.includes('practice'));
  run('globalThis.realPerform96=performBest;globalThis.realRoll96=rollNarr;globalThis.realRandom96=Math.random;Math.random=()=>.9;performBest=()=>({q:{actor:actorById("pc")},r:{ok:true,ns:2,na:3,tr:0,de:0}});');
  const beforeWork=run('({cr:S.credits,xp:S.earnedXp,world:S.world.day,medical:S.medical.day,shifts:S.downtime96.shifts,skills:JSON.stringify(S.skills)})');
  const workResult=run('workShift96("Mechanics")');

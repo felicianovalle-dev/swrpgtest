@@ -13,6 +13,7 @@ cards, or Area & travel in World. Two labeled kiosks sit on the Sable Reach
 central plaza just south of Broker's Row. Ask About Work also opens paid work.
 
 Paid shifts use the existing best-crew difficulty-2 check and payout formula.
+When the solo-GM Destiny prompt is enabled, answer it to complete the shift.
 Practice uses the existing progress formula, now supporting every skill, and
 retains previous training progress. Both consume one day including a night's
 rest. XP advancement uses the existing career costs and does not consume a day.
@@ -37,7 +38,7 @@ art preparation). Run `npm install` and `npm test` for the state/canvas checks.
 The atlas extraction helper requires the original atlas when run after repair;
 normal builds reuse the checked-in corrected asset.
 
-Validation: `npm test` runs 27 World state/canvas checks and 35 Jobs & Training
+Validation: `npm test` runs 27 World state/canvas checks and 37 Jobs & Training
 workflow checks. The World suite also runs 267 existing smoke checks and 112
 diagnostics. `qa/responsive96.html` displays the actual game at phone-sized
 viewport widths, with an explicit standalone-spacing preview. Native iPhone
