@@ -18,6 +18,8 @@
  body:not(.world-play94) .wrap{padding:calc(10px + var(--mobile-top96)) 10px calc(92px + env(safe-area-inset-bottom,0px))!important;max-width:100%;min-width:0}
  body:not(.world-play94) #mobileStatus65{position:relative!important;top:auto!important;z-index:1;margin:0 0 12px;padding:10px 12px;border-radius:10px;backdrop-filter:none}
  body:not(.world-play94) .toolbar80,body:not(.world-play94) #quickHud{display:none!important}
+ body:not(.world-play94) #sidebar78{display:none!important}
+ body:not(.world-play94) #desktopShell78{display:block!important;margin-top:0!important}
  body:not(.world-play94) .tab78>.row:first-child,body:not(.world-play94) .tab78>h2:first-child{position:static!important;top:auto!important}
  body:not(.world-play94) #desktopShell78,body:not(.world-play94) #main78,body:not(.world-play94) #tabHost78{min-width:0;overflow:visible;height:auto;max-height:none}
  body:not(.world-play94) .tab{min-width:0;padding:14px!important}
@@ -35,5 +37,6 @@
  .map-legend55{font-size:12px;gap:8px 12px;margin-bottom:18px}
  body.world-play94 .wrap{padding-top:var(--mobile-top96)!important}
  body.world-play94.menu-open94 #sidebar78{top:calc(var(--mobile-top96) + 74px)!important;bottom:70px!important;left:8px!important}
+ body.world-play94.menu-open94 #nav.nav{display:grid!important}
 }
 @media(max-width:360px){.map-node55 b{font-size:12px}.map-icon55{font-size:17px}}
