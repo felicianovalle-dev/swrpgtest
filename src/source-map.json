@@ -1,0 +1,266 @@
+[
+  {
+    "marker": "<!-- SABLE_SOURCE:style-01.css -->",
+    "path": "src/legacy/style-01.css",
+    "open": "<style>",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-02.css -->",
+    "path": "src/legacy/style-02.css",
+    "open": "<style id=\"phase54Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-03.css -->",
+    "path": "src/legacy/style-03.css",
+    "open": "<style id=\"phase60Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-04.css -->",
+    "path": "src/legacy/style-04.css",
+    "open": "<style id=\"phase66Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-05.css -->",
+    "path": "src/legacy/style-05.css",
+    "open": "<style id=\"phase68Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-06.css -->",
+    "path": "src/legacy/style-06.css",
+    "open": "<style id=\"phase70Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-07.css -->",
+    "path": "src/legacy/style-07.css",
+    "open": "<style id=\"phase72Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-08.css -->",
+    "path": "src/legacy/style-08.css",
+    "open": "<style id=\"phase74Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-09.css -->",
+    "path": "src/legacy/style-09.css",
+    "open": "<style id=\"phase76Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-10.css -->",
+    "path": "src/legacy/style-10.css",
+    "open": "<style id=\"phase78Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-11.css -->",
+    "path": "src/legacy/style-11.css",
+    "open": "<style id=\"phase80Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-12.css -->",
+    "path": "src/legacy/style-12.css",
+    "open": "<style id=\"phase82Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-13.css -->",
+    "path": "src/legacy/style-13.css",
+    "open": "<style id=\"phase84Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-14.css -->",
+    "path": "src/legacy/style-14.css",
+    "open": "<style id=\"phase86Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-15.css -->",
+    "path": "src/legacy/style-15.css",
+    "open": "<style id=\"phase88Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-16.css -->",
+    "path": "src/legacy/style-16.css",
+    "open": "<style id=\"phase90Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-17.css -->",
+    "path": "src/legacy/style-17.css",
+    "open": "<style id=\"phase92Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-18.css -->",
+    "path": "src/legacy/style-18.css",
+    "open": "<style id=\"iosPwaHotfix921Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-01.js -->",
+    "path": "src/legacy/script-01.js",
+    "open": "<script>",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-02.js -->",
+    "path": "src/legacy/script-02.js",
+    "open": "<script id=\"phase54Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-03.js -->",
+    "path": "src/legacy/script-03.js",
+    "open": "<script id=\"phase56Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-19.css -->",
+    "path": "src/legacy/style-19.css",
+    "open": "<style id=\"phase58Style\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-04.js -->",
+    "path": "src/legacy/script-04.js",
+    "open": "<script id=\"phase58Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-20.css -->",
+    "path": "src/legacy/style-20.css",
+    "open": "<style id=\"phase62Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-05.js -->",
+    "path": "src/legacy/script-05.js",
+    "open": "<script id=\"phase62Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-21.css -->",
+    "path": "src/legacy/style-21.css",
+    "open": "<style id=\"phase64Styles\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-06.js -->",
+    "path": "src/legacy/script-06.js",
+    "open": "<script id=\"phase64Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-07.js -->",
+    "path": "src/legacy/script-07.js",
+    "open": "<script id=\"phase66Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-08.js -->",
+    "path": "src/legacy/script-08.js",
+    "open": "<script id=\"phase68Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-09.js -->",
+    "path": "src/legacy/script-09.js",
+    "open": "<script id=\"phase70Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-10.js -->",
+    "path": "src/legacy/script-10.js",
+    "open": "<script id=\"phase72Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-11.js -->",
+    "path": "src/legacy/script-11.js",
+    "open": "<script id=\"phase74Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-12.js -->",
+    "path": "src/legacy/script-12.js",
+    "open": "<script id=\"phase76Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-13.js -->",
+    "path": "src/legacy/script-13.js",
+    "open": "<script id=\"phase78Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-14.js -->",
+    "path": "src/legacy/script-14.js",
+    "open": "<script id=\"phase80Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-15.js -->",
+    "path": "src/legacy/script-15.js",
+    "open": "<script id=\"phase82Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-16.js -->",
+    "path": "src/legacy/script-16.js",
+    "open": "<script id=\"phase84Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-17.js -->",
+    "path": "src/legacy/script-17.js",
+    "open": "<script id=\"phase86Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-18.js -->",
+    "path": "src/legacy/script-18.js",
+    "open": "<script id=\"phase88Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-19.js -->",
+    "path": "src/legacy/script-19.js",
+    "open": "<script id=\"phase90Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-20.js -->",
+    "path": "src/legacy/script-20.js",
+    "open": "<script id=\"iosPwaHotfix921\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-21.js -->",
+    "path": "src/legacy/script-21.js",
+    "open": "<script id=\"phase92Script\">",
+    "close": "</script>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:style-22.css -->",
+    "path": "src/legacy/style-22.css",
+    "open": "<style id=\"referenceArt93\">",
+    "close": "</style>"
+  },
+  {
+    "marker": "<!-- SABLE_SOURCE:script-22.js -->",
+    "path": "src/legacy/script-22.js",
+    "open": "<script id=\"referenceArt93Script\">",
+    "close": "</script>"
+  }
+]

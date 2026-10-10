@@ -7,7 +7,7 @@ root = Path(__file__).resolve().parents[1]
 target = Path(sys.argv[1]).resolve()
 target.parent.mkdir(parents=True, exist_ok=True)
 files = [root / name for name in ['index.html', 'manifest.webmanifest', 'sw.js', 'README.md', 'package.json', 'package-lock.json']]
-for folder in ['assets', 'icons', 'src', 'scripts', 'qa']:
+for folder in ['assets', 'icons', 'src', 'scripts', 'qa', 'docs']:
     files.extend(path for path in (root / folder).rglob('*') if path.is_file() and '__pycache__' not in path.parts)
 with ZipFile(target, 'w', ZIP_DEFLATED) as bundle:
     for path in sorted(files):

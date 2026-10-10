@@ -1,0 +1,87 @@
+
+/* =========================================================
+   PHASE 91 — HANDCRAFTED TILESET EXPANSION
+   PHASE 92 — ROOM IDENTITY / PROP PASS
+   ========================================================= */
+.room-id92{
+  margin-top:8px;
+  border:1px solid #586e82;
+  background:linear-gradient(180deg,#111b27,#0b141e);
+  padding:8px;
+  border-radius:9px;
+}
+.room-id92 .title{
+  color:#ffe4a6;
+  font:700 .73rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.room-tags92{
+  display:flex;
+  flex-wrap:wrap;
+  gap:5px;
+  margin-top:6px;
+}
+.room-tags92 span{
+  padding:3px 6px;
+  border-radius:999px;
+  border:1px solid #42596d;
+  background:#101a26;
+  font-size:.66rem;
+  color:#d7e2ea;
+}
+.phase92-card{
+  margin-top:14px;
+  border:2px solid #d3b474;
+  background:linear-gradient(180deg,#171107,#0f1822);
+  padding:10px;
+  border-radius:14px;
+  box-shadow:inset 0 0 0 2px #4c3c1b,0 5px 14px #0007;
+}
+.phase92-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+  margin-top:9px;
+}
+.phase92-grid div{
+  border:1px solid #4d6175;
+  background:#0e1823;
+  border-radius:9px;
+  padding:8px;
+  text-align:center;
+  font-size:.69rem;
+}
+.phase92-grid b{
+  display:block;
+  color:#ffe4a6;
+  font:1rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.phase92-preview{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:9px;
+  margin-top:10px;
+}
+.phase92-preview .box{
+  border:1px solid #42586a;
+  background:#0d1721;
+  padding:8px;
+  border-radius:10px;
+}
+.phase92-preview canvas{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid #354a5d;
+  border-radius:7px;
+  background:#070b10;
+  image-rendering:pixelated;
+  image-rendering:crisp-edges;
+}
+@media(max-width:760px){
+  .phase92-grid,.phase92-preview{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  .phase92-preview{grid-template-columns:1fr}
+}

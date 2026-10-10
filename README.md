@@ -33,8 +33,10 @@ frames, including N4-VI. Buildings and sprites are embedded in index.html for
 offline use. The service worker cache version advances without changing the
 schema 92 save keys.
 
-Build: `npm run build` (Python with Pillow is needed only for
-art preparation). Run `npm install` and `npm test` for the state/canvas checks.
+Build: `npm run build` uses Python's standard library and generates `index.html`
+from the authoritative files under `src/`. It also works when `index.html` is
+absent. Run `npm ci`, `npm test`, and `npm run build:check` for state/canvas and
+source/output consistency checks. Pillow is needed only for art preparation.
 The atlas extraction helper requires the original atlas when run after repair;
 normal builds reuse the checked-in corrected asset.
 
@@ -50,7 +52,8 @@ using the Mos Dara cantina as a style reference. See the adjacent prompt file.
 `src/world94.js` and `src/world94.css` are the editable World layer. The build
 script embeds that layer and the checked-in atlases in the standalone game.
 `src/mobile95.css`, `src/work96.css`, and `src/work96.js` are the editable mobile
-and downtime layers; `scripts/build_world96.py` embeds both phases after World.
+and downtime layers. `scripts/build.py` embeds the current modules after the
+legacy engine. The old build entry points forward to that same pipeline.
 
 ## Navigation-only follow-up, October 9, 2026
 
@@ -60,3 +63,37 @@ header and footer, including landscape and rotation; its section grid stays
 inside the menu instead of covering footer buttons. Both shortcuts use the
 existing Jobs & Training workflows. The offline cache revision changes; the
 release version, schema-92 saves and gameplay rules remain unchanged.
+
+## Saves, continuation, visuals, and source build
+
+Saved games now show separate manual, autosave, and previous-manual-backup slots
+with timestamps, character/day summaries, and explicit load choices. **Resume
+latest** chooses the newest readable timestamp rather than preferring the manual
+slot. Corrupt slots are labeled and retained; valid alternatives remain usable.
+Older autosaves can carry an old manual-save timestamp, so those dates are
+explicitly labeled as legacy estimates. New autosaves timestamp their own write.
+Storage failures display an error and never claim that saving succeeded.
+
+Navigation records the actual screen and Jobs/Training panel. Resume restores
+that screen, the selected skill, and the existing saved World map/position;
+unavailable screens fall back safely, and active combat takes precedence. Opening
+a browser with readable saves presents **Resume latest** in the Play Hub without
+silently loading or replacing a campaign. Imports are validated before loading
+and do not overwrite a browser slot until the user saves. The World **Saves**
+button opens these choices. Exported campaign files remain portable.
+
+Connected rugs, softer paving, wood floors, and clinical/ship materials replace
+the strongest repeating tile patterns. Map geometry, collision, NPCs, interactions,
+equipment, XP, and job/training formulas are unchanged.
+
+`src/template.html` and `src/source-map.json` identify every retained legacy source
+block under `src/legacy/`. New features use `src/runtime97.js`, `src/save97.js`,
+`src/save97.css`, and `src/visual97.js`. Never edit the generated `index.html`.
+See [architecture notes](docs/architecture.md) for the build and extension points.
+
+Browser QA: run `npx playwright install chromium`, then `npm run test:browser`.
+An existing Chromium executable can be supplied with `CHROMIUM_PATH`. The test
+covers seven viewport sizes, visible World navigation hit targets, save-screen
+layout, rotation, and actual page reloads into Training and the saved World
+position. It supplements the 27 World, 37 Jobs/Training, and 24 save/continuation
+state checks. Native iPhone Safari and standalone-app testing remain device checks.

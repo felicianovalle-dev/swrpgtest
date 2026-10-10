@@ -1,0 +1,61 @@
+
+/* =========================================================
+   PHASE 71 — GEAR / INVENTORY ART
+   PHASE 72 — COMPANION VISUAL SYSTEM
+   ========================================================= */
+.visual-loadout71{margin-top:12px;background:#07101a;border:2px solid #8fa3b7;padding:9px;box-shadow:inset 0 0 0 2px #1c3042}
+.visual-loadout-grid71{display:grid;grid-template-columns:170px minmax(0,1fr);gap:10px;margin-top:8px}
+.paperdoll71{background:#03070b;border:2px solid #687e92;padding:6px;text-align:center}
+#paperdoll71{display:block;width:128px;height:160px;margin:auto;image-rendering:pixelated;image-rendering:crisp-edges;background:#081019}
+.visual-inventory71{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:7px}
+.visual-item71{border:1px solid #35495b;background:#0b1621;padding:7px;cursor:pointer;min-width:0}
+.visual-item71:hover,.visual-item71.selected{border-color:#d2ad51;box-shadow:inset 0 0 0 1px #6d5725}
+.visual-item71.equipped{outline:2px solid #587b9e;outline-offset:-2px}
+.item-icon71{width:42px;height:42px;image-rendering:pixelated;image-rendering:crisp-edges;background:#05090e;border:1px solid #4c5f70;display:block;flex:none}
+.visual-item-head71{display:flex;gap:7px;align-items:center}
+.visual-item-name71{font-size:.74rem;font-weight:800;line-height:1.2}
+.visual-item-type71{font-size:.62rem;color:#95a9ba;text-transform:uppercase;letter-spacing:.06em}
+.gear-inspector71{margin-top:8px;border:1px solid #405366;background:#07111b;padding:8px}
+.compare-grid71{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:7px}
+.compare-card71{border:1px solid #33495b;background:#0c1722;padding:7px;min-width:0}
+.compare-stat71{display:flex;justify-content:space-between;gap:8px;border-bottom:1px dotted #33495b;padding:3px 0;font-size:.72rem}
+.compare-up71{color:#bce49a}.compare-down71{color:#f0a3a3}.compare-even71{color:#b8c6d2}
+.shop-icon71{float:left;margin-right:8px;margin-bottom:4px}
+.pickup-toast71{position:absolute;left:50%;top:12px;transform:translateX(-50%);z-index:8;display:flex;align-items:center;gap:8px;background:#07111bee;border:2px solid #d1ad55;padding:7px 10px;box-shadow:0 6px 22px #000b;font:11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.pickup-toast71.hidden{display:none}
+.crew-visual72{margin-top:12px;background:#07101a;border:2px solid #8fa3b7;padding:9px;box-shadow:inset 0 0 0 2px #1c3042}
+.party-strip72{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:8px}
+.party-slot72{border:2px solid #455d72;background:#0a1620;padding:7px;min-height:94px;display:grid;grid-template-columns:54px 1fr;gap:7px;align-items:center}
+.party-slot72.active72{border-color:#d1ad55}
+.party-portrait72{width:52px;height:52px;display:block;image-rendering:pixelated;image-rendering:crisp-edges;background:#05090e;border:1px solid #53697c}
+.companion-grid72{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;margin-top:9px}
+.companion-card72{border:1px solid #384d60;background:#0b1621;padding:8px;min-width:0}
+.companion-card72.active72{border-color:#d0aa4d;box-shadow:inset 0 0 0 1px #70591f}
+.companion-head72{display:grid;grid-template-columns:66px minmax(0,1fr);gap:8px}
+.companion-card72 .party-portrait72{width:64px;height:64px}
+.crew-meter72{height:5px;border:1px solid #42576a;background:#171b20;margin-top:4px}
+.crew-meter72 span{display:block;height:100%}
+.crew-approval72 span{background:#c4a14d}.crew-morale72 span{background:#5e8ab1}
+.companion-actions72{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.companion-actions72 button{min-height:36px}
+.companion-gear72{display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:7px}
+.companion-gear-chip72{display:flex;gap:5px;align-items:center;border:1px solid #33485a;background:#07111a;padding:5px;font-size:.67rem;min-width:0}
+.companion-gear-chip72 canvas{width:30px;height:30px;image-rendering:pixelated;image-rendering:crisp-edges;flex:none}
+.crew-scene72{margin-top:9px;border:2px solid #6f8090;background:#050b12;padding:8px}
+.crew-scene-cast72{display:flex;gap:8px;align-items:center}
+.crew-scene-cast72 canvas{width:56px;height:56px;image-rendering:pixelated;image-rendering:crisp-edges;border:1px solid #4e6174;background:#081019}
+.loyalty-track72{display:flex;gap:4px;margin-top:5px}
+.loyalty-track72 span{width:18px;height:5px;border:1px solid #485b6d;background:#121820}
+.loyalty-track72 span.on{background:#d1ad55}
+body.high-contrast65 .visual-loadout71,body.high-contrast65 .crew-visual72{border-color:#fff}
+@media(max-width:720px){
+  .visual-loadout-grid71{grid-template-columns:1fr}
+  .paperdoll71{display:grid;grid-template-columns:140px 1fr;align-items:center;text-align:left}
+  .party-strip72{grid-template-columns:1fr}
+}
+@media(max-width:480px){
+  .visual-inventory71{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .compare-grid71{grid-template-columns:1fr}
+  .paperdoll71{display:block;text-align:center}
+  .companion-grid72{grid-template-columns:1fr}
+}

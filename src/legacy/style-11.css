@@ -1,0 +1,86 @@
+
+/* =========================================================
+   PHASE 79 — PRIMARY PLAY LOOP HUB
+   PHASE 80 — FULL UI CONSOLIDATION / PIXEL CONSISTENCY PASS
+   ========================================================= */
+:root{
+  --ui80-card:#0d1823;
+  --ui80-card2:#121f2d;
+  --ui80-line:#496175;
+  --ui80-accent:#d4ad50;
+  --ui80-soft:#1a2a3a;
+}
+#sidebarModes80{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+#sidebarModes80 button{min-height:38px;padding:7px 4px;font-size:.72rem}
+#sidebarModes80 button.on{background:var(--ui80-accent);color:#171307;border-color:var(--ui80-accent);font-weight:800}
+.playhub80-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.loopCard80,.subCard80{
+  background:linear-gradient(180deg,var(--ui80-card2),var(--ui80-card));
+  border:2px solid var(--ui80-line);
+  border-radius:14px;
+  box-shadow:5px 5px 0 #0007;
+  padding:12px;
+  min-width:0;
+}
+.loopCard80-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.loopIcon80{
+  width:42px;height:42px;display:grid;place-items:center;flex:none;
+  border:2px solid #70869a;border-radius:10px;background:#0a121a;color:#ffe39a;
+  font:800 1.05rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  box-shadow:inset 0 0 0 1px #25374a
+}
+.loopCard80 .actions,.subCard80 .actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.loopCard80 .actions .btn,.subCard80 .actions .btn{flex:1 1 120px}
+.subGrid80{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.toolbar80{
+  position:sticky;top:42px;z-index:4;margin:-2px 0 12px;padding:8px;
+  border:1px solid #42596d;border-radius:11px;background:#0b141fe8;backdrop-filter:blur(4px);
+  display:flex;flex-wrap:wrap;gap:6px
+}
+.toolbar80 .btn{min-height:34px;padding:7px 10px;font-size:.76rem}
+.bigStat80{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:12px}
+.bigStat80 .metric{border:1px solid #44586a;background:#101a26;border-radius:12px;padding:9px;text-align:center}
+.bigStat80 .metric b{display:block;font:1.12rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#ffe39a}
+.groupLabel80{
+  margin:8px 0 4px;padding:0 2px;font:.72rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.08em;text-transform:uppercase;color:#a8bac9
+}
+#nav.nav.nav78 button[data-group="character"]::after,
+#nav.nav.nav78 button[data-group="systems"]::after,
+#nav.nav.nav78 button[data-group="core"]::after{
+  content:attr(data-group);position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  font-size:.62rem;letter-spacing:.07em;color:#97aabd;opacity:.78;text-transform:uppercase
+}
+#nav.nav.nav78 button.on::after{color:#1d190a}
+.unifiedFrame80 canvas,
+.unifiedFrame80 .pixel-canvas67,
+.unifiedFrame80 .portrait69,
+.unifiedFrame80 .item-icon71,
+.unifiedFrame80 .paperdoll71,
+.unifiedFrame80 .crew-portrait72,
+.unifiedFrame80 .crew-slot72,
+.unifiedFrame80 #retroBattleCanvas70,
+.unifiedFrame80 #pixelCanvas67{
+  border:2px solid #6b8093 !important;
+  background:#08111a !important;
+  border-radius:8px;
+  box-shadow:3px 3px 0 #0006
+}
+.cleanList80{display:grid;gap:8px}
+.cleanList80 .rowItem80{border:1px solid #42596c;background:#101a25;border-radius:10px;padding:9px}
+.systemDock80{
+  display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;padding:8px;border:1px solid #4c6175;border-radius:12px;background:#0d1722
+}
+.systemDock80 .pill{background:#101b28}
+.note80{margin-top:10px;padding:10px;border:1px solid #5d4f31;border-radius:12px;background:#171207;color:#e4d4ad;font-size:.76rem}
+.release80{margin-top:14px;border:2px solid #d4ad50;background:#130f07;border-radius:14px;padding:12px;box-shadow:inset 0 0 0 1px #5b471a}
+.release80-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:10px}
+.release80-grid .metric{border:1px solid #61522f;background:#181208;border-radius:12px;padding:9px;text-align:center}
+.release80-grid .metric b{display:block;font:1.08rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#ffe39a}
+@media(max-width:1179px){
+  .playhub80-grid,.subGrid80,.bigStat80,.release80-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .playhub80-grid,.subGrid80,.bigStat80,.release80-grid{grid-template-columns:1fr}
+  .toolbar80{top:0}
+}

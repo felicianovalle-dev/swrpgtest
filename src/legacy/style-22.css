@@ -1,0 +1,20 @@
+/* Quiet navy windows and brass bevels echo the Mos Dara reference. */
+#pixelworld67 .pixel-stage67{background:#09121c;border:3px solid #172b3e;box-shadow:inset 0 0 0 1px #688398,0 0 0 1px #c59a55;overflow:hidden}
+#pixelCanvas67{image-rendering:pixelated;display:block;aspect-ratio:3/2;width:100%;height:auto;max-height:none}
+#pixelworld67 .pixel-window67,.pixel-dialog67{background:linear-gradient(135deg,#132335,#08121e);border:1px solid #49647a;box-shadow:inset 0 0 0 2px #0a1420,inset 0 0 0 3px #233c51;border-radius:3px}
+#pixelworld67 .pixel-title67{color:#e7c575;letter-spacing:.08em;border-bottom:1px solid #324b5e;padding-bottom:6px}
+#pixelworld67 .pixel-action67,#pixelworld67 .btn{background:#13273b;border:1px solid #627b8c;color:#e5e8dd;box-shadow:inset 0 0 0 2px #081624}
+#pixelworld67 .pixel-action67:hover,#pixelworld67 .btn:hover{border-color:#e1b65f;color:#ffe1a0}
+#pixelworld67 .pixel-help67{line-height:1.6}.location-plaque90{color:#f3d57f!important;background:#0b1829ed!important;border:1px solid #997a48!important;max-width:85%;font-size:11px!important}
+@media(min-width:1050px){#pixelworld67 .pixel-shell67{grid-template-columns:minmax(0,1fr) 240px!important;align-items:start}#pixelworld67 .pixel-side67{max-height:calc(100dvh - 245px);overflow:auto;scrollbar-width:thin}#pixelworld67 .pixel-mapbar67{margin-bottom:10px}#pixelworld67 .pixel-side67 .pixel-window67{padding:10px}}
+@media(max-width:600px){#pixelworld67 .pixel-shell67{grid-template-columns:1fr!important}.location-plaque90{font-size:9px!important}#pixelworld67 .pixel-stage67{border-width:2px}}
+
+@media(min-width:1180px){.top{padding:10px 16px!important}.top h1{font-size:20px!important;margin:0!important}.top p{display:none}.rc-banner{display:none}#quickHud{margin-top:10px!important;padding:8px!important}#sidebarInner78{flex:1;min-height:0}#desktopShell78{margin-top:10px;overflow:hidden}.wrap{height:100dvh!important}#pixelworld67 .pixel-side67{max-height:calc(100dvh - 300px)}}
+@media(min-width:1180px){
+ #pixelworld67:not(.hidden){display:flex!important;flex-direction:column;gap:10px;overflow:hidden!important}
+ #pixelworld67>.row:first-child,#pixelworld67>.pixel-mapbar67{display:none!important}
+ #pixelworld67>.toolbar80{position:static!important;flex:none;margin:0!important}
+ #pixelworld67>.pixel-shell67{flex:1;min-height:0;grid-template-rows:minmax(0,1fr)}
+ #pixelworld67 .pixel-stage67{position:relative!important;top:auto!important;align-self:start}
+ #pixelworld67 .pixel-side67{height:100%;max-height:100%;overflow:auto}
+}

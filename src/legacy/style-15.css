@@ -1,0 +1,174 @@
+
+/* =========================================================
+   PHASE 87 — BATTLE PRESENTATION PASS
+   PHASE 88 — MENU HIERARCHY / PLAY DOCK PASS
+   ========================================================= */
+.retroCombat70.phase88-shell{border-color:#d6bf86;box-shadow:inset 0 0 0 2px #43351a,0 8px 26px rgba(0,0,0,.28)}
+.retro-battle-shell88{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
+  gap:10px;
+  align-items:start;
+}
+.retro-sidepanel88{
+  display:grid;
+  gap:8px;
+}
+.retro-card88{
+  background:linear-gradient(180deg,#0f1722,#0a1118);
+  border:2px solid #90a5ba;
+  box-shadow:inset 0 0 0 2px #22364b;
+  padding:8px;
+}
+.retro-card88 h4{
+  margin:0;
+  font:700 .76rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  letter-spacing:.08em;
+  color:#ffe8a5;
+  text-transform:uppercase;
+}
+.retro-readout88{
+  margin-top:6px;
+  display:grid;
+  gap:5px;
+}
+.retro-line88{
+  display:flex;
+  justify-content:space-between;
+  gap:8px;
+  padding:5px 6px;
+  border:1px solid #32475b;
+  background:#111b27;
+  font:.72rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.retro-line88 b{color:#d8e2ea}
+.retro-iconbar88{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:6px;
+  margin-top:7px;
+}
+.retro-icmd88{
+  min-height:54px;
+  border:2px solid #667f96;
+  background:#101925;
+  color:#fff;
+  border-radius:10px;
+  font:700 .72rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  display:grid;
+  align-content:center;
+  justify-items:center;
+  gap:3px;
+}
+.retro-icmd88.primary{border-color:#d8b85b;background:linear-gradient(180deg,#2c2007,#1a1406);color:#ffe8aa}
+.retro-icmd88.active{outline:2px solid #f1da81; outline-offset:-1px}
+.retro-icmd88 .emoji{font-size:1.15rem;line-height:1}
+.retro-target-card88{
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-top:8px;
+}
+.retro-target-sprite88{
+  width:72px;
+  height:72px;
+  border:2px solid #496076;
+  background:#09131d;
+  image-rendering:pixelated;
+  image-rendering:crisp-edges;
+  border-radius:8px;
+  flex:0 0 auto;
+}
+.retro-target-meta88{
+  min-width:0;
+  font-size:.74rem;
+  color:#d5e0e8;
+  line-height:1.45;
+}
+.retro-mini-badge88{
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  padding:3px 6px;
+  border-radius:999px;
+  border:1px solid #496076;
+  background:#101925;
+  font:.68rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+.retro-party-list70 .retro-unit70{
+  padding:6px 6px 6px 42px;
+  position:relative;
+  min-height:39px;
+}
+.retro-party-face88{
+  position:absolute;
+  left:6px;
+  top:6px;
+  width:28px;
+  height:28px;
+  border:1px solid #52677d;
+  background:#08111a;
+  image-rendering:pixelated;
+  image-rendering:crisp-edges;
+  border-radius:5px;
+}
+.playDock88{
+  margin-top:12px;
+  display:grid;
+  gap:10px;
+}
+.playDock88-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.playDock88-grid{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:8px;
+}
+.playDock88 button{
+  min-height:62px;
+  border:2px solid #6b839a;
+  background:linear-gradient(180deg,#101925,#0d141e);
+  color:#fff;
+  border-radius:12px;
+  font:700 .74rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  display:grid;
+  justify-items:center;
+  align-content:center;
+  gap:4px;
+}
+.playDock88 button b{font-size:1.1rem; line-height:1}
+.playDock88 .subnote{
+  padding:7px 8px;
+  border:1px solid #43596f;
+  background:#0f1722;
+  border-radius:9px;
+  font-size:.74rem;
+  color:#d7e0e8;
+}
+.phase88Guide{
+  margin-top:14px;
+  border:2px solid #d1b474;
+  background:linear-gradient(180deg,#171107,#101924);
+  box-shadow:inset 0 0 0 2px #4a3a1c;
+}
+.phase88Guide .previewGrid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:10px;
+}
+.phase88Guide canvas{
+  display:block;width:100%;height:auto;border:1px solid #42576b;border-radius:8px;background:#08111a;image-rendering:pixelated;image-rendering:crisp-edges;
+}
+@media(max-width:1120px){
+  .retro-battle-shell88{grid-template-columns:1fr}
+  .playDock88-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  .retro-iconbar88{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .phase88Guide .previewGrid{grid-template-columns:1fr}
+}

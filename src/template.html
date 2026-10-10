@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080b11"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Sable Reach">
+<title>Star Wars: Sable Reach v1.2 — Phase 66</title>
+<!-- SABLE_SOURCE:style-01.css -->
+
+<!-- SABLE_SOURCE:style-02.css -->
+
+
+<!-- SABLE_SOURCE:style-03.css -->
+
+<!-- SABLE_SOURCE:style-04.css -->
+
+
+<!-- SABLE_SOURCE:style-05.css -->
+
+
+<!-- SABLE_SOURCE:style-06.css -->
+
+
+<!-- SABLE_SOURCE:style-07.css -->
+
+
+<!-- SABLE_SOURCE:style-08.css -->
+
+
+<!-- SABLE_SOURCE:style-09.css -->
+
+
+<!-- SABLE_SOURCE:style-10.css -->
+
+
+<!-- SABLE_SOURCE:style-11.css -->
+
+
+<!-- SABLE_SOURCE:style-12.css -->
+
+
+<!-- SABLE_SOURCE:style-13.css -->
+
+
+<!-- SABLE_SOURCE:style-14.css -->
+
+
+<!-- SABLE_SOURCE:style-15.css -->
+
+
+<!-- SABLE_SOURCE:style-16.css -->
+
+
+<!-- SABLE_SOURCE:style-17.css -->
+
+
+<!-- SABLE_SOURCE:style-18.css -->
+
+</head>
+<body><div class="wrap">
+<div class="top"><div><h1>STAR WARS: SABLE REACH v1.2</h1><p>Complete living-campaign build: character creation, crew, exploration, story quests, tactical combat, ships, organizations, a dynamic galaxy, and dedicated mobile play.</p></div><div id="xpHud" class="card xp"></div></div>
+<div class="rc-banner" style="margin-top:10px"><div class="row"><div><b>v1.2 · Phase 66 Release Build</b><div id="globalObjective" class="small"></div></div><div class="pills"><span class="pill" id="autosaveBadge">Autosave</span><span class="pill" id="difficultyBadge">Standard</span><span class="pill" id="saveStatus">Not saved</span></div></div><div class="progress" style="margin-top:8px"><div id="globalProgress" style="width:0%"></div></div></div>
+<div id="quickHud" class="quick-hud" aria-live="polite"></div>
+<div id="runtimeError" class="errorbox hidden" style="margin-top:10px"></div>
+<div class="nav" id="nav" aria-label="Game sections"><button data-tab="guide" class="on">Guide</button><button data-tab="identity">Identity</button><button data-tab="career">Career</button><button data-tab="skills">Skills</button><button data-tab="chars">Characteristics</button><button data-tab="talents">Talents</button><button data-tab="force">Force</button><button data-tab="campaign">Campaign</button><button data-tab="gm">Operations</button><button data-tab="equipment">Equipment</button><button data-tab="crewmgmt">Crew</button><button data-tab="galaxy">Galaxy</button><button data-tab="explore">Explore</button><button data-tab="ship" id="shipTab" disabled>Ship</button><button data-tab="recovery">Recovery</button><button data-tab="database">Database</button><button data-tab="rulesaudit">Rules Audit</button><button data-tab="review">Review</button><button data-tab="adventure" id="adventureTab" disabled>Adventure</button></div>
+
+
+<section id="guide" class="tab card">
+  <div class="row">
+    <div><h2 style="margin:0">Campaign Guide</h2><div class="small">Your campaign dashboard: continue the story, adjust presentation, review milestones, and check save health.</div></div>
+    <button id="continueGame" class="btn primary">Continue</button>
+  </div>
+
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card">
+      <b>Current objective</b>
+      <div id="guideObjective" style="margin-top:7px"></div>
+      <div class="progress" style="margin-top:10px"><div id="guideProgress"></div></div>
+      <div id="milestoneList" class="grid" style="margin-top:10px"></div>
+    </div>
+    <div class="card">
+      <b>Game settings</b>
+      <label style="display:block;margin-top:8px">Difficulty
+        <select id="difficultySelect">
+          <option value="story">Story — enemies roll 1 Setback and deal 1 less damage</option>
+          <option value="standard">Standard — baseline encounter balance</option>
+          <option value="veteran">Veteran — enemies gain 1 Boost and deal 1 more damage</option>
+        </select>
+      </label>
+      <label style="display:block;margin-top:8px">Tutorial hints
+        <select id="tutorialSelect"><option value="on">On</option><option value="off">Off</option></select>
+      </label>
+      <label style="display:block;margin-top:8px">Autosave
+        <select id="autosaveSelect"><option value="on">On</option><option value="off">Off</option></select>
+      </label>
+      <label style="display:block;margin-top:8px">Interface scale
+        <select id="uiScaleSelect"><option value="compact">Compact</option><option value="standard">Standard</option><option value="large">Large</option></select>
+      </label>
+      <label style="display:block;margin-top:8px">Interface motion
+        <select id="motionSelect"><option value="on">On</option><option value="off">Reduced</option></select>
+      </label>
+      <div class="source-note">Difficulty is an original videogame balance layer. It does not change the underlying FFG-style skill, talent, or narrative-dice rules.</div>
+    </div>
+  </div>
+
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card">
+      <b>Quick-start flow</b>
+      <div class="small" style="line-height:1.6;margin-top:7px">
+        <b>1.</b> Choose Species, Career/Specialization, free skill ranks, and spend creation XP.<br>
+        <b>2.</b> Finalize from Review. Creation characteristics lock; earned XP becomes advancement XP.<br>
+        <b>3.</b> Play Episode 0 from Adventure. The game previews the best party member and dice pool before most checks.<br>
+        <b>4.</b> Use Recovery after fights, Equipment for loadout/workshop, and Crew for companion progression.<br>
+        <b>5.</b> Finish Hangar Twelve to acquire the ship and unlock ship operations.
+      </div>
+      <div class="pills" style="margin-top:10px"><button class="btn" data-guidego="identity">Character</button><button class="btn" data-guidego="review">Review</button><button class="btn" data-guidego="adventure">Adventure</button><button class="btn" data-guidego="recovery">Recovery</button><button class="btn" data-guidego="ship">Ship</button></div>
+    </div>
+    <div class="card">
+      <b>Keyboard shortcuts</b>
+      <div class="small shortcut-grid" style="margin-top:8px">
+        <span><kbd class="kbd">G</kbd> Guide</span><span><kbd class="kbd">A</kbd> Adventure</span>
+        <span><kbd class="kbd">E</kbd> Equipment</span><span><kbd class="kbd">C</kbd> Crew</span>
+        <span><kbd class="kbd">R</kbd> Recovery</span><span><kbd class="kbd">H</kbd> Ship</span>
+        <span><kbd class="kbd">T</kbd> Talents</span><span><kbd class="kbd">F</kbd> Force</span><span><kbd class="kbd">U</kbd> Rules Audit</span>
+      </div>
+      <div class="tiny" style="margin-top:8px">Shortcuts are ignored while typing in an input, select, or textarea.</div>
+    </div>
+    <div class="card">
+      <b>Narrative dice reminder</b>
+      <div class="small" style="line-height:1.6;margin-top:7px">
+        <b>Ability / Proficiency</b> produce Success and Advantage; <b>Difficulty / Challenge</b> produce Failure and Threat. Net Success determines whether the check works. Advantage/Threat describe side effects. Triumph/Despair can trigger major consequences even when the basic check succeeds or fails.<br><br>
+        In combat, use <b>Aim</b>, movement, cover, qualities, Destiny, and symbol-spending before ending the turn.
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <div class="row"><div><b>Save & diagnostics</b><div class="small">The stable save system keeps a manual save, autosave, and backup of the previous manual save.</div></div><button id="runDiagnostics" class="btn">Run diagnostics</button></div>
+    <div class="pills" style="margin-top:9px"><button id="guideSave" class="btn good">Quick Save</button><button id="guideLoad" class="btn">Load Best Save</button><button id="guideExport" class="btn">Export Full Save</button><button id="guideImport" class="btn">Import Save</button><button id="guideNewGame" class="btn danger">New Game</button><input id="importSaveFile" type="file" accept=".json,application/json" class="hidden"></div>
+    <div id="diagnosticStatus" class="small" style="margin-top:10px"></div>
+  </div>
+</section>
+
+<section id="identity" class="tab card hidden"><h2>Identity</h2><div class="grid g3"><label>Name<input id="name" value="Zek Tarren"></label><label>Species<select id="species"></select></label><label>Era<select id="era"><option>Rebellion Era</option><option>Imperial Era</option><option>Clone Wars</option></select></label></div><div id="speciesInfo" class="card" style="margin-top:12px"></div></section>
+<section id="career" class="tab card hidden"><h2>Career & Specialization</h2><div class="grid g2"><label>Career<select id="careerSelect"></select></label><label>Starting specialization<select id="specSelect"></select></label></div><div id="careerInfo" class="card" style="margin-top:12px"></div><hr><div id="careerFreeLabel" class="strong">Choose free career-skill ranks</div><div id="careerPicks" class="chips" style="margin-top:8px"></div><div class="strong" style="margin-top:13px">Choose 2 free specialization-skill ranks</div><div id="specPicks" class="chips" style="margin-top:8px"></div></section>
+<section id="skills" class="tab card hidden"><h2>Skills</h2><p class="small">Career: 5 × new rank XP. Non-career: +5 XP. Creation cap: rank 2.</p><div id="skillList" class="skills"></div></section>
+<section id="chars" class="tab card hidden"><h2>Characteristics</h2><p class="small">During creation, raising a characteristic costs 10 × its new rating. Direct characteristic purchases lock after finalization.</p><div id="charGrid" class="chargrid"></div></section>
+<section id="talents" class="tab card hidden">
+<div class="row"><div><h2 style="margin-bottom:4px">Specializations & Talent Trees</h2><div id="treeStatus" class="small"></div></div><div class="pills"><span class="pill">Passive</span><span class="pill">Active</span><span class="pill">Ranked</span></div></div>
+<div class="card" style="margin-top:12px">
+ <div class="row"><div><b>Owned specializations</b><div class="small">Your starting specialization is free. Additional in-career specializations cost 10 × the total number of specializations you will have after the purchase. Their specialization skills become career skills, but they do not grant the two free starting ranks.</div></div><div id="ownedSpecs" class="pills"></div></div>
+ <div class="grid g2" style="margin-top:10px"><label>Talent tree to view<select id="talentSpecView"></select></label><label>Acquire another in-career specialization<select id="buySpecSelect"></select></label></div>
+ <button id="buySpecBtn" class="btn primary" style="margin-top:10px"></button>
+</div>
+<div class="treewrap" style="margin-top:12px"><div id="talentTree" class="tree"></div></div>
+<div class="source-note">Connected talents must be reached through purchased adjacent nodes. Phase 9 also lets a character own and advance more than one specialization.</div>
+</section>
+<section id="force" class="tab card hidden">
+<div class="row">
+  <div>
+    <h2 style="margin-bottom:4px">Force & Universal Specializations</h2>
+    <div>Force Rating <b id="fr">0</b> · available dice <b id="frAvail">0</b> · Conflict <b id="conflict">0</b> · Morality <b id="moralityNow">50</b></div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row">
+    <div>
+      <b>Universal Specialization</b>
+      <div class="small">A Force-sensitive universal specialization grants Force Rating 1 if the character does not already have a Force Rating.</div>
+    </div>
+    <div style="min-width:260px">
+      <select id="universalSelect">
+        <option>Force Sensitive Exile</option>
+        <option>Force-Sensitive Emergent</option>
+      </select>
+    </div>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <div id="universalOwned" class="pills"></div>
+    <button id="buyUniversal" class="btn primary"></button>
+  </div>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row">
+    <div>
+      <b id="universalTreeTitle">Universal Talent Tree</b>
+      <div id="universalTreeStatus" class="small"></div>
+    </div>
+    <select id="universalTreeSelect" style="max-width:270px"></select>
+  </div>
+  <div class="treewrap" style="margin-top:10px"><div id="universalTree" class="tree"></div></div>
+</div>
+
+<hr>
+<h3 style="margin-bottom:6px">Force Powers</h3>
+<p class="small">Force powers unlock at Force Rating 1+. Their connected upgrade paths now remain tied to your purchased Force progression.</p>
+<div class="power-tabs">
+  <button class="btn primary" data-power-tab="Move">Move</button>
+  <button class="btn" data-power-tab="Sense">Sense</button>
+  <button class="btn" data-power-tab="Enhance">Enhance</button>
+  <button class="btn" data-power-tab="Influence">Influence</button>
+  <button class="btn" data-power-tab="Foresee">Foresee</button>
+</div>
+<div class="treewrap"><div id="forceTree" class="force-tree"></div></div>
+<div id="forceActions" class="card" style="margin-top:12px"></div>
+<div class="card" style="margin-top:12px">
+  <div class="row">
+    <div><b>Force-die test</b><div id="forceTest" class="small">No roll yet.</div></div>
+    <button id="forceRoll" class="btn">Roll available Force dice</button>
+  </div>
+</div>
+</section>
+<section id="campaign" class="tab card hidden"><h2>Campaign Framework</h2><div class="grid g3"><label>Framework<select id="framework"><option>Obligation</option><option>Duty</option><option>Morality</option></select></label><label>Type<select id="frameworkType"></select></label><label>Starting value<input id="frameworkValue" type="number" min="0" max="100" value="10"></label></div><div class="card destinybar" style="margin-top:12px">
+  <div class="row">
+    <div><b>Destiny Pool</b><div class="small">Spend Light Destiny to upgrade an allied check, make an NPC check harder, or introduce a useful narrative fact. Spent points flip after the affected roll resolves.</div></div>
+    <div>Light <b id="lightDestiny">2</b> · Dark <b id="darkDestiny">2</b> · Held <b id="heldDestiny">0</b></div>
+  </div>
+  <div class="pills" style="margin-top:10px">
+    <button id="destinyAlly" class="btn">Queue: upgrade next allied check</button>
+    <button id="destinyNpc" class="btn">Queue: upgrade next NPC difficulty</button>
+    <button id="destinyFact" class="btn">Spend for narrative fact</button>
+    <button id="destinyCancel" class="btn danger">Cancel queued Destiny</button>
+  </div>
+  <div class="grid g2" style="margin-top:10px">
+    <label>Solo GM dark-side spending<select id="gmDestinyMode"><option value="prompt">Prompt me before a Dark Destiny spend</option><option value="off">Do not auto-use Dark Destiny</option></select></label>
+    <div id="destinyStatus" class="small"></div>
+  </div>
+  <div id="narrativeFacts" class="small" style="margin-top:8px"></div>
+</div>
+<div class="card" style="margin-top:12px">
+  <div class="row">
+    <div><b>Morality Session Resolution</b><div class="small">Roll d10, subtract this session's Conflict, apply the result to Morality, then reset Conflict.</div></div>
+    <button id="resolveMorality" class="btn">Resolve Session</button>
+  </div>
+  <div id="moralityStatus" class="small" style="margin-top:8px"></div>
+</div></section>
+
+<section id="equipment" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Equipment, Market & Workshop</h2><div class="small">Equip gear, search a larger source-grounded market, install attachments, manage reloads, and work on equipment.</div></div>
+    <div class="pills"><span class="pill">Credits <b id="credits"></b></span><span class="pill">Encumbrance <b id="encNow"></b>/<b id="encMax"></b></span><span class="pill">Stimpacks <b id="stimCount"></b></span><span class="pill">Reloads <b id="reloadCount"></b></span></div>
+  </div>
+
+  <div id="encWarning" class="warnbox hidden" style="margin-top:10px"></div>
+
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card">
+      <b>Equipped</b>
+      <div id="equippedGear" class="grid" style="margin-top:8px"></div>
+    </div>
+    <div class="card">
+      <b>Carried Inventory</b>
+      <div id="inventoryList" class="grid" style="margin-top:8px"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <div class="row">
+      <div><b>Sable Reach Market</b><div class="small">Legal goods use Negotiation; Restricted goods use Streetwise. Phase 19 uses the source rarity-to-difficulty table. Sable Reach applies the +2 Outer Rim market rarity modifier; Restricted goods use Streetwise while legal goods use Negotiation.</div></div>
+      <div class="pills"><select id="shopFilter" style="max-width:180px"><option value="all">All</option><option value="weapon">Weapons</option><option value="armor">Armor</option><option value="gear">Gear</option></select><input id="shopSearch" style="max-width:240px" placeholder="Search market..."></div>
+    </div>
+    <div id="shopList" class="itemgrid" style="margin-top:10px"></div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <div class="row"><div><b>Attachment Bench</b><div class="small">Attachments consume the item's listed hard points. Base effects below are wired where the current combat engine supports them.</div></div><select id="attachmentItem"></select></div>
+    <div id="attachmentStatus" class="check" style="margin-top:9px"></div>
+    <div id="attachmentList" class="itemgrid" style="margin-top:10px"></div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <div class="row"><div><b>Workshop</b><div class="small">Special Modifications crafting: select a source template, acquire materials, construct it, then spend a conservative subset of generated Advantage through a chosen result focus. Droid chassis require a separate programming step.</div></div><span class="tag">Mechanics</span></div>
+    <div class="grid g2" style="margin-top:10px">
+      <label>Crafting template<select id="craftTemplate"></select></label>
+      <div id="craftPreview" class="check"></div>
+    </div>
+    <div class="pills" style="margin-top:10px"><button id="craftBuyMaterials" class="btn">Acquire materials</button><button id="craftBuild" class="btn primary">Construct</button><button id="repairEquipped" class="btn">Repair equipped item</button></div>
+    <div id="workshopStatus" class="small" style="margin-top:8px"></div>
+  </div>
+</section>
+
+
+
+
+<section id="crewmgmt" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Crew & Relationships</h2><div class="small">Manage the active squad, companion XP, roles, skills, perks, approval, dialogue, loadouts, and personal missions. Up to two companions can travel with you at once.</div></div>
+    <span class="pill">Active companions <b id="activeCrewCount"></b>/2</span>
+  </div>
+  <div class="source-note" style="margin-top:10px">Characteristics, skills, combat checks, wounds, strain, and equipment use the FFG-style engine. Approval thresholds, companion XP advancement, tactical roles, dialogue, and personal missions are original videogame systems for this project rather than official tabletop subsystems.</div>
+  <div id="crewCards" class="itemgrid" style="margin-top:12px"></div>
+  <div id="crewStoryPanel" class="card" style="margin-top:12px"></div>
+  <div class="card" style="margin-top:12px">
+    <b>Relationship thresholds</b>
+    <div class="small" style="margin-top:5px">Trusted at +10: one Boost die on signature skills. Loyal at +25: stronger personal perks and dialogue. Wary at −10 and Hostile at −25 alter reactions and future availability.</div>
+  </div>
+</section>
+
+
+
+<section id="galaxy" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Galaxy & Persistent World</h2><div class="small">Travel between campaign hubs, use local services and job boards, watch markets change by location, and deal with the attention your crew earns.</div></div>
+    <div class="pills"><span class="pill">Day <b id="galaxyDay50">1</b></span><span class="pill">Imperial Heat <b id="galaxyHeat50">0</b>/10</span><span class="pill">Current <b id="galaxyLocation50">Sable Reach</b></span></div>
+  </div>
+  <div class="source-note" style="margin-top:10px">Planet and hub identities are source-grounded where noted. Travel time, local price modifiers, heat, rivals, services, and persistent-world reactions are original Sable Reach campaign systems.</div>
+  <div id="galaxyArrival50" class="warnbox hidden" style="margin-top:12px"></div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><div class="row"><div><b>Current Hub</b><div class="small">Local security, market conditions, factions, and services.</div></div><span id="galaxyHeatTag50" class="tag"></span></div><div id="galaxyCurrent50" style="margin-top:9px"></div><div id="galaxyServices50" class="pills" style="margin-top:10px"></div><button id="galaxyExplore52" class="btn primary" style="margin-top:10px">Explore Current Hub</button></div>
+    <div class="card"><div class="row"><div><b>Local Job Board</b><div class="small">Offers generated here favor the hub's terrain, patrons, and local factions.</div></div><button id="galaxyJobs50" class="btn">Refresh Local Offers</button></div><div id="galaxyJobsList50" class="grid" style="margin-top:9px"></div></div>
+  </div>
+  <div class="card" style="margin-top:12px"><div class="row"><div><b>Hyperspace Destinations</b><div class="small">Route difficulty and travel time are Sable Reach abstractions for solo play, not canonical travel-time claims.</div></div><span class="tag">ASTROGATION</span></div><div id="galaxyDestinations50" class="itemgrid" style="margin-top:10px"></div></div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><b>Rivals & Pursuit</b><div id="galaxyRivals50" class="grid" style="margin-top:8px"></div></div>
+    <div class="card"><b>World Consequences</b><div id="galaxyConsequences50" class="log" style="margin-top:8px"></div></div>
+  </div>
+  <div class="card" style="margin-top:12px"><b>Travel Log</b><div id="galaxyTravelLog50" class="log" style="margin-top:8px"></div></div>
+</section>
+
+
+<section id="explore" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Planetary Exploration</h2><div class="small">Move through districts inside the current hub, meet people where they actually work and live, search for leads, and use services without treating an entire planet as one menu.</div></div>
+    <div class="pills"><span class="pill">Hub <b id="exploreHub52">—</b></span><span class="pill">District <b id="exploreDistrict52">—</b></span><span class="pill">Day <b id="exploreDay52">1</b></span></div>
+  </div>
+  <div class="source-note" style="margin-top:10px">Named districts are source-grounded where the supplied books identify them. Generic districts, NPCs, dialogue, discoveries, and street-level activities are original Sable Reach videogame content.</div>
+  <div class="explore-layout52" style="margin-top:12px">
+    <div class="card explore-map52"><div class="row"><div><b>District Map</b><div class="small">Tap a district to move there. Visited districts remain marked.</div></div><span class="tag">LOCAL TRAVEL</span></div><div id="districtMap52" class="district-grid52" style="margin-top:10px"></div></div>
+    <div class="card explore-scene52"><div id="districtScene52"></div></div>
+  </div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><div class="row"><div><b>People Here</b><div class="small">Talk, make contacts, ask for work, or learn what the district is hiding.</div></div><span class="tag">NPCs</span></div><div id="districtNpc52" class="grid" style="margin-top:9px"></div></div>
+    <div class="card"><div class="row"><div><b>Street Actions</b><div class="small">Your best-qualified crew member or utility droid can handle exploration checks.</div></div><span class="tag">SOLO PARTY</span></div><div id="districtActions52" class="pills" style="margin-top:9px"></div><div id="districtResult52" class="check" style="margin-top:9px"></div></div>
+  </div>
+  <div id="npcDialogue52" class="card hidden" style="margin-top:12px"></div>
+  <div class="card" style="margin-top:12px"><div class="row"><div><b>Exploration Journal</b><div class="small">Local discoveries, contacts, rumors, and notable encounters.</div></div><button id="clearExploreNotice52" class="btn">Clear Notice</button></div><div id="exploreJournal52" class="log" style="margin-top:8px"></div></div>
+</section>
+
+<section id="ship" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Starship & Crew Stations</h2><div class="small">Your ship becomes a persistent hub after Episode 0. Assign stations, maintain the vessel, collect and switch ships, travel, install upgrades, and fly combat encounters.</div></div>
+    <span class="pill" id="shipLockState">LOCKED</span>
+  </div>
+  <div id="shipLocked" class="warnbox" style="margin-top:12px">Complete Episode 0 and acquire the escape ship to unlock this system.</div>
+
+  <div id="shipOwned" class="hidden">
+    <div class="grid g2" style="margin-top:12px">
+      <div class="card">
+        <div class="row"><div><b id="shipNameDisplay"></b><div id="shipSource" class="tiny"></div></div><span class="tag" id="shipLocation"></span></div>
+        <label style="display:block;margin-top:9px">Ship name<input id="shipNameInput"></label>
+        <div id="shipStats" class="pills" style="margin-top:9px"></div>
+        <div id="shipCondition" class="small" style="margin-top:9px"></div>
+      </div>
+      <div class="card">
+        <b>Crew stations</b>
+        <div class="grid g2" style="margin-top:8px">
+          <label>Pilot<select id="shipPilot"></select></label>
+          <label>Navigator / Co-pilot<select id="shipNavigator"></select></label>
+          <label>Gunner<select id="shipGunner"></select></label>
+          <label>Engineer<select id="shipEngineer"></select></label>
+        </div>
+        <div id="stationPreview" class="small" style="margin-top:8px"></div>
+      </div>
+    </div>
+
+    <div class="grid g2" style="margin-top:12px">
+      <div class="card">
+        <div class="row"><div><b>Navigation</b><div class="small">Plot an Astrogation course and move the ship between local destinations.</div></div><span class="tag">ASTROGATION</span></div>
+        <label style="display:block;margin-top:8px">Destination<select id="shipDestination"></select></label>
+        <button id="shipTravelBtn" class="btn primary" style="margin-top:8px">Plot Course & Travel</button>
+        <div id="shipTravelPreview" class="check" style="margin-top:8px"></div>
+      </div>
+      <div class="card">
+        <div class="row"><div><b>Maintenance</b><div class="small">Mechanics checks can patch hull or system strain. Dockyard service is a campaign abstraction for rapid repairs.</div></div><span class="tag">MECHANICS</span></div>
+        <div class="pills" style="margin-top:8px"><button id="shipRepairHull" class="btn">Repair Hull</button><button id="shipRepairStrain" class="btn">Repair Systems</button><button id="shipDockRepair" class="btn">Pay Dockyard Service</button></div>
+        <div id="shipRepairPreview" class="small" style="margin-top:8px"></div>
+      </div>
+    </div>
+
+
+    <div class="card" style="margin-top:12px">
+      <div class="row"><div><b>Hangar & Ship Market</b><div class="small">Own multiple ships, switch your active vessel, or locate a new craft using the same rarity/acquisition engine as personal equipment. Each owned model preserves its own name, damage, criticals, and installed campaign upgrades.</div></div><span class="tag">PHASE 40</span></div>
+      <div id="shipHangar" class="itemgrid" style="margin-top:10px"></div>
+      <div class="section-label" style="margin-top:12px">Available ships</div>
+      <div id="shipMarket" class="itemgrid" style="margin-top:8px"></div>
+    </div>
+    <div class="card" style="margin-top:12px">
+      <div class="row"><div><b>Customization hard points</b><div class="small">Phase 14's upgrade packages are original campaign packages built on the hard-point model used by FFG starship profiles.</div></div><span class="pill">HP <b id="shipHP"></b></span></div>
+      <div id="shipUpgradeList" class="itemgrid" style="margin-top:10px"></div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <div class="row"><div><b>Flight operations</b><div class="small">Launch a patrol encounter to exercise pilot, navigator, gunner, and engineer stations.</div></div><button id="startShipCombat" class="btn primary">Launch Patrol Encounter</button></div>
+      <div id="shipCombat" class="hidden" style="margin-top:12px">
+        <div class="row"><div><b>Starship Encounter</b><div id="shipCombatStatus" class="small"></div></div><div>Round <b id="shipRound"></b> · Range <b id="shipRange"></b></div></div>
+        <div id="shipEnemyList" class="itemgrid" style="margin-top:9px"></div>
+        <div class="grid g2" style="margin-top:10px">
+          <div class="card">
+            <b>Pilot station</b>
+            <div class="pills" style="margin-top:7px"><button id="shipClose" class="btn">Close Range</button><button id="shipOpen" class="btn">Open Range</button><button id="shipAccel" class="btn">Accelerate</button><button id="shipDecel" class="btn">Decelerate</button><button id="shipEvasive" class="btn">Evasive Maneuvers</button></div>
+          </div>
+          <div class="card">
+            <b>Other stations</b>
+            <div class="pills" style="margin-top:7px"><button id="shipCopilotAction" class="btn">Co-pilot Assist</button><button id="shipFire" class="btn">Fire Laser Cannon</button><button id="shipDamageControl" class="btn">Damage Control</button><button id="shipEndRound" class="btn good">End Round</button></div>
+          </div>
+        </div>
+        <div id="shipCombatLog" class="log" style="margin-top:10px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="recovery" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Recovery & Medical Treatment</h2><div class="small">Treat wounds, recover strain, and attempt to heal Critical Injuries between encounters.</div></div>
+    <span class="pill">Encounter <b id="encounterNumber"></b></span>
+  </div>
+  <div id="recoveryParty" class="itemgrid" style="margin-top:12px"></div>
+  <div class="card" style="margin-top:12px">
+    <div class="grid g3">
+      <label>Healer<select id="healerSelect"></select></label>
+      <label>Patient<select id="patientSelect"></select></label>
+      <label>Recovery action<select id="recoveryAction"><option value="medicine">Medicine — wounds</option><option value="cool">Catch breath — Cool</option><option value="discipline">Catch breath — Discipline</option><option value="critical">Treat Critical Injury</option></select></label>
+    </div>
+    <label id="criticalSelectWrap" class="hidden" style="display:block;margin-top:10px">Critical Injury<select id="criticalSelect"></select></label>
+    <div id="recoveryPreview" class="check" style="margin-top:10px"></div>
+    <button id="performRecovery" class="btn primary" style="margin-top:10px">Perform Recovery Check</button>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <div class="row"><div><b>New day / full downtime reset</b><div class="small">A full night's rest recovers 1 wound and all strain, and resets daily stimpack diminishing returns. Every five standard days of rest, the game makes the weekly natural Resilience check for one Critical Injury. Medicine treatment attempts are also limited per injury per standard week.</div></div><button id="newDay" class="btn">Start New Day</button></div>
+  </div>
+</section>
+
+
+<section id="gm" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Operations Director</h2><div class="small">Generate source-inspired solo missions, resolve skill scenes with the best available crew member, launch tactical opposition, and carry rewards back into the persistent campaign.</div></div>
+    <span class="pill">Phase 44 · procedural GM layer</span>
+  </div>
+  <div class="source-note" style="margin-top:10px">Operation structures are original Sable Reach combinations inspired by the supplied adventure modules and Environmental Set Pieces. They are not reproductions of published adventures.</div>
+  <div class="grid g3" style="margin-top:12px">
+    <label>Operation type<select id="opType"><option value="any">Any</option></select></label>
+    <label>Threat level<select id="opThreat"><option value="any">Any</option><option value="1">1 · Routine</option><option value="2">2 · Risky</option><option value="3">3 · Dangerous</option><option value="4">4 · Severe</option><option value="5">5 · Extreme</option></select></label>
+    <label>Environment<select id="opEnvironment"><option value="any">Any</option></select></label>
+  </div>
+  <div class="pills" style="margin-top:10px"><button id="generateOperations" class="btn primary">Generate 3 Offers</button><button id="refreshOperation" class="btn">Generate 1 Offer</button><button id="clearOperations" class="btn danger">Clear Job Board</button></div>
+  <div id="operationCurrent" style="margin-top:12px"></div>
+  <div class="section-label" style="margin-top:14px">Job Board</div>
+  <div id="operationBoard" class="itemgrid" style="margin-top:8px"></div>
+  <div class="section-label" style="margin-top:14px">Operation History</div>
+  <div id="operationHistory" class="log" style="margin-top:8px;max-height:220px"></div>
+</section>
+
+<section id="database" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Rules & Content Database</h2><div class="small">A curated, searchable library drawn from the project books. Phase 42 also lets encounter-ready adversaries be assembled into live tactical combats.</div></div>
+    <span class="pill">Phase 45 · release-candidate database</span>
+  </div>
+  <div class="pills" style="margin-top:10px">
+    <span class="pill">Species <b id="dbSpeciesCount"></b></span>
+    <span class="pill">Specializations <b id="dbSpecCount"></b></span>
+    <span class="pill">Equipment <b id="dbEquipCount"></b></span>
+    <span class="pill">Adversaries <b id="dbAdvCount"></b></span>
+    <span class="pill">Ships <b id="dbShipCount"></b></span>
+    <span class="pill">Force Powers <b id="dbForceCount"></b></span>
+  </div>
+  <div class="grid g3" style="margin-top:12px">
+    <label>Category<select id="dbCategory">
+      <option value="species">Species</option>
+      <option value="career">Careers</option>
+      <option value="specialization">Specializations</option>
+      <option value="weapon">Weapons</option>
+      <option value="armor">Armor</option>
+      <option value="gear">Gear</option>
+      <option value="attachment">Attachments</option>
+      <option value="force">Force Powers</option>
+      <option value="talent">Talents</option>
+      <option value="adversary">Characters & Adversaries</option>
+      <option value="ship">Starships & Vehicles</option>
+    </select></label>
+    <label>Implementation<select id="dbImplementation"><option value="all">All records</option><option value="playable">Playable</option><option value="reference">Reference / partial</option></select></label>
+    <label>Search<input id="dbSearch" placeholder="Search name, skill, quality, book, manufacturer..."></label>
+  </div>
+  <div id="dbCoverage" class="source-note" style="margin-top:10px"></div>
+  <div id="dbList" class="itemgrid" style="margin-top:12px"></div>
+</section>
+
+
+<section id="rulesaudit" class="tab card hidden">
+  <div class="row">
+    <div><h2 style="margin:0">Rules Fidelity Audit</h2><div class="small">This page separates mechanics verified against the project books/reference material from videogame adaptations and systems still awaiting an exact-data pass.</div></div>
+    <span class="pill">Phase 45 RC</span>
+  </div>
+  <div class="grid g3" style="margin-top:12px">
+    <div class="card"><div class="tiny">SOURCE-VERIFIED</div><div class="big good" id="auditVerifiedCount">0</div></div>
+    <div class="card"><div class="tiny">GAME ADAPTATIONS</div><div class="big gold" id="auditAdaptedCount">0</div></div>
+    <div class="card"><div class="tiny">PROTOTYPE / PENDING</div><div class="big bad" id="auditPrototypeCount">0</div></div>
+  </div>
+  <div class="grid g2" style="margin-top:12px">
+    <label>Filter<select id="auditFilter"><option value="all">All systems</option><option value="verified">Source-verified</option><option value="adapted">Game adaptation</option><option value="prototype">Prototype / pending</option></select></label>
+    <label>Search<input id="auditSearch" placeholder="Medicine, rarity, criticals, ship..."></label>
+  </div>
+  <div id="auditList" class="itemgrid" style="margin-top:12px"></div>
+  <div class="source-note">“Source-verified” means the mechanic or data point was checked against the supplied FFG material or a cross-reference that identifies the official book/page. “Game adaptation” means it intentionally differs to support solo videogame play. “Prototype” means it still needs a dedicated source/data pass.</div>
+</section>
+
+<section id="review" class="tab card hidden"><h2>Review</h2><div id="reviewBody"></div><hr><button id="finalize" class="btn primary">Finalize Character & Start Episode 0</button> <button id="save" class="btn">Save</button> <button id="load" class="btn">Load Best Save</button> <button id="export" class="btn">Export Full Save</button> <button id="import" class="btn">Import Save</button> <button id="reset" class="btn danger">New Game</button></section>
+
+<section id="adventure" class="tab hidden">
+  <div id="sceneHero" class="scene-hero" data-scene="cantina">
+    <div class="scene-art"><div id="sceneIcon" class="scene-icon">✦</div></div>
+    <div class="scene-copy">
+      <div id="place" class="scene-kicker"></div>
+      <h2 id="sceneTitle"></h2>
+      <div id="sceneObjective" class="small"></div>
+      <div class="vital-row" style="margin-top:12px">
+        <div id="adventureWoundBar"></div>
+        <div id="adventureStrainBar"></div>
+      </div>
+      <div class="pills scene-stats">
+        <span class="pill">Soak <b id="soak"></b></span>
+        <span class="pill">XP <b id="earnedXp"></b></span>
+        <span class="pill">Credits <b id="adventureCredits"></b></span>
+      </div>
+      <span class="hidden"><b id="wounds"></b><b id="strain"></b></span>
+    </div>
+  </div>
+  <div class="adventure-layout" style="margin-top:12px">
+    <div class="story-column">
+      <div id="adventureHint" class="tutorial hidden" style="margin-bottom:10px"></div>
+      <div class="story-panel"><div id="story" class="story-copy"></div></div>
+      <div class="section-label">Your approach</div>
+      <div id="choices" class="choice-list"></div>
+    </div>
+    <aside class="adventure-sidebar">
+      <div class="card last-roll-card"><div class="section-label">Last check</div><div id="lastCheck" class="small" style="margin-top:7px">No roll yet.</div></div>
+      <div class="card destinybar"><div class="row"><b>Destiny</b><span>Light <b id="advLightDestiny"></b> · Dark <b id="advDarkDestiny"></b></span></div><div id="advDestinyStatus" class="tiny" style="margin-top:6px"></div><div class="pills" style="margin-top:7px"><button id="advDestinyAlly" class="btn">Upgrade next check</button><button id="advDestinyNpc" class="btn">Raise stakes</button></div></div>
+      <div class="card"><div class="section-label">Crew</div><div id="crew" class="grid" style="margin-top:8px"></div></div>
+      <div class="card"><div class="section-label">Episode 0 map</div><div id="episodeMap" class="pills map-pills" style="margin-top:8px"></div></div>
+      <div class="card"><div class="section-label">Quest log</div><div id="questTracker" class="small" style="margin-top:8px"></div><div id="factionRep" class="tiny" style="margin-top:8px"></div></div>
+      <div class="card"><div class="section-label">Session log</div><div id="gameLog" class="log"></div></div>
+    </aside>
+  </div>
+</section>
+
+<section id="combat" class="card hidden" style="margin-top:14px">
+  <div class="row">
+    <div>
+      <div class="tiny">STRUCTURED ENCOUNTER · PHASE 60</div>
+      <h2 id="combatTitle" style="margin:.2rem 0"></h2>
+    </div>
+    <div>Round <b id="round"></b> · Slot <b id="slotNow"></b></div>
+  </div>
+
+  <div class="card" style="margin-top:10px">
+    <div class="row">
+      <div><b>Initiative</b><div class="tiny">PC/NPC slots are generated by Cool or Vigilance and can be filled by any unused character on that side.</div></div>
+      <div id="initiativeMode" class="tag"></div>
+    </div>
+    <div id="initiativeStrip" class="pills" style="margin-top:8px"></div>
+  </div>
+
+  <div class="combat-grid" style="margin-top:10px">
+    <div><b>Squad</b><div id="party" class="grid" style="margin-top:7px"></div></div>
+    <div><b>Enemies</b><div id="enemies" class="grid" style="margin-top:7px"></div></div>
+  </div>
+
+  <div class="card tactical-board" style="margin-top:10px">
+    <div class="row">
+      <div><b>Tactical Positioning</b><div class="tiny">Abstract positions create individual Engaged / Short / Medium / Long / Extreme ranges instead of one shared range for the whole encounter.</div></div>
+      <span class="tag">SOLO TACTICS</span>
+    </div>
+    <div id="battlefield" class="battlefield" style="margin-top:10px"></div>
+    <div id="aiIntent" class="small" style="margin-top:9px"></div>
+  </div>
+
+  <div class="grid g2" style="margin-top:12px">
+    <label>Active PC-slot character<select id="activeActor"></select></label>
+    <label>Target<select id="target"></select></label>
+  </div>
+
+  <div class="card" style="margin-top:10px">
+    <div class="row"><div><b>Selected Target Range</b><div class="tiny">Calculated separately from the active character to the selected target.</div></div><div id="rangeBand" class="pill"></div></div>
+    <div id="maneuverState" class="small" style="margin-top:7px"></div>
+    <div id="maneuverButtons" class="pills" style="margin-top:9px"></div>
+  </div>
+
+  <div id="combatHint" class="tutorial hidden" style="margin-top:10px"></div><div id="combatPreview" class="check" style="margin-top:10px"></div>
+  <div id="combatDestiny" class="destinybar" style="margin-top:10px"></div>
+  <div id="combatButtons" class="pills" style="margin-top:10px"></div>
+  <div id="spendPanel" class="spend hidden" style="margin-top:10px"></div>
+  <div id="criticalPanel" class="card" style="margin-top:12px"></div>
+  <div id="combatLog" class="log card" style="margin-top:12px"></div>
+</section>
+
+<section class="card" style="margin-top:14px"><b>Historical milestone scope</b><div class="small" style="margin-top:6px">Phases 38–40 are the Galaxy Equipment Mega-Update: character creation gains a much broader species roster; Gadgets and Gear expands the playable weapon/armor market and the attachment reference library; and Starships and Speeders adds a multi-ship hangar with source-grounded ship profiles plus a vehicle reference catalog. Species drawn from the Complete Species Guide are explicitly labeled as fan-supplement profiles. Narrative racial traits, exotic item side effects, and some attachment/vehicle rules remain labeled contextual or reference-only instead of being silently guessed.</div></section>
+<section class="card" style="margin-top:14px"><div class="row"><div><b>Build / Rules Log</b></div><span class="tag">BUILD LOG</span></div><div id="buildLog" class="log" style="margin-top:8px"></div></section>
+</div>
+
+<div id="mobileDock52" class="mobile-dock52" aria-label="Mobile navigation">
+  <button data-mobiletab52="guide"><span>⌂</span><small>Home</small></button>
+  <button data-mobiletab52="explore"><span>◎</span><small>Explore</small></button>
+  <button data-mobiletab52="gm"><span>◆</span><small>Missions</small></button>
+  <button data-mobiletab52="crewmgmt"><span>◉</span><small>Crew</small></button>
+  <button id="mobileMore52"><span>☰</span><small>More</small></button>
+</div>
+<div id="mobileSheet52" class="mobile-sheet52 hidden" aria-label="All game sections"><div class="mobile-sheet-card52"><div class="row"><b>All Sections</b><button id="mobileClose52" class="btn">Close</button></div><div id="mobileAllTabs52" class="mobile-alltabs52" style="margin-top:10px"></div><div class="tiny" style="margin-top:10px">iPhone tip: when this build is hosted over HTTPS, open it in Safari and use Share → Add to Home Screen for an app-like launcher.</div></div></div>
+
+<!-- SABLE_SOURCE:script-01.js -->
+
+<!-- SABLE_SOURCE:script-02.js -->
+
+<!-- SABLE_SOURCE:script-03.js -->
+
+<!-- SABLE_SOURCE:style-19.css -->
+<!-- SABLE_SOURCE:script-04.js -->
+
+
+<!-- SABLE_SOURCE:style-20.css -->
+<!-- SABLE_SOURCE:script-05.js -->
+
+<!-- SABLE_SOURCE:style-21.css -->
+<!-- SABLE_SOURCE:script-06.js -->
+
+
+<!-- SABLE_SOURCE:script-07.js -->
+
+
+<!-- SABLE_SOURCE:script-08.js -->
+
+
+<!-- SABLE_SOURCE:script-09.js -->
+
+
+<!-- SABLE_SOURCE:script-10.js -->
+
+
+<!-- SABLE_SOURCE:script-11.js -->
+
+
+<!-- SABLE_SOURCE:script-12.js -->
+
+
+<!-- SABLE_SOURCE:script-13.js -->
+
+
+<!-- SABLE_SOURCE:script-14.js -->
+
+
+<!-- SABLE_SOURCE:script-15.js -->
+
+
+<!-- SABLE_SOURCE:script-16.js -->
+
+
+<!-- SABLE_SOURCE:script-17.js -->
+
+
+<!-- SABLE_SOURCE:script-18.js -->
+
+
+<!-- SABLE_SOURCE:script-19.js -->
+
+
+
+<!-- SABLE_SOURCE:script-20.js -->
+
+<!-- SABLE_SOURCE:script-21.js -->
+
+<!-- SABLE_SOURCE:style-22.css --><!-- SABLE_SOURCE:script-22.js -->
+</body></html>

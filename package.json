@@ -2,6 +2,15 @@
   "name": "sable-reach-pwa",
   "version": "1.9.6",
   "private": true,
-  "scripts": {"build": "python3 scripts/build_world96.py", "test": "node scripts/check_world94.cjs && node scripts/check_work96.cjs"},
-  "devDependencies": {"@napi-rs/canvas": "1.0.10", "jsdom": "30.1.2"}
+  "scripts": {
+    "build": "python3 scripts/build.py",
+    "build:check": "python3 scripts/build.py --check",
+    "test": "node scripts/check_world94.cjs && node scripts/check_work96.cjs && node scripts/check_save97.cjs",
+    "test:browser": "node scripts/check_layout97.cjs"
+  },
+  "devDependencies": {
+    "@napi-rs/canvas": "1.0.10",
+    "jsdom": "30.1.2",
+    "playwright": "1.62.1"
+  }
 }

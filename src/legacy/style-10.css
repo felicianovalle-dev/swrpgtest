@@ -1,0 +1,133 @@
+
+/* =========================================================
+   PHASE 77 — DESKTOP UX LAYOUT PASS
+   PHASE 78 — PIXEL UI / NAVIGATION POLISH
+   ========================================================= */
+:root{
+  --ui78-sidebar:280px;
+  --ui78-border:#61788e;
+  --ui78-panel:#0b1420;
+  --ui78-panel2:#101b29;
+  --ui78-highlight:#d4ad50;
+}
+#desktopShell78{display:block;margin-top:14px}
+#sidebar78,#main78{min-width:0}
+#sidebar78 .card,#main78 .card{box-shadow:4px 4px 0 #0007}
+.workspace78-card{background:var(--ui78-panel);border:2px solid var(--ui78-border);border-radius:12px;padding:10px}
+.workspace78-title{font:700 .8rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.08em;color:#e9eef2;text-transform:uppercase;margin-bottom:8px}
+#sidebarQuick78{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+#sidebarQuick78 button{min-height:42px;padding:8px 6px;font-size:.76rem}
+#sidebarSearch78{width:100%;margin:0;padding:10px;background:#08111a;border:1px solid #44596d;border-radius:10px;color:#eef2f6}
+#nav.nav.nav78{display:grid;gap:6px;margin:0}
+#nav.nav.nav78 button{
+  justify-content:flex-start;text-align:left;display:flex;align-items:center;gap:10px;
+  min-height:42px;padding:10px 12px;border-radius:10px;border:1px solid #42576b;background:#0b1520;
+  position:relative;overflow:hidden;transition:transform .12s ease, background .12s ease, border-color .12s ease
+}
+#nav.nav.nav78 button:before{
+  content:attr(data-icon);display:grid;place-items:center;flex:none;width:24px;height:24px;
+  border:1px solid #5f7386;border-radius:6px;background:#111d2b;color:#ffe39a;font-size:.78rem;font-weight:800
+}
+#nav.nav.nav78 button:hover:not(:disabled){transform:translateX(2px);background:#132131}
+#nav.nav.nav78 button.on{
+  background:linear-gradient(90deg,rgba(212,173,80,.2),rgba(212,173,80,.05));
+  border-color:var(--ui78-highlight);box-shadow:inset 4px 0 0 var(--ui78-highlight);color:#fff
+}
+#nav.nav.nav78 button:disabled{opacity:.45}
+#activeSummary78 .pill{font-size:.74rem}
+#outlineList78{display:grid;gap:5px}
+#outlineList78 button{
+  width:100%;text-align:left;padding:8px 9px;border-radius:9px;border:1px solid #364a5b;background:#0d1723;color:#dce4eb
+}
+#outlineList78 button:hover{background:#132131}
+#outlineEmpty78{color:#8da2b4;font-size:.76rem}
+.tab78{
+  background:linear-gradient(180deg,#0e1824,#0b1420);
+  border:2px solid var(--ui78-border);
+  border-radius:14px;
+  box-shadow:6px 6px 0 #0007;
+}
+.tab78 > .row:first-child,
+.tab78 > h2:first-child{
+  position:sticky;top:-12px;z-index:3;padding:10px 12px;margin:-12px -12px 10px;
+  background:linear-gradient(180deg,#111b27,#0d1722 85%);
+  border-bottom:1px solid #314354
+}
+.sectionAnchor78{scroll-margin-top:70px}
+.sectionTag78{
+  display:inline-flex;align-items:center;gap:6px;padding:4px 7px;border-radius:999px;
+  background:#122031;border:1px solid #41586c;font-size:.7rem;color:#d7e0e8
+}
+.sectionTag78 b{color:#ffe39a}
+.compact78 .tab.card,
+.compact78 .tab78{padding:10px}
+.compact78 .card{padding:9px}
+.compact78 .pill{padding:4px 7px}
+.compact78 .row{gap:8px}
+.compact78 .grid{gap:10px}
+.compact78 .small{font-size:.78rem}
+#tabHost78 > .tab{margin:0}
+#tabHost78 > .tab.hidden{display:none!important}
+#commandPalette78{
+  position:fixed;inset:0;z-index:180;background:#01060bd8;display:grid;place-items:start center;padding-top:9vh
+}
+#commandPalette78.hidden{display:none}
+#commandCard78{
+  width:min(700px,92vw);background:#08111a;border:3px solid var(--ui78-highlight);border-radius:14px;
+  box-shadow:0 24px 90px #000;padding:12px
+}
+#commandResults78{max-height:55vh;overflow:auto;display:grid;gap:6px;margin-top:10px}
+.commandItem78{
+  width:100%;text-align:left;padding:10px;border-radius:10px;border:1px solid #3d5366;background:#0f1a27;color:#eef2f6
+}
+.commandItem78:hover,.commandItem78.active{background:#162636;border-color:#d4ad50}
+.release78note{
+  margin-top:10px;padding:9px 10px;background:#171207;border:1px solid #6b592d;border-radius:10px;
+  font-size:.76rem;color:#e0d3b0
+}
+.pixelFrame78{
+  border:2px solid #61788e;border-radius:10px;background:linear-gradient(180deg,#0e1824,#09121b);
+  box-shadow:4px 4px 0 #0007
+}
+.uiAudit78{margin-top:14px;border:2px solid #d4ad50;background:#130f07;padding:11px;border-radius:12px;box-shadow:inset 0 0 0 1px #5b471a}
+.uiAudit78Grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:8px}
+.uiAudit78Grid .metric{border:1px solid #5a4d31;background:#181208;padding:7px;border-radius:10px;text-align:center}
+.uiAudit78Grid .metric b{display:block;font:1.05rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:#ffe39a}
+@media(min-width:1180px){
+  body{overflow:hidden}
+  .wrap{max-width:none;height:100vh;display:flex;flex-direction:column}
+  .top{flex:none}
+  .rc-banner,#quickHud,#runtimeError{flex:none}
+  #desktopShell78{
+    flex:1;min-height:0;display:grid;grid-template-columns:var(--ui78-sidebar) minmax(0,1fr);gap:14px;
+    align-items:stretch
+  }
+  #sidebar78{
+    min-height:0;display:flex;flex-direction:column;gap:10px;position:sticky;top:0;max-height:100%;
+  }
+  #sidebarInner78{
+    min-height:0;overflow:auto;display:flex;flex-direction:column;gap:10px;padding-right:2px
+  }
+  #main78{min-height:0;display:flex;flex-direction:column}
+  #tabHost78{flex:1;min-height:0}
+  #tabHost78 > .tab{
+    height:100%;max-height:100%;overflow:auto;padding:12px 12px 18px
+  }
+  .tab78 > .row:first-child,.tab78 > h2:first-child{top:-12px}
+}
+@media(max-width:1179px){
+  #desktopShell78{display:grid;gap:12px}
+  #sidebarQuick78{grid-template-columns:repeat(6,minmax(0,1fr))}
+  #nav.nav.nav78{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #nav.nav.nav78 button{justify-content:center;text-align:center}
+  #nav.nav.nav78 button:before{margin-right:0}
+  .uiAudit78Grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+  #sidebarQuick78{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #nav.nav.nav78{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  #nav.nav.nav78{grid-template-columns:1fr 1fr}
+  .uiAudit78Grid{grid-template-columns:1fr 1fr}
+}

@@ -1,0 +1,15 @@
+
+  .galaxy-pulse64{margin-top:12px;border:1px solid rgba(114,194,255,.24);background:linear-gradient(180deg,rgba(16,31,48,.72),rgba(8,13,21,.86));border-radius:14px;padding:12px}
+  .influence-grid64{display:grid;grid-template-columns:repeat(5,minmax(72px,1fr));gap:8px;margin-top:10px}
+  .influence-cell64{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:8px;min-width:0}
+  .influence-track64{height:6px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden;margin-top:6px}
+  .influence-fill64{height:100%;background:currentColor;opacity:.78}
+  .faction-Empire{color:#c7d0db}.faction-Rebels{color:#ffb35a}.faction-Hutts{color:#8bd17f}.faction-Guild{color:#78b7ff}.faction-Local{color:#d59fff}
+  .control-grid64{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:8px;margin-top:10px}
+  .control-card64{border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:9px;background:rgba(0,0,0,.14)}
+  .control-chip64{font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+  .district-control64{margin-top:8px;display:inline-flex;gap:6px;align-items:center}
+  .pulse-event64{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+  .pulse-event64:last-child{border-bottom:0}
+  @media(max-width:640px){.influence-grid64{grid-template-columns:repeat(2,minmax(0,1fr))}.influence-grid64 .influence-cell64:last-child{grid-column:1/-1}.control-grid64{grid-template-columns:1fr 1fr}.galaxy-pulse64{padding:10px}}
+  @media(max-width:390px){.control-grid64{grid-template-columns:1fr}}

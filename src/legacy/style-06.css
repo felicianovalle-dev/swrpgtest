@@ -1,0 +1,68 @@
+
+/* =========================================================
+   PHASE 69 — PIXEL PORTRAITS / VISUAL DIALOGUE
+   PHASE 70 — RETRO COMBAT 3.0 PRESENTATION
+   ========================================================= */
+.pixel-dialog69{display:grid;grid-template-columns:78px minmax(0,1fr);gap:10px;align-items:start}
+.pixel-portrait-frame69{border:2px solid #72889d;background:#03070b;padding:4px;box-shadow:inset 0 0 0 2px #1c2c3d}
+.pixel-portrait69{display:block;width:64px;height:64px;image-rendering:pixelated;image-rendering:crisp-edges;background:#0a1016}
+.pixel-dialog-copy69{min-width:0}
+.pixel-speaker-meta69{font-size:.68rem;color:#96a9ba;text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+.pixel-relation69{height:6px;border:1px solid #4b5f70;background:#10161d;margin-top:6px;overflow:hidden}
+.pixel-relation69 span{display:block;height:100%;background:#d0aa4d}
+.pixel-social-grid69{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}
+.pixel-social-option69{border:1px solid #40566a;background:#0c1722;padding:7px;min-width:0}
+.pixel-social-option69 b{display:block;font-size:.76rem}
+.pixel-social-option69 .tiny{display:block;margin-top:2px}
+.pixel-social-option69 button{width:100%;min-height:38px;margin-top:5px}
+.pixel-social-result69{border-left:3px solid #d0aa4d;padding:7px 9px;background:#171408;margin-top:8px;font-size:.76rem;line-height:1.45}
+.pixel-face-badge69{display:inline-flex;align-items:center;gap:5px;border:1px solid #43586c;background:#101a24;padding:3px 6px;font-size:.67rem}
+.pixel-dialog-actions67 .social69{border-color:#526f88}
+.retro-combat70{margin-top:10px;background:#04070b;border:2px solid #9eb1c3;padding:6px;box-shadow:inset 0 0 0 2px #1d3042}
+.retro-combat-stage70{position:relative}
+#retroBattleCanvas70{display:block;width:100%;height:auto;max-height:430px;background:#070a0f;image-rendering:pixelated;image-rendering:crisp-edges}
+.retro-overlay70{display:grid;grid-template-columns:1.25fr .75fr;gap:8px;margin-top:7px}
+.retro-party70,.retro-command70{background:#07101b;border:2px solid #aab8c6;box-shadow:inset 0 0 0 2px #213347;padding:8px}
+.retro-party-list70{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:5px}
+.retro-unit70{border:1px solid #34495c;background:#0b1722;padding:5px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.7rem}
+.retro-unit70.active{outline:2px solid #e0bd57;outline-offset:-1px}
+.retro-unit70.down{opacity:.45}
+.retro-hp70{height:4px;background:#251416;border:1px solid #5b3b3d;margin-top:3px}
+.retro-hp70 span{display:block;height:100%;background:#b85353}
+.retro-sp70{height:4px;background:#10192a;border:1px solid #334c70;margin-top:2px}
+.retro-sp70 span{display:block;height:100%;background:#557fc0}
+.retro-command-grid70{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:6px}
+.retro-command-grid70 button{min-height:43px;border:2px solid #677f95;background:#101b27;color:#fff;font-weight:800;letter-spacing:.04em}
+.retro-command-grid70 button.primary{border-color:#d4ad4b;background:#241c08;color:#ffe7a3}
+.retro-command-grid70 button:disabled{opacity:.35}
+.retro-sub70{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;border-top:1px solid #2f4254;padding-top:7px}
+.retro-sub70 button{min-height:36px}
+.retro-target-row70{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.retro-target70{font-size:.7rem;border:1px solid #4d6071;background:#111923;padding:5px 7px}
+.retro-target70.on{border-color:#e1c15e;color:#ffe38b}
+.retro-dice-tray70{position:absolute;left:6px;top:6px;display:flex;gap:3px;pointer-events:none}
+.retro-die70{width:20px;height:20px;display:grid;place-items:center;border:1px solid #d6dde5;background:#161f28;color:#fff;font:bold 12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;box-shadow:2px 2px 0 #0008;animation:retroDie70 .42s steps(3,end)}
+@keyframes retroDie70{0%{transform:translateY(-8px) rotate(-12deg);opacity:.2}50%{transform:translateY(3px) rotate(8deg);opacity:1}100%{transform:none}}
+body.reduce-motion65 .retro-die70{animation:none}
+.retro-event70{position:absolute;right:8px;top:8px;max-width:46%;padding:5px 7px;border:1px solid #7c8fa0;background:#07101be8;font:11px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;line-height:1.35;pointer-events:none}
+.retro-label70{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.09em;text-transform:uppercase;font-size:.7rem}
+.retro-round70{color:#9eb4c8}
+.retro-help70{font-size:.72rem;color:#aebdca;line-height:1.45;margin-top:6px}
+.combat-visual-toggle70{margin-left:auto}
+body.high-contrast65 .retro-combat70,
+body.high-contrast65 .retro-party70,
+body.high-contrast65 .retro-command70{border-color:#fff}
+@media(max-width:720px){
+  .pixel-dialog69{grid-template-columns:64px minmax(0,1fr)}
+  .pixel-portrait69{width:52px;height:52px}
+  .pixel-social-grid69{grid-template-columns:1fr}
+  .retro-overlay70{grid-template-columns:1fr}
+  .retro-party-list70{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .retro-event70{max-width:58%;font-size:9px}
+}
+@media(max-width:420px){
+  .retro-combat70{padding:3px}
+  .retro-party70,.retro-command70{padding:6px}
+  .retro-unit70{font-size:.64rem}
+  .retro-command-grid70 button{min-height:44px;font-size:.76rem}
+}

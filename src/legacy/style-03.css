@@ -1,0 +1,22 @@
+
+/* Phase 59 — Companion Life */
+.crew-life59{margin-top:12px;border-color:#405776;background:linear-gradient(180deg,rgba(34,47,68,.92),rgba(20,27,40,.96))}
+.crew-life-grid59{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+.crew-life-card59{border:1px solid var(--line);background:var(--panel2);border-radius:12px;padding:11px}
+.crew-life-card59 .life-meter59{height:7px;border-radius:999px;background:#111826;overflow:hidden;margin-top:6px}
+.crew-life-card59 .life-meter59>span{display:block;height:100%;background:linear-gradient(90deg,#6e8eae,#9cc6ef)}
+.crew-life-card59 .bond59{padding:5px 7px;border-radius:8px;background:#151e2d;border:1px solid #2b3a51;font-size:.72rem}
+.crew-life-card59.injured59{border-color:#7c4b4b}.crew-life-card59.highmorale59{box-shadow:inset 0 0 0 1px rgba(120,210,155,.18)}
+.crew-life-log59{max-height:160px;overflow:auto;margin-top:8px}.crew-life-log59>div{padding:5px 0;border-bottom:1px solid #243149}
+.request59{margin-top:8px;border:1px solid #5b5130;background:#262112;border-radius:10px;padding:9px}
+/* Phase 60 — Tactical Combat 2.0 */
+.tactical60-panel{margin-top:10px;border:1px solid #415873;background:linear-gradient(180deg,rgba(26,36,53,.98),rgba(15,22,33,.98));border-radius:12px;padding:11px}
+.tactical60-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:10px;margin-top:9px}.order-grid60{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.order-card60{border:1px solid var(--line);border-radius:10px;padding:8px;background:var(--panel2)}
+.order-card60 select{width:100%;margin-top:6px}.terrain-summary60{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:8px}
+.terrain-chip60{border:1px solid #34465f;border-radius:9px;padding:7px;background:#111925;font-size:.72rem}.terrain-chip60.spent{opacity:.48}
+.tactical-cell.terrain-cover60{background:linear-gradient(180deg,rgba(38,49,65,.9),rgba(21,29,41,.9))}.tactical-cell.terrain-heavy60{box-shadow:inset 0 0 0 2px rgba(132,169,205,.25)}
+.tactical-cell.terrain-hazard60{background-image:linear-gradient(135deg,rgba(132,68,42,.18) 25%,transparent 25%,transparent 50%,rgba(132,68,42,.18) 50%,rgba(132,68,42,.18) 75%,transparent 75%)}
+.terrain-label60{display:block;margin:4px 0 6px;font-size:.64rem;color:#a8bbd2}.marked60{outline:2px solid #d6b25a!important}.guarded60{box-shadow:0 0 0 2px rgba(111,199,236,.32)}
+.command-note60{font-size:.72rem;color:var(--muted);margin-top:5px;line-height:1.45}.status60{font-size:.66rem;padding:2px 5px;border-radius:999px;border:1px solid #435772;background:#172235}
+@media(max-width:800px){.crew-life-grid59,.tactical60-grid,.order-grid60{grid-template-columns:1fr}.terrain-summary60{grid-template-columns:repeat(2,minmax(0,1fr))}.tactical60-panel button,.crew-life59 button{min-height:44px}.crew-life-card59{padding:10px}}

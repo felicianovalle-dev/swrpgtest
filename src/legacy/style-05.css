@@ -1,0 +1,59 @@
+
+/* =========================================================
+   PHASE 67 — PIXEL ENGINE / VISUAL EXPLORATION FOUNDATION
+   PHASE 68 — SABLE REACH TOWN + EXPLORABLE SHIP INTERIOR
+   ========================================================= */
+.nav button[data-tab="pixelworld67"]:before{content:"▦"}
+#pixelworld67{position:relative;overflow:hidden}
+.pixel-shell67{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(260px,.55fr);gap:12px;margin-top:12px}
+.pixel-stage67{position:relative;background:#05070b;border:2px solid #8fa6bd;padding:6px;box-shadow:inset 0 0 0 2px #1a2632}
+#pixelCanvas67{width:100%;height:auto;display:block;image-rendering:pixelated;image-rendering:crisp-edges;background:#0a0c10;touch-action:none;cursor:crosshair}
+.pixel-side67{display:flex;flex-direction:column;gap:10px;min-width:0}
+.pixel-window67{background:#08101a;border:2px solid #b8c8d8;box-shadow:inset 0 0 0 2px #24364a;padding:10px}
+.pixel-title67{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.12em;text-transform:uppercase}
+.pixel-status67{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:7px}
+.pixel-stat67{border:1px solid #33495f;padding:6px;background:#0c1723;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.78rem}
+.pixel-help67{font-size:.78rem;line-height:1.45;color:#b9c5d1}
+.pixel-help67 kbd{background:#111d29;border:1px solid #536b82;border-bottom-width:2px;border-radius:2px;padding:1px 5px;color:#eef7ff}
+.pixel-dpad67{display:grid;grid-template-columns:repeat(3,54px);grid-template-rows:repeat(2,46px);gap:5px;justify-content:center;margin-top:8px}
+.pixel-dpad67 button{min-height:44px;border:2px solid #6e879e;background:#111c28;color:#fff;font-size:1rem;border-radius:2px}
+.pixel-dpad67 button:active{transform:translateY(1px);background:#1b2d3f}
+.pixel-dpad67 .up{grid-column:2}.pixel-dpad67 .left{grid-column:1}.pixel-dpad67 .down{grid-column:2}.pixel-dpad67 .right{grid-column:3}
+.pixel-action67{width:100%;min-height:44px;margin-top:6px;border:2px solid #d1a94a;background:#231b08;color:#ffe7a3;font-weight:800}
+.pixel-dialog67{position:absolute;left:10px;right:10px;bottom:10px;z-index:5;background:#07101b;border:3px solid #d3dbe4;box-shadow:0 0 0 3px #1b3147,0 6px 22px #000b;padding:12px;max-height:66%;overflow:auto}
+.pixel-dialog67.hidden{display:none}
+.pixel-dialog67 .pixel-speaker67{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.08em;color:#ffd56b;margin-bottom:7px}
+.pixel-dialog67 .pixel-dialog-actions67{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.pixel-dialog67 .pixel-dialog-actions67 button{min-height:40px}
+.pixel-mapbar67{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.pixel-mapbar67 .btn.on{outline:2px solid #ffd56b;outline-offset:1px}
+.pixel-legend67{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;margin-top:7px}
+.pixel-key67{display:flex;align-items:center;gap:6px;font-size:.75rem}
+.pixel-swatch67{width:14px;height:14px;border:1px solid #8293a3;flex:none}
+.pixel-note67{margin-top:10px;border-left:3px solid #d1a94a;padding:8px 10px;background:#171507;font-size:.78rem}
+.pixel-location67{color:#80d8ff}
+body.high-contrast65 #pixelworld67 .pixel-window67,
+body.high-contrast65 #pixelworld67 .pixel-stage67{border-color:#fff}
+body.high-contrast65 #pixelworld67 .pixel-dialog67{border-color:#fff;background:#000}
+@media(max-width:900px){
+  .pixel-shell67{grid-template-columns:1fr}
+  .pixel-side67{display:grid;grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  #pixelworld67{padding:8px}
+  .pixel-shell67{gap:8px}
+  .pixel-stage67{padding:3px}
+  .pixel-side67{display:flex}
+  .pixel-window67{padding:8px}
+  .pixel-status67{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pixel-stat67{font-size:.7rem;padding:5px}
+  .pixel-dialog67{left:6px;right:6px;bottom:6px;padding:10px;max-height:72%}
+  .pixel-dpad67{grid-template-columns:repeat(3,64px);grid-template-rows:repeat(2,48px)}
+}
+@media(max-height:520px) and (orientation:landscape){
+  .pixel-shell67{grid-template-columns:minmax(0,1.7fr) minmax(230px,.55fr)}
+  .pixel-window67{padding:6px}
+  .pixel-help67,.pixel-note67{font-size:.7rem}
+  .pixel-dpad67{grid-template-columns:repeat(3,48px);grid-template-rows:repeat(2,40px);margin-top:4px}
+  .pixel-dpad67 button{min-height:38px}
+}

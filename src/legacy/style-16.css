@@ -1,0 +1,15 @@
+
+/* =========================================================
+   PHASE 89 — VISUALIZATION RELIABILITY / COMPACT ATLAS PASS
+   PHASE 90 — TILE DETAIL / LOCATION IDENTITY PASS
+   ========================================================= */
+.boot90{display:none;margin-top:8px;border:1px solid #5d734f;background:#10190e;padding:7px 9px;border-radius:8px;color:#cfe0c7;font-size:.75rem}
+.boot90.on{display:block}
+.location-plaque90{position:absolute;left:50%;top:9px;transform:translateX(-50%);z-index:8;pointer-events:none;background:#07101bec;border:2px solid #d3b474;box-shadow:inset 0 0 0 2px #473717,2px 3px 0 #0008;padding:4px 10px;font:700 9px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.08em;color:#ffe4a6;white-space:nowrap;max-width:72%;overflow:hidden;text-overflow:ellipsis}
+.world-art-key90{margin-top:8px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+.world-art-key90 div{border:1px solid #41576a;background:#0d1721;padding:5px 6px;border-radius:7px;font-size:.69rem;color:#dbe6ee}
+.phase90card{margin-top:14px;border:2px solid #d3b474;background:linear-gradient(180deg,#171107,#0f1822);box-shadow:inset 0 0 0 2px #4c3c1b;padding:10px;border-radius:14px}
+.phase90stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:9px}
+.phase90stats div{border:1px solid #4d6175;background:#0e1823;border-radius:9px;padding:7px;text-align:center;font-size:.7rem}
+.phase90stats b{display:block;color:#ffe4a6;font:1rem ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+@media(max-width:760px){.phase90stats{grid-template-columns:repeat(2,minmax(0,1fr))}.location-plaque90{top:6px;max-width:82%;font-size:8px}}
