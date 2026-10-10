@@ -45,7 +45,7 @@
   function currentScreen() { return activeTabId78(); }
   function playableScreen(id) {
     return typeof id === 'string' && /^[a-zA-Z0-9_-]+$/.test(id) &&
-      document.getElementById(id)?.classList.contains('tab') && !['save97','playhub80'].includes(id);
+      document.getElementById(id)?.classList.contains('tab') && !['save97','playhub80','about97'].includes(id);
   }
   function capture() {
     const id = currentScreen();
@@ -164,7 +164,7 @@
     const worldButton=document.getElementById('worldSave94');
     if (worldButton) {worldButton.textContent='Saves';worldButton.onclick=openManager;}
     const continueButton=document.getElementById('playHubContinue80');
-    if (continueButton) {continueButton.textContent='Continue current game';continueButton.onclick=resumeCurrent;}
+    if (continueButton) {continueButton.textContent=game.home?(S.finalized?'Continue':'Continue creation'):'Continue current game';continueButton.onclick=resumeCurrent;}
   }
   function refresh() {
     install(); const rows=candidates(), latest=rows.find(r=>r.valid);
@@ -181,7 +181,8 @@
       document.getElementById('continueCurrent97').onclick=resumeCurrent;
     }
     const hub=document.getElementById('playhub80');
-    if (hub) {
+    if (hub && game.home) game.home.refreshSaved(latest);
+    else if (hub) {
       let card=document.getElementById('resumeCard97');
       if (!card) {card=document.createElement('div');card.id='resumeCard97';card.className='save-panel97 save-resume97';hub.insertBefore(card,hub.firstChild);}
       card.innerHTML=`<div><b>${latest?'Your saved campaign':'Saved games'}</b><div class="save-note97">${latest?`${escape(latest.data.name)} · ${escape(formatTime(latest))}`:'Save or import a campaign to resume it later.'}</div></div><div class="save-actions97"><button class="btn primary" id="hubResumeLatest97" ${latest?'':'disabled'}>Resume latest</button><button class="btn" id="hubSaves97">Saved games</button></div>`;

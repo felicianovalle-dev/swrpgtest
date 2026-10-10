@@ -97,3 +97,29 @@ covers seven viewport sizes, visible World navigation hit targets, save-screen
 layout, rotation, and actual page reloads into Training and the saved World
 position. It supplements the 27 World, 37 Jobs/Training, and 24 save/continuation
 state checks. Native iPhone Safari and standalone-app testing remain device checks.
+
+## Home and objective actions
+
+Home now puts Continue, Enter World, the next objective, and Jobs/Training first.
+Credits, available XP, crew, and day share one compact row. Character, crew,
+equipment, travel, contracts, and references remain under **More options**.
+On a fresh launch with a readable save, Home previews that saved campaign and
+offers **Resume saved game**; its shortcuts load that campaign before opening
+the requested screen.
+
+Objective shortcuts use character/combat state, active story nodes, and courier
+adventure stages. They name the next contact or place and open the relevant
+choices, skill check, travel planning, or mission interaction. They do not roll a check,
+choose a branch, start an encounter, or award a reward. World has the same
+objective action in **Area & travel**.
+
+Phase badges and implementation wording are removed from play screens. Release
+history, art previews, and build checks remain available under **About & release
+notes**. Source-backed rules limitations remain disclosed. The phone layout also
+applies at 852-pixel landscape widths, avoiding a return to the desktop header.
+
+`src/home.js`, `src/home.css`, `src/objectives.js`, and `src/play-copy.js` own this
+presentation. `scripts/check_home.cjs` covers objective routing, navigation without
+economic changes, release-panel placement, and preservation of user names.
+Browser checks cover the compact Home and its objective action at all seven
+existing viewports, alongside navigation, saving, rotation, and real reloads.

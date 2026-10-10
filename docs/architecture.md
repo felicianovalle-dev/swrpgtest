@@ -26,6 +26,24 @@ The legacy engine's historical wrappers remain intact to preserve rules and save
 They have been extracted without a broad behavioral rewrite. Consolidate them
 incrementally only with the corresponding gameplay regression coverage.
 
+# Player presentation
+
+`src/home.js` owns the Home renderer, replacing the historical presentation
+wrappers for that one screen. More options retains the original destinations;
+Jobs and Training retain their existing handlers. The save manager updates the
+compact saved-game controls without adding another Home card. On fresh startup,
+the saved-campaign preview comes from the selected snapshot; shortcuts load it
+before navigating, so displayed progress and the opened campaign agree.
+
+`src/objectives.js` describes objectives from state and provides navigation only.
+It uses active story node types and courier stages rather than parsing text.
+Opening an objective may select its existing adventure location,
+but dice rolls, branch choices, travel costs, and encounters remain explicit
+actions on their established screens. `src/play-copy.js` moves historical panels
+into About and cleans legacy presentation after render/navigation. Rules limits
+remain disclosed; user-authored Home identity text is not rewritten. About is
+excluded from gameplay continuation, just like Home and the save manager.
+
 # Saves and continuation
 
 The schema and three storage keys remain 92. `resume97` and `saveInfo97` are

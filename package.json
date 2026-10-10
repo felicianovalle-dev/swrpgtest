@@ -5,7 +5,7 @@
   "scripts": {
     "build": "python3 scripts/build.py",
     "build:check": "python3 scripts/build.py --check",
-    "test": "node scripts/check_world94.cjs && node scripts/check_work96.cjs && node scripts/check_save97.cjs",
+    "test": "node scripts/check_world94.cjs && node scripts/check_work96.cjs && node scripts/check_save97.cjs && node scripts/check_home.cjs",
     "test:browser": "node scripts/check_layout97.cjs"
   },
   "devDependencies": {

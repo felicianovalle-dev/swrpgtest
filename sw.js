@@ -1,4 +1,4 @@
-const CACHE='sable-reach-v1-9-save-resume-visual97-r1';
+const CACHE='sable-reach-v1-9-home-objectives-r1';
 const SHELL=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 
 self.addEventListener('install',event=>{

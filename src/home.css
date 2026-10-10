@@ -1,0 +1,20 @@
+.home97{line-height:1.45}
+body.home-play97 .top p,body.home-play97 #xpHud,body.home-play97 .rc-banner #globalObjective,body.home-play97 .rc-banner .progress{display:none}
+.home-head97{margin-bottom:10px}.home-head97 h2{margin:0;font-size:1.5rem}.home-head97 p{margin:3px 0;color:#b9cbd8;font-size:.88rem}
+.home-stats97{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 12px;padding:9px 0;border-block:1px solid #344e61;gap:8px}
+.home-stats97 div{min-width:0}.home-stats97 dt{font-size:.69rem;color:#a8bdcb}.home-stats97 dd{margin:2px 0 0;color:#f1d285;font-size:1rem;font-weight:700;overflow-wrap:anywhere}
+.home-primary97,.home-shortcuts97{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.home97 .btn{min-height:44px;white-space:normal;box-shadow:none;font:inherit;font-size:.88rem;line-height:1.3;padding:10px}
+.home-primary97 .primary{background:#edc44f;color:#17150d;border-color:#edc44f}
+.home-saved-note97{font-size:.75rem;color:#b8c9d5;margin:6px 0}
+.home-objective97{margin:12px 0;padding:13px;border:1px solid #66704a;border-radius:10px;background:#14222a}
+.home-kicker97{font-size:.67rem;text-transform:uppercase;letter-spacing:.09em;color:#ddc787}
+.home-objective97 h3{margin:5px 0;font-size:1.16rem;color:#f2d38b;line-height:1.25}
+.home-objective97 p{margin:7px 0;font-size:.89rem;color:#cad7df}
+.home-objective97 .home-location97{font-size:.78rem;color:#afc5d1}.home-objective97 .btn{margin-top:2px;width:100%;text-align:left;border-color:#718556}
+.home-tools97{margin-top:13px;border-top:1px solid #344e61;padding-top:4px}.home-tools97>summary{cursor:pointer;padding:10px 3px;color:#c8d7e1;font-size:.9rem;min-height:44px}
+.home-links97{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0}.home-links97 .btn{text-align:left}
+.home-save97{border-bottom:1px solid #344e61;padding:0 0 8px}.home-save97 p{font-size:.8rem;color:#b7cbd8;margin:0}
+.objective-panel97{margin:10px 0;padding:12px;border:1px solid #66704a;border-radius:8px;background:#15232d;color:#d1dfe8;line-height:1.45}.objective-panel97 p{font-size:.85rem;margin:7px 0}.objective-panel97 button{width:100%;min-height:44px}
+@media(max-width:950px){body.home-play97 #mobileStatus65 .mobile-objective65,body.home-play97 #mobileStatus65 .mobile-stats65{display:none}body.home-play97 #mobileStatus65{margin-bottom:9px}.home97 .home-head97 h2{font-size:1.4rem}.home-objective97{padding:11px}.home97 .home-primary97 .btn{font-size:.9rem}}
+@media(max-width:360px){.home-head97 p{font-size:.79rem}.home97 .btn{font-size:.79rem;padding:9px 6px}.home-stats97{gap:5px}.home-stats97 dt{font-size:.62rem}.home-objective97 p{font-size:.82rem}.home-objective97 h3{font-size:1.06rem}}

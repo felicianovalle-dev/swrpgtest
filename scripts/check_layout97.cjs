@@ -19,6 +19,23 @@ let browser,server;
  await page.evaluate(()=>{S.finalized=true;S.visual75.tutorialSeen=true;S.settings.reducedMotion=true;renderAll();});
  for(const [width,height]of viewports){
   const label=`${width}x${height}`;await page.setViewportSize({width,height});
+  await page.evaluate(()=>{S.story61.active=null;S.ep15.mainStage=0;S.ep15.flags={};renderNavTab('playhub80');document.getElementById('homeTools97').open=false;});
+  const home=await page.evaluate(()=>{
+   const panel=document.getElementById('playhub80'),world=document.getElementById('homeWorld97'),rect=world.getBoundingClientRect();
+   return {buttons:[...panel.querySelectorAll('button')].filter(b=>b.getBoundingClientRect().height>0&&(!b.closest('details')||b.closest('details').open)).length,
+    overflow:document.documentElement.scrollWidth>innerWidth+1,
+    worldTarget:world.contains(document.elementFromPoint(rect.left+rect.width/2,rect.top+rect.height/2)),
+    moreClosed:!document.getElementById('homeTools97').open};
+  });
+  assert.equal(home.overflow,false,`${label}: Home has horizontal overflow`);
+  assert.equal(home.worldTarget,true,`${label}: Enter World is covered or pushed off the first screen`);
+  assert.equal(home.moreClosed,true);assert.equal(home.buttons,5,`${label}: Home exposes secondary tools before More opens`);
+  checks.push(`${label}: compact Home exposes five actions and Enter World is reachable`);
+  if(width===390)await page.screenshot({path:path.join(output,'home-phone.png')});
+  await page.locator('#homeObjective97').click();
+  assert.equal(await page.evaluate(()=>activeTabId78()),'adventure');
+  assert.ok(await page.locator('#choices').textContent().then(text=>text.includes('Ask Rhea directly')));
+  checks.push(`${label}: objective shortcut opens the relevant cantina choices`);
   await page.evaluate(()=>{renderNavTab('pixelworld67');WORLD94.menu=false;WORLD94.drawer=false;syncWorldUI94();fitWorld94();});
   await page.locator('#worldMenu94').click();
   const geometry=await page.evaluate(()=>{
@@ -45,9 +62,25 @@ let browser,server;
   if(width===390)await page.screenshot({path:path.join(output,'saves-phone.png'),fullPage:true});
  }
  await page.setViewportSize({width:390,height:844});
+ await page.evaluate(()=>{renderNavTab('playhub80');document.getElementById('homeTools97').open=false;});
+ await page.locator('#homeTools97 > summary').click();await page.locator('#hubForce80').click();
+ assert.equal(await page.evaluate(()=>activeTabId78()),'force');
+ checks.push('More options keeps character advancement reachable on a phone');
+ await page.evaluate(()=>{
+  S.story61.active={id:'browser-conversation',templateId:'embers73',title:'Embers in the Static',status:'active',node:'talo',completedNodes:[],optional:{},flags:{},failures:{}};
+  renderAll();renderNavTab('playhub80');
+ });
+ const conversationBefore=await page.evaluate(()=>JSON.stringify({credits:S.credits,xp:S.earnedXp,skills:S.skills,node:S.story61.active.node}));
+ await page.locator('#homeObjective97').click();await page.locator('#resolveVisualCampaign73').click();
+ await page.waitForFunction(()=>PX67.dialog?.title==='Talo Brinn');
+ assert.equal(await page.evaluate(()=>JSON.stringify({credits:S.credits,xp:S.earnedXp,skills:S.skills,node:S.story61.active.node})),conversationBefore);
+ assert.ok(await page.locator('[data-campaign-choice73]').count()>0);
+ checks.push('A story objective reaches the real conversation with choices and rewards untouched');
+ await page.evaluate(()=>{closePixelDialog67(false);S.story61.active=null;renderAll();});
  await page.evaluate(()=>{S.credits=789;openWorkHub96('training');S.downtime96.studySkill='Medicine';renderWorkHub96();save();});
  await page.reload();await page.waitForFunction(()=>window.Game97?.ready);
  assert.equal(await page.locator('#hubResumeLatest97').isVisible(),true,'Reload does not offer the saved campaign');
+ assert.equal(await page.locator('.home-stats97 dd').first().textContent(),'789','Fresh Home previews different credits from the offered campaign');
  await page.locator('#hubResumeLatest97').click();
  assert.deepEqual(await page.evaluate(()=>({screen:activeTabId78(),panel:S.downtime96.panel,skill:S.downtime96.studySkill,credits:S.credits})),{screen:'worktraining96',panel:'training',skill:'Medicine',credits:789});
  checks.push('Real page reload restores the saved Training screen, selection and credits');

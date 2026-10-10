@@ -11,7 +11,7 @@
 .map-detail55 .pills{gap:8px;display:flex;flex-wrap:wrap;margin-top:12px}
 .map-legend55{display:flex;flex-wrap:wrap;gap:8px 16px;margin:14px 0;color:#b7c7d5;font-size:12px;line-height:1.6}
 .map-legend55 span{display:inline-block}
-@media(max-width:850px){
+@media(max-width:950px){
  :root{--mobile-top96:env(safe-area-inset-top,0px)}
  body[data-app-mode="standalone"]{--mobile-top96:max(env(safe-area-inset-top,0px),28px)}
  body:not(.world-play94){padding-bottom:0!important;overflow-x:hidden}
