@@ -1,12 +1,13 @@
 {
   "name": "sable-reach-pwa",
-  "version": "1.9.6",
+  "version": "1.9.7",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
     "build:check": "python3 scripts/build.py --check",
     "test": "node scripts/check_world94.cjs && node scripts/check_work96.cjs && node scripts/check_save97.cjs && node scripts/check_home.cjs && node scripts/check_workshop.cjs && node scripts/check_save_reliability.cjs && node scripts/check_gameplay_audit.cjs && node scripts/check_story_combat.cjs && node scripts/check_mission_playthrough.cjs && node scripts/check_setbacks.cjs",
-    "test:browser": "node scripts/check_layout97.cjs"
+    "test:browser": "node scripts/check_layout97.cjs",
+    "test:campaign": "node scripts/check_campaign97.cjs"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.10",

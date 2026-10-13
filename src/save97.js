@@ -47,6 +47,7 @@
       if(!data[key])continue;
       if(typeof data[key]!=='object'||Array.isArray(data[key])||Object.values(data[key]).some(value=>!Array.isArray(value)))throw new Error(`Invalid ${key} data.`);
     }
+    game.campaign?.validateSnapshot(data);
     return data;
   }
   function candidates() {
@@ -84,7 +85,7 @@
   function resumeCurrent() {
     clearTimeout(resumeTimer);
     const stored = S.resume97 && typeof S.resume97 === 'object' ? {...S.resume97} : {};
-    const id = S.combat ? 'combat' : playableScreen(stored.screen) ? stored.screen : S.finalized ? 'playhub80' : 'guide';
+    const id = S.combat ? 'combat' : playableScreen(stored.screen) ? stored.screen : S.finalized ? 'playhub80' : game.campaign ? 'campaignSetup97' : 'guide';
     const wasRestoring=restoring;restoring = true;
     try {
       if (id === 'worktraining96' && S.downtime96) S.downtime96.panel = stored.panel === 'training' ? 'training' : 'jobs';
@@ -139,7 +140,7 @@
   }
   function checkpoint() {
     const current=serializableState(),fresh=game.freshState();
-    const creationChanged=['name','species','career','spec','chars','skills','charSpend','xpSpent','talents','forceOwned','freeCareer','freeSpec'].some(key=>JSON.stringify(current[key])!==JSON.stringify(fresh[key]));
+    const creationChanged=['name','species','career','spec','chars','skills','charSpend','xpSpent','talents','forceOwned','freeCareer','freeSpec','campaign97','speciesBonus97','universalKnowledge97'].some(key=>JSON.stringify(current[key])!==JSON.stringify(fresh[key]));
     if(!S.finalized&&!S.lastSaved&&!creationChanged)return;
     capture();const data=validate(serializableState()),stamp=new Date().toISOString();
     data.lastSaved=stamp;data.saveInfo97={savedAt:stamp,kind:'recovery',build:BUILD_INFO.version,objective:typeof objectiveGuide75==='function'?objectiveGuide75():objectiveText()};

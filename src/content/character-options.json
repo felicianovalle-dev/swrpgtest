@@ -1,0 +1,3751 @@
+{
+  "reviewed": "2026-10-13",
+  "species": {
+    "aqualishAquala": {
+      "name": "Aqualish (Aquala)",
+      "xp": 90,
+      "wt": 11,
+      "st": 8,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "note": "Brawl and Resilience ranks are included. Aquatic movement and cold/wet adaptation are resolved narratively.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.23",
+      "verifiedPage97": 23,
+      "free": {
+        "Brawl": 1,
+        "Resilience": 1
+      }
+    },
+    "aqualishQuara": {
+      "name": "Aqualish (Quara)",
+      "xp": 90,
+      "wt": 11,
+      "st": 8,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "note": "Brawl and Coercion ranks are included. Aquatic movement and outdoor tracking adaptation are resolved narratively.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.23",
+      "verifiedPage97": 23,
+      "free": {
+        "Brawl": 1,
+        "Coercion": 1
+      }
+    },
+    "aqualishUalaq": {
+      "name": "Aqualish (Ualaq)",
+      "xp": 90,
+      "wt": 11,
+      "st": 8,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "note": "Brawl rank is included; choose Survival or Perception. Aquatic movement and vision adaptation are resolved narratively.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.23",
+      "verifiedPage97": 23,
+      "free": {
+        "Brawl": 1
+      },
+      "freeChoice": [
+        "Survival",
+        "Perception"
+      ]
+    },
+    "devaronian": {
+      "name": "Devaronian",
+      "xp": 90,
+      "wt": 11,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 3,
+        "Willpower": 2,
+        "Presence": 1
+      },
+      "note": "Deception and Survival ranks are included. Multiple Livers gives three boosts to poison-related Resilience checks; resolve that situational bonus narratively.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.75",
+      "verifiedPage97": 75,
+      "free": {
+        "Deception": 1,
+        "Survival": 1
+      }
+    },
+    "neimoidian": {
+      "name": "Neimoidian",
+      "xp": 95,
+      "wt": 10,
+      "st": 9,
+      "c": {
+        "Brawn": 1,
+        "Agility": 2,
+        "Intellect": 3,
+        "Cunning": 3,
+        "Willpower": 1,
+        "Presence": 2
+      },
+      "note": "Choose Deception or Negotiation for the included species rank.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.190",
+      "verifiedPage97": 190,
+      "freeChoice": [
+        "Deception",
+        "Negotiation"
+      ]
+    },
+    "quarren": {
+      "name": "Quarren",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 2
+      },
+      "note": "Negotiation rank is included. Aquatic movement and humid/dry adaptation are resolved narratively.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.220",
+      "verifiedPage97": 220,
+      "free": {
+        "Negotiation": 1
+      }
+    },
+    "rattataki": {
+      "name": "Rattataki",
+      "xp": 110,
+      "wt": 12,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "note": "Choose Ranged (Heavy) or Ranged (Light) for the included species rank.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.227",
+      "verifiedPage97": 227,
+      "freeChoice": [
+        "Ranged (Heavy)",
+        "Ranged (Light)"
+      ]
+    },
+    "selkath": {
+      "name": "Selkath",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "note": "Choose Coercion or Medicine. Surgeon adds one wound healed with successful Medicine treatment. Aquatic movement and humid/dry adaptation are resolved narratively.",
+      "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.245",
+      "verifiedPage97": 245,
+      "freeChoice": [
+        "Coercion",
+        "Medicine"
+      ],
+      "bonusTalents97": {
+        "Surgeon": 1
+      }
+    }
+  },
+  "careers": {
+    "Clone Soldier": {
+      "line": "Clone Wars",
+      "forceStart": false,
+      "careerPicks": 4,
+      "skills": [
+        "Athletics",
+        "Brawl",
+        "Cool",
+        "Discipline",
+        "Medicine",
+        "Ranged (Heavy)",
+        "Ranged (Light)",
+        "Vigilance"
+      ],
+      "specs": {
+        "Clone Trooper": [
+          "Perception",
+          "Resilience",
+          "Gunnery",
+          "Ranged (Heavy)"
+        ],
+        "Clone Officer": [
+          "Cool",
+          "Leadership",
+          "Knowledge (Outer Rim)",
+          "Knowledge (Warfare)"
+        ],
+        "Clone Pilot": [
+          "Mechanics",
+          "Piloting (Planetary)",
+          "Piloting (Space)",
+          "Gunnery"
+        ],
+        "ARC Trooper": [
+          "Coordination",
+          "Mechanics",
+          "Piloting (Planetary)",
+          "Stealth"
+        ],
+        "Clone Commander": [
+          "Perception",
+          "Leadership",
+          "Knowledge (Core Worlds)",
+          "Knowledge (Warfare)"
+        ],
+        "Clone Veteran": [
+          "Resilience",
+          "Skulduggery",
+          "Survival",
+          "Melee"
+        ]
+      }
+    },
+    "Jedi": {
+      "line": "Clone Wars",
+      "forceStart": true,
+      "careerPicks": 3,
+      "skills": [
+        "Athletics",
+        "Cool",
+        "Discipline",
+        "Knowledge (Lore)",
+        "Lightsaber",
+        "Piloting (Space)"
+      ],
+      "specs": {
+        "Padawan": [
+          "Coordination",
+          "Knowledge (Education)",
+          "Mechanics",
+          "Vigilance"
+        ],
+        "Knight": [
+          "Cool",
+          "Leadership",
+          "Lightsaber",
+          "Negotiation"
+        ],
+        "General": [
+          "Piloting (Planetary)",
+          "Vigilance",
+          "Leadership",
+          "Knowledge (Warfare)"
+        ],
+        "Master": [
+          "Perception",
+          "Charm",
+          "Knowledge (Core Worlds)",
+          "Knowledge (Education)"
+        ]
+      }
+    }
+  },
+  "trees": {
+    "ARC Trooper": {
+      "names": [
+        "Toughened",
+        "Grit",
+        "Physical Training",
+        "Conditioned",
+        "Clanker Killer",
+        "Quick Strike",
+        "Knockdown",
+        "Point Blank",
+        "Toughened",
+        "Swift",
+        "Point Blank",
+        "Guns Blazing",
+        "Quick Strike",
+        "Grit",
+        "Clanker Killer",
+        "Natural Commando",
+        "Get the Drop",
+        "Tactical Evasion",
+        "Dedication",
+        "Rapid Fire"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.2",
+      "collection": "clone",
+      "page": 2,
+      "layoutReviewed": true
+    },
+    "Clone Commander": {
+      "names": [
+        "Grit",
+        "Commanding Presence",
+        "Researcher",
+        "Toughened",
+        "Clanker Killer",
+        "Ingrained Loyalty",
+        "Clever Commander",
+        "Grit",
+        "First Among Brothers",
+        "Commanding Presence",
+        "Enduring Presence",
+        "Formation Tactics",
+        "First Among Brothers",
+        "Steely Nerves",
+        "Tactical Planning",
+        "Improved Formation Tactics",
+        "At Any Cost",
+        "Dedication",
+        "Outmaneuver",
+        "Practiced Strategist"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.3",
+      "collection": "clone",
+      "page": 3,
+      "layoutReviewed": true
+    },
+    "Clone Officer": {
+      "names": [
+        "Prime Positions",
+        "Grit",
+        "Grit",
+        "Command",
+        "Tactical Advance",
+        "Command",
+        "First Among Brothers",
+        "Clanker Killer",
+        "Prime Positions",
+        "Coordinated Assault",
+        "Coordinated Assault",
+        "Toughened",
+        "Field Commander",
+        "Improved Tactical Advance",
+        "First Among Brothers",
+        "Scrap 'Em",
+        "Improved Field Commander",
+        "Dedication",
+        "Improved Scrap 'Em",
+        "For the Republic!"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.4",
+      "collection": "clone",
+      "page": 4,
+      "layoutReviewed": true
+    },
+    "Clone Pilot": {
+      "names": [
+        "Let's Ride",
+        "Fire Support",
+        "Grit",
+        "Grit",
+        "High-G Training",
+        "Clanker Killer",
+        "High-G Training",
+        "Skilled Jockey",
+        "Assault Drop",
+        "Tricky Target",
+        "Full Throttle",
+        "Barrel Roll",
+        "Fire Support",
+        "Natural Operator",
+        "Improved Barrel Roll",
+        "Supreme Barrel Roll",
+        "Mission Critical",
+        "Dedication",
+        "Master Pilot",
+        "Toughened"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.5",
+      "collection": "clone",
+      "page": 5,
+      "layoutReviewed": true
+    },
+    "Clone Trooper": {
+      "names": [
+        "Grit",
+        "Physical Training",
+        "Toughened",
+        "Brace",
+        "Suppressing Fire",
+        "Clanker Killer",
+        "Brace",
+        "Toughened",
+        "Armor Master",
+        "Deadly Accuracy",
+        "Suppressing Fire",
+        "Improved Brace",
+        "Toughened",
+        "Clanker Killer",
+        "Enduring",
+        "Supreme Brace",
+        "Improved Armor Master",
+        "Natural Trooper",
+        "Dedication",
+        "Lateral Thinking"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.6",
+      "collection": "clone",
+      "page": 6,
+      "layoutReviewed": true
+    },
+    "Clone Veteran": {
+      "names": [
+        "Outdoorsman",
+        "Grit",
+        "Toughened",
+        "Quick Draw",
+        "Combat Veteran",
+        "Toughened",
+        "Clanker Killer",
+        "Rapid Reaction",
+        "Grit",
+        "Lethal Blows",
+        "Improved Clanker Killer",
+        "Combat Veteran",
+        "Multiple Opponents",
+        "Rapid Reaction",
+        "Known Programming",
+        "Lethal Blows",
+        "Sixth Sense",
+        "Survivor's Instincts",
+        "Improved Known Programming",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.7",
+      "collection": "clone",
+      "page": 7,
+      "layoutReviewed": true
+    },
+    "General": {
+      "names": [
+        "Grit",
+        "Commanding Presence",
+        "Command",
+        "Toughened",
+        "Parry",
+        "Fall Back!",
+        "Stand Firm!",
+        "Reflect",
+        "Preemptive Intervention",
+        "Commanding Presence",
+        "Enhanced Leader",
+        "Grit",
+        "Toughened",
+        "Inspiring Kill",
+        "Natural Champion",
+        "Improved Stand Firm!",
+        "Dedication",
+        "Knowledge Is Strength",
+        "Force Rating",
+        "Exemplar of the Republic"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.9",
+      "collection": "clone",
+      "page": 9,
+      "layoutReviewed": true
+    },
+    "Knight": {
+      "names": [
+        "Grit",
+        "Jump Up",
+        "Researcher",
+        "Grit",
+        "Parry",
+        "Parry",
+        "Sense Emotions",
+        "Researcher",
+        "Improved Reflect",
+        "Reflect",
+        "Improved Parry",
+        "Balance",
+        "Circle of Shelter",
+        "Side by Side",
+        "Reflect",
+        "Will of the Force",
+        "Guardian of the Republic",
+        "Saber Throw",
+        "Dedication",
+        "Force Rating"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.10",
+      "collection": "clone",
+      "page": 10,
+      "layoutReviewed": true
+    },
+    "Master": {
+      "names": [
+        "Confidence",
+        "Nobody's Fool",
+        "Researcher",
+        "Center of Being",
+        "Improved Confidence",
+        "Improved Nobody's Fool",
+        "Improved Researcher",
+        "Center of Being",
+        "Flows Through All Things",
+        "The Force Is My Ally",
+        "Sum Djem",
+        "Improved Center of Being",
+        "Bound Together",
+        "Powerful Ally",
+        "Dedication",
+        "Forewarning",
+        "Master of the Order",
+        "There Is No Try",
+        "Force Rating",
+        "Supreme Center of Being"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.11",
+      "collection": "clone",
+      "page": 11,
+      "layoutReviewed": true
+    },
+    "Padawan": {
+      "names": [
+        "Parry",
+        "Toughened",
+        "Quick Draw",
+        "Grit",
+        "Toughened",
+        "Reflect",
+        "Well Rounded",
+        "Sense Danger",
+        "Parry",
+        "Learning Opportunity",
+        "Valuable Facts",
+        "Force Rating",
+        "Reflect",
+        "Grit",
+        "Something to Prove",
+        "Adaptable",
+        "Beginner's Luck",
+        "Temple Training",
+        "Sincerest Flattery",
+        "Dedication"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.12",
+      "collection": "clone",
+      "page": 12,
+      "layoutReviewed": true
+    },
+    "Death Watch Warrior": {
+      "names": [
+        "Toughened",
+        "Intimidating",
+        "Conditioned",
+        "Grit",
+        "Armor Master",
+        "Side Step",
+        "Jump Up",
+        "Jetpack Expertise",
+        "Intimidating",
+        "Point Blank",
+        "Side Step",
+        "Point Blank",
+        "Improved Armor Master",
+        "Conditioned",
+        "Hit and Run",
+        "Death from Above",
+        "Dedication",
+        "To the Death",
+        "Improved Side Step",
+        "Momentum"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "universal": true,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.13",
+      "collection": "clone",
+      "page": 13,
+      "layoutReviewed": true
+    },
+    "Force-Sensitive Outcast": {
+      "names": [
+        "Uncanny Reactions",
+        "Sense Emotions",
+        "Grit",
+        "Uncanny Senses",
+        "Quick Draw",
+        "Quick Strike",
+        "Disorient",
+        "Secrets of the Force",
+        "Disorient",
+        "Prey on the Weak",
+        "Renegade Form",
+        "Parry",
+        "Prey on the Weak",
+        "Sorry About the Mess",
+        "Parry",
+        "Reflect",
+        "Dedication",
+        "Ravage",
+        "Grit",
+        "Force Rating"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.14",
+      "collection": "clone",
+      "page": 14,
+      "layoutReviewed": true
+    },
+    "Nightsister": {
+      "names": [
+        "Witchcraft",
+        "Summon Item",
+        "Grit",
+        "Expert Tracker",
+        "Sense Advantage",
+        "Ichor Blade",
+        "Intimidating",
+        "Toughened",
+        "Balance",
+        "Improved Ichor Blade",
+        "Grit",
+        "Sixth Sense",
+        "Coven",
+        "Ichor Transfusion",
+        "Survivor's Instincts",
+        "Intimidating",
+        "Force Rating",
+        "Ichor Reserve",
+        "Force of Will",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.15",
+      "collection": "clone",
+      "page": 15,
+      "layoutReviewed": true
+    },
+    "Republic Navy Officer": {
+      "names": [
+        "Grit",
+        "Command",
+        "Commanding Presence",
+        "Galaxy Mapper",
+        "Command",
+        "Commanding Presence",
+        "Grit",
+        "Known Schematic",
+        "Ordnance Saturation",
+        "Steely Nerves",
+        "Confidence",
+        "Toughened",
+        "Fire When Ready",
+        "On My Order",
+        "Galaxy Mapper",
+        "Hyperspace Assault",
+        "Natural Leader",
+        "Dedication",
+        "Careful Planning",
+        "Outmaneuver"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.16",
+      "collection": "clone",
+      "page": 16,
+      "layoutReviewed": true
+    },
+    "Republic Representative": {
+      "names": [
+        "Grit",
+        "Leverage",
+        "Kill with Kindness",
+        "Respected Delegate",
+        "Nobody's Fool",
+        "Kill with Kindness",
+        "Respected Delegate",
+        "Smooth Talker",
+        "Translation Error",
+        "Leverage",
+        "Smooth Talker",
+        "Nobody's Fool",
+        "Consider Our Options",
+        "Steely Nerves",
+        "Intense Presence",
+        "Leverage",
+        "Improved Consider Our Options",
+        "Natural Negotiator",
+        "Dedication",
+        "Backroom Deal"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.17",
+      "collection": "clone",
+      "page": 17,
+      "layoutReviewed": true
+    },
+    "Scavenger": {
+      "names": [
+        "Grit",
+        "Forager",
+        "Utinni!",
+        "Street Smarts",
+        "Grit",
+        "Rapid Reaction",
+        "Tinkerer",
+        "Utinni!",
+        "Rapid Reaction",
+        "Jury Rigged",
+        "Exceed Specifications",
+        "One Person's Trash",
+        "Sixth Sense",
+        "Supreme Exceed Specifications",
+        "Improved Exceed Specifications",
+        "Another's Treasure",
+        "Improved Utility Belt",
+        "Utility Belt",
+        "Dedication",
+        "Contraption"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Rise of the Separatists \u00b7 supplied Clone Wars tree collection, PDF p.18",
+      "collection": "clone",
+      "page": 18,
+      "layoutReviewed": true
+    },
+    "Senator": {
+      "names": [
+        "Resolve",
+        "Respected Delegate",
+        "Plausible Deniability",
+        "Grit",
+        "Resolve",
+        "Savvy",
+        "Congenial",
+        "Nobody's Fool",
+        "Grit",
+        "Inspiring Rhetoric",
+        "Plausible Deniability",
+        "Savvy",
+        "Resist Questioning",
+        "Improved Inspiring Rhetoric",
+        "Congenial",
+        "Improved Nobody's Fool",
+        "Dedication",
+        "Blather",
+        "Diplomatic Immunity",
+        "Resource Allocation"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.19",
+      "collection": "clone",
+      "page": 19,
+      "layoutReviewed": true
+    },
+    "Separatist Commander": {
+      "names": [
+        "Grit",
+        "Well Traveled",
+        "Command",
+        "Intimidating",
+        "Toughened",
+        "Speaks Binary",
+        "Cruel Commander",
+        "Scathing Tirade",
+        "Improved Field Commander",
+        "Field Commander",
+        "Speaks Binary",
+        "Improved Scathing Tirade",
+        "Droid Commander",
+        "Supreme Speaks Binary",
+        "Improved Speaks Binary",
+        "Supreme Scathing Tirade",
+        "Lead from the Front",
+        "Dedication",
+        "Intimidating",
+        "Lead from the Back"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Collapse of the Republic \u00b7 supplied Clone Wars tree collection, PDF p.20",
+      "collection": "clone",
+      "page": 20,
+      "layoutReviewed": true
+    },
+    "Force Adherent": {
+      "names": [
+        "Resolve",
+        "Disciple of Lore",
+        "Grit",
+        "Push Aside",
+        "Disciple of Lore",
+        "As the Force Wills It",
+        "Precision Strike",
+        "Extended Reach",
+        "Confidence",
+        "Hard Headed",
+        "Confidence",
+        "Dodge",
+        "Disciplined Soul",
+        "Grit",
+        "Dodge",
+        "Resolve",
+        "Force of Will",
+        "Superior Reflexes",
+        "Sixth Sense",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Dawn of Rebellion \u00b7 supplied universal tree collection, PDF p.1",
+      "collection": "universal",
+      "page": 1,
+      "layoutReviewed": true
+    },
+    "Imperial Academy Cadet": {
+      "names": [
+        "Grit",
+        "Vehicle Combat Training",
+        "Conditioned",
+        "Knowledge Specialization",
+        "Know the Enemy",
+        "By the Book",
+        "Defensive Driving",
+        "Tactical Combat Training",
+        "Formation Tactics",
+        "Command",
+        "Full Throttle",
+        "Known Schematic",
+        "Improved Formation Tactics",
+        "By the Book",
+        "Conditioned",
+        "Knowledge Specialization",
+        "Natural Scholar",
+        "Targeted Firepower",
+        "By the Book",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Dawn of Rebellion \u00b7 supplied universal tree collection, PDF p.4",
+      "collection": "universal",
+      "page": 4,
+      "layoutReviewed": true
+    },
+    "Padawan Survivor": {
+      "names": [
+        "Parry",
+        "Constant Vigilance",
+        "Street Smarts",
+        "Nobody's Fool",
+        "Toughened",
+        "Reflect",
+        "Sleight of Mind",
+        "Secrets of the Jedi",
+        "Parry",
+        "Balance",
+        "Smooth Talker",
+        "Master of Shadows",
+        "Disorienting Strike",
+        "Uncanny Reactions",
+        "Smooth Talker",
+        "Trust No One",
+        "Improved Secrets of the Jedi",
+        "Temple Training",
+        "Force Rating",
+        "Dedication"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Dawn of Rebellion \u00b7 supplied universal tree collection, PDF p.5",
+      "collection": "universal",
+      "page": 5,
+      "layoutReviewed": true
+    },
+    "Pirate": {
+      "names": [
+        "Black Market Contacts",
+        "Toughened",
+        "Quick Draw",
+        "Knows the Ropes",
+        "Greased Palms",
+        "Toughened",
+        "Fearsome Rep",
+        "Commanding Presence",
+        "Black Market Contacts",
+        "Double-Talk",
+        "Street Smarts",
+        "Intimidating",
+        "Fearsome Rep",
+        "Intense Presence",
+        "Commanding Presence",
+        "Steely Nerves",
+        "Prepare to Be Boarded!",
+        "Altered Deal",
+        "Natural Rogue",
+        "Dedication"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Dawn of Rebellion \u00b7 supplied universal tree collection, PDF p.6",
+      "collection": "universal",
+      "page": 6,
+      "layoutReviewed": true
+    },
+    "Recruit": {
+      "names": [
+        "Basic Combat Training",
+        "Second Wind",
+        "Outdoorsman",
+        "Tactical Combat Training",
+        "Second Wind",
+        "Vehicle Combat Training",
+        "Well Traveled",
+        "Toughened",
+        "Quick Draw",
+        "Grit",
+        "Toughened",
+        "Spare Clip",
+        "Second Wind",
+        "Jump Up",
+        "Grit",
+        "Creative Killer",
+        "Dynamic Fire",
+        "Dedication",
+        "Toughened",
+        "Enduring"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Age of Rebellion Core \u00b7 supplied universal tree collection, PDF p.7",
+      "collection": "universal",
+      "page": 7,
+      "layoutReviewed": true
+    },
+    "Retired Clone Trooper": {
+      "names": [
+        "Toughened",
+        "Steady Aim",
+        "Spare Clip",
+        "Grit",
+        "Combat Veteran",
+        "Durable",
+        "Swift",
+        "Familiar Suns",
+        "Grit",
+        "Stimpack Specialization",
+        "Toughened",
+        "Durable",
+        "Persistent Targeting",
+        "Powerful Blast",
+        "Combat Veteran",
+        "Powerful Blast",
+        "Dedication",
+        "Improved Comrades in Arms",
+        "Comrades in Arms",
+        "Enduring"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Dawn of Rebellion \u00b7 supplied universal tree collection, PDF p.8",
+      "collection": "universal",
+      "page": 8,
+      "layoutReviewed": true
+    },
+    "Ship Captain": {
+      "names": [
+        "Wheel and Deal",
+        "Pride and Joy",
+        "Grit",
+        "Kill with Kindness",
+        "Kill with Kindness",
+        "Improved Pride and Joy",
+        "Field Commander",
+        "Skilled Jockey",
+        "Wheel and Deal",
+        "Encouraging Words",
+        "Seen a Lot of Things",
+        "Full Throttle",
+        "Trust the Captain",
+        "Inspiring Rhetoric",
+        "Trust the Captain",
+        "Supreme Pride and Joy",
+        "Most Impressive",
+        "Inspiring Leadership",
+        "Grit",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": true,
+      "source": "Dawn of Rebellion \u00b7 supplied universal tree collection, PDF p.10",
+      "collection": "universal",
+      "page": 10,
+      "layoutReviewed": true
+    }
+  },
+  "universals": {
+    "Force Sensitive Exile": {
+      "grantsForce": true,
+      "skills": []
+    },
+    "Force-Sensitive Emergent": {
+      "grantsForce": true,
+      "skills": []
+    },
+    "Force-Sensitive Outcast": {
+      "grantsForce": true,
+      "skills": []
+    },
+    "Padawan Survivor": {
+      "grantsForce": true,
+      "skills": []
+    },
+    "Force Adherent": {
+      "skills": [
+        "Discipline",
+        "Vigilance",
+        "Knowledge (Lore)",
+        "Melee"
+      ]
+    },
+    "Imperial Academy Cadet": {
+      "skills": [
+        "Piloting (Space)",
+        "Leadership",
+        "Knowledge (Warfare)",
+        "Ranged (Light)"
+      ]
+    },
+    "Pirate": {
+      "skills": [
+        "Skulduggery",
+        "Coercion",
+        "Deception",
+        "Knowledge (Underworld)"
+      ]
+    },
+    "Recruit": {
+      "skills": [
+        "Athletics",
+        "Discipline",
+        "Survival",
+        "Vigilance"
+      ]
+    },
+    "Retired Clone Trooper": {
+      "skills": [
+        "Discipline",
+        "Resilience",
+        "Vigilance",
+        "Knowledge (Warfare)",
+        "Ranged (Heavy)",
+        "Ranged (Light)"
+      ]
+    },
+    "Ship Captain": {
+      "skills": [
+        "Piloting (Space)",
+        "Charm",
+        "Leadership",
+        "Negotiation"
+      ]
+    },
+    "Death Watch Warrior": {
+      "skills": [
+        "Mechanics",
+        "Piloting (Planetary)",
+        "Coercion",
+        "Ranged (Light)"
+      ]
+    },
+    "Nightsister": {
+      "skills": [
+        "Discipline",
+        "Stealth",
+        "Survival",
+        "Knowledge (Lore)"
+      ]
+    },
+    "Republic Navy Officer": {
+      "skills": [
+        "Astrogation",
+        "Discipline",
+        "Leadership",
+        "Knowledge (Warfare)"
+      ]
+    },
+    "Republic Representative": {
+      "skills": [
+        "Cool",
+        "Charm",
+        "Negotiation"
+      ],
+      "knowledgeChoice": true
+    },
+    "Scavenger": {
+      "skills": [
+        "Mechanics",
+        "Perception",
+        "Streetwise",
+        "Survival"
+      ]
+    },
+    "Senator": {
+      "skills": [
+        "Charm",
+        "Deception",
+        "Negotiation",
+        "Knowledge (Education)"
+      ]
+    },
+    "Separatist Commander": {
+      "skills": [
+        "Vigilance",
+        "Coercion",
+        "Leadership",
+        "Knowledge (Warfare)"
+      ]
+    }
+  },
+  "requirements": {
+    "Clone Trooper": {
+      "species": "clone"
+    },
+    "Clone Officer": {
+      "species": "clone"
+    },
+    "Clone Pilot": {
+      "species": "clone"
+    },
+    "ARC Trooper": {
+      "species": "clone"
+    },
+    "Clone Commander": {
+      "species": "clone"
+    },
+    "Clone Veteran": {
+      "species": "clone"
+    },
+    "Knight": {
+      "forceRating": 2
+    },
+    "General": {
+      "forceRating": 2
+    },
+    "Master": {
+      "forceRating": 3
+    },
+    "Retired Clone Trooper": {
+      "species": "clone"
+    }
+  }
+}

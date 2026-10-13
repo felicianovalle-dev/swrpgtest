@@ -58,7 +58,7 @@ function economicState(){return run('JSON.stringify({credits:S.credits,xp:S.earn
  run('S.resume97={screen:"does-not-exist"};');
  check('Unavailable continuation falls back to Play Hub',()=>run('Game97.resume.current()')==='playhub80');
  run('S.finalized=false;S.resume97=null');
- check('Creation without saved continuation opens character guide',()=>run('Game97.resume.current()')==='guide');
+ check('Creation without saved continuation opens campaign beginning chooser',()=>run('Game97.resume.current()')==='campaignSetup97');
  run('S.finalized=true;S.customEncounter=[{id:"navyTrooper",count:1}];startCustomEncounter();S.resume97={screen:"equipment"}');
  check('Active combat takes precedence over a downtime screen',()=>run('Game97.resume.current()')==='combat');
  run('S.combat=null;pxSwitchMap67("cantinaInterior");renderNavTab("pixelworld67");pxPos67().x=16;pxPos67().y=18;save()');

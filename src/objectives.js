@@ -5,6 +5,7 @@
   function describe(state = S) {
     const result = (title, instruction, location, label, target, extra = {}) =>
       ({title, instruction, location, label, target, ...extra});
+    const opening=game.campaign?.objective(state);if(opening)return opening;
     if (!state.finalized) return result('Finish your character',
       'Choose your free skills, spend starting XP, and review your character before beginning the campaign.',
       'Character creation', 'Review character', 'review');

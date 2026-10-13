@@ -3,6 +3,7 @@
   'use strict';
   const game = window.Game97, escape = pxEsc67;
   const destinations = [
+    ['hubBeginning97','Campaign beginning','campaignSetup97'],
     ['hubStory97','Story missions','story61tab'], ['hubOps80','Contracts','gm'],
     ['hubCrew97','Crew','crewmgmt'], ['hubGear97','Equipment','equipment'],
     ['hubRecovery97','Recovery','recovery'], ['hubGalaxy80','Galaxy & travel','galaxy'],

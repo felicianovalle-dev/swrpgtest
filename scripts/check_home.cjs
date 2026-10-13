@@ -18,7 +18,7 @@ const assert=require('node:assert/strict'),openGame=require('./game_test_harness
   check('Home Training shortcut opens the existing Training workflow',()=>run('activeTabId78()')==='worktraining96'&&run('S.downtime96.panel')==='training');
   check('Training no longer displays phase labels',()=>!w.document.getElementById('worktraining96').textContent.includes('PHASES'));
   const scenarios=[
-   ['creation',{...baseline,finalized:false},'review'],
+   ['creation',{...baseline,finalized:false},'campaignSetup97'],
    ['active combat',{...baseline,combat:{}},'combat'],
    ['courier wreck',{...baseline,ep15:{...baseline.ep15,mainStage:1}},'adventure'],
    ['completed courier adventure',{...baseline,ep15:{...baseline.ep15,mainStage:9}},'story61tab']

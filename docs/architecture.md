@@ -5,7 +5,7 @@
 
 1. `src/template.html` contains the static HTML and ordered source placeholders.
 2. `src/source-map.json` maps each placeholder to a legacy JavaScript/CSS file.
-3. `src/world94.*`, the mobile/Jobs layers, and navigation styles are embedded.
+3. `src/world94.*`, the mobile/Jobs layers, and navigation/creation styles are embedded.
 4. `src/runtime97.js` supplies one navigation/render/hydration adapter. The save
    and visual modules follow it, and the final boot runs after all modules exist.
 
@@ -101,3 +101,42 @@ handling, failed writes, slot selection, and continuation fallbacks. It also run
 the existing smoke suite and diagnostics. `npm run test:browser` serves the actual
 build, measures visible controls, checks hit targets, and reloads real storage.
 Chromium phone/touch emulation does not establish physical iPhone Safari support.
+
+# Character options and campaign beginnings
+
+`src/content/character-options.json` owns the additive, source-referenced species,
+career packages, universal packages, requirements, and 25 reviewed tree layouts.
+`src/catalog.js` installs these options before the runtime captures fresh state.
+The builder substitutes the JSON once into its explicit data marker; no remote
+catalog or PDF is needed at runtime. Existing tree IDs remain untouched.
+
+`src/campaign-content.js` owns era/allegiance metadata and twelve original short
+mission definitions. It registers them with the existing story engine rather than
+implementing a second dice, reward, or quest engine. The new mission marker keeps
+legacy story offers and their existing travel/combat requirements separate.
+
+`src/campaign.js` owns the beginning chooser, personal details, opening screen,
+review requirements, suitable mission offers, and in-game coverage disclosure.
+It subscribes to the shared install/render/hydrate/navigate events. The Home and
+objective modules delegate campaign presentation through `Game97.campaign`.
+`src/campaign.css` uses the existing interface conventions and keeps creation
+controls readable at 320px and wider viewports.
+
+`campaign97` stores enabled/era/faction/focus/mission/weapon, application/opening
+state, creation step, and personal details. `speciesBonus97` stores Human choices;
+`universalKnowledge97` stores a selectable universal Knowledge career skill.
+These fields serialize through the existing state service without changing schema
+92. Save validation checks the new metadata before hydration. A missing campaign
+field on an older save means its original campaign, not the currently loaded era.
+
+The start kit applies once during finalization. Beginning a mission is a separate
+player action and grants no reward. The story engine pays its finale once and
+stores completed choices. Imported layouts do not imply that every special
+talent action is automated; see `docs/character-options-audit.md` for the exact
+coverage and remaining source/layout gaps.
+
+`npm run test:campaign` runs the actual built game in Chromium. It covers all
+era/allegiance combinations, free-rank/Force/prerequisite guards, mission branches,
+failed-check recovery, save/reload, legacy preservation, and six viewport sizes.
+Mission branch tests control rolls to verify state transitions and rewards; they
+do not establish ordinary-character difficulty balance.
