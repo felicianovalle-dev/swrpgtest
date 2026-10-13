@@ -3590,6 +3590,1658 @@
       "collection": "universal",
       "page": 10,
       "layoutReviewed": true
+    },
+    "Gadgeteer": {
+      "names": [
+        "Brace",
+        "Toughened",
+        "Intimidating",
+        "Defensive Stance",
+        "Spare Clip",
+        "Jury Rigged",
+        "Point Blank",
+        "Disorient",
+        "Toughened",
+        "Armor Master",
+        "Natural Enforcer",
+        "Stunning Blow",
+        "Jury Rigged",
+        "Tinkerer",
+        "Deadly Accuracy",
+        "Improved Stunning Blow",
+        "Intimidating",
+        "Dedication",
+        "Improved Armor Master",
+        "Crippling Blow"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.60 \u00b7 supplied EotE tree collection, PDF p.3",
+      "collection": "eote",
+      "page": 3,
+      "bookPage": 60,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Survivalist": {
+      "names": [
+        "Forager",
+        "Stalker",
+        "Outdoorsman",
+        "Expert Tracker",
+        "Outdoorsman",
+        "Swift",
+        "Hunter",
+        "Soft Spot",
+        "Toughened",
+        "Expert Tracker",
+        "Stalker",
+        "Natural Outdoorsman",
+        "Toughened",
+        "Hunter",
+        "Expert Tracker",
+        "Blooded",
+        "Enduring",
+        "Dedication",
+        "Grit",
+        "Heroic Fortitude"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.61 \u00b7 supplied EotE tree collection, PDF p.7",
+      "collection": "eote",
+      "page": 7,
+      "bookPage": 61,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Doctor": {
+      "names": [
+        "Surgeon",
+        "Bacta Specialist",
+        "Grit",
+        "Resolve",
+        "Stim Application",
+        "Grit",
+        "Surgeon",
+        "Resolve",
+        "Surgeon",
+        "Grit",
+        "Bacta Specialist",
+        "Pressure Point",
+        "Improved Stim Application",
+        "Natural Doctor",
+        "Toughened",
+        "Anatomy Lessons",
+        "Supreme Stim Application",
+        "Master Doctor",
+        "Dedication",
+        "Dodge"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.65 \u00b7 supplied EotE tree collection, PDF p.9",
+      "collection": "eote",
+      "page": 9,
+      "bookPage": 65,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Politico": {
+      "names": [
+        "Kill with Kindness",
+        "Grit",
+        "Plausible Deniability",
+        "Toughened",
+        "Inspiring Rhetoric",
+        "Kill with Kindness",
+        "Scathing Tirade",
+        "Plausible Deniability",
+        "Dodge",
+        "Improved Inspiring Rhetoric",
+        "Improved Scathing Tirade",
+        "Well Rounded",
+        "Grit",
+        "Supreme Inspiring Rhetoric",
+        "Supreme Scathing Tirade",
+        "Nobody's Fool",
+        "Steely Nerves",
+        "Dedication",
+        "Natural Charmer",
+        "Intense Presence"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.66 \u00b7 supplied EotE tree collection, PDF p.13",
+      "collection": "eote",
+      "page": 13,
+      "bookPage": 66,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Scholar": {
+      "names": [
+        "Respected Scholar",
+        "Speaks Binary",
+        "Grit",
+        "Brace",
+        "Researcher",
+        "Respected Scholar",
+        "Resolve",
+        "Researcher",
+        "Codebreaker",
+        "Knowledge Specialization",
+        "Natural Scholar",
+        "Well Rounded",
+        "Knowledge Specialization",
+        "Intense Focus",
+        "Confidence",
+        "Resolve",
+        "Stroke of Genius",
+        "Mental Fortress",
+        "Dedication",
+        "Toughened"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.67 \u00b7 supplied EotE tree collection, PDF p.14",
+      "collection": "eote",
+      "page": 14,
+      "bookPage": 67,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Fringer": {
+      "names": [
+        "Galaxy Mapper",
+        "Street Smarts",
+        "Rapid Recovery",
+        "Street Smarts",
+        "Skilled Jockey",
+        "Galaxy Mapper",
+        "Grit",
+        "Toughened",
+        "Master Starhopper",
+        "Defensive Driving",
+        "Rapid Recovery",
+        "Durable",
+        "Rapid Recovery",
+        "Jump Up",
+        "Grit",
+        "Knockdown",
+        "Dedication",
+        "Toughened",
+        "Dodge",
+        "Dodge"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.71 \u00b7 supplied EotE tree collection, PDF p.19",
+      "collection": "eote",
+      "page": 19,
+      "bookPage": 71,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Trader": {
+      "names": [
+        "Know Somebody",
+        "Convincing Demeanor",
+        "Wheel and Deal",
+        "Smooth Talker",
+        "Wheel and Deal",
+        "Grit",
+        "Spare Clip",
+        "Toughened",
+        "Know Somebody",
+        "Nobody's Fool",
+        "Smooth Talker",
+        "Nobody's Fool",
+        "Wheel and Deal",
+        "Steely Nerves",
+        "Black Market Contacts",
+        "Black Market Contacts",
+        "Know Somebody",
+        "Natural Negotiator",
+        "Dedication",
+        "Master Merchant"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.73 \u00b7 supplied EotE tree collection, PDF p.21",
+      "collection": "eote",
+      "page": 21,
+      "bookPage": 73,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Bodyguard": {
+      "names": [
+        "Toughened",
+        "Barrage",
+        "Durable",
+        "Grit",
+        "Body Guard",
+        "Hard Headed",
+        "Barrage",
+        "Brace",
+        "Body Guard",
+        "Side Step",
+        "Defensive Stance",
+        "Brace",
+        "Enduring",
+        "Side Step",
+        "Defensive Stance",
+        "Hard Headed",
+        "Dedication",
+        "Barrage",
+        "Toughened",
+        "Improved Hard Headed"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.77 \u00b7 supplied EotE tree collection, PDF p.23",
+      "collection": "eote",
+      "page": 23,
+      "bookPage": 77,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Marauder": {
+      "names": [
+        "Toughened",
+        "Frenzied Attack",
+        "Feral Strength",
+        "Lethal Blows",
+        "Feral Strength",
+        "Toughened",
+        "Heroic Fortitude",
+        "Knockdown",
+        "Enduring",
+        "Lethal Blows",
+        "Toughened",
+        "Frenzied Attack",
+        "Toughened",
+        "Feral Strength",
+        "Natural Brawler",
+        "Lethal Blows",
+        "Frenzied Attack",
+        "Enduring",
+        "Defensive Stance",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.78 \u00b7 supplied EotE tree collection, PDF p.27",
+      "collection": "eote",
+      "page": 27,
+      "bookPage": 78,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Mercenary Soldier": {
+      "names": [
+        "Command",
+        "Second Wind",
+        "Point Blank",
+        "Side Step",
+        "Second Wind",
+        "Confidence",
+        "Strong Arm",
+        "Point Blank",
+        "Field Commander",
+        "Command",
+        "Natural Marksman",
+        "Sniper Shot",
+        "Improved Field Commander",
+        "Grit",
+        "Toughened",
+        "Lethal Blows",
+        "Deadly Accuracy",
+        "True Aim",
+        "Dedication",
+        "True Aim"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.79 \u00b7 supplied EotE tree collection, PDF p.28",
+      "collection": "eote",
+      "page": 28,
+      "bookPage": 79,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Thief": {
+      "names": [
+        "Street Smarts",
+        "Black Market Contacts",
+        "Indistinguishable",
+        "Bypass Security",
+        "Black Market Contacts",
+        "Dodge",
+        "Grit",
+        "Hidden Storage",
+        "Stalker",
+        "Grit",
+        "Rapid Reaction",
+        "Shortcut",
+        "Bypass Security",
+        "Natural Rogue",
+        "Street Smarts",
+        "Jump Up",
+        "Master of Shadows",
+        "Dodge",
+        "Indistinguishable",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.85 \u00b7 supplied EotE tree collection, PDF p.35",
+      "collection": "eote",
+      "page": 35,
+      "bookPage": 85,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
+    },
+    "Outlaw Tech": {
+      "names": [
+        "Tinkerer",
+        "Utinni!",
+        "Speaks Binary",
+        "Tinkerer",
+        "Solid Repairs",
+        "Grit",
+        "Utinni!",
+        "Toughened",
+        "Utility Belt",
+        "Side Step",
+        "Brace",
+        "Defensive Stance",
+        "Jury Rigged",
+        "Speaks Binary",
+        "Inventor",
+        "Jury Rigged",
+        "Inventor",
+        "Dedication",
+        "Known Schematic",
+        "Brace"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.90 \u00b7 supplied EotE tree collection, PDF p.41",
+      "collection": "eote",
+      "page": 41,
+      "bookPage": 90,
+      "layoutReviewed": true,
+      "coreReviewed": true,
+      "replacesPrototype": true,
+      "idPrefix": "eote98"
     }
   },
   "universals": {
@@ -3746,6 +5398,802 @@
     },
     "Retired Clone Trooper": {
       "species": "clone"
+    }
+  },
+  "talentRules98": {
+    "Anatomy Lessons": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132"
+    },
+    "Armor Master": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132"
+    },
+    "Bacta Specialist": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "Patients under your supervision recover one extra wound per rank from bacta-tank or long-term care."
+    },
+    "Barrage": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132"
+    },
+    "Black Market Contacts": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132"
+    },
+    "Blooded": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "Add one Boost per rank to toxin resistance or recovery checks; shorten ongoing toxin effects by one round per rank, minimum one."
+    },
+    "Body Guard": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "As a maneuver once per round, protect an engaged ally. Suffer strain up to your ranks to upgrade attacks against that ally until your next turn."
+    },
+    "Brace": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "Use a maneuver to remove environmental Setbacks from your next check, up to your ranks."
+    },
+    "Bypass Security": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 133,
+      "source": "Edge of the Empire Core \u00b7 p.133"
+    },
+    "Codebreaker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 133,
+      "source": "Edge of the Empire Core \u00b7 p.133"
+    },
+    "Command": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 133,
+      "source": "Edge of the Empire Core \u00b7 p.133"
+    },
+    "Confidence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 133,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Reduce the difficulty of Discipline checks against fear by one per rank; difficulty may reach zero."
+    },
+    "Convincing Demeanor": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 133,
+      "source": "Edge of the Empire Core \u00b7 p.133"
+    },
+    "Crippling Blow": {
+      "type": "Active",
+      "activation": "Active",
+      "ranked": false,
+      "page": 133,
+      "source": "Edge of the Empire Core \u00b7 p.133"
+    },
+    "Deadly Accuracy": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 134,
+      "source": "Edge of the Empire Core \u00b7 p.134"
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 134,
+      "source": "Edge of the Empire Core \u00b7 p.134"
+    },
+    "Defensive Driving": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 134,
+      "source": "Edge of the Empire Core \u00b7 p.134"
+    },
+    "Defensive Stance": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 134,
+      "source": "Edge of the Empire Core \u00b7 p.134"
+    },
+    "Disorient": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Durable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Enduring": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Expert Tracker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Feral Strength": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135",
+      "summary": "Each rank adds 1 damage to one successful Brawl or Melee hit."
+    },
+    "Field Commander": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Forager": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Frenzied Attack": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135",
+      "summary": "For a Brawl or Melee attack, voluntarily suffer strain up to your ranks to upgrade the attack that many times."
+    },
+    "Galaxy Mapper": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 136,
+      "source": "Edge of the Empire Core \u00b7 p.136"
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 136,
+      "source": "Edge of the Empire Core \u00b7 p.136"
+    },
+    "Hard Headed": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": true,
+      "page": 136,
+      "source": "Edge of the Empire Core \u00b7 p.136"
+    },
+    "Heroic Fortitude": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137"
+    },
+    "Hidden Storage": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "Provide concealed item capacity equal to your ranks, allocated to equipment or vehicles."
+    },
+    "Hunter": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137"
+    },
+    "Improved Armor Master": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 132,
+      "source": "Edge of the Empire Core \u00b7 p.132"
+    },
+    "Improved Field Commander": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 135,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Improved Hard Headed": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 136,
+      "source": "Edge of the Empire Core \u00b7 p.136"
+    },
+    "Improved Inspiring Rhetoric": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "Affected allies gain a Boost on checks for rounds equal to your Leadership ranks."
+    },
+    "Improved Scathing Tirade": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Affected enemies suffer a Setback on checks for rounds equal to your Coercion ranks."
+    },
+    "Improved Stim Application": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "For Stim Application, choose a Hard check so the target suffers 1 strain instead of 4."
+    },
+    "Improved Stunning Blow": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 144,
+      "source": "Edge of the Empire Core \u00b7 p.144"
+    },
+    "Indistinguishable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "Upgrade checks made to identify you once per rank."
+    },
+    "Inspiring Rhetoric": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "An Average Leadership action restores strain to short-range allies; Successes select allies and Advantages add recovery."
+    },
+    "Intense Focus": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137"
+    },
+    "Intense Presence": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137"
+    },
+    "Intimidating": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137"
+    },
+    "Inventor": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137"
+    },
+    "Jump Up": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Once per round, stand from seated or prone as an incidental."
+    },
+    "Jury Rigged": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Choose a personal item per rank and apply one allowed improvement while using it. Reassign only when that item is lost or destroyed."
+    },
+    "Kill with Kindness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138"
+    },
+    "Knockdown": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138"
+    },
+    "Know Somebody": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138"
+    },
+    "Knowledge Specialization": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Choose a Knowledge skill on first acquisition. Spend a Triumph on that skill to add Successes equal to your ranks."
+    },
+    "Known Schematic": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Once per session, make a Hard Knowledge (Education) maneuver to become familiar with a building or ship\u2019s design."
+    },
+    "Lethal Blows": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138"
+    },
+    "Master Doctor": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Once per round, voluntarily suffer 2 strain to reduce the difficulty of one Medicine check by 1."
+    },
+    "Master Merchant": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138"
+    },
+    "Master Starhopper": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Master of Shadows": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 138,
+      "source": "Edge of the Empire Core \u00b7 p.138"
+    },
+    "Mental Fortress": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Brawler": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Charmer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Doctor": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Enforcer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Marksman": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Negotiator": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Outdoorsman": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Rogue": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Scholar": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139",
+      "summary": "Once per session, reroll one Knowledge check."
+    },
+    "Nobody's Fool": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 139,
+      "source": "Edge of the Empire Core \u00b7 p.139",
+      "summary": "Upgrade incoming Charm, Coercion, and Deception checks once per rank."
+    },
+    "Outdoorsman": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 141,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Remove one Setback per rank from terrain or environmental checks; overland travel takes half the usual time."
+    },
+    "Plausible Deniability": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 141,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Point Blank": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 141,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Pressure Point": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 141,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "An optional Brawl hit against a living target deals strain, bypasses soak, and adds Medicine ranks instead of ordinary wound damage."
+    },
+    "Rapid Reaction": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "page": 141,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Rapid Recovery": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 141,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Researcher": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 141,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Resolve": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142"
+    },
+    "Respected Scholar": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Downgrade difficulty once per rank when dealing with institutions of learning."
+    },
+    "Scathing Tirade": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Use an Average Coercion action to inflict strain on short-range enemies; Successes select targets and Advantages add strain."
+    },
+    "Second Wind": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142"
+    },
+    "Shortcut": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "During a chase, add one Boost per rank to checks to catch or escape an opponent."
+    },
+    "Side Step": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142"
+    },
+    "Skilled Jockey": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142"
+    },
+    "Smooth Talker": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Choose Charm, Coercion, Deception, or Negotiation. Spend Triumph on that skill for extra Successes equal to your ranks."
+    },
+    "Sniper Shot": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142"
+    },
+    "Soft Spot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143"
+    },
+    "Solid Repairs": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143"
+    },
+    "Spare Clip": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143"
+    },
+    "Speaks Binary": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "When directing an NPC droid, grant one Boost per rank on its instructed task."
+    },
+    "Stalker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143"
+    },
+    "Steely Nerves": {
+      "type": "Active",
+      "activation": "Active (Inci-",
+      "ranked": false,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143"
+    },
+    "Stim Application": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "An Average Medicine action temporarily raises an engaged ally\u2019s chosen characteristic by 1 and inflicts 4 strain on them. Resolve the encounter duration and repeat-use limit."
+    },
+    "Street Smarts": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 144,
+      "source": "Edge of the Empire Core \u00b7 p.144"
+    },
+    "Stroke of Genius": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 144,
+      "source": "Edge of the Empire Core \u00b7 p.144",
+      "summary": "Once per session, use Intellect for one skill check in place of its normal characteristic."
+    },
+    "Strong Arm": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 144,
+      "source": "Edge of the Empire Core \u00b7 p.144",
+      "summary": "Thrown weapons gain one range band."
+    },
+    "Stunning Blow": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 144,
+      "source": "Edge of the Empire Core \u00b7 p.144"
+    },
+    "Supreme Inspiring Rhetoric": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 137,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "Voluntarily suffer 1 strain to use Inspiring Rhetoric as a maneuver."
+    },
+    "Supreme Scathing Tirade": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 142,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Voluntarily suffer 1 strain to use Scathing Tirade as a maneuver."
+    },
+    "Supreme Stim Application": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 143,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "Spend Triumph on Stim Application to temporarily raise another characteristic by 1."
+    },
+    "Surgeon": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 144,
+      "source": "Edge of the Empire Core \u00b7 p.144"
+    },
+    "Swift": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 144,
+      "source": "Edge of the Empire Core \u00b7 p.144"
+    },
+    "Tinkerer": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Each rank lets you add one hard point to a chosen item; each item can benefit only once."
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "source": "Edge of the Empire Core \u00b7 p.145"
+    },
+    "True Aim": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 145,
+      "source": "Edge of the Empire Core \u00b7 p.145"
+    },
+    "Utility Belt": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 145,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Spend a Destiny Point to produce an eligible previously unrecorded small tool or weapon. Apply the source restrictions."
+    },
+    "Utinni!": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Remove one Setback per rank from scavenging checks; searching takes half the usual time."
+    },
+    "Well Rounded": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Each rank lets you choose two skills that become career skills. It grants no skill ranks."
+    },
+    "Wheel and Deal": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "When selling legal goods to reputable merchants, earn 10% more credits per rank."
     }
   }
 }

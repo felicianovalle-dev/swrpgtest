@@ -1838,7 +1838,7 @@ const RULE_AUDIT=[
 ];
 
 
-let S={name:'Zek Tarren',species:'human',career:'Bounty Hunter',spec:'Assassin',base:{},chars:{},charSpend:{},skills:{},freeCareer:[],freeSpec:[],xpStart:110,xpSpent:0,talents:new Set(),dedication:{},forceRating:0,forceOwned:{Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()},forceTab:'Move',forceCommitted:{sense:false,brawn:false,agility:false},framework:'Obligation',frameworkType:'Debt',frameworkValue:10,destiny:{light:2,dark:2},conflict:0,finalized:false,earnedXp:0,wounds:0,strain:0,scene:0,crew:['kira','lena'],weapon:'carbine',last:null,combat:null,buildLog:[],gameLog:[],sessionUsed:{naturalProgrammer:false,naturalCharmer:false,naturalDoctor:false,naturalNegotiator:false,naturalLeader:false,naturalHunter:false,naturalOutdoorsman:false,naturalTinkerer:false,naturalMystic:false,naturalBrawler:false,naturalRogue:false,naturalMarksman:false,naturalEnforcer:false,naturalMerchant:false,naturalAthlete:false,naturalDriver:false,naturalInstructor:false,naturalPilot:false,worksLikeACharm:false,cleverSolution:false,fortuneFavorsBold:false,senseDanger:false,touchOfFate:false,forceOfWill:false,powerFromPain:false,improvedToughened:false},deadlyAccuracySkill:null,conflictReduction:0,flags:{},universalSpecs:[],universalTalents:{'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()},universalView:'Force Sensitive Exile',morality:50,criticals:[],stunMode:false,credits:500,inventory:[],armor:'heavyClothing',stimpacks:2,stimUses:0,ordnance:{frag:2,stun:1,miniThermal:0},speciesSkillChoice:null,crewState:{},conditions:{prone:false,immobilized:0,staggered:0,disoriented:0,hamstrung:false,winded:false,compromised:false,atBrink:false,bleedingOut:false},medical:{encounter:1,woundTreated:{},critTreated:{},day:1},dead:false,crewLoadout:{kira:{weapon:null,armor:null},lena:{weapon:null,armor:null},tavo:{weapon:null,armor:null}},approval:{kira:0,lena:0,tavo:0},destinyPending:{allyUpgrade:0,npcDifficulty:0},destinyHeld:{light:0,dark:0},gmDestinyMode:'prompt',narrativeFacts:[],ownedSpecs:[],specTalents:{},talentView:null,forceCommitted:{sense:false,brawn:false,agility:false},foreseeBoost:0,itemAttachments:{},attachmentMods:{},reloads:1,itemDamage:{},crafting:{materials:{},crafted:{},utilityRigReady:true},market:{last:null},crewProgress:{},crewConversation:'kira',crewQuestLog:[],crewField:{supportUsed:{}},ship:{owned:false,name:'Wayward Star',location:'sable',hull:0,strain:0,criticals:[],upgrades:[],stations:{pilot:'pc',navigator:'lena',gunner:'tavo',engineer:'lena'},combat:null,log:[]},ep15:{initialized:false,location:'cantina',mainStage:0,dungeonStage:0,quests:{},rep:{Rebels:0,Hutts:0,Empire:0,Guild:0,Local:0},intel:0,salvage:0,visited:{},flags:{},loot:{},completed:[],lastNpc:null},schemaVersion:52,settings:{difficulty:'standard',tutorial:true,autosave:true,uiScale:'standard',reducedMotion:false},lastSaved:null,saveWarnings:[]};
+let S={name:'Zek Tarren',species:'human',career:'Bounty Hunter',spec:'Assassin',base:{},chars:{},charSpend:{},skills:{},freeCareer:[],freeSpec:[],xpStart:110,xpSpent:0,talents:new Set(),dedication:{},forceRating:0,forceOwned:{Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()},forceTab:'Move',forceCommitted:{sense:false,brawn:false,agility:false},framework:'Obligation',frameworkType:'Debt',frameworkValue:10,destiny:{light:2,dark:2},conflict:0,finalized:false,earnedXp:0,wounds:0,strain:0,scene:0,crew:['kira','lena'],weapon:'carbine',last:null,combat:null,buildLog:[],gameLog:[],sessionUsed:{naturalProgrammer:false,naturalCharmer:false,naturalDoctor:false,naturalNegotiator:false,naturalLeader:false,naturalHunter:false,naturalOutdoorsman:false,naturalTinkerer:false,naturalMystic:false,naturalBrawler:false,naturalRogue:false,naturalMarksman:false,naturalEnforcer:false,naturalMerchant:false,naturalAthlete:false,naturalDriver:false,naturalInstructor:false,naturalPilot:false,naturalScholar:false,worksLikeACharm:false,cleverSolution:false,fortuneFavorsBold:false,senseDanger:false,touchOfFate:false,forceOfWill:false,powerFromPain:false,improvedToughened:false},deadlyAccuracySkill:null,conflictReduction:0,flags:{},universalSpecs:[],universalTalents:{'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()},universalView:'Force Sensitive Exile',morality:50,criticals:[],stunMode:false,credits:500,inventory:[],armor:'heavyClothing',stimpacks:2,stimUses:0,ordnance:{frag:2,stun:1,miniThermal:0},speciesSkillChoice:null,crewState:{},conditions:{prone:false,immobilized:0,staggered:0,disoriented:0,hamstrung:false,winded:false,compromised:false,atBrink:false,bleedingOut:false},medical:{encounter:1,woundTreated:{},critTreated:{},day:1},dead:false,crewLoadout:{kira:{weapon:null,armor:null},lena:{weapon:null,armor:null},tavo:{weapon:null,armor:null}},approval:{kira:0,lena:0,tavo:0},destinyPending:{allyUpgrade:0,npcDifficulty:0},destinyHeld:{light:0,dark:0},gmDestinyMode:'prompt',narrativeFacts:[],ownedSpecs:[],specTalents:{},talentView:null,forceCommitted:{sense:false,brawn:false,agility:false},foreseeBoost:0,itemAttachments:{},attachmentMods:{},reloads:1,itemDamage:{},crafting:{materials:{},crafted:{},utilityRigReady:true},market:{last:null},crewProgress:{},crewConversation:'kira',crewQuestLog:[],crewField:{supportUsed:{}},ship:{owned:false,name:'Wayward Star',location:'sable',hull:0,strain:0,criticals:[],upgrades:[],stations:{pilot:'pc',navigator:'lena',gunner:'tavo',engineer:'lena'},combat:null,log:[]},ep15:{initialized:false,location:'cantina',mainStage:0,dungeonStage:0,quests:{},rep:{Rebels:0,Hutts:0,Empire:0,Guild:0,Local:0},intel:0,salvage:0,visited:{},flags:{},loot:{},completed:[],lastNpc:null},schemaVersion:52,settings:{difficulty:'standard',tutorial:true,autosave:true,uiScale:'standard',reducedMotion:false},lastSaved:null,saveWarnings:[]};
 
 /* Phase 17: shared actor/rules helpers and database plumbing. */
 function freshConditions(){return{prone:false,immobilized:0,staggered:0,disoriented:0,suppressed:0,hamstrung:false,winded:false,compromised:false,atBrink:false,bleedingOut:false,lastBleedRound:0,cover:false,headRinger:false,fearsomeWound:false,agonizingWound:false,slightlyDazed:false,scatteredSenses:false,temporarilyLame:false,blinded:false,knockedSenseless:false,lostArm:0,lostLeg:0,noFreeManeuver:0,nextSetback:0,nextUpgrade:0,nextDifficulty:0,slowedRound:0,droppedWeapon:false,endIsNigh:0,endIsNighRound:0}}
@@ -1947,11 +1947,15 @@ function buyAdditionalSpec(){
   bLog(`${sp} (${sourceCareer}) acquired${sourceCareer===S.career?' as an in-career specialization':' as a non-career specialization'}. Its specialization skills are now career skills; no free starting ranks are granted.`);renderAll()
 }
 function eligibleSpecTalent(spec,n){
-  let set=S.specTalents[spec]||new Set();return n.row===0||n.links.some(id=>set.has(id))
+  let set=S.specTalents[spec]||new Set(),tree=treeForSpec(spec);return n.row===0||n.links.some(id=>set.has(id)||window.Talents98?.knownUnranked(tree.find(x=>x.id===id)?.name))
 }
 function buyViewedTalent(id){
   ensurePhase9State();let spec=S.talentView,set=S.specTalents[spec],n=treeForSpec(spec).find(x=>x.id===id);
-  if(!n||set.has(id)||!eligibleSpecTalent(spec,n))return;
+  if(!n||set.has(id))return;
+  if(window.Talents98?.knownUnranked(n.name)){bLog(`${n.name} is already known. No XP is spent; its connections are available in this tree.`);return;}
+  if(!eligibleSpecTalent(spec,n))return;
+  const choice=window.Talents98?Talents98.choiceForPurchase(n):{};
+  if(choice===false){bLog('Talent purchase cancelled. Choose valid required skills; no XP was spent.');return;}
   if(n.name==='Dedication'){
     let ch=prompt('Dedication: choose Brawn, Agility, Intellect, Cunning, Willpower, or Presence');
     if(!S.chars[ch]||S.chars[ch]>=6){bLog('Dedication cancelled or invalid characteristic.');return}
@@ -1966,13 +1970,14 @@ function buyViewedTalent(id){
   }
   if(charge(n.cost,`${spec}: ${n.name}`)){
     set.add(id);
+    window.Talents98?.commitChoice(spec,id,choice);
     if(n.name==='Force Rating'){S.forceRating++;bLog(`Force Rating increased to ${S.forceRating}.`)}
     renderAll()
   }
 }
 function allOwnedSpecNodes(){
   ensurePhase9State();let out=[];
-  for(const sp of S.ownedSpecs){let set=S.specTalents[sp]||new Set();for(const n of treeForSpec(sp))if(set.has(n.id))out.push(n)}
+  for(const sp of S.ownedSpecs){let set=S.specTalents[sp]||new Set();for(const n of treeForSpec(sp))if(set.has(n.id))out.push(n);out.push(...(window.Talents98?.legacyNodes(sp,set)||[]))}
   return out
 }
 function toggleEnhanceCommit(which){
@@ -2423,7 +2428,7 @@ function hydrateState(x,label='save'){
   S.crewLoadout=x.crewLoadout||{};S.approval=x.approval||{};S.destinyPending=x.destinyPending||{allyUpgrade:0,npcDifficulty:0};S.destinyHeld=x.destinyHeld||{light:0,dark:0};S.gmDestinyMode=x.gmDestinyMode||'prompt';S.narrativeFacts=x.narrativeFacts||[];
   S.itemAttachments=x.itemAttachments||{};S.attachmentMods=x.attachmentMods||{};S.reloads=Number.isFinite(x.reloads)?x.reloads:1;S.itemDamage=x.itemDamage||{};S.crafting=x.crafting||{materials:{},crafted:{},utilityRigReady:true};S.market=x.market||{last:null};
   S.crewProgress=x.crewProgress||{};S.crewConversation=x.crewConversation||'kira';S.crewQuestLog=x.crewQuestLog||[];S.crewField=x.crewField||{supportUsed:{}};S.ship=x.ship||S.ship;S.ep15=x.ep15||S.ep15;
-  S.sessionUsed={naturalProgrammer:false,naturalCharmer:false,naturalDoctor:false,naturalNegotiator:false,naturalLeader:false,naturalHunter:false,naturalOutdoorsman:false,naturalTinkerer:false,naturalMystic:false,naturalBrawler:false,naturalRogue:false,naturalMarksman:false,naturalEnforcer:false,naturalMerchant:false,naturalAthlete:false,naturalDriver:false,naturalInstructor:false,naturalPilot:false,worksLikeACharm:false,cleverSolution:false,fortuneFavorsBold:false,senseDanger:false,touchOfFate:false,forceOfWill:false,powerFromPain:false,improvedToughened:false,...(x.sessionUsed||{})};S.deadlyAccuracySkill=x.deadlyAccuracySkill||null;S.conflictReduction=Number.isFinite(x.conflictReduction)?x.conflictReduction:0;S.settings={difficulty:'standard',tutorial:true,autosave:true,uiScale:'standard',reducedMotion:false,...(x.settings||{})};
+  S.sessionUsed={naturalProgrammer:false,naturalCharmer:false,naturalDoctor:false,naturalNegotiator:false,naturalLeader:false,naturalHunter:false,naturalOutdoorsman:false,naturalTinkerer:false,naturalMystic:false,naturalBrawler:false,naturalRogue:false,naturalMarksman:false,naturalEnforcer:false,naturalMerchant:false,naturalAthlete:false,naturalDriver:false,naturalInstructor:false,naturalPilot:false,naturalScholar:false,worksLikeACharm:false,cleverSolution:false,fortuneFavorsBold:false,senseDanger:false,touchOfFate:false,forceOfWill:false,powerFromPain:false,improvedToughened:false,...(x.sessionUsed||{})};S.deadlyAccuracySkill=x.deadlyAccuracySkill||null;S.conflictReduction=Number.isFinite(x.conflictReduction)?x.conflictReduction:0;S.settings={difficulty:'standard',tutorial:true,autosave:true,uiScale:'standard',reducedMotion:false,...(x.settings||{})};
   ensurePhase12State();ensurePhase13State();ensurePhase14State();ensurePhase15State();ensurePhase16State();ensureCrewState();ensureInventory();
   $('name').value=S.name;$('species').value=S.species;$('careerSelect').value=S.career;let specs=Object.keys(CAREERS[S.career].specs);$('specSelect').innerHTML=specs.map(y=>`<option>${y}</option>`).join('');$('specSelect').value=S.spec;$('framework').value=S.framework;$('frameworkValue').value=S.frameworkValue;
   if(CAREERS[S.career]?.forceStart&&S.forceRating<1)S.forceRating=1;S.lastSaved=new Date().toISOString();bLog(`Loaded ${label}.`);renderAll();return rcStateIssues()
@@ -3621,6 +3626,7 @@ function talentBlurb(name,base){
   return TALENT_BLURBS[name]||base||'This talent is part of the specialization tree. Its complete effect is still being wired into the game.';
 }
 function talentEngineStatus(name){
+  const current=window.Talents98?.status(name);if(current)return current;
   const wired=new Set([
     'Toughened','Grit','Parry','Reflect','Quick Strike','Rapid Reaction','Stalker',
     'Convincing Demeanor','Bypass Security','Codebreaker','Natural Programmer',
@@ -3724,7 +3730,7 @@ function careerSkills(){
   if(window.CharacterCatalog97)for(const sk of CharacterCatalog97.bonusSkills())s.add(sk);
   return s
 }
-function resetCreationPurchases(){S.speciesBonus97=[];S.universalKnowledge97={};let sp=SPECIES[S.species];S.chars={...sp.c};S.charSpend={};S.skills={...(sp.free||{})};if(sp.freeChoice?.length){let pick=S.speciesSkillChoice&&sp.freeChoice.includes(S.speciesSkillChoice)?S.speciesSkillChoice:sp.freeChoice[0];S.speciesSkillChoice=pick;S.skills[pick]=(S.skills[pick]||0)+1}S.xpSpent=0;S.freeCareer=[];S.freeSpec=[];S.talents=new Set();S.dedication={};S.ownedSpecs=[S.spec];S.specTalents={[S.spec]:S.talents};S.talentView=S.spec;S.universalSpecs=[];S.universalTalents={'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()};S.universalView='Force Sensitive Exile';S.forceRating=isForceCareer()?1:0;S.forceOwned={Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()};S.forceCommitted={sense:false,brawn:false,agility:false};S.foreseeBoost=0}function selectSpecies(reset=true){if(S.finalized)return;let sp=SPECIES[$('species').value];S.species=$('species').value;S.speciesSkillChoice=sp.freeChoice?.[0]||null;S.base={...sp.c};S.xpStart=sp.xp;resetCreationPurchases();if(reset)bLog(`Species set to ${sp.name}; creation purchases reset.`);renderAll()}
+function resetCreationPurchases(){S.talentChoices98={};S.talentImports98=[];S.speciesBonus97=[];S.universalKnowledge97={};let sp=SPECIES[S.species];S.chars={...sp.c};S.charSpend={};S.skills={...(sp.free||{})};if(sp.freeChoice?.length){let pick=S.speciesSkillChoice&&sp.freeChoice.includes(S.speciesSkillChoice)?S.speciesSkillChoice:sp.freeChoice[0];S.speciesSkillChoice=pick;S.skills[pick]=(S.skills[pick]||0)+1}S.xpSpent=0;S.freeCareer=[];S.freeSpec=[];S.talents=new Set();S.dedication={};S.ownedSpecs=[S.spec];S.specTalents={[S.spec]:S.talents};S.talentView=S.spec;S.universalSpecs=[];S.universalTalents={'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()};S.universalView='Force Sensitive Exile';S.forceRating=isForceCareer()?1:0;S.forceOwned={Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()};S.forceCommitted={sense:false,brawn:false,agility:false};S.foreseeBoost=0}function selectSpecies(reset=true){if(S.finalized)return;let sp=SPECIES[$('species').value];S.species=$('species').value;S.speciesSkillChoice=sp.freeChoice?.[0]||null;S.base={...sp.c};S.xpStart=sp.xp;resetCreationPurchases();if(reset)bLog(`Species set to ${sp.name}; creation purchases reset.`);renderAll()}
 function selectCareer(reset=true){if(S.finalized)return;let chosen=$('careerSelect').value;if(chosen==='Clone Soldier'&&S.species!=='clone'){$('careerSelect').value=S.career;bLog('Choose the Clone species to use Clone Soldier.');return}S.career=chosen;if(CAREERS[S.career].forceStart){S.framework='Morality';if($('framework'))$('framework').value='Morality'}let specs=Object.keys(CAREERS[S.career].specs);$('specSelect').innerHTML=specs.map(x=>`<option>${x}</option>`).join('');S.spec=specs[0];if(!S.finalized)resetCreationPurchases();if(reset)bLog(`Career set to ${S.career}; creation purchases reset for the new career.`);renderAll()}
 function selectSpec(){if(S.finalized)return;let chosen=$('specSelect').value;if(window.CharacterCatalog97?.requirement(chosen).forceRating){$('specSelect').value=S.spec;bLog('Begin as a Padawan. Acquire this advanced Jedi specialization after reaching its required Force Rating.');return}S.spec=chosen;if(!S.finalized)resetCreationPurchases();bLog(`Specialization set to ${S.spec}; creation purchases reset.`);renderAll()}
 function toggleFree(kind,sk){if(S.finalized)return;if(!(kind==='career'?CAREERS[S.career].skills:CAREERS[S.career].specs[S.spec]).includes(sk))return;let arr=kind==='career'?S.freeCareer:S.freeSpec,cap=kind==='career'?careerPickCap():2;if(arr.includes(sk)){arr.splice(arr.indexOf(sk),1);S.skills[sk]=Math.max(0,(S.skills[sk]||0)-1)}else if(arr.length<cap){if((S.skills[sk]||0)>=2){bLog('Starting skill ranks cannot exceed 2.');return}arr.push(sk);S.skills[sk]=(S.skills[sk]||0)+1}else bLog(`Only ${cap} free ${kind} picks are allowed.`);renderAll()}
@@ -3776,8 +3782,12 @@ function buyUniversalTalent(spec,id){
 }
 function actors(){ensurePhase13State();return[{id:'pc',name:S.name,c:S.chars,sk:S.skills},...S.crew.map(effectiveCrew).filter(Boolean)]}
 function talentCheckMods(actor,skill,ctx={}){
-  let boost=ctx.boost||0,setback=ctx.setback||0,diff=ctx.diff||2;
+  let boost=ctx.boost||0,setback=ctx.setback||0,diff=ctx.diff??2;
   if(actor.id==='pc'){
+    if(ctx.toxin||ctx.poison)boost+=talentRank('Blooded');
+    if(ctx.outdoors)setback=Math.max(0,setback-talentRank('Outdoorsman'));
+    if(ctx.scavenge)setback=Math.max(0,setback-talentRank('Utinni!'));
+    if(ctx.fear&&skill==='Discipline')diff=Math.max(0,diff-talentRank('Confidence'));
     if(skill==='Stealth'||skill==='Coordination')boost+=talentRank('Stalker');
     if(skill==='Perception')boost+=talentRank('Uncanny Senses');if(skill==='Athletics'||skill==='Coordination')setback=Math.max(0,setback-talentRank('Conditioned'));if(skill==='Athletics'||skill==='Resilience')boost+=talentRank('Physical Training');
     if(skill==='Vigilance')boost+=talentRank('Uncanny Reactions');
@@ -3828,6 +3838,7 @@ function actorPool(actor,skill,ctx={}){
       p=makePool(val,rank,diff,cm.removeBoost?0:boost,setback,(ctx.upgrade||0)+pendingUpgrade+cm.upgrade);
   let up=ctx.abilityUpgrade||0;upgradePositivePool(p,up);
   if(ctx.difficultyDowngrade)while(ctx.difficultyDowngrade-->0){if((p.challenge||0)>0){p.challenge--;p.difficulty=(p.difficulty||0)+1}}
+  if(id==='pc'&&ctx.academic)downgradeDifficultyPool(p,talentRank('Respected Scholar'));
   if(ctx.commit&&id){st.conditions.nextUpgrade=0;st.conditions.nextDifficulty=0;st.conditions.nextSetback=0;if(id==='pc'&&S.foreseeBoost)S.foreseeBoost=0}
   return{actor,skill,ch,rank,val,p,mods:{...m,diff,boost,setback}}
 }
@@ -3854,6 +3865,7 @@ function naturalReroll(skill,q,r){
     {name:'Natural Driver',key:'naturalDriver',skills:['Piloting (Planetary)','Gunnery']},
     {name:'Natural Instructor',key:'naturalInstructor',skills:['Discipline','Leadership']},
     {name:'Natural Pilot',key:'naturalPilot',skills:['Piloting (Space)','Gunnery']}
+    ,{name:'Natural Scholar',key:'naturalScholar',skills:Object.keys(SKILL_CHAR).filter(sk=>sk.startsWith('Knowledge ('))}
   ];
   let o=options.find(x=>x.skills.includes(skill)&&hasTalent(x.name)&&!S.sessionUsed[x.key]);
   if(o&&confirm(`Use ${o.name} to reroll this failed ${skill} check?`)){S.sessionUsed[o.key]=true;return rollNarr(q.p)}
@@ -3958,6 +3970,7 @@ function performBest(skill,ctx={}){
     }
   }
   r=naturalReroll(skill,q,r);
+  r=window.Talents98?.spendKnowledgeTriumph(skill,q,r)||r;
   if(q.actor.id==='pc'&&['Mechanics','Computers'].includes(skill)&&talentRank('Eye for Detail')&&r.ns>0&&canVoluntarilySufferStrain('pc')){
     let max=Math.min(talentRank('Eye for Detail'),r.ns,Math.max(0,strainThreshold()-S.strain));
     if(max>0&&confirm(`Use Eye for Detail? Suffer up to ${max} strain to convert that many Successes into Advantages.`)){
@@ -3993,7 +4006,7 @@ function renderTalents(){
   $('buySpecSelect').innerHTML=avail.length?avail.map(x=>`<option value="${x.spec}">${x.inCareer?'IN-CAREER':'NON-CAREER'} · ${x.career} · ${x.spec} · ${additionalSpecCost(x.spec)} XP</option>`).join(''):'<option value="">All indexed specializations owned</option>';
   const refreshSpecCost=()=>{let sp=$('buySpecSelect').value,career=specializationCareer(sp);$('buySpecBtn').textContent=sp?`Buy ${sp} — ${additionalSpecCost(sp)} XP${career&&career!==S.career?' · non-career':''}`:'No specialization available';$('buySpecBtn').disabled=!sp||!!window.CharacterCatalog97&&!CharacterCatalog97.eligible(sp)};
   refreshSpecCost();$('buySpecBtn').disabled=!avail.length;$('buySpecSelect').onchange=refreshSpecCost;
-  $('talentTree').innerHTML=t.map(n=>{let owned=set.has(n.id),ok=eligibleSpecTalent(spec,n),blurb=talentBlurb(n.name,n.effect),status=talentEngineStatus(n.name);return `<div class="tal ${owned?'owned':''} ${!ok&&!owned?'lock':''}" style="grid-row:${n.row+1};grid-column:${n.col+1}"><div class="cost">${n.cost} XP</div><div class="type">${n.type}</div><b>${n.name}</b><div class="small" style="margin-top:8px;line-height:1.38"><b>What it does:</b> ${blurb}</div><div class="tiny" style="margin-top:7px"><b>Game status:</b> ${status}</div><button data-tal="${n.id}" ${owned||!ok?'disabled':''}>${owned?'Purchased':ok?'Buy':'Locked'}</button></div>`}).join('');
+  $('talentTree').innerHTML=t.map(n=>{let inherited=!!window.Talents98?.knownUnranked(n.name),owned=set.has(n.id)||inherited,ok=eligibleSpecTalent(spec,n),blurb=talentBlurb(n.name,n.effect),status=talentEngineStatus(n.name);return `<div class="tal ${owned?'owned':''} ${!ok&&!owned?'lock':''}" style="grid-row:${n.row+1};grid-column:${n.col+1}"><div class="cost">${n.cost} XP</div><div class="type">${n.type}</div><b>${n.name}</b><div class="small" style="margin-top:8px;line-height:1.38"><b>What it does:</b> ${blurb}</div><div class="tiny" style="margin-top:7px"><b>Game status:</b> ${status}</div><button data-tal="${n.id}" ${owned||!ok?'disabled':''}>${set.has(n.id)?'Purchased':inherited?'Already known':ok?'Buy':'Locked'}</button></div>`}).join('');
   document.querySelectorAll('[data-tal]').forEach(b=>b.onclick=()=>buyViewedTalent(b.dataset.tal));
   $('talentSpecView').onchange=()=>{S.talentView=$('talentSpecView').value;renderTalents()};
   $('buySpecBtn').onclick=buyAdditionalSpec;
@@ -5019,11 +5032,12 @@ function applyDamage(target,w,r){
 }
 
 function pendingSpend(){return S.combat?.pendingSpend||null}
-function startSymbolSpend(actor,target,w,r,baseDamage,pool=null){
+function startSymbolSpend(actor,target,w,r,baseDamage,pool=null,oneHitDamage98=0){
   let C=S.combat;
   C.pendingSpend={actorId:actor.id,targetId:target.id,weaponId:w.id||S.weapon,hit:r.ok,
     advantage:Math.max(0,r.na),threat:Math.max(0,-r.na),triumph:r.tr||0,despair:r.de||0,
     baseDamage,originalSuccess:r.ns,pool:pool?{...pool}:null,extraHits:0,spentQualities:{}};
+  if(oneHitDamage98>0)C.pendingSpend.oneHitDamage98=oneHitDamage98;
   if(C.nextAllyBoost)C.nextAllyBoost=0
 }
 function spendAdv(cost,label,fn){
@@ -5044,7 +5058,7 @@ function extraHit(){
   let P=pendingSpend(),t=targetFromPending(),w=weaponFromPending();if(!P?.hit||!t||!w||enemyDefeated(t))return;
   let linked=quality(w,'linked'),auto=hasQuality(w,'autoFire')&&S.combat.autoFireMode,max=auto?999:linked;
   if(!max||P.extraHits>=max)return;
-  spendAdv(2,auto?'Auto-Fire additional hit':'Linked additional hit',()=>{dealPendingHit(t,w,P.baseDamage,auto?'Auto-Fire':'Linked');P.extraHits++})
+  spendAdv(2,auto?'Auto-Fire additional hit':'Linked additional hit',()=>{dealPendingHit(t,w,Math.max(0,P.baseDamage-(P.oneHitDamage98||0)),auto?'Auto-Fire':'Linked');P.extraHits++})
 }
 function activateBlast(){
   let P=pendingSpend(),w=weaponFromPending(),t=targetFromPending(),rating=quality(w,'blast')+((P?.actorId==='pc')?talentRank('Powerful Blast'):0);if(!P||!rating)return;
@@ -5209,14 +5223,14 @@ function unarmedAttack(){
   let usedDark=maybeGMDarkDifficulty(q.p,`${actor.name}'s unarmed attack`);T.actionUsed=true;beforeCombatAction('pc');C.unarmedReady=true;
   let r=combatNaturalReroll('Brawl',q.p,rollNarr(q.p)),dmg=0;
   if(r.ok){
-    let deadly=deadlyAccuracyDamage('Brawl'),bonus=maybeMartialGrace()+maybeEmbraceYourHate('Brawl')+deadly,pierce=quality(w,'pierce'),
+    let deadly=deadlyAccuracyDamage('Brawl'),bonus=maybeMartialGrace()+maybeEmbraceYourHate('Brawl')+deadly+feralStrengthDamage('Brawl'),pierce=quality(w,'pierce'),
         raw=effectiveCharacteristic(actor,'Brawn')+w.damage+r.ns+bonus;
     if(deadly)cLog(`Deadly Accuracy adds ${deadly} damage from Brawl ranks.`);
     dmg=Math.max(0,raw-Math.max(0,target.soak-pierce));target.w+=dmg;syncMinions(target);
     cLog(`${S.name} lands an unarmed strike on ${target.name} for ${dmg}. ${rtxt(r)}`)
   }else cLog(`${S.name}'s unarmed strike misses ${target.name}. ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,w,r,dmg,q.p);if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
+  startSymbolSpend(actor,target,w,r,dmg,q.p,r.ok?feralStrengthDamage('Brawl'):0);if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function farStrikeTalent(){
   let C=S.combat,T=C?.turn;if(!T||T.actorId!=='pc'||C.pendingSpend||!hasTalent('Far Strike'))return;if(!startTurnActor())return;T=C.turn;if(T.actionUsed)return;
@@ -5229,14 +5243,14 @@ function farStrikeTalent(){
   let usedDark=maybeGMDarkDifficulty(q.p,'Far Strike');T.actionUsed=true;beforeCombatAction('pc');C.unarmedReady=true;
   let r=combatNaturalReroll('Brawl',q.p,rollNarr(q.p)),dmg=0;
   if(r.ok){
-    let deadly=deadlyAccuracyDamage('Brawl'),bonus=maybeMartialGrace()+maybeEmbraceYourHate('Brawl')+deadly,pierce=quality(w,'pierce'),
+    let deadly=deadlyAccuracyDamage('Brawl'),bonus=maybeMartialGrace()+maybeEmbraceYourHate('Brawl')+deadly+feralStrengthDamage('Brawl'),pierce=quality(w,'pierce'),
         raw=effectiveCharacteristic(actor,'Brawn')+r.ns+bonus;
     if(deadly)cLog(`Deadly Accuracy adds ${deadly} damage from Brawl ranks.`);
     dmg=Math.max(0,raw-Math.max(0,target.soak-pierce));target.w+=dmg;syncMinions(target);
     cLog(`Far Strike hits ${target.name} at ${RANGE_NAMES[ri]} for ${dmg}. Force ${fr.faces.join(' ')} · ${rtxt(r)}`)
   }else cLog(`Far Strike misses ${target.name}. Force ${fr.faces.join(' ')} · ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,w,r,dmg,q.p);if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
+  startSymbolSpend(actor,target,w,r,dmg,q.p,r.ok?feralStrengthDamage('Brawl'):0);if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function saberThrowTalent(){
   let C=S.combat,T=C?.turn;if(!T||T.actorId!=='pc'||C.pendingSpend||!hasTalent('Saber Throw'))return;if(!startTurnActor())return;T=C.turn;if(T.actionUsed)return;
@@ -5288,6 +5302,7 @@ function maybeFallingAvalanche(skill){
 function pointBlankDamage(skill,range){
   return (['Ranged (Light)','Ranged (Heavy)'].includes(skill)&&range<=1)?talentRank('Point Blank'):0
 }
+function feralStrengthDamage(skill){return ['Brawl','Melee'].includes(skill)?talentRank('Feral Strength'):0}
 function maybeBringItDown(target){
   if(!hasTalent('Bring It Down')||!target||S.destiny.light<1)return 0;
   if(!confirm(`Use Bring It Down? Spend 1 light Destiny Point to add ${target.c?.Brawn||target.brawn||2} damage against ${target.name}.`))return 0;
@@ -5314,7 +5329,7 @@ function pcAttack(kind='normal'){
         barrage=(['Ranged (Heavy)','Gunnery'].includes(q.skill)&&q.range>=3)?talentRank('Barrage'):0,
         pointBlank=pointBlankDamage(q.skill,q.range),
         bringItDown=maybeBringItDown(target),
-        talentDamage=maybeFallingAvalanche(q.skill)+maybeEmbraceYourHate(q.skill)+prey+deadly+barrage+pointBlank+bringItDown,
+        talentDamage=maybeFallingAvalanche(q.skill)+maybeEmbraceYourHate(q.skill)+prey+deadly+barrage+pointBlank+bringItDown+feralStrengthDamage(q.skill),
         raw=(q.w.addBrawn?effectiveCharacteristic(actor,'Brawn'):0)+q.w.damage+r.ns+talentDamage;
     if(prey)cLog(`Prey on the Weak adds ${prey} damage against the disoriented target.`);
     if(deadly)cLog(`Deadly Accuracy adds ${deadly} damage from ${q.skill} ranks.`);
@@ -5325,7 +5340,7 @@ function pcAttack(kind='normal'){
     else{target.w+=dmg;if(target.type==='minion')target.members=Math.max(0,Math.ceil((target.wt-target.w)/target.perWt));cLog(`${S.name} hits ${target.name} for ${dmg}. ${rtxt(r)}`)}
   }else cLog(`${S.name} misses ${target.name}. ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,q.w,r,dmg,q.p);
+  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?feralStrengthDamage(q.skill):0);
   if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function crewAttack(){
@@ -5668,7 +5683,7 @@ function resolveMoralitySession(){
   let automatic=automaticDarkTalentConflict(),gross=S.conflict+automatic,reduction=Math.min(gross,S.conflictReduction||0),used=Math.max(0,gross-reduction),
       d10=1+Math.floor(Math.random()*10),delta=d10-used,old=S.morality;
   S.morality=Math.max(1,Math.min(100,S.morality+delta));S.conflict=0;S.conflictReduction=0;
-  S.sessionUsed={naturalProgrammer:false,naturalCharmer:false,naturalDoctor:false,naturalNegotiator:false,naturalLeader:false,naturalHunter:false,naturalOutdoorsman:false,naturalTinkerer:false,naturalMystic:false,naturalBrawler:false,naturalRogue:false,naturalMarksman:false,naturalEnforcer:false,naturalMerchant:false,naturalAthlete:false,naturalDriver:false,naturalInstructor:false,naturalPilot:false,worksLikeACharm:false,cleverSolution:false,fortuneFavorsBold:false,senseDanger:false,touchOfFate:false,forceOfWill:false,powerFromPain:false,improvedToughened:false};
+  S.sessionUsed={naturalProgrammer:false,naturalCharmer:false,naturalDoctor:false,naturalNegotiator:false,naturalLeader:false,naturalHunter:false,naturalOutdoorsman:false,naturalTinkerer:false,naturalMystic:false,naturalBrawler:false,naturalRogue:false,naturalMarksman:false,naturalEnforcer:false,naturalMerchant:false,naturalAthlete:false,naturalDriver:false,naturalInstructor:false,naturalPilot:false,naturalScholar:false,worksLikeACharm:false,cleverSolution:false,fortuneFavorsBold:false,senseDanger:false,touchOfFate:false,forceOfWill:false,powerFromPain:false,improvedToughened:false};
   let investmentIncome=100*talentRank('Sound Investments');if(investmentIncome){S.credits+=investmentIncome;bLog(`Sound Investments: the new session generates ${investmentIncome} credits.`)}
   bLog(`Morality: d10 ${d10} − Conflict ${used} = ${delta>=0?'+':''}${delta}. ${old} → ${S.morality}.${automatic?` Dark-side talents contributed ${automatic} automatic Conflict.`:''}${reduction?` Inner Peace reduced session Conflict by ${reduction}.`:''}`);
   renderAll()

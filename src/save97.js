@@ -48,6 +48,7 @@
       if(typeof data[key]!=='object'||Array.isArray(data[key])||Object.values(data[key]).some(value=>!Array.isArray(value)))throw new Error(`Invalid ${key} data.`);
     }
     game.campaign?.validateSnapshot(data);
+    window.Talents98?.validateSnapshot(data);
     return data;
   }
   function candidates() {

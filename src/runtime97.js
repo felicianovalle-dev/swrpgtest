@@ -42,6 +42,7 @@ window.Game97 = (() => {
       fresh.skills = {...SPECIES[value.species]?.free};
       if(!value.ep15)fresh.ep15.initialized=false; // Migrate the imported legacy scene, never the previous campaign.
       const migrated = mergeDefaults(fresh,JSON.parse(JSON.stringify(value)));
+      window.Talents98?.migrate(migrated);
       for (const key of Object.keys(S)) delete S[key];
       Object.assign(S,fresh);
       const result = hydrate(migrated, label); api.emit('hydrate', value); return result;
@@ -53,3 +54,4 @@ window.Game97 = (() => {
   };
   return api;
 })();
+window.Talents98?.attach(window.Game97);

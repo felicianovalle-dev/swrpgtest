@@ -1,6 +1,6 @@
 # Campaign beginnings verification
 
-Build `96.1-campaign-beginnings`, package `1.9.7`, tested 2026-10-13.
+Build `96.2-core-talents`, package `1.9.8`, tested 2026-10-13.
 
 ## Actual-browser checks
 
@@ -11,7 +11,7 @@ Build `96.1-campaign-beginnings`, package `1.9.7`, tested 2026-10-13.
 
 The final campaign run reported no page errors. It checked 20 careers, 118
 placements, 112 distinct career trees, 17 universal trees, and 44 species
-profiles. Every newly imported tree has 20 unique nodes, symmetric links,
+profiles. Every imported tree has 20 unique nodes, symmetric links,
 correct tier costs, and a reachable purchase graph. Source accuracy also used
 the manual compilation/page review described in the [content audit](character-options-audit.md).
 
@@ -65,10 +65,12 @@ The World target also reported 266 passing smoke checks with no failures and
 112 passing diagnostics. The gameplay audit covered droid chassis/programming
 combinations, attachment installation, hard-point limits, and operation payouts.
 The story/combat target covered the new short missions as well as existing
-longer adventures. Older finalized saves retained purchased tree IDs, credits,
+longer adventures. Older finalized saves retained their purchase benefits, credits,
 XP, and courier progress. Malformed era/allegiance metadata was rejected before
 replacing the current state.
 
 `npm run build:check` confirmed that `index.html` exactly matches authoritative
 sources. `git diff --check` reported no whitespace errors. The final browser
 campaign result is preserved in [campaign-verification.json](campaign-verification.json).
+
+The twelve prototype replacements, purchase-ID compatibility, additional talent effects, and current talent-card geometry are covered in [talent-tree-verification.md](talent-tree-verification.md). The remaining 36 simplified layouts are recorded in the content audit.

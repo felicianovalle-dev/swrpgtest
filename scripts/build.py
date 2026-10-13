@@ -17,12 +17,12 @@ def build_html():
         source = source.replace(entry['marker'], entry['open'] + content + entry['close'])
     css = '\n'.join((ROOT / name).read_text() for name in [
         'src/mobile95.css', 'src/work96.css',
-        'src/navigation95.css', 'src/save97.css', 'src/home.css', 'src/campaign.css'])
+        'src/navigation95.css', 'src/save97.css', 'src/home.css', 'src/campaign.css', 'src/talents98.css'])
     world = ('const BUILDING94_URI=' + json.dumps(data_uri('assets/buildings94.webp')) + ';\n'
              + 'const BUILDING94_FRAMES=' + (ROOT / 'assets/buildings94-frames.json').read_text() + ';\n'
              + (ROOT / 'src/world94.js').read_text())
     js = '\n'.join([world] + [(ROOT / name).read_text() for name in [
-        'src/work96.js', 'src/navigation95.js', 'src/catalog.js', 'src/runtime97.js',
+        'src/work96.js', 'src/navigation95.js', 'src/catalog.js', 'src/talents98.js', 'src/runtime97.js',
         'src/save97.js', 'src/visual97.js', 'src/objectives.js', 'src/home.js', 'src/play-copy.js',
         'src/campaign-content.js', 'src/campaign.js']])
     js = js.replace('@@CHARACTER_OPTIONS@@', (ROOT / 'src/content/character-options.json').read_text())

@@ -1,0 +1,5 @@
+#talentTree .source-tal98{display:flex;flex-direction:column}
+#talentTree .source-tal98>button{position:static;flex-shrink:0;width:100%;margin-top:12px}
+.talent-path98{margin:10px 0 0;line-height:1.4;overflow-wrap:anywhere}
+#talentCompatibility98{min-width:0;max-width:100%;box-sizing:border-box}
+#talentCompatibility98 .btn{min-height:44px;white-space:normal;margin:5px}

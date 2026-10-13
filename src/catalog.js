@@ -4,8 +4,9 @@ window.CharacterCatalog97 = (() => {
   const data = @@CHARACTER_OPTIONS@@;
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
+  for(const [name,rule]of Object.entries(data.talentRules98||{}))if(rule.summary)TALENT_BLURBS[name]=rule.summary;
   for (const [name, record] of Object.entries(data.trees)) {
-    const prefix = 'cw97-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+    const prefix = (record.idPrefix||'cw97')+'-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
     const ids = record.names.map((_,i) => `${prefix}-${i}`);
     const nodes = record.names.map((talent,i) => node(ids[i],talent,Math.floor(i/4),i%4,
       (Math.floor(i/4)+1)*5, TALENT_BLURBS[talent] ||
@@ -42,6 +43,7 @@ window.CharacterCatalog97 = (() => {
   };
   function bonusSkills() {
     const skills=new Set();
+    for(const sk of window.Talents98?.careerSkills()||[])skills.add(sk);
     for (const spec of S.universalSpecs || []) for (const sk of data.universals[spec]?.skills || []) skills.add(sk);
     for (const n of [...allOwnedSpecNodes(),...ownedUniversalNodes()]) for (const sk of talentSkills[n.name]||[]) skills.add(sk);
     if ((S.universalSpecs||[]).includes('Republic Representative')) {

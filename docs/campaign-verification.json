@@ -6,9 +6,9 @@
     "species": 44,
     "trees": 112,
     "universal": 17,
-    "full": 64,
+    "full": 76,
     "simplified": 36,
-    "prototype": 12
+    "prototype": 0
   },
   "rolls": "Controlled for mission branch tests; existing suites cover dice/combat rules",
   "errors": [],

@@ -122,6 +122,37 @@ objective modules delegate campaign presentation through `Game97.campaign`.
 `src/campaign.css` uses the existing interface conventions and keeps creation
 controls readable at 320px and wider viewports.
 
+`src/talents98.js` owns compatibility with the twelve former prototype trees,
+required talent skill choices, and purchase/source disclosures. It is loaded
+after catalog installation and before the runtime captures defaults. The runtime
+migrates imported purchase IDs before invoking legacy hydration, so the first
+render sees the preserved benefits. Earlier exact-tree IDs are not changed.
+
+Matching purchases use available source nodes with the same talent name, preferring
+the closest original cost. No XP or characteristics are recalculated. Unmatched
+IDs retain their frozen generic-node definitions for effect counting, while the
+purchase grid exposes only the new source layout. `talentImports98` records original
+costs and mappings; `talentChoices98` stores Well Rounded choices and the first
+Knowledge Specialization skill. Save validation checks both before hydration.
+Already known unranked talents make their connections available without another
+charge or adding a second effect-counting copy.
+
+Source rules and short summaries live in `talentRules98` within the catalog JSON.
+`src/talents98.css` keeps card descriptions and source paths in normal flow above
+their purchase buttons. The module subscribes to the shared render/navigation
+hooks instead of adding legacy presentation wrappers.
+
+The core combat handler adds Feral Strength to its first Brawl/Melee hit. The
+additive `combat.pendingSpend.oneHitDamage98` value prevents Linked/Auto-Fire
+extra hits from copying that bonus and persists through a battle reload. Other
+existing damage behavior is unchanged. Contextual check hooks require explicit
+toxin/outdoor/scavenging/fear/academic flags; they do not add a global bonus.
+
+`npm run test:talents` covers every prior-release prototype node, real purchases
+through all twelve trees, save migration/reload, skill choices, conditional effects,
+single-hit damage, already known talents, and phone card geometry. See
+`docs/talent-tree-verification.md` for source references and validation scope.
+
 On ready, a fresh session without a valid saved campaign uses the resume service
 to open the beginning chooser. Its guarded navigation leaves storage untouched.
 Sessions with valid saved campaigns retain the Home preview and explicit Resume

@@ -1,8 +1,8 @@
 # Character options and campaign beginnings audit
 
-Build: `96.1-campaign-beginnings` / package `1.9.7`. Reviewed 2026-10-13 against the saved repository and the supplied source collections.
+Build: `96.2-core-talents` / package `1.9.8`. Reviewed 2026-10-13 against the saved repository and the supplied source collections.
 
-The saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
+Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
 ## What was saved and what changed
 
@@ -11,28 +11,28 @@ The saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and
 | Careers | 18 | 20 |
 | Career specialization placements | 108 | 118 |
 | Distinct career trees | 102 | 112 |
-| Career trees labeled full by the engine | 54 | 64 |
+| Career trees labeled full by the engine | 54 | 76 |
 | Simplified career trees | 36 | 36 |
-| Prototype career trees | 12 | 12 |
+| Prototype career trees | 12 | 0 |
 | Universal trees | 2 | 17 |
 | Species profiles | 36 | 44 |
 
 Placements count shared specializations under each career; distinct trees count each shared specialization once. Species profiles count the three Aqualish variants separately: the update adds six species and eight profiles.
 
-The 25 new layouts contain 500 nodes. Names, active/passive types, costs, and connecting paths were checked against the supplied Clone Wars and universal tree PDFs. The 54 older layouts labeled full were not all reverified against their original books in this update. A matching layout does not establish complete mechanical automation.
+The 25 Clone Wars and universal layouts contain 500 nodes and were checked against the supplied tree PDFs. This update adds 12 core layouts with another 240 nodes. Their names, costs, paths, and types were visually checked against both the supplied EotE collection and Edge of the Empire Core. Canonical activation/ranked metadata for 108 distinct talents was checked in the core glossary; Knowledge Specialization is passive, correcting the collection’s label. The 54 older layouts labeled full were not all reverified against their original books in this update. A matching layout does not establish complete mechanical automation.
 
 ## Career and tree coverage
 
-“Existing full” is the saved engine label. “Imported” identifies the newly reviewed collection layouts. Simplified and prototype entries remain available but need source-layout replacement. Purchased IDs on existing trees were preserved.
+“Existing full” is the saved engine label. “Imported” identifies the newly reviewed collection layouts. Simplified and prototype entries remain available but need source-layout replacement. Earlier exact trees retain their IDs. Former prototype purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
 
 | Career | Specializations and layout status |
 | --- | --- |
-| Bounty Hunter | Assassin — Existing full; Gadgeteer — Prototype; Survivalist — Prototype; Martial Artist — Existing full; Operator — Existing full; Skip Tracer — Existing full |
-| Smuggler | Pilot — Existing full; Scoundrel — Existing full; Thief — Prototype; Charmer — Existing full; Gambler — Existing full; Gunslinger — Existing full |
-| Technician | Mechanic — Simplified; Outlaw Tech — Prototype; Slicer — Existing full; Cyber Tech — Existing full; Droid Tech — Existing full; Modder — Existing full |
-| Hired Gun | Bodyguard — Prototype; Marauder — Prototype; Mercenary Soldier — Prototype; Demolitionist — Existing full; Enforcer — Existing full; Heavy — Existing full |
-| Explorer | Fringer — Prototype; Scout — Simplified; Trader — Prototype; Archaeologist — Existing full; Big-Game Hunter — Existing full; Driver — Existing full |
-| Colonist | Doctor — Prototype; Politico — Prototype; Scholar — Prototype; Entrepreneur — Existing full; Marshal — Existing full; Performer — Existing full |
+| Bounty Hunter | Assassin — Existing full; Gadgeteer — Imported; Survivalist — Imported; Martial Artist — Existing full; Operator — Existing full; Skip Tracer — Existing full |
+| Smuggler | Pilot — Existing full; Scoundrel — Existing full; Thief — Imported; Charmer — Existing full; Gambler — Existing full; Gunslinger — Existing full |
+| Technician | Mechanic — Simplified; Outlaw Tech — Imported; Slicer — Existing full; Cyber Tech — Existing full; Droid Tech — Existing full; Modder — Existing full |
+| Hired Gun | Bodyguard — Imported; Marauder — Imported; Mercenary Soldier — Imported; Demolitionist — Existing full; Enforcer — Existing full; Heavy — Existing full |
+| Explorer | Fringer — Imported; Scout — Simplified; Trader — Imported; Archaeologist — Existing full; Big-Game Hunter — Existing full; Driver — Existing full |
+| Colonist | Doctor — Imported; Politico — Imported; Scholar — Imported; Entrepreneur — Existing full; Marshal — Existing full; Performer — Existing full |
 | Commander | Commodore — Existing full; Squadron Leader — Existing full; Tactician — Existing full; Figurehead — Existing full; Instructor — Existing full; Strategist — Existing full |
 | Ace | Driver — Existing full; Gunner — Existing full; Pilot — Existing full; Beast Rider — Existing full; Hotshot — Existing full; Rigger — Existing full |
 | Diplomat | Agitator — Simplified; Ambassador — Simplified; Quartermaster — Simplified; Advocate — Simplified; Analyst — Simplified; Propagandist — Simplified |
@@ -50,12 +50,11 @@ The 25 new layouts contain 500 nodes. Names, active/passive types, costs, and co
 
 ## Remaining layout gaps
 
-The following 48 distinct trees still need exact source layouts. Replacing them must include an explicit purchase-ID migration rather than dropping purchased talents.
+The following 36 distinct trees still need exact source layouts. Replacing them must include an explicit purchase-ID migration rather than dropping purchased talents.
 
 | Current status | Trees |
 | --- | --- |
 | Simplified (36) | Mechanic; Scout; Agitator; Ambassador; Quartermaster; Advocate; Analyst; Propagandist; Commando; Medic; Sharpshooter; Trailblazer; Vanguard; Saboteur; Scientist; Droid Specialist; Sapper; Shipwright; Infiltrator; Courier; Interrogator; Sleeper Agent; Arbiter; Ascetic; Teacher; Warden; Warleader; Alchemist; Magus; Prophet; Executioner; Hermit; Navigator; Investigator; Racer; Sentry |
-| Prototype (12) | Gadgeteer; Survivalist; Thief; Outlaw Tech; Bodyguard; Marauder; Mercenary Soldier; Fringer; Trader; Doctor; Politico; Scholar |
 
 ## Imported layout references
 
@@ -88,6 +87,29 @@ Page numbers below refer to the supplied compilation PDF, not necessarily printe
 | Recruit | Age of Rebellion Core · supplied universal tree collection, PDF p.7 |
 | Retired Clone Trooper | Dawn of Rebellion · supplied universal tree collection, PDF p.8 |
 | Ship Captain | Dawn of Rebellion · supplied universal tree collection, PDF p.10 |
+
+## Core prototype replacements
+
+| Tree | Core printed page | Supplied EotE collection PDF page |
+| --- | ---: | ---: |
+| Gadgeteer | 60 | 3 |
+| Survivalist | 61 | 7 |
+| Doctor | 65 | 9 |
+| Politico | 66 | 13 |
+| Scholar | 67 | 14 |
+| Fringer | 71 | 19 |
+| Trader | 73 | 21 |
+| Bodyguard | 77 | 23 |
+| Marauder | 78 | 27 |
+| Mercenary Soldier | 79 | 28 |
+| Thief | 85 | 35 |
+| Outlaw Tech | 90 | 41 |
+
+The core PDF has nine extra front-matter pages; physical PDF indices are kept separate from printed citations. No source PDFs or private storage links are published in the repository.
+
+Known unranked talents can supply their source-tree connections without a second XP charge. New ranked purchases still charge their displayed cost. Well Rounded stores two distinct career-skill choices per owned node without granting free ranks. Knowledge Specialization stores its initial Knowledge choice for subsequent ranks.
+
+Feral Strength now adds damage to Brawl/Melee hits, including unarmed and Far Strike attacks. Natural Scholar offers failed Knowledge rerolls once per session. Knowledge Specialization can spend one Triumph on the selected PC skill during party checks. Blooded, Outdoorsman, Utinni!, Confidence, and Respected Scholar have conditional check hooks; those benefits require the relevant context flag and are not applied to every generic check. Poison duration, search/travel time, many special actions, and separate Deadly Accuracy choices for multiple ranks remain manual. Talent cards state these limits.
 
 ## Universal options and prerequisites
 
@@ -172,8 +194,8 @@ Personal details persist callsign, pronouns, motivation, appearance description,
 
 The explicit Sable Reach starting kit supplies 500 credits, heavy clothing, a selected starter weapon, two crew members, and a shared HWK-290. This is a game-start option rather than a sourcebook claim about free equipment. The old courier tutorial is marked skipped without issuing its rewards.
 
-Older finalized saves keep their original quests, purchases, and economy without being assigned an era retroactively. Era-only draft edits count as changes for recovery checkpoints. Campaign metadata is additive; the save schema and original storage keys remain 92.
+Older finalized saves keep their original quests, purchase benefits, and economy without being assigned an era retroactively. Era-only draft edits count as changes for recovery checkpoints. Campaign metadata is additive; the save schema and original storage keys remain 92.
 
 ## Remaining content work
 
-Exact replacements for the 48 simplified/prototype layouts, a full audit of older species/full trees, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
+Exact replacements for the 36 simplified layouts, a full audit of older species/full trees, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
