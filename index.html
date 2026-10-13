@@ -4667,7 +4667,7 @@ function buyCrewPerk(id,perkId){
 }
 function setCrewRole(id,role){if(!COMPANION_ROLES[role])return;crewProgress(id).role=role;bLog(`${effectiveCrew(id).name} role set to ${COMPANION_ROLES[role].name}.`);renderAll()}
 function crewRoleBoost(actor,skill,target=null){
-  if(!actor||actor.id==='pc')return 0;let p=crewProgress(actor.id),boost=0,ri=(S.combat&&target&&typeof rangeBandBetween==='function')?rangeBandBetween(actor.id,target.id):null;
+  if(!actor||actor.id==='pc'||actor.droid)return 0;let p=crewProgress(actor.id),boost=0,ri=(S.combat&&target&&typeof rangeBandBetween==='function')?rangeBandBetween(actor.id,target.id):null;
   if(p.role==='assault'&&['Brawl','Melee','Lightsaber','Ranged (Light)','Ranged (Heavy)','Gunnery'].includes(skill))boost++;
   if(actor.id==='kira'&&crewPerkByEffect('kira','closeBoost')&&ri!=null&&ri<=1&&['Brawl','Melee','Ranged (Light)','Ranged (Heavy)'].includes(skill))boost++;
   if(actor.id==='lena'&&crewPerkByEffect('lena','techBoost')&&['Computers','Mechanics'].includes(skill))boost++;
@@ -5135,6 +5135,7 @@ function buyOrdnance(id){
 }
 
 function renderEquipment(){
+  let selectedAttachment=$('attachmentItem')?.value,selectedCraft=$('craftTemplate')?.value;
   if(!$('equipment'))return;ensurePhase12State();ensureInventory();
   $('credits').textContent=S.credits;$('encNow').textContent=currentEnc();$('encMax').textContent=encThreshold();$('stimCount').textContent=S.stimpacks;$('reloadCount').textContent=S.reloads;
   $('encWarning').classList.toggle('hidden',currentEnc()<=encThreshold());$('encWarning').textContent=currentEnc()>encThreshold()?`Over encumbrance threshold by ${currentEnc()-encThreshold()}. Combat and physical checks may suffer penalties.`:'';
@@ -5149,6 +5150,7 @@ function renderEquipment(){
 
   let modItems=(S.inventory||[]).filter(id=>['weapon','armor'].includes(ITEMS[id]?.type));
   $('attachmentItem').innerHTML=modItems.map(id=>`<option value="${id}">${ITEMS[id].name}</option>`).join('');
+  if(modItems.includes(selectedAttachment))$('attachmentItem').value=selectedAttachment;
   if(modItems.length){
     let iid=$('attachmentItem').value||modItems[0],item=ITEMS[iid],installed=attachmentsFor(iid);
     $('attachmentStatus').innerHTML=`<b>${item.name}</b> · hard points ${attachmentUsedHP(iid)}/${item.hp||0}<br><span class="tiny">Installed: ${installed.length?installed.map(x=>ATTACHMENTS[x].name).join(', '):'none'}</span>`;
@@ -5159,6 +5161,7 @@ function renderEquipment(){
   $('attachmentItem').onchange=renderEquipment;
 
   $('craftTemplate').innerHTML=Object.values(CRAFT_TEMPLATES).map(t=>`<option value="${t.id}">${t.name}</option>`).join('');
+  if(CRAFT_TEMPLATES[selectedCraft])$('craftTemplate').value=selectedCraft;
   updateCraftPreview()
 }
 function useStimpack(){
@@ -7962,9 +7965,9 @@ function renderCampaign43(){
 const _p43RenderFramework=renderFramework;
 renderFramework=function(){_p43RenderFramework();injectPhase43UI();renderCampaign43()};
 const _p43RenderEquipment=renderEquipment;
-renderEquipment=function(){_p43RenderEquipment();injectPhase43UI();ensurePhase43State();let sel=$('craftTemplate'),current=sel?.value;sel.innerHTML=sourceCraftTemplates().map(t=>`<option value="${t.id}">${t.category==='droid'?'DROID · ':t.category==='gadget'?'GADGET · ':''}${t.name}</option>`).join('');if(current&&CRAFT_TEMPLATES[current]?.category)sel.value=current;if(!sel.value)sel.value=sourceCraftTemplates()[0]?.id||'';if($('craftSkill')){$('craftSkill').innerHTML=GENERAL_SKILLS.map(s=>`<option>${s}</option>`).join('')}$('craftBuyMaterials').onclick=phase43CraftMaterials;$('craftBuild').onclick=phase43CraftBuild;$('craftTemplate').onchange=updateCraftPreview;$('workshopStatus').textContent='Phase 41 uses source-grounded Special Modifications weapon, gadget, chassis, and directive templates. Result-focus automation spends only a conservative subset of available Advantage options.';updateCraftPreview();renderDroidWorkshop()};
+renderEquipment=function(){_p43RenderEquipment();injectPhase43UI();ensurePhase43State();let sel=$('craftTemplate'),current=sel?.value;sel.innerHTML=sourceCraftTemplates().map(t=>`<option value="${t.id}">${t.category==='droid'?'DROID · ':t.category==='gadget'?'GADGET · ':''}${t.name}</option>`).join('');if(current&&CRAFT_TEMPLATES[current]?.category)sel.value=current;if(!sel.value)sel.value=sourceCraftTemplates()[0]?.id||'';if($('craftSkill')){$('craftSkill').innerHTML=GENERAL_SKILLS.map(s=>`<option>${s}</option>`).join('')}$('craftBuyMaterials').onclick=phase43CraftMaterials;$('craftBuild').onclick=phase43CraftBuild;$('craftTemplate').onchange=updateCraftPreview;$('workshopStatus').textContent='To build a droid: select a DROID chassis, acquire materials, construct it with Mechanics, then choose a directive and program it with Computers below. Failed construction consumes materials; failed programming leaves the chassis intact.';updateCraftPreview();renderDroidWorkshop()};
 const _p43UpdateCraftPreview=updateCraftPreview;
-updateCraftPreview=function(){if(!$('craftPreview'))return;ensurePhase43State();let t=CRAFT_TEMPLATES[$('craftTemplate')?.value]||sourceCraftTemplates()[0];if(!t)return;$('craftPreview').innerHTML=`<b>${t.name}</b><br>Materials ${t.materialPrice.toLocaleString()} cr · rarity ${t.rarity} · Mechanics ${acquisitionLabel(t.diff)} · base time ${t.time}<div class="tiny" style="margin-top:5px">${t.desc}<br>Materials acquired: ${S.crafting.materials[t.id]?'yes':'no'} · completed: ${S.crafting.crafted[t.id]||0}</div>`;$('craftBuyMaterials').disabled=!!S.crafting.materials[t.id]||S.credits<t.materialPrice;$('craftBuild').disabled=!S.crafting.materials[t.id]};
+updateCraftPreview=function(){if(!$('craftPreview'))return;ensurePhase43State();let t=CRAFT_TEMPLATES[$('craftTemplate')?.value]||sourceCraftTemplates()[0];if(!t)return;$('craftPreview').innerHTML=`<b>${t.name}</b><br>Materials ${t.materialPrice.toLocaleString()} cr · rarity ${t.rarity} · Mechanics ${acquisitionLabel(t.diff)} · base time ${t.time}<div class="tiny" style="margin-top:5px">${t.desc}<br>Materials acquired: ${S.crafting.materials[t.id]?'yes':'no'} · completed: ${S.crafting.crafted[t.id]||0}</div>`;$('craftBuyMaterials').disabled=!!S.crafting.materials[t.id]||S.credits<t.materialPrice;$('craftBuild').disabled=!S.crafting.materials[t.id];let reason=S.crafting.materials[t.id]?'Materials ready. Construct this project with Mechanics.':S.credits<t.materialPrice?`You need ${(t.materialPrice-S.credits).toLocaleString()} more credits to acquire these materials.`:'Acquire materials first; a successful acquisition check is required.';$('craftPreview').insertAdjacentHTML('beforeend',`<div class="small" role="status" style="margin-top:8px">${reason} Failed construction consumes the materials.</div>`)};
 const _p43RenderDatabase=renderDatabase;
 renderDatabase=function(){_p43RenderDatabase();injectPhase43UI();$('dbAdvCount').textContent=ADVERSARY_DB.length;$('dbCoverage').innerHTML=`<b>Curated coverage:</b> ${Object.keys(SPECIES).length} playable species · ${Object.keys(CAREERS).length} careers · ${Object.values(CAREERS).reduce((n,c)=>n+Object.keys(c.specs).length,0)} specialization placements · ${ADVERSARY_DB.length} adversary records (${Object.keys(PLAYABLE_ADVERSARIES).length} encounter-ready) · ${STARSHIP_DB.length} starship + ${VEHICLE_DB.length} vehicle records. Coverage remains curated rather than a claim that every source-book entry is imported.`;renderEncounterBuilder()};
 

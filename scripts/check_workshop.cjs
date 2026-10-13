@@ -1,0 +1,46 @@
+const assert=require('node:assert/strict'),openGame=require('./game_test_harness.cjs');
+(async()=>{
+ const g=await openGame(),w=g.window,run=g.run,checks=[];
+ const check=(name,code)=>{assert.ok(run(code),name);checks.push(name)};
+ const click=id=>w.document.getElementById(id).click();
+ try{
+  run('S.finalized=true;S.settings.autosave=false;S.credits=500;renderEquipment()');
+  check('Programming explains the missing chassis','$("droidPending").disabled&&$("programDroid").disabled&&$("droidProgramStatus").textContent.includes("construct")');
+  run('$("craftTemplate").value="droidMonotask";updateCraftPreview()');
+  check('Unaffordable materials show the credit shortfall','$("craftBuyMaterials").disabled&&$("craftPreview").textContent.includes("100 more credits")');
+  run('S.credits=10000;renderAll()');
+  check('Chassis choice survives refresh','$("craftTemplate").value==="droidMonotask"');
+  run('globalThis.originalWorkshopPerform=performBest;globalThis.originalWorkshopRoll=rollNarr;performBest=()=>({r:{ok:false}})');
+  click('craftBuyMaterials');
+  check('Failed acquisition charges nothing','S.credits===10000&&!S.crafting.materials.droidMonotask');
+  run('performBest=()=>({r:{ok:true}})');click('craftBuyMaterials');
+  check('Successful acquisition charges once and unlocks construction','S.credits===9400&&S.crafting.materials.droidMonotask&&!$("craftBuild").disabled');
+  click('craftBuyMaterials');check('Repeated material purchase cannot double charge','S.credits===9400');
+  run('rollNarr=()=>({ok:false,ns:0,na:0,nt:0,nd:0})');click('craftBuild');
+  check('Failed construction consumes materials without producing a droid','!S.crafting.materials.droidMonotask&&S.droids.length===0&&$("craftBuild").disabled');
+  click('craftBuyMaterials');run('rollNarr=()=>({ok:true,ns:1,na:0,nt:0,nd:0})');click('craftBuild');
+  check('Successful construction unlocks programming','S.droids.length===1&&S.droids[0].status==="unprogrammed"&&!$("droidDirective").disabled&&!$("programDroid").disabled');
+  run('rollNarr=()=>({ok:false,ns:0,na:0,nt:0,nd:0})');click('programDroid');
+  check('Failed programming retains the chassis','S.droids[0].status==="unprogrammed"&&S.crafting.pendingDroids.length===1');
+  run('rollNarr=()=>({ok:true,ns:1,na:0,nt:0,nd:0})');click('programDroid');
+  check('Successful programming activates utility and clears pending chassis','S.droids[0].status==="active"&&S.activeDroidId===S.droids[0].id&&S.crafting.pendingDroids.length===0');
+  check('Active utility droid can enter party skill comparisons','!!bestActor("Mechanics")&&crewRoleBoost(activeDroidActor(),"Mechanics")===0');
+  run('S.inventory=["pistol","carbine"];S.itemAttachments={};renderAll();$("attachmentItem").value="carbine";$("attachmentItem").dispatchEvent(new Event("change"))');
+  check('Changing weapon retains the selected weapon and its preview','$("attachmentItem").value==="carbine"&&$("attachmentStatus").textContent.includes(ITEMS.carbine.name)');
+  run('globalThis.testAttachment=Object.values(ATTACHMENTS).find(a=>compatibleAttachment(a,ITEMS.carbine)&&a.hp<=attachmentFreeHP("carbine"));S.credits=100000;renderAll()');
+  assert.ok(run('!!testAttachment'),'Compatible test attachment exists');
+  const buy=()=>w.document.querySelector(`[data-att="${run('testAttachment.id')}"]`).click();
+  const before=run('S.credits'),price=run('blackMarketTerms(testAttachment).price');buy();
+  check('Installation modifies the chosen weapon only','hasAttachment("carbine",testAttachment.id)&&!hasAttachment("pistol",testAttachment.id)&&$("attachmentItem").value==="carbine"');
+  assert.equal(run('S.credits'),before-price,'Attachment charged exactly once');
+  run('installAttachment(testAttachment.id)');assert.equal(run('S.credits'),before-price,'Duplicate installation cannot charge again');
+  const saved=run('JSON.parse(JSON.stringify(serializableState()))');
+  run('S.itemAttachments={};S.droids=[];S.crafting.pendingDroids=[]');
+  run(`Game97.saves.apply(${JSON.stringify(saved)},"workshop regression")`);
+  check('Save roundtrip retains programmed droid and installed attachment','S.droids[0].status==="active"&&S.activeDroidId===S.droids[0].id&&hasAttachment("carbine",testAttachment.id)');
+  run('$("attachmentItem").value="carbine";$("attachmentItem").dispatchEvent(new Event("change"))');buy();
+  check('Removal releases hard points on selected weapon','!hasAttachment("carbine",testAttachment.id)&&attachmentUsedHP("carbine")===0');
+  run('performBest=originalWorkshopPerform;rollNarr=originalWorkshopRoll');
+  assert.deepEqual(g.errors,[]);console.log(JSON.stringify({passed:checks.length,checks}));
+ }finally{g.close()}
+})().catch(e=>{console.error(e);process.exitCode=1});
