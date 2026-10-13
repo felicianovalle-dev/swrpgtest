@@ -1,5 +1,5 @@
 {
-  "checks": 94,
+  "checks": 95,
   "coverage": {
     "careers": 20,
     "placements": 118,
@@ -13,6 +13,7 @@
   "rolls": "Controlled for mission branch tests; existing suites cover dice/combat rules",
   "errors": [],
   "passed": [
+    "Fresh startup opens the beginning chooser without writing save slots",
     "Fresh Continue creation opens the beginning chooser",
     "All 20 published careers and 17 universal options are selectable/indexed",
     "Every imported tree has 20 nodes, symmetric links, tier costs and reachable purchases",

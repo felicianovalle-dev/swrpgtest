@@ -166,7 +166,7 @@ The Outer Rim was checked as a supplemental reference; its current public conten
 
 ## Opening and customization behavior
 
-Guided creation uses Beginning → Identity → Career → Starting XP → Personal details → Review. Starting XP links to skills, talents, and universal/Force options. The review explains missing requirements and prevents incomplete creation. Finalization carries unused starting XP into advancement once.
+Fresh sessions open the Beginning chooser directly without writing save slots. Sessions with valid saved campaigns keep their Home preview and explicit Resume action. Guided creation uses Beginning → Identity → Career → Starting XP → Personal details → Review. Starting XP links to skills, talents, and universal/Force options. The review explains missing requirements and prevents incomplete creation. Finalization carries unused starting XP into advancement once.
 
 Personal details persist callsign, pronouns, motivation, appearance description, background, goal, and ship name. Descriptions do not alter sprites or dice pools. Mechanical customization still uses species, characteristics, skills, talents, and equipment.
 

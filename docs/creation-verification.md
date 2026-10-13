@@ -6,7 +6,7 @@ Build `96.1-campaign-beginnings`, package `1.9.7`, tested 2026-10-13.
 
 | Suite | Passed | Coverage |
 | --- | ---: | --- |
-| `npm run test:campaign` | 94 | Catalog, creation, twelve era/allegiance combinations, prerequisites, all 36 mission branches, failure recovery, save/reload, old-save preservation, six viewport sizes |
+| `npm run test:campaign` | 95 | Fresh startup/save protection, catalog, creation, twelve era/allegiance combinations, prerequisites, all 36 mission branches, failure recovery, save/reload, old-save preservation, six viewport sizes |
 | `npm run test:browser` | 47 | Home, World navigation/footer separation, Jobs and Training shortcuts, saves, attachment selectors, droid workshop, combat reload and retry controls |
 
 The final campaign run reported no page errors. It checked 20 careers, 118
@@ -14,6 +14,11 @@ placements, 112 distinct career trees, 17 universal trees, and 44 species
 profiles. Every newly imported tree has 20 unique nodes, symmetric links,
 correct tier costs, and a reachable purchase graph. Source accuracy also used
 the manual compilation/page review described in the [content audit](character-options-audit.md).
+
+Fresh startup opens the beginning chooser directly and leaves manual, auto,
+backup, and recovery storage empty. The startup correction was followed by
+another complete campaign run and successful save, save-reliability, and Home
+regressions; saved-campaign previews retain their explicit Resume behavior.
 
 Creation checks used actual select/button handlers. They verified correct
 free-rank caps, Jedi starting Force Rating, advanced Jedi prerequisites,

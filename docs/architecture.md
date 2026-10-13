@@ -122,6 +122,11 @@ objective modules delegate campaign presentation through `Game97.campaign`.
 `src/campaign.css` uses the existing interface conventions and keeps creation
 controls readable at 320px and wider viewports.
 
+On ready, a fresh session without a valid saved campaign uses the resume service
+to open the beginning chooser. Its guarded navigation leaves storage untouched.
+Sessions with valid saved campaigns retain the Home preview and explicit Resume
+action. Clearing slots for a new game reloads into this same beginning chooser.
+
 `campaign97` stores enabled/era/faction/focus/mission/weapon, application/opening
 state, creation step, and personal details. `speciesBonus97` stores Human choices;
 `universalKnowledge97` stores a selectable universal Knowledge career skill.
