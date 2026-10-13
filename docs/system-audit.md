@@ -17,13 +17,22 @@ Run `npm test` for repeatable state and control-handler checks. Run `npm run tes
 
 ## Remaining audit priorities
 
+`scripts/check_gameplay_audit.cjs` covers all five chassis with all seven
+directives using deterministic successful rolls, flexible Medicine selection,
+multiple droids and utility assignment restoration. Matrix redraws are scoped to
+the Equipment panel; operation tests restore the full renderer. It also verifies
+failed/incompatible/unaffordable attachment installation, crafted bonus hard
+points, restricted chassis material acquisition, and single operation payouts
+including world and organization effects. This does not test every directive's
+source-book talent effects or a complete combat-droid system.
+
 | Area | Next meaningful scenario |
 | --- | --- |
 | Saves/import | Isolation, numeric validation, pre-load recovery, storage failure and import autosave pause are covered by `check_save_reliability.cjs`. Next: deeper combat payload validation and desktop scroll/focus restoration. |
-| Attachments | Failed sourcing, insufficient credits/hard points, incompatible items, crew equipment, and individual duplicate weapon instances. |
-| Droids | All chassis/directive combinations, flexible skill choices, switching utility assignment, utility contribution to real checks, and multiple completed droids. |
+| Attachments | Core restrictions and crafted hard points are covered. Next: crew equipment and individual duplicate weapon instances. |
+| Droids | All chassis/directive programming combinations and utility roster persistence are covered. Next: directive talent effects, station assignments and combat participation; these need explicit feature work, not a claim that programming tests validate them. |
 | Jobs/Training | Existing prerequisite/cost tests pass; add multi-day sequences and save/reload between transactions. |
-| Missions/combat | Play complete branches with deterministic outcomes; verify rewards occur once and saved mid-combat turns resume correctly. |
+| Missions/combat | Operation payouts and world/organization effects occur once. Next: play complete story branches with deterministic outcomes and verify saved mid-combat turns resume correctly. |
 | Phone | Native Safari/PWA, offline reload, keyboard focus, portrait/landscape changes while menus are open. |
 
 Passing targeted tests does not establish that every gameplay system is fully audited. The workshop and save reliability updates are complete within the scenarios above; full mission branches, combat payloads and native Safari remain further work.
