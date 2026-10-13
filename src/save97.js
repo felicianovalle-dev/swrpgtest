@@ -2,11 +2,11 @@
 (() => {
   'use strict';
   const game = window.Game97, escape = pxEsc67;
-  const slots = {manual:RC_SAVE_KEY, auto:RC_AUTO_KEY, backup:RC_BACKUP_KEY};
-  const labels = {manual:'Manual save', auto:'Autosave', backup:'Previous manual backup'};
+  const slots = {manual:RC_SAVE_KEY, auto:RC_AUTO_KEY, backup:RC_BACKUP_KEY, recovery:`${RC_SAVE_KEY}-recovery`};
+  const labels = {manual:'Manual save', auto:'Autosave', backup:'Previous manual backup', recovery:'Before last load or import'};
   const legacyCandidates = saveCandidates;
   let feedback = '', feedbackError = false, storageError = '', resumeTimer, restoring = false;
-  let restoringScroll = 0;
+  let restoringScroll = 0, importedUnsaved = false;
   const unreadableSlots = new Map();
 
   function validate(data) {
@@ -14,8 +14,32 @@
     if (typeof data.name !== 'string' || !SPECIES[data.species] || !CAREERS[data.career]) throw new Error('Missing or unknown character identity.');
     if (!CAREERS[data.career].specs[data.spec]) throw new Error('Unknown character specialization.');
     for (const key of ['chars', 'skills']) if (!data[key] || typeof data[key] !== 'object' || Array.isArray(data[key])) throw new Error(`Invalid ${key}.`);
-    if (!Number.isFinite(data.credits)) throw new Error('Invalid credits.');
+    const integer=(value,path,min=0,max=Number.MAX_SAFE_INTEGER)=>{
+      if(!Number.isSafeInteger(value)||value<min||value>max)throw new Error(`Invalid ${path}. Expected a whole number from ${min} to ${max}.`);
+    };
+    integer(data.credits,'credits');
+    if(data.schemaVersion!==undefined)integer(data.schemaVersion,'schemaVersion',1);
     if (data.schemaVersion > 92) throw new Error('This save uses a newer, unsupported schema.');
+    for(const key of Object.keys(SPECIES[data.species].c))integer(data.chars[key],`chars.${key}`,1,7);
+    for(const [key,value] of Object.entries(data.skills))integer(value,`skills.${key}`,0,5);
+    for(const key of ['xpStart','xpSpent','earnedXp','forceRating','wounds','strain','stimpacks','stimUses','reloads','conflict'])
+      if(data[key]!==undefined)integer(data[key],key);
+    if(data.morality!==undefined)integer(data.morality,'morality',0,100);
+    const inspect=(value,base,path='campaign')=>{
+      if(value===null){if(base!==undefined&&base!==null)throw new Error(`Invalid ${path}.`);return;}
+      if(Array.isArray(base)&&!Array.isArray(value))throw new Error(`Invalid ${path}.`);
+      if(typeof base==='number'&&!Number.isFinite(value))throw new Error(`Invalid ${path}.`);
+      if(base&&typeof base==='object'&&!Array.isArray(base)&&(!value||typeof value!=='object'||Array.isArray(value)))throw new Error(`Invalid ${path}.`);
+      if(typeof base==='boolean'&&typeof value!=='boolean')throw new Error(`Invalid ${path}.`);
+      if(value&&typeof value==='object')for(const [key,entry] of Object.entries(value)){
+        if(['__proto__','constructor','prototype'].includes(key))throw new Error(`Unsafe field ${path}.${key}.`);
+        inspect(entry,base?.[key],`${path}.${key}`);
+      }
+    };
+    inspect(data,game.freshState());
+    for(const group of ['world','medical','destiny','ordnance','charSpend','dedication'])
+      if(data[group]&&typeof data[group]==='object')for(const [key,value]of Object.entries(data[group]))
+        if(typeof value==='number')integer(value,`${group}.${key}`,group==='world'&&key==='day'?1:0);
     if (data.talents && !Array.isArray(data.talents)) throw new Error('Invalid talent list.');
     for(const key of ['freeCareer','freeSpec','ownedSpecs','universalSpecs','crew','inventory'])
       if(data[key] && !Array.isArray(data[key]))throw new Error(`Invalid ${key} list.`);
@@ -28,7 +52,7 @@
   function candidates() {
     storageError = '';
     let raw;
-    try { raw = legacyCandidates(); }
+    try { raw = legacyCandidates(); const recovery=localStorage.getItem(slots.recovery);if(recovery)raw.push({key:slots.recovery,raw:recovery}); }
     catch (error) { storageError = `Saved games cannot be read: ${error.message}`; return []; }
     return raw.map((entry, order) => {
       const kind = Object.keys(slots).find(k => slots[k] === entry.key) || 'legacy';
@@ -78,7 +102,7 @@
   }
   function message(text, error=false) { feedback=text; feedbackError=error; refresh(); }
   function write(kind) {
-    if (kind === 'auto' && (!game.ready || game.hydrating || restoring || !S.settings?.autosave || !S.finalized)) return false;
+    if (kind === 'auto' && (!game.ready || game.hydrating || restoring || importedUnsaved || !S.settings?.autosave || !S.finalized)) return false;
     clearTimeout(resumeTimer); capture();
     const stamp = new Date().toISOString();
     const data = serializableState();
@@ -87,6 +111,7 @@
     data.saveInfo97 = {savedAt:stamp, kind, build:BUILD_INFO.version,
       objective:typeof objectiveGuide75 === 'function' ? objectiveGuide75() : objectiveText()};
     try {
+      validate(data);
       const raw = JSON.stringify(data);
       if (kind === 'manual') {
         const previous = localStorage.getItem(slots.manual);
@@ -101,7 +126,7 @@
       S.lastSaved=stamp; S.saveInfo97=data.saveInfo97;
       unreadableSlots.delete(slots[kind]);
       storageError='';
-      if (kind === 'manual') feedback='Manual save written. The previous manual save is retained as your backup.';
+      if (kind === 'manual') {importedUnsaved=false;feedback='Manual save written. The previous manual save is retained as your backup.';}
       feedbackError=false;
       refresh(); return true;
     } catch (error) {
@@ -111,8 +136,18 @@
       refresh(); return false;
     }
   }
-  function apply(data, label) {
+  function checkpoint() {
+    const current=serializableState(),fresh=game.freshState();
+    const creationChanged=['name','species','career','spec','chars','skills','charSpend','xpSpent','talents','forceOwned','freeCareer','freeSpec'].some(key=>JSON.stringify(current[key])!==JSON.stringify(fresh[key]));
+    if(!S.finalized&&!S.lastSaved&&!creationChanged)return;
+    capture();const data=validate(serializableState()),stamp=new Date().toISOString();
+    data.lastSaved=stamp;data.saveInfo97={savedAt:stamp,kind:'recovery',build:BUILD_INFO.version,objective:typeof objectiveGuide75==='function'?objectiveGuide75():objectiveText()};
+    const raw=JSON.stringify(data);localStorage.setItem(slots.recovery,raw);
+    if(localStorage.getItem(slots.recovery)!==raw)throw new Error('Recovery checkpoint could not be retained. Export your current campaign before loading another.');
+  }
+  function apply(data, label, {recover=true,imported=false}={}) {
     validate(data); clearTimeout(resumeTimer);
+    if(recover)checkpoint();
     const before = JSON.parse(JSON.stringify(serializableState()));
     restoring = true;
     try { hydrateState(data,label);resumeCurrent(); }
@@ -122,16 +157,17 @@
       resumeCurrent();
       throw error;
     } finally { restoring = false; }
+    importedUnsaved=imported;
     feedback=`Loaded ${label}.`;feedbackError=false;
     refresh(); return true;
   }
   function loadSlot(kind='latest') {
     const rows=candidates();
-    const eligible=rows.filter(r=>r.valid&&(kind==='latest'||r.kind===kind));
+    const eligible=rows.filter(r=>r.valid&&(kind==='latest'?r.kind!=='recovery':r.kind===kind));
     if (!eligible.length) { message(storageError || `No readable ${kind==='latest'?'saved game':labels[kind]} is available.`,true); return false; }
     let failure;
     for(const row of eligible){
-      try{return apply(row.data,kind==='latest' ? `${labels[row.kind] || 'older save'} · ${formatTime(row)}` : labels[kind]);}
+      try{return apply(row.data,kind==='latest' ? `${labels[row.kind] || 'older save'} · ${formatTime(row)}` : labels[kind],{recover:row.kind!=='recovery'});}
       catch(error){failure=error;unreadableSlots.set(row.key,{raw:row.raw,error:error.message});}
     }
     message(`Load failed: ${failure.message} Your current campaign has been retained.`,true);return false;
@@ -149,7 +185,7 @@
     if (!row) return `<article class="save-slot97"><h3>${labels[kind]}</h3><p>No save in this slot.</p></article>`;
     if (!row.valid) return `<article class="save-slot97"><h3>${labels[kind]}</h3><p>Unreadable save: ${escape(row.error)}</p><p class="save-note97">Other slots remain available. This slot has not been changed.</p></article>`;
     const data=row.data;
-    return `<article class="save-slot97"><h3>${labels[kind]}</h3><time>${escape(formatTime(row))}</time>${!row.exact?'<p class="save-note97">Legacy timestamp: older autosaves may carry the last manual-save time.</p>':''}<p><b>${escape(data.name)}</b> · Day ${Number(data.world?.day)||1}<br>${Number(data.credits).toLocaleString()} credits · ${escape(screenTitle(data))}</p><p>${escape(data.saveInfo97?.objective || 'Objective details are restored with this campaign.')}</p><button class="btn" data-loadslot97="${kind}">${kind==='backup'?'Restore backup':`Load ${kind==='auto'?'autosave':'manual'}`}</button></article>`;
+    return `<article class="save-slot97"><h3>${labels[kind]}</h3><time>${escape(formatTime(row))}</time>${!row.exact?'<p class="save-note97">Legacy timestamp: older autosaves may carry the last manual-save time.</p>':''}<p><b>${escape(data.name)}</b> · Day ${Number(data.world?.day)||1}<br>${Number(data.credits).toLocaleString()} credits · ${escape(screenTitle(data))}</p><p>${escape(data.saveInfo97?.objective || 'Objective details are restored with this campaign.')}</p><button class="btn" data-loadslot97="${kind}">${kind==='recovery'?'Restore before last load':kind==='backup'?'Restore backup':`Load ${kind==='auto'?'autosave':'manual'}`}</button></article>`;
   }
   function install() {
     const host=document.getElementById('tabHost78') || document.querySelector('.wrap');
@@ -167,12 +203,12 @@
     if (continueButton) {continueButton.textContent=game.home?(S.finalized?'Continue':'Continue creation'):'Continue current game';continueButton.onclick=resumeCurrent;}
   }
   function refresh() {
-    install(); const rows=candidates(), latest=rows.find(r=>r.valid);
+    install(); const rows=candidates(), latest=rows.find(r=>r.valid&&r.kind!=='recovery');
     const status=document.getElementById('saveStatus');
     if (status) status.textContent=feedbackError ? 'Save needs attention' : latest ? `${labels[latest.kind] || 'Saved'} · ${formatTime(latest)}` : storageError ? 'Saves unavailable' : 'No saved game';
     const section=document.getElementById('save97');
     if (section) {
-      section.innerHTML=`<h2>Saved games</h2><p class="save-note97">Manual saves, autosaves, and backups are separate. Loading a slot restores that campaign and its saved screen; it does not overwrite another slot.</p><div class="save-actions97"><button class="btn primary" id="resumeLatest97" ${latest?'':'disabled'}>Resume latest</button><button class="btn" id="manualSave97">Save current game</button><button class="btn" id="exportSave97">Export campaign</button><button class="btn" id="importSave97">Import campaign</button><button class="btn" id="continueCurrent97">Return to current game</button></div>${feedback||storageError?`<div class="save-feedback97 ${feedbackError||storageError?'error':''}" role="status">${escape(storageError||feedback)}</div>`:''}<div class="save-slots97">${Object.keys(slots).map(kind=>slotHTML(kind,rows)).join('')}</div><p class="save-note97">Resume latest uses the newest readable timestamp. Legacy saves without reliable timestamps are labeled above. Exported files let you move a campaign between browsers or devices.</p>${rows.some(r=>r.kind==='legacy')?`<details class="save-legacy97"><summary>Older save slots</summary>${rows.filter(r=>r.kind==='legacy').map(r=>`<p>${escape(r.key)} · ${r.valid?escape(formatTime(r)):'Unreadable'}</p>`).join('')}</details>`:''}`;
+      section.innerHTML=`<h2>Saved games</h2><p class="save-note97">Loading or importing first preserves your current campaign in “Before last load or import.” Manual saves, autosaves, and the previous manual backup stay separate.</p>${importedUnsaved?'<p role="status">Imported campaign: autosave is paused until you save manually. Export a file copy if you prefer.</p>':''}<div class="save-actions97"><button class="btn primary" id="resumeLatest97" ${latest?'':'disabled'}>Resume latest</button><button class="btn" id="manualSave97">Save current game</button><button class="btn" id="exportSave97">Export campaign</button><button class="btn" id="importSave97">Import campaign</button><button class="btn" id="continueCurrent97">Return to current game</button></div>${feedback||storageError?`<div class="save-feedback97 ${feedbackError||storageError?'error':''}" role="status">${escape(storageError||feedback)}</div>`:''}<div class="save-slots97">${Object.keys(slots).map(kind=>slotHTML(kind,rows)).join('')}</div><p class="save-note97">Resume latest uses the newest readable manual, auto, backup, or older save; it excludes the recovery checkpoint. Restoring the checkpoint leaves it available. Exported files let you move a campaign between browsers or devices.</p>${rows.some(r=>r.kind==='legacy')?`<details class="save-legacy97"><summary>Older save slots</summary>${rows.filter(r=>r.kind==='legacy').map(r=>`<p>${escape(r.key)} · ${r.valid?escape(formatTime(r)):'Unreadable'}</p>`).join('')}</details>`:''}`;
       section.querySelectorAll('[data-loadslot97]').forEach(b=>b.onclick=()=>loadSlot(b.dataset.loadslot97));
       document.getElementById('resumeLatest97').onclick=()=>loadSlot('latest');
       document.getElementById('manualSave97').onclick=()=>write('manual');
@@ -191,13 +227,13 @@
   }
   function openManager() { capture(); renderNavTab('save97'); refresh(); }
   save=()=>write('manual'); safeAutosave=()=>write('auto'); load=()=>loadSlot('latest');
-  newestSaveRaw=()=>candidates().find(row=>row.valid)||null;
+  newestSaveRaw=()=>candidates().find(row=>row.valid&&row.kind!=='recovery')||null;
   continueBestScreen80=resumeCurrent;
   importSaveFile=file=>{
     if (!file) return;
     const reader=new FileReader();
     reader.onload=()=>{
-      try {const data=validate(JSON.parse(reader.result));apply(data,'imported campaign');message('Imported campaign loaded. Save it manually to retain a browser copy.');}
+      try {const data=validate(JSON.parse(reader.result));apply(data,'imported campaign',{imported:true});message('Imported campaign loaded. Autosave is paused until you save manually. Your previous campaign is available in the recovery checkpoint.');}
       catch(error){message(`Import failed: ${error.message} Your current campaign has been retained.`,true);}
     };
     reader.onerror=()=>message('The selected file could not be read.',true);reader.readAsText(file);
@@ -206,7 +242,7 @@
   game.on('ready',()=>{
     refresh();
     // Offer the saved campaign without silently loading or overwriting it.
-    if(candidates().some(row=>row.valid))renderNavTab('playhub80');
+    if(candidates().some(row=>row.valid&&row.kind!=='recovery'))renderNavTab('playhub80');
   });
   game.on('hydrate',data=>{
     clearTimeout(resumeTimer);feedback='';feedbackError=false;

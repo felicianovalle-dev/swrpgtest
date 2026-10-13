@@ -12,7 +12,7 @@
     ['hubCampaign80','Campaign settings','campaign'], ['hubBase97','Base','base'],
     ['hubDatabase80','Rules & equipment reference','database'], ['hubGuide97','How to play','guide']
   ];
-  function latestSave() { return game.saves.candidates().find(row => row.valid) || null; }
+  function latestSave() { return game.saves.candidates().find(row => row.valid && row.kind !== 'recovery') || null; }
   function offeredSave(latest) { return !!latest && !S.finalized && !S.lastSaved; }
   function enterCurrent(action) {
     if (offeredSave(latestSave()) && !game.saves.loadSlot('latest')) return false;

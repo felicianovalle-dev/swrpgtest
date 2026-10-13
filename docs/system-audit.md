@@ -19,11 +19,11 @@ Run `npm test` for repeatable state and control-handler checks. Run `npm run tes
 
 | Area | Next meaningful scenario |
 | --- | --- |
-| Saves/import | Import an older partial campaign after a different campaign; verify absent fields do not inherit prior progress. Reject malformed numeric fields. Check recovery of unsaved progress before loading. |
+| Saves/import | Isolation, numeric validation, pre-load recovery, storage failure and import autosave pause are covered by `check_save_reliability.cjs`. Next: deeper combat payload validation and desktop scroll/focus restoration. |
 | Attachments | Failed sourcing, insufficient credits/hard points, incompatible items, crew equipment, and individual duplicate weapon instances. |
 | Droids | All chassis/directive combinations, flexible skill choices, switching utility assignment, utility contribution to real checks, and multiple completed droids. |
 | Jobs/Training | Existing prerequisite/cost tests pass; add multi-day sequences and save/reload between transactions. |
 | Missions/combat | Play complete branches with deterministic outcomes; verify rewards occur once and saved mid-combat turns resume correctly. |
 | Phone | Native Safari/PWA, offline reload, keyboard focus, portrait/landscape changes while menus are open. |
 
-The current change fixes the reported workshop issues. Passing targeted tests does not establish that every gameplay system is fully audited. Import-state isolation, numeric validation and recovery behavior remain separate save-system work.
+Passing targeted tests does not establish that every gameplay system is fully audited. The workshop and save reliability updates are complete within the scenarios above; full mission branches, combat payloads and native Safari remain further work.

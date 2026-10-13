@@ -62,6 +62,21 @@ Legacy autosave timestamps may be stale, so the UI discloses that limitation.
 Do not infer a missing timestamp or automatically migrate by overwriting a slot.
 Navigation autosaves are suppressed during boot, hydration, and restoration.
 
+Hydration now starts from a cloned fresh state captured before campaign loading,
+then merges imported fields and applies existing migrations. Missing campaign
+fields never inherit the currently played campaign. Legacy `scene` migration
+still runs when `ep15` is absent.
+
+The additive `${RC_SAVE_KEY}-recovery` slot preserves the current campaign before
+loading/importing, including edited character creation. A pristine startup does
+not replace an existing checkpoint. Recovery is explicit and excluded from
+Resume latest. If checkpoint storage fails, loading stops without replacing the
+current campaign. Restoring recovery does not replace that checkpoint.
+
+File imports pause autosave until a successful manual save. This pause is session
+state, not a gameplay setting written into the imported campaign. The source file
+and pre-import checkpoint remain available if the browser is closed first.
+
 # Visual boundary
 
 `src/visual97.js` renders connected materials and caches deterministic tile art.

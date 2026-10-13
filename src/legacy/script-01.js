@@ -2432,8 +2432,8 @@ function importSaveFile(file){
   reader.onload=()=>{try{let x=JSON.parse(reader.result);hydrateState(x,'imported save');save()}catch(err){showRuntimeError(`Import failed: ${err.message}`)}};reader.readAsText(file)
 }
 function newGame(){
-  if(!confirm('Start a new game? This clears the current manual/autosave/backup slots. Export first if you want to keep this run.'))return;
-  localStorage.removeItem(RC_SAVE_KEY);localStorage.removeItem(RC_AUTO_KEY);localStorage.removeItem(RC_BACKUP_KEY);location.reload()
+  if(!confirm('Start a new game? This clears the current manual, autosave, backup, and recovery slots. Export first if you want to keep this run.'))return;
+  localStorage.removeItem(RC_SAVE_KEY);localStorage.removeItem(RC_AUTO_KEY);localStorage.removeItem(RC_BACKUP_KEY);localStorage.removeItem(`${RC_SAVE_KEY}-recovery`);location.reload()
 }
 function showRuntimeError(message){
   let box=$('runtimeError');if(!box)return;box.classList.remove('hidden');box.innerHTML=`<b>Runtime warning</b><div class="small" style="margin-top:5px">${String(message)}</div>`
