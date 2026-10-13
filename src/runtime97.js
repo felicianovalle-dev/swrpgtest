@@ -24,6 +24,7 @@ window.Game97 = (() => {
   renderNavTab = function(id) {
     if (!document.getElementById(id)?.classList.contains('tab')) return false;
     const result = navigate(id);
+    if(id==='combat'&&S.combat)renderCombat();
     api.emit('navigate', {id, internal:api.rendering>0 || api.hydrating});
     return result;
   };

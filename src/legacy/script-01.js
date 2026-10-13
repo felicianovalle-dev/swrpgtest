@@ -5675,20 +5675,21 @@ function renderBattlefield(){
     cells.push(`<div class="tactical-cell"><div class="band">P${pos} · ${tacticalBandLabel(pos)}</div>${tokens.join('')||'<span class="tiny">—</span>'}</div>`)
   }
   $('battlefield').innerHTML=cells.join('');
-  document.querySelectorAll('[data-battle-target]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.battleTarget;renderCombat()});
+  document.querySelectorAll('[data-battle-target]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.battleTarget;S.combat.targetIndex=Number(b.dataset.battleTarget);renderCombat()});
   $('aiIntent').innerHTML=`<b>Enemy AI:</b> ${C.lastAIIntent||'No enemy action yet.'}`
 }
 
 function renderCombat(){
   let C=S.combat;if(!C)return;initializeTacticalState(C);
-  let slot=currentSlot(),pcSlot=slot?.side==='PC',avail=availableSideActors('PC'),priorTarget=selectedEnemy()?.id;
+  let slot=currentSlot(),pcSlot=slot?.side==='PC',avail=availableSideActors('PC');
   const titles={patrol:'Imperial Patrol',ep15Patrol:'Imperial Recovery Patrol',ep15Beasts:'Ash Stalker Ravine',ep15Bounty:'Korda Venn Bounty',ep15Outpost:'Listening Post Security',ep15Boss:'Chief Varrik — Hangar Twelve',boss:'Hangar Blockade'};
   $('combatTitle').textContent=titles[C.kind]||'Structured Encounter';$('round').textContent=C.round;$('slotNow').textContent=`${C.slotIndex+1}/${C.slots.length} ${slot?.side||''}`;$('initiativeMode').textContent=C.prepared?'Squad: Cool':'Squad: Vigilance';
   $('initiativeStrip').innerHTML=C.slots.map((s,i)=>`<span class="pill ${i===C.slotIndex?'current-slot':''}">${s.side} <b>${s.success}</b>/<span>${s.adv}</span></span>`).join('');
 
   $('target').innerHTML=C.enemies.map((e,i)=>!enemyDefeated(e)?`<option value="${i}">${e.name} · ${enemyAIRole(e)}</option>`:'').join('');
-  if(priorTarget){let idx=C.enemies.findIndex(e=>e.id===priorTarget&&!enemyDefeated(e));if(idx>=0)$('target').value=String(idx)}
-  $('target').onchange=renderCombat;
+  if([...$('target').options].some(o=>Number(o.value)===C.targetIndex))$('target').value=String(C.targetIndex);
+  C.targetIndex=Number($('target').value)||0;
+  $('target').onchange=()=>{if(S.combat)S.combat.targetIndex=Number($('target').value);renderCombat()};
 
   let T=C.turn,actor=pcSlot?squadActors().find(a=>a.id===T?.actorId):null,target=selectedEnemy();
   let ri=actor&&target?rangeBandBetween(actor.id,target.id):2;C.range=ri;

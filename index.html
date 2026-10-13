@@ -7562,20 +7562,21 @@ function renderBattlefield(){
     cells.push(`<div class="tactical-cell"><div class="band">P${pos} · ${tacticalBandLabel(pos)}</div>${tokens.join('')||'<span class="tiny">—</span>'}</div>`)
   }
   $('battlefield').innerHTML=cells.join('');
-  document.querySelectorAll('[data-battle-target]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.battleTarget;renderCombat()});
+  document.querySelectorAll('[data-battle-target]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.battleTarget;S.combat.targetIndex=Number(b.dataset.battleTarget);renderCombat()});
   $('aiIntent').innerHTML=`<b>Enemy AI:</b> ${C.lastAIIntent||'No enemy action yet.'}`
 }
 
 function renderCombat(){
   let C=S.combat;if(!C)return;initializeTacticalState(C);
-  let slot=currentSlot(),pcSlot=slot?.side==='PC',avail=availableSideActors('PC'),priorTarget=selectedEnemy()?.id;
+  let slot=currentSlot(),pcSlot=slot?.side==='PC',avail=availableSideActors('PC');
   const titles={patrol:'Imperial Patrol',ep15Patrol:'Imperial Recovery Patrol',ep15Beasts:'Ash Stalker Ravine',ep15Bounty:'Korda Venn Bounty',ep15Outpost:'Listening Post Security',ep15Boss:'Chief Varrik — Hangar Twelve',boss:'Hangar Blockade'};
   $('combatTitle').textContent=titles[C.kind]||'Structured Encounter';$('round').textContent=C.round;$('slotNow').textContent=`${C.slotIndex+1}/${C.slots.length} ${slot?.side||''}`;$('initiativeMode').textContent=C.prepared?'Squad: Cool':'Squad: Vigilance';
   $('initiativeStrip').innerHTML=C.slots.map((s,i)=>`<span class="pill ${i===C.slotIndex?'current-slot':''}">${s.side} <b>${s.success}</b>/<span>${s.adv}</span></span>`).join('');
 
   $('target').innerHTML=C.enemies.map((e,i)=>!enemyDefeated(e)?`<option value="${i}">${e.name} · ${enemyAIRole(e)}</option>`:'').join('');
-  if(priorTarget){let idx=C.enemies.findIndex(e=>e.id===priorTarget&&!enemyDefeated(e));if(idx>=0)$('target').value=String(idx)}
-  $('target').onchange=renderCombat;
+  if([...$('target').options].some(o=>Number(o.value)===C.targetIndex))$('target').value=String(C.targetIndex);
+  C.targetIndex=Number($('target').value)||0;
+  $('target').onchange=()=>{if(S.combat)S.combat.targetIndex=Number($('target').value);renderCombat()};
 
   let T=C.turn,actor=pcSlot?squadActors().find(a=>a.id===T?.actorId):null,target=selectedEnemy();
   let ri=actor&&target?rangeBandBetween(actor.id,target.id):2;C.range=ri;
@@ -10850,7 +10851,7 @@ function renderRetroParty70(){
   let C=S.combat;if(!C)return;let T=C.turn;
   $('retroParty70').innerHTML=squadActors().map(a=>{let st=actorState(a.id),wt=actorWT(a.id),ss=actorST(a.id),active=T?.actorId===a.id,down=actorIsIncapacitated(a.id),wp=Math.max(0,Math.min(100,(st.wounds/wt)*100)),sp=Math.max(0,Math.min(100,(st.strain/ss)*100));return`<div class="retro-unit70 ${active?'active':''} ${down?'down':''}"><b>${pxEsc67(a.name)}</b><div>W ${st.wounds}/${wt} · S ${st.strain}/${ss}</div><div class="retro-hp70"><span style="width:${wp}%"></span></div><div class="retro-sp70"><span style="width:${sp}%"></span></div></div>`}).join('');
   $('retroTargets70').innerHTML=C.enemies.map((e,i)=>enemyDefeated(e)?'':`<button class="retro-target70 ${selectedEnemy()?.id===e.id?'on':''}" data-retro-target70="${i}">${pxEsc67(e.name)} · W ${e.w}/${e.wt}</button>`).join('');
-  $('retroTargets70').querySelectorAll('[data-retro-target70]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.retroTarget70;renderCombat()});
+  $('retroTargets70').querySelectorAll('[data-retro-target70]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.retroTarget70;S.combat.targetIndex=Number(b.dataset.retroTarget70);renderCombat()});
 }
 function retroProxyButton70(id,label,cls=''){
   let b=$(id);if(!b||b.disabled)return'';return`<button class="btn ${cls}" data-retro-proxy70="${id}">${pxEsc67(label||b.textContent)}</button>`
@@ -11332,7 +11333,7 @@ function resolveVisualNode73(){
   }else completeVisualNode73(n.scene||n.text,true)
 }
 function campaignChoice73(choiceId){
-  let q=visualCampaign73(),n=visualNode73();if(!q||n.type!=='dialogue73')return;let c=n.choices.find(x=>x.id===choiceId);if(!c)return;
+  let q=visualCampaign73(),n=visualNode73();if(!q||n.type!=='dialogue73')return;if(n.hub&&S.world.currentHub!==n.hub){renderNavTab('galaxy');return}let c=n.choices.find(x=>x.id===choiceId);if(!c)return;
   if(c.cost&&S.credits<c.cost){openCampaignDialogue73(n,'You do not have enough credits for that choice.');return}
   if(c.cost){S.credits-=c.cost;ledgerEntry(-c.cost,`Visual campaign: ${c.label}`)}
   q.completedNodes.push(q.node);q.flags[c.flag||c.id]=true;q.flags[`choice:${q.node}`]=c.id;storyApplyEffects61(c.effects||{});
@@ -11351,7 +11352,7 @@ function openCampaignDialogue73(n=visualNode73(),notice=''){
   $('campaignClose73').onclick=()=>closePixelDialog67()
 }
 function interactCampaign73(){
-  let n=visualNode73();if(!n)return;
+  let n=visualNode73();if(!n)return;if(n.hub&&S.world.currentHub!==n.hub){renderNavTab('galaxy');return}
   if(n.type==='visual73')resolveVisualNode73();
   else if(n.type==='dialogue73')openCampaignDialogue73(n)
 }
@@ -15146,6 +15147,7 @@ window.Game97 = (() => {
   renderNavTab = function(id) {
     if (!document.getElementById(id)?.classList.contains('tab')) return false;
     const result = navigate(id);
+    if(id==='combat'&&S.combat)renderCombat();
     api.emit('navigate', {id, internal:api.rendering>0 || api.hydrating});
     return result;
   };

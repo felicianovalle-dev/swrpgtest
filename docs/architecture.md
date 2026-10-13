@@ -78,6 +78,11 @@ back to their screen. A saved combat-screen hint without actual combat falls
 back to Home. Hydration redraws a battle without restarting its initiative or
 turn; browser regressions compare its complete state across reload.
 
+Entering Combat explicitly redraws its controls after loading. The additive
+`combat.targetIndex` field keeps dropdown, battlefield and retro target controls
+in agreement and survives serialization. If that enemy is defeated, rendering
+selects a surviving enemy. Older battles without the field use the first target.
+
 File imports pause autosave until a successful manual save. This pause is session
 state, not a gameplay setting written into the imported campaign. The source file
 and pre-import checkpoint remain available if the browser is closed first.

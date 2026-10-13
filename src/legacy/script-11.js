@@ -99,7 +99,7 @@ function resolveVisualNode73(){
   }else completeVisualNode73(n.scene||n.text,true)
 }
 function campaignChoice73(choiceId){
-  let q=visualCampaign73(),n=visualNode73();if(!q||n.type!=='dialogue73')return;let c=n.choices.find(x=>x.id===choiceId);if(!c)return;
+  let q=visualCampaign73(),n=visualNode73();if(!q||n.type!=='dialogue73')return;if(n.hub&&S.world.currentHub!==n.hub){renderNavTab('galaxy');return}let c=n.choices.find(x=>x.id===choiceId);if(!c)return;
   if(c.cost&&S.credits<c.cost){openCampaignDialogue73(n,'You do not have enough credits for that choice.');return}
   if(c.cost){S.credits-=c.cost;ledgerEntry(-c.cost,`Visual campaign: ${c.label}`)}
   q.completedNodes.push(q.node);q.flags[c.flag||c.id]=true;q.flags[`choice:${q.node}`]=c.id;storyApplyEffects61(c.effects||{});
@@ -118,7 +118,7 @@ function openCampaignDialogue73(n=visualNode73(),notice=''){
   $('campaignClose73').onclick=()=>closePixelDialog67()
 }
 function interactCampaign73(){
-  let n=visualNode73();if(!n)return;
+  let n=visualNode73();if(!n)return;if(n.hub&&S.world.currentHub!==n.hub){renderNavTab('galaxy');return}
   if(n.type==='visual73')resolveVisualNode73();
   else if(n.type==='dialogue73')openCampaignDialogue73(n)
 }

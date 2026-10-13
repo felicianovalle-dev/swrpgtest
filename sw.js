@@ -1,4 +1,4 @@
-const CACHE='sable-reach-v1-9-story-combat-r1';
+const CACHE='sable-reach-v1-9-mission-playthrough-r1';
 const SHELL=['./','./index.html','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 
 self.addEventListener('install',event=>{

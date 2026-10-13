@@ -215,7 +215,7 @@ function renderRetroParty70(){
   let C=S.combat;if(!C)return;let T=C.turn;
   $('retroParty70').innerHTML=squadActors().map(a=>{let st=actorState(a.id),wt=actorWT(a.id),ss=actorST(a.id),active=T?.actorId===a.id,down=actorIsIncapacitated(a.id),wp=Math.max(0,Math.min(100,(st.wounds/wt)*100)),sp=Math.max(0,Math.min(100,(st.strain/ss)*100));return`<div class="retro-unit70 ${active?'active':''} ${down?'down':''}"><b>${pxEsc67(a.name)}</b><div>W ${st.wounds}/${wt} · S ${st.strain}/${ss}</div><div class="retro-hp70"><span style="width:${wp}%"></span></div><div class="retro-sp70"><span style="width:${sp}%"></span></div></div>`}).join('');
   $('retroTargets70').innerHTML=C.enemies.map((e,i)=>enemyDefeated(e)?'':`<button class="retro-target70 ${selectedEnemy()?.id===e.id?'on':''}" data-retro-target70="${i}">${pxEsc67(e.name)} · W ${e.w}/${e.wt}</button>`).join('');
-  $('retroTargets70').querySelectorAll('[data-retro-target70]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.retroTarget70;renderCombat()});
+  $('retroTargets70').querySelectorAll('[data-retro-target70]').forEach(b=>b.onclick=()=>{$('target').value=b.dataset.retroTarget70;S.combat.targetIndex=Number(b.dataset.retroTarget70);renderCombat()});
 }
 function retroProxyButton70(id,label,cls=''){
   let b=$(id);if(!b||b.disabled)return'';return`<button class="btn ${cls}" data-retro-proxy70="${id}">${pxEsc67(label||b.textContent)}</button>`
