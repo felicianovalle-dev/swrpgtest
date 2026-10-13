@@ -35,4 +35,11 @@ source-book talent effects or a complete combat-droid system.
 | Missions/combat | Branch guards and combat restoration are covered. `check_mission_playthrough.cjs` now follows three complete featured-campaign routes through real travel, district visits, dialogue buttons, attacks and turn progression, covering all three endings and all nine dialogue choices across those routes. Next: remaining choice combinations, failed travel/combat outcomes, ordinary-character balance and the other campaigns' full playthroughs. |
 | Phone | Native Safari/PWA, offline reload, keyboard focus, portrait/landscape changes while menus are open. |
 
+`check_setbacks.cjs` covers failed travel, skill-check fallback, forced withdrawal,
+story/operation retry routing, stale combat-link cleanup, fresh Medicine treatment
+after defeat, and saving a retry battle. Chromium exercises the visible story
+retry button. Loss is a controlled incapacitation fixture, not a combat-balance
+simulation. Voluntary fleeing is absent from the current player controls; no new
+escape rules were added as part of this recovery fix.
+
 The featured playthroughs use a funded, strong test character and deterministic dice. Redraws are scoped to Story and Combat; gameplay handlers and dialogue buttons remain real. Battles finish through attacks and turns, rather than invoking the victory hook directly. These tests verify progression, not difficulty balance. Earlier branch tests still use node fixtures. Malformed combat payload validation, directive talent effects and native Safari remain further work.

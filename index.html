@@ -7348,17 +7348,27 @@ function enemyAttack(e,target=null,extraBoost=0){
   return true
 }
 function enemyFinishSlot(e){
+  if(!S.combat)return;
   if(e.suppressed>0)e.suppressed--;e.hasActedEncounter=true;
   S.combat.actedNPC.push(e.id);
   if(squadActors().every(a=>actorIsIncapacitated(a.id))){
-    let kind=S.combat.kind;S.combat=null;$('combat').classList.add('hidden');$('adventure').classList.remove('hidden');
+    let kind=S.combat.kind,storyLink=kind==='customEncounter'?S.story61?.pendingCombat:null,opLink=kind==='customEncounter'?S.gmOps?.combatLink:null;
+    S.combat=null;S.medical.encounter++;
+    if(kind==='customEncounter'){if(S.story61)S.story61.pendingCombat=null;if(S.gmOps)S.gmOps.combatLink=null}
+    $('combat').classList.add('hidden');$('adventure').classList.remove('hidden');
     for(const id of ['pc',...S.crew]){let st=actorState(id);st.wounds=Math.min(st.wounds,Math.max(0,actorWT(id)-1));st.strain=Math.min(st.strain,Math.max(0,actorST(id)-1));st.conditions.cover=false;if(id!=='pc')st.incapacitated=false}
     if(kind==='ep15Boss')S.ep15.location='outpostCommand';
     else if(kind==='ep15Bounty')S.ep15.location='camp';
     else if(kind==='ep15Beasts')S.ep15.location='ash';
     else if(kind==='ep15Outpost')S.ep15.location='outpostGate';
     else if(kind==='ep15Patrol')S.ep15.location='crash';
-    gLog('The squad is incapacitated and forced to withdraw. After emergency recovery, the encounter can be attempted again.');renderAdventure();renderRecovery();return
+    for(const id of ['pc',...S.crew]){let c=actorState(id).conditions;c.disoriented=0;c.immobilized=0;c.staggered=0;c.suppressed=0}
+    gLog('The squad is incapacitated and forced to withdraw. After emergency recovery, the encounter can be attempted again.');renderAdventure();renderRecovery();
+    let story=S.story61?.active,op=S.gmOps?.current;
+    if(storyLink&&story?.status==='active'&&story.id===storyLink.questId&&story.node===storyLink.nodeId)renderNavTab('story61tab');
+    else if(opLink&&op?.id===opLink.opId)renderNavTab('gm');
+    else renderNavTab('adventure');
+    safeAutosave();return
   }
   S.combat.slotIndex++;beginSlot()
 }
