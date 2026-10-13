@@ -63,7 +63,7 @@ function ensurePhase74State(){
   S.visual74.visitedHubs=S.visual74.visitedHubs&&typeof S.visual74.visitedHubs==='object'?S.visual74.visitedHubs:{};
   return S.visual74
 }
-function visualCampaign73(){let q=S.story61?.active;return q?.templateId==='embers73'?q:null}
+function visualCampaign73(){let q=S.story61?.active;return q?.templateId==='embers73'&&q.status==='active'?q:null}
 function visualNode73(){let q=visualCampaign73();return q?storyNode61(q):null}
 function visualCampaignProgress73(){
   let q=visualCampaign73(),t=q&&STORY_TEMPLATES_61.embers73;if(!q||!t)return{done:0,total:Object.keys(t?.nodes||{}).length};
@@ -124,7 +124,7 @@ function interactCampaign73(){
 }
 const _p73FinishStory=finishStory61;
 finishStory61=function(){
-  let q=S.story61?.active,was=q?.templateId==='embers73';
+  let q=S.story61?.active;if(!q||q.status!=='active'||(q.node&&storyNode61(q)?.type!=='finale'))return;let was=q.templateId==='embers73';
   if(was&&!S.visual73.rewarded){
     S.visual73.rewarded=true;
     if(!S.inventory.includes('echoKey73'))S.inventory.push('echoKey73');

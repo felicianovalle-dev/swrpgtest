@@ -2,6 +2,9 @@
 window.Game97 = (() => {
   const listeners = new Map();
   const api = {ready:false, hydrating:false, rendering:0};
+  // Combat is a navigable saved screen, even though the original template did
+  // not classify its section as a tab.
+  document.getElementById('combat')?.classList.add('tab','tab78');
   api.on = (name, fn) => {
     if (!listeners.has(name)) listeners.set(name, new Set());
     listeners.get(name).add(fn);

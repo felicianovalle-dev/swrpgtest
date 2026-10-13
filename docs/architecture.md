@@ -73,6 +73,11 @@ not replace an existing checkpoint. Recovery is explicit and excluded from
 Resume latest. If checkpoint storage fails, loading stops without replacing the
 current campaign. Restoring recovery does not replace that checkpoint.
 
+Combat is registered as a tab by `runtime97.js`, so saved battles can navigate
+back to their screen. A saved combat-screen hint without actual combat falls
+back to Home. Hydration redraws a battle without restarting its initiative or
+turn; browser regressions compare its complete state across reload.
+
 File imports pause autosave until a successful manual save. This pause is session
 state, not a gameplay setting written into the imported campaign. The source file
 and pre-import checkpoint remain available if the browser is closed first.

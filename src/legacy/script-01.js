@@ -5622,6 +5622,7 @@ function hardHeadedTalent(){
   else cLog(`Hard Headed fails to clear the condition. ${rtxt(r)}`);renderCombat()
 }
 function combatWin(){
+  if(!S.combat)return;
   let kind=S.combat.kind;recoverBalance();S.combat=null;S.medical.encounter++;
   for(const id of ['pc',...S.crew]){let c=actorState(id).conditions;c.disoriented=0;c.immobilized=0;c.staggered=0;c.suppressed=0;c.hamstrung=false;c.winded=false;c.compromised=false;c.headRinger=false;c.fearsomeWound=false;c.agonizingWound=false;c.slightlyDazed=false;c.scatteredSenses=false;c.knockedSenseless=false;c.cover=false;c.noFreeManeuver=0;c.nextSetback=0;c.nextUpgrade=0;c.nextDifficulty=0}
   $('combat').classList.add('hidden');$('adventure').classList.remove('hidden');

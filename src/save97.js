@@ -68,6 +68,7 @@
   }
   function currentScreen() { return activeTabId78(); }
   function playableScreen(id) {
+    if(id==='combat'&&!S.combat)return false;
     return typeof id === 'string' && /^[a-zA-Z0-9_-]+$/.test(id) &&
       document.getElementById(id)?.classList.contains('tab') && !['save97','playhub80','about97'].includes(id);
   }
@@ -177,6 +178,7 @@
   }
   function screenTitle(data) {
     const id=data.resume97?.screen;
+    if(id==='combat'&&data.combat)return 'Combat';
     if (id==='worktraining96') return data.resume97.panel==='training' ? 'Training' : 'Jobs';
     return document.querySelector(`#nav button[data-tab="${playableScreen(id)?id:'playhub80'}"]`)?.textContent || 'Play Hub';
   }
