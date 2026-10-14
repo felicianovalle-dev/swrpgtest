@@ -43,8 +43,19 @@ const assert=require('node:assert/strict'),openGame=require('./game_test_harness
   check('Failed recovery write aborts loading and retains current campaign',()=>run('Game97.saves.loadSlot("manual")===false&&S.credits===4321'));
   run('Storage.prototype.setItem=originalReliabilitySet');
   // Exercise the actual file-input reader path, not only the public apply API.
-  run(`importSaveFile(new File([${JSON.stringify(JSON.stringify(partial))}],"older.json",{type:"application/json"}))`);
-  await new Promise(r=>setTimeout(r,350));
+  const readAsText=w.FileReader.prototype.readAsText;
+  let importTimeout;
+  const importFinished=new Promise((resolve,reject)=>{
+   importTimeout=setTimeout(()=>reject(new Error('File reader did not finish importing')),10000);
+   w.FileReader.prototype.readAsText=function(...args){
+    this.addEventListener('loadend',()=>{clearTimeout(importTimeout);resolve()},{once:true});
+    return readAsText.apply(this,args);
+   };
+  });
+  try{
+   run(`importSaveFile(new File([${JSON.stringify(JSON.stringify(partial))}],"older.json",{type:"application/json"}))`);
+   await importFinished;
+  }finally{clearTimeout(importTimeout);w.FileReader.prototype.readAsText=readAsText;}
   check('File import uses isolation, recovery and paused autosave',()=>run('S.name==="Older campaign"&&S.ep15.mainStage===0&&!S.ship.owned&&JSON.parse(localStorage.getItem(RC_SAVE_KEY+"-recovery")).credits===4321&&safeAutosave()===false'));
   assert.deepEqual(g.errors,[]);console.log(JSON.stringify({passed:checks.length,checks},null,2));
  }finally{g.close()}

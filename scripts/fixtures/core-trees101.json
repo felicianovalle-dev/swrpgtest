@@ -1,0 +1,1610 @@
+{
+  "sourceCommit": "9d8d223b4ae1dc6b78258e6bc6c3ac4d23e77cc0",
+  "trees": {
+    "Driver": [
+      {
+        "id": "drv00",
+        "name": "Full Throttle",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Use Piloting to increase vehicle speed temporarily.",
+        "type": "Active",
+        "links": [
+          "drv10"
+        ]
+      },
+      {
+        "id": "drv01",
+        "name": "All-Terrain Driver",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Ignore ordinary difficult-terrain penalties while driving with Piloting (Planetary).",
+        "type": "Passive",
+        "links": []
+      },
+      {
+        "id": "drv02",
+        "name": "Fine Tuning",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Vehicle/starship repair checks restore additional system strain per rank.",
+        "type": "Passive",
+        "links": []
+      },
+      {
+        "id": "drv03",
+        "name": "Gearhead",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Remove Setback from Mechanics checks and reduce attachment modification costs.",
+        "type": "Passive",
+        "links": [
+          "drv13"
+        ]
+      },
+      {
+        "id": "drv10",
+        "name": "Grit",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "drv00",
+          "drv11",
+          "drv20"
+        ]
+      },
+      {
+        "id": "drv11",
+        "name": "Skilled Jockey",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Remove Setback from Piloting (Planetary) and Piloting (Space) checks.",
+        "type": "Passive",
+        "links": [
+          "drv10",
+          "drv12",
+          "drv21"
+        ]
+      },
+      {
+        "id": "drv12",
+        "name": "Rapid Reaction",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Suffer strain to add Successes to initiative checks.",
+        "type": "Active",
+        "links": [
+          "drv11",
+          "drv13"
+        ]
+      },
+      {
+        "id": "drv13",
+        "name": "Grit",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "drv03",
+          "drv12",
+          "drv23"
+        ]
+      },
+      {
+        "id": "drv20",
+        "name": "Improved Full Throttle",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Full Throttle can be attempted as a maneuver at easier difficulty after suffering strain.",
+        "type": "Passive",
+        "links": [
+          "drv10",
+          "drv30"
+        ]
+      },
+      {
+        "id": "drv21",
+        "name": "Tricky Target",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Count the piloted vehicle or starship as one silhouette smaller when attacked.",
+        "type": "Passive",
+        "links": [
+          "drv11",
+          "drv31"
+        ]
+      },
+      {
+        "id": "drv22",
+        "name": "Fine Tuning",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Additional rank of Fine Tuning.",
+        "type": "Passive",
+        "links": [
+          "drv23",
+          "drv32"
+        ]
+      },
+      {
+        "id": "drv23",
+        "name": "Toughened",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Increase wound threshold by 2.",
+        "type": "Passive",
+        "links": [
+          "drv13",
+          "drv22",
+          "drv33"
+        ]
+      },
+      {
+        "id": "drv30",
+        "name": "Defensive Driving",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Increase defense of a piloted vehicle/starship per rank.",
+        "type": "Passive",
+        "links": [
+          "drv20",
+          "drv31",
+          "drv40"
+        ]
+      },
+      {
+        "id": "drv31",
+        "name": "Skilled Jockey",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Additional rank of Skilled Jockey.",
+        "type": "Passive",
+        "links": [
+          "drv21",
+          "drv30",
+          "drv32"
+        ]
+      },
+      {
+        "id": "drv32",
+        "name": "Natural Driver",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Once per session, reroll one Piloting (Planetary) or Gunnery check.",
+        "type": "Active",
+        "links": [
+          "drv22",
+          "drv31"
+        ]
+      },
+      {
+        "id": "drv33",
+        "name": "Gearhead",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Additional rank of Gearhead.",
+        "type": "Passive",
+        "links": [
+          "drv23",
+          "drv43"
+        ]
+      },
+      {
+        "id": "drv40",
+        "name": "Supreme Full Throttle",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Full Throttle increases speed by 2 instead of 1.",
+        "type": "Passive",
+        "links": [
+          "drv30",
+          "drv41"
+        ]
+      },
+      {
+        "id": "drv41",
+        "name": "Full Stop",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Use a full-stop maneuver to drop vehicle speed to zero and take system strain.",
+        "type": "Active",
+        "links": [
+          "drv40",
+          "drv42"
+        ]
+      },
+      {
+        "id": "drv42",
+        "name": "Master Driver",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Once per round, suffer 2 strain to perform a vehicle action as a maneuver.",
+        "type": "Active",
+        "links": [
+          "drv41",
+          "drv43"
+        ]
+      },
+      {
+        "id": "drv43",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "drv33",
+          "drv42"
+        ]
+      }
+    ],
+    "Gunner": [
+      {
+        "id": "gun00",
+        "name": "Durable",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Reduce Critical Injury rolls suffered by 10 per rank, minimum 1.",
+        "type": "Passive",
+        "links": [
+          "gun10"
+        ]
+      },
+      {
+        "id": "gun01",
+        "name": "Grit",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "gun11"
+        ]
+      },
+      {
+        "id": "gun02",
+        "name": "Overwhelm Defenses",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "After a successful vehicle-weapon attack, spend Advantage per rank to reduce defense in the targeted zone.",
+        "type": "Active",
+        "links": [
+          "gun12"
+        ]
+      },
+      {
+        "id": "gun03",
+        "name": "Debilitating Shot",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Spend Advantage on a successful vehicle attack to reduce the target’s maximum speed temporarily.",
+        "type": "Active",
+        "links": [
+          "gun13"
+        ]
+      },
+      {
+        "id": "gun10",
+        "name": "Toughened",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Increase wound threshold by 2.",
+        "type": "Passive",
+        "links": [
+          "gun00",
+          "gun11",
+          "gun20"
+        ]
+      },
+      {
+        "id": "gun11",
+        "name": "Brace",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Brace to remove environmental Setback dice from your next action.",
+        "type": "Active",
+        "links": [
+          "gun01",
+          "gun10",
+          "gun12",
+          "gun21"
+        ]
+      },
+      {
+        "id": "gun12",
+        "name": "Spare Clip",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Ranged weapons do not run out of ammunition because of Despair unless Limited Ammo applies.",
+        "type": "Passive",
+        "links": [
+          "gun02",
+          "gun11",
+          "gun22"
+        ]
+      },
+      {
+        "id": "gun13",
+        "name": "True Aim",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Aim and upgrade the next combat check once per rank.",
+        "type": "Active",
+        "links": [
+          "gun03",
+          "gun23"
+        ]
+      },
+      {
+        "id": "gun20",
+        "name": "Durable",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Additional rank of Durable.",
+        "type": "Passive",
+        "links": [
+          "gun10",
+          "gun21",
+          "gun30"
+        ]
+      },
+      {
+        "id": "gun21",
+        "name": "Enduring",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Increase soak by 1.",
+        "type": "Passive",
+        "links": [
+          "gun11",
+          "gun20",
+          "gun31"
+        ]
+      },
+      {
+        "id": "gun22",
+        "name": "Jury Rigged",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Choose one item to receive a permanent focused improvement while it remains in use.",
+        "type": "Passive",
+        "links": [
+          "gun12",
+          "gun32"
+        ]
+      },
+      {
+        "id": "gun23",
+        "name": "Overwhelm Defenses",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Additional rank of Overwhelm Defenses.",
+        "type": "Active",
+        "links": [
+          "gun13",
+          "gun33"
+        ]
+      },
+      {
+        "id": "gun30",
+        "name": "Toughened",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Increase wound threshold by 2.",
+        "type": "Passive",
+        "links": [
+          "gun20",
+          "gun31",
+          "gun40"
+        ]
+      },
+      {
+        "id": "gun31",
+        "name": "Enduring",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Increase soak by 1.",
+        "type": "Passive",
+        "links": [
+          "gun21",
+          "gun30",
+          "gun41"
+        ]
+      },
+      {
+        "id": "gun32",
+        "name": "Brace",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Additional rank of Brace.",
+        "type": "Active",
+        "links": [
+          "gun22",
+          "gun42"
+        ]
+      },
+      {
+        "id": "gun33",
+        "name": "Exhaust Port",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Spend Destiny before a vehicle attack to ignore Massive for that attack.",
+        "type": "Active",
+        "links": [
+          "gun23",
+          "gun43"
+        ]
+      },
+      {
+        "id": "gun40",
+        "name": "Heroic Fortitude",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Spend Destiny to ignore Critical Injury penalties affecting Brawn or Agility checks for the encounter.",
+        "type": "Active",
+        "links": [
+          "gun30",
+          "gun41"
+        ]
+      },
+      {
+        "id": "gun41",
+        "name": "Jury Rigged",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Additional rank of Jury Rigged.",
+        "type": "Passive",
+        "links": [
+          "gun31",
+          "gun40",
+          "gun42"
+        ]
+      },
+      {
+        "id": "gun42",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "gun32",
+          "gun41",
+          "gun43"
+        ]
+      },
+      {
+        "id": "gun43",
+        "name": "True Aim",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Additional rank of True Aim.",
+        "type": "Active",
+        "links": [
+          "gun33",
+          "gun42"
+        ]
+      }
+    ],
+    "Pilot": [
+      {
+        "id": "pil00",
+        "name": "Full Throttle",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Use Piloting to increase vehicle speed temporarily.",
+        "type": "Active",
+        "links": [
+          "pil10"
+        ]
+      },
+      {
+        "id": "pil01",
+        "name": "Skilled Jockey",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Remove Setback from Piloting (Planetary) and Piloting (Space) checks.",
+        "type": "Passive",
+        "links": [
+          "pil11"
+        ]
+      },
+      {
+        "id": "pil02",
+        "name": "Galaxy Mapper",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Remove Setback from Astrogation checks and reduce route-calculation time.",
+        "type": "Passive",
+        "links": [
+          "pil12"
+        ]
+      },
+      {
+        "id": "pil03",
+        "name": "Let's Ride",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Once per round, mount, dismount, or enter a cockpit or weapon station as an incidental.",
+        "type": "Active",
+        "links": [
+          "pil13"
+        ]
+      },
+      {
+        "id": "pil10",
+        "name": "Skilled Jockey",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Additional rank of Skilled Jockey.",
+        "type": "Passive",
+        "links": [
+          "pil00",
+          "pil11",
+          "pil20"
+        ]
+      },
+      {
+        "id": "pil11",
+        "name": "Dead to Rights",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Spend Destiny before firing a vehicle-mounted weapon to add damage based on Agility.",
+        "type": "Active",
+        "links": [
+          "pil01",
+          "pil10",
+          "pil21"
+        ]
+      },
+      {
+        "id": "pil12",
+        "name": "Galaxy Mapper",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Additional rank of Galaxy Mapper.",
+        "type": "Passive",
+        "links": [
+          "pil02",
+          "pil13",
+          "pil22"
+        ]
+      },
+      {
+        "id": "pil13",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Recover one additional strain per rank after an encounter.",
+        "type": "Passive",
+        "links": [
+          "pil03",
+          "pil12",
+          "pil23"
+        ]
+      },
+      {
+        "id": "pil20",
+        "name": "Improved Full Throttle",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Full Throttle can be attempted as a maneuver at easier difficulty after suffering strain.",
+        "type": "Passive",
+        "links": [
+          "pil10",
+          "pil30"
+        ]
+      },
+      {
+        "id": "pil21",
+        "name": "Improved Dead to Rights",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Dead to Rights adds damage equal to full Agility instead of half.",
+        "type": "Passive",
+        "links": [
+          "pil11",
+          "pil31"
+        ]
+      },
+      {
+        "id": "pil22",
+        "name": "Grit",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "pil12",
+          "pil32"
+        ]
+      },
+      {
+        "id": "pil23",
+        "name": "Natural Pilot",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Once per session, reroll one Piloting (Space) or Gunnery check.",
+        "type": "Active",
+        "links": [
+          "pil13",
+          "pil33"
+        ]
+      },
+      {
+        "id": "pil30",
+        "name": "Grit",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "pil20",
+          "pil31",
+          "pil40"
+        ]
+      },
+      {
+        "id": "pil31",
+        "name": "Supreme Full Throttle",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Full Throttle increases top speed by 2 instead of 1.",
+        "type": "Passive",
+        "links": [
+          "pil21",
+          "pil30",
+          "pil41"
+        ]
+      },
+      {
+        "id": "pil32",
+        "name": "Tricky Target",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Count the piloted vehicle or starship as one silhouette smaller when attacked.",
+        "type": "Passive",
+        "links": [
+          "pil22",
+          "pil33",
+          "pil42"
+        ]
+      },
+      {
+        "id": "pil33",
+        "name": "Defensive Driving",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Increase defense of a piloted vehicle or starship per rank.",
+        "type": "Passive",
+        "links": [
+          "pil23",
+          "pil32",
+          "pil43"
+        ]
+      },
+      {
+        "id": "pil40",
+        "name": "Master Pilot",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Once per round while piloting a starship, suffer 2 strain to perform an action as a maneuver.",
+        "type": "Active",
+        "links": [
+          "pil30",
+          "pil41"
+        ]
+      },
+      {
+        "id": "pil41",
+        "name": "Dedication",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "pil31",
+          "pil40"
+        ]
+      },
+      {
+        "id": "pil42",
+        "name": "Toughened",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Increase wound threshold by 2.",
+        "type": "Passive",
+        "links": [
+          "pil32",
+          "pil43"
+        ]
+      },
+      {
+        "id": "pil43",
+        "name": "Brilliant Evasion",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Once per encounter, win an opposed Piloting check to keep one opponent from attacking you for several rounds.",
+        "type": "Active",
+        "links": [
+          "pil33",
+          "pil42"
+        ]
+      }
+    ],
+    "Commodore": [
+      {
+        "id": "com00",
+        "name": "Solid Repairs",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Repair one additional hull trauma per rank when repairing a vehicle or starship.",
+        "type": "Passive",
+        "links": [
+          "com10"
+        ]
+      },
+      {
+        "id": "com01",
+        "name": "Command",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Add Boost to Leadership checks per rank and bolster allies receiving orders.",
+        "type": "Passive",
+        "links": []
+      },
+      {
+        "id": "com02",
+        "name": "Rapid Reaction",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Suffer strain up to ranks to add automatic successes to an initiative check.",
+        "type": "Active",
+        "links": [
+          "com12"
+        ]
+      },
+      {
+        "id": "com03",
+        "name": "Galaxy Mapper",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Remove Setback from Astrogation checks and reduce route-calculation time.",
+        "type": "Passive",
+        "links": [
+          "com13"
+        ]
+      },
+      {
+        "id": "com10",
+        "name": "Known Schematic",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Once per session, use Knowledge (Education) to establish useful familiarity with a building or ship design.",
+        "type": "Active",
+        "links": [
+          "com00"
+        ]
+      },
+      {
+        "id": "com11",
+        "name": "Commanding Presence",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Remove Setback from Leadership and Cool checks per rank.",
+        "type": "Passive",
+        "links": [
+          "com21"
+        ]
+      },
+      {
+        "id": "com12",
+        "name": "Grit",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "com02",
+          "com22"
+        ]
+      },
+      {
+        "id": "com13",
+        "name": "Familiar Suns",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Once per session, use Knowledge (Outer Rim) to establish useful environmental information about the current location.",
+        "type": "Active",
+        "links": [
+          "com03",
+          "com23"
+        ]
+      },
+      {
+        "id": "com20",
+        "name": "Solid Repairs",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Additional rank of Solid Repairs.",
+        "type": "Passive",
+        "links": [
+          "com30"
+        ]
+      },
+      {
+        "id": "com21",
+        "name": "Command",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Additional rank of Command.",
+        "type": "Passive",
+        "links": [
+          "com11",
+          "com31"
+        ]
+      },
+      {
+        "id": "com22",
+        "name": "Rapid Reaction",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Additional rank of Rapid Reaction.",
+        "type": "Active",
+        "links": [
+          "com12",
+          "com32"
+        ]
+      },
+      {
+        "id": "com23",
+        "name": "Galaxy Mapper",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Additional rank of Galaxy Mapper.",
+        "type": "Passive",
+        "links": [
+          "com13",
+          "com33"
+        ]
+      },
+      {
+        "id": "com30",
+        "name": "Hold Together",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Spend Destiny after a vehicle or starship takes damage to convert that damage into system strain.",
+        "type": "Active",
+        "links": [
+          "com20",
+          "com40"
+        ]
+      },
+      {
+        "id": "com31",
+        "name": "Commanding Presence",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Additional rank of Commanding Presence.",
+        "type": "Passive",
+        "links": [
+          "com21",
+          "com41"
+        ]
+      },
+      {
+        "id": "com32",
+        "name": "Grit",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "com22",
+          "com42"
+        ]
+      },
+      {
+        "id": "com33",
+        "name": "Master Starhopper",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Once per round, suffer strain to reduce the difficulty of an Astrogation check.",
+        "type": "Active",
+        "links": [
+          "com23",
+          "com43"
+        ]
+      },
+      {
+        "id": "com40",
+        "name": "Solid Repairs",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Additional rank of Solid Repairs.",
+        "type": "Passive",
+        "links": [
+          "com30",
+          "com41"
+        ]
+      },
+      {
+        "id": "com41",
+        "name": "Fire Control",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Direct coordinated fire so attacks from the current vehicle treat target silhouette as one larger until your next turn.",
+        "type": "Active",
+        "links": [
+          "com31",
+          "com40",
+          "com42"
+        ]
+      },
+      {
+        "id": "com42",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "com32",
+          "com41",
+          "com43"
+        ]
+      },
+      {
+        "id": "com43",
+        "name": "Galaxy Mapper",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Additional rank of Galaxy Mapper.",
+        "type": "Passive",
+        "links": [
+          "com33",
+          "com42"
+        ]
+      }
+    ],
+    "Squadron Leader": [
+      {
+        "id": "sql00",
+        "name": "Grit",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "sql10"
+        ]
+      },
+      {
+        "id": "sql01",
+        "name": "Quick Strike",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Add Boost to combat checks against targets that have not acted yet.",
+        "type": "Passive",
+        "links": []
+      },
+      {
+        "id": "sql02",
+        "name": "Let's Ride",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Once per round, mount, dismount, or enter a cockpit or weapon station as an incidental.",
+        "type": "Active",
+        "links": []
+      },
+      {
+        "id": "sql03",
+        "name": "Defensive Driving",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Increase defense of a piloted vehicle or starship per rank.",
+        "type": "Passive",
+        "links": [
+          "sql13"
+        ]
+      },
+      {
+        "id": "sql10",
+        "name": "Field Commander",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Use Leadership to let nearby allies immediately perform free maneuvers by suffering strain.",
+        "type": "Active",
+        "links": [
+          "sql00",
+          "sql11",
+          "sql20"
+        ]
+      },
+      {
+        "id": "sql11",
+        "name": "Confidence",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Reduce the difficulty of fear checks per rank.",
+        "type": "Passive",
+        "links": [
+          "sql10",
+          "sql21"
+        ]
+      },
+      {
+        "id": "sql12",
+        "name": "Quick Strike",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Additional rank of Quick Strike.",
+        "type": "Passive",
+        "links": [
+          "sql13",
+          "sql22"
+        ]
+      },
+      {
+        "id": "sql13",
+        "name": "Situational Awareness",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Nearby allies gain Boost dice on Perception and Vigilance checks while operating around your vehicle.",
+        "type": "Passive",
+        "links": [
+          "sql03",
+          "sql12",
+          "sql23"
+        ]
+      },
+      {
+        "id": "sql20",
+        "name": "Command",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Add Boost to Leadership checks per rank and bolster allies receiving orders.",
+        "type": "Passive",
+        "links": [
+          "sql10",
+          "sql30"
+        ]
+      },
+      {
+        "id": "sql21",
+        "name": "Grit",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Increase strain threshold by 1.",
+        "type": "Passive",
+        "links": [
+          "sql11",
+          "sql31"
+        ]
+      },
+      {
+        "id": "sql22",
+        "name": "Full Stop",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Bring a piloted vehicle to speed zero as a maneuver, suffering system strain based on speed reduced.",
+        "type": "Active",
+        "links": [
+          "sql12",
+          "sql32"
+        ]
+      },
+      {
+        "id": "sql23",
+        "name": "Defensive Driving",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Additional rank of Defensive Driving.",
+        "type": "Passive",
+        "links": [
+          "sql13",
+          "sql33"
+        ]
+      },
+      {
+        "id": "sql30",
+        "name": "Improved Field Commander",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Field Commander can affect more allies and, with favorable results, enable an immediate action.",
+        "type": "Passive",
+        "links": [
+          "sql20",
+          "sql40"
+        ]
+      },
+      {
+        "id": "sql31",
+        "name": "Command",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Additional rank of Command.",
+        "type": "Passive",
+        "links": [
+          "sql21",
+          "sql32",
+          "sql41"
+        ]
+      },
+      {
+        "id": "sql32",
+        "name": "Form On Me!",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Nearby allied pilots can share the benefits of your Gain the Advantage result.",
+        "type": "Passive",
+        "links": [
+          "sql22",
+          "sql31",
+          "sql33",
+          "sql42"
+        ]
+      },
+      {
+        "id": "sql33",
+        "name": "Tricky Target",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Count the piloted craft as one silhouette smaller when it is attacked.",
+        "type": "Passive",
+        "links": [
+          "sql23",
+          "sql32",
+          "sql43"
+        ]
+      },
+      {
+        "id": "sql40",
+        "name": "Master Leader",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Once per round, suffer strain to reduce the difficulty of your next Leadership check.",
+        "type": "Active",
+        "links": [
+          "sql30",
+          "sql41"
+        ]
+      },
+      {
+        "id": "sql41",
+        "name": "Confidence",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Additional rank of Confidence.",
+        "type": "Passive",
+        "links": [
+          "sql31",
+          "sql40"
+        ]
+      },
+      {
+        "id": "sql42",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "sql32"
+        ]
+      },
+      {
+        "id": "sql43",
+        "name": "Brilliant Evasion",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Once per encounter, win an opposed Piloting check to keep one opponent from attacking you for several rounds.",
+        "type": "Active",
+        "links": [
+          "sql33"
+        ]
+      }
+    ],
+    "Tactician": [
+      {
+        "id": "tac00",
+        "name": "Outdoorsman",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Remove Setback from wilderness movement/environmental checks and reduce overland travel time.",
+        "type": "Passive",
+        "links": [
+          "tac10"
+        ]
+      },
+      {
+        "id": "tac01",
+        "name": "Commanding Presence",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Remove Setback from Leadership and Cool checks per rank.",
+        "type": "Passive",
+        "links": [
+          "tac11"
+        ]
+      },
+      {
+        "id": "tac02",
+        "name": "Toughened",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Increase wound threshold by 2.",
+        "type": "Passive",
+        "links": [
+          "tac12"
+        ]
+      },
+      {
+        "id": "tac03",
+        "name": "Side Step",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Suffer strain as a maneuver to upgrade incoming ranged attacks until your next turn.",
+        "type": "Active",
+        "links": [
+          "tac13"
+        ]
+      },
+      {
+        "id": "tac10",
+        "name": "Outdoorsman",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Additional rank of Outdoorsman.",
+        "type": "Passive",
+        "links": [
+          "tac00",
+          "tac20"
+        ]
+      },
+      {
+        "id": "tac11",
+        "name": "Confidence",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Reduce the difficulty of fear checks per rank.",
+        "type": "Passive",
+        "links": [
+          "tac01",
+          "tac21"
+        ]
+      },
+      {
+        "id": "tac12",
+        "name": "Quick Draw",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Once per round, draw or holster a weapon or item as an incidental.",
+        "type": "Active",
+        "links": [
+          "tac02",
+          "tac13",
+          "tac22"
+        ]
+      },
+      {
+        "id": "tac13",
+        "name": "Swift",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Ignore ordinary penalties for moving through difficult terrain.",
+        "type": "Passive",
+        "links": [
+          "tac03",
+          "tac12",
+          "tac23"
+        ]
+      },
+      {
+        "id": "tac20",
+        "name": "Natural Outdoorsman",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Once per session, reroll one Resilience or Survival check.",
+        "type": "Active",
+        "links": [
+          "tac10",
+          "tac30"
+        ]
+      },
+      {
+        "id": "tac21",
+        "name": "Toughened",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Increase wound threshold by 2.",
+        "type": "Passive",
+        "links": [
+          "tac11",
+          "tac31"
+        ]
+      },
+      {
+        "id": "tac22",
+        "name": "Body Guard",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Suffer strain to guard an engaged ally, upgrading attacks against that ally until your next turn.",
+        "type": "Active",
+        "links": [
+          "tac12",
+          "tac23",
+          "tac32"
+        ]
+      },
+      {
+        "id": "tac23",
+        "name": "Body Guard",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Additional rank of Body Guard.",
+        "type": "Active",
+        "links": [
+          "tac13",
+          "tac22",
+          "tac33"
+        ]
+      },
+      {
+        "id": "tac30",
+        "name": "Confidence",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Additional rank of Confidence.",
+        "type": "Passive",
+        "links": [
+          "tac20",
+          "tac31",
+          "tac40"
+        ]
+      },
+      {
+        "id": "tac31",
+        "name": "Commanding Presence",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Additional rank of Commanding Presence.",
+        "type": "Passive",
+        "links": [
+          "tac21",
+          "tac30",
+          "tac41"
+        ]
+      },
+      {
+        "id": "tac32",
+        "name": "Field Commander",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Use Leadership to let nearby allies immediately perform free maneuvers by suffering strain.",
+        "type": "Active",
+        "links": [
+          "tac22",
+          "tac42"
+        ]
+      },
+      {
+        "id": "tac33",
+        "name": "Side Step",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Additional rank of Side Step.",
+        "type": "Active",
+        "links": [
+          "tac23",
+          "tac43"
+        ]
+      },
+      {
+        "id": "tac40",
+        "name": "Coordinated Assault",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Coordinate nearby allies so their combat checks gain extra Advantage for a short time.",
+        "type": "Active",
+        "links": [
+          "tac30"
+        ]
+      },
+      {
+        "id": "tac41",
+        "name": "Natural Leader",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Once per session, reroll one Cool or Leadership check.",
+        "type": "Active",
+        "links": [
+          "tac31"
+        ]
+      },
+      {
+        "id": "tac42",
+        "name": "Improved Field Commander",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Field Commander can affect more allies and, with favorable results, enable an immediate action.",
+        "type": "Passive",
+        "links": [
+          "tac32"
+        ]
+      },
+      {
+        "id": "tac43",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "tac33"
+        ]
+      }
+    ]
+  },
+  "skills": {
+    "Driver": [
+      "Cool",
+      "Gunnery",
+      "Mechanics",
+      "Piloting (Planetary)"
+    ],
+    "Gunner": [
+      "Discipline",
+      "Gunnery",
+      "Ranged (Heavy)",
+      "Resilience"
+    ],
+    "Pilot": [
+      "Astrogation",
+      "Gunnery",
+      "Piloting (Planetary)",
+      "Piloting (Space)"
+    ],
+    "Commodore": [
+      "Astrogation",
+      "Computers",
+      "Knowledge (Education)",
+      "Knowledge (Outer Rim)"
+    ],
+    "Squadron Leader": [
+      "Gunnery",
+      "Mechanics",
+      "Piloting (Planetary)",
+      "Piloting (Space)"
+    ],
+    "Tactician": [
+      "Brawl",
+      "Discipline",
+      "Leadership",
+      "Ranged (Heavy)"
+    ]
+  }
+}

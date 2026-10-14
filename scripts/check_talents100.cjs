@@ -11,6 +11,8 @@ const specs=Object.keys(fixture.trees),checks=[],errors=[];let browser,server;
  server=http.createServer((req,res)=>{res.setHeader('Content-Type','text/html; charset=utf-8');res.end(fs.readFileSync(path.join(root,'index.html')))});await new Promise(r=>server.listen(0,'127.0.0.1',r));
  browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),args:['--no-sandbox','--disable-dev-shm-usage']});
  const page=await browser.newPage({viewport:{width:1280,height:800},hasTouch:true,serviceWorkers:'block'});page.on('pageerror',e=>errors.push(e.message));let cancel=false;
+ // Allow the large purchase/geometry batch to settle on a busy test host.
+ page.setDefaultTimeout(60000);
  page.on('dialog',async d=>{if(cancel)return d.dismiss();if(d.type==='confirm')return d.accept();await d.accept(d.message().includes('Dedication')?'Brawn':d.message().includes('Knowledge Specialization')?'Knowledge (Lore)':d.message().includes('first career skill')?'Astrogation':d.message().includes('second career skill')?'Charm':d.defaultValue());});
  await page.goto(`http://127.0.0.1:${server.address().port}/`);await page.waitForFunction(()=>window.Game97?.ready);
  const test=async(name,fn)=>{try{await fn();checks.push(name);if(checks.length%25===0)console.log('Passed',checks.length)}catch(e){e.message=name+': '+e.message;throw e;}};

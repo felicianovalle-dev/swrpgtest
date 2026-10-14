@@ -10239,6 +10239,941 @@
         "Active",
         "Active"
       ]
+    },
+    "Driver": {
+      "names": [
+        "Full Throttle",
+        "All-Terrain Driver",
+        "Fine Tuning",
+        "Gearhead",
+        "Grit",
+        "Skilled Jockey",
+        "Rapid Reaction",
+        "Grit",
+        "Improved Full Throttle",
+        "Tricky Target",
+        "Fine Tuning",
+        "Toughened",
+        "Defensive Driving",
+        "Skilled Jockey",
+        "Natural Driver",
+        "Gearhead",
+        "Supreme Full Throttle",
+        "Full Stop",
+        "Master Driver",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "drv00",
+        "drv01",
+        "drv02",
+        "drv03",
+        "drv10",
+        "drv11",
+        "drv12",
+        "drv13",
+        "drv20",
+        "drv21",
+        "drv22",
+        "drv23",
+        "drv30",
+        "drv31",
+        "drv32",
+        "drv33",
+        "drv40",
+        "drv41",
+        "drv42",
+        "drv43"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Age of Rebellion Core \u00b7 p.67 \u00b7 supplied AOR tree collection, PDF p.3 \u00b7 earlier source reference: Enter the Unknown \u00b7 talent tree p.29",
+      "collection": "aor",
+      "page": 3,
+      "bookPdfPage": 68,
+      "bookFile": "aor-core",
+      "bookPage": 67,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "core101",
+      "priorSource": "Age of Rebellion Core \u00b7 p.67 / Enter the Unknown \u00b7 talent tree p.29"
+    },
+    "Gunner": {
+      "names": [
+        "Durable",
+        "Grit",
+        "Overwhelm Defenses",
+        "Debilitating Shot",
+        "Toughened",
+        "Brace",
+        "Spare Clip",
+        "True Aim",
+        "Durable",
+        "Enduring",
+        "Jury Rigged",
+        "Overwhelm Defenses",
+        "Toughened",
+        "Enduring",
+        "Brace",
+        "Exhaust Port",
+        "Heroic Fortitude",
+        "Jury Rigged",
+        "Dedication",
+        "True Aim"
+      ],
+      "nodeIds": [
+        "gun00",
+        "gun01",
+        "gun02",
+        "gun03",
+        "gun10",
+        "gun11",
+        "gun12",
+        "gun13",
+        "gun20",
+        "gun21",
+        "gun22",
+        "gun23",
+        "gun30",
+        "gun31",
+        "gun32",
+        "gun33",
+        "gun40",
+        "gun41",
+        "gun42",
+        "gun43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Age of Rebellion Core \u00b7 p.68 \u00b7 supplied AOR tree collection, PDF p.4",
+      "collection": "aor",
+      "page": 4,
+      "bookPdfPage": 69,
+      "bookFile": "aor-core",
+      "bookPage": 68,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "core101"
+    },
+    "Pilot": {
+      "names": [
+        "Full Throttle",
+        "Skilled Jockey",
+        "Galaxy Mapper",
+        "Let's Ride",
+        "Skilled Jockey",
+        "Dead to Rights",
+        "Galaxy Mapper",
+        "Rapid Recovery",
+        "Improved Full Throttle",
+        "Improved Dead to Rights",
+        "Grit",
+        "Natural Pilot",
+        "Grit",
+        "Supreme Full Throttle",
+        "Tricky Target",
+        "Defensive Driving",
+        "Master Pilot",
+        "Dedication",
+        "Toughened",
+        "Brilliant Evasion"
+      ],
+      "nodeIds": [
+        "pil00",
+        "pil01",
+        "pil02",
+        "pil03",
+        "pil10",
+        "pil11",
+        "pil12",
+        "pil13",
+        "pil20",
+        "pil21",
+        "pil22",
+        "pil23",
+        "pil30",
+        "pil31",
+        "pil32",
+        "pil33",
+        "pil40",
+        "pil41",
+        "pil42",
+        "pil43"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Age of Rebellion Core \u00b7 p.69 \u00b7 supplied AOR tree collection, PDF p.6",
+      "collection": "aor",
+      "page": 6,
+      "bookPdfPage": 70,
+      "bookFile": "aor-core",
+      "bookPage": 69,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "core101"
+    },
+    "Commodore": {
+      "names": [
+        "Solid Repairs",
+        "Command",
+        "Rapid Reaction",
+        "Galaxy Mapper",
+        "Known Schematic",
+        "Commanding Presence",
+        "Grit",
+        "Familiar Suns",
+        "Solid Repairs",
+        "Command",
+        "Rapid Reaction",
+        "Galaxy Mapper",
+        "Hold Together",
+        "Commanding Presence",
+        "Grit",
+        "Master Starhopper",
+        "Solid Repairs",
+        "Fire Control",
+        "Dedication",
+        "Galaxy Mapper"
+      ],
+      "nodeIds": [
+        "com00",
+        "com01",
+        "com02",
+        "com03",
+        "com10",
+        "com11",
+        "com12",
+        "com13",
+        "com20",
+        "com21",
+        "com22",
+        "com23",
+        "com30",
+        "com31",
+        "com32",
+        "com33",
+        "com40",
+        "com41",
+        "com42",
+        "com43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Age of Rebellion Core \u00b7 p.73 \u00b7 supplied AOR tree collection, PDF p.9",
+      "collection": "aor",
+      "page": 9,
+      "bookPdfPage": 74,
+      "bookFile": "aor-core",
+      "bookPage": 73,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "core101"
+    },
+    "Squadron Leader": {
+      "names": [
+        "Grit",
+        "Quick Strike",
+        "Let's Ride",
+        "Defensive Driving",
+        "Field Commander",
+        "Confidence",
+        "Quick Strike",
+        "Situational Awareness",
+        "Command",
+        "Grit",
+        "Full Stop",
+        "Defensive Driving",
+        "Improved Field Commander",
+        "Command",
+        "Form On Me",
+        "Tricky Target",
+        "Master Leader",
+        "Confidence",
+        "Dedication",
+        "Brilliant Evasion"
+      ],
+      "nodeIds": [
+        "sql00",
+        "sql01",
+        "sql02",
+        "sql03",
+        "sql10",
+        "sql11",
+        "sql12",
+        "sql13",
+        "sql20",
+        "sql21",
+        "sql22",
+        "sql23",
+        "sql30",
+        "sql31",
+        "sql32",
+        "sql33",
+        "sql40",
+        "sql41",
+        "sql42",
+        "sql43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "universal": false,
+      "source": "Age of Rebellion Core \u00b7 p.74 \u00b7 supplied AOR tree collection, PDF p.12",
+      "collection": "aor",
+      "page": 12,
+      "bookPdfPage": 75,
+      "bookFile": "aor-core",
+      "bookPage": 74,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "core101"
+    },
+    "Tactician": {
+      "names": [
+        "Outdoorsman",
+        "Commanding Presence",
+        "Toughened",
+        "Side Step",
+        "Outdoorsman",
+        "Confidence",
+        "Quick Draw",
+        "Swift",
+        "Natural Outdoorsman",
+        "Toughened",
+        "Body Guard",
+        "Body Guard",
+        "Confidence",
+        "Commanding Presence",
+        "Field Commander",
+        "Side Step",
+        "Coordinated Assault",
+        "Natural Leader",
+        "Improved Field Commander",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "tac00",
+        "tac01",
+        "tac02",
+        "tac03",
+        "tac10",
+        "tac11",
+        "tac12",
+        "tac13",
+        "tac20",
+        "tac21",
+        "tac22",
+        "tac23",
+        "tac30",
+        "tac31",
+        "tac32",
+        "tac33",
+        "tac40",
+        "tac41",
+        "tac42",
+        "tac43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "universal": false,
+      "source": "Age of Rebellion Core \u00b7 p.75 \u00b7 supplied AOR tree collection, PDF p.14",
+      "collection": "aor",
+      "page": 14,
+      "bookPdfPage": 76,
+      "bookFile": "aor-core",
+      "bookPage": 75,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "core101"
     }
   },
   "universals": {
@@ -24136,6 +25071,549 @@
       "pdfPage": 160,
       "source": "Age of Rebellion Core \u00b7 p.159",
       "summary": "Once per session, use Presence instead of the usual characteristic for one skill check."
+    }
+  },
+  "talentRules101": {
+    "All-Terrain Driver": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 142,
+      "pdfPage": 143,
+      "source": "Age of Rebellion Core \u00b7 p.142",
+      "summary": "When driving with Piloting (Planetary), ignore the usual penalties for difficult terrain.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve terrain-driving benefits manually; this does not change every generic Piloting check."
+    },
+    "Body Guard": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 143,
+      "pdfPage": 144,
+      "source": "Age of Rebellion Core \u00b7 p.143",
+      "summary": "Once per round, use a maneuver and suffer strain up to your ranks to upgrade attacks against one engaged ally until your next turn.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the guarding maneuver, strain cost and temporary protection manually."
+    },
+    "Brace": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 143,
+      "pdfPage": 144,
+      "source": "Age of Rebellion Core \u00b7 p.143",
+      "summary": "Use a maneuver to remove one environmental Setback per rank from your next action."
+    },
+    "Brilliant Evasion": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 144,
+      "pdfPage": 145,
+      "source": "Age of Rebellion Core \u00b7 p.144",
+      "summary": "Once per encounter, an opposed Piloting action prevents one chosen opponent\u2019s craft from attacking yours for Agility rounds.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the opposed vehicle-scale action and protected craft manually."
+    },
+    "Command": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 144,
+      "pdfPage": 145,
+      "source": "Age of Rebellion Core \u00b7 p.144",
+      "summary": "Add one Boost per rank to Leadership and related inspiring checks. Inspired targets also gain the listed Discipline benefit for twenty-four hours.",
+      "resolutionNote": "Adds Boost to PC Leadership checks. Resolve inspired allies\u2019 Discipline benefits manually."
+    },
+    "Commanding Presence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 144,
+      "pdfPage": 145,
+      "source": "Age of Rebellion Core \u00b7 p.144",
+      "summary": "Remove one Setback per rank from Leadership and Cool checks."
+    },
+    "Confidence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 144,
+      "pdfPage": 145,
+      "source": "Age of Rebellion Core \u00b7 p.144",
+      "summary": "Reduce the difficulty of Discipline checks against fear by one per rank; difficulty may reach zero."
+    },
+    "Coordinated Assault": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "summary": "Use a maneuver to give one Advantage on combat checks to engaged allies up to your Leadership ranks until your next turn. Each additional rank extends the range by one band.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the ally maneuver, range, duration and Advantage manually.",
+      "errata": "Age of Rebellion errata v1.0 \u00b7 p.1: range increases for additional ranks."
+    },
+    "Dead to Rights": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "summary": "Spend a Destiny Point to add half Agility, rounded up, to one successful hit with vehicle or starship-mounted weapons.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the Destiny expenditure and one-hit mounted-weapon bonus manually."
+    },
+    "Improved Dead to Rights": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "summary": "Dead to Rights adds full Agility damage to one hit instead of half; its Destiny cost remains.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve Dead to Rights with full Agility damage manually."
+    },
+    "Debilitating Shot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "summary": "On a successful vehicle or starship attack, spend 2 Advantage to reduce the target\u2019s maximum speed by 1 until the next round ends."
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145"
+    },
+    "Defensive Driving": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "resolution": "manual",
+      "resolutionNote": "Resolve defense increases in each vehicle or starship zone manually."
+    },
+    "Durable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 146,
+      "pdfPage": 147,
+      "source": "Age of Rebellion Core \u00b7 p.146"
+    },
+    "Enduring": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 146,
+      "pdfPage": 147,
+      "source": "Age of Rebellion Core \u00b7 p.146",
+      "summary": "Gain one soak per rank."
+    },
+    "Exhaust Port": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 146,
+      "pdfPage": 147,
+      "source": "Age of Rebellion Core \u00b7 p.146",
+      "summary": "Before a vehicle or starship attack, spend a Destiny Point to ignore the target\u2019s Massive rule for that attack."
+    },
+    "Familiar Suns": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 146,
+      "pdfPage": 147,
+      "source": "Age of Rebellion Core \u00b7 p.146"
+    },
+    "Field Commander": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 146,
+      "pdfPage": 147,
+      "source": "Age of Rebellion Core \u00b7 p.146",
+      "summary": "An Average Leadership action lets nearby allies up to Presence suffer 1 strain each to perform one immediate free maneuver, within the source limits.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the Leadership action and immediate ally maneuvers manually."
+    },
+    "Improved Field Commander": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 146,
+      "pdfPage": 147,
+      "source": "Age of Rebellion Core \u00b7 p.146",
+      "summary": "Field Commander can affect twice Presence in allies; Triumph can let one ally take an action instead, still suffering 1 strain.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve additional affected allies and the Triumph-for-action option manually."
+    },
+    "Fine Tuning": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 147,
+      "pdfPage": 148,
+      "source": "Age of Rebellion Core \u00b7 p.147"
+    },
+    "Fire Control": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 147,
+      "pdfPage": 148,
+      "source": "Age of Rebellion Core \u00b7 p.147",
+      "summary": "Use a maneuver to count enemy silhouette as one larger for combat checks from your current craft until your next turn begins. Multiple uses do not stack.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the vehicle-scale maneuver and silhouette change manually."
+    },
+    "Full Stop": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 147,
+      "pdfPage": 148,
+      "source": "Age of Rebellion Core \u00b7 p.147",
+      "summary": "Use a maneuver to reduce your craft\u2019s current speed to zero; it suffers system strain equal to the speed reduced.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the stopping maneuver, current speed and system strain manually."
+    },
+    "Form On Me": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 147,
+      "pdfPage": 148,
+      "source": "Age of Rebellion Core \u00b7 p.147",
+      "summary": "After Gain the Advantage, nearby allied vehicles up to your Leadership ranks share its benefits while the source range and duration conditions hold.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve shared Gain the Advantage benefits, planetary range and expiry manually."
+    },
+    "Full Throttle": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 147,
+      "pdfPage": 148,
+      "source": "Age of Rebellion Core \u00b7 p.147"
+    },
+    "Galaxy Mapper": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 148,
+      "pdfPage": 149,
+      "source": "Age of Rebellion Core \u00b7 p.148",
+      "summary": "Remove one Setback per rank from Astrogation. Calculating a course takes half the usual time; extra ranks do not further reduce time.",
+      "resolutionNote": "Removes Astrogation setbacks on PC checks. Resolve course-calculation time manually."
+    },
+    "Gearhead": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 148,
+      "pdfPage": 149,
+      "source": "Age of Rebellion Core \u00b7 p.148"
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 148,
+      "pdfPage": 149,
+      "source": "Age of Rebellion Core \u00b7 p.148"
+    },
+    "Heroic Fortitude": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 148,
+      "pdfPage": 149,
+      "source": "Age of Rebellion Core \u00b7 p.148"
+    },
+    "Improved Full Throttle": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 148,
+      "pdfPage": 149,
+      "source": "Age of Rebellion Core \u00b7 p.148",
+      "summary": "Suffer 1 strain to attempt Full Throttle as a maneuver at Average difficulty."
+    },
+    "Supreme Full Throttle": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 148,
+      "pdfPage": 149,
+      "source": "Age of Rebellion Core \u00b7 p.148",
+      "summary": "Full Throttle increases vehicle speed by 2 rather than 1."
+    },
+    "Hold Together": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 149,
+      "pdfPage": 150,
+      "source": "Age of Rebellion Core \u00b7 p.149",
+      "summary": "After your vehicle or starship takes damage, spend a Destiny Point to convert that damage into system strain."
+    },
+    "Jury Rigged": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 150,
+      "pdfPage": 151,
+      "source": "Age of Rebellion Core \u00b7 p.150",
+      "summary": "Choose one personal item per rank and one permitted permanent improvement. Reassign only when that item is lost or destroyed.",
+      "resolution": "manual",
+      "resolutionNote": "Record each chosen item and allowed improvement manually."
+    },
+    "Known Schematic": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "summary": "Once per session, make a Hard Knowledge (Education) maneuver to become familiar with a building or ship\u2019s design."
+    },
+    "Let's Ride": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151"
+    },
+    "Master Driver": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "summary": "Once per round while using Piloting (Planetary), suffer 2 strain to perform an action as a maneuver.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the action-as-maneuver conversion and strain cost manually."
+    },
+    "Master Leader": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "summary": "Once per round, suffer 2 strain to reduce your next Leadership difficulty by 1, to a minimum of Easy.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the next Leadership check\u2019s difficulty reduction and strain cost manually."
+    },
+    "Master Pilot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "summary": "Once per round while using Piloting (Space), suffer 2 strain to perform an action as a maneuver.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the action-as-maneuver conversion and strain cost manually."
+    },
+    "Master Starhopper": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "summary": "Once per round, suffer 2 strain to reduce your next Astrogation difficulty by 1, to a minimum of Easy.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the next Astrogation check\u2019s difficulty reduction and strain cost manually."
+    },
+    "Natural Driver": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153",
+      "summary": "Once per session, reroll one Piloting (Planetary) or Gunnery check.",
+      "resolutionNote": "Offers one failed qualifying check reroll per session. Rerolling successful checks remains manual."
+    },
+    "Natural Leader": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153",
+      "summary": "Once per session, reroll one Cool or Leadership check.",
+      "resolutionNote": "Offers one failed qualifying check reroll per session. Rerolling successful checks remains manual."
+    },
+    "Natural Outdoorsman": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153"
+    },
+    "Natural Pilot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153",
+      "summary": "Once per session, reroll one Piloting (Space) or Gunnery check.",
+      "resolutionNote": "Offers one failed qualifying check reroll per session. Rerolling successful checks remains manual."
+    },
+    "Outdoorsman": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154",
+      "summary": "Remove one Setback per rank from terrain or environmental checks; overland travel takes half the usual time."
+    },
+    "Quick Strike": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154"
+    },
+    "Rapid Recovery": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154"
+    },
+    "Overwhelm Defenses": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154",
+      "summary": "After an unsuccessful craft-mounted attack, spend pairs of Advantage up to your ranks to reduce the targeted defense zone by 1 per pair for the rest of the encounter.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve Advantage expenditure and the affected defense zone manually."
+    },
+    "Quick Draw": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154"
+    },
+    "Rapid Reaction": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154"
+    },
+    "Side Step": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 156,
+      "pdfPage": 157,
+      "source": "Age of Rebellion Core \u00b7 p.156"
+    },
+    "Situational Awareness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 156,
+      "pdfPage": 157,
+      "source": "Age of Rebellion Core \u00b7 p.156",
+      "summary": "While aboard a craft with working communications, allies at short planetary range gain one Boost to Perception and Vigilance; those at close range gain two.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve ally bonuses at planetary scale and the working-comms requirement manually."
+    },
+    "Skilled Jockey": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 156,
+      "pdfPage": 157,
+      "source": "Age of Rebellion Core \u00b7 p.156"
+    },
+    "Solid Repairs": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 156,
+      "pdfPage": 157,
+      "source": "Age of Rebellion Core \u00b7 p.156"
+    },
+    "Spare Clip": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 157,
+      "pdfPage": 158,
+      "source": "Age of Rebellion Core \u00b7 p.157",
+      "summary": "A ranged weapon cannot run out of ammunition from Despair. Limited Ammo still applies."
+    },
+    "Swift": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 158,
+      "pdfPage": 159,
+      "source": "Age of Rebellion Core \u00b7 p.158"
+    },
+    "Tricky Target": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 158,
+      "pdfPage": 159,
+      "source": "Age of Rebellion Core \u00b7 p.158",
+      "summary": "When your piloted craft is attacked, count its silhouette as one smaller.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve effective silhouette for attacks against your craft manually."
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 158,
+      "pdfPage": 159,
+      "source": "Age of Rebellion Core \u00b7 p.158"
+    },
+    "True Aim": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 158,
+      "pdfPage": 159,
+      "source": "Age of Rebellion Core \u00b7 p.158",
+      "summary": "Once per round, use a maneuver to gain normal aiming benefits and upgrade your next combat check once per rank.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the maneuver\u2019s aiming benefits and per-rank upgrades manually."
     }
   }
 }

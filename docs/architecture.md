@@ -105,10 +105,10 @@ Chromium phone/touch emulation does not establish physical iPhone Safari support
 # Character options and campaign beginnings
 
 `src/content/character-options.json` owns the additive, source-referenced species,
-career packages, universal packages, requirements, and 25 reviewed tree layouts.
+career packages, universal packages, requirements, and reviewed tree records.
 `src/catalog.js` installs these options before the runtime captures fresh state.
 The builder substitutes the JSON once into its explicit data marker; no remote
-catalog or PDF is needed at runtime. Existing tree IDs remain untouched.
+catalog or PDF is needed at runtime. Audited existing layouts can supply `nodeIds`; the six core-tree records retain all 120 prior IDs while correcting their connections and labels.
 
 `src/campaign-content.js` owns era/allegiance metadata and twelve original short
 mission definitions. It registers them with the existing story engine rather than
@@ -137,7 +137,7 @@ Knowledge Specialization skill. Save validation checks both before hydration. Th
 Already known unranked talents make their connections available without another
 charge or adding a second effect-counting copy.
 
-Source rules and short summaries live in `talentRules98` within the catalog JSON. AoR records select `talentRules100` through `ruleSet`; `Talents98.ruleFor` chooses their source-specific metadata without changing EotE/F&D variants. Courier’s Pilot Training uses the shared career-skill package map. `talentRuleVariants99` preserves sourcebook differences in ranked labels instead of applying one book’s label to every career. `bookReviewed` marks the sourcebook-checked replacements, and `replacesSimplified` opts those trees into compatibility migration. Coverage counts exclude imported layouts from the remaining simplified count.
+Source rules and short summaries live in `talentRules98` within the catalog JSON. AoR replacements select `talentRules100` through `ruleSet`; the six older core-tree records select `talentRules101`. `nodeIds` preserves their original IDs and `auditedExisting` distinguishes their reviewed status. These records are excluded from replacement migration because their IDs and costs have not changed. Source-specific `resolutionNote` fields keep manual action limits next to the rule metadata. `ruleSets` centralizes lookup; `Talents98.ruleFor` chooses their source-specific metadata without changing EotE/F&D variants. Courier’s Pilot Training uses the shared career-skill package map. `talentRuleVariants99` preserves sourcebook differences in ranked labels instead of applying one book’s label to every career. `bookReviewed` marks the sourcebook-checked replacements, and `replacesSimplified` opts those trees into compatibility migration. Coverage counts exclude imported layouts from the remaining simplified count.
 `src/talents98.css` keeps card descriptions and source paths in normal flow above
 their purchase buttons. The module subscribes to the shared render/navigation
 hooks instead of adding legacy presentation wrappers.
@@ -150,7 +150,7 @@ toxin/outdoor/scavenging/fear/academic flags; they do not add a global bonus.
 `npm run test:talents` covers every prior-release prototype node, real purchases
 through all twelve trees, save migration/reload, skill choices, conditional effects,
 single-hit damage, already known talents, and phone card geometry. See
-`docs/talent-tree-verification.md` for the earlier core-tree validation. `npm run test:talents:force` adds 320 simplified-purchase fixtures, all sixteen source purchase paths, combined 560-purchase continuation, Teacher choices, Force Rating and Dedication guards, source-label variants, repair effects, and phone geometry. See `docs/force-talent-verification.md` for that batch’s source references and validation scope. `npm run test:talents:aor` adds 400 prior AoR fixtures, all twenty purchase paths, combined 960-purchase continuation, skill-choice persistence, session income, Eye for Detail and single-hit combat behavior, and six viewport sizes. See `docs/aor-talent-verification.md`.
+`docs/talent-tree-verification.md` for the earlier core-tree validation. `npm run test:talents:force` adds 320 simplified-purchase fixtures, all sixteen source purchase paths, combined 560-purchase continuation, Teacher choices, Force Rating and Dedication guards, source-label variants, repair effects, and phone geometry. See `docs/force-talent-verification.md` for that batch’s source references and validation scope. `npm run test:talents:aor` adds 400 prior AoR fixtures, all twenty purchase paths, combined 960-purchase continuation, skill-choice persistence, session income, Eye for Detail and single-hit combat behavior, and six viewport sizes. See `docs/aor-talent-verification.md`. `npm run test:talents:core` covers 120 unchanged-ID cases, 1080 combined prior purchases, all six actual purchase paths, independently checked connection changes, source labels, existing check/repair benefits, and phone geometry. See `docs/core-tree-audit-verification.md`.
 
 On ready, a fresh session without a valid saved campaign uses the resume service
 to open the beginning chooser. Its guarded navigation leaves storage untouched.

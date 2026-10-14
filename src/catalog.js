@@ -1,14 +1,14 @@
-/* Additive, sourced character options. Existing trees and purchased IDs stay intact. */
+/* Sourced character options; audited layouts can retain their original node IDs. */
 window.CharacterCatalog97 = (() => {
   'use strict';
   const data = @@CHARACTER_OPTIONS@@;
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
-  for(const [name,rule]of Object.entries(data.talentRules98||{}))if(rule.summary)TALENT_BLURBS[name]=rule.summary;
-  for(const [name,rule]of Object.entries(data.talentRules100||{}))if(rule.summary)TALENT_BLURBS[name]=rule.summary;
+  for(const rules of [data.talentRules98,data.talentRules100,data.talentRules101])
+    for(const [name,rule]of Object.entries(rules||{}))if(rule.summary)TALENT_BLURBS[name]=rule.summary;
   for (const [name, record] of Object.entries(data.trees)) {
     const prefix = (record.idPrefix||'cw97')+'-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
-    const ids = record.names.map((_,i) => `${prefix}-${i}`);
+    const ids = record.nodeIds || record.names.map((_,i) => `${prefix}-${i}`);
     const nodes = record.names.map((talent,i) => node(ids[i],talent,Math.floor(i/4),i%4,
       (Math.floor(i/4)+1)*5, TALENT_BLURBS[talent] ||
       `Resolve this ability using ${record.source}. Its special action requires narrative resolution.`,
@@ -22,6 +22,7 @@ window.CharacterCatalog97 = (() => {
     return (!r.forceRating || S.forceRating>=r.forceRating) && (!r.species || S.species===r.species);
   }
   function status(name) {
+    if (data.trees[name]?.auditedExisting) return 'Reviewed layout';
     if (data.trees[name]) return 'Imported layout';
     if (EXACT_TREES[name] || FULL_SOURCE_TREES.has(name)) return 'Full layout in saved build';
     if (PHASE37_STANDARD_SPECS.has(name)) return 'Simplified layout';

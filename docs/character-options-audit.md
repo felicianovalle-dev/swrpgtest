@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.4-aor-talents` / package `1.9.10`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
+Build: `96.5-core-tree-audit` / package `1.9.11`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -19,22 +19,22 @@ Before the campaign-beginnings update, the saved game had the 18 careers from Ed
 
 Placements count shared specializations under each career; distinct trees count each shared specialization once. Species profiles count the three Aqualish variants separately: the update adds six species and eight profiles.
 
-The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. The 54 older career layouts labeled full were not all reverified against their original books. Layout coverage does not establish complete mechanical automation.
+The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. Six of those 54 older career layouts have now been reverified against the supplied AoR core book; 48 still await a fresh source audit. Layout coverage does not establish complete mechanical automation.
 
 ## Career and tree coverage
 
-“Existing full” is the saved engine label. “Imported” identifies the newly reviewed collection layouts. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
+“Existing full” is the saved engine label. “Imported” identifies replacement layouts. “Reviewed” identifies six older layouts checked against the AoR core book while keeping their original IDs. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
 
 | Career | Specializations and layout status |
 | --- | --- |
 | Bounty Hunter | Assassin — Existing full; Gadgeteer — Imported; Survivalist — Imported; Martial Artist — Existing full; Operator — Existing full; Skip Tracer — Existing full |
-| Smuggler | Pilot — Existing full; Scoundrel — Existing full; Thief — Imported; Charmer — Existing full; Gambler — Existing full; Gunslinger — Existing full |
+| Smuggler | Pilot — Reviewed; Scoundrel — Existing full; Thief — Imported; Charmer — Existing full; Gambler — Existing full; Gunslinger — Existing full |
 | Technician | Mechanic — Imported; Outlaw Tech — Imported; Slicer — Existing full; Cyber Tech — Existing full; Droid Tech — Existing full; Modder — Existing full |
 | Hired Gun | Bodyguard — Imported; Marauder — Imported; Mercenary Soldier — Imported; Demolitionist — Existing full; Enforcer — Existing full; Heavy — Existing full |
-| Explorer | Fringer — Imported; Scout — Imported; Trader — Imported; Archaeologist — Existing full; Big-Game Hunter — Existing full; Driver — Existing full |
+| Explorer | Fringer — Imported; Scout — Imported; Trader — Imported; Archaeologist — Existing full; Big-Game Hunter — Existing full; Driver — Reviewed |
 | Colonist | Doctor — Imported; Politico — Imported; Scholar — Imported; Entrepreneur — Existing full; Marshal — Existing full; Performer — Existing full |
-| Commander | Commodore — Existing full; Squadron Leader — Existing full; Tactician — Existing full; Figurehead — Existing full; Instructor — Existing full; Strategist — Existing full |
-| Ace | Driver — Existing full; Gunner — Existing full; Pilot — Existing full; Beast Rider — Existing full; Hotshot — Existing full; Rigger — Existing full |
+| Commander | Commodore — Reviewed; Squadron Leader — Reviewed; Tactician — Reviewed; Figurehead — Existing full; Instructor — Existing full; Strategist — Existing full |
+| Ace | Driver — Reviewed; Gunner — Reviewed; Pilot — Reviewed; Beast Rider — Existing full; Hotshot — Existing full; Rigger — Existing full |
 | Diplomat | Agitator — Imported; Ambassador — Imported; Quartermaster — Imported; Advocate — Imported; Analyst — Imported; Propagandist — Imported |
 | Soldier | Commando — Imported; Medic — Imported; Sharpshooter — Imported; Heavy — Existing full; Trailblazer — Imported; Vanguard — Imported |
 | Engineer | Mechanic — Imported; Saboteur — Imported; Scientist — Imported; Droid Specialist — Imported; Sapper — Imported; Shipwright — Imported |
@@ -47,6 +47,25 @@ The 25 Clone Wars and universal layouts contain 500 nodes checked against the su
 | Warrior | Aggressor — Existing full; Shii-Cho Knight — Existing full; Starfighter Ace — Existing full; Colossus — Existing full; Juyo Berserker — Existing full; Steel Hand Adept — Existing full |
 | Clone Soldier | Clone Trooper — Imported; Clone Officer — Imported; Clone Pilot — Imported; ARC Trooper — Imported; Clone Commander — Imported; Clone Veteran — Imported |
 | Jedi | Padawan — Imported; Knight — Imported; General — Imported; Master — Imported |
+
+## Older core-tree audit: first six
+
+This update reviews Driver, Gunner, Pilot, Commodore, Squadron Leader and Tactician: 120 nodes and 57 distinct source rules. All existing node IDs and XP tiers remain unchanged. Driver also appears under Explorer, and Pilot also appears under Smuggler; their shared layouts and skill packages remain consistent.
+
+| Tree | AoR Core printed page | Source PDF page | AOR collection PDF page | Added connections | Removed connections |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Driver | 67 | 68 | 3 | 0 | 2 |
+| Gunner | 68 | 69 | 4 | 1 | 4 |
+| Pilot | 69 | 70 | 6 | 2 | 3 |
+| Commodore | 73 | 74 | 9 | 2 | 0 |
+| Squadron Leader | 74 | 75 | 12 | 0 | 2 |
+| Tactician | 75 | 76 | 14 | 3 | 5 |
+
+The book diagrams govern the corrected connections; the supplied compilation was used as a cross-check and is not treated as authority over a conflicting book diagram. Eight missing connections were restored and sixteen unsupported connections removed. Existing purchases are retained even when their old route is no longer offered for new purchases.
+
+Improved Full Throttle is active in Driver and Pilot, and Improved Dead to Rights is active in Pilot. The glossary identifies Fire Control as a maneuver even though its diagram describes an action. Form On Me uses the glossary’s spelling without the old exclamation mark; its ID `sql32` and ability stay the same. Overwhelm Defenses follows an unsuccessful mounted-weapon attack and affects the targeted defense zone for the rest of the encounter. Coordinated Assault follows official errata: its range increases with additional ranks.
+
+`talentRules101` scopes source references, activation/ranked labels and resolution notes to these six trees. Together with earlier rule sets, the catalog represents 331 distinct talent names. Manual actions are disclosed on the cards; this audit does not add complete vehicle-scale, command, item-modification or True Aim action workflows. See [core-tree-audit-verification.md](core-tree-audit-verification.md).
 
 ## Age of Rebellion completion
 

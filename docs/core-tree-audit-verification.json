@@ -1,0 +1,741 @@
+{
+  "build": "96.5-core-tree-audit",
+  "package": "1.9.11",
+  "reviewed": "2026-10-14",
+  "baselineCommit": "9d8d223b4ae1dc6b78258e6bc6c3ac4d23e77cc0",
+  "testedIndex": {
+    "bytes": 3639955,
+    "gitBlob": "61e11b35561e20a338dd156ca9134a5cf295e876",
+    "sha256": "b56436d972f302309ad9326792a8905df7cefdd0e42c28522905170c9d71cbc7"
+  },
+  "sourceReview": {
+    "source": "Supplied Age of Rebellion core book and tree collection",
+    "trees": {
+      "Driver": {
+        "printedPage": 67,
+        "physicalPdfPage": 68,
+        "collectionPdfPage": 3,
+        "originalNodeIds": [
+          "drv00",
+          "drv01",
+          "drv02",
+          "drv03",
+          "drv10",
+          "drv11",
+          "drv12",
+          "drv13",
+          "drv20",
+          "drv21",
+          "drv22",
+          "drv23",
+          "drv30",
+          "drv31",
+          "drv32",
+          "drv33",
+          "drv40",
+          "drv41",
+          "drv42",
+          "drv43"
+        ]
+      },
+      "Gunner": {
+        "printedPage": 68,
+        "physicalPdfPage": 69,
+        "collectionPdfPage": 4,
+        "originalNodeIds": [
+          "gun00",
+          "gun01",
+          "gun02",
+          "gun03",
+          "gun10",
+          "gun11",
+          "gun12",
+          "gun13",
+          "gun20",
+          "gun21",
+          "gun22",
+          "gun23",
+          "gun30",
+          "gun31",
+          "gun32",
+          "gun33",
+          "gun40",
+          "gun41",
+          "gun42",
+          "gun43"
+        ]
+      },
+      "Pilot": {
+        "printedPage": 69,
+        "physicalPdfPage": 70,
+        "collectionPdfPage": 6,
+        "originalNodeIds": [
+          "pil00",
+          "pil01",
+          "pil02",
+          "pil03",
+          "pil10",
+          "pil11",
+          "pil12",
+          "pil13",
+          "pil20",
+          "pil21",
+          "pil22",
+          "pil23",
+          "pil30",
+          "pil31",
+          "pil32",
+          "pil33",
+          "pil40",
+          "pil41",
+          "pil42",
+          "pil43"
+        ]
+      },
+      "Commodore": {
+        "printedPage": 73,
+        "physicalPdfPage": 74,
+        "collectionPdfPage": 9,
+        "originalNodeIds": [
+          "com00",
+          "com01",
+          "com02",
+          "com03",
+          "com10",
+          "com11",
+          "com12",
+          "com13",
+          "com20",
+          "com21",
+          "com22",
+          "com23",
+          "com30",
+          "com31",
+          "com32",
+          "com33",
+          "com40",
+          "com41",
+          "com42",
+          "com43"
+        ]
+      },
+      "Squadron Leader": {
+        "printedPage": 74,
+        "physicalPdfPage": 75,
+        "collectionPdfPage": 12,
+        "originalNodeIds": [
+          "sql00",
+          "sql01",
+          "sql02",
+          "sql03",
+          "sql10",
+          "sql11",
+          "sql12",
+          "sql13",
+          "sql20",
+          "sql21",
+          "sql22",
+          "sql23",
+          "sql30",
+          "sql31",
+          "sql32",
+          "sql33",
+          "sql40",
+          "sql41",
+          "sql42",
+          "sql43"
+        ]
+      },
+      "Tactician": {
+        "printedPage": 75,
+        "physicalPdfPage": 76,
+        "collectionPdfPage": 14,
+        "originalNodeIds": [
+          "tac00",
+          "tac01",
+          "tac02",
+          "tac03",
+          "tac10",
+          "tac11",
+          "tac12",
+          "tac13",
+          "tac20",
+          "tac21",
+          "tac22",
+          "tac23",
+          "tac30",
+          "tac31",
+          "tac32",
+          "tac33",
+          "tac40",
+          "tac41",
+          "tac42",
+          "tac43"
+        ]
+      }
+    },
+    "sourceRules": 57,
+    "connectionChanges": {
+      "Driver": {
+        "addedEdges": [],
+        "removedEdges": [
+          [
+            9,
+            13
+          ],
+          [
+            10,
+            14
+          ]
+        ],
+        "typeChanges": [
+          {
+            "id": "drv20",
+            "talent": "Improved Full Throttle",
+            "from": "Passive",
+            "to": "Active"
+          }
+        ],
+        "names": []
+      },
+      "Gunner": {
+        "addedEdges": [
+          [
+            13,
+            14
+          ]
+        ],
+        "removedEdges": [
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            9,
+            13
+          ],
+          [
+            14,
+            18
+          ]
+        ],
+        "typeChanges": [],
+        "names": []
+      },
+      "Pilot": {
+        "addedEdges": [
+          [
+            10,
+            11
+          ],
+          [
+            17,
+            18
+          ]
+        ],
+        "removedEdges": [
+          [
+            9,
+            13
+          ],
+          [
+            13,
+            17
+          ],
+          [
+            14,
+            15
+          ]
+        ],
+        "typeChanges": [
+          {
+            "id": "pil20",
+            "talent": "Improved Full Throttle",
+            "from": "Passive",
+            "to": "Active"
+          },
+          {
+            "id": "pil21",
+            "talent": "Improved Dead to Rights",
+            "from": "Passive",
+            "to": "Active"
+          }
+        ],
+        "names": []
+      },
+      "Commodore": {
+        "addedEdges": [
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            8
+          ]
+        ],
+        "removedEdges": [],
+        "typeChanges": [],
+        "names": []
+      },
+      "Squadron Leader": {
+        "addedEdges": [],
+        "removedEdges": [
+          [
+            7,
+            11
+          ],
+          [
+            12,
+            16
+          ]
+        ],
+        "typeChanges": [],
+        "names": [
+          {
+            "id": "sql32",
+            "from": "Form On Me!",
+            "to": "Form On Me"
+          }
+        ]
+      },
+      "Tactician": {
+        "addedEdges": [
+          [
+            9,
+            10
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            16,
+            17
+          ]
+        ],
+        "removedEdges": [
+          [
+            2,
+            6
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            8,
+            12
+          ],
+          [
+            10,
+            14
+          ],
+          [
+            12,
+            16
+          ]
+        ],
+        "typeChanges": [],
+        "names": []
+      }
+    },
+    "officialErrata": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/aor_errata_v10.pdf",
+    "driverPriorReference": "Enter the Unknown p.29 retained from baseline; not newly reviewed in this batch"
+  },
+  "coreSuite": {
+    "passed": 156,
+    "reviewedLayouts": 6,
+    "reviewedNodes": 120,
+    "retainedIds": 120,
+    "sourceRules": 57,
+    "connectionChanges": 24,
+    "typeChanges": 3,
+    "priorCases": 120,
+    "combinedPriorCases": 1080,
+    "coverage": {
+      "careers": 20,
+      "placements": 118,
+      "species": 44,
+      "trees": 112,
+      "universal": 17,
+      "full": 112,
+      "simplified": 0,
+      "prototype": 0
+    },
+    "errors": [],
+    "checks": [
+      "Six audited layouts keep overall coverage, prior import limits and storage schema intact",
+      "Driver: only the source-confirmed connection changes occur; all IDs and tiers stay intact",
+      "Gunner: only the source-confirmed connection changes occur; all IDs and tiers stay intact",
+      "Pilot: only the source-confirmed connection changes occur; all IDs and tiers stay intact",
+      "Commodore: only the source-confirmed connection changes occur; all IDs and tiers stay intact",
+      "Squadron Leader: only the source-confirmed connection changes occur; all IDs and tiers stay intact",
+      "Tactician: only the source-confirmed connection changes occur; all IDs and tiers stay intact",
+      "Canonical activation labels and corrected source details follow the glossary and official errata",
+      "Driver/drv00: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv01: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv02: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv03: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv10: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv11: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv12: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv13: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv20: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv21: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv22: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv23: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv30: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv31: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv32: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv33: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv40: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv41: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv42: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Driver/drv43: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun00: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun01: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun02: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun03: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun10: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun11: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun12: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun13: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun20: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun21: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun22: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun23: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun30: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun31: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun32: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun33: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun40: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun41: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun42: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Gunner/gun43: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil00: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil01: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil02: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil03: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil10: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil11: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil12: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil13: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil20: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil21: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil22: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil23: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil30: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil31: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil32: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil33: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil40: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil41: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil42: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Pilot/pil43: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com00: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com01: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com02: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com03: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com10: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com11: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com12: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com13: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com20: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com21: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com22: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com23: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com30: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com31: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com32: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com33: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com40: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com41: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com42: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Commodore/com43: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql00: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql01: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql02: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql03: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql10: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql11: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql12: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql13: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql20: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql21: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql22: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql23: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql30: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql31: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql32: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql33: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql40: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql41: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql42: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Squadron Leader/sql43: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac00: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac01: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac02: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac03: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac10: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac11: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac12: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac13: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac20: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac21: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac22: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac23: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac30: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac31: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac32: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac33: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac40: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac41: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac42: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "Tactician/tac43: prior purchase, costs, XP, Force rating and Dedication remain unchanged",
+      "All 1080 prior purchases load together with unchanged ranks, economy and story",
+      "Combined old campaign saves and resumes without replacing original core IDs or reapplying upgrades",
+      "Driver: all 20 real purchases follow valid links, cost 300 XP and grant Dedication once",
+      "Driver: all new purchases save and resume with the original IDs",
+      "Gunner: all 20 real purchases follow valid links, cost 300 XP and grant Dedication once",
+      "Gunner: all new purchases save and resume with the original IDs",
+      "Pilot: all 20 real purchases follow valid links, cost 300 XP and grant Dedication once",
+      "Pilot: all new purchases save and resume with the original IDs",
+      "Commodore: all 20 real purchases follow valid links, cost 300 XP and grant Dedication once",
+      "Commodore: all new purchases save and resume with the original IDs",
+      "Squadron Leader: all 20 real purchases follow valid links, cost 300 XP and grant Dedication once",
+      "Squadron Leader: all new purchases save and resume with the original IDs",
+      "Tactician: all 20 real purchases follow valid links, cost 300 XP and grant Dedication once",
+      "Tactician: all new purchases save and resume with the original IDs",
+      "Removed Driver connection cannot unlock or charge a new purchase",
+      "Restored Commodore Command connection unlocks the correct next purchase",
+      "Cancelling Dedication and insufficient XP never charge or add a purchase",
+      "Source Commander ranks reach the actual PC check and ship-repair handlers",
+      "Driver repair and piloting ranks keep their effects after retaining original IDs",
+      "Gunner threshold and soak benefits count each original node once",
+      "Vehicle, command and item actions state their manual limits and correct timing",
+      "Shared Driver and Pilot packages and existing source-label variants remain valid",
+      "320x568: all six source paths and purchase buttons fit without overlap",
+      "375x667: all six source paths and purchase buttons fit without overlap",
+      "390x844: all six source paths and purchase buttons fit without overlap",
+      "428x926: all six source paths and purchase buttons fit without overlap",
+      "844x390: all six source paths and purchase buttons fit without overlap",
+      "1280x800: all six source paths and purchase buttons fit without overlap"
+    ]
+  },
+  "regressionSuites": {
+    "test:talents": {
+      "passed": 286,
+      "errors": []
+    },
+    "test:talents:force": {
+      "passed": 371,
+      "errors": []
+    },
+    "test:talents:aor": {
+      "passed": 466,
+      "errors": []
+    },
+    "test:campaign": {
+      "passed": 95,
+      "errors": []
+    },
+    "test:browser": {
+      "passed": 47,
+      "errors": []
+    },
+    "npm test": {
+      "targets": 10,
+      "targetedChecks": 566,
+      "smoke": {
+        "passed": 266,
+        "failed": []
+      },
+      "diagnostics": {
+        "passed": 112,
+        "failed": 0
+      },
+      "errors": []
+    }
+  },
+  "freshCharacterFlow": [
+    {
+      "spec": "Driver",
+      "career": "Ace",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "drv00",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    }
+  ],
+  "isolatedShipwright": {
+    "purchases": [
+      {
+        "id": "source100-shipwright-0",
+        "ms": 543
+      },
+      {
+        "id": "source100-shipwright-1",
+        "ms": 491
+      },
+      {
+        "id": "source100-shipwright-2",
+        "ms": 490
+      },
+      {
+        "id": "source100-shipwright-3",
+        "ms": 558
+      },
+      {
+        "id": "source100-shipwright-4",
+        "ms": 491
+      },
+      {
+        "id": "source100-shipwright-5",
+        "ms": 469
+      },
+      {
+        "id": "source100-shipwright-7",
+        "ms": 463
+      },
+      {
+        "id": "source100-shipwright-6",
+        "ms": 503
+      },
+      {
+        "id": "source100-shipwright-8",
+        "ms": 585
+      },
+      {
+        "id": "source100-shipwright-9",
+        "ms": 565
+      },
+      {
+        "id": "source100-shipwright-10",
+        "ms": 510
+      },
+      {
+        "id": "source100-shipwright-11",
+        "ms": 525
+      },
+      {
+        "id": "source100-shipwright-12",
+        "ms": 497
+      },
+      {
+        "id": "source100-shipwright-13",
+        "ms": 511
+      },
+      {
+        "id": "source100-shipwright-14",
+        "ms": 559
+      },
+      {
+        "id": "source100-shipwright-15",
+        "ms": 550
+      },
+      {
+        "id": "source100-shipwright-17",
+        "ms": 521
+      },
+      {
+        "id": "source100-shipwright-16",
+        "ms": 555
+      },
+      {
+        "id": "source100-shipwright-18",
+        "ms": 566
+      },
+      {
+        "id": "source100-shipwright-19",
+        "ms": 520
+      }
+    ],
+    "state": {
+      "count": 20,
+      "xp": 100,
+      "brawn": 3,
+      "force": 0
+    },
+    "errors": []
+  },
+  "executionRecovery": {
+    "priorCompletedRegressionTargets": 6,
+    "remainingRegressionTargets": [
+      {
+        "target": "check_gameplay_audit.cjs",
+        "exitCode": 0,
+        "seconds": 86.2
+      },
+      {
+        "target": "check_story_combat.cjs",
+        "exitCode": 0,
+        "seconds": 111.9
+      },
+      {
+        "target": "check_mission_playthrough.cjs",
+        "exitCode": 0,
+        "seconds": 63.5
+      },
+      {
+        "target": "check_setbacks.cjs",
+        "exitCode": 0,
+        "seconds": 65.2
+      }
+    ],
+    "remainingSuites": [
+      {
+        "suite": "test:talents:aor",
+        "exitCode": 0,
+        "seconds": 774.2,
+        "resumedAfterExecutionServiceInterruption": true
+      },
+      {
+        "suite": "test:campaign",
+        "exitCode": 0,
+        "seconds": 446.9,
+        "resumedAfterExecutionServiceInterruption": true
+      },
+      {
+        "suite": "test:browser",
+        "exitCode": 0,
+        "seconds": 16.4,
+        "navigationReadiness": "DOMContentLoaded followed by Game97.ready",
+        "controlTimeoutSeconds": 60
+      }
+    ]
+  },
+  "saveCompatibility": {
+    "schema": 92,
+    "retainedOriginalIds": 120,
+    "priorIndividualCases": 120,
+    "combinedPriorPurchases": 1080,
+    "originalXpTiersRetained": true,
+    "replacementMigrationUnchanged": true
+  },
+  "coverage": {
+    "careers": 20,
+    "placements": 118,
+    "species": 44,
+    "trees": 112,
+    "universal": 17,
+    "full": 112,
+    "simplified": 0,
+    "prototype": 0
+  },
+  "olderLayoutsAwaitingFreshReview": 48,
+  "limits": [
+    "Chromium touch/phone geometry is not physical iPhone Safari validation",
+    "No new automation for manual vehicle, command or item actions",
+    "No new opening-content phase",
+    "Live deployment verification is performed after publication"
+  ]
+}
