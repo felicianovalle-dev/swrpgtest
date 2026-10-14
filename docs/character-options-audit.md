@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.6-force-core-audit` / package `1.9.12`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
+Build: `96.7-mystic-seeker-audit` / package `1.9.13`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -19,11 +19,11 @@ Before the campaign-beginnings update, the saved game had the 18 careers from Ed
 
 Placements count shared specializations under each career; distinct trees count each shared specialization once. Species profiles count the three Aqualish variants separately: the update adds six species and eight profiles.
 
-The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. Twelve of those 54 older career layouts have now been reverified against the supplied AoR and F&D core books; 42 still await a fresh source audit. Layout coverage does not establish complete mechanical automation.
+The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. Eighteen of those 54 older career layouts have now been reverified against the supplied AoR and F&D core books; 36 still await a fresh source audit. Layout coverage does not establish complete mechanical automation.
 
 ## Career and tree coverage
 
-“Existing full” is the saved engine label. “Imported” identifies replacement layouts. “Reviewed” identifies twelve older layouts checked against the AoR or F&D core books while keeping their original IDs. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
+“Existing full” is the saved engine label. “Imported” identifies replacement layouts. “Reviewed” identifies eighteen older layouts checked against the AoR or F&D core books while keeping their original IDs. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
 
 | Career | Specializations and layout status |
 | --- | --- |
@@ -31,7 +31,7 @@ The 25 Clone Wars and universal layouts contain 500 nodes checked against the su
 | Smuggler | Pilot — Reviewed; Scoundrel — Existing full; Thief — Imported; Charmer — Existing full; Gambler — Existing full; Gunslinger — Existing full |
 | Technician | Mechanic — Imported; Outlaw Tech — Imported; Slicer — Existing full; Cyber Tech — Existing full; Droid Tech — Existing full; Modder — Existing full |
 | Hired Gun | Bodyguard — Imported; Marauder — Imported; Mercenary Soldier — Imported; Demolitionist — Existing full; Enforcer — Existing full; Heavy — Existing full |
-| Explorer | Fringer — Imported; Scout — Imported; Trader — Imported; Archaeologist — Existing full; Big-Game Hunter — Existing full; Driver — Reviewed |
+| Explorer | Fringer — Imported; Scout — Imported; Trader — Imported; Archaeologist — Existing full; Big-Game Hunter — Reviewed; Driver — Reviewed |
 | Colonist | Doctor — Imported; Politico — Imported; Scholar — Imported; Entrepreneur — Existing full; Marshal — Existing full; Performer — Existing full |
 | Commander | Commodore — Reviewed; Squadron Leader — Reviewed; Tactician — Reviewed; Figurehead — Existing full; Instructor — Existing full; Strategist — Existing full |
 | Ace | Driver — Reviewed; Gunner — Reviewed; Pilot — Reviewed; Beast Rider — Existing full; Hotshot — Existing full; Rigger — Existing full |
@@ -41,8 +41,8 @@ The 25 Clone Wars and universal layouts contain 500 nodes checked against the su
 | Spy | Infiltrator — Imported; Scout — Imported; Slicer — Existing full; Courier — Imported; Interrogator — Imported; Sleeper Agent — Imported |
 | Consular | Healer — Reviewed; Niman Disciple — Reviewed; Sage — Reviewed; Arbiter — Imported; Ascetic — Imported; Teacher — Imported |
 | Guardian | Peacekeeper — Reviewed; Protector — Reviewed; Soresu Defender — Reviewed; Armorer — Existing full; Warden — Imported; Warleader — Imported |
-| Mystic | Advisor — Existing full; Makashi Duelist — Existing full; Seer — Existing full; Alchemist — Imported; Magus — Imported; Prophet — Imported |
-| Seeker | Ataru Striker — Existing full; Hunter — Existing full; Pathfinder — Existing full; Executioner — Imported; Hermit — Imported; Navigator — Imported |
+| Mystic | Advisor — Reviewed; Makashi Duelist — Reviewed; Seer — Reviewed; Alchemist — Imported; Magus — Imported; Prophet — Imported |
+| Seeker | Ataru Striker — Reviewed; Hunter — Reviewed; Pathfinder — Reviewed; Executioner — Imported; Hermit — Imported; Navigator — Imported |
 | Sentinel | Artisan — Existing full; Shadow — Existing full; Shien Expert — Existing full; Investigator — Imported; Racer — Imported; Sentry — Imported |
 | Warrior | Aggressor — Existing full; Shii-Cho Knight — Existing full; Starfighter Ace — Existing full; Colossus — Existing full; Juyo Berserker — Existing full; Steel Hand Adept — Existing full |
 | Clone Soldier | Clone Trooper — Imported; Clone Officer — Imported; Clone Pilot — Imported; ARC Trooper — Imported; Clone Commander — Imported; Clone Veteran — Imported |
@@ -84,7 +84,15 @@ The [official F&D errata v1.0](https://cdn.svc.asmodee.net/production-edge/uploa
 
 `talentRules102` contains 57 source rules, bringing the union of scoped/shared rules to 350 distinct names. Source summaries and timing are scoped by tree. Complex Force and allied actions retain visible manual-resolution notes. Force-talent cards explain that Force Rating 1 is needed to use their benefits, while purchase paths remain open. Force Rating talents cannot grant initial sensitivity; saved inactive ranks activate once when a granting universal or Witchcraft provides the initial rating. Second Wind now enforces its once-per-encounter limit using the existing saved marker; the sixth and later daily stimpacks heal nothing even with Stimpack Specialization.
 
-The [48-layout tracker](older-layouts-audit.md) records the remaining 42 trees and source groups. See [force-core-audit-verification.md](force-core-audit-verification.md) for verification and limits.
+The [48-layout tracker](older-layouts-audit.md) records the remaining 36 trees and source groups. See [force-core-audit-verification.md](force-core-audit-verification.md) for verification and limits.
+
+## Older Force core audit: Mystic and Seeker
+
+Advisor, Makashi Duelist, Seer, Ataru Striker, Hunter and Pathfinder now have reviewed source layouts. All 120 original IDs, names and XP tiers remain. Three missing connections were restored and eighteen unsupported connections removed; seven active/passive or Force labels were corrected. The core book governs two Seer compilation discrepancies, and the Pathfinder Quick Movement–Natural Outdoorsman connection is retained.
+
+`talentRules103` provides 65 scoped rules, bringing the shared/scoped union to 365 distinct names. Cards explain Animal Bond's silhouette limit and command maneuver, Mental Bond's glossary-based extreme range, Share Pain's transferred wounds, Hawk Bat Swoop's Advantage conversion, Makashi Flourish's Average action and Quick Movement's two-point cost and third maneuver. Conditioned's falling reduction follows official errata. Sixth Sense is ordinary and ranked in the F&D glossary; its AoR unranked variant remains separate.
+
+Duelist's Training now works for Melee as well as Lightsaber and excludes multiple-minion groups. Ranged defense counts saved Sixth Sense ranks. Complex Force and animal actions remain manual where stated. This finishes 12 of the original 48 layouts, leaving 36. See [mystic-seeker-audit-verification.md](mystic-seeker-audit-verification.md) for exact source pages, continuation evidence and limits.
 
 ## Age of Rebellion completion
 

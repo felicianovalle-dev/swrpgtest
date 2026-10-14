@@ -36,14 +36,18 @@ function edgeSet(nodes){const ix=Object.fromEntries(nodes.map((n,i)=>[n.id,i]));
  },spec);
  const snapshot=()=>page.evaluate(()=>JSON.stringify({xp:S.earnedXp,spent:S.xpSpent,chars:S.chars,force:S.forceRating,ids:Object.fromEntries(S.ownedSpecs.map(s=>[s,[...S.specTalents[s]]])),dedication:S.dedication,knowledge:S.talentChoices98?.knowledgeSkill}));
  const reload=async()=>{await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>Game97.ready);await page.locator('#hubResumeLatest97').click()};
- await test('Six further audits leave 42 pending layouts, with coverage and schema intact',async()=>{
+ await test('The original six reviews keep coverage and schema intact as later batches are added',async()=>{
   assert.equal(Object.keys(fixture.trees).length,48);assert.equal(Object.values(fixture.trees).flat().length,960);
   assert.deepEqual(await page.evaluate(()=>CharacterCatalog97.coverage()),{careers:20,placements:118,species:44,trees:112,universal:17,full:112,simplified:0,prototype:0});
-  assert.deepEqual(await page.evaluate(()=>({audited:Object.values(CharacterCatalog97.data.trees).filter(r=>r.auditedExisting).length,pending:[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(s=>CharacterCatalog97.status(s)==='Full layout in saved build').length,replaced:Talents98.replaced.length,schema:BUILD_INFO.saveSchema,build:BUILD_INFO.version})),{audited:12,pending:42,replaced:48,schema:92,build:'96.6-force-core-audit'});
+  assert.deepEqual(await page.evaluate(()=>({audited:Object.values(CharacterCatalog97.data.trees).filter(r=>r.ruleSet==='fndCore102').length,pending:[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(s=>CharacterCatalog97.status(s)==='Full layout in saved build').length,replaced:Talents98.replaced.length,schema:BUILD_INFO.saveSchema,build:BUILD_INFO.version})),{audited:6,pending:36,replaced:48,schema:92,build:'96.7-mystic-seeker-audit'});
  });
  for(const [spec,old]of Object.entries(fixture.trees))await test(`${spec}: original IDs and tiers survive; only reviewed source changes occur`,async()=>{
   const tree=await page.evaluate(s=>treeForSpec(s),spec);
-  if(!deltas[spec]){assert.deepEqual(tree,old);assert.equal(await page.evaluate(s=>CharacterCatalog97.status(s),spec),'Full layout in saved build');return}
+  if(!deltas[spec]){
+   if(['Advisor','Makashi Duelist','Seer','Ataru Striker','Hunter','Pathfinder'].includes(spec)){assert.deepEqual(tree.map(n=>[n.id,n.name,n.row,n.col,n.cost]),old.map(n=>[n.id,n.name,n.row,n.col,n.cost]));assert.equal(await page.evaluate(s=>CharacterCatalog97.status(s),spec),'Reviewed layout')}
+   else{assert.deepEqual(tree,old);assert.equal(await page.evaluate(s=>CharacterCatalog97.status(s),spec),'Full layout in saved build')}
+   return;
+  }
   assert.deepEqual(tree.map(n=>[n.id,n.name,n.row,n.col,n.cost]),old.map(n=>[n.id,n.name,n.row,n.col,n.cost]));
   assert.deepEqual(tree.map(n=>n.type),old.map(n=>labels[n.id]||n.type));
   const expected=edgeSet(old);for(const e of deltas[spec].remove)expected.delete(JSON.stringify(e));for(const e of deltas[spec].add)expected.add(JSON.stringify(e));
@@ -167,6 +171,6 @@ function edgeSet(nodes){const ix=Object.fromEntries(nodes.map((n,i)=>[n.id,i]));
   await page.setViewportSize({width,height});for(const spec of specs){await fresh(spec);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,spec);assert.equal(await page.evaluate(()=>[...document.querySelectorAll('#talentTree .tal')].every(c=>c.querySelector('.talent-path98').getBoundingClientRect().bottom<=c.querySelector('button').getBoundingClientRect().top)),true,spec)}
  });
  await page.setViewportSize({width:390,height:844});await fresh('Protector');await page.screenshot({path:path.join(out,'protector-phone.png'),fullPage:true});assert.deepEqual(errors,[]);
- const report={passed:checks.length,reviewedLayouts:6,reviewedNodes:120,retainedIds:120,frozenLayouts:48,frozenNodes:960,sourceRules:57,connectionChanges:21,labelChanges:11,priorCases:960,combinedPriorCases:2040,remainingLayouts:42,coverage:await page.evaluate(()=>CharacterCatalog97.coverage()),errors,checks};
+ const report={passed:checks.length,reviewedLayouts:6,reviewedNodes:120,retainedIds:120,frozenLayouts:48,frozenNodes:960,sourceRules:57,connectionChanges:21,labelChanges:11,priorCases:960,combinedPriorCases:2040,remainingLayouts:36,coverage:await page.evaluate(()=>CharacterCatalog97.coverage()),errors,checks};
  fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({...report,checks:undefined},null,2));
 })().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{await browser?.close();server?.close()});

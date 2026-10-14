@@ -1,0 +1,433 @@
+{
+  "build": "96.7-mystic-seeker-audit",
+  "package": "1.9.13",
+  "baselineCommit": "4e8423cd763a77ebd2b2471ddc29db8cd41eb560",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "build": "96.7-mystic-seeker-audit",
+    "bytes": 3735263,
+    "gitBlob": "efcba3f633a99cf38269169da25bcf6beb57594f",
+    "sha256": "826823bb06871deab2805c23efdf6dee51b82f7e1f53ecd39f4acaecdfd76644"
+  },
+  "reviewedLayouts": 6,
+  "reviewedNodes": 120,
+  "retainedIds": 120,
+  "frozenLayouts": 48,
+  "frozenNodes": 960,
+  "remainingLayouts": 36,
+  "sourceRules": 65,
+  "distinctSourceNames": 365,
+  "sources": {
+    "Advisor": {
+      "book": "Force and Destiny Core",
+      "printedPage": 81,
+      "physicalPdfPage": 84,
+      "collectionPdfPage": 16,
+      "glossaryChecked": true
+    },
+    "Makashi Duelist": {
+      "book": "Force and Destiny Core",
+      "printedPage": 82,
+      "physicalPdfPage": 85,
+      "collectionPdfPage": 19,
+      "glossaryChecked": true
+    },
+    "Seer": {
+      "book": "Force and Destiny Core",
+      "printedPage": 83,
+      "physicalPdfPage": 86,
+      "collectionPdfPage": 21,
+      "glossaryChecked": true
+    },
+    "Ataru Striker": {
+      "book": "Force and Destiny Core",
+      "printedPage": 87,
+      "physicalPdfPage": 90,
+      "collectionPdfPage": 23,
+      "glossaryChecked": true
+    },
+    "Hunter": {
+      "book": "Force and Destiny Core",
+      "printedPage": 88,
+      "physicalPdfPage": 91,
+      "collectionPdfPage": 26,
+      "glossaryChecked": true
+    },
+    "Pathfinder": {
+      "book": "Force and Destiny Core",
+      "printedPage": 89,
+      "physicalPdfPage": 92,
+      "collectionPdfPage": 28,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Advisor": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          5,
+          9
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Makashi Duelist": {
+      "addedEdges": [
+        [
+          18,
+          19
+        ]
+      ],
+      "removedEdges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "mk31",
+          "talent": "Improved Parry",
+          "from": "Passive",
+          "to": "Active"
+        }
+      ]
+    },
+    "Seer": {
+      "addedEdges": [
+        [
+          9,
+          10
+        ]
+      ],
+      "removedEdges": [
+        [
+          15,
+          19
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Ataru Striker": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          1,
+          5
+        ],
+        [
+          7,
+          11
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "at11",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "at21",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "at23",
+          "talent": "Improved Parry",
+          "from": "Passive",
+          "to": "Active"
+        }
+      ]
+    },
+    "Hunter": {
+      "addedEdges": [
+        [
+          2,
+          6
+        ]
+      ],
+      "removedEdges": [
+        [
+          7,
+          11
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "hu32",
+          "talent": "Sixth Sense",
+          "from": "Force Passive",
+          "to": "Passive"
+        },
+        {
+          "id": "hu42",
+          "talent": "Intuitive Shot",
+          "from": "Force Active",
+          "to": "Force Passive"
+        }
+      ]
+    },
+    "Pathfinder": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          5,
+          9
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "pf20",
+          "talent": "Animal Empathy",
+          "from": "Force Active",
+          "to": "Force Passive"
+        }
+      ]
+    }
+  },
+  "sourceDiscrepancies": [
+    "Seer: the core diagram includes Grit\u2013Forewarning and excludes Dodge\u2013Force Rating; the compilation has the reverse.",
+    "Mental Bond: the glossary allows commands at extreme range; the diagram and compilation say long.",
+    "Sixth Sense: the F&D glossary and talent table say ranked; the Hunter diagram lacks the rank marker. The AoR unranked variant remains separate.",
+    "Conditioned: official errata replaces Coordination ranks with Conditioned ranks for falling damage and strain.",
+    "Share Pain: Animal Bond, not Animal Empathy, establishes the required bond."
+  ],
+  "compatibility": {
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 36,
+    "originalEarlierCatalogRecords": 85,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realNewPurchaseButtons": 120,
+    "costPerFullTree": 300
+  },
+  "suites": {
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 1604,
+  "suiteExitStatuses": [
+    {
+      "name": "check_talents101",
+      "returncode": 0,
+      "seconds": 80.94
+    },
+    {
+      "name": "check_talents102",
+      "returncode": 0,
+      "seconds": 97.19
+    },
+    {
+      "name": "check_talents98",
+      "returncode": 0,
+      "seconds": 116.13
+    },
+    {
+      "name": "check_talents99",
+      "returncode": 0,
+      "seconds": 148.57
+    },
+    {
+      "name": "check_talents100",
+      "returncode": 0,
+      "seconds": 210.68
+    },
+    {
+      "name": "check_campaign97",
+      "returncode": 0,
+      "seconds": 151.86
+    },
+    {
+      "name": "check_layout97",
+      "returncode": 0,
+      "seconds": 16.46
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112,
+    "executions": [
+      {
+        "name": "check_world94",
+        "returncode": 0,
+        "seconds": 42.19
+      },
+      {
+        "name": "check_work96",
+        "returncode": 0,
+        "seconds": 63.51
+      },
+      {
+        "name": "check_save97",
+        "returncode": 0,
+        "seconds": 40.77
+      },
+      {
+        "name": "check_home",
+        "returncode": 0,
+        "seconds": 45.51
+      },
+      {
+        "name": "check_workshop",
+        "returncode": 0,
+        "seconds": 45.06
+      },
+      {
+        "name": "check_save_reliability",
+        "returncode": 0,
+        "seconds": 49.63
+      },
+      {
+        "name": "check_gameplay_audit",
+        "returncode": 0,
+        "seconds": 36.82
+      },
+      {
+        "name": "check_story_combat",
+        "returncode": 0,
+        "seconds": 30.57
+      },
+      {
+        "name": "check_mission_playthrough",
+        "returncode": 0,
+        "seconds": 29.56
+      },
+      {
+        "name": "check_setbacks",
+        "returncode": 0,
+        "seconds": 20.88
+      }
+    ]
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Advisor",
+      "career": "Mystic",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "ad00",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    },
+    {
+      "spec": "Seer",
+      "career": "Mystic",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "se01",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": true
+    },
+    {
+      "spec": "Ataru Striker",
+      "career": "Seeker",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "originalNode": "at02",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not tested.",
+    "Companion bonding and many special Force actions remain manual as stated on their cards.",
+    "Force use prerequisites are visible on cards but are not uniformly enforced by older automatic handlers; use eligibility may require manual checking.",
+    "Existing saved purchases, ratings and characteristics are not retrospectively recalculated.",
+    "Side Step currently resets at the round boundary; its once-per-round limit and until-next-turn expiry require manual enforcement.",
+    "Multiple lightsaber techniques retain the established engine priority; selecting another known technique requires manual resolution."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "efcba3f633a99cf38269169da25bcf6beb57594f"
+  }
+}

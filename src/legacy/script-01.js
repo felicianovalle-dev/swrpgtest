@@ -2960,7 +2960,7 @@ function playerDefense(kind='ranged'){
   let a=armorObj(),w=WEAPONS[S.weapon],d=a?.defense||0;
   if(hasTalent('Improved Armor Master')&&(a?.soak||0)>=2)d+=1;
   if(kind==='melee'){d+=quality(w,'defensive');if(hasTalent('Superior Reflexes'))d+=1}
-  if(kind==='ranged'){d+=quality(w,'deflection');if(hasTalent('Sixth Sense'))d+=1}
+  if(kind==='ranged'){d+=quality(w,'deflection')+talentRank('Sixth Sense')}
   return d;
 }
 function encThreshold(){return 5+(S.chars.Brawn||0)}
@@ -4833,10 +4833,16 @@ function defensiveStanceManeuver(){
   n=Math.max(0,Math.min(max,n));S.strain+=n;S.combat.meleeDefUpgrade=Math.max(S.combat.meleeDefUpgrade||0,n);renderCombat()
 }
 function toggleStun(){let w=WEAPONS[S.weapon];if(!w.qualities?.stun)return;S.stunMode=!S.stunMode;cLog(`Blaster set to ${S.stunMode?'STUN':'KILL'}.`);renderCombat()}
+function duelistTrainingBoost(actor,skill,range){
+  if(actor.id!=='pc'||!['Melee','Lightsaber'].includes(skill)||range!==0||!hasTalent("Duelist's Training"))return 0;
+  const engaged=activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0);
+  if(engaged.length!==1)return 0;
+  return engaged[0].type==='minion'&&(engaged[0].members||1)>1?0:1;
+}
 function combatTalentBoost(actor,target){
   let b=0,ri=target?rangeBandBetween(actor.id,target.id):2,engaged=activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0).length;
   if(actor.id==='pc'&&target&&!target.hasActedEncounter)b+=talentRank('Quick Strike');
-  if(actor.id==='pc'&&actorWeapon(actor).skill==='Lightsaber'&&ri===0&&engaged===1)b+=talentRank("Duelist's Training")?1:0;
+  b+=duelistTrainingBoost(actor,actorWeapon(actor).skill,ri);
   if(actor.id==='pc'&&ri===0&&engaged>1)b+=talentRank('Multiple Opponents')?1:0;
   return b
 }
@@ -5200,7 +5206,7 @@ function specialCombatPool(actor,target,w,ri,commit=false){
   diff+=crippledDifficulty(id,skill)+(st.conditions.nextDifficulty||0)+cm.diff;
   let engaged=activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0).length,talentBoost=0;
   if(actor.id==='pc'&&target&&!target.hasActedEncounter)talentBoost+=talentRank('Quick Strike');
-  if(actor.id==='pc'&&skill==='Lightsaber'&&ri===0&&engaged===1)talentBoost+=talentRank("Duelist's Training")?1:0;
+  talentBoost+=duelistTrainingBoost(actor,skill,ri);
   if(actor.id==='pc'&&['Brawl','Melee','Lightsaber'].includes(skill)&&ri===0&&engaged>1)talentBoost+=talentRank('Multiple Opponents')?1:0;
   let boost=talentBoost+approvalBoost(actor,skill)+crewRoleBoost(actor,skill,target)+(S.combat?.nextAllyBoost||0)+(actor.id==='pc'&&S.foreseeBoost?1:0),
       setback=(target.def||0)+(target.cover&&ri>0?1:0)+(st.conditions.disoriented>0?1:0)+(st.conditions.suppressed||0)*2+(st.conditions.nextSetback||0)+cm.setback,
