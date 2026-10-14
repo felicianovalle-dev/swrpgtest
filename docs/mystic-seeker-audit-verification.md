@@ -61,3 +61,9 @@ The eight browser/source suites passed 1,604 checks. All ten general regression 
 Fresh Advisor and Seer characters at 390×844, plus Ataru Striker at 1280×800, passed visible creation, original-ID purchases, finalization, manual save and reload. Seer also purchased Forewarning through the restored Grit connection. No overflow or application errors occurred.
 
 The checked distribution has Git blob `efcba3f633a99cf38269169da25bcf6beb57594f` (3,735,263 bytes). Hosted verification will compare the deployed HTML with this exact distribution and repeat these three flows.
+
+## Hosted proof
+
+Published source commit `30052f136253096022d8fc72e38cb83b7aa42241`, tree `ca9cfbabb2cfc908e0bccad07fb0a9fae2aaf21e`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38650352179) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=30052f136253) returned HTTP 200 and exactly matched the tested distribution: Git blob `efcba3f633a99cf38269169da25bcf6beb57594f`, 3,735,263 bytes, SHA-256 `826823bb06871deab2805c23efdf6dee51b82f7e1f53ecd39f4acaecdfd76644`.
+
+Fresh hosted Advisor and Seer characters at 390×844 and Ataru Striker at 1280×800 passed visible creation, original-node purchases, finalization, manual save, reload and Resume latest. Seer also used the restored Grit–Forewarning connection. All three retained their character, campaign, XP and purchases; no horizontal overflow or application errors occurred. These isolated contexts contained no user campaign saves.

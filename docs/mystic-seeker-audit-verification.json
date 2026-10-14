@@ -427,7 +427,63 @@
     "Multiple lightsaber techniques retain the established engine priority; selecting another known technique requires manual resolution."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "efcba3f633a99cf38269169da25bcf6beb57594f"
+    "status": "passed",
+    "sourceCommit": "30052f136253096022d8fc72e38cb83b7aa42241",
+    "sourceTree": "ca9cfbabb2cfc908e0bccad07fb0a9fae2aaf21e",
+    "deployment": {
+      "id": 38650352179,
+      "sha": "30052f136253096022d8fc72e38cb83b7aa42241",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38650352179"
+    },
+    "html": {
+      "status": "passed",
+      "commit": "30052f136253096022d8fc72e38cb83b7aa42241",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=30052f136253&check=1792018297",
+      "httpStatus": 200,
+      "bytes": 3735263,
+      "gitBlob": "efcba3f633a99cf38269169da25bcf6beb57594f",
+      "sha256": "826823bb06871deab2805c23efdf6dee51b82f7e1f53ecd39f4acaecdfd76644"
+    },
+    "creationFlows": [
+      {
+        "spec": "Advisor",
+        "career": "Mystic",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "ad00",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      },
+      {
+        "spec": "Seer",
+        "career": "Mystic",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "se01",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": true
+      },
+      {
+        "spec": "Ataru Striker",
+        "career": "Seeker",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "originalNode": "at02",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      }
+    ],
+    "runtimeErrors": []
   }
 }
