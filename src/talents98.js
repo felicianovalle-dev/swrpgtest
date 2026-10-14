@@ -3,9 +3,12 @@
 window.Talents98=(()=>{
   'use strict';
   const catalog=window.CharacterCatalog97,esc=pxEsc67;
-  const replaced=Object.keys(catalog.data.trees).filter(name=>catalog.data.trees[name].replacesPrototype);
-  const legacy=Object.fromEntries(replaced.map(spec=>[spec,genericTree(spec)]));
-  const legacyNodes=(spec,set)=> (legacy[spec]||[]).filter(n=>set.has(n.id));
+  const replaced=Object.keys(catalog.data.trees).filter(name=>catalog.data.trees[name].replacesPrototype||catalog.data.trees[name].replacesSimplified);
+  // Simplified IDs and names are frozen from the last release. Reconstructing
+  // them with genericTree would lose purchases from the earlier p37 layouts.
+  const legacy=Object.fromEntries(replaced.map(spec=>[spec,catalog.data.legacyTrees99?.[spec]?.map(n=>({...n,effect:TALENT_BLURBS[n.name]||'Earlier purchased game option.'}))||genericTree(spec)]));
+  const sameName=(a,b)=>a.replace(/[\u2018\u2019]/g,"'")===b.replace(/[\u2018\u2019]/g,"'");
+  const legacyNodes=(spec,set)=> (legacy[spec]||[]).filter(n=>set?.has(n.id));
   function migrate(state){
     state.specTalents=state.specTalents||{};
     if(replaced.includes(state.spec))state.specTalents[state.spec]=[...new Set([...(state.specTalents[state.spec]||[]),...(state.talents||[])])];
@@ -14,13 +17,15 @@ window.Talents98=(()=>{
       const set=new Set(state.specTalents[spec]),tree=treeForSpec(spec);
       for(const old of legacy[spec]){
         if(!set.has(old.id))continue;
-        const target=tree.filter(n=>n.name===old.name&&!set.has(n.id)).sort((a,b)=>Math.abs(a.cost-old.cost)-Math.abs(b.cost-old.cost)||a.row-b.row||a.col-b.col)[0];
+        const target=tree.filter(n=>sameName(n.name,old.name)&&!set.has(n.id)).sort((a,b)=>Math.abs(a.cost-old.cost)-Math.abs(b.cost-old.cost)||a.row-b.row||a.col-b.col)[0];
         if(!target)continue; // Retain the original node and its existing effects.
         set.delete(old.id);set.add(target.id);
         state.talentImports98=state.talentImports98||[];
         state.talentImports98.push({spec,from:old.id,to:target.id,paid:old.cost});
         const from=`${spec}:${old.id}`,to=`${spec}:${target.id}`;
         if(state.dedication&&Object.hasOwn(state.dedication,from)){state.dedication[to]=state.dedication[from];delete state.dedication[from];}
+        const skills=state.talentChoices98?.wellRounded;
+        if(old.name==='Well Rounded'&&skills&&Object.hasOwn(skills,from)){skills[to]=skills[from];delete skills[from];}
       }
       state.specTalents[spec]=[...set];
     }
@@ -60,6 +65,15 @@ window.Talents98=(()=>{
     return r;
   }
   const statuses={
+    'Physical Training':'Adds 1 Boost per rank to PC Athletics and Resilience checks.',
+    'Gearhead':'Removes setbacks from PC Mechanics checks. Apply any remaining attachment-modification discount manually.',
+    'Solid Repairs':'Adds repaired hull trauma per rank when the PC succeeds at a vehicle or ship repair check.',
+    'Fine Tuning':'Adds repaired system strain per rank when the PC succeeds at a vehicle or ship repair check.',
+    'Saber Throw':'The medium-range combat action is available. Improved Saber Throw’s long-range option requires manual resolution.',
+    'Improved Reflect':'The redirection after a qualifying reflected attack requires manual resolution.',
+    'Improved Saber Throw':'Resolve the long-range attack and two-Force-point weapon return manually.',
+    'Well Traveled':'Both listed Knowledge skills become career skills; no free ranks are granted.',
+    'Quick Draw':'Resolve drawing or holstering an eligible item as an incidental manually.',
     'Feral Strength':'Adds 1 damage per rank to one successful Brawl or Melee hit.',
     'Deadly Accuracy':'Damage uses the currently selected combat skill. Separate skill choices for multiple ranks remain manual.',
     'Natural Scholar':'Offers one failed Knowledge-check reroll per session. Rerolling successful checks remains manual.',
@@ -88,8 +102,14 @@ window.Talents98=(()=>{
     'Strong Arm':'Resolve increased thrown-weapon range narratively.',
     'Jump Up':'Resolve standing as an incidental once per round narratively.'
   };
-  function status(name){return statuses[name]||null;}
-  function knownUnranked(name){return catalog.data.talentRules98[name]?.ranked===false&&hasTalent(name);}
+  const manual=new Set(['Aggressive Negotiations','Alchemical Arts','Bad Cop','Bad Motivator','Baleful Gaze','Better Luck Next Time','Blind Spot','Calming Aura','Careful Planning','Channel Agony','Constant Vigilance','Contraption','Coordinated Assault','Crucial Point','Deathblow','Empty Soul','Encouraging Words','Essential Kill','Familiar Suns','Fear the Shadows','Fearsome','Font of Power','Force Connection','Freerunning','Full Throttle','Go Without','Grapple','Harass','Healing Trance','Heightened Awareness','Hold Together','Holistic Navigation',"Hunter's Quarry",'Identify Ingredients','Impossible Fall','Improved Animal Bond','Improved Blooded','Improved Freerunning','Improved Full Throttle','Improved Healing Trance',"Improved Hunter's Quarry",'Improved Overwhelming Aura','Improved Savvy Negotiator','Improved Shortcut','Improved Street Smarts','Improved Sunder','Improved Wise Warrior','Improvised Concoction','Intuitive Evasion','Intuitive Navigation','Iron Soul','Knowledge Is Power','Knowledgeable Healing',"Let's Ride",'Marked for Death','Master Instructor','Meditative Trance','Menace','Mind Bleed','Mind over Matter','No Escape','Now the Master','Once a Learner','One with Nature','One with the Universe','Overbalance','Overwhelming Aura','Planet Mapper','Power of Darkness','Preemptive Avoidance','Prescient Shot','Prime Positions','Prophetic Aim','Reconstruct the Scene','Redundant Systems','Savvy Negotiator','Secret Lore','Sense Advantage','Sense the Scene','Shroud','Skilled Teacher','Slippery Minded','Soothing Tone','Studious Plotting','Superhuman Reflexes','Suppressing Fire','Supreme Full Throttle','Survival of the Fittest','Talk the Talk','Terrifying Kill','Transmogrify','Twisted Words','Unrelenting Skeptic','Valuable Facts','Wise Warrior']);
+  function status(name){return statuses[name]||(manual.has(name)?'Resolve this ability manually using the listed source. Its costs, timing, and limits still apply.':null);}
+  function knownUnranked(name){
+    // The core books disagree on Heightened Awareness's ranked label. Scout
+    // follows EotE; Protector must keep the ranked F&D version available.
+    const variant=catalog.data.talentRuleVariants99?.[name]?.find(r=>(SPECIALIZATION_TREE_SOURCE[S.talentView]||'').includes(r.book));
+    return (variant||catalog.data.talentRules98[name])?.ranked===false&&hasTalent(name);
+  }
   function validateSnapshot(state){
     const oneHit=state.combat?.pendingSpend?.oneHitDamage98;
     if(oneHit!==undefined&&(!Number.isInteger(oneHit)||oneHit<0||oneHit>240))throw new Error('Invalid single-hit talent damage.');
@@ -100,17 +120,17 @@ window.Talents98=(()=>{
       if(choices.wellRounded!==undefined){
         if(!choices.wellRounded||typeof choices.wellRounded!=='object'||Array.isArray(choices.wellRounded))throw new Error('Invalid Well Rounded choices.');
         for(const [key,skills]of Object.entries(choices.wellRounded)){
-          const owned=Object.entries(state.specTalents||{}).some(([spec,ids])=>treeForSpec(spec).some(n=>`${spec}:${n.id}`===key&&n.name==='Well Rounded'&&ids.includes(n.id)));
+          const owned=Object.entries(state.specTalents||{}).some(([spec,ids])=>[...treeForSpec(spec),...(legacy[spec]||[])].some(n=>`${spec}:${n.id}`===key&&n.name==='Well Rounded'&&ids.includes(n.id)));
           if(!owned||!Array.isArray(skills)||skills.length!==2||new Set(skills).size!==2||skills.some(sk=>!Object.hasOwn(SKILL_CHAR,sk)))throw new Error('Invalid Well Rounded skills.');
         }
       }
     }
     if(state.talentImports98!==undefined){
-      if(!Array.isArray(state.talentImports98)||state.talentImports98.length>240)throw new Error('Invalid imported talent record.');
+      if(!Array.isArray(state.talentImports98)||state.talentImports98.length>Object.values(legacy).reduce((n,tree)=>n+tree.length,0))throw new Error('Invalid imported talent record.');
       const seen=new Set();
       for(const rec of state.talentImports98){
         const old=legacy[rec?.spec]?.find(n=>n.id===rec.from),target=old&&treeForSpec(rec.spec).find(n=>n.id===rec.to),key=`${rec?.spec}:${rec?.from}`;
-        if(!old||!target||target.name!==old.name||rec.paid!==old.cost||seen.has(key))throw new Error('Invalid imported talent mapping.');seen.add(key);
+        if(!old||!target||!sameName(target.name,old.name)||rec.paid!==old.cost||seen.has(key))throw new Error('Invalid imported talent mapping.');seen.add(key);
       }
     }
   }
@@ -119,11 +139,11 @@ window.Talents98=(()=>{
     const parent=$('talentTree');if(!parent)return;
     const spec=S.talentView,set=S.specTalents?.[spec]||new Set(),retained=legacyNodes(spec,set),mapped=(S.talentImports98||[]).filter(r=>r.spec===spec&&set.has(r.to));
     const tree=treeForSpec(spec),owned=tree.filter(n=>set.has(n.id)),pending=owned.filter(n=>n.name==='Well Rounded'&&!S.talentChoices98?.wellRounded?.[`${spec}:${n.id}`]||n.name==='Knowledge Specialization'&&!S.talentChoices98?.knowledgeSkill);
-    if(catalog.data.trees[spec]?.coreReviewed)for(let i=0;i<tree.length;i++){
+    if(catalog.data.trees[spec]?.coreReviewed||catalog.data.trees[spec]?.bookReviewed)for(let i=0;i<tree.length;i++){
       const card=parent.children[i],n=tree[i];if(!card)continue;
       card.classList.add('source-tal98');
       card.querySelector('.talent-path98')?.remove();const p=document.createElement('p');p.className='tiny talent-path98';
-      const rule=catalog.data.talentRules98[n.name];p.textContent=`${rule.source} · ${rule.activation}. Connected talents: ${n.links.length?n.links.map(id=>{const v=tree.find(x=>x.id===id);return `${v.name} (${v.cost} XP)`;}).join(' · '):'No linked purchases.'}`;card.insertBefore(p,card.querySelector('button'));
+      const rule=catalog.data.talentRules98[n.name];p.textContent=`${rule.source} · ${rule.activation} · ${rule.ranked?'Ranked':'Unranked'}. Connected talents: ${n.links.length?n.links.map(id=>{const v=tree.find(x=>x.id===id);return `${v.name} (${v.cost} XP)`;}).join(' · '):'No linked purchases.'}`;card.insertBefore(p,card.querySelector('button'));
     }
     if(!retained.length&&!mapped.length&&!pending.length&&!owned.some(n=>['Well Rounded','Knowledge Specialization'].includes(n.name)))return;
     const box=document.createElement('section');box.id='talentCompatibility98';box.className='creation-note97';

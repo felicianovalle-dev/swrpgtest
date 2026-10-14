@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.2-core-talents` / package `1.9.8`. Reviewed 2026-10-13 against the saved repository and the supplied source collections.
+Build: `96.3-force-talents` / package `1.9.9`. Reviewed 2026-10-13 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -11,50 +11,77 @@ Before the campaign-beginnings update, the saved game had the 18 careers from Ed
 | Careers | 18 | 20 |
 | Career specialization placements | 108 | 118 |
 | Distinct career trees | 102 | 112 |
-| Career trees labeled full by the engine | 54 | 76 |
-| Simplified career trees | 36 | 36 |
+| Career trees labeled full by the engine | 54 | 92 |
+| Simplified career trees | 36 | 20 |
 | Prototype career trees | 12 | 0 |
 | Universal trees | 2 | 17 |
 | Species profiles | 36 | 44 |
 
 Placements count shared specializations under each career; distinct trees count each shared specialization once. Species profiles count the three Aqualish variants separately: the update adds six species and eight profiles.
 
-The 25 Clone Wars and universal layouts contain 500 nodes and were checked against the supplied tree PDFs. This update adds 12 core layouts with another 240 nodes. Their names, costs, paths, and types were visually checked against both the supplied EotE collection and Edge of the Empire Core. Canonical activation/ranked metadata for 108 distinct talents was checked in the core glossary; Knowledge Specialization is passive, correcting the collection’s label. The 54 older layouts labeled full were not all reverified against their original books in this update. A matching layout does not establish complete mechanical automation.
+The 25 Clone Wars and universal layouts contain 500 nodes and were checked against the supplied tree PDFs. The prototype replacement added 12 core layouts with another 240 nodes. This update adds Mechanic, Scout, and 14 Force and Destiny supplement layouts with another 320 nodes. All sixteen were visually compared with their supplied sourcebook diagrams and tree collection. Their names, costs, paths, and types were visually checked against both the supplied EotE collection and Edge of the Empire Core. Canonical activation/ranked metadata for 108 distinct talents was checked in the core glossary; Knowledge Specialization is passive, correcting the collection’s label. The 54 older layouts labeled full were not all reverified against their original books in this update. A matching layout does not establish complete mechanical automation.
 
 ## Career and tree coverage
 
-“Existing full” is the saved engine label. “Imported” identifies the newly reviewed collection layouts. Simplified and prototype entries remain available but need source-layout replacement. Earlier exact trees retain their IDs. Former prototype purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
+“Existing full” is the saved engine label. “Imported” identifies the newly reviewed collection layouts. Simplified and prototype entries remain available but need source-layout replacement. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
 
 | Career | Specializations and layout status |
 | --- | --- |
 | Bounty Hunter | Assassin — Existing full; Gadgeteer — Imported; Survivalist — Imported; Martial Artist — Existing full; Operator — Existing full; Skip Tracer — Existing full |
 | Smuggler | Pilot — Existing full; Scoundrel — Existing full; Thief — Imported; Charmer — Existing full; Gambler — Existing full; Gunslinger — Existing full |
-| Technician | Mechanic — Simplified; Outlaw Tech — Imported; Slicer — Existing full; Cyber Tech — Existing full; Droid Tech — Existing full; Modder — Existing full |
+| Technician | Mechanic — Imported; Outlaw Tech — Imported; Slicer — Existing full; Cyber Tech — Existing full; Droid Tech — Existing full; Modder — Existing full |
 | Hired Gun | Bodyguard — Imported; Marauder — Imported; Mercenary Soldier — Imported; Demolitionist — Existing full; Enforcer — Existing full; Heavy — Existing full |
-| Explorer | Fringer — Imported; Scout — Simplified; Trader — Imported; Archaeologist — Existing full; Big-Game Hunter — Existing full; Driver — Existing full |
+| Explorer | Fringer — Imported; Scout — Imported; Trader — Imported; Archaeologist — Existing full; Big-Game Hunter — Existing full; Driver — Existing full |
 | Colonist | Doctor — Imported; Politico — Imported; Scholar — Imported; Entrepreneur — Existing full; Marshal — Existing full; Performer — Existing full |
 | Commander | Commodore — Existing full; Squadron Leader — Existing full; Tactician — Existing full; Figurehead — Existing full; Instructor — Existing full; Strategist — Existing full |
 | Ace | Driver — Existing full; Gunner — Existing full; Pilot — Existing full; Beast Rider — Existing full; Hotshot — Existing full; Rigger — Existing full |
 | Diplomat | Agitator — Simplified; Ambassador — Simplified; Quartermaster — Simplified; Advocate — Simplified; Analyst — Simplified; Propagandist — Simplified |
 | Soldier | Commando — Simplified; Medic — Simplified; Sharpshooter — Simplified; Heavy — Existing full; Trailblazer — Simplified; Vanguard — Simplified |
-| Engineer | Mechanic — Simplified; Saboteur — Simplified; Scientist — Simplified; Droid Specialist — Simplified; Sapper — Simplified; Shipwright — Simplified |
-| Spy | Infiltrator — Simplified; Scout — Simplified; Slicer — Existing full; Courier — Simplified; Interrogator — Simplified; Sleeper Agent — Simplified |
-| Consular | Healer — Existing full; Niman Disciple — Existing full; Sage — Existing full; Arbiter — Simplified; Ascetic — Simplified; Teacher — Simplified |
-| Guardian | Peacekeeper — Existing full; Protector — Existing full; Soresu Defender — Existing full; Armorer — Existing full; Warden — Simplified; Warleader — Simplified |
-| Mystic | Advisor — Existing full; Makashi Duelist — Existing full; Seer — Existing full; Alchemist — Simplified; Magus — Simplified; Prophet — Simplified |
-| Seeker | Ataru Striker — Existing full; Hunter — Existing full; Pathfinder — Existing full; Executioner — Simplified; Hermit — Simplified; Navigator — Simplified |
-| Sentinel | Artisan — Existing full; Shadow — Existing full; Shien Expert — Existing full; Investigator — Simplified; Racer — Simplified; Sentry — Simplified |
+| Engineer | Mechanic — Imported; Saboteur — Simplified; Scientist — Simplified; Droid Specialist — Simplified; Sapper — Simplified; Shipwright — Simplified |
+| Spy | Infiltrator — Simplified; Scout — Imported; Slicer — Existing full; Courier — Simplified; Interrogator — Simplified; Sleeper Agent — Simplified |
+| Consular | Healer — Existing full; Niman Disciple — Existing full; Sage — Existing full; Arbiter — Imported; Ascetic — Imported; Teacher — Imported |
+| Guardian | Peacekeeper — Existing full; Protector — Existing full; Soresu Defender — Existing full; Armorer — Existing full; Warden — Imported; Warleader — Imported |
+| Mystic | Advisor — Existing full; Makashi Duelist — Existing full; Seer — Existing full; Alchemist — Imported; Magus — Imported; Prophet — Imported |
+| Seeker | Ataru Striker — Existing full; Hunter — Existing full; Pathfinder — Existing full; Executioner — Imported; Hermit — Imported; Navigator — Imported |
+| Sentinel | Artisan — Existing full; Shadow — Existing full; Shien Expert — Existing full; Investigator — Imported; Racer — Imported; Sentry — Imported |
 | Warrior | Aggressor — Existing full; Shii-Cho Knight — Existing full; Starfighter Ace — Existing full; Colossus — Existing full; Juyo Berserker — Existing full; Steel Hand Adept — Existing full |
 | Clone Soldier | Clone Trooper — Imported; Clone Officer — Imported; Clone Pilot — Imported; ARC Trooper — Imported; Clone Commander — Imported; Clone Veteran — Imported |
 | Jedi | Padawan — Imported; Knight — Imported; General — Imported; Master — Imported |
 
 ## Remaining layout gaps
 
-The following 36 distinct trees still need exact source layouts. Replacing them must include an explicit purchase-ID migration rather than dropping purchased talents.
+The following 20 distinct Age of Rebellion trees still need exact source layouts. Replacing them must include an explicit purchase-ID migration rather than dropping purchased talents.
 
 | Current status | Trees |
 | --- | --- |
-| Simplified (36) | Mechanic; Scout; Agitator; Ambassador; Quartermaster; Advocate; Analyst; Propagandist; Commando; Medic; Sharpshooter; Trailblazer; Vanguard; Saboteur; Scientist; Droid Specialist; Sapper; Shipwright; Infiltrator; Courier; Interrogator; Sleeper Agent; Arbiter; Ascetic; Teacher; Warden; Warleader; Alchemist; Magus; Prophet; Executioner; Hermit; Navigator; Investigator; Racer; Sentry |
+| Simplified (20) | Agitator; Ambassador; Quartermaster; Advocate; Analyst; Propagandist; Commando; Medic; Sharpshooter; Trailblazer; Vanguard; Saboteur; Scientist; Droid Specialist; Sapper; Shipwright; Infiltrator; Courier; Interrogator; Sleeper Agent |
+
+## Mechanic, Scout, and Force supplement references
+
+Names, tiers, paths, and Force labels for these 320 nodes were visually checked in both the supplied compilation and the actual book diagrams. Printed page labels are used where verified; Savage Spirits uses physical pages in the supplied PDF. Activation/ranked rules use book glossary entries where available. Careful Planning records the book diagram’s active, once-per-session label without inventing a turn subtype.
+
+| Tree | Sourcebook tree | Source PDF page | Tree collection PDF page |
+| --- | --- | ---: | ---: |
+| Mechanic | Edge of the Empire Core · p.89 | 98 | EOTE 39 |
+| Scout | Edge of the Empire Core · p.72 | 81 | EOTE 20 |
+| Arbiter | Disciples of Harmony · p.23 | 19 | FND 2 |
+| Ascetic | Disciples of Harmony · p.25 | 21 | FND 3 |
+| Teacher | Disciples of Harmony · p.27 | 23 | FND 7 |
+| Warden | Keeping the Peace · p.27 | 31 | FND 13 |
+| Warleader | Keeping the Peace · p.29 | 33 | FND 14 |
+| Alchemist | Unlimited Power · p.27 | 30 | FND 17 |
+| Magus | Unlimited Power · p.29 | 32 | FND 18 |
+| Prophet | Unlimited Power · p.31 | 34 | FND 20 |
+| Executioner | Savage Spirits | 28 | FND 24 |
+| Hermit | Savage Spirits | 30 | FND 25 |
+| Navigator | Savage Spirits | 32 | FND 27 |
+| Investigator | Endless Vigil · p.25 | 27 | FND 31 |
+| Racer | Endless Vigil · p.27 | 29 | FND 32 |
+| Sentry | Endless Vigil · p.29 | 31 | FND 33 |
+
+The shared metadata now contains 232 distinct talent entries. This update uses 161 of them and adds 72 short source-based summaries. The books’ differing Heightened Awareness rank labels remain scoped: Scout follows the EotE unranked entry, while Protector retains the F&D ranked entry. Teacher uses Once a Learner rather than the compilation’s Once the Learner. Improved Hunter’s Quarry follows its passive glossary entry; Improved Wise Warrior and Improved Reflect follow their active glossary entries despite passive labels in some book diagrams.
+
+Earlier simplified IDs are frozen from commit c5eab55. Matching purchases keep their original spending and dedication choices; unmatched talents remain as earlier game options. Well Rounded skill choices move with the purchased Teacher node. Loading an old Force Rating purchase does not apply its increase again. See [force-talent-verification.md](force-talent-verification.md) for the latest test results and manual-effect limits.
 
 ## Imported layout references
 

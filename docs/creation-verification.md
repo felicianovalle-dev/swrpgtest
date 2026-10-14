@@ -1,6 +1,6 @@
 # Campaign beginnings verification
 
-Build `96.2-core-talents`, package `1.9.8`, tested 2026-10-13.
+Build `96.3-force-talents`, package `1.9.9`, tested 2026-10-13.
 
 ## Actual-browser checks
 
@@ -74,3 +74,5 @@ sources. `git diff --check` reported no whitespace errors. The final browser
 campaign result is preserved in [campaign-verification.json](campaign-verification.json).
 
 The twelve prototype replacements, purchase-ID compatibility, additional talent effects, and current talent-card geometry are covered in [talent-tree-verification.md](talent-tree-verification.md). The remaining 36 simplified layouts are recorded in the content audit.
+
+The Mechanic, Scout, and fourteen Force and Destiny supplement replacements are covered in [force-talent-verification.md](force-talent-verification.md). No campaign-opening or species phase was started during this update.

@@ -59,7 +59,7 @@ single-hit damage correction. `npm run build:check` confirmed reproducible outpu
 
 ## Practical limits
 
-The 36 simplified layouts remain for the next update. The older 54 layouts labeled
+The follow-up [sixteen-tree update](force-talent-verification.md) completed Mechanic, Scout, and the fourteen remaining simplified Force and Destiny layouts. Twenty simplified Age of Rebellion layouts remain. The older 54 layouts labeled
 full have not all been freshly audited. This update does not establish complete
 automation for every talent: temporary stims, Pressure Point, Bacta care, Frenzied
 Attack, Scathing Tirade, many social/vehicle/item actions, successful-check rerolls,

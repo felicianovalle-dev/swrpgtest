@@ -5242,6 +5242,2242 @@
       "coreReviewed": true,
       "replacesPrototype": true,
       "idPrefix": "eote98"
+    },
+    "Mechanic": {
+      "names": [
+        "Gearhead",
+        "Toughened",
+        "Fine Tuning",
+        "Solid Repairs",
+        "Redundant Systems",
+        "Solid Repairs",
+        "Gearhead",
+        "Grit",
+        "Solid Repairs",
+        "Enduring",
+        "Bad Motivator",
+        "Toughened",
+        "Contraption",
+        "Solid Repairs",
+        "Fine Tuning",
+        "Hard Headed",
+        "Natural Tinkerer",
+        "Hold Together",
+        "Dedication",
+        "Improved Hard Headed"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.89 \u00b7 supplied EOTE tree collection, PDF p.39",
+      "collection": "eote",
+      "page": 39,
+      "bookPdfPage": 98,
+      "bookFile": "eote-core",
+      "bookPage": 89,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Scout": {
+      "names": [
+        "Rapid Recovery",
+        "Stalker",
+        "Grit",
+        "Shortcut",
+        "Forager",
+        "Quick Strike",
+        "Let's Ride",
+        "Disorient",
+        "Rapid Recovery",
+        "Natural Hunter",
+        "Familiar Suns",
+        "Shortcut",
+        "Grit",
+        "Heightened Awareness",
+        "Toughened",
+        "Quick Strike",
+        "Utility Belt",
+        "Dedication",
+        "Stalker",
+        "Disorient"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.72 \u00b7 supplied EOTE tree collection, PDF p.20",
+      "collection": "eote",
+      "page": 20,
+      "bookPdfPage": 81,
+      "bookFile": "eote-core",
+      "bookPage": 72,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Arbiter": {
+      "names": [
+        "Sense Emotions",
+        "Savvy Negotiator",
+        "Grit",
+        "Nobody's Fool",
+        "Grit",
+        "Congenial",
+        "Toughened",
+        "Reflect",
+        "Savvy Negotiator",
+        "Nobody's Fool",
+        "Parry",
+        "Improved Sunder",
+        "Calming Aura",
+        "Crucial Point",
+        "Savvy Negotiator",
+        "Reflect",
+        "Force Rating",
+        "Improved Savvy Negotiator",
+        "Dedication",
+        "Aggressive Negotiations"
+      ],
+      "types": [
+        "Force Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Force Passive",
+        "Active",
+        "Passive",
+        "Force Active",
+        "Force Passive",
+        "Active",
+        "Passive",
+        "Force Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Disciples of Harmony \u00b7 p.23 \u00b7 supplied FND tree collection, PDF p.2",
+      "collection": "fnd",
+      "page": 2,
+      "bookPdfPage": 19,
+      "bookFile": "disciples-harmony",
+      "bookPage": 23,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Ascetic": {
+      "names": [
+        "Physical Training",
+        "Confidence",
+        "Grit",
+        "Grit",
+        "Grit",
+        "Force Protection",
+        "Grit",
+        "Go Without",
+        "Meditative Trance",
+        "Slippery Minded",
+        "Intense Focus",
+        "Physical Training",
+        "Confidence",
+        "Mind Bleed",
+        "Force Protection",
+        "Iron Soul",
+        "Dedication",
+        "Grit",
+        "Empty Soul",
+        "Force Rating"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Active",
+        "Force Passive",
+        "Force Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Force Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Disciples of Harmony \u00b7 p.25 \u00b7 supplied FND tree collection, PDF p.3",
+      "collection": "fnd",
+      "page": 3,
+      "bookPdfPage": 21,
+      "bookFile": "disciples-harmony",
+      "bookPage": 25,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Teacher": {
+      "names": [
+        "Researcher",
+        "Respected Scholar",
+        "Sense Danger",
+        "Well Rounded",
+        "Well Traveled",
+        "Grit",
+        "Nobody's Fool",
+        "Encouraging Words",
+        "Toughened",
+        "Skilled Teacher",
+        "Master Instructor",
+        "Now the Master",
+        "Improved Wise Warrior",
+        "Wise Warrior",
+        "Grit",
+        "Once a Learner",
+        "Dedication",
+        "Grit",
+        "Skilled Teacher",
+        "Force Rating"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Force Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Disciples of Harmony \u00b7 p.27 \u00b7 supplied FND tree collection, PDF p.7",
+      "collection": "fnd",
+      "page": 7,
+      "bookPdfPage": 23,
+      "bookFile": "disciples-harmony",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Warden": {
+      "names": [
+        "Grit",
+        "Toughened",
+        "Intimidating",
+        "Grit",
+        "Precision Strike",
+        "Confidence",
+        "Scathing Tirade",
+        "Bad Cop",
+        "Sense Advantage",
+        "Confidence",
+        "Fearsome",
+        "No Escape",
+        "Toughened",
+        "Overbalance",
+        "Baleful Gaze",
+        "Bad Cop",
+        "Grapple",
+        "Dedication",
+        "Force Rating",
+        "Fearsome"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Force Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Keeping the Peace \u00b7 p.27 \u00b7 supplied FND tree collection, PDF p.13",
+      "collection": "fnd",
+      "page": 13,
+      "bookPdfPage": 31,
+      "bookFile": "keeping-peace",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Warleader": {
+      "names": [
+        "Prime Positions",
+        "Suppressing Fire",
+        "Grit",
+        "Uncanny Senses",
+        "Grit",
+        "Careful Planning",
+        "Sense Danger",
+        "Swift",
+        "Suppressing Fire",
+        "Grit",
+        "Uncanny Senses",
+        "Prescient Shot",
+        "Coordinated Assault",
+        "Prime Positions",
+        "Blind Spot",
+        "Forewarning",
+        "Clever Solution",
+        "Dedication",
+        "Force Rating",
+        "Prophetic Aim"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Force Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Active",
+        "Passive",
+        "Force Passive",
+        "Force Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Keeping the Peace \u00b7 p.29 \u00b7 supplied FND tree collection, PDF p.14",
+      "collection": "fnd",
+      "page": 14,
+      "bookPdfPage": 33,
+      "bookFile": "keeping-peace",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Alchemist": {
+      "names": [
+        "Grit",
+        "Stimpack Specialization",
+        "Researcher",
+        "Blooded",
+        "Researcher",
+        "Stim Application",
+        "Alchemical Arts",
+        "Grit",
+        "Stimpack Specialization",
+        "Blooded",
+        "Improved Blooded",
+        "Transmogrify",
+        "Improved Stim Application",
+        "Knowledgeable Healing",
+        "Grit",
+        "Alchemical Arts",
+        "Force Rating",
+        "Identify Ingredients",
+        "Dedication",
+        "Improvised Concoction"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Passive",
+        "Force Active",
+        "Passive",
+        "Force Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Unlimited Power \u00b7 p.27 \u00b7 supplied FND tree collection, PDF p.17",
+      "collection": "fnd",
+      "page": 17,
+      "bookPdfPage": 30,
+      "bookFile": "unlimited-power",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Magus": {
+      "names": [
+        "Healing Trance",
+        "Toughened",
+        "Confidence",
+        "Resolve",
+        "Confidence",
+        "Healing Trance",
+        "Channel Agony",
+        "Secret Lore",
+        "Improved Healing Trance",
+        "Secret Lore",
+        "Resolve",
+        "Knowledge Is Power",
+        "Channel Agony",
+        "Mind over Matter",
+        "Toughened",
+        "Channel Agony",
+        "Power of Darkness",
+        "Dedication",
+        "Transmogrify",
+        "Force Rating"
+      ],
+      "types": [
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Active",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Active",
+        "Active",
+        "Passive",
+        "Force Active",
+        "Force Active",
+        "Passive",
+        "Force Active",
+        "Force Passive"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Unlimited Power \u00b7 p.29 \u00b7 supplied FND tree collection, PDF p.18",
+      "collection": "fnd",
+      "page": 18,
+      "bookPdfPage": 32,
+      "bookFile": "unlimited-power",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Prophet": {
+      "names": [
+        "Grit",
+        "Overwhelming Aura",
+        "Rapid Recovery",
+        "Congenial",
+        "Scathing Tirade",
+        "Plausible Deniability",
+        "Inspiring Rhetoric",
+        "Rapid Recovery",
+        "Rapid Recovery",
+        "Overwhelming Aura",
+        "Grit",
+        "Twisted Words",
+        "Fearsome",
+        "Grit",
+        "Improved Inspiring Rhetoric",
+        "Congenial",
+        "Improved Overwhelming Aura",
+        "Force Rating",
+        "Font of Power",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Passive",
+        "Force Passive",
+        "Force Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Unlimited Power \u00b7 p.31 \u00b7 supplied FND tree collection, PDF p.20",
+      "collection": "fnd",
+      "page": 20,
+      "bookPdfPage": 34,
+      "bookFile": "unlimited-power",
+      "bookPage": 31,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Executioner": {
+      "names": [
+        "Grit",
+        "Quick Strike",
+        "Toughened",
+        "Quick Draw",
+        "Mind over Matter",
+        "Hunter's Quarry",
+        "Grit",
+        "Lethal Blows",
+        "Lethal Blows",
+        "Improved Hunter's Quarry",
+        "Quick Strike",
+        "Precise Aim",
+        "Terrifying Kill",
+        "Precise Aim",
+        "Marked for Death",
+        "Deathblow",
+        "Lethal Blows",
+        "Essential Kill",
+        "Force Rating",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Active",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Force Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Savage Spirits \u00b7 supplied PDF p.28 \u00b7 supplied FND tree collection, PDF p.24",
+      "collection": "fnd",
+      "page": 24,
+      "bookPdfPage": 28,
+      "bookFile": "savage-spirits",
+      "bookPage": null,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Hermit": {
+      "names": [
+        "Forager",
+        "Soothing Tone",
+        "Grit",
+        "One with Nature",
+        "Conditioned",
+        "Grit",
+        "Menace",
+        "Animal Bond",
+        "Enduring",
+        "Conditioned",
+        "Survival of the Fittest",
+        "Grit",
+        "Force Rating",
+        "Improved Animal Bond",
+        "Harass",
+        "Force Connection",
+        "Grit",
+        "Natural Outdoorsman",
+        "Force Rating",
+        "Shroud"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Force Passive",
+        "Force Passive",
+        "Force Active",
+        "Force Passive",
+        "Passive",
+        "Active",
+        "Force Passive",
+        "Force Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Savage Spirits \u00b7 supplied PDF p.30 \u00b7 supplied FND tree collection, PDF p.25",
+      "collection": "fnd",
+      "page": 25,
+      "bookPdfPage": 30,
+      "bookFile": "savage-spirits",
+      "bookPage": null,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Navigator": {
+      "names": [
+        "Studious Plotting",
+        "Expert Tracker",
+        "Shortcut",
+        "Grit",
+        "Galaxy Mapper",
+        "Improved Shortcut",
+        "Planet Mapper",
+        "Preemptive Avoidance",
+        "Shortcut",
+        "Swift",
+        "Uncanny Senses",
+        "Toughened",
+        "Galaxy Mapper",
+        "Holistic Navigation",
+        "Force Rating",
+        "Planet Mapper",
+        "One with the Universe",
+        "Intuitive Navigation",
+        "Master Starhopper",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Passive",
+        "Passive",
+        "Force Active",
+        "Force Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Savage Spirits \u00b7 supplied PDF p.32 \u00b7 supplied FND tree collection, PDF p.27",
+      "collection": "fnd",
+      "page": 27,
+      "bookPdfPage": 32,
+      "bookFile": "savage-spirits",
+      "bookPage": null,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Investigator": {
+      "names": [
+        "Street Smarts",
+        "Keen Eyed",
+        "Uncanny Senses",
+        "Grit",
+        "Talk the Talk",
+        "Grit",
+        "Street Smarts",
+        "Toughened",
+        "Toughened",
+        "Keen Eyed",
+        "Street Smarts",
+        "Reconstruct the Scene",
+        "Sense Advantage",
+        "Unrelenting Skeptic",
+        "Clever Solution",
+        "Sense the Scene",
+        "Valuable Facts",
+        "Dedication",
+        "Improved Street Smarts",
+        "Force Rating"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Force Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Endless Vigil \u00b7 p.25 \u00b7 supplied FND tree collection, PDF p.31",
+      "collection": "fnd",
+      "page": 31,
+      "bookPdfPage": 27,
+      "bookFile": "endless-vigil",
+      "bookPage": 25,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Racer": {
+      "names": [
+        "Grit",
+        "Skilled Jockey",
+        "Conditioned",
+        "Shortcut",
+        "Shortcut",
+        "Full Throttle",
+        "Shortcut",
+        "Conditioned",
+        "Skilled Jockey",
+        "Improved Full Throttle",
+        "Freerunning",
+        "Improved Freerunning",
+        "Grit",
+        "Supreme Full Throttle",
+        "Force Rating",
+        "Better Luck Next Time",
+        "Superhuman Reflexes",
+        "Dedication",
+        "Improved Shortcut",
+        "Intuitive Evasion"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Active",
+        "Force Active",
+        "Passive",
+        "Active",
+        "Force Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Endless Vigil \u00b7 p.27 \u00b7 supplied FND tree collection, PDF p.32",
+      "collection": "fnd",
+      "page": 32,
+      "bookPdfPage": 29,
+      "bookFile": "endless-vigil",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
+    },
+    "Sentry": {
+      "names": [
+        "Toughened",
+        "Reflect",
+        "Grit",
+        "Conditioned",
+        "Uncanny Reactions",
+        "Grit",
+        "Reflect",
+        "Uncanny Reactions",
+        "Sleight of Mind",
+        "Improved Saber Throw",
+        "Saber Throw",
+        "Impossible Fall",
+        "Dodge",
+        "Fear the Shadows",
+        "Constant Vigilance",
+        "Sleight of Mind",
+        "Force Rating",
+        "Improved Reflect",
+        "Dodge",
+        "Dedication"
+      ],
+      "types": [
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Force Active",
+        "Force Passive",
+        "Force Passive",
+        "Force Passive",
+        "Force Active",
+        "Force Active",
+        "Active",
+        "Force Active",
+        "Passive",
+        "Force Passive",
+        "Force Passive",
+        "Force Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Endless Vigil \u00b7 p.29 \u00b7 supplied FND tree collection, PDF p.33",
+      "collection": "fnd",
+      "page": 33,
+      "bookPdfPage": 31,
+      "bookFile": "endless-vigil",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "replacesSimplified": true,
+      "idPrefix": "source99"
     }
   },
   "universals": {
@@ -6194,6 +8430,5305 @@
       "page": 145,
       "source": "Edge of the Empire Core \u00b7 p.145",
       "summary": "When selling legal goods to reputable merchants, earn 10% more credits per rank."
+    },
+    "Aggressive Negotiations": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 28,
+      "pdfPage": 24,
+      "source": "Disciples of Harmony \u00b7 p.28",
+      "summary": "Once per session, succeed at a Hard Lightsaber action to reduce Negotiation difficulty by 2 for this encounter, to a minimum of 0."
+    },
+    "Alchemical Arts": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 32,
+      "pdfPage": 35,
+      "source": "Unlimited Power \u00b7 p.32",
+      "summary": "After crafting a potion or talisman, suffer strain up to twice your ranks to add one light or dark Force point per two strain."
+    },
+    "Animal Bond": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 138,
+      "pdfPage": 141,
+      "source": "Force and Destiny Core \u00b7 p.138"
+    },
+    "Bad Cop": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "Spend 2 Advantage from Coercion or Deception to upgrade a later ally social check against that target once per rank."
+    },
+    "Bad Motivator": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 132,
+      "pdfPage": 141,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "Once per session, a successful Hard Mechanics action makes a selected device fail."
+    },
+    "Baleful Gaze": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "When attacked from medium range or closer, spend a Destiny Point to upgrade the attack difficulty by your Coercion ranks."
+    },
+    "Better Luck Next Time": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Endless Vigil \u00b7 p.30",
+      "summary": "A successful Hard Cool action causes a competitor to suffer a major misfortune."
+    },
+    "Blind Spot": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "While benefiting from cover, you and allies within short range add 1 Advantage to combat checks."
+    },
+    "Calming Aura": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "When a Force power targets you, reduce its generated Force points by 1, to a minimum of 0."
+    },
+    "Careful Planning": {
+      "type": "Active",
+      "activation": "Active; once per session",
+      "ranked": false,
+      "page": 29,
+      "pdfPage": 33,
+      "source": "Keeping the Peace \u00b7 p.29"
+    },
+    "Channel Agony": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 32,
+      "pdfPage": 35,
+      "source": "Unlimited Power \u00b7 p.32",
+      "summary": "After rolling Force dice, suffer wounds up to twice your ranks to add one dark Force point per two wounds. Adds 1 session Conflict."
+    },
+    "Clever Solution": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30"
+    },
+    "Conditioned": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141"
+    },
+    "Congenial": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "page": 32,
+      "pdfPage": 35,
+      "source": "Unlimited Power \u00b7 p.32"
+    },
+    "Constant Vigilance": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Endless Vigil \u00b7 p.30",
+      "summary": "You may use Vigilance for every initiative check."
+    },
+    "Contraption": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 133,
+      "pdfPage": 142,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Once per session, a successful Hard Mechanics action builds a device for the current problem from available tools and parts."
+    },
+    "Coordinated Assault": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30"
+    },
+    "Crucial Point": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 28,
+      "pdfPage": 24,
+      "source": "Disciples of Harmony \u00b7 p.28",
+      "summary": "Once per session during negotiations, propose a concrete concession the other party strongly wants; resolve its effect with the GM."
+    },
+    "Deathblow": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "On a successful attack using a personal or non-starship vehicle weapon, spend a Destiny Point to add Willpower damage to one hit."
+    },
+    "Empty Soul": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 28,
+      "pdfPage": 24,
+      "source": "Disciples of Harmony \u00b7 p.28",
+      "summary": "While carrying 2 encumbrance or less, add one light and one dark Force point to Force power checks."
+    },
+    "Encouraging Words": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 28,
+      "pdfPage": 24,
+      "source": "Disciples of Harmony \u00b7 p.28"
+    },
+    "Essential Kill": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "On a qualifying combat check, add available Force dice and spend Force points for Successes or pairs for Advantage. Excludes Gunnery and vehicle weapons."
+    },
+    "Familiar Suns": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 135,
+      "pdfPage": 144,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Fear the Shadows": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Endless Vigil \u00b7 p.30",
+      "summary": "A successful Hard Deception action makes one minion group or rival flee. Adds 1 session Conflict."
+    },
+    "Fearsome": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142"
+    },
+    "Fine Tuning": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 135,
+      "pdfPage": 144,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Font of Power": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 32,
+      "pdfPage": 35,
+      "source": "Unlimited Power \u00b7 p.32",
+      "summary": "Once per session, take an action to grant aligned Force points to nearby characters until the encounter ends."
+    },
+    "Force Connection": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "Add available Force dice to Survival or Knowledge (Xenology) and spend Force points for Success or Advantage."
+    },
+    "Force Protection": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143"
+    },
+    "Force Rating": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 135,
+      "pdfPage": 144,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Forewarning": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143"
+    },
+    "Freerunning": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Endless Vigil \u00b7 p.30",
+      "summary": "Suffer 1 strain during a Move maneuver to reach any location within short range."
+    },
+    "Full Throttle": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 135,
+      "pdfPage": 144,
+      "source": "Edge of the Empire Core \u00b7 p.135"
+    },
+    "Gearhead": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136"
+    },
+    "Go Without": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 28,
+      "pdfPage": 24,
+      "source": "Disciples of Harmony \u00b7 p.28",
+      "summary": "Once per session, count as having the appropriate tools for your next skill check this turn."
+    },
+    "Grapple": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30"
+    },
+    "Harass": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "A bonded animal may trade all damage from a successful attack for an upgrade to its target\u2019s next check."
+    },
+    "Healing Trance": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": true,
+      "page": 144,
+      "pdfPage": 147,
+      "source": "Force and Destiny Core \u00b7 p.144",
+      "summary": "Commit a Force die; heal 1 wound per rank after each full encounter it remains committed."
+    },
+    "Heightened Awareness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136"
+    },
+    "Hold Together": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 137,
+      "pdfPage": 146,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "After your vehicle or starship takes damage, spend a Destiny Point to convert that damage into system strain."
+    },
+    "Holistic Navigation": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "On an Astrogation check, spend a Destiny Point to remove Despair or Threat equal to your Perception ranks."
+    },
+    "Hunter's Quarry": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "Succeed at a Hard Survival action against a target within long range to upgrade attacks against it until the end of your next turn."
+    },
+    "Identify Ingredients": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 32,
+      "pdfPage": 35,
+      "source": "Unlimited Power \u00b7 p.32",
+      "summary": "After exposure to a substance, roll available Force dice and spend 2 Force points to identify its composition and effects."
+    },
+    "Impossible Fall": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31",
+      "summary": "Once per session while falling, roll available Force dice and spend Force points to reduce the fall and choose a safe landing."
+    },
+    "Improved Animal Bond": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "When directing a bonded animal with a maneuver, suffer 1 strain to add 1 Boost to its next check."
+    },
+    "Improved Blooded": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 32,
+      "pdfPage": 35,
+      "source": "Unlimited Power \u00b7 p.32",
+      "summary": "Take a Hard Resilience action to recover from poisons and drug side effects; reduce difficulty by your Blooded ranks."
+    },
+    "Improved Freerunning": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Endless Vigil \u00b7 p.30",
+      "summary": "Suffer 4 strain during a Move maneuver to reach any location within medium range."
+    },
+    "Improved Full Throttle": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Suffer 1 strain to attempt Full Throttle as a maneuver at Average difficulty."
+    },
+    "Improved Healing Trance": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 144,
+      "pdfPage": 147,
+      "source": "Force and Destiny Core \u00b7 p.144",
+      "summary": "After Healing Trance heals wounds, attempt a Resilience check against a Critical Injury\u2019s severity to heal that injury."
+    },
+    "Improved Hunter's Quarry": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "Suffer 2 strain to perform Hunter\u2019s Quarry as a maneuver."
+    },
+    "Improved Overwhelming Aura": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 33,
+      "pdfPage": 36,
+      "source": "Unlimited Power \u00b7 p.33",
+      "summary": "Affected characters add Failure to fear checks you cause and Success to other fear checks. Adds 1 session Conflict."
+    },
+    "Improved Reflect": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "After Reflect reduces a qualifying ranged hit that rolled Despair or 3 Threat, redirect a hit with its original damage to another nearby target."
+    },
+    "Improved Saber Throw": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31",
+      "summary": "Saber Throw can reach long range. At long range, spend 2 Force points to return the weapon to your hand."
+    },
+    "Improved Savvy Negotiator": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30",
+      "summary": "A successful Hard Negotiation action convinces one observer per Savvy Negotiator rank that an opponent\u2019s argument is maliciously unreasonable."
+    },
+    "Improved Shortcut": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31"
+    },
+    "Improved Street Smarts": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31"
+    },
+    "Improved Sunder": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30",
+      "summary": "Each Advantage spent on Sunder damages the target item by two steps rather than one."
+    },
+    "Improved Wise Warrior": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30",
+      "summary": "When using Wise Warrior, an ally within short range may use the same characteristic for their next qualifying combat check."
+    },
+    "Improvised Concoction": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 32,
+      "pdfPage": 35,
+      "source": "Unlimited Power \u00b7 p.32",
+      "summary": "Once per session, combine a Hard Knowledge (Xenology) action with available Force dice to create a dose of poison or a drug."
+    },
+    "Intuitive Evasion": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Commit Force dice up to your ranks and suffer strain each round to upgrade incoming attacks against a qualifying vehicle you pilot."
+    },
+    "Intuitive Navigation": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "Add available Force dice to Astrogation or Knowledge (Outer Rim) and spend Force points for Success or Advantage."
+    },
+    "Iron Soul": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 28,
+      "pdfPage": 24,
+      "source": "Disciples of Harmony \u00b7 p.28",
+      "summary": "While carrying 2 encumbrance or less, recover all strain at the end of an encounter."
+    },
+    "Keen Eyed": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146"
+    },
+    "Knowledge Is Power": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146"
+    },
+    "Knowledgeable Healing": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146"
+    },
+    "Let's Ride": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 138,
+      "pdfPage": 147,
+      "source": "Edge of the Empire Core \u00b7 p.138"
+    },
+    "Marked for Death": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 33,
+      "source": "Savage Spirits \u00b7 supplied PDF p.33",
+      "summary": "Commit a Force die to gain 2 Advantage on combat checks against one target until you release it, the target falls, or the session ends."
+    },
+    "Master Instructor": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 29,
+      "pdfPage": 25,
+      "source": "Disciples of Harmony \u00b7 p.29"
+    },
+    "Meditative Trance": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 29,
+      "pdfPage": 25,
+      "source": "Disciples of Harmony \u00b7 p.29",
+      "summary": "Reduce suffocation strain and vacuum wounds from 3 to 1 per round."
+    },
+    "Menace": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34",
+      "summary": "Direct a suitable bonded creature to menace a nearby enemy, adding a Setback to its next attack against you; fear immunity applies."
+    },
+    "Mind Bleed": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 29,
+      "pdfPage": 25,
+      "source": "Disciples of Harmony \u00b7 p.29",
+      "summary": "While lightly equipped, after being hit suffer strain equal to the wounds taken to inflict equal wounds on the attacker. Adds 1 session Conflict."
+    },
+    "Mind over Matter": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34",
+      "summary": "Spend a Destiny Point to recover strain equal to Willpower."
+    },
+    "Natural Hunter": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "pdfPage": 148,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "Natural Tinkerer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 139,
+      "pdfPage": 148,
+      "source": "Edge of the Empire Core \u00b7 p.139"
+    },
+    "No Escape": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "Spend 2 Advantage on Coercion or 2 Threat from a foe\u2019s Discipline check to deny that foe its next free maneuver."
+    },
+    "Now the Master": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 29,
+      "pdfPage": 25,
+      "source": "Disciples of Harmony \u00b7 p.29",
+      "summary": "Once per session, temporarily copy one talent or Force power possessed by another character in the current encounter."
+    },
+    "Once a Learner": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 29,
+      "pdfPage": 25,
+      "source": "Disciples of Harmony \u00b7 p.29",
+      "summary": "Suffer 4 strain to add your Force rating to a nearby ally\u2019s until the end of your next turn; you cannot make Force power checks until your next turn."
+    },
+    "One with Nature": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34",
+      "summary": "In the wilderness, use a Simple Survival check for end-of-encounter strain recovery instead of Cool or Discipline."
+    },
+    "One with the Universe": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149"
+    },
+    "Overbalance": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31"
+    },
+    "Overwhelming Aura": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 33,
+      "pdfPage": 36,
+      "source": "Unlimited Power \u00b7 p.33",
+      "summary": "Commit Force dice up to your ranks; gain equal Successes on social checks and impose equal Failures on nearby opponents\u2019 social checks."
+    },
+    "Parry": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149"
+    },
+    "Physical Training": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30"
+    },
+    "Planet Mapper": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34"
+    },
+    "Power of Darkness": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 33,
+      "pdfPage": 36,
+      "source": "Unlimited Power \u00b7 p.33",
+      "summary": "Once per session, increase wound and strain thresholds by the dark Destiny pool for this encounter. Adds 1 session Conflict."
+    },
+    "Precise Aim": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Precision Strike": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31"
+    },
+    "Preemptive Avoidance": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149"
+    },
+    "Prescient Shot": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31",
+      "summary": "Add 1 Boost to Ranged (Light) checks unless the target is immune to Force powers."
+    },
+    "Prime Positions": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31",
+      "summary": "When you or a nearby ally take cover, increase soak against ranged attacks by your ranks until leaving cover."
+    },
+    "Prophetic Aim": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31",
+      "summary": "While aiming, a Despair on Ranged (Heavy) or Ranged (Light) cannot hit allies engaged with the target."
+    },
+    "Quick Draw": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Quick Strike": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Reconstruct the Scene": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31"
+    },
+    "Redundant Systems": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141"
+    },
+    "Reflect": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150"
+    },
+    "Saber Throw": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 154,
+      "source": "Force and Destiny Core \u00b7 p.151"
+    },
+    "Savvy Negotiator": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30",
+      "summary": "Remove one Setback per rank from Negotiation and Streetwise."
+    },
+    "Secret Lore": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 33,
+      "pdfPage": 36,
+      "source": "Unlimited Power \u00b7 p.33",
+      "summary": "Remove one Setback per rank from Knowledge (Lore) and reduce its difficulty by 1; the difficulty reduction does not stack with ranks."
+    },
+    "Sense Advantage": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 154,
+      "source": "Force and Destiny Core \u00b7 p.151"
+    },
+    "Sense Danger": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142"
+    },
+    "Sense Emotions": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142"
+    },
+    "Sense the Scene": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31",
+      "summary": "Combine a Hard Perception action with available Force dice to identify the emotional characteristics of a person involved in a crime."
+    },
+    "Shroud": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 154,
+      "source": "Force and Destiny Core \u00b7 p.151"
+    },
+    "Skilled Teacher": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30",
+      "summary": "Before a nearby ally\u2019s check, suffer strain up to your ranks to add equal Successes, provided the ally has fewer ranks in that skill."
+    },
+    "Sleight of Mind": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152"
+    },
+    "Slippery Minded": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152"
+    },
+    "Soothing Tone": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34"
+    },
+    "Stimpack Specialization": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152"
+    },
+    "Studious Plotting": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34",
+      "summary": "Use Intellect instead of Cunning for Streetwise or Survival checks to navigate on a world."
+    },
+    "Superhuman Reflexes": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31",
+      "summary": "Once per session, cancel Despair from a Piloting check and add Successes equal to your Cool ranks."
+    },
+    "Suppressing Fire": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31",
+      "summary": "Once per round, you or nearby allies may spend 1 Advantage on a failed combat check to inflict strain equal to your ranks."
+    },
+    "Supreme Full Throttle": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Full Throttle increases vehicle speed by 2 rather than 1."
+    },
+    "Survival of the Fittest": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34",
+      "summary": "Once per session, use your Survival ranks as your Force rating for one check."
+    },
+    "Talk the Talk": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31"
+    },
+    "Terrifying Kill": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": null,
+      "pdfPage": 34,
+      "source": "Savage Spirits \u00b7 supplied PDF p.34",
+      "summary": "After incapacitating or critically injuring a target, spend a Destiny Point and Force points to inflict strain on nearby characters. Adds 1 session Conflict."
+    },
+    "Transmogrify": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 33,
+      "pdfPage": 36,
+      "source": "Unlimited Power \u00b7 p.33",
+      "summary": "Add available Force dice to a crafting check; spend Force points for Successes or pairs for Advantage."
+    },
+    "Twisted Words": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "page": 33,
+      "pdfPage": 36,
+      "source": "Unlimited Power \u00b7 p.33",
+      "summary": "When targeted by a social check, spend 3 Threat or Despair and suffer 1 strain to inflict strain equal to your Coercion ranks on the speaker."
+    },
+    "Uncanny Reactions": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145"
+    },
+    "Uncanny Senses": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145"
+    },
+    "Unrelenting Skeptic": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Endless Vigil \u00b7 p.31",
+      "summary": "When targeted by Deception, add automatic Failure equal to your Vigilance ranks."
+    },
+    "Valuable Facts": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153"
+    },
+    "Well Traveled": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30",
+      "summary": "Knowledge (Core Worlds) and Knowledge (Outer Rim) become career skills without receiving free ranks."
+    },
+    "Wise Warrior": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 30,
+      "pdfPage": 26,
+      "source": "Disciples of Harmony \u00b7 p.30",
+      "summary": "Once per round, spend a Destiny Point to use any characteristic for one combat check."
     }
+  },
+  "legacyTrees99": {
+    "Mechanic": [
+      {
+        "id": "p37-mechanic-0-0",
+        "name": "Gearhead",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-0-1",
+          "p37-mechanic-1-0"
+        ]
+      },
+      {
+        "id": "p37-mechanic-0-1",
+        "name": "Grit",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-0-0",
+          "p37-mechanic-0-2",
+          "p37-mechanic-1-1"
+        ]
+      },
+      {
+        "id": "p37-mechanic-0-2",
+        "name": "Toughened",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-0-1",
+          "p37-mechanic-0-3",
+          "p37-mechanic-1-2"
+        ]
+      },
+      {
+        "id": "p37-mechanic-0-3",
+        "name": "Quick Draw",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-0-2",
+          "p37-mechanic-1-3"
+        ]
+      },
+      {
+        "id": "p37-mechanic-1-0",
+        "name": "Solid Repairs",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-1-1",
+          "p37-mechanic-0-0",
+          "p37-mechanic-2-0"
+        ]
+      },
+      {
+        "id": "p37-mechanic-1-1",
+        "name": "Jury Rigged",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-1-0",
+          "p37-mechanic-1-2",
+          "p37-mechanic-0-1",
+          "p37-mechanic-2-1"
+        ]
+      },
+      {
+        "id": "p37-mechanic-1-2",
+        "name": "Inventor",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-1-1",
+          "p37-mechanic-1-3",
+          "p37-mechanic-0-2",
+          "p37-mechanic-2-2"
+        ]
+      },
+      {
+        "id": "p37-mechanic-1-3",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-1-2",
+          "p37-mechanic-0-3",
+          "p37-mechanic-2-3"
+        ]
+      },
+      {
+        "id": "p37-mechanic-2-0",
+        "name": "Bad Motivator",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-2-1",
+          "p37-mechanic-1-0",
+          "p37-mechanic-3-0"
+        ]
+      },
+      {
+        "id": "p37-mechanic-2-1",
+        "name": "Brace",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-2-0",
+          "p37-mechanic-2-2",
+          "p37-mechanic-1-1",
+          "p37-mechanic-3-1"
+        ]
+      },
+      {
+        "id": "p37-mechanic-2-2",
+        "name": "Durable",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-2-1",
+          "p37-mechanic-2-3",
+          "p37-mechanic-1-2",
+          "p37-mechanic-3-2"
+        ]
+      },
+      {
+        "id": "p37-mechanic-2-3",
+        "name": "Natural Skill",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-2-2",
+          "p37-mechanic-1-3",
+          "p37-mechanic-3-3"
+        ]
+      },
+      {
+        "id": "p37-mechanic-3-0",
+        "name": "Armor Master",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-3-1",
+          "p37-mechanic-2-0",
+          "p37-mechanic-4-0"
+        ]
+      },
+      {
+        "id": "p37-mechanic-3-1",
+        "name": "Hard Headed",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-3-0",
+          "p37-mechanic-3-2",
+          "p37-mechanic-2-1",
+          "p37-mechanic-4-1"
+        ]
+      },
+      {
+        "id": "p37-mechanic-3-2",
+        "name": "Dedication",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-3-1",
+          "p37-mechanic-3-3",
+          "p37-mechanic-2-2",
+          "p37-mechanic-4-2"
+        ]
+      },
+      {
+        "id": "p37-mechanic-3-3",
+        "name": "Point Blank",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-3-2",
+          "p37-mechanic-2-3",
+          "p37-mechanic-4-3"
+        ]
+      },
+      {
+        "id": "p37-mechanic-4-0",
+        "name": "Skilled Jockey",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-4-1",
+          "p37-mechanic-3-0"
+        ]
+      },
+      {
+        "id": "p37-mechanic-4-1",
+        "name": "Resolve",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-4-0",
+          "p37-mechanic-4-2",
+          "p37-mechanic-3-1"
+        ]
+      },
+      {
+        "id": "p37-mechanic-4-2",
+        "name": "True Aim",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-4-1",
+          "p37-mechanic-4-3",
+          "p37-mechanic-3-2"
+        ]
+      },
+      {
+        "id": "p37-mechanic-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-mechanic-4-2",
+          "p37-mechanic-3-3"
+        ]
+      }
+    ],
+    "Scout": [
+      {
+        "id": "p37-scout-0-0",
+        "name": "Rapid Recovery",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-scout-0-1",
+          "p37-scout-1-0"
+        ]
+      },
+      {
+        "id": "p37-scout-0-1",
+        "name": "Forager",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-scout-0-0",
+          "p37-scout-0-2",
+          "p37-scout-1-1"
+        ]
+      },
+      {
+        "id": "p37-scout-0-2",
+        "name": "Expert Tracker",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-scout-0-1",
+          "p37-scout-0-3",
+          "p37-scout-1-2"
+        ]
+      },
+      {
+        "id": "p37-scout-0-3",
+        "name": "Quick Strike",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-scout-0-2",
+          "p37-scout-1-3"
+        ]
+      },
+      {
+        "id": "p37-scout-1-0",
+        "name": "Stalker",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-scout-1-1",
+          "p37-scout-0-0",
+          "p37-scout-2-0"
+        ]
+      },
+      {
+        "id": "p37-scout-1-1",
+        "name": "Shortcut",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-scout-1-0",
+          "p37-scout-1-2",
+          "p37-scout-0-1",
+          "p37-scout-2-1"
+        ]
+      },
+      {
+        "id": "p37-scout-1-2",
+        "name": "Keen Eyed",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-scout-1-1",
+          "p37-scout-1-3",
+          "p37-scout-0-2",
+          "p37-scout-2-2"
+        ]
+      },
+      {
+        "id": "p37-scout-1-3",
+        "name": "Swift",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-scout-1-2",
+          "p37-scout-0-3",
+          "p37-scout-2-3"
+        ]
+      },
+      {
+        "id": "p37-scout-2-0",
+        "name": "Disorient",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-scout-2-1",
+          "p37-scout-1-0",
+          "p37-scout-3-0"
+        ]
+      },
+      {
+        "id": "p37-scout-2-1",
+        "name": "Toughened",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-scout-2-0",
+          "p37-scout-2-2",
+          "p37-scout-1-1",
+          "p37-scout-3-1"
+        ]
+      },
+      {
+        "id": "p37-scout-2-2",
+        "name": "Grit",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-scout-2-1",
+          "p37-scout-2-3",
+          "p37-scout-1-2",
+          "p37-scout-3-2"
+        ]
+      },
+      {
+        "id": "p37-scout-2-3",
+        "name": "Side Step",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-scout-2-2",
+          "p37-scout-1-3",
+          "p37-scout-3-3"
+        ]
+      },
+      {
+        "id": "p37-scout-3-0",
+        "name": "Natural Outdoorsman",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-scout-3-1",
+          "p37-scout-2-0",
+          "p37-scout-4-0"
+        ]
+      },
+      {
+        "id": "p37-scout-3-1",
+        "name": "Rapid Reaction",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-scout-3-0",
+          "p37-scout-3-2",
+          "p37-scout-2-1",
+          "p37-scout-4-1"
+        ]
+      },
+      {
+        "id": "p37-scout-3-2",
+        "name": "Dedication",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-scout-3-1",
+          "p37-scout-3-3",
+          "p37-scout-2-2",
+          "p37-scout-4-2"
+        ]
+      },
+      {
+        "id": "p37-scout-3-3",
+        "name": "Durable",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-scout-3-2",
+          "p37-scout-2-3",
+          "p37-scout-4-3"
+        ]
+      },
+      {
+        "id": "p37-scout-4-0",
+        "name": "Confidence",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-scout-4-1",
+          "p37-scout-3-0"
+        ]
+      },
+      {
+        "id": "p37-scout-4-1",
+        "name": "Brace",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-scout-4-0",
+          "p37-scout-4-2",
+          "p37-scout-3-1"
+        ]
+      },
+      {
+        "id": "p37-scout-4-2",
+        "name": "True Aim",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-scout-4-1",
+          "p37-scout-4-3",
+          "p37-scout-3-2"
+        ]
+      },
+      {
+        "id": "p37-scout-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-scout-4-2",
+          "p37-scout-3-3"
+        ]
+      }
+    ],
+    "Arbiter": [
+      {
+        "id": "p37-arbiter-0-0",
+        "name": "Sense Emotions",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-0-1",
+          "p37-arbiter-1-0"
+        ]
+      },
+      {
+        "id": "p37-arbiter-0-1",
+        "name": "Quick Draw",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-0-0",
+          "p37-arbiter-0-2",
+          "p37-arbiter-1-1"
+        ]
+      },
+      {
+        "id": "p37-arbiter-0-2",
+        "name": "Dodge",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-0-1",
+          "p37-arbiter-0-3",
+          "p37-arbiter-1-2"
+        ]
+      },
+      {
+        "id": "p37-arbiter-0-3",
+        "name": "Conditioned",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-0-2",
+          "p37-arbiter-1-3"
+        ]
+      },
+      {
+        "id": "p37-arbiter-1-0",
+        "name": "Researcher",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-1-1",
+          "p37-arbiter-0-0",
+          "p37-arbiter-2-0"
+        ]
+      },
+      {
+        "id": "p37-arbiter-1-1",
+        "name": "Savvy Negotiator",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-1-0",
+          "p37-arbiter-1-2",
+          "p37-arbiter-0-1",
+          "p37-arbiter-2-1"
+        ]
+      },
+      {
+        "id": "p37-arbiter-1-2",
+        "name": "Preemptive Avoidance",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-1-1",
+          "p37-arbiter-1-3",
+          "p37-arbiter-0-2",
+          "p37-arbiter-2-2"
+        ]
+      },
+      {
+        "id": "p37-arbiter-1-3",
+        "name": "Grit",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-1-2",
+          "p37-arbiter-0-3",
+          "p37-arbiter-2-3"
+        ]
+      },
+      {
+        "id": "p37-arbiter-2-0",
+        "name": "Toughened",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-2-1",
+          "p37-arbiter-1-0",
+          "p37-arbiter-3-0"
+        ]
+      },
+      {
+        "id": "p37-arbiter-2-1",
+        "name": "Confidence",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-2-0",
+          "p37-arbiter-2-2",
+          "p37-arbiter-1-1",
+          "p37-arbiter-3-1"
+        ]
+      },
+      {
+        "id": "p37-arbiter-2-2",
+        "name": "Sense Danger",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-2-1",
+          "p37-arbiter-2-3",
+          "p37-arbiter-1-2",
+          "p37-arbiter-3-2"
+        ]
+      },
+      {
+        "id": "p37-arbiter-2-3",
+        "name": "Uncanny Senses",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-2-2",
+          "p37-arbiter-1-3",
+          "p37-arbiter-3-3"
+        ]
+      },
+      {
+        "id": "p37-arbiter-3-0",
+        "name": "Uncanny Reactions",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-3-1",
+          "p37-arbiter-2-0",
+          "p37-arbiter-4-0"
+        ]
+      },
+      {
+        "id": "p37-arbiter-3-1",
+        "name": "Rapid Recovery",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-3-0",
+          "p37-arbiter-3-2",
+          "p37-arbiter-2-1",
+          "p37-arbiter-4-1"
+        ]
+      },
+      {
+        "id": "p37-arbiter-3-2",
+        "name": "Crucial Point",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-3-1",
+          "p37-arbiter-3-3",
+          "p37-arbiter-2-2",
+          "p37-arbiter-4-2"
+        ]
+      },
+      {
+        "id": "p37-arbiter-3-3",
+        "name": "Reflect",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-3-2",
+          "p37-arbiter-2-3",
+          "p37-arbiter-4-3"
+        ]
+      },
+      {
+        "id": "p37-arbiter-4-0",
+        "name": "Parry",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-4-1",
+          "p37-arbiter-3-0"
+        ]
+      },
+      {
+        "id": "p37-arbiter-4-1",
+        "name": "Balance",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-4-0",
+          "p37-arbiter-4-2",
+          "p37-arbiter-3-1"
+        ]
+      },
+      {
+        "id": "p37-arbiter-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-arbiter-4-1",
+          "p37-arbiter-4-3",
+          "p37-arbiter-3-2"
+        ]
+      },
+      {
+        "id": "p37-arbiter-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-arbiter-4-2",
+          "p37-arbiter-3-3"
+        ]
+      }
+    ],
+    "Ascetic": [
+      {
+        "id": "p37-ascetic-0-0",
+        "name": "Physical Training",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-0-1",
+          "p37-ascetic-1-0"
+        ]
+      },
+      {
+        "id": "p37-ascetic-0-1",
+        "name": "Toughened",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-0-0",
+          "p37-ascetic-0-2",
+          "p37-ascetic-1-1"
+        ]
+      },
+      {
+        "id": "p37-ascetic-0-2",
+        "name": "Confidence",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-0-1",
+          "p37-ascetic-0-3",
+          "p37-ascetic-1-2"
+        ]
+      },
+      {
+        "id": "p37-ascetic-0-3",
+        "name": "Sense Danger",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-0-2",
+          "p37-ascetic-1-3"
+        ]
+      },
+      {
+        "id": "p37-ascetic-1-0",
+        "name": "Uncanny Senses",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-1-1",
+          "p37-ascetic-0-0",
+          "p37-ascetic-2-0"
+        ]
+      },
+      {
+        "id": "p37-ascetic-1-1",
+        "name": "Force Protection",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-1-0",
+          "p37-ascetic-1-2",
+          "p37-ascetic-0-1",
+          "p37-ascetic-2-1"
+        ]
+      },
+      {
+        "id": "p37-ascetic-1-2",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-1-1",
+          "p37-ascetic-1-3",
+          "p37-ascetic-0-2",
+          "p37-ascetic-2-2"
+        ]
+      },
+      {
+        "id": "p37-ascetic-1-3",
+        "name": "Resolve",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-1-2",
+          "p37-ascetic-0-3",
+          "p37-ascetic-2-3"
+        ]
+      },
+      {
+        "id": "p37-ascetic-2-0",
+        "name": "Reflect",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-2-1",
+          "p37-ascetic-1-0",
+          "p37-ascetic-3-0"
+        ]
+      },
+      {
+        "id": "p37-ascetic-2-1",
+        "name": "Parry",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-2-0",
+          "p37-ascetic-2-2",
+          "p37-ascetic-1-1",
+          "p37-ascetic-3-1"
+        ]
+      },
+      {
+        "id": "p37-ascetic-2-2",
+        "name": "Balance",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-2-1",
+          "p37-ascetic-2-3",
+          "p37-ascetic-1-2",
+          "p37-ascetic-3-2"
+        ]
+      },
+      {
+        "id": "p37-ascetic-2-3",
+        "name": "Touch of Fate",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-2-2",
+          "p37-ascetic-1-3",
+          "p37-ascetic-3-3"
+        ]
+      },
+      {
+        "id": "p37-ascetic-3-0",
+        "name": "Dedication",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-3-1",
+          "p37-ascetic-2-0",
+          "p37-ascetic-4-0"
+        ]
+      },
+      {
+        "id": "p37-ascetic-3-1",
+        "name": "Force Rating",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-3-0",
+          "p37-ascetic-3-2",
+          "p37-ascetic-2-1",
+          "p37-ascetic-4-1"
+        ]
+      },
+      {
+        "id": "p37-ascetic-3-2",
+        "name": "Iron Soul",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-3-1",
+          "p37-ascetic-3-3",
+          "p37-ascetic-2-2",
+          "p37-ascetic-4-2"
+        ]
+      },
+      {
+        "id": "p37-ascetic-3-3",
+        "name": "Dodge",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-3-2",
+          "p37-ascetic-2-3",
+          "p37-ascetic-4-3"
+        ]
+      },
+      {
+        "id": "p37-ascetic-4-0",
+        "name": "Conditioned",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-4-1",
+          "p37-ascetic-3-0"
+        ]
+      },
+      {
+        "id": "p37-ascetic-4-1",
+        "name": "Researcher",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-4-0",
+          "p37-ascetic-4-2",
+          "p37-ascetic-3-1"
+        ]
+      },
+      {
+        "id": "p37-ascetic-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-ascetic-4-1",
+          "p37-ascetic-4-3",
+          "p37-ascetic-3-2"
+        ]
+      },
+      {
+        "id": "p37-ascetic-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-ascetic-4-2",
+          "p37-ascetic-3-3"
+        ]
+      }
+    ],
+    "Teacher": [
+      {
+        "id": "p37-teacher-0-0",
+        "name": "Researcher",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-0-1",
+          "p37-teacher-1-0"
+        ]
+      },
+      {
+        "id": "p37-teacher-0-1",
+        "name": "Toughened",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-0-0",
+          "p37-teacher-0-2",
+          "p37-teacher-1-1"
+        ]
+      },
+      {
+        "id": "p37-teacher-0-2",
+        "name": "Confidence",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-0-1",
+          "p37-teacher-0-3",
+          "p37-teacher-1-2"
+        ]
+      },
+      {
+        "id": "p37-teacher-0-3",
+        "name": "Sense Danger",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-0-2",
+          "p37-teacher-1-3"
+        ]
+      },
+      {
+        "id": "p37-teacher-1-0",
+        "name": "Uncanny Senses",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-1-1",
+          "p37-teacher-0-0",
+          "p37-teacher-2-0"
+        ]
+      },
+      {
+        "id": "p37-teacher-1-1",
+        "name": "Respected Scholar",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-1-0",
+          "p37-teacher-1-2",
+          "p37-teacher-0-1",
+          "p37-teacher-2-1"
+        ]
+      },
+      {
+        "id": "p37-teacher-1-2",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-1-1",
+          "p37-teacher-1-3",
+          "p37-teacher-0-2",
+          "p37-teacher-2-2"
+        ]
+      },
+      {
+        "id": "p37-teacher-1-3",
+        "name": "Resolve",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-1-2",
+          "p37-teacher-0-3",
+          "p37-teacher-2-3"
+        ]
+      },
+      {
+        "id": "p37-teacher-2-0",
+        "name": "Reflect",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-2-1",
+          "p37-teacher-1-0",
+          "p37-teacher-3-0"
+        ]
+      },
+      {
+        "id": "p37-teacher-2-1",
+        "name": "Parry",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-2-0",
+          "p37-teacher-2-2",
+          "p37-teacher-1-1",
+          "p37-teacher-3-1"
+        ]
+      },
+      {
+        "id": "p37-teacher-2-2",
+        "name": "Balance",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-2-1",
+          "p37-teacher-2-3",
+          "p37-teacher-1-2",
+          "p37-teacher-3-2"
+        ]
+      },
+      {
+        "id": "p37-teacher-2-3",
+        "name": "Touch of Fate",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-2-2",
+          "p37-teacher-1-3",
+          "p37-teacher-3-3"
+        ]
+      },
+      {
+        "id": "p37-teacher-3-0",
+        "name": "Dedication",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-3-1",
+          "p37-teacher-2-0",
+          "p37-teacher-4-0"
+        ]
+      },
+      {
+        "id": "p37-teacher-3-1",
+        "name": "Force Rating",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-3-0",
+          "p37-teacher-3-2",
+          "p37-teacher-2-1",
+          "p37-teacher-4-1"
+        ]
+      },
+      {
+        "id": "p37-teacher-3-2",
+        "name": "Well Rounded",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-3-1",
+          "p37-teacher-3-3",
+          "p37-teacher-2-2",
+          "p37-teacher-4-2"
+        ]
+      },
+      {
+        "id": "p37-teacher-3-3",
+        "name": "Dodge",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-3-2",
+          "p37-teacher-2-3",
+          "p37-teacher-4-3"
+        ]
+      },
+      {
+        "id": "p37-teacher-4-0",
+        "name": "Conditioned",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-4-1",
+          "p37-teacher-3-0"
+        ]
+      },
+      {
+        "id": "p37-teacher-4-1",
+        "name": "Researcher",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-4-0",
+          "p37-teacher-4-2",
+          "p37-teacher-3-1"
+        ]
+      },
+      {
+        "id": "p37-teacher-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-teacher-4-1",
+          "p37-teacher-4-3",
+          "p37-teacher-3-2"
+        ]
+      },
+      {
+        "id": "p37-teacher-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-teacher-4-2",
+          "p37-teacher-3-3"
+        ]
+      }
+    ],
+    "Warden": [
+      {
+        "id": "p37-warden-0-0",
+        "name": "Intimidating",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-warden-0-1",
+          "p37-warden-1-0"
+        ]
+      },
+      {
+        "id": "p37-warden-0-1",
+        "name": "Balance",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-warden-0-0",
+          "p37-warden-0-2",
+          "p37-warden-1-1"
+        ]
+      },
+      {
+        "id": "p37-warden-0-2",
+        "name": "Touch of Fate",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-warden-0-1",
+          "p37-warden-0-3",
+          "p37-warden-1-2"
+        ]
+      },
+      {
+        "id": "p37-warden-0-3",
+        "name": "Dedication",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-warden-0-2",
+          "p37-warden-1-3"
+        ]
+      },
+      {
+        "id": "p37-warden-1-0",
+        "name": "Force Rating",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-warden-1-1",
+          "p37-warden-0-0",
+          "p37-warden-2-0"
+        ]
+      },
+      {
+        "id": "p37-warden-1-1",
+        "name": "Precision Strike",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-warden-1-0",
+          "p37-warden-1-2",
+          "p37-warden-0-1",
+          "p37-warden-2-1"
+        ]
+      },
+      {
+        "id": "p37-warden-1-2",
+        "name": "Dodge",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-warden-1-1",
+          "p37-warden-1-3",
+          "p37-warden-0-2",
+          "p37-warden-2-2"
+        ]
+      },
+      {
+        "id": "p37-warden-1-3",
+        "name": "Conditioned",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-warden-1-2",
+          "p37-warden-0-3",
+          "p37-warden-2-3"
+        ]
+      },
+      {
+        "id": "p37-warden-2-0",
+        "name": "Researcher",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-warden-2-1",
+          "p37-warden-1-0",
+          "p37-warden-3-0"
+        ]
+      },
+      {
+        "id": "p37-warden-2-1",
+        "name": "Keen Eyed",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-warden-2-0",
+          "p37-warden-2-2",
+          "p37-warden-1-1",
+          "p37-warden-3-1"
+        ]
+      },
+      {
+        "id": "p37-warden-2-2",
+        "name": "Preemptive Avoidance",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-warden-2-1",
+          "p37-warden-2-3",
+          "p37-warden-1-2",
+          "p37-warden-3-2"
+        ]
+      },
+      {
+        "id": "p37-warden-2-3",
+        "name": "Grit",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-warden-2-2",
+          "p37-warden-1-3",
+          "p37-warden-3-3"
+        ]
+      },
+      {
+        "id": "p37-warden-3-0",
+        "name": "Toughened",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-warden-3-1",
+          "p37-warden-2-0",
+          "p37-warden-4-0"
+        ]
+      },
+      {
+        "id": "p37-warden-3-1",
+        "name": "Confidence",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-warden-3-0",
+          "p37-warden-3-2",
+          "p37-warden-2-1",
+          "p37-warden-4-1"
+        ]
+      },
+      {
+        "id": "p37-warden-3-2",
+        "name": "Scathing Tirade",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-warden-3-1",
+          "p37-warden-3-3",
+          "p37-warden-2-2",
+          "p37-warden-4-2"
+        ]
+      },
+      {
+        "id": "p37-warden-3-3",
+        "name": "Uncanny Senses",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-warden-3-2",
+          "p37-warden-2-3",
+          "p37-warden-4-3"
+        ]
+      },
+      {
+        "id": "p37-warden-4-0",
+        "name": "Uncanny Reactions",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-warden-4-1",
+          "p37-warden-3-0"
+        ]
+      },
+      {
+        "id": "p37-warden-4-1",
+        "name": "Rapid Recovery",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-warden-4-0",
+          "p37-warden-4-2",
+          "p37-warden-3-1"
+        ]
+      },
+      {
+        "id": "p37-warden-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-warden-4-1",
+          "p37-warden-4-3",
+          "p37-warden-3-2"
+        ]
+      },
+      {
+        "id": "p37-warden-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-warden-4-2",
+          "p37-warden-3-3"
+        ]
+      }
+    ],
+    "Warleader": [
+      {
+        "id": "p37-warleader-0-0",
+        "name": "Prime Positions",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-0-1",
+          "p37-warleader-1-0"
+        ]
+      },
+      {
+        "id": "p37-warleader-0-1",
+        "name": "Grit",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-0-0",
+          "p37-warleader-0-2",
+          "p37-warleader-1-1"
+        ]
+      },
+      {
+        "id": "p37-warleader-0-2",
+        "name": "Toughened",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-0-1",
+          "p37-warleader-0-3",
+          "p37-warleader-1-2"
+        ]
+      },
+      {
+        "id": "p37-warleader-0-3",
+        "name": "Confidence",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-0-2",
+          "p37-warleader-1-3"
+        ]
+      },
+      {
+        "id": "p37-warleader-1-0",
+        "name": "Sense Danger",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-warleader-1-1",
+          "p37-warleader-0-0",
+          "p37-warleader-2-0"
+        ]
+      },
+      {
+        "id": "p37-warleader-1-1",
+        "name": "Suppressing Fire",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-1-0",
+          "p37-warleader-1-2",
+          "p37-warleader-0-1",
+          "p37-warleader-2-1"
+        ]
+      },
+      {
+        "id": "p37-warleader-1-2",
+        "name": "Uncanny Reactions",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-warleader-1-1",
+          "p37-warleader-1-3",
+          "p37-warleader-0-2",
+          "p37-warleader-2-2"
+        ]
+      },
+      {
+        "id": "p37-warleader-1-3",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-1-2",
+          "p37-warleader-0-3",
+          "p37-warleader-2-3"
+        ]
+      },
+      {
+        "id": "p37-warleader-2-0",
+        "name": "Resolve",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-2-1",
+          "p37-warleader-1-0",
+          "p37-warleader-3-0"
+        ]
+      },
+      {
+        "id": "p37-warleader-2-1",
+        "name": "Reflect",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-warleader-2-0",
+          "p37-warleader-2-2",
+          "p37-warleader-1-1",
+          "p37-warleader-3-1"
+        ]
+      },
+      {
+        "id": "p37-warleader-2-2",
+        "name": "Parry",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-warleader-2-1",
+          "p37-warleader-2-3",
+          "p37-warleader-1-2",
+          "p37-warleader-3-2"
+        ]
+      },
+      {
+        "id": "p37-warleader-2-3",
+        "name": "Balance",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-warleader-2-2",
+          "p37-warleader-1-3",
+          "p37-warleader-3-3"
+        ]
+      },
+      {
+        "id": "p37-warleader-3-0",
+        "name": "Touch of Fate",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-warleader-3-1",
+          "p37-warleader-2-0",
+          "p37-warleader-4-0"
+        ]
+      },
+      {
+        "id": "p37-warleader-3-1",
+        "name": "Dedication",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-3-0",
+          "p37-warleader-3-2",
+          "p37-warleader-2-1",
+          "p37-warleader-4-1"
+        ]
+      },
+      {
+        "id": "p37-warleader-3-2",
+        "name": "Coordinated Assault",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-3-1",
+          "p37-warleader-3-3",
+          "p37-warleader-2-2",
+          "p37-warleader-4-2"
+        ]
+      },
+      {
+        "id": "p37-warleader-3-3",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-3-2",
+          "p37-warleader-2-3",
+          "p37-warleader-4-3"
+        ]
+      },
+      {
+        "id": "p37-warleader-4-0",
+        "name": "Dodge",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-4-1",
+          "p37-warleader-3-0"
+        ]
+      },
+      {
+        "id": "p37-warleader-4-1",
+        "name": "Conditioned",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-4-0",
+          "p37-warleader-4-2",
+          "p37-warleader-3-1"
+        ]
+      },
+      {
+        "id": "p37-warleader-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-warleader-4-1",
+          "p37-warleader-4-3",
+          "p37-warleader-3-2"
+        ]
+      },
+      {
+        "id": "p37-warleader-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-warleader-4-2",
+          "p37-warleader-3-3"
+        ]
+      }
+    ],
+    "Alchemist": [
+      {
+        "id": "p37-alchemist-0-0",
+        "name": "Stimpack Specialization",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-0-1",
+          "p37-alchemist-1-0"
+        ]
+      },
+      {
+        "id": "p37-alchemist-0-1",
+        "name": "Sense Danger",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-0-0",
+          "p37-alchemist-0-2",
+          "p37-alchemist-1-1"
+        ]
+      },
+      {
+        "id": "p37-alchemist-0-2",
+        "name": "Uncanny Senses",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-0-1",
+          "p37-alchemist-0-3",
+          "p37-alchemist-1-2"
+        ]
+      },
+      {
+        "id": "p37-alchemist-0-3",
+        "name": "Uncanny Reactions",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-0-2",
+          "p37-alchemist-1-3"
+        ]
+      },
+      {
+        "id": "p37-alchemist-1-0",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-1-1",
+          "p37-alchemist-0-0",
+          "p37-alchemist-2-0"
+        ]
+      },
+      {
+        "id": "p37-alchemist-1-1",
+        "name": "Alchemical Arts",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-1-0",
+          "p37-alchemist-1-2",
+          "p37-alchemist-0-1",
+          "p37-alchemist-2-1"
+        ]
+      },
+      {
+        "id": "p37-alchemist-1-2",
+        "name": "Reflect",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-1-1",
+          "p37-alchemist-1-3",
+          "p37-alchemist-0-2",
+          "p37-alchemist-2-2"
+        ]
+      },
+      {
+        "id": "p37-alchemist-1-3",
+        "name": "Parry",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-1-2",
+          "p37-alchemist-0-3",
+          "p37-alchemist-2-3"
+        ]
+      },
+      {
+        "id": "p37-alchemist-2-0",
+        "name": "Balance",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-2-1",
+          "p37-alchemist-1-0",
+          "p37-alchemist-3-0"
+        ]
+      },
+      {
+        "id": "p37-alchemist-2-1",
+        "name": "Touch of Fate",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-2-0",
+          "p37-alchemist-2-2",
+          "p37-alchemist-1-1",
+          "p37-alchemist-3-1"
+        ]
+      },
+      {
+        "id": "p37-alchemist-2-2",
+        "name": "Dedication",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-2-1",
+          "p37-alchemist-2-3",
+          "p37-alchemist-1-2",
+          "p37-alchemist-3-2"
+        ]
+      },
+      {
+        "id": "p37-alchemist-2-3",
+        "name": "Force Rating",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-2-2",
+          "p37-alchemist-1-3",
+          "p37-alchemist-3-3"
+        ]
+      },
+      {
+        "id": "p37-alchemist-3-0",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-3-1",
+          "p37-alchemist-2-0",
+          "p37-alchemist-4-0"
+        ]
+      },
+      {
+        "id": "p37-alchemist-3-1",
+        "name": "Dodge",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-3-0",
+          "p37-alchemist-3-2",
+          "p37-alchemist-2-1",
+          "p37-alchemist-4-1"
+        ]
+      },
+      {
+        "id": "p37-alchemist-3-2",
+        "name": "Identify Ingredients",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-3-1",
+          "p37-alchemist-3-3",
+          "p37-alchemist-2-2",
+          "p37-alchemist-4-2"
+        ]
+      },
+      {
+        "id": "p37-alchemist-3-3",
+        "name": "Researcher",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-3-2",
+          "p37-alchemist-2-3",
+          "p37-alchemist-4-3"
+        ]
+      },
+      {
+        "id": "p37-alchemist-4-0",
+        "name": "Keen Eyed",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-4-1",
+          "p37-alchemist-3-0"
+        ]
+      },
+      {
+        "id": "p37-alchemist-4-1",
+        "name": "Preemptive Avoidance",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-4-0",
+          "p37-alchemist-4-2",
+          "p37-alchemist-3-1"
+        ]
+      },
+      {
+        "id": "p37-alchemist-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-alchemist-4-1",
+          "p37-alchemist-4-3",
+          "p37-alchemist-3-2"
+        ]
+      },
+      {
+        "id": "p37-alchemist-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-alchemist-4-2",
+          "p37-alchemist-3-3"
+        ]
+      }
+    ],
+    "Magus": [
+      {
+        "id": "p37-magus-0-0",
+        "name": "Healing Trance",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-magus-0-1",
+          "p37-magus-1-0"
+        ]
+      },
+      {
+        "id": "p37-magus-0-1",
+        "name": "Balance",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-magus-0-0",
+          "p37-magus-0-2",
+          "p37-magus-1-1"
+        ]
+      },
+      {
+        "id": "p37-magus-0-2",
+        "name": "Touch of Fate",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-magus-0-1",
+          "p37-magus-0-3",
+          "p37-magus-1-2"
+        ]
+      },
+      {
+        "id": "p37-magus-0-3",
+        "name": "Dedication",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-magus-0-2",
+          "p37-magus-1-3"
+        ]
+      },
+      {
+        "id": "p37-magus-1-0",
+        "name": "Force Rating",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-magus-1-1",
+          "p37-magus-0-0",
+          "p37-magus-2-0"
+        ]
+      },
+      {
+        "id": "p37-magus-1-1",
+        "name": "Channel Agony",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-magus-1-0",
+          "p37-magus-1-2",
+          "p37-magus-0-1",
+          "p37-magus-2-1"
+        ]
+      },
+      {
+        "id": "p37-magus-1-2",
+        "name": "Dodge",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-magus-1-1",
+          "p37-magus-1-3",
+          "p37-magus-0-2",
+          "p37-magus-2-2"
+        ]
+      },
+      {
+        "id": "p37-magus-1-3",
+        "name": "Conditioned",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-magus-1-2",
+          "p37-magus-0-3",
+          "p37-magus-2-3"
+        ]
+      },
+      {
+        "id": "p37-magus-2-0",
+        "name": "Researcher",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-magus-2-1",
+          "p37-magus-1-0",
+          "p37-magus-3-0"
+        ]
+      },
+      {
+        "id": "p37-magus-2-1",
+        "name": "Keen Eyed",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-magus-2-0",
+          "p37-magus-2-2",
+          "p37-magus-1-1",
+          "p37-magus-3-1"
+        ]
+      },
+      {
+        "id": "p37-magus-2-2",
+        "name": "Preemptive Avoidance",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-magus-2-1",
+          "p37-magus-2-3",
+          "p37-magus-1-2",
+          "p37-magus-3-2"
+        ]
+      },
+      {
+        "id": "p37-magus-2-3",
+        "name": "Grit",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-magus-2-2",
+          "p37-magus-1-3",
+          "p37-magus-3-3"
+        ]
+      },
+      {
+        "id": "p37-magus-3-0",
+        "name": "Toughened",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-magus-3-1",
+          "p37-magus-2-0",
+          "p37-magus-4-0"
+        ]
+      },
+      {
+        "id": "p37-magus-3-1",
+        "name": "Confidence",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-magus-3-0",
+          "p37-magus-3-2",
+          "p37-magus-2-1",
+          "p37-magus-4-1"
+        ]
+      },
+      {
+        "id": "p37-magus-3-2",
+        "name": "Secret Lore",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-magus-3-1",
+          "p37-magus-3-3",
+          "p37-magus-2-2",
+          "p37-magus-4-2"
+        ]
+      },
+      {
+        "id": "p37-magus-3-3",
+        "name": "Uncanny Senses",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-magus-3-2",
+          "p37-magus-2-3",
+          "p37-magus-4-3"
+        ]
+      },
+      {
+        "id": "p37-magus-4-0",
+        "name": "Uncanny Reactions",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-magus-4-1",
+          "p37-magus-3-0"
+        ]
+      },
+      {
+        "id": "p37-magus-4-1",
+        "name": "Rapid Recovery",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-magus-4-0",
+          "p37-magus-4-2",
+          "p37-magus-3-1"
+        ]
+      },
+      {
+        "id": "p37-magus-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-magus-4-1",
+          "p37-magus-4-3",
+          "p37-magus-3-2"
+        ]
+      },
+      {
+        "id": "p37-magus-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-magus-4-2",
+          "p37-magus-3-3"
+        ]
+      }
+    ],
+    "Prophet": [
+      {
+        "id": "p37-prophet-0-0",
+        "name": "Overwhelming Aura",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-0-1",
+          "p37-prophet-1-0"
+        ]
+      },
+      {
+        "id": "p37-prophet-0-1",
+        "name": "Preemptive Avoidance",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-0-0",
+          "p37-prophet-0-2",
+          "p37-prophet-1-1"
+        ]
+      },
+      {
+        "id": "p37-prophet-0-2",
+        "name": "Grit",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-0-1",
+          "p37-prophet-0-3",
+          "p37-prophet-1-2"
+        ]
+      },
+      {
+        "id": "p37-prophet-0-3",
+        "name": "Toughened",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-0-2",
+          "p37-prophet-1-3"
+        ]
+      },
+      {
+        "id": "p37-prophet-1-0",
+        "name": "Confidence",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-1-1",
+          "p37-prophet-0-0",
+          "p37-prophet-2-0"
+        ]
+      },
+      {
+        "id": "p37-prophet-1-1",
+        "name": "Scathing Tirade",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-1-0",
+          "p37-prophet-1-2",
+          "p37-prophet-0-1",
+          "p37-prophet-2-1"
+        ]
+      },
+      {
+        "id": "p37-prophet-1-2",
+        "name": "Uncanny Senses",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-1-1",
+          "p37-prophet-1-3",
+          "p37-prophet-0-2",
+          "p37-prophet-2-2"
+        ]
+      },
+      {
+        "id": "p37-prophet-1-3",
+        "name": "Uncanny Reactions",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-1-2",
+          "p37-prophet-0-3",
+          "p37-prophet-2-3"
+        ]
+      },
+      {
+        "id": "p37-prophet-2-0",
+        "name": "Rapid Recovery",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-2-1",
+          "p37-prophet-1-0",
+          "p37-prophet-3-0"
+        ]
+      },
+      {
+        "id": "p37-prophet-2-1",
+        "name": "Resolve",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-2-0",
+          "p37-prophet-2-2",
+          "p37-prophet-1-1",
+          "p37-prophet-3-1"
+        ]
+      },
+      {
+        "id": "p37-prophet-2-2",
+        "name": "Reflect",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-2-1",
+          "p37-prophet-2-3",
+          "p37-prophet-1-2",
+          "p37-prophet-3-2"
+        ]
+      },
+      {
+        "id": "p37-prophet-2-3",
+        "name": "Parry",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-2-2",
+          "p37-prophet-1-3",
+          "p37-prophet-3-3"
+        ]
+      },
+      {
+        "id": "p37-prophet-3-0",
+        "name": "Balance",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-3-1",
+          "p37-prophet-2-0",
+          "p37-prophet-4-0"
+        ]
+      },
+      {
+        "id": "p37-prophet-3-1",
+        "name": "Touch of Fate",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-3-0",
+          "p37-prophet-3-2",
+          "p37-prophet-2-1",
+          "p37-prophet-4-1"
+        ]
+      },
+      {
+        "id": "p37-prophet-3-2",
+        "name": "Inspiring Rhetoric",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-3-1",
+          "p37-prophet-3-3",
+          "p37-prophet-2-2",
+          "p37-prophet-4-2"
+        ]
+      },
+      {
+        "id": "p37-prophet-3-3",
+        "name": "Force Rating",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-3-2",
+          "p37-prophet-2-3",
+          "p37-prophet-4-3"
+        ]
+      },
+      {
+        "id": "p37-prophet-4-0",
+        "name": "Quick Draw",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-4-1",
+          "p37-prophet-3-0"
+        ]
+      },
+      {
+        "id": "p37-prophet-4-1",
+        "name": "Dodge",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-4-0",
+          "p37-prophet-4-2",
+          "p37-prophet-3-1"
+        ]
+      },
+      {
+        "id": "p37-prophet-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-prophet-4-1",
+          "p37-prophet-4-3",
+          "p37-prophet-3-2"
+        ]
+      },
+      {
+        "id": "p37-prophet-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-prophet-4-2",
+          "p37-prophet-3-3"
+        ]
+      }
+    ],
+    "Executioner": [
+      {
+        "id": "p37-executioner-0-0",
+        "name": "Quick Strike",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-0-1",
+          "p37-executioner-1-0"
+        ]
+      },
+      {
+        "id": "p37-executioner-0-1",
+        "name": "Uncanny Senses",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-0-0",
+          "p37-executioner-0-2",
+          "p37-executioner-1-1"
+        ]
+      },
+      {
+        "id": "p37-executioner-0-2",
+        "name": "Uncanny Reactions",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-0-1",
+          "p37-executioner-0-3",
+          "p37-executioner-1-2"
+        ]
+      },
+      {
+        "id": "p37-executioner-0-3",
+        "name": "Rapid Recovery",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-0-2",
+          "p37-executioner-1-3"
+        ]
+      },
+      {
+        "id": "p37-executioner-1-0",
+        "name": "Resolve",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-1-1",
+          "p37-executioner-0-0",
+          "p37-executioner-2-0"
+        ]
+      },
+      {
+        "id": "p37-executioner-1-1",
+        "name": "Hunter\u2019s Quarry",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-1-0",
+          "p37-executioner-1-2",
+          "p37-executioner-0-1",
+          "p37-executioner-2-1"
+        ]
+      },
+      {
+        "id": "p37-executioner-1-2",
+        "name": "Parry",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-1-1",
+          "p37-executioner-1-3",
+          "p37-executioner-0-2",
+          "p37-executioner-2-2"
+        ]
+      },
+      {
+        "id": "p37-executioner-1-3",
+        "name": "Balance",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-1-2",
+          "p37-executioner-0-3",
+          "p37-executioner-2-3"
+        ]
+      },
+      {
+        "id": "p37-executioner-2-0",
+        "name": "Touch of Fate",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-2-1",
+          "p37-executioner-1-0",
+          "p37-executioner-3-0"
+        ]
+      },
+      {
+        "id": "p37-executioner-2-1",
+        "name": "Dedication",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-2-0",
+          "p37-executioner-2-2",
+          "p37-executioner-1-1",
+          "p37-executioner-3-1"
+        ]
+      },
+      {
+        "id": "p37-executioner-2-2",
+        "name": "Force Rating",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-2-1",
+          "p37-executioner-2-3",
+          "p37-executioner-1-2",
+          "p37-executioner-3-2"
+        ]
+      },
+      {
+        "id": "p37-executioner-2-3",
+        "name": "Quick Draw",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-2-2",
+          "p37-executioner-1-3",
+          "p37-executioner-3-3"
+        ]
+      },
+      {
+        "id": "p37-executioner-3-0",
+        "name": "Dodge",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-3-1",
+          "p37-executioner-2-0",
+          "p37-executioner-4-0"
+        ]
+      },
+      {
+        "id": "p37-executioner-3-1",
+        "name": "Conditioned",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-3-0",
+          "p37-executioner-3-2",
+          "p37-executioner-2-1",
+          "p37-executioner-4-1"
+        ]
+      },
+      {
+        "id": "p37-executioner-3-2",
+        "name": "Lethal Blows",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-3-1",
+          "p37-executioner-3-3",
+          "p37-executioner-2-2",
+          "p37-executioner-4-2"
+        ]
+      },
+      {
+        "id": "p37-executioner-3-3",
+        "name": "Keen Eyed",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-3-2",
+          "p37-executioner-2-3",
+          "p37-executioner-4-3"
+        ]
+      },
+      {
+        "id": "p37-executioner-4-0",
+        "name": "Preemptive Avoidance",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-4-1",
+          "p37-executioner-3-0"
+        ]
+      },
+      {
+        "id": "p37-executioner-4-1",
+        "name": "Grit",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-4-0",
+          "p37-executioner-4-2",
+          "p37-executioner-3-1"
+        ]
+      },
+      {
+        "id": "p37-executioner-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-executioner-4-1",
+          "p37-executioner-4-3",
+          "p37-executioner-3-2"
+        ]
+      },
+      {
+        "id": "p37-executioner-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-executioner-4-2",
+          "p37-executioner-3-3"
+        ]
+      }
+    ],
+    "Hermit": [
+      {
+        "id": "p37-hermit-0-0",
+        "name": "Forager",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-0-1",
+          "p37-hermit-1-0"
+        ]
+      },
+      {
+        "id": "p37-hermit-0-1",
+        "name": "Keen Eyed",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-0-0",
+          "p37-hermit-0-2",
+          "p37-hermit-1-1"
+        ]
+      },
+      {
+        "id": "p37-hermit-0-2",
+        "name": "Preemptive Avoidance",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-0-1",
+          "p37-hermit-0-3",
+          "p37-hermit-1-2"
+        ]
+      },
+      {
+        "id": "p37-hermit-0-3",
+        "name": "Grit",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-0-2",
+          "p37-hermit-1-3"
+        ]
+      },
+      {
+        "id": "p37-hermit-1-0",
+        "name": "Toughened",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-1-1",
+          "p37-hermit-0-0",
+          "p37-hermit-2-0"
+        ]
+      },
+      {
+        "id": "p37-hermit-1-1",
+        "name": "Soothing Tone",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-1-0",
+          "p37-hermit-1-2",
+          "p37-hermit-0-1",
+          "p37-hermit-2-1"
+        ]
+      },
+      {
+        "id": "p37-hermit-1-2",
+        "name": "Sense Danger",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-1-1",
+          "p37-hermit-1-3",
+          "p37-hermit-0-2",
+          "p37-hermit-2-2"
+        ]
+      },
+      {
+        "id": "p37-hermit-1-3",
+        "name": "Uncanny Senses",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-1-2",
+          "p37-hermit-0-3",
+          "p37-hermit-2-3"
+        ]
+      },
+      {
+        "id": "p37-hermit-2-0",
+        "name": "Uncanny Reactions",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-2-1",
+          "p37-hermit-1-0",
+          "p37-hermit-3-0"
+        ]
+      },
+      {
+        "id": "p37-hermit-2-1",
+        "name": "Rapid Recovery",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-2-0",
+          "p37-hermit-2-2",
+          "p37-hermit-1-1",
+          "p37-hermit-3-1"
+        ]
+      },
+      {
+        "id": "p37-hermit-2-2",
+        "name": "Resolve",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-2-1",
+          "p37-hermit-2-3",
+          "p37-hermit-1-2",
+          "p37-hermit-3-2"
+        ]
+      },
+      {
+        "id": "p37-hermit-2-3",
+        "name": "Reflect",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-2-2",
+          "p37-hermit-1-3",
+          "p37-hermit-3-3"
+        ]
+      },
+      {
+        "id": "p37-hermit-3-0",
+        "name": "Parry",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-3-1",
+          "p37-hermit-2-0",
+          "p37-hermit-4-0"
+        ]
+      },
+      {
+        "id": "p37-hermit-3-1",
+        "name": "Balance",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-3-0",
+          "p37-hermit-3-2",
+          "p37-hermit-2-1",
+          "p37-hermit-4-1"
+        ]
+      },
+      {
+        "id": "p37-hermit-3-2",
+        "name": "One with Nature",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-3-1",
+          "p37-hermit-3-3",
+          "p37-hermit-2-2",
+          "p37-hermit-4-2"
+        ]
+      },
+      {
+        "id": "p37-hermit-3-3",
+        "name": "Dedication",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-3-2",
+          "p37-hermit-2-3",
+          "p37-hermit-4-3"
+        ]
+      },
+      {
+        "id": "p37-hermit-4-0",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-4-1",
+          "p37-hermit-3-0"
+        ]
+      },
+      {
+        "id": "p37-hermit-4-1",
+        "name": "Quick Draw",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-4-0",
+          "p37-hermit-4-2",
+          "p37-hermit-3-1"
+        ]
+      },
+      {
+        "id": "p37-hermit-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-hermit-4-1",
+          "p37-hermit-4-3",
+          "p37-hermit-3-2"
+        ]
+      },
+      {
+        "id": "p37-hermit-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-hermit-4-2",
+          "p37-hermit-3-3"
+        ]
+      }
+    ],
+    "Navigator": [
+      {
+        "id": "p37-navigator-0-0",
+        "name": "Studious Plotting",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-0-1",
+          "p37-navigator-1-0"
+        ]
+      },
+      {
+        "id": "p37-navigator-0-1",
+        "name": "Grit",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-0-0",
+          "p37-navigator-0-2",
+          "p37-navigator-1-1"
+        ]
+      },
+      {
+        "id": "p37-navigator-0-2",
+        "name": "Toughened",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-0-1",
+          "p37-navigator-0-3",
+          "p37-navigator-1-2"
+        ]
+      },
+      {
+        "id": "p37-navigator-0-3",
+        "name": "Confidence",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-0-2",
+          "p37-navigator-1-3"
+        ]
+      },
+      {
+        "id": "p37-navigator-1-0",
+        "name": "Sense Danger",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-navigator-1-1",
+          "p37-navigator-0-0",
+          "p37-navigator-2-0"
+        ]
+      },
+      {
+        "id": "p37-navigator-1-1",
+        "name": "Galaxy Mapper",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-1-0",
+          "p37-navigator-1-2",
+          "p37-navigator-0-1",
+          "p37-navigator-2-1"
+        ]
+      },
+      {
+        "id": "p37-navigator-1-2",
+        "name": "Uncanny Reactions",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-navigator-1-1",
+          "p37-navigator-1-3",
+          "p37-navigator-0-2",
+          "p37-navigator-2-2"
+        ]
+      },
+      {
+        "id": "p37-navigator-1-3",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-1-2",
+          "p37-navigator-0-3",
+          "p37-navigator-2-3"
+        ]
+      },
+      {
+        "id": "p37-navigator-2-0",
+        "name": "Resolve",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-2-1",
+          "p37-navigator-1-0",
+          "p37-navigator-3-0"
+        ]
+      },
+      {
+        "id": "p37-navigator-2-1",
+        "name": "Reflect",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-navigator-2-0",
+          "p37-navigator-2-2",
+          "p37-navigator-1-1",
+          "p37-navigator-3-1"
+        ]
+      },
+      {
+        "id": "p37-navigator-2-2",
+        "name": "Parry",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-navigator-2-1",
+          "p37-navigator-2-3",
+          "p37-navigator-1-2",
+          "p37-navigator-3-2"
+        ]
+      },
+      {
+        "id": "p37-navigator-2-3",
+        "name": "Balance",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-navigator-2-2",
+          "p37-navigator-1-3",
+          "p37-navigator-3-3"
+        ]
+      },
+      {
+        "id": "p37-navigator-3-0",
+        "name": "Touch of Fate",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-navigator-3-1",
+          "p37-navigator-2-0",
+          "p37-navigator-4-0"
+        ]
+      },
+      {
+        "id": "p37-navigator-3-1",
+        "name": "Dedication",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-3-0",
+          "p37-navigator-3-2",
+          "p37-navigator-2-1",
+          "p37-navigator-4-1"
+        ]
+      },
+      {
+        "id": "p37-navigator-3-2",
+        "name": "Planet Mapper",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-3-1",
+          "p37-navigator-3-3",
+          "p37-navigator-2-2",
+          "p37-navigator-4-2"
+        ]
+      },
+      {
+        "id": "p37-navigator-3-3",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-3-2",
+          "p37-navigator-2-3",
+          "p37-navigator-4-3"
+        ]
+      },
+      {
+        "id": "p37-navigator-4-0",
+        "name": "Dodge",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-4-1",
+          "p37-navigator-3-0"
+        ]
+      },
+      {
+        "id": "p37-navigator-4-1",
+        "name": "Conditioned",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-4-0",
+          "p37-navigator-4-2",
+          "p37-navigator-3-1"
+        ]
+      },
+      {
+        "id": "p37-navigator-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-navigator-4-1",
+          "p37-navigator-4-3",
+          "p37-navigator-3-2"
+        ]
+      },
+      {
+        "id": "p37-navigator-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-navigator-4-2",
+          "p37-navigator-3-3"
+        ]
+      }
+    ],
+    "Investigator": [
+      {
+        "id": "p37-investigator-0-0",
+        "name": "Street Smarts",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-0-1",
+          "p37-investigator-1-0"
+        ]
+      },
+      {
+        "id": "p37-investigator-0-1",
+        "name": "Grit",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-0-0",
+          "p37-investigator-0-2",
+          "p37-investigator-1-1"
+        ]
+      },
+      {
+        "id": "p37-investigator-0-2",
+        "name": "Toughened",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-0-1",
+          "p37-investigator-0-3",
+          "p37-investigator-1-2"
+        ]
+      },
+      {
+        "id": "p37-investigator-0-3",
+        "name": "Confidence",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-0-2",
+          "p37-investigator-1-3"
+        ]
+      },
+      {
+        "id": "p37-investigator-1-0",
+        "name": "Sense Danger",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-investigator-1-1",
+          "p37-investigator-0-0",
+          "p37-investigator-2-0"
+        ]
+      },
+      {
+        "id": "p37-investigator-1-1",
+        "name": "Keen Eyed",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-1-0",
+          "p37-investigator-1-2",
+          "p37-investigator-0-1",
+          "p37-investigator-2-1"
+        ]
+      },
+      {
+        "id": "p37-investigator-1-2",
+        "name": "Uncanny Reactions",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-investigator-1-1",
+          "p37-investigator-1-3",
+          "p37-investigator-0-2",
+          "p37-investigator-2-2"
+        ]
+      },
+      {
+        "id": "p37-investigator-1-3",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-1-2",
+          "p37-investigator-0-3",
+          "p37-investigator-2-3"
+        ]
+      },
+      {
+        "id": "p37-investigator-2-0",
+        "name": "Resolve",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-2-1",
+          "p37-investigator-1-0",
+          "p37-investigator-3-0"
+        ]
+      },
+      {
+        "id": "p37-investigator-2-1",
+        "name": "Reflect",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-investigator-2-0",
+          "p37-investigator-2-2",
+          "p37-investigator-1-1",
+          "p37-investigator-3-1"
+        ]
+      },
+      {
+        "id": "p37-investigator-2-2",
+        "name": "Parry",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-investigator-2-1",
+          "p37-investigator-2-3",
+          "p37-investigator-1-2",
+          "p37-investigator-3-2"
+        ]
+      },
+      {
+        "id": "p37-investigator-2-3",
+        "name": "Balance",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-investigator-2-2",
+          "p37-investigator-1-3",
+          "p37-investigator-3-3"
+        ]
+      },
+      {
+        "id": "p37-investigator-3-0",
+        "name": "Touch of Fate",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-investigator-3-1",
+          "p37-investigator-2-0",
+          "p37-investigator-4-0"
+        ]
+      },
+      {
+        "id": "p37-investigator-3-1",
+        "name": "Dedication",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-3-0",
+          "p37-investigator-3-2",
+          "p37-investigator-2-1",
+          "p37-investigator-4-1"
+        ]
+      },
+      {
+        "id": "p37-investigator-3-2",
+        "name": "Reconstruct the Scene",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-3-1",
+          "p37-investigator-3-3",
+          "p37-investigator-2-2",
+          "p37-investigator-4-2"
+        ]
+      },
+      {
+        "id": "p37-investigator-3-3",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-3-2",
+          "p37-investigator-2-3",
+          "p37-investigator-4-3"
+        ]
+      },
+      {
+        "id": "p37-investigator-4-0",
+        "name": "Dodge",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-4-1",
+          "p37-investigator-3-0"
+        ]
+      },
+      {
+        "id": "p37-investigator-4-1",
+        "name": "Conditioned",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-4-0",
+          "p37-investigator-4-2",
+          "p37-investigator-3-1"
+        ]
+      },
+      {
+        "id": "p37-investigator-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-investigator-4-1",
+          "p37-investigator-4-3",
+          "p37-investigator-3-2"
+        ]
+      },
+      {
+        "id": "p37-investigator-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-investigator-4-2",
+          "p37-investigator-3-3"
+        ]
+      }
+    ],
+    "Racer": [
+      {
+        "id": "p37-racer-0-0",
+        "name": "Skilled Jockey",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-racer-0-1",
+          "p37-racer-1-0"
+        ]
+      },
+      {
+        "id": "p37-racer-0-1",
+        "name": "Quick Draw",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-racer-0-0",
+          "p37-racer-0-2",
+          "p37-racer-1-1"
+        ]
+      },
+      {
+        "id": "p37-racer-0-2",
+        "name": "Dodge",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-racer-0-1",
+          "p37-racer-0-3",
+          "p37-racer-1-2"
+        ]
+      },
+      {
+        "id": "p37-racer-0-3",
+        "name": "Conditioned",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-racer-0-2",
+          "p37-racer-1-3"
+        ]
+      },
+      {
+        "id": "p37-racer-1-0",
+        "name": "Researcher",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-racer-1-1",
+          "p37-racer-0-0",
+          "p37-racer-2-0"
+        ]
+      },
+      {
+        "id": "p37-racer-1-1",
+        "name": "Shortcut",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-racer-1-0",
+          "p37-racer-1-2",
+          "p37-racer-0-1",
+          "p37-racer-2-1"
+        ]
+      },
+      {
+        "id": "p37-racer-1-2",
+        "name": "Preemptive Avoidance",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-1-1",
+          "p37-racer-1-3",
+          "p37-racer-0-2",
+          "p37-racer-2-2"
+        ]
+      },
+      {
+        "id": "p37-racer-1-3",
+        "name": "Grit",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-racer-1-2",
+          "p37-racer-0-3",
+          "p37-racer-2-3"
+        ]
+      },
+      {
+        "id": "p37-racer-2-0",
+        "name": "Toughened",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-racer-2-1",
+          "p37-racer-1-0",
+          "p37-racer-3-0"
+        ]
+      },
+      {
+        "id": "p37-racer-2-1",
+        "name": "Confidence",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-racer-2-0",
+          "p37-racer-2-2",
+          "p37-racer-1-1",
+          "p37-racer-3-1"
+        ]
+      },
+      {
+        "id": "p37-racer-2-2",
+        "name": "Sense Danger",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-2-1",
+          "p37-racer-2-3",
+          "p37-racer-1-2",
+          "p37-racer-3-2"
+        ]
+      },
+      {
+        "id": "p37-racer-2-3",
+        "name": "Uncanny Senses",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-2-2",
+          "p37-racer-1-3",
+          "p37-racer-3-3"
+        ]
+      },
+      {
+        "id": "p37-racer-3-0",
+        "name": "Uncanny Reactions",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-3-1",
+          "p37-racer-2-0",
+          "p37-racer-4-0"
+        ]
+      },
+      {
+        "id": "p37-racer-3-1",
+        "name": "Rapid Recovery",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-racer-3-0",
+          "p37-racer-3-2",
+          "p37-racer-2-1",
+          "p37-racer-4-1"
+        ]
+      },
+      {
+        "id": "p37-racer-3-2",
+        "name": "Full Throttle",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-racer-3-1",
+          "p37-racer-3-3",
+          "p37-racer-2-2",
+          "p37-racer-4-2"
+        ]
+      },
+      {
+        "id": "p37-racer-3-3",
+        "name": "Reflect",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-3-2",
+          "p37-racer-2-3",
+          "p37-racer-4-3"
+        ]
+      },
+      {
+        "id": "p37-racer-4-0",
+        "name": "Parry",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-4-1",
+          "p37-racer-3-0"
+        ]
+      },
+      {
+        "id": "p37-racer-4-1",
+        "name": "Balance",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-4-0",
+          "p37-racer-4-2",
+          "p37-racer-3-1"
+        ]
+      },
+      {
+        "id": "p37-racer-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-racer-4-1",
+          "p37-racer-4-3",
+          "p37-racer-3-2"
+        ]
+      },
+      {
+        "id": "p37-racer-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-racer-4-2",
+          "p37-racer-3-3"
+        ]
+      }
+    ],
+    "Sentry": [
+      {
+        "id": "p37-sentry-0-0",
+        "name": "Toughened",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-0-1",
+          "p37-sentry-1-0"
+        ]
+      },
+      {
+        "id": "p37-sentry-0-1",
+        "name": "Rapid Recovery",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-0-0",
+          "p37-sentry-0-2",
+          "p37-sentry-1-1"
+        ]
+      },
+      {
+        "id": "p37-sentry-0-2",
+        "name": "Resolve",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-0-1",
+          "p37-sentry-0-3",
+          "p37-sentry-1-2"
+        ]
+      },
+      {
+        "id": "p37-sentry-0-3",
+        "name": "Reflect",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "type": "Force Passive",
+        "links": [
+          "p37-sentry-0-2",
+          "p37-sentry-1-3"
+        ]
+      },
+      {
+        "id": "p37-sentry-1-0",
+        "name": "Parry",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-sentry-1-1",
+          "p37-sentry-0-0",
+          "p37-sentry-2-0"
+        ]
+      },
+      {
+        "id": "p37-sentry-1-1",
+        "name": "Reflect",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-sentry-1-0",
+          "p37-sentry-1-2",
+          "p37-sentry-0-1",
+          "p37-sentry-2-1"
+        ]
+      },
+      {
+        "id": "p37-sentry-1-2",
+        "name": "Touch of Fate",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "type": "Force Passive",
+        "links": [
+          "p37-sentry-1-1",
+          "p37-sentry-1-3",
+          "p37-sentry-0-2",
+          "p37-sentry-2-2"
+        ]
+      },
+      {
+        "id": "p37-sentry-1-3",
+        "name": "Dedication",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-1-2",
+          "p37-sentry-0-3",
+          "p37-sentry-2-3"
+        ]
+      },
+      {
+        "id": "p37-sentry-2-0",
+        "name": "Force Rating",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "type": "Force Passive",
+        "links": [
+          "p37-sentry-2-1",
+          "p37-sentry-1-0",
+          "p37-sentry-3-0"
+        ]
+      },
+      {
+        "id": "p37-sentry-2-1",
+        "name": "Quick Draw",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-2-0",
+          "p37-sentry-2-2",
+          "p37-sentry-1-1",
+          "p37-sentry-3-1"
+        ]
+      },
+      {
+        "id": "p37-sentry-2-2",
+        "name": "Dodge",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-2-1",
+          "p37-sentry-2-3",
+          "p37-sentry-1-2",
+          "p37-sentry-3-2"
+        ]
+      },
+      {
+        "id": "p37-sentry-2-3",
+        "name": "Conditioned",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-2-2",
+          "p37-sentry-1-3",
+          "p37-sentry-3-3"
+        ]
+      },
+      {
+        "id": "p37-sentry-3-0",
+        "name": "Researcher",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-3-1",
+          "p37-sentry-2-0",
+          "p37-sentry-4-0"
+        ]
+      },
+      {
+        "id": "p37-sentry-3-1",
+        "name": "Keen Eyed",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-3-0",
+          "p37-sentry-3-2",
+          "p37-sentry-2-1",
+          "p37-sentry-4-1"
+        ]
+      },
+      {
+        "id": "p37-sentry-3-2",
+        "name": "Saber Throw",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-3-1",
+          "p37-sentry-3-3",
+          "p37-sentry-2-2",
+          "p37-sentry-4-2"
+        ]
+      },
+      {
+        "id": "p37-sentry-3-3",
+        "name": "Grit",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-3-2",
+          "p37-sentry-2-3",
+          "p37-sentry-4-3"
+        ]
+      },
+      {
+        "id": "p37-sentry-4-0",
+        "name": "Toughened",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-4-1",
+          "p37-sentry-3-0"
+        ]
+      },
+      {
+        "id": "p37-sentry-4-1",
+        "name": "Confidence",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-4-0",
+          "p37-sentry-4-2",
+          "p37-sentry-3-1"
+        ]
+      },
+      {
+        "id": "p37-sentry-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "type": "Passive",
+        "links": [
+          "p37-sentry-4-1",
+          "p37-sentry-4-3",
+          "p37-sentry-3-2"
+        ]
+      },
+      {
+        "id": "p37-sentry-4-3",
+        "name": "Force Rating",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "type": "Force Passive",
+        "links": [
+          "p37-sentry-4-2",
+          "p37-sentry-3-3"
+        ]
+      }
+    ]
+  },
+  "talentRuleVariants99": {
+    "Heightened Awareness": [
+      {
+        "book": "Force and Destiny Core",
+        "ranked": true,
+        "source": "Force and Destiny Core \u00b7 p.145"
+      }
+    ]
   }
 }

@@ -3688,7 +3688,7 @@ function talentEngineStatus(name){
   ]);
   if(wired.has(name))return'Implemented in the current rules engine.';
   if(partial.has(name))return'Partially automated; some source effects still require manual/narrative handling.';
-  return'Displayed in the tree; its full automatic effect is still pending.';
+  return'Resolve this talent manually using its listed source.';
 }
 
 function talentRank(name){

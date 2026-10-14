@@ -32,7 +32,7 @@ window.CharacterCatalog97 = (() => {
     return {careers:Object.keys(CAREERS).length,placements:Object.values(CAREERS).reduce((n,c)=>n+Object.keys(c.specs).length,0),
       species:Object.keys(SPECIES).length,trees:names.length,universal:Object.keys(UNIVERSAL_TREES).length,
       full:names.filter(n=>EXACT_TREES[n]||FULL_SOURCE_TREES.has(n)).length,
-      simplified:names.filter(n=>PHASE37_STANDARD_SPECS.has(n)).length,
+      simplified:names.filter(n=>!EXACT_TREES[n]&&!FULL_SOURCE_TREES.has(n)&&PHASE37_STANDARD_SPECS.has(n)).length,
       prototype:names.filter(n=>!EXACT_TREES[n]&&!FULL_SOURCE_TREES.has(n)&&!PHASE37_STANDARD_SPECS.has(n)&&!FORM_TREES[n]).length};
   }
   const talentSkills = {
