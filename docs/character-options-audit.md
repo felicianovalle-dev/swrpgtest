@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.3-force-talents` / package `1.9.9`. Reviewed 2026-10-13 against the saved repository and the supplied source collections.
+Build: `96.4-aor-talents` / package `1.9.10`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -11,19 +11,19 @@ Before the campaign-beginnings update, the saved game had the 18 careers from Ed
 | Careers | 18 | 20 |
 | Career specialization placements | 108 | 118 |
 | Distinct career trees | 102 | 112 |
-| Career trees labeled full by the engine | 54 | 92 |
-| Simplified career trees | 36 | 20 |
+| Career trees labeled full by the engine | 54 | 112 |
+| Simplified career trees | 36 | 0 |
 | Prototype career trees | 12 | 0 |
 | Universal trees | 2 | 17 |
 | Species profiles | 36 | 44 |
 
 Placements count shared specializations under each career; distinct trees count each shared specialization once. Species profiles count the three Aqualish variants separately: the update adds six species and eight profiles.
 
-The 25 Clone Wars and universal layouts contain 500 nodes and were checked against the supplied tree PDFs. The prototype replacement added 12 core layouts with another 240 nodes. This update adds Mechanic, Scout, and 14 Force and Destiny supplement layouts with another 320 nodes. All sixteen were visually compared with their supplied sourcebook diagrams and tree collection. Their names, costs, paths, and types were visually checked against both the supplied EotE collection and Edge of the Empire Core. Canonical activation/ranked metadata for 108 distinct talents was checked in the core glossary; Knowledge Specialization is passive, correcting the collection’s label. The 54 older layouts labeled full were not all reverified against their original books in this update. A matching layout does not establish complete mechanical automation.
+The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. The 54 older career layouts labeled full were not all reverified against their original books. Layout coverage does not establish complete mechanical automation.
 
 ## Career and tree coverage
 
-“Existing full” is the saved engine label. “Imported” identifies the newly reviewed collection layouts. Simplified and prototype entries remain available but need source-layout replacement. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
+“Existing full” is the saved engine label. “Imported” identifies the newly reviewed collection layouts. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
 
 | Career | Specializations and layout status |
 | --- | --- |
@@ -35,10 +35,10 @@ The 25 Clone Wars and universal layouts contain 500 nodes and were checked again
 | Colonist | Doctor — Imported; Politico — Imported; Scholar — Imported; Entrepreneur — Existing full; Marshal — Existing full; Performer — Existing full |
 | Commander | Commodore — Existing full; Squadron Leader — Existing full; Tactician — Existing full; Figurehead — Existing full; Instructor — Existing full; Strategist — Existing full |
 | Ace | Driver — Existing full; Gunner — Existing full; Pilot — Existing full; Beast Rider — Existing full; Hotshot — Existing full; Rigger — Existing full |
-| Diplomat | Agitator — Simplified; Ambassador — Simplified; Quartermaster — Simplified; Advocate — Simplified; Analyst — Simplified; Propagandist — Simplified |
-| Soldier | Commando — Simplified; Medic — Simplified; Sharpshooter — Simplified; Heavy — Existing full; Trailblazer — Simplified; Vanguard — Simplified |
-| Engineer | Mechanic — Imported; Saboteur — Simplified; Scientist — Simplified; Droid Specialist — Simplified; Sapper — Simplified; Shipwright — Simplified |
-| Spy | Infiltrator — Simplified; Scout — Imported; Slicer — Existing full; Courier — Simplified; Interrogator — Simplified; Sleeper Agent — Simplified |
+| Diplomat | Agitator — Imported; Ambassador — Imported; Quartermaster — Imported; Advocate — Imported; Analyst — Imported; Propagandist — Imported |
+| Soldier | Commando — Imported; Medic — Imported; Sharpshooter — Imported; Heavy — Existing full; Trailblazer — Imported; Vanguard — Imported |
+| Engineer | Mechanic — Imported; Saboteur — Imported; Scientist — Imported; Droid Specialist — Imported; Sapper — Imported; Shipwright — Imported |
+| Spy | Infiltrator — Imported; Scout — Imported; Slicer — Existing full; Courier — Imported; Interrogator — Imported; Sleeper Agent — Imported |
 | Consular | Healer — Existing full; Niman Disciple — Existing full; Sage — Existing full; Arbiter — Imported; Ascetic — Imported; Teacher — Imported |
 | Guardian | Peacekeeper — Existing full; Protector — Existing full; Soresu Defender — Existing full; Armorer — Existing full; Warden — Imported; Warleader — Imported |
 | Mystic | Advisor — Existing full; Makashi Duelist — Existing full; Seer — Existing full; Alchemist — Imported; Magus — Imported; Prophet — Imported |
@@ -48,13 +48,40 @@ The 25 Clone Wars and universal layouts contain 500 nodes and were checked again
 | Clone Soldier | Clone Trooper — Imported; Clone Officer — Imported; Clone Pilot — Imported; ARC Trooper — Imported; Clone Commander — Imported; Clone Veteran — Imported |
 | Jedi | Padawan — Imported; Knight — Imported; General — Imported; Master — Imported |
 
-## Remaining layout gaps
+## Age of Rebellion completion
 
-The following 20 distinct Age of Rebellion trees still need exact source layouts. Replacing them must include an explicit purchase-ID migration rather than dropping purchased talents.
+All 20 remaining simplified AoR layouts now have source layouts. Their 400 previous purchases were captured from commit `84300bf` before replacement. Matching abilities migrate without repricing; unmatched abilities, original spending, Dedication and skill choices remain saved. All 960 prior purchases across the three replacement batches load together.
 
-| Current status | Trees |
-| --- | --- |
-| Simplified (20) | Agitator; Ambassador; Quartermaster; Advocate; Analyst; Propagandist; Commando; Medic; Sharpshooter; Trailblazer; Vanguard; Saboteur; Scientist; Droid Specialist; Sapper; Shipwright; Infiltrator; Courier; Interrogator; Sleeper Agent |
+| Tree | Sourcebook tree | Source PDF page | AOR collection PDF page |
+| --- | --- | ---: | ---: |
+| Advocate | Desperate Allies · p.27 | 28 | 16 |
+| Agitator | Age of Rebellion Core · p.80 | 81 | 17 |
+| Ambassador | Age of Rebellion Core · p.79 | 80 | 18 |
+| Analyst | Desperate Allies · p.29 | 30 | 19 |
+| Propagandist | Desperate Allies · p.31 | 32 | 20 |
+| Quartermaster | Age of Rebellion Core · p.81 | 82 | 21 |
+| Droid Specialist | Fully Operational · p.25 | 28 | 23 |
+| Saboteur | Age of Rebellion Core · p.86 | 87 | 25 |
+| Sapper | Fully Operational · p.27 | 30 | 26 |
+| Scientist | Age of Rebellion Core · p.87 | 88 | 27 |
+| Shipwright | Fully Operational · p.29 | 32 | 28 |
+| Commando | Age of Rebellion Core · p.91 | 92 | 30 |
+| Medic | Age of Rebellion Core · p.92 | 93 | 32 |
+| Sharpshooter | Age of Rebellion Core · p.93 | 94 | 33 |
+| Trailblazer | Forged in Battle · p.31 | 32 | 34 |
+| Vanguard | Forged in Battle · p.33 | 34 | 35 |
+| Courier | Cyphers and Masks · supplied PDF p.26 | 26 | 37 |
+| Infiltrator | Age of Rebellion Core · p.97 | 98 | 38 |
+| Interrogator | Cyphers and Masks · supplied PDF p.28 | 28 | 39 |
+| Sleeper Agent | Cyphers and Masks · supplied PDF p.30 | 30 | 41 |
+
+AoR rules use 193 distinct talent entries. Activation/ranked metadata and 82 short summaries were added to the shared catalog, now 314 entries. `talentRules100` keeps AoR source labels separate from reused EotE/F&D variants. The AoR Knowledge Specialization entry is active; the saved EotE entry remains passive. Sixth Sense and Superior Reflexes in these AoR trees are ordinary passive talents, not Force prerequisites.
+
+Book glossary details take precedence over diagrams when they differ: Dockyard Expertise reduces cost/time by 20% per rank, while the supplied tree diagram says 25%. Advocate has Improved Plausible Deniability, Droid Specialist has Repair Patch Specialization, Commando has Natural Outdoorsman, Courier has Improved Indistinguishable, and Interrogator has Exhaustive Questioning.
+
+Ambassador's second-row Indistinguishable costs 10 XP, following the row-cost rule on AoR Core p.103 and the supplied AOR collection. The supplied Core p.79 diagram prints 5 XP. The [official AoR errata v1.0](https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/aor_errata_v10.pdf) does not address that cell; this is a documented reconciliation of conflicting supplied sources, not a claimed erratum.
+
+Courier's Pilot Training grants both piloting career skills without free ranks. The associated fixes keep at least one Success when using Eye for Detail, limit Prey on the Weak damage to one hit, and pay Sound Investments once at session start across Duty, Obligation and Morality. Complex special actions remain manual as disclosed on their cards. See [aor-talent-verification.md](aor-talent-verification.md) for checks and limits.
 
 ## Mechanic, Scout, and Force supplement references
 
@@ -79,9 +106,9 @@ Names, tiers, paths, and Force labels for these 320 nodes were visually checked 
 | Racer | Endless Vigil · p.27 | 29 | FND 32 |
 | Sentry | Endless Vigil · p.29 | 31 | FND 33 |
 
-The shared metadata now contains 232 distinct talent entries. This update uses 161 of them and adds 72 short source-based summaries. The books’ differing Heightened Awareness rank labels remain scoped: Scout follows the EotE unranked entry, while Protector retains the F&D ranked entry. Teacher uses Once a Learner rather than the compilation’s Once the Learner. Improved Hunter’s Quarry follows its passive glossary entry; Improved Wise Warrior and Improved Reflect follow their active glossary entries despite passive labels in some book diagrams.
+The sixteen-tree update used 161 distinct talent entries and added 72 short source-based summaries. The subsequent AoR import brings the shared metadata to 314 entries. The books’ differing Heightened Awareness rank labels remain scoped: Scout follows the EotE unranked entry, while Protector retains the F&D ranked entry. Teacher uses Once a Learner rather than the compilation’s Once the Learner. Improved Hunter’s Quarry follows its passive glossary entry; Improved Wise Warrior and Improved Reflect follow their active glossary entries despite passive labels in some book diagrams.
 
-Earlier simplified IDs are frozen from commit c5eab55. Matching purchases keep their original spending and dedication choices; unmatched talents remain as earlier game options. Well Rounded skill choices move with the purchased Teacher node. Loading an old Force Rating purchase does not apply its increase again. See [force-talent-verification.md](force-talent-verification.md) for the latest test results and manual-effect limits.
+Earlier simplified IDs are frozen from commit c5eab55. Matching purchases keep their original spending and dedication choices; unmatched talents remain as earlier game options. Well Rounded skill choices move with the purchased Teacher node. Loading an old Force Rating purchase does not apply its increase again. See [force-talent-verification.md](force-talent-verification.md) for that batch’s test results and manual-effect limits.
 
 ## Imported layout references
 

@@ -9,6 +9,11 @@ window.Talents98=(()=>{
   const legacy=Object.fromEntries(replaced.map(spec=>[spec,catalog.data.legacyTrees99?.[spec]?.map(n=>({...n,effect:TALENT_BLURBS[n.name]||'Earlier purchased game option.'}))||genericTree(spec)]));
   const sameName=(a,b)=>a.replace(/[\u2018\u2019]/g,"'")===b.replace(/[\u2018\u2019]/g,"'");
   const legacyNodes=(spec,set)=> (legacy[spec]||[]).filter(n=>set?.has(n.id));
+  function ruleFor(name,spec=S.talentView){
+    if(catalog.data.trees[spec]?.ruleSet==='aor100')return catalog.data.talentRules100[name];
+    const variant=catalog.data.talentRuleVariants99?.[name]?.find(r=>(SPECIALIZATION_TREE_SOURCE[spec]||'').includes(r.book));
+    return variant||catalog.data.talentRules98[name];
+  }
   function migrate(state){
     state.specTalents=state.specTalents||{};
     if(replaced.includes(state.spec))state.specTalents[state.spec]=[...new Set([...(state.specTalents[state.spec]||[]),...(state.talents||[])])];
@@ -73,6 +78,10 @@ window.Talents98=(()=>{
     'Improved Reflect':'The redirection after a qualifying reflected attack requires manual resolution.',
     'Improved Saber Throw':'Resolve the long-range attack and two-Force-point weapon return manually.',
     'Well Traveled':'Both listed Knowledge skills become career skills; no free ranks are granted.',
+    'Pilot Training':'Both piloting skills become career skills; no free ranks are granted.',
+    'Eye for Detail':'After a PC Mechanics or Computers check, offers Success-to-Advantage conversion while retaining at least one Success.',
+    'Prey on the Weak':'Adds 1 damage per rank to one hit against a disoriented target.',
+    'Sound Investments':'Adds 100 credits per rank when you start a new session.',
     'Quick Draw':'Resolve drawing or holstering an eligible item as an incidental manually.',
     'Feral Strength':'Adds 1 damage per rank to one successful Brawl or Melee hit.',
     'Deadly Accuracy':'Damage uses the currently selected combat skill. Separate skill choices for multiple ranks remain manual.',
@@ -103,12 +112,12 @@ window.Talents98=(()=>{
     'Jump Up':'Resolve standing as an incidental once per round narratively.'
   };
   const manual=new Set(['Aggressive Negotiations','Alchemical Arts','Bad Cop','Bad Motivator','Baleful Gaze','Better Luck Next Time','Blind Spot','Calming Aura','Careful Planning','Channel Agony','Constant Vigilance','Contraption','Coordinated Assault','Crucial Point','Deathblow','Empty Soul','Encouraging Words','Essential Kill','Familiar Suns','Fear the Shadows','Fearsome','Font of Power','Force Connection','Freerunning','Full Throttle','Go Without','Grapple','Harass','Healing Trance','Heightened Awareness','Hold Together','Holistic Navigation',"Hunter's Quarry",'Identify Ingredients','Impossible Fall','Improved Animal Bond','Improved Blooded','Improved Freerunning','Improved Full Throttle','Improved Healing Trance',"Improved Hunter's Quarry",'Improved Overwhelming Aura','Improved Savvy Negotiator','Improved Shortcut','Improved Street Smarts','Improved Sunder','Improved Wise Warrior','Improvised Concoction','Intuitive Evasion','Intuitive Navigation','Iron Soul','Knowledge Is Power','Knowledgeable Healing',"Let's Ride",'Marked for Death','Master Instructor','Meditative Trance','Menace','Mind Bleed','Mind over Matter','No Escape','Now the Master','Once a Learner','One with Nature','One with the Universe','Overbalance','Overwhelming Aura','Planet Mapper','Power of Darkness','Preemptive Avoidance','Prescient Shot','Prime Positions','Prophetic Aim','Reconstruct the Scene','Redundant Systems','Savvy Negotiator','Secret Lore','Sense Advantage','Sense the Scene','Shroud','Skilled Teacher','Slippery Minded','Soothing Tone','Studious Plotting','Superhuman Reflexes','Suppressing Fire','Supreme Full Throttle','Survival of the Fittest','Talk the Talk','Terrifying Kill','Transmogrify','Twisted Words','Unrelenting Skeptic','Valuable Facts','Wise Warrior']);
-  function status(name){return statuses[name]||(manual.has(name)?'Resolve this ability manually using the listed source. Its costs, timing, and limits still apply.':null);}
+  const manual100=new Set(['A Step Ahead','Ambush','Analyze Data','Bad Press','Blackmail','Bought Info','Combat Programming','Construction Specialist','Contingency Plan','Creative Design','Creative Killer','Cunning Persona','Cunning Snare','Cutting Question','Debilitating Shot','Design Flaw','Desperate Repairs','Discredit','Dockyard Expertise','Dynamic Fire','Encoded Communique','Exhaust Port','Exhaustive Questioning','Good Cop','Greased Palms','Improved Body Guard','Improved Hidden Storage','Improved In the Know','Improved Indistinguishable','Improved Know Their Weakness','Improved Plausible Deniability','Improved Positive Spin','Improved Researcher','Improved Resist Questioning','Improved Time to Go','Improvised Defenses','Improvised Detonation','Improvised Position','In the Know','Incite Distraction','Incite Rebellion','Informant','Inside Knowledge','Inside Person','Interjection',"It's Not That Bad",'Know Their Weakness','Know-It-All','Lose Them','Machine Mender','Made You Talk','Master Artisan','Master Demolitionist','Master Grenadier','Moving Target','Positive Spin','Push the Specs','Quick Fix','Repair Patch Specialization','Reroute Processors','Resist Questioning','Seize the Initiative','Selective Detonation','Smart Handling','Supporting Evidence','Supreme Body Guard','Targeted Blow','Technical Aptitude','Thorough Assessment','Time to Go','Weak Foundation']);
+  function status(name){return statuses[name]||(manual.has(name)||manual100.has(name)?'Resolve this ability manually using the listed source. Its costs, timing, and limits still apply.':null);}
   function knownUnranked(name){
     // The core books disagree on Heightened Awareness's ranked label. Scout
     // follows EotE; Protector must keep the ranked F&D version available.
-    const variant=catalog.data.talentRuleVariants99?.[name]?.find(r=>(SPECIALIZATION_TREE_SOURCE[S.talentView]||'').includes(r.book));
-    return (variant||catalog.data.talentRules98[name])?.ranked===false&&hasTalent(name);
+    return ruleFor(name)?.ranked===false&&hasTalent(name);
   }
   function validateSnapshot(state){
     const oneHit=state.combat?.pendingSpend?.oneHitDamage98;
@@ -143,7 +152,7 @@ window.Talents98=(()=>{
       const card=parent.children[i],n=tree[i];if(!card)continue;
       card.classList.add('source-tal98');
       card.querySelector('.talent-path98')?.remove();const p=document.createElement('p');p.className='tiny talent-path98';
-      const rule=catalog.data.talentRules98[n.name];p.textContent=`${rule.source} · ${rule.activation} · ${rule.ranked?'Ranked':'Unranked'}. Connected talents: ${n.links.length?n.links.map(id=>{const v=tree.find(x=>x.id===id);return `${v.name} (${v.cost} XP)`;}).join(' · '):'No linked purchases.'}`;card.insertBefore(p,card.querySelector('button'));
+      const rule=ruleFor(n.name,spec);p.textContent=`${rule.source} · ${rule.activation} · ${rule.ranked?'Ranked':'Unranked'}. Connected talents: ${n.links.length?n.links.map(id=>{const v=tree.find(x=>x.id===id);return `${v.name} (${v.cost} XP)`;}).join(' · '):'No linked purchases.'}`;card.insertBefore(p,card.querySelector('button'));
     }
     if(!retained.length&&!mapped.length&&!pending.length&&!owned.some(n=>['Well Rounded','Knowledge Specialization'].includes(n.name)))return;
     const box=document.createElement('section');box.id='talentCompatibility98';box.className='creation-note97';
@@ -152,5 +161,5 @@ window.Talents98=(()=>{
     box.querySelectorAll('[data-talent-choice98]').forEach(b=>b.onclick=()=>{const n=owned.find(n=>n.id===b.dataset.talentChoice98),choice=choiceForPurchase(n);if(choice!==false){commitChoice(spec,n.id,choice);renderAll();safeAutosave();}});
   }
   function attach(game){game.on('render',render);game.on('navigate',({id})=>{if(id==='talents')render();});}
-  return {migrate,legacyNodes,choiceForPurchase,commitChoice,careerSkills,spendKnowledgeTriumph,status,knownUnranked,validateSnapshot,render,attach,legacy,replaced};
+  return {migrate,legacyNodes,choiceForPurchase,commitChoice,careerSkills,spendKnowledgeTriumph,status,knownUnranked,ruleFor,validateSnapshot,render,attach,legacy,replaced};
 })();

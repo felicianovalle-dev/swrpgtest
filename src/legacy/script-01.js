@@ -3972,7 +3972,7 @@ function performBest(skill,ctx={}){
   r=naturalReroll(skill,q,r);
   r=window.Talents98?.spendKnowledgeTriumph(skill,q,r)||r;
   if(q.actor.id==='pc'&&['Mechanics','Computers'].includes(skill)&&talentRank('Eye for Detail')&&r.ns>0&&canVoluntarilySufferStrain('pc')){
-    let max=Math.min(talentRank('Eye for Detail'),r.ns,Math.max(0,strainThreshold()-S.strain));
+    let max=Math.min(talentRank('Eye for Detail'),r.ns-1,Math.max(0,strainThreshold()-S.strain));
     if(max>0&&confirm(`Use Eye for Detail? Suffer up to ${max} strain to convert that many Successes into Advantages.`)){
       let n=Math.max(0,Math.min(max,Number(prompt('Eye for Detail conversions',String(max)))||0));
       if(n){S.strain+=n;r.ns-=n;r.na+=n;r.ok=r.ns>0;bLog(`Eye for Detail converts ${n} Success${n===1?'':'es'} into ${n} Advantage.`)}
@@ -5340,7 +5340,7 @@ function pcAttack(kind='normal'){
     else{target.w+=dmg;if(target.type==='minion')target.members=Math.max(0,Math.ceil((target.wt-target.w)/target.perWt));cLog(`${S.name} hits ${target.name} for ${dmg}. ${rtxt(r)}`)}
   }else cLog(`${S.name} misses ${target.name}. ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?feralStrengthDamage(q.skill):0);
+  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?feralStrengthDamage(q.skill)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
   if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function crewAttack(){
@@ -5684,7 +5684,6 @@ function resolveMoralitySession(){
       d10=1+Math.floor(Math.random()*10),delta=d10-used,old=S.morality;
   S.morality=Math.max(1,Math.min(100,S.morality+delta));S.conflict=0;S.conflictReduction=0;
   S.sessionUsed={naturalProgrammer:false,naturalCharmer:false,naturalDoctor:false,naturalNegotiator:false,naturalLeader:false,naturalHunter:false,naturalOutdoorsman:false,naturalTinkerer:false,naturalMystic:false,naturalBrawler:false,naturalRogue:false,naturalMarksman:false,naturalEnforcer:false,naturalMerchant:false,naturalAthlete:false,naturalDriver:false,naturalInstructor:false,naturalPilot:false,naturalScholar:false,worksLikeACharm:false,cleverSolution:false,fortuneFavorsBold:false,senseDanger:false,touchOfFate:false,forceOfWill:false,powerFromPain:false,improvedToughened:false};
-  let investmentIncome=100*talentRank('Sound Investments');if(investmentIncome){S.credits+=investmentIncome;bLog(`Sound Investments: the new session generates ${investmentIncome} credits.`)}
   bLog(`Morality: d10 ${d10} − Conflict ${used} = ${delta>=0?'+':''}${delta}. ${old} → ${S.morality}.${automatic?` Dark-side talents contributed ${automatic} automatic Conflict.`:''}${reduction?` Inner Peace reduced session Conflict by ${reduction}.`:''}`);
   renderAll()
 }
@@ -6069,7 +6068,8 @@ epRep=function(faction,amount,reason=''){_p43EpRep(faction,amount,reason);ensure
 function dutyAward(n){ensurePhase43State();if(S.framework!=='Duty')return;S.frameworkValue=Math.max(0,S.frameworkValue+n);while(S.frameworkValue>=100){S.frameworkValue-=100;S.campaign.contributionRank++;bLog(`Duty reaches 100: Contribution Rank increases to ${S.campaign.contributionRank}.`)}$('frameworkValue').value=S.frameworkValue;renderFramework()}
 function obligationAdjust(n){if(S.framework!=='Obligation')return;S.frameworkValue=Math.max(0,Math.min(100,S.frameworkValue+n));$('frameworkValue').value=S.frameworkValue;renderFramework()}
 function startCampaignSession(){
-  ensurePhase43State();let ses=S.campaign.session;ses.number++;ses.active=true;ses.roll=1+Math.floor(Math.random()*100);ses.triggered=false;S.campaign.obligationStrainPenalty=0;
+  ensurePhase43State();let ses=S.campaign.session;if(ses.active)return;ses.number++;ses.active=true;ses.roll=1+Math.floor(Math.random()*100);ses.triggered=false;S.campaign.obligationStrainPenalty=0;
+  const investmentIncome=100*talentRank('Sound Investments');if(investmentIncome){S.credits+=investmentIncome;bLog(`Sound Investments: session ${ses.number} generates ${investmentIncome} credits.`)}
   if(S.framework==='Obligation'){
     ses.triggered=ses.roll<=S.frameworkValue;if(ses.triggered){S.campaign.obligationStrainPenalty=2;ses.note=`Obligation triggered (${S.frameworkType}). Solo adaptation: the PC suffers −2 strain threshold this session, representing the group −1 plus the triggering character’s additional −1.`}else ses.note=`Obligation did not trigger (${ses.roll} > ${S.frameworkValue}).`;
   }else if(S.framework==='Duty'){

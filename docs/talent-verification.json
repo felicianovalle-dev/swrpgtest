@@ -9,13 +9,13 @@
     "species": 44,
     "trees": 112,
     "universal": 17,
-    "full": 92,
-    "simplified": 20,
+    "full": 112,
+    "simplified": 0,
     "prototype": 0
   },
   "errors": [],
   "checks": [
-    "Twelve source layouts replace prototypes; 20 simplified layouts remain",
+    "Twelve source layouts replace prototypes; no simplified layouts remain",
     "Core glossary correctly marks Knowledge Specialization and Supreme Stim Application passive",
     "Gadgeteer/g-Gadgeteer-0-0: purchase, economy and characteristic survive one-time migration",
     "Gadgeteer/g-Gadgeteer-0-1: purchase, economy and characteristic survive one-time migration",

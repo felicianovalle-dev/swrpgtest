@@ -1,0 +1,5685 @@
+{
+  "sourceCommit": "84300bf3698befe2eb1876b902eba00a94ac0a6b",
+  "trees": {
+    "Agitator": [
+      {
+        "id": "p37-agitator-0-0",
+        "name": "Plausible Deniability",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-0-1",
+          "p37-agitator-1-0"
+        ]
+      },
+      {
+        "id": "p37-agitator-0-1",
+        "name": "Side Step",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-0-0",
+          "p37-agitator-0-2",
+          "p37-agitator-1-1"
+        ]
+      },
+      {
+        "id": "p37-agitator-0-2",
+        "name": "Point Blank",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-0-1",
+          "p37-agitator-0-3",
+          "p37-agitator-1-2"
+        ]
+      },
+      {
+        "id": "p37-agitator-0-3",
+        "name": "Brace",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-0-2",
+          "p37-agitator-1-3"
+        ]
+      },
+      {
+        "id": "p37-agitator-1-0",
+        "name": "Natural Skill",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-1-1",
+          "p37-agitator-0-0",
+          "p37-agitator-2-0"
+        ]
+      },
+      {
+        "id": "p37-agitator-1-1",
+        "name": "Intimidating",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-1-0",
+          "p37-agitator-1-2",
+          "p37-agitator-0-1",
+          "p37-agitator-2-1"
+        ]
+      },
+      {
+        "id": "p37-agitator-1-2",
+        "name": "Hard Headed",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-1-1",
+          "p37-agitator-1-3",
+          "p37-agitator-0-2",
+          "p37-agitator-2-2"
+        ]
+      },
+      {
+        "id": "p37-agitator-1-3",
+        "name": "True Aim",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-1-2",
+          "p37-agitator-0-3",
+          "p37-agitator-2-3"
+        ]
+      },
+      {
+        "id": "p37-agitator-2-0",
+        "name": "Armor Master",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-2-1",
+          "p37-agitator-1-0",
+          "p37-agitator-3-0"
+        ]
+      },
+      {
+        "id": "p37-agitator-2-1",
+        "name": "Jury Rigged",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-2-0",
+          "p37-agitator-2-2",
+          "p37-agitator-1-1",
+          "p37-agitator-3-1"
+        ]
+      },
+      {
+        "id": "p37-agitator-2-2",
+        "name": "Field Commander",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-2-1",
+          "p37-agitator-2-3",
+          "p37-agitator-1-2",
+          "p37-agitator-3-2"
+        ]
+      },
+      {
+        "id": "p37-agitator-2-3",
+        "name": "Skilled Jockey",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-2-2",
+          "p37-agitator-1-3",
+          "p37-agitator-3-3"
+        ]
+      },
+      {
+        "id": "p37-agitator-3-0",
+        "name": "Stalker",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-3-1",
+          "p37-agitator-2-0",
+          "p37-agitator-4-0"
+        ]
+      },
+      {
+        "id": "p37-agitator-3-1",
+        "name": "Grit",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-3-0",
+          "p37-agitator-3-2",
+          "p37-agitator-2-1",
+          "p37-agitator-4-1"
+        ]
+      },
+      {
+        "id": "p37-agitator-3-2",
+        "name": "Scathing Tirade",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-3-1",
+          "p37-agitator-3-3",
+          "p37-agitator-2-2",
+          "p37-agitator-4-2"
+        ]
+      },
+      {
+        "id": "p37-agitator-3-3",
+        "name": "Confidence",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-3-2",
+          "p37-agitator-2-3",
+          "p37-agitator-4-3"
+        ]
+      },
+      {
+        "id": "p37-agitator-4-0",
+        "name": "Rapid Reaction",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-4-1",
+          "p37-agitator-3-0"
+        ]
+      },
+      {
+        "id": "p37-agitator-4-1",
+        "name": "Quick Draw",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-4-0",
+          "p37-agitator-4-2",
+          "p37-agitator-3-1"
+        ]
+      },
+      {
+        "id": "p37-agitator-4-2",
+        "name": "Rapid Recovery",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-4-1",
+          "p37-agitator-4-3",
+          "p37-agitator-3-2"
+        ]
+      },
+      {
+        "id": "p37-agitator-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-agitator-4-2",
+          "p37-agitator-3-3"
+        ]
+      }
+    ],
+    "Ambassador": [
+      {
+        "id": "p37-ambassador-0-0",
+        "name": "Indistinguishable",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-0-1",
+          "p37-ambassador-1-0"
+        ]
+      },
+      {
+        "id": "p37-ambassador-0-1",
+        "name": "Confidence",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-0-0",
+          "p37-ambassador-0-2",
+          "p37-ambassador-1-1"
+        ]
+      },
+      {
+        "id": "p37-ambassador-0-2",
+        "name": "Rapid Reaction",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-0-1",
+          "p37-ambassador-0-3",
+          "p37-ambassador-1-2"
+        ]
+      },
+      {
+        "id": "p37-ambassador-0-3",
+        "name": "Quick Draw",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-0-2",
+          "p37-ambassador-1-3"
+        ]
+      },
+      {
+        "id": "p37-ambassador-1-0",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-1-1",
+          "p37-ambassador-0-0",
+          "p37-ambassador-2-0"
+        ]
+      },
+      {
+        "id": "p37-ambassador-1-1",
+        "name": "Kill with Kindness",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-1-0",
+          "p37-ambassador-1-2",
+          "p37-ambassador-0-1",
+          "p37-ambassador-2-1"
+        ]
+      },
+      {
+        "id": "p37-ambassador-1-2",
+        "name": "Durable",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-1-1",
+          "p37-ambassador-1-3",
+          "p37-ambassador-0-2",
+          "p37-ambassador-2-2"
+        ]
+      },
+      {
+        "id": "p37-ambassador-1-3",
+        "name": "Side Step",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-1-2",
+          "p37-ambassador-0-3",
+          "p37-ambassador-2-3"
+        ]
+      },
+      {
+        "id": "p37-ambassador-2-0",
+        "name": "Point Blank",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-2-1",
+          "p37-ambassador-1-0",
+          "p37-ambassador-3-0"
+        ]
+      },
+      {
+        "id": "p37-ambassador-2-1",
+        "name": "Brace",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-2-0",
+          "p37-ambassador-2-2",
+          "p37-ambassador-1-1",
+          "p37-ambassador-3-1"
+        ]
+      },
+      {
+        "id": "p37-ambassador-2-2",
+        "name": "Natural Skill",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-2-1",
+          "p37-ambassador-2-3",
+          "p37-ambassador-1-2",
+          "p37-ambassador-3-2"
+        ]
+      },
+      {
+        "id": "p37-ambassador-2-3",
+        "name": "Dedication",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-2-2",
+          "p37-ambassador-1-3",
+          "p37-ambassador-3-3"
+        ]
+      },
+      {
+        "id": "p37-ambassador-3-0",
+        "name": "Hard Headed",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-3-1",
+          "p37-ambassador-2-0",
+          "p37-ambassador-4-0"
+        ]
+      },
+      {
+        "id": "p37-ambassador-3-1",
+        "name": "True Aim",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-3-0",
+          "p37-ambassador-3-2",
+          "p37-ambassador-2-1",
+          "p37-ambassador-4-1"
+        ]
+      },
+      {
+        "id": "p37-ambassador-3-2",
+        "name": "Inspiring Rhetoric",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-3-1",
+          "p37-ambassador-3-3",
+          "p37-ambassador-2-2",
+          "p37-ambassador-4-2"
+        ]
+      },
+      {
+        "id": "p37-ambassador-3-3",
+        "name": "Jury Rigged",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-3-2",
+          "p37-ambassador-2-3",
+          "p37-ambassador-4-3"
+        ]
+      },
+      {
+        "id": "p37-ambassador-4-0",
+        "name": "Field Commander",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-4-1",
+          "p37-ambassador-3-0"
+        ]
+      },
+      {
+        "id": "p37-ambassador-4-1",
+        "name": "Skilled Jockey",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-4-0",
+          "p37-ambassador-4-2",
+          "p37-ambassador-3-1"
+        ]
+      },
+      {
+        "id": "p37-ambassador-4-2",
+        "name": "Stalker",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-4-1",
+          "p37-ambassador-4-3",
+          "p37-ambassador-3-2"
+        ]
+      },
+      {
+        "id": "p37-ambassador-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-ambassador-4-2",
+          "p37-ambassador-3-3"
+        ]
+      }
+    ],
+    "Quartermaster": [
+      {
+        "id": "p37-quartermaster-0-0",
+        "name": "Know Somebody",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-0-1",
+          "p37-quartermaster-1-0"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-0-1",
+        "name": "Hard Headed",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-0-0",
+          "p37-quartermaster-0-2",
+          "p37-quartermaster-1-1"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-0-2",
+        "name": "True Aim",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-0-1",
+          "p37-quartermaster-0-3",
+          "p37-quartermaster-1-2"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-0-3",
+        "name": "Armor Master",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-0-2",
+          "p37-quartermaster-1-3"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-1-0",
+        "name": "Jury Rigged",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-1-1",
+          "p37-quartermaster-0-0",
+          "p37-quartermaster-2-0"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-1-1",
+        "name": "Wheel and Deal",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-1-0",
+          "p37-quartermaster-1-2",
+          "p37-quartermaster-0-1",
+          "p37-quartermaster-2-1"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-1-2",
+        "name": "Skilled Jockey",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-1-1",
+          "p37-quartermaster-1-3",
+          "p37-quartermaster-0-2",
+          "p37-quartermaster-2-2"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-1-3",
+        "name": "Stalker",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-1-2",
+          "p37-quartermaster-0-3",
+          "p37-quartermaster-2-3"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-2-0",
+        "name": "Grit",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-2-1",
+          "p37-quartermaster-1-0",
+          "p37-quartermaster-3-0"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-2-1",
+        "name": "Toughened",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-2-0",
+          "p37-quartermaster-2-2",
+          "p37-quartermaster-1-1",
+          "p37-quartermaster-3-1"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-2-2",
+        "name": "Confidence",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-2-1",
+          "p37-quartermaster-2-3",
+          "p37-quartermaster-1-2",
+          "p37-quartermaster-3-2"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-2-3",
+        "name": "Rapid Reaction",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-2-2",
+          "p37-quartermaster-1-3",
+          "p37-quartermaster-3-3"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-3-0",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-3-1",
+          "p37-quartermaster-2-0",
+          "p37-quartermaster-4-0"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-3-1",
+        "name": "Rapid Recovery",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-3-0",
+          "p37-quartermaster-3-2",
+          "p37-quartermaster-2-1",
+          "p37-quartermaster-4-1"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-3-2",
+        "name": "Master Merchant",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-3-1",
+          "p37-quartermaster-3-3",
+          "p37-quartermaster-2-2",
+          "p37-quartermaster-4-2"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-3-3",
+        "name": "Durable",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-3-2",
+          "p37-quartermaster-2-3",
+          "p37-quartermaster-4-3"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-4-0",
+        "name": "Side Step",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-4-1",
+          "p37-quartermaster-3-0"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-4-1",
+        "name": "Point Blank",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-4-0",
+          "p37-quartermaster-4-2",
+          "p37-quartermaster-3-1"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-4-2",
+        "name": "Brace",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-4-1",
+          "p37-quartermaster-4-3",
+          "p37-quartermaster-3-2"
+        ]
+      },
+      {
+        "id": "p37-quartermaster-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-quartermaster-4-2",
+          "p37-quartermaster-3-3"
+        ]
+      }
+    ],
+    "Advocate": [
+      {
+        "id": "p37-advocate-0-0",
+        "name": "Plausible Deniability",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-0-1",
+          "p37-advocate-1-0"
+        ]
+      },
+      {
+        "id": "p37-advocate-0-1",
+        "name": "Side Step",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-0-0",
+          "p37-advocate-0-2",
+          "p37-advocate-1-1"
+        ]
+      },
+      {
+        "id": "p37-advocate-0-2",
+        "name": "Point Blank",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-0-1",
+          "p37-advocate-0-3",
+          "p37-advocate-1-2"
+        ]
+      },
+      {
+        "id": "p37-advocate-0-3",
+        "name": "Brace",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-0-2",
+          "p37-advocate-1-3"
+        ]
+      },
+      {
+        "id": "p37-advocate-1-0",
+        "name": "Natural Skill",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-1-1",
+          "p37-advocate-0-0",
+          "p37-advocate-2-0"
+        ]
+      },
+      {
+        "id": "p37-advocate-1-1",
+        "name": "Congenial",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-1-0",
+          "p37-advocate-1-2",
+          "p37-advocate-0-1",
+          "p37-advocate-2-1"
+        ]
+      },
+      {
+        "id": "p37-advocate-1-2",
+        "name": "Hard Headed",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-1-1",
+          "p37-advocate-1-3",
+          "p37-advocate-0-2",
+          "p37-advocate-2-2"
+        ]
+      },
+      {
+        "id": "p37-advocate-1-3",
+        "name": "True Aim",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-1-2",
+          "p37-advocate-0-3",
+          "p37-advocate-2-3"
+        ]
+      },
+      {
+        "id": "p37-advocate-2-0",
+        "name": "Armor Master",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-2-1",
+          "p37-advocate-1-0",
+          "p37-advocate-3-0"
+        ]
+      },
+      {
+        "id": "p37-advocate-2-1",
+        "name": "Jury Rigged",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-2-0",
+          "p37-advocate-2-2",
+          "p37-advocate-1-1",
+          "p37-advocate-3-1"
+        ]
+      },
+      {
+        "id": "p37-advocate-2-2",
+        "name": "Field Commander",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-2-1",
+          "p37-advocate-2-3",
+          "p37-advocate-1-2",
+          "p37-advocate-3-2"
+        ]
+      },
+      {
+        "id": "p37-advocate-2-3",
+        "name": "Skilled Jockey",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-2-2",
+          "p37-advocate-1-3",
+          "p37-advocate-3-3"
+        ]
+      },
+      {
+        "id": "p37-advocate-3-0",
+        "name": "Stalker",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-3-1",
+          "p37-advocate-2-0",
+          "p37-advocate-4-0"
+        ]
+      },
+      {
+        "id": "p37-advocate-3-1",
+        "name": "Grit",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-3-0",
+          "p37-advocate-3-2",
+          "p37-advocate-2-1",
+          "p37-advocate-4-1"
+        ]
+      },
+      {
+        "id": "p37-advocate-3-2",
+        "name": "Nobody’s Fool",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-3-1",
+          "p37-advocate-3-3",
+          "p37-advocate-2-2",
+          "p37-advocate-4-2"
+        ]
+      },
+      {
+        "id": "p37-advocate-3-3",
+        "name": "Confidence",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-3-2",
+          "p37-advocate-2-3",
+          "p37-advocate-4-3"
+        ]
+      },
+      {
+        "id": "p37-advocate-4-0",
+        "name": "Rapid Reaction",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-4-1",
+          "p37-advocate-3-0"
+        ]
+      },
+      {
+        "id": "p37-advocate-4-1",
+        "name": "Quick Draw",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-4-0",
+          "p37-advocate-4-2",
+          "p37-advocate-3-1"
+        ]
+      },
+      {
+        "id": "p37-advocate-4-2",
+        "name": "Rapid Recovery",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-4-1",
+          "p37-advocate-4-3",
+          "p37-advocate-3-2"
+        ]
+      },
+      {
+        "id": "p37-advocate-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-advocate-4-2",
+          "p37-advocate-3-3"
+        ]
+      }
+    ],
+    "Analyst": [
+      {
+        "id": "p37-analyst-0-0",
+        "name": "Researcher",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-0-1",
+          "p37-analyst-1-0"
+        ]
+      },
+      {
+        "id": "p37-analyst-0-1",
+        "name": "Hard Headed",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-0-0",
+          "p37-analyst-0-2",
+          "p37-analyst-1-1"
+        ]
+      },
+      {
+        "id": "p37-analyst-0-2",
+        "name": "True Aim",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-0-1",
+          "p37-analyst-0-3",
+          "p37-analyst-1-2"
+        ]
+      },
+      {
+        "id": "p37-analyst-0-3",
+        "name": "Armor Master",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-0-2",
+          "p37-analyst-1-3"
+        ]
+      },
+      {
+        "id": "p37-analyst-1-0",
+        "name": "Jury Rigged",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-1-1",
+          "p37-analyst-0-0",
+          "p37-analyst-2-0"
+        ]
+      },
+      {
+        "id": "p37-analyst-1-1",
+        "name": "Valuable Facts",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-1-0",
+          "p37-analyst-1-2",
+          "p37-analyst-0-1",
+          "p37-analyst-2-1"
+        ]
+      },
+      {
+        "id": "p37-analyst-1-2",
+        "name": "Skilled Jockey",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-1-1",
+          "p37-analyst-1-3",
+          "p37-analyst-0-2",
+          "p37-analyst-2-2"
+        ]
+      },
+      {
+        "id": "p37-analyst-1-3",
+        "name": "Stalker",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-1-2",
+          "p37-analyst-0-3",
+          "p37-analyst-2-3"
+        ]
+      },
+      {
+        "id": "p37-analyst-2-0",
+        "name": "Grit",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-2-1",
+          "p37-analyst-1-0",
+          "p37-analyst-3-0"
+        ]
+      },
+      {
+        "id": "p37-analyst-2-1",
+        "name": "Toughened",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-2-0",
+          "p37-analyst-2-2",
+          "p37-analyst-1-1",
+          "p37-analyst-3-1"
+        ]
+      },
+      {
+        "id": "p37-analyst-2-2",
+        "name": "Confidence",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-2-1",
+          "p37-analyst-2-3",
+          "p37-analyst-1-2",
+          "p37-analyst-3-2"
+        ]
+      },
+      {
+        "id": "p37-analyst-2-3",
+        "name": "Rapid Reaction",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-2-2",
+          "p37-analyst-1-3",
+          "p37-analyst-3-3"
+        ]
+      },
+      {
+        "id": "p37-analyst-3-0",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-3-1",
+          "p37-analyst-2-0",
+          "p37-analyst-4-0"
+        ]
+      },
+      {
+        "id": "p37-analyst-3-1",
+        "name": "Rapid Recovery",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-3-0",
+          "p37-analyst-3-2",
+          "p37-analyst-2-1",
+          "p37-analyst-4-1"
+        ]
+      },
+      {
+        "id": "p37-analyst-3-2",
+        "name": "Knowledge Specialization",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-3-1",
+          "p37-analyst-3-3",
+          "p37-analyst-2-2",
+          "p37-analyst-4-2"
+        ]
+      },
+      {
+        "id": "p37-analyst-3-3",
+        "name": "Durable",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-3-2",
+          "p37-analyst-2-3",
+          "p37-analyst-4-3"
+        ]
+      },
+      {
+        "id": "p37-analyst-4-0",
+        "name": "Side Step",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-4-1",
+          "p37-analyst-3-0"
+        ]
+      },
+      {
+        "id": "p37-analyst-4-1",
+        "name": "Point Blank",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-4-0",
+          "p37-analyst-4-2",
+          "p37-analyst-3-1"
+        ]
+      },
+      {
+        "id": "p37-analyst-4-2",
+        "name": "Brace",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-4-1",
+          "p37-analyst-4-3",
+          "p37-analyst-3-2"
+        ]
+      },
+      {
+        "id": "p37-analyst-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-analyst-4-2",
+          "p37-analyst-3-3"
+        ]
+      }
+    ],
+    "Propagandist": [
+      {
+        "id": "p37-propagandist-0-0",
+        "name": "Kill with Kindness",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-0-1",
+          "p37-propagandist-1-0"
+        ]
+      },
+      {
+        "id": "p37-propagandist-0-1",
+        "name": "Toughened",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-0-0",
+          "p37-propagandist-0-2",
+          "p37-propagandist-1-1"
+        ]
+      },
+      {
+        "id": "p37-propagandist-0-2",
+        "name": "Confidence",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-0-1",
+          "p37-propagandist-0-3",
+          "p37-propagandist-1-2"
+        ]
+      },
+      {
+        "id": "p37-propagandist-0-3",
+        "name": "Rapid Reaction",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-0-2",
+          "p37-propagandist-1-3"
+        ]
+      },
+      {
+        "id": "p37-propagandist-1-0",
+        "name": "Quick Draw",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-1-1",
+          "p37-propagandist-0-0",
+          "p37-propagandist-2-0"
+        ]
+      },
+      {
+        "id": "p37-propagandist-1-1",
+        "name": "Inspiring Rhetoric",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-1-0",
+          "p37-propagandist-1-2",
+          "p37-propagandist-0-1",
+          "p37-propagandist-2-1"
+        ]
+      },
+      {
+        "id": "p37-propagandist-1-2",
+        "name": "Resolve",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-1-1",
+          "p37-propagandist-1-3",
+          "p37-propagandist-0-2",
+          "p37-propagandist-2-2"
+        ]
+      },
+      {
+        "id": "p37-propagandist-1-3",
+        "name": "Durable",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-1-2",
+          "p37-propagandist-0-3",
+          "p37-propagandist-2-3"
+        ]
+      },
+      {
+        "id": "p37-propagandist-2-0",
+        "name": "Side Step",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-2-1",
+          "p37-propagandist-1-0",
+          "p37-propagandist-3-0"
+        ]
+      },
+      {
+        "id": "p37-propagandist-2-1",
+        "name": "Point Blank",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-2-0",
+          "p37-propagandist-2-2",
+          "p37-propagandist-1-1",
+          "p37-propagandist-3-1"
+        ]
+      },
+      {
+        "id": "p37-propagandist-2-2",
+        "name": "Brace",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-2-1",
+          "p37-propagandist-2-3",
+          "p37-propagandist-1-2",
+          "p37-propagandist-3-2"
+        ]
+      },
+      {
+        "id": "p37-propagandist-2-3",
+        "name": "Natural Skill",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-2-2",
+          "p37-propagandist-1-3",
+          "p37-propagandist-3-3"
+        ]
+      },
+      {
+        "id": "p37-propagandist-3-0",
+        "name": "Dedication",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-3-1",
+          "p37-propagandist-2-0",
+          "p37-propagandist-4-0"
+        ]
+      },
+      {
+        "id": "p37-propagandist-3-1",
+        "name": "Hard Headed",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-3-0",
+          "p37-propagandist-3-2",
+          "p37-propagandist-2-1",
+          "p37-propagandist-4-1"
+        ]
+      },
+      {
+        "id": "p37-propagandist-3-2",
+        "name": "Positive Spin",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-3-1",
+          "p37-propagandist-3-3",
+          "p37-propagandist-2-2",
+          "p37-propagandist-4-2"
+        ]
+      },
+      {
+        "id": "p37-propagandist-3-3",
+        "name": "Armor Master",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-3-2",
+          "p37-propagandist-2-3",
+          "p37-propagandist-4-3"
+        ]
+      },
+      {
+        "id": "p37-propagandist-4-0",
+        "name": "Jury Rigged",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-4-1",
+          "p37-propagandist-3-0"
+        ]
+      },
+      {
+        "id": "p37-propagandist-4-1",
+        "name": "Field Commander",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-4-0",
+          "p37-propagandist-4-2",
+          "p37-propagandist-3-1"
+        ]
+      },
+      {
+        "id": "p37-propagandist-4-2",
+        "name": "Skilled Jockey",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-4-1",
+          "p37-propagandist-4-3",
+          "p37-propagandist-3-2"
+        ]
+      },
+      {
+        "id": "p37-propagandist-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-propagandist-4-2",
+          "p37-propagandist-3-3"
+        ]
+      }
+    ],
+    "Commando": [
+      {
+        "id": "p37-commando-0-0",
+        "name": "Physical Training",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-0-1",
+          "p37-commando-1-0"
+        ]
+      },
+      {
+        "id": "p37-commando-0-1",
+        "name": "Armor Master",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-0-0",
+          "p37-commando-0-2",
+          "p37-commando-1-1"
+        ]
+      },
+      {
+        "id": "p37-commando-0-2",
+        "name": "Jury Rigged",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-0-1",
+          "p37-commando-0-3",
+          "p37-commando-1-2"
+        ]
+      },
+      {
+        "id": "p37-commando-0-3",
+        "name": "Field Commander",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-0-2",
+          "p37-commando-1-3"
+        ]
+      },
+      {
+        "id": "p37-commando-1-0",
+        "name": "Skilled Jockey",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-1-1",
+          "p37-commando-0-0",
+          "p37-commando-2-0"
+        ]
+      },
+      {
+        "id": "p37-commando-1-1",
+        "name": "Toughened",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-1-0",
+          "p37-commando-1-2",
+          "p37-commando-0-1",
+          "p37-commando-2-1"
+        ]
+      },
+      {
+        "id": "p37-commando-1-2",
+        "name": "Grit",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-1-1",
+          "p37-commando-1-3",
+          "p37-commando-0-2",
+          "p37-commando-2-2"
+        ]
+      },
+      {
+        "id": "p37-commando-1-3",
+        "name": "Toughened",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-1-2",
+          "p37-commando-0-3",
+          "p37-commando-2-3"
+        ]
+      },
+      {
+        "id": "p37-commando-2-0",
+        "name": "Confidence",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-2-1",
+          "p37-commando-1-0",
+          "p37-commando-3-0"
+        ]
+      },
+      {
+        "id": "p37-commando-2-1",
+        "name": "Rapid Reaction",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-2-0",
+          "p37-commando-2-2",
+          "p37-commando-1-1",
+          "p37-commando-3-1"
+        ]
+      },
+      {
+        "id": "p37-commando-2-2",
+        "name": "Quick Draw",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-2-1",
+          "p37-commando-2-3",
+          "p37-commando-1-2",
+          "p37-commando-3-2"
+        ]
+      },
+      {
+        "id": "p37-commando-2-3",
+        "name": "Rapid Recovery",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-2-2",
+          "p37-commando-1-3",
+          "p37-commando-3-3"
+        ]
+      },
+      {
+        "id": "p37-commando-3-0",
+        "name": "Resolve",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-3-1",
+          "p37-commando-2-0",
+          "p37-commando-4-0"
+        ]
+      },
+      {
+        "id": "p37-commando-3-1",
+        "name": "Durable",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-3-0",
+          "p37-commando-3-2",
+          "p37-commando-2-1",
+          "p37-commando-4-1"
+        ]
+      },
+      {
+        "id": "p37-commando-3-2",
+        "name": "Durable",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-3-1",
+          "p37-commando-3-3",
+          "p37-commando-2-2",
+          "p37-commando-4-2"
+        ]
+      },
+      {
+        "id": "p37-commando-3-3",
+        "name": "Point Blank",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-3-2",
+          "p37-commando-2-3",
+          "p37-commando-4-3"
+        ]
+      },
+      {
+        "id": "p37-commando-4-0",
+        "name": "Brace",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-4-1",
+          "p37-commando-3-0"
+        ]
+      },
+      {
+        "id": "p37-commando-4-1",
+        "name": "Natural Skill",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-4-0",
+          "p37-commando-4-2",
+          "p37-commando-3-1"
+        ]
+      },
+      {
+        "id": "p37-commando-4-2",
+        "name": "Dedication",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-4-1",
+          "p37-commando-4-3",
+          "p37-commando-3-2"
+        ]
+      },
+      {
+        "id": "p37-commando-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-commando-4-2",
+          "p37-commando-3-3"
+        ]
+      }
+    ],
+    "Medic": [
+      {
+        "id": "p37-medic-0-0",
+        "name": "Surgeon",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-0-1",
+          "p37-medic-1-0"
+        ]
+      },
+      {
+        "id": "p37-medic-0-1",
+        "name": "Rapid Reaction",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-0-0",
+          "p37-medic-0-2",
+          "p37-medic-1-1"
+        ]
+      },
+      {
+        "id": "p37-medic-0-2",
+        "name": "Quick Draw",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-0-1",
+          "p37-medic-0-3",
+          "p37-medic-1-2"
+        ]
+      },
+      {
+        "id": "p37-medic-0-3",
+        "name": "Rapid Recovery",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-0-2",
+          "p37-medic-1-3"
+        ]
+      },
+      {
+        "id": "p37-medic-1-0",
+        "name": "Resolve",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-1-1",
+          "p37-medic-0-0",
+          "p37-medic-2-0"
+        ]
+      },
+      {
+        "id": "p37-medic-1-1",
+        "name": "Bacta Specialist",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-1-0",
+          "p37-medic-1-2",
+          "p37-medic-0-1",
+          "p37-medic-2-1"
+        ]
+      },
+      {
+        "id": "p37-medic-1-2",
+        "name": "Side Step",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-1-1",
+          "p37-medic-1-3",
+          "p37-medic-0-2",
+          "p37-medic-2-2"
+        ]
+      },
+      {
+        "id": "p37-medic-1-3",
+        "name": "Point Blank",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-1-2",
+          "p37-medic-0-3",
+          "p37-medic-2-3"
+        ]
+      },
+      {
+        "id": "p37-medic-2-0",
+        "name": "Brace",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-2-1",
+          "p37-medic-1-0",
+          "p37-medic-3-0"
+        ]
+      },
+      {
+        "id": "p37-medic-2-1",
+        "name": "Natural Skill",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-2-0",
+          "p37-medic-2-2",
+          "p37-medic-1-1",
+          "p37-medic-3-1"
+        ]
+      },
+      {
+        "id": "p37-medic-2-2",
+        "name": "Dedication",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-2-1",
+          "p37-medic-2-3",
+          "p37-medic-1-2",
+          "p37-medic-3-2"
+        ]
+      },
+      {
+        "id": "p37-medic-2-3",
+        "name": "Hard Headed",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-2-2",
+          "p37-medic-1-3",
+          "p37-medic-3-3"
+        ]
+      },
+      {
+        "id": "p37-medic-3-0",
+        "name": "True Aim",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-3-1",
+          "p37-medic-2-0",
+          "p37-medic-4-0"
+        ]
+      },
+      {
+        "id": "p37-medic-3-1",
+        "name": "Armor Master",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-3-0",
+          "p37-medic-3-2",
+          "p37-medic-2-1",
+          "p37-medic-4-1"
+        ]
+      },
+      {
+        "id": "p37-medic-3-2",
+        "name": "Stim Application",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-3-1",
+          "p37-medic-3-3",
+          "p37-medic-2-2",
+          "p37-medic-4-2"
+        ]
+      },
+      {
+        "id": "p37-medic-3-3",
+        "name": "Field Commander",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-3-2",
+          "p37-medic-2-3",
+          "p37-medic-4-3"
+        ]
+      },
+      {
+        "id": "p37-medic-4-0",
+        "name": "Skilled Jockey",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-4-1",
+          "p37-medic-3-0"
+        ]
+      },
+      {
+        "id": "p37-medic-4-1",
+        "name": "Stalker",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-4-0",
+          "p37-medic-4-2",
+          "p37-medic-3-1"
+        ]
+      },
+      {
+        "id": "p37-medic-4-2",
+        "name": "Grit",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-4-1",
+          "p37-medic-4-3",
+          "p37-medic-3-2"
+        ]
+      },
+      {
+        "id": "p37-medic-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-medic-4-2",
+          "p37-medic-3-3"
+        ]
+      }
+    ],
+    "Sharpshooter": [
+      {
+        "id": "p37-sharpshooter-0-0",
+        "name": "True Aim",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-0-1",
+          "p37-sharpshooter-1-0"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-0-1",
+        "name": "Rapid Reaction",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-0-0",
+          "p37-sharpshooter-0-2",
+          "p37-sharpshooter-1-1"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-0-2",
+        "name": "Quick Draw",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-0-1",
+          "p37-sharpshooter-0-3",
+          "p37-sharpshooter-1-2"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-0-3",
+        "name": "Rapid Recovery",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-0-2",
+          "p37-sharpshooter-1-3"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-1-0",
+        "name": "Resolve",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-1-1",
+          "p37-sharpshooter-0-0",
+          "p37-sharpshooter-2-0"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-1-1",
+        "name": "Sniper Shot",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-1-0",
+          "p37-sharpshooter-1-2",
+          "p37-sharpshooter-0-1",
+          "p37-sharpshooter-2-1"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-1-2",
+        "name": "Side Step",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-1-1",
+          "p37-sharpshooter-1-3",
+          "p37-sharpshooter-0-2",
+          "p37-sharpshooter-2-2"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-1-3",
+        "name": "Point Blank",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-1-2",
+          "p37-sharpshooter-0-3",
+          "p37-sharpshooter-2-3"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-2-0",
+        "name": "Brace",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-2-1",
+          "p37-sharpshooter-1-0",
+          "p37-sharpshooter-3-0"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-2-1",
+        "name": "Natural Skill",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-2-0",
+          "p37-sharpshooter-2-2",
+          "p37-sharpshooter-1-1",
+          "p37-sharpshooter-3-1"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-2-2",
+        "name": "Dedication",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-2-1",
+          "p37-sharpshooter-2-3",
+          "p37-sharpshooter-1-2",
+          "p37-sharpshooter-3-2"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-2-3",
+        "name": "Hard Headed",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-2-2",
+          "p37-sharpshooter-1-3",
+          "p37-sharpshooter-3-3"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-3-0",
+        "name": "True Aim",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-3-1",
+          "p37-sharpshooter-2-0",
+          "p37-sharpshooter-4-0"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-3-1",
+        "name": "Armor Master",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-3-0",
+          "p37-sharpshooter-3-2",
+          "p37-sharpshooter-2-1",
+          "p37-sharpshooter-4-1"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-3-2",
+        "name": "Deadly Accuracy",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-3-1",
+          "p37-sharpshooter-3-3",
+          "p37-sharpshooter-2-2",
+          "p37-sharpshooter-4-2"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-3-3",
+        "name": "Field Commander",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-3-2",
+          "p37-sharpshooter-2-3",
+          "p37-sharpshooter-4-3"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-4-0",
+        "name": "Skilled Jockey",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-4-1",
+          "p37-sharpshooter-3-0"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-4-1",
+        "name": "Stalker",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-4-0",
+          "p37-sharpshooter-4-2",
+          "p37-sharpshooter-3-1"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-4-2",
+        "name": "Grit",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-4-1",
+          "p37-sharpshooter-4-3",
+          "p37-sharpshooter-3-2"
+        ]
+      },
+      {
+        "id": "p37-sharpshooter-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-sharpshooter-4-2",
+          "p37-sharpshooter-3-3"
+        ]
+      }
+    ],
+    "Trailblazer": [
+      {
+        "id": "p37-trailblazer-0-0",
+        "name": "Expert Tracker",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-0-1",
+          "p37-trailblazer-1-0"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-0-1",
+        "name": "Point Blank",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-0-0",
+          "p37-trailblazer-0-2",
+          "p37-trailblazer-1-1"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-0-2",
+        "name": "Brace",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-0-1",
+          "p37-trailblazer-0-3",
+          "p37-trailblazer-1-2"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-0-3",
+        "name": "Natural Skill",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-0-2",
+          "p37-trailblazer-1-3"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-1-0",
+        "name": "Dedication",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-1-1",
+          "p37-trailblazer-0-0",
+          "p37-trailblazer-2-0"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-1-1",
+        "name": "Forager",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-1-0",
+          "p37-trailblazer-1-2",
+          "p37-trailblazer-0-1",
+          "p37-trailblazer-2-1"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-1-2",
+        "name": "True Aim",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-1-1",
+          "p37-trailblazer-1-3",
+          "p37-trailblazer-0-2",
+          "p37-trailblazer-2-2"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-1-3",
+        "name": "Armor Master",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-1-2",
+          "p37-trailblazer-0-3",
+          "p37-trailblazer-2-3"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-2-0",
+        "name": "Jury Rigged",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-2-1",
+          "p37-trailblazer-1-0",
+          "p37-trailblazer-3-0"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-2-1",
+        "name": "Field Commander",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-2-0",
+          "p37-trailblazer-2-2",
+          "p37-trailblazer-1-1",
+          "p37-trailblazer-3-1"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-2-2",
+        "name": "Skilled Jockey",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-2-1",
+          "p37-trailblazer-2-3",
+          "p37-trailblazer-1-2",
+          "p37-trailblazer-3-2"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-2-3",
+        "name": "Stalker",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-2-2",
+          "p37-trailblazer-1-3",
+          "p37-trailblazer-3-3"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-3-0",
+        "name": "Grit",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-3-1",
+          "p37-trailblazer-2-0",
+          "p37-trailblazer-4-0"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-3-1",
+        "name": "Toughened",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-3-0",
+          "p37-trailblazer-3-2",
+          "p37-trailblazer-2-1",
+          "p37-trailblazer-4-1"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-3-2",
+        "name": "Stalker",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-3-1",
+          "p37-trailblazer-3-3",
+          "p37-trailblazer-2-2",
+          "p37-trailblazer-4-2"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-3-3",
+        "name": "Rapid Reaction",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-3-2",
+          "p37-trailblazer-2-3",
+          "p37-trailblazer-4-3"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-4-0",
+        "name": "Quick Draw",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-4-1",
+          "p37-trailblazer-3-0"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-4-1",
+        "name": "Rapid Recovery",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-4-0",
+          "p37-trailblazer-4-2",
+          "p37-trailblazer-3-1"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-4-2",
+        "name": "Resolve",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-4-1",
+          "p37-trailblazer-4-3",
+          "p37-trailblazer-3-2"
+        ]
+      },
+      {
+        "id": "p37-trailblazer-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-trailblazer-4-2",
+          "p37-trailblazer-3-3"
+        ]
+      }
+    ],
+    "Vanguard": [
+      {
+        "id": "p37-vanguard-0-0",
+        "name": "Body Guard",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-0-1",
+          "p37-vanguard-1-0"
+        ]
+      },
+      {
+        "id": "p37-vanguard-0-1",
+        "name": "Rapid Recovery",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-0-0",
+          "p37-vanguard-0-2",
+          "p37-vanguard-1-1"
+        ]
+      },
+      {
+        "id": "p37-vanguard-0-2",
+        "name": "Resolve",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-0-1",
+          "p37-vanguard-0-3",
+          "p37-vanguard-1-2"
+        ]
+      },
+      {
+        "id": "p37-vanguard-0-3",
+        "name": "Durable",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-0-2",
+          "p37-vanguard-1-3"
+        ]
+      },
+      {
+        "id": "p37-vanguard-1-0",
+        "name": "Side Step",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-1-1",
+          "p37-vanguard-0-0",
+          "p37-vanguard-2-0"
+        ]
+      },
+      {
+        "id": "p37-vanguard-1-1",
+        "name": "Toughened",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-1-0",
+          "p37-vanguard-1-2",
+          "p37-vanguard-0-1",
+          "p37-vanguard-2-1"
+        ]
+      },
+      {
+        "id": "p37-vanguard-1-2",
+        "name": "Brace",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-1-1",
+          "p37-vanguard-1-3",
+          "p37-vanguard-0-2",
+          "p37-vanguard-2-2"
+        ]
+      },
+      {
+        "id": "p37-vanguard-1-3",
+        "name": "Natural Skill",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-1-2",
+          "p37-vanguard-0-3",
+          "p37-vanguard-2-3"
+        ]
+      },
+      {
+        "id": "p37-vanguard-2-0",
+        "name": "Dedication",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-2-1",
+          "p37-vanguard-1-0",
+          "p37-vanguard-3-0"
+        ]
+      },
+      {
+        "id": "p37-vanguard-2-1",
+        "name": "Hard Headed",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-2-0",
+          "p37-vanguard-2-2",
+          "p37-vanguard-1-1",
+          "p37-vanguard-3-1"
+        ]
+      },
+      {
+        "id": "p37-vanguard-2-2",
+        "name": "True Aim",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-2-1",
+          "p37-vanguard-2-3",
+          "p37-vanguard-1-2",
+          "p37-vanguard-3-2"
+        ]
+      },
+      {
+        "id": "p37-vanguard-2-3",
+        "name": "Armor Master",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-2-2",
+          "p37-vanguard-1-3",
+          "p37-vanguard-3-3"
+        ]
+      },
+      {
+        "id": "p37-vanguard-3-0",
+        "name": "Jury Rigged",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-3-1",
+          "p37-vanguard-2-0",
+          "p37-vanguard-4-0"
+        ]
+      },
+      {
+        "id": "p37-vanguard-3-1",
+        "name": "Field Commander",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-3-0",
+          "p37-vanguard-3-2",
+          "p37-vanguard-2-1",
+          "p37-vanguard-4-1"
+        ]
+      },
+      {
+        "id": "p37-vanguard-3-2",
+        "name": "Improved Body Guard",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-3-1",
+          "p37-vanguard-3-3",
+          "p37-vanguard-2-2",
+          "p37-vanguard-4-2"
+        ]
+      },
+      {
+        "id": "p37-vanguard-3-3",
+        "name": "Stalker",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-3-2",
+          "p37-vanguard-2-3",
+          "p37-vanguard-4-3"
+        ]
+      },
+      {
+        "id": "p37-vanguard-4-0",
+        "name": "Grit",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-4-1",
+          "p37-vanguard-3-0"
+        ]
+      },
+      {
+        "id": "p37-vanguard-4-1",
+        "name": "Toughened",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-4-0",
+          "p37-vanguard-4-2",
+          "p37-vanguard-3-1"
+        ]
+      },
+      {
+        "id": "p37-vanguard-4-2",
+        "name": "Confidence",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-4-1",
+          "p37-vanguard-4-3",
+          "p37-vanguard-3-2"
+        ]
+      },
+      {
+        "id": "p37-vanguard-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-vanguard-4-2",
+          "p37-vanguard-3-3"
+        ]
+      }
+    ],
+    "Saboteur": [
+      {
+        "id": "p37-saboteur-0-0",
+        "name": "Demolitionist",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-0-1",
+          "p37-saboteur-1-0"
+        ]
+      },
+      {
+        "id": "p37-saboteur-0-1",
+        "name": "Skilled Jockey",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-0-0",
+          "p37-saboteur-0-2",
+          "p37-saboteur-1-1"
+        ]
+      },
+      {
+        "id": "p37-saboteur-0-2",
+        "name": "Stalker",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-0-1",
+          "p37-saboteur-0-3",
+          "p37-saboteur-1-2"
+        ]
+      },
+      {
+        "id": "p37-saboteur-0-3",
+        "name": "Grit",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-0-2",
+          "p37-saboteur-1-3"
+        ]
+      },
+      {
+        "id": "p37-saboteur-1-0",
+        "name": "Toughened",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-1-1",
+          "p37-saboteur-0-0",
+          "p37-saboteur-2-0"
+        ]
+      },
+      {
+        "id": "p37-saboteur-1-1",
+        "name": "Powerful Blast",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-1-0",
+          "p37-saboteur-1-2",
+          "p37-saboteur-0-1",
+          "p37-saboteur-2-1"
+        ]
+      },
+      {
+        "id": "p37-saboteur-1-2",
+        "name": "Rapid Reaction",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-1-1",
+          "p37-saboteur-1-3",
+          "p37-saboteur-0-2",
+          "p37-saboteur-2-2"
+        ]
+      },
+      {
+        "id": "p37-saboteur-1-3",
+        "name": "Quick Draw",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-1-2",
+          "p37-saboteur-0-3",
+          "p37-saboteur-2-3"
+        ]
+      },
+      {
+        "id": "p37-saboteur-2-0",
+        "name": "Rapid Recovery",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-2-1",
+          "p37-saboteur-1-0",
+          "p37-saboteur-3-0"
+        ]
+      },
+      {
+        "id": "p37-saboteur-2-1",
+        "name": "Resolve",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-2-0",
+          "p37-saboteur-2-2",
+          "p37-saboteur-1-1",
+          "p37-saboteur-3-1"
+        ]
+      },
+      {
+        "id": "p37-saboteur-2-2",
+        "name": "Durable",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-2-1",
+          "p37-saboteur-2-3",
+          "p37-saboteur-1-2",
+          "p37-saboteur-3-2"
+        ]
+      },
+      {
+        "id": "p37-saboteur-2-3",
+        "name": "Side Step",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-2-2",
+          "p37-saboteur-1-3",
+          "p37-saboteur-3-3"
+        ]
+      },
+      {
+        "id": "p37-saboteur-3-0",
+        "name": "Point Blank",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-3-1",
+          "p37-saboteur-2-0",
+          "p37-saboteur-4-0"
+        ]
+      },
+      {
+        "id": "p37-saboteur-3-1",
+        "name": "Brace",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-3-0",
+          "p37-saboteur-3-2",
+          "p37-saboteur-2-1",
+          "p37-saboteur-4-1"
+        ]
+      },
+      {
+        "id": "p37-saboteur-3-2",
+        "name": "Selective Detonation",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-3-1",
+          "p37-saboteur-3-3",
+          "p37-saboteur-2-2",
+          "p37-saboteur-4-2"
+        ]
+      },
+      {
+        "id": "p37-saboteur-3-3",
+        "name": "Dedication",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-3-2",
+          "p37-saboteur-2-3",
+          "p37-saboteur-4-3"
+        ]
+      },
+      {
+        "id": "p37-saboteur-4-0",
+        "name": "Hard Headed",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-4-1",
+          "p37-saboteur-3-0"
+        ]
+      },
+      {
+        "id": "p37-saboteur-4-1",
+        "name": "True Aim",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-4-0",
+          "p37-saboteur-4-2",
+          "p37-saboteur-3-1"
+        ]
+      },
+      {
+        "id": "p37-saboteur-4-2",
+        "name": "Armor Master",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-4-1",
+          "p37-saboteur-4-3",
+          "p37-saboteur-3-2"
+        ]
+      },
+      {
+        "id": "p37-saboteur-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-saboteur-4-2",
+          "p37-saboteur-3-3"
+        ]
+      }
+    ],
+    "Scientist": [
+      {
+        "id": "p37-scientist-0-0",
+        "name": "Researcher",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-0-1",
+          "p37-scientist-1-0"
+        ]
+      },
+      {
+        "id": "p37-scientist-0-1",
+        "name": "Natural Skill",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-0-0",
+          "p37-scientist-0-2",
+          "p37-scientist-1-1"
+        ]
+      },
+      {
+        "id": "p37-scientist-0-2",
+        "name": "Dedication",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-0-1",
+          "p37-scientist-0-3",
+          "p37-scientist-1-2"
+        ]
+      },
+      {
+        "id": "p37-scientist-0-3",
+        "name": "Hard Headed",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-0-2",
+          "p37-scientist-1-3"
+        ]
+      },
+      {
+        "id": "p37-scientist-1-0",
+        "name": "True Aim",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-1-1",
+          "p37-scientist-0-0",
+          "p37-scientist-2-0"
+        ]
+      },
+      {
+        "id": "p37-scientist-1-1",
+        "name": "Knowledge Specialization",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-1-0",
+          "p37-scientist-1-2",
+          "p37-scientist-0-1",
+          "p37-scientist-2-1"
+        ]
+      },
+      {
+        "id": "p37-scientist-1-2",
+        "name": "Jury Rigged",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-1-1",
+          "p37-scientist-1-3",
+          "p37-scientist-0-2",
+          "p37-scientist-2-2"
+        ]
+      },
+      {
+        "id": "p37-scientist-1-3",
+        "name": "Field Commander",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-1-2",
+          "p37-scientist-0-3",
+          "p37-scientist-2-3"
+        ]
+      },
+      {
+        "id": "p37-scientist-2-0",
+        "name": "Skilled Jockey",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-2-1",
+          "p37-scientist-1-0",
+          "p37-scientist-3-0"
+        ]
+      },
+      {
+        "id": "p37-scientist-2-1",
+        "name": "Stalker",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-2-0",
+          "p37-scientist-2-2",
+          "p37-scientist-1-1",
+          "p37-scientist-3-1"
+        ]
+      },
+      {
+        "id": "p37-scientist-2-2",
+        "name": "Grit",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-2-1",
+          "p37-scientist-2-3",
+          "p37-scientist-1-2",
+          "p37-scientist-3-2"
+        ]
+      },
+      {
+        "id": "p37-scientist-2-3",
+        "name": "Toughened",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-2-2",
+          "p37-scientist-1-3",
+          "p37-scientist-3-3"
+        ]
+      },
+      {
+        "id": "p37-scientist-3-0",
+        "name": "Confidence",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-3-1",
+          "p37-scientist-2-0",
+          "p37-scientist-4-0"
+        ]
+      },
+      {
+        "id": "p37-scientist-3-1",
+        "name": "Rapid Reaction",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-3-0",
+          "p37-scientist-3-2",
+          "p37-scientist-2-1",
+          "p37-scientist-4-1"
+        ]
+      },
+      {
+        "id": "p37-scientist-3-2",
+        "name": "Inventor",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-3-1",
+          "p37-scientist-3-3",
+          "p37-scientist-2-2",
+          "p37-scientist-4-2"
+        ]
+      },
+      {
+        "id": "p37-scientist-3-3",
+        "name": "Rapid Recovery",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-3-2",
+          "p37-scientist-2-3",
+          "p37-scientist-4-3"
+        ]
+      },
+      {
+        "id": "p37-scientist-4-0",
+        "name": "Resolve",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-4-1",
+          "p37-scientist-3-0"
+        ]
+      },
+      {
+        "id": "p37-scientist-4-1",
+        "name": "Durable",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-4-0",
+          "p37-scientist-4-2",
+          "p37-scientist-3-1"
+        ]
+      },
+      {
+        "id": "p37-scientist-4-2",
+        "name": "Side Step",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-4-1",
+          "p37-scientist-4-3",
+          "p37-scientist-3-2"
+        ]
+      },
+      {
+        "id": "p37-scientist-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-scientist-4-2",
+          "p37-scientist-3-3"
+        ]
+      }
+    ],
+    "Droid Specialist": [
+      {
+        "id": "p37-droidspecialist-0-0",
+        "name": "Machine Mender",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-0-1",
+          "p37-droidspecialist-1-0"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-0-1",
+        "name": "Dedication",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-0-0",
+          "p37-droidspecialist-0-2",
+          "p37-droidspecialist-1-1"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-0-2",
+        "name": "Hard Headed",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-0-1",
+          "p37-droidspecialist-0-3",
+          "p37-droidspecialist-1-2"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-0-3",
+        "name": "True Aim",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-0-2",
+          "p37-droidspecialist-1-3"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-1-0",
+        "name": "Armor Master",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-1-1",
+          "p37-droidspecialist-0-0",
+          "p37-droidspecialist-2-0"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-1-1",
+        "name": "Gearhead",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-1-0",
+          "p37-droidspecialist-1-2",
+          "p37-droidspecialist-0-1",
+          "p37-droidspecialist-2-1"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-1-2",
+        "name": "Field Commander",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-1-1",
+          "p37-droidspecialist-1-3",
+          "p37-droidspecialist-0-2",
+          "p37-droidspecialist-2-2"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-1-3",
+        "name": "Skilled Jockey",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-1-2",
+          "p37-droidspecialist-0-3",
+          "p37-droidspecialist-2-3"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-2-0",
+        "name": "Stalker",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-2-1",
+          "p37-droidspecialist-1-0",
+          "p37-droidspecialist-3-0"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-2-1",
+        "name": "Grit",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-2-0",
+          "p37-droidspecialist-2-2",
+          "p37-droidspecialist-1-1",
+          "p37-droidspecialist-3-1"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-2-2",
+        "name": "Toughened",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-2-1",
+          "p37-droidspecialist-2-3",
+          "p37-droidspecialist-1-2",
+          "p37-droidspecialist-3-2"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-2-3",
+        "name": "Confidence",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-2-2",
+          "p37-droidspecialist-1-3",
+          "p37-droidspecialist-3-3"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-3-0",
+        "name": "Rapid Reaction",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-3-1",
+          "p37-droidspecialist-2-0",
+          "p37-droidspecialist-4-0"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-3-1",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-3-0",
+          "p37-droidspecialist-3-2",
+          "p37-droidspecialist-2-1",
+          "p37-droidspecialist-4-1"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-3-2",
+        "name": "Speaks Binary",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-3-1",
+          "p37-droidspecialist-3-3",
+          "p37-droidspecialist-2-2",
+          "p37-droidspecialist-4-2"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-3-3",
+        "name": "Resolve",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-3-2",
+          "p37-droidspecialist-2-3",
+          "p37-droidspecialist-4-3"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-4-0",
+        "name": "Durable",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-4-1",
+          "p37-droidspecialist-3-0"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-4-1",
+        "name": "Side Step",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-4-0",
+          "p37-droidspecialist-4-2",
+          "p37-droidspecialist-3-1"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-4-2",
+        "name": "Point Blank",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-4-1",
+          "p37-droidspecialist-4-3",
+          "p37-droidspecialist-3-2"
+        ]
+      },
+      {
+        "id": "p37-droidspecialist-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-droidspecialist-4-2",
+          "p37-droidspecialist-3-3"
+        ]
+      }
+    ],
+    "Sapper": [
+      {
+        "id": "p37-sapper-0-0",
+        "name": "Brace",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-0-1",
+          "p37-sapper-1-0"
+        ]
+      },
+      {
+        "id": "p37-sapper-0-1",
+        "name": "Grit",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-0-0",
+          "p37-sapper-0-2",
+          "p37-sapper-1-1"
+        ]
+      },
+      {
+        "id": "p37-sapper-0-2",
+        "name": "Toughened",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-0-1",
+          "p37-sapper-0-3",
+          "p37-sapper-1-2"
+        ]
+      },
+      {
+        "id": "p37-sapper-0-3",
+        "name": "Confidence",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-0-2",
+          "p37-sapper-1-3"
+        ]
+      },
+      {
+        "id": "p37-sapper-1-0",
+        "name": "Rapid Reaction",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-1-1",
+          "p37-sapper-0-0",
+          "p37-sapper-2-0"
+        ]
+      },
+      {
+        "id": "p37-sapper-1-1",
+        "name": "Explosive Engineer",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-1-0",
+          "p37-sapper-1-2",
+          "p37-sapper-0-1",
+          "p37-sapper-2-1"
+        ]
+      },
+      {
+        "id": "p37-sapper-1-2",
+        "name": "Rapid Recovery",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-1-1",
+          "p37-sapper-1-3",
+          "p37-sapper-0-2",
+          "p37-sapper-2-2"
+        ]
+      },
+      {
+        "id": "p37-sapper-1-3",
+        "name": "Resolve",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-1-2",
+          "p37-sapper-0-3",
+          "p37-sapper-2-3"
+        ]
+      },
+      {
+        "id": "p37-sapper-2-0",
+        "name": "Durable",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-2-1",
+          "p37-sapper-1-0",
+          "p37-sapper-3-0"
+        ]
+      },
+      {
+        "id": "p37-sapper-2-1",
+        "name": "Side Step",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-2-0",
+          "p37-sapper-2-2",
+          "p37-sapper-1-1",
+          "p37-sapper-3-1"
+        ]
+      },
+      {
+        "id": "p37-sapper-2-2",
+        "name": "Point Blank",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-2-1",
+          "p37-sapper-2-3",
+          "p37-sapper-1-2",
+          "p37-sapper-3-2"
+        ]
+      },
+      {
+        "id": "p37-sapper-2-3",
+        "name": "Brace",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-2-2",
+          "p37-sapper-1-3",
+          "p37-sapper-3-3"
+        ]
+      },
+      {
+        "id": "p37-sapper-3-0",
+        "name": "Natural Skill",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-3-1",
+          "p37-sapper-2-0",
+          "p37-sapper-4-0"
+        ]
+      },
+      {
+        "id": "p37-sapper-3-1",
+        "name": "Dedication",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-3-0",
+          "p37-sapper-3-2",
+          "p37-sapper-2-1",
+          "p37-sapper-4-1"
+        ]
+      },
+      {
+        "id": "p37-sapper-3-2",
+        "name": "Improvised Position",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-3-1",
+          "p37-sapper-3-3",
+          "p37-sapper-2-2",
+          "p37-sapper-4-2"
+        ]
+      },
+      {
+        "id": "p37-sapper-3-3",
+        "name": "True Aim",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-3-2",
+          "p37-sapper-2-3",
+          "p37-sapper-4-3"
+        ]
+      },
+      {
+        "id": "p37-sapper-4-0",
+        "name": "Armor Master",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-4-1",
+          "p37-sapper-3-0"
+        ]
+      },
+      {
+        "id": "p37-sapper-4-1",
+        "name": "Jury Rigged",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-4-0",
+          "p37-sapper-4-2",
+          "p37-sapper-3-1"
+        ]
+      },
+      {
+        "id": "p37-sapper-4-2",
+        "name": "Field Commander",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-4-1",
+          "p37-sapper-4-3",
+          "p37-sapper-3-2"
+        ]
+      },
+      {
+        "id": "p37-sapper-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-sapper-4-2",
+          "p37-sapper-3-3"
+        ]
+      }
+    ],
+    "Infiltrator": [
+      {
+        "id": "p37-infiltrator-0-0",
+        "name": "Dodge",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-0-1",
+          "p37-infiltrator-1-0"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-0-1",
+        "name": "Durable",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-0-0",
+          "p37-infiltrator-0-2",
+          "p37-infiltrator-1-1"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-0-2",
+        "name": "Side Step",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-0-1",
+          "p37-infiltrator-0-3",
+          "p37-infiltrator-1-2"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-0-3",
+        "name": "Point Blank",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-0-2",
+          "p37-infiltrator-1-3"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-1-0",
+        "name": "Brace",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-1-1",
+          "p37-infiltrator-0-0",
+          "p37-infiltrator-2-0"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-1-1",
+        "name": "Stalker",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-1-0",
+          "p37-infiltrator-1-2",
+          "p37-infiltrator-0-1",
+          "p37-infiltrator-2-1"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-1-2",
+        "name": "Dedication",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-1-1",
+          "p37-infiltrator-1-3",
+          "p37-infiltrator-0-2",
+          "p37-infiltrator-2-2"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-1-3",
+        "name": "Hard Headed",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-1-2",
+          "p37-infiltrator-0-3",
+          "p37-infiltrator-2-3"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-2-0",
+        "name": "True Aim",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-2-1",
+          "p37-infiltrator-1-0",
+          "p37-infiltrator-3-0"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-2-1",
+        "name": "Armor Master",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-2-0",
+          "p37-infiltrator-2-2",
+          "p37-infiltrator-1-1",
+          "p37-infiltrator-3-1"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-2-2",
+        "name": "Jury Rigged",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-2-1",
+          "p37-infiltrator-2-3",
+          "p37-infiltrator-1-2",
+          "p37-infiltrator-3-2"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-2-3",
+        "name": "Field Commander",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-2-2",
+          "p37-infiltrator-1-3",
+          "p37-infiltrator-3-3"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-3-0",
+        "name": "Skilled Jockey",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-3-1",
+          "p37-infiltrator-2-0",
+          "p37-infiltrator-4-0"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-3-1",
+        "name": "Stalker",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-3-0",
+          "p37-infiltrator-3-2",
+          "p37-infiltrator-2-1",
+          "p37-infiltrator-4-1"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-3-2",
+        "name": "Natural Rogue",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-3-1",
+          "p37-infiltrator-3-3",
+          "p37-infiltrator-2-2",
+          "p37-infiltrator-4-2"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-3-3",
+        "name": "Toughened",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-3-2",
+          "p37-infiltrator-2-3",
+          "p37-infiltrator-4-3"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-4-0",
+        "name": "Confidence",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-4-1",
+          "p37-infiltrator-3-0"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-4-1",
+        "name": "Rapid Reaction",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-4-0",
+          "p37-infiltrator-4-2",
+          "p37-infiltrator-3-1"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-4-2",
+        "name": "Quick Draw",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-4-1",
+          "p37-infiltrator-4-3",
+          "p37-infiltrator-3-2"
+        ]
+      },
+      {
+        "id": "p37-infiltrator-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-infiltrator-4-2",
+          "p37-infiltrator-3-3"
+        ]
+      }
+    ],
+    "Courier": [
+      {
+        "id": "p37-courier-0-0",
+        "name": "Shortcut",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-0-1",
+          "p37-courier-1-0"
+        ]
+      },
+      {
+        "id": "p37-courier-0-1",
+        "name": "Brace",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-0-0",
+          "p37-courier-0-2",
+          "p37-courier-1-1"
+        ]
+      },
+      {
+        "id": "p37-courier-0-2",
+        "name": "Natural Skill",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-0-1",
+          "p37-courier-0-3",
+          "p37-courier-1-2"
+        ]
+      },
+      {
+        "id": "p37-courier-0-3",
+        "name": "Dedication",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-0-2",
+          "p37-courier-1-3"
+        ]
+      },
+      {
+        "id": "p37-courier-1-0",
+        "name": "Hard Headed",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-1-1",
+          "p37-courier-0-0",
+          "p37-courier-2-0"
+        ]
+      },
+      {
+        "id": "p37-courier-1-1",
+        "name": "Swift",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-1-0",
+          "p37-courier-1-2",
+          "p37-courier-0-1",
+          "p37-courier-2-1"
+        ]
+      },
+      {
+        "id": "p37-courier-1-2",
+        "name": "Armor Master",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-1-1",
+          "p37-courier-1-3",
+          "p37-courier-0-2",
+          "p37-courier-2-2"
+        ]
+      },
+      {
+        "id": "p37-courier-1-3",
+        "name": "Jury Rigged",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-1-2",
+          "p37-courier-0-3",
+          "p37-courier-2-3"
+        ]
+      },
+      {
+        "id": "p37-courier-2-0",
+        "name": "Field Commander",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-2-1",
+          "p37-courier-1-0",
+          "p37-courier-3-0"
+        ]
+      },
+      {
+        "id": "p37-courier-2-1",
+        "name": "Skilled Jockey",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-2-0",
+          "p37-courier-2-2",
+          "p37-courier-1-1",
+          "p37-courier-3-1"
+        ]
+      },
+      {
+        "id": "p37-courier-2-2",
+        "name": "Stalker",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-2-1",
+          "p37-courier-2-3",
+          "p37-courier-1-2",
+          "p37-courier-3-2"
+        ]
+      },
+      {
+        "id": "p37-courier-2-3",
+        "name": "Grit",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-2-2",
+          "p37-courier-1-3",
+          "p37-courier-3-3"
+        ]
+      },
+      {
+        "id": "p37-courier-3-0",
+        "name": "Toughened",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-3-1",
+          "p37-courier-2-0",
+          "p37-courier-4-0"
+        ]
+      },
+      {
+        "id": "p37-courier-3-1",
+        "name": "Confidence",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-3-0",
+          "p37-courier-3-2",
+          "p37-courier-2-1",
+          "p37-courier-4-1"
+        ]
+      },
+      {
+        "id": "p37-courier-3-2",
+        "name": "Freerunning",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-3-1",
+          "p37-courier-3-3",
+          "p37-courier-2-2",
+          "p37-courier-4-2"
+        ]
+      },
+      {
+        "id": "p37-courier-3-3",
+        "name": "Quick Draw",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-3-2",
+          "p37-courier-2-3",
+          "p37-courier-4-3"
+        ]
+      },
+      {
+        "id": "p37-courier-4-0",
+        "name": "Rapid Recovery",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-4-1",
+          "p37-courier-3-0"
+        ]
+      },
+      {
+        "id": "p37-courier-4-1",
+        "name": "Resolve",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-4-0",
+          "p37-courier-4-2",
+          "p37-courier-3-1"
+        ]
+      },
+      {
+        "id": "p37-courier-4-2",
+        "name": "Durable",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-4-1",
+          "p37-courier-4-3",
+          "p37-courier-3-2"
+        ]
+      },
+      {
+        "id": "p37-courier-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-courier-4-2",
+          "p37-courier-3-3"
+        ]
+      }
+    ],
+    "Interrogator": [
+      {
+        "id": "p37-interrogator-0-0",
+        "name": "Intimidating",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-0-1",
+          "p37-interrogator-1-0"
+        ]
+      },
+      {
+        "id": "p37-interrogator-0-1",
+        "name": "Toughened",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-0-0",
+          "p37-interrogator-0-2",
+          "p37-interrogator-1-1"
+        ]
+      },
+      {
+        "id": "p37-interrogator-0-2",
+        "name": "Confidence",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-0-1",
+          "p37-interrogator-0-3",
+          "p37-interrogator-1-2"
+        ]
+      },
+      {
+        "id": "p37-interrogator-0-3",
+        "name": "Rapid Reaction",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-0-2",
+          "p37-interrogator-1-3"
+        ]
+      },
+      {
+        "id": "p37-interrogator-1-0",
+        "name": "Quick Draw",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-1-1",
+          "p37-interrogator-0-0",
+          "p37-interrogator-2-0"
+        ]
+      },
+      {
+        "id": "p37-interrogator-1-1",
+        "name": "Good Cop",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-1-0",
+          "p37-interrogator-1-2",
+          "p37-interrogator-0-1",
+          "p37-interrogator-2-1"
+        ]
+      },
+      {
+        "id": "p37-interrogator-1-2",
+        "name": "Resolve",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-1-1",
+          "p37-interrogator-1-3",
+          "p37-interrogator-0-2",
+          "p37-interrogator-2-2"
+        ]
+      },
+      {
+        "id": "p37-interrogator-1-3",
+        "name": "Durable",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-1-2",
+          "p37-interrogator-0-3",
+          "p37-interrogator-2-3"
+        ]
+      },
+      {
+        "id": "p37-interrogator-2-0",
+        "name": "Side Step",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-2-1",
+          "p37-interrogator-1-0",
+          "p37-interrogator-3-0"
+        ]
+      },
+      {
+        "id": "p37-interrogator-2-1",
+        "name": "Point Blank",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-2-0",
+          "p37-interrogator-2-2",
+          "p37-interrogator-1-1",
+          "p37-interrogator-3-1"
+        ]
+      },
+      {
+        "id": "p37-interrogator-2-2",
+        "name": "Brace",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-2-1",
+          "p37-interrogator-2-3",
+          "p37-interrogator-1-2",
+          "p37-interrogator-3-2"
+        ]
+      },
+      {
+        "id": "p37-interrogator-2-3",
+        "name": "Natural Skill",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-2-2",
+          "p37-interrogator-1-3",
+          "p37-interrogator-3-3"
+        ]
+      },
+      {
+        "id": "p37-interrogator-3-0",
+        "name": "Dedication",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-3-1",
+          "p37-interrogator-2-0",
+          "p37-interrogator-4-0"
+        ]
+      },
+      {
+        "id": "p37-interrogator-3-1",
+        "name": "Hard Headed",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-3-0",
+          "p37-interrogator-3-2",
+          "p37-interrogator-2-1",
+          "p37-interrogator-4-1"
+        ]
+      },
+      {
+        "id": "p37-interrogator-3-2",
+        "name": "Bad Cop",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-3-1",
+          "p37-interrogator-3-3",
+          "p37-interrogator-2-2",
+          "p37-interrogator-4-2"
+        ]
+      },
+      {
+        "id": "p37-interrogator-3-3",
+        "name": "Armor Master",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-3-2",
+          "p37-interrogator-2-3",
+          "p37-interrogator-4-3"
+        ]
+      },
+      {
+        "id": "p37-interrogator-4-0",
+        "name": "Jury Rigged",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-4-1",
+          "p37-interrogator-3-0"
+        ]
+      },
+      {
+        "id": "p37-interrogator-4-1",
+        "name": "Field Commander",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-4-0",
+          "p37-interrogator-4-2",
+          "p37-interrogator-3-1"
+        ]
+      },
+      {
+        "id": "p37-interrogator-4-2",
+        "name": "Skilled Jockey",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-4-1",
+          "p37-interrogator-4-3",
+          "p37-interrogator-3-2"
+        ]
+      },
+      {
+        "id": "p37-interrogator-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-interrogator-4-2",
+          "p37-interrogator-3-3"
+        ]
+      }
+    ],
+    "Sleeper Agent": [
+      {
+        "id": "p37-sleeperagent-0-0",
+        "name": "Plausible Deniability",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-0-1",
+          "p37-sleeperagent-1-0"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-0-1",
+        "name": "Side Step",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-0-0",
+          "p37-sleeperagent-0-2",
+          "p37-sleeperagent-1-1"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-0-2",
+        "name": "Point Blank",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-0-1",
+          "p37-sleeperagent-0-3",
+          "p37-sleeperagent-1-2"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-0-3",
+        "name": "Brace",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-0-2",
+          "p37-sleeperagent-1-3"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-1-0",
+        "name": "Natural Skill",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-1-1",
+          "p37-sleeperagent-0-0",
+          "p37-sleeperagent-2-0"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-1-1",
+        "name": "Convincing Demeanor",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-1-0",
+          "p37-sleeperagent-1-2",
+          "p37-sleeperagent-0-1",
+          "p37-sleeperagent-2-1"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-1-2",
+        "name": "Hard Headed",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-1-1",
+          "p37-sleeperagent-1-3",
+          "p37-sleeperagent-0-2",
+          "p37-sleeperagent-2-2"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-1-3",
+        "name": "True Aim",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-1-2",
+          "p37-sleeperagent-0-3",
+          "p37-sleeperagent-2-3"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-2-0",
+        "name": "Armor Master",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-2-1",
+          "p37-sleeperagent-1-0",
+          "p37-sleeperagent-3-0"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-2-1",
+        "name": "Jury Rigged",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-2-0",
+          "p37-sleeperagent-2-2",
+          "p37-sleeperagent-1-1",
+          "p37-sleeperagent-3-1"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-2-2",
+        "name": "Field Commander",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-2-1",
+          "p37-sleeperagent-2-3",
+          "p37-sleeperagent-1-2",
+          "p37-sleeperagent-3-2"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-2-3",
+        "name": "Skilled Jockey",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-2-2",
+          "p37-sleeperagent-1-3",
+          "p37-sleeperagent-3-3"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-3-0",
+        "name": "Stalker",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-3-1",
+          "p37-sleeperagent-2-0",
+          "p37-sleeperagent-4-0"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-3-1",
+        "name": "Grit",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-3-0",
+          "p37-sleeperagent-3-2",
+          "p37-sleeperagent-2-1",
+          "p37-sleeperagent-4-1"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-3-2",
+        "name": "Master of Shadows",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-3-1",
+          "p37-sleeperagent-3-3",
+          "p37-sleeperagent-2-2",
+          "p37-sleeperagent-4-2"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-3-3",
+        "name": "Confidence",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-3-2",
+          "p37-sleeperagent-2-3",
+          "p37-sleeperagent-4-3"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-4-0",
+        "name": "Rapid Reaction",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-4-1",
+          "p37-sleeperagent-3-0"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-4-1",
+        "name": "Quick Draw",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-4-0",
+          "p37-sleeperagent-4-2",
+          "p37-sleeperagent-3-1"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-4-2",
+        "name": "Rapid Recovery",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-4-1",
+          "p37-sleeperagent-4-3",
+          "p37-sleeperagent-3-2"
+        ]
+      },
+      {
+        "id": "p37-sleeperagent-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-sleeperagent-4-2",
+          "p37-sleeperagent-3-3"
+        ]
+      }
+    ],
+    "Shipwright": [
+      {
+        "id": "p37-shipwright-0-0",
+        "name": "Solid Repairs",
+        "row": 0,
+        "col": 0,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-0-1",
+          "p37-shipwright-1-0"
+        ]
+      },
+      {
+        "id": "p37-shipwright-0-1",
+        "name": "Gearhead",
+        "row": 0,
+        "col": 1,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-0-0",
+          "p37-shipwright-0-2",
+          "p37-shipwright-1-1"
+        ]
+      },
+      {
+        "id": "p37-shipwright-0-2",
+        "name": "Grit",
+        "row": 0,
+        "col": 2,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-0-1",
+          "p37-shipwright-0-3",
+          "p37-shipwright-1-2"
+        ]
+      },
+      {
+        "id": "p37-shipwright-0-3",
+        "name": "Toughened",
+        "row": 0,
+        "col": 3,
+        "cost": 5,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-0-2",
+          "p37-shipwright-1-3"
+        ]
+      },
+      {
+        "id": "p37-shipwright-1-0",
+        "name": "Eye for Detail",
+        "row": 1,
+        "col": 0,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-1-1",
+          "p37-shipwright-0-0",
+          "p37-shipwright-2-0"
+        ]
+      },
+      {
+        "id": "p37-shipwright-1-1",
+        "name": "Inventor",
+        "row": 1,
+        "col": 1,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-1-0",
+          "p37-shipwright-1-2",
+          "p37-shipwright-0-1",
+          "p37-shipwright-2-1"
+        ]
+      },
+      {
+        "id": "p37-shipwright-1-2",
+        "name": "Jury Rigged",
+        "row": 1,
+        "col": 2,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-1-1",
+          "p37-shipwright-1-3",
+          "p37-shipwright-0-2",
+          "p37-shipwright-2-2"
+        ]
+      },
+      {
+        "id": "p37-shipwright-1-3",
+        "name": "Brace",
+        "row": 1,
+        "col": 3,
+        "cost": 10,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-1-2",
+          "p37-shipwright-0-3",
+          "p37-shipwright-2-3"
+        ]
+      },
+      {
+        "id": "p37-shipwright-2-0",
+        "name": "Push the Specs",
+        "row": 2,
+        "col": 0,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-2-1",
+          "p37-shipwright-1-0",
+          "p37-shipwright-3-0"
+        ]
+      },
+      {
+        "id": "p37-shipwright-2-1",
+        "name": "Rapid Recovery",
+        "row": 2,
+        "col": 1,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-2-0",
+          "p37-shipwright-2-2",
+          "p37-shipwright-1-1",
+          "p37-shipwright-3-1"
+        ]
+      },
+      {
+        "id": "p37-shipwright-2-2",
+        "name": "Resolve",
+        "row": 2,
+        "col": 2,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-2-1",
+          "p37-shipwright-2-3",
+          "p37-shipwright-1-2",
+          "p37-shipwright-3-2"
+        ]
+      },
+      {
+        "id": "p37-shipwright-2-3",
+        "name": "Durable",
+        "row": 2,
+        "col": 3,
+        "cost": 15,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-2-2",
+          "p37-shipwright-1-3",
+          "p37-shipwright-3-3"
+        ]
+      },
+      {
+        "id": "p37-shipwright-3-0",
+        "name": "Master Artisan",
+        "row": 3,
+        "col": 0,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-3-1",
+          "p37-shipwright-2-0",
+          "p37-shipwright-4-0"
+        ]
+      },
+      {
+        "id": "p37-shipwright-3-1",
+        "name": "Skilled Jockey",
+        "row": 3,
+        "col": 1,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-3-0",
+          "p37-shipwright-3-2",
+          "p37-shipwright-2-1",
+          "p37-shipwright-4-1"
+        ]
+      },
+      {
+        "id": "p37-shipwright-3-2",
+        "name": "Dedication",
+        "row": 3,
+        "col": 2,
+        "cost": 20,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-3-1",
+          "p37-shipwright-3-3",
+          "p37-shipwright-2-2",
+          "p37-shipwright-4-2"
+        ]
+      },
+      {
+        "id": "p37-shipwright-3-3",
+        "name": "Hard Headed",
+        "row": 3,
+        "col": 3,
+        "cost": 20,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-3-2",
+          "p37-shipwright-2-3",
+          "p37-shipwright-4-3"
+        ]
+      },
+      {
+        "id": "p37-shipwright-4-0",
+        "name": "Armor Master",
+        "row": 4,
+        "col": 0,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-4-1",
+          "p37-shipwright-3-0"
+        ]
+      },
+      {
+        "id": "p37-shipwright-4-1",
+        "name": "Natural Skill",
+        "row": 4,
+        "col": 1,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-4-0",
+          "p37-shipwright-4-2",
+          "p37-shipwright-3-1"
+        ]
+      },
+      {
+        "id": "p37-shipwright-4-2",
+        "name": "True Aim",
+        "row": 4,
+        "col": 2,
+        "cost": 25,
+        "effect": "Phase 37 standardized progression node. Consult the cited sourcebook for the exact full talent text and prerequisite geometry.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-4-1",
+          "p37-shipwright-4-3",
+          "p37-shipwright-3-2"
+        ]
+      },
+      {
+        "id": "p37-shipwright-4-3",
+        "name": "Dedication",
+        "row": 4,
+        "col": 3,
+        "cost": 25,
+        "effect": "Increase one characteristic by 1, maximum 6.",
+        "type": "Passive",
+        "links": [
+          "p37-shipwright-4-2",
+          "p37-shipwright-3-3"
+        ]
+      }
+    ]
+  }
+}

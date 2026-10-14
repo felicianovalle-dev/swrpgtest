@@ -1,6 +1,6 @@
 {
   "name": "sable-reach-pwa",
-  "version": "1.9.9",
+  "version": "1.9.10",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
@@ -9,7 +9,8 @@
     "test:browser": "node scripts/check_layout97.cjs",
     "test:campaign": "node scripts/check_campaign97.cjs",
     "test:talents": "node scripts/check_talents98.cjs",
-    "test:talents:force": "node scripts/check_talents99.cjs"
+    "test:talents:force": "node scripts/check_talents99.cjs",
+    "test:talents:aor": "node scripts/check_talents100.cjs"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.10",

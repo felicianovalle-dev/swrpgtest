@@ -5,6 +5,7 @@ window.CharacterCatalog97 = (() => {
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
   for(const [name,rule]of Object.entries(data.talentRules98||{}))if(rule.summary)TALENT_BLURBS[name]=rule.summary;
+  for(const [name,rule]of Object.entries(data.talentRules100||{}))if(rule.summary)TALENT_BLURBS[name]=rule.summary;
   for (const [name, record] of Object.entries(data.trees)) {
     const prefix = (record.idPrefix||'cw97')+'-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
     const ids = record.names.map((_,i) => `${prefix}-${i}`);
@@ -38,6 +39,7 @@ window.CharacterCatalog97 = (() => {
   const talentSkills = {
     'Basic Combat Training':['Brawl','Ranged (Light)'], 'Tactical Combat Training':['Melee','Ranged (Heavy)'],
     'Vehicle Combat Training':['Gunnery','Piloting (Planetary)'], 'Well Traveled':['Knowledge (Core Worlds)','Knowledge (Outer Rim)'],
+    'Pilot Training':['Piloting (Planetary)','Piloting (Space)'],
     'Secrets of the Force':['Knowledge (Lore)','Lightsaber'], 'Secrets of the Jedi':['Lightsaber'],
     'Improved Secrets of the Jedi':['Discipline']
   };

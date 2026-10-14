@@ -19,7 +19,7 @@ page mappings. No source PDFs or private source links are published in the repo.
 
 Book glossaries supplied activation and ranked metadata, including F&D Core
 entries reused by the supplements. The update uses 161 distinct talent entries;
-the shared catalog now has 232 entries and adds 72 short source-based summaries.
+that release brought the shared catalog to 232 entries and adds 72 short source-based summaries.
 Careful Planning uses its source diagram's active, once-per-session label without
 claiming an unverified turn subtype.
 
@@ -80,9 +80,7 @@ The new suite passed **371 checks**, with no page errors. The existing core-tale
 
 ## Practical scope
 
-Twenty simplified Age of Rebellion layouts remain. There are no remaining
-simplified EotE or F&D layouts, but the older 54 layouts labeled full have not
-all been freshly audited. Layout coverage does not certify complete automation.
+The follow-up [AoR update](aor-talent-verification.md) completed the twenty remaining simplified layouts. There are now no simplified career layouts, but the older 54 layouts labeled full have not all been freshly audited. Layout coverage does not certify complete automation.
 
 Cards explicitly disclose manual effects, including alchemy, bonded creatures,
 temporary copied powers, Force commitments, wilderness recovery, advanced

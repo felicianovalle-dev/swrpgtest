@@ -10,13 +10,13 @@
     "species": 44,
     "trees": 112,
     "universal": 17,
-    "full": 92,
-    "simplified": 20,
+    "full": 112,
+    "simplified": 0,
     "prototype": 0
   },
   "errors": [],
   "checks": [
-    "All requested trees have source layouts; 20 simplified AoR layouts remain",
+    "All requested trees have source layouts; no simplified layouts remain",
     "Names and activation labels follow book entries over compilation errors",
     "Mechanic/p37-mechanic-0-0: old ability, XP, Force rating and characteristic survive migration",
     "Mechanic/p37-mechanic-0-1: old ability, XP, Force rating and characteristic survive migration",

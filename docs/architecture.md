@@ -122,7 +122,7 @@ objective modules delegate campaign presentation through `Game97.campaign`.
 `src/campaign.css` uses the existing interface conventions and keeps creation
 controls readable at 320px and wider viewports.
 
-`src/talents98.js` owns compatibility with the twelve former prototype and sixteen former simplified trees,
+`src/talents98.js` owns compatibility with the twelve former prototype and thirty-six former simplified trees,
 required talent skill choices, and purchase/source disclosures. It is loaded
 after catalog installation and before the runtime captures defaults. The runtime
 migrates imported purchase IDs before invoking legacy hydration, so the first
@@ -133,25 +133,24 @@ the closest original cost. No XP, Force Rating, or characteristics are recalcula
 IDs retain their previous definitions for effect counting, while the
 purchase grid exposes only the new source layout. `talentImports98` records original
 costs and mappings; `talentChoices98` stores Well Rounded choices and the first
-Knowledge Specialization skill. Save validation checks both before hydration. The simplified definitions in `legacyTrees99` are captured from c5eab55 rather than reconstructed by the generic-tree algorithm. Earlier Well Rounded skill-choice keys migrate with their Teacher node, and validation accepts those original keys before migration. The import-record limit follows the actual frozen node count rather than the earlier 240-node limit.
+Knowledge Specialization skill. Save validation checks both before hydration. The simplified definitions in `legacyTrees99` are captured from c5eab55 (sixteen trees) and 84300bf (twenty AoR trees) rather than reconstructed by the generic-tree algorithm. Earlier Well Rounded skill-choice keys migrate with their Teacher node, and validation accepts those original keys before migration. The import-record limit follows the actual frozen node count rather than the earlier 240-node limit.
 Already known unranked talents make their connections available without another
 charge or adding a second effect-counting copy.
 
-Source rules and short summaries live in `talentRules98` within the catalog JSON. `talentRuleVariants99` preserves sourcebook differences in ranked labels instead of applying one book’s label to every career. `bookReviewed` marks the sixteen sourcebook-checked replacements, and `replacesSimplified` opts those trees into compatibility migration. Coverage counts exclude imported layouts from the remaining simplified count.
+Source rules and short summaries live in `talentRules98` within the catalog JSON. AoR records select `talentRules100` through `ruleSet`; `Talents98.ruleFor` chooses their source-specific metadata without changing EotE/F&D variants. Courier’s Pilot Training uses the shared career-skill package map. `talentRuleVariants99` preserves sourcebook differences in ranked labels instead of applying one book’s label to every career. `bookReviewed` marks the sourcebook-checked replacements, and `replacesSimplified` opts those trees into compatibility migration. Coverage counts exclude imported layouts from the remaining simplified count.
 `src/talents98.css` keeps card descriptions and source paths in normal flow above
 their purchase buttons. The module subscribes to the shared render/navigation
 hooks instead of adding legacy presentation wrappers.
 
-The core combat handler adds Feral Strength to its first Brawl/Melee hit. The
+The core combat handler adds Feral Strength to its first Brawl/Melee hit and Prey on the Weak to one hit against a disoriented target. The
 additive `combat.pendingSpend.oneHitDamage98` value prevents Linked/Auto-Fire
-extra hits from copying that bonus and persists through a battle reload. Other
-existing damage behavior is unchanged. Contextual check hooks require explicit
+extra hits from copying that bonus and persists through a battle reload. Eye for Detail retains one Success. Sound Investments pays at campaign session start for every framework; an active session rejects repeat starts and Morality resolution does not pay again. Contextual check hooks require explicit
 toxin/outdoor/scavenging/fear/academic flags; they do not add a global bonus.
 
 `npm run test:talents` covers every prior-release prototype node, real purchases
 through all twelve trees, save migration/reload, skill choices, conditional effects,
 single-hit damage, already known talents, and phone card geometry. See
-`docs/talent-tree-verification.md` for the earlier core-tree validation. `npm run test:talents:force` adds 320 simplified-purchase fixtures, all sixteen source purchase paths, combined 560-purchase continuation, Teacher choices, Force Rating and Dedication guards, source-label variants, repair effects, and phone geometry. See `docs/force-talent-verification.md` for current source references and validation scope.
+`docs/talent-tree-verification.md` for the earlier core-tree validation. `npm run test:talents:force` adds 320 simplified-purchase fixtures, all sixteen source purchase paths, combined 560-purchase continuation, Teacher choices, Force Rating and Dedication guards, source-label variants, repair effects, and phone geometry. See `docs/force-talent-verification.md` for that batch’s source references and validation scope. `npm run test:talents:aor` adds 400 prior AoR fixtures, all twenty purchase paths, combined 960-purchase continuation, skill-choice persistence, session income, Eye for Detail and single-hit combat behavior, and six viewport sizes. See `docs/aor-talent-verification.md`.
 
 On ready, a fresh session without a valid saved campaign uses the resume service
 to open the beginning chooser. Its guarded navigation leaves storage untouched.
