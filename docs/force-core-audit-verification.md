@@ -55,4 +55,4 @@ All ten general regression targets returned exit code zero, including 266 smoke 
 
 Fresh Healer and Niman Disciple characters at 390×844, plus Soresu Defender at 1280×800, passed visible creation, original-ID purchases, finalization, manual save and reload. Healer also purchased Grit through the restored Physician connection. No overflow or application errors occurred.
 
-The checked distribution has Git blob `70150b4faab7a0dc97f60df361e9092a215ad0b1` (3,685,966 bytes). Hosted verification will compare the published HTML with this exact distribution and repeat these three flows.
+The checked distribution has Git blob `70150b4faab7a0dc97f60df361e9092a215ad0b1` (3,685,966 bytes). The Pages deployment completed successfully, and the hosted HTML matched this distribution byte for byte. Fresh Healer and Niman Disciple characters at 390×844 and Soresu Defender at 1280×800 passed creation, purchases, finalization, manual save and reload on the hosted game. Healer exercised the restored Physician → Grit connection. All three reported no overflow or application errors.

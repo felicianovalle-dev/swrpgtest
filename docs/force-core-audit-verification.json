@@ -395,7 +395,54 @@
     "Existing saved purchases and ratings are not retrospectively recalculated."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "70150b4faab7a0dc97f60df361e9092a215ad0b1"
+    "status": "passed",
+    "featureCommit": "9de2333c073fb9284fbcd2c9af76c24b84ab59b1",
+    "deployment": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38645826759",
+    "distribution": {
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=9de2333",
+      "bytes": 3685966,
+      "gitBlob": "70150b4faab7a0dc97f60df361e9092a215ad0b1",
+      "sha256": "e38b5f1683b81459621dddd7cba4bdcb4bf48c79fb9b1ec9708ec22dd455babe",
+      "matchesTestedBuild": true
+    },
+    "flows": [
+      {
+        "spec": "Healer",
+        "career": "Consular",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "he00",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": true
+      },
+      {
+        "spec": "Niman Disciple",
+        "career": "Consular",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "n02",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      },
+      {
+        "spec": "Soresu Defender",
+        "career": "Guardian",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "originalNode": "so00",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      }
+    ],
+    "errors": []
   }
 }
