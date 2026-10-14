@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.5-core-tree-audit` / package `1.9.11`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
+Build: `96.6-force-core-audit` / package `1.9.12`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -19,11 +19,11 @@ Before the campaign-beginnings update, the saved game had the 18 careers from Ed
 
 Placements count shared specializations under each career; distinct trees count each shared specialization once. Species profiles count the three Aqualish variants separately: the update adds six species and eight profiles.
 
-The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. Six of those 54 older career layouts have now been reverified against the supplied AoR core book; 48 still await a fresh source audit. Layout coverage does not establish complete mechanical automation.
+The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. Twelve of those 54 older career layouts have now been reverified against the supplied AoR and F&D core books; 42 still await a fresh source audit. Layout coverage does not establish complete mechanical automation.
 
 ## Career and tree coverage
 
-“Existing full” is the saved engine label. “Imported” identifies replacement layouts. “Reviewed” identifies six older layouts checked against the AoR core book while keeping their original IDs. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
+“Existing full” is the saved engine label. “Imported” identifies replacement layouts. “Reviewed” identifies twelve older layouts checked against the AoR or F&D core books while keeping their original IDs. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
 
 | Career | Specializations and layout status |
 | --- | --- |
@@ -39,8 +39,8 @@ The 25 Clone Wars and universal layouts contain 500 nodes checked against the su
 | Soldier | Commando — Imported; Medic — Imported; Sharpshooter — Imported; Heavy — Existing full; Trailblazer — Imported; Vanguard — Imported |
 | Engineer | Mechanic — Imported; Saboteur — Imported; Scientist — Imported; Droid Specialist — Imported; Sapper — Imported; Shipwright — Imported |
 | Spy | Infiltrator — Imported; Scout — Imported; Slicer — Existing full; Courier — Imported; Interrogator — Imported; Sleeper Agent — Imported |
-| Consular | Healer — Existing full; Niman Disciple — Existing full; Sage — Existing full; Arbiter — Imported; Ascetic — Imported; Teacher — Imported |
-| Guardian | Peacekeeper — Existing full; Protector — Existing full; Soresu Defender — Existing full; Armorer — Existing full; Warden — Imported; Warleader — Imported |
+| Consular | Healer — Reviewed; Niman Disciple — Reviewed; Sage — Reviewed; Arbiter — Imported; Ascetic — Imported; Teacher — Imported |
+| Guardian | Peacekeeper — Reviewed; Protector — Reviewed; Soresu Defender — Reviewed; Armorer — Existing full; Warden — Imported; Warleader — Imported |
 | Mystic | Advisor — Existing full; Makashi Duelist — Existing full; Seer — Existing full; Alchemist — Imported; Magus — Imported; Prophet — Imported |
 | Seeker | Ataru Striker — Existing full; Hunter — Existing full; Pathfinder — Existing full; Executioner — Imported; Hermit — Imported; Navigator — Imported |
 | Sentinel | Artisan — Existing full; Shadow — Existing full; Shien Expert — Existing full; Investigator — Imported; Racer — Imported; Sentry — Imported |
@@ -66,6 +66,25 @@ The book diagrams govern the corrected connections; the supplied compilation was
 Improved Full Throttle is active in Driver and Pilot, and Improved Dead to Rights is active in Pilot. The glossary identifies Fire Control as a maneuver even though its diagram describes an action. Form On Me uses the glossary’s spelling without the old exclamation mark; its ID `sql32` and ability stay the same. Overwhelm Defenses follows an unsuccessful mounted-weapon attack and affects the targeted defense zone for the rest of the encounter. Coordinated Assault follows official errata: its range increases with additional ranks.
 
 `talentRules101` scopes source references, activation/ranked labels and resolution notes to these six trees. Together with earlier rule sets, the catalog represents 331 distinct talent names. Manual actions are disclosed on the cards; this audit does not add complete vehicle-scale, command, item-modification or True Aim action workflows. See [core-tree-audit-verification.md](core-tree-audit-verification.md).
+
+## Older Force core audit: Consular and Guardian
+
+Healer, Niman Disciple, Sage, Peacekeeper, Protector and Soresu Defender now have reviewed source layouts. All 120 original IDs, names and XP tiers remain. Four missing connections were restored and seventeen unsupported connections removed. Eleven labels were corrected, including the Force designation on Reflect, the active Improved Parry/Improved Reflect glossary entries and passive Knowledgeable Healing.
+
+| Tree | F&D Core printed page | Source PDF page | FND collection PDF page | Added connections | Removed connections |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Healer | 69 | 72 | 4 | 1 | 1 |
+| Niman Disciple | 70 | 73 | 5 | 0 | 4 |
+| Sage | 71 | 74 | 6 | 1 | 3 |
+| Peacekeeper | 75 | 78 | 10 | 2 | 3 |
+| Protector | 76 | 79 | 11 | 0 | 2 |
+| Soresu Defender | 77 | 80 | 12 | 0 | 4 |
+
+The [official F&D errata v1.0](https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/fad_errata_v10.pdf) makes Heightened Awareness unranked. Protector follows that correction; existing duplicate purchases remain saved and new duplicates do not charge XP. Force Assault remains passive as the glossary specifies; it requires an already-purchased Move power. Strategic Form follows the glossary's Success-based targets and following-round expiry rather than the shorter diagram text.
+
+`talentRules102` contains 57 source rules, bringing the union of scoped/shared rules to 350 distinct names. Source summaries and timing are scoped by tree. Complex Force and allied actions retain visible manual-resolution notes. Force-talent cards explain that Force Rating 1 is needed to use their benefits, while purchase paths remain open. Force Rating talents cannot grant initial sensitivity; saved inactive ranks activate once when a granting universal or Witchcraft provides the initial rating. Second Wind now enforces its once-per-encounter limit using the existing saved marker; the sixth and later daily stimpacks heal nothing even with Stimpack Specialization.
+
+The [48-layout tracker](older-layouts-audit.md) records the remaining 42 trees and source groups. See [force-core-audit-verification.md](force-core-audit-verification.md) for verification and limits.
 
 ## Age of Rebellion completion
 
@@ -271,4 +290,4 @@ Older finalized saves keep their original quests, purchase benefits, and economy
 
 ## Remaining content work
 
-Exact replacements for the 36 simplified layouts, a full audit of older species/full trees, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
+Fresh source reviews for the remaining 42 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.

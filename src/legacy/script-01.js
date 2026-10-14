@@ -1971,7 +1971,7 @@ function buyViewedTalent(id){
   if(charge(n.cost,`${spec}: ${n.name}`)){
     set.add(id);
     window.Talents98?.commitChoice(spec,id,choice);
-    if(n.name==='Force Rating'){S.forceRating++;bLog(`Force Rating increased to ${S.forceRating}.`)}
+    if(n.name==='Force Rating'&&S.forceRating>0){S.forceRating++;bLog(`Force Rating increased to ${S.forceRating}.`)}
     renderAll()
   }
 }
@@ -3287,7 +3287,7 @@ function renderEquipment(){
 function useStimpack(){
   let C=S.combat,T=C?.turn;if(!C||!T||S.stimpacks<=0)return;let id=T.actorId,name=actorById(id)?.name||id;
   if(!spendManeuver(1,'Use Stimpack'))return;
-  let heal=Math.max(0,5-S.stimUses)+(id==='pc'?talentRank('Stimpack Specialization'):0);S.stimpacks--;S.stimUses++;
+  let heal=S.stimUses<5?Math.max(0,5-S.stimUses)+(id==='pc'?talentRank('Stimpack Specialization'):0):0;S.stimpacks--;S.stimUses++;
   let before=actorState(id).wounds;actorHealWounds(id,heal);cLog(`${name} uses a stimpack and heals ${before-actorState(id).wounds} wounds (${heal} maximum this use).`);renderCombat();renderRecovery()
 }
 
@@ -3295,6 +3295,7 @@ function useStimpack(){
 function careerMeta(){return CAREERS[S.career]}
 function careerPickCap(){return careerMeta().careerPicks||4}
 function isForceCareer(){return !!careerMeta().forceStart}
+function gainInitialForceRating(){if(S.forceRating<1)S.forceRating=1+talentRank('Force Rating')}
 function formTechniqueCharacteristic(){
   if(hasTalent('Niman Technique'))return 'Willpower';
   if(hasTalent('Soresu Technique'))return 'Intellect';
@@ -3623,7 +3624,7 @@ const TALENT_BLURBS={
 'Mastery':'A high-tier specialization benefit. The exact effect depends on the completed source tree.'
 };
 function talentBlurb(name,base){
-  return TALENT_BLURBS[name]||base||'This talent is part of the specialization tree. Its complete effect is still being wired into the game.';
+  return window.Talents98?.ruleFor(name)?.summary||TALENT_BLURBS[name]||base||'This talent is part of the specialization tree. Its complete effect is still being wired into the game.';
 }
 function talentEngineStatus(name){
   const current=window.Talents98?.status(name);if(current)return current;
@@ -3741,7 +3742,7 @@ function undoSkill(sk){if(S.finalized){bLog('Creation skill purchases cannot be 
 function buyChar(ch){if(S.finalized){bLog('Direct characteristic purchases are locked after creation.');return}let v=S.chars[ch];if(v>=5)return;let c=(v+1)*10;if(charge(c,`${ch} ${v+1}`)){S.chars[ch]++;(S.charSpend[ch]??=[]).push(c);renderAll()}}
 function undoChar(ch){if(S.finalized)return;let a=S.charSpend[ch]||[];if(!a.length)return;let c=a.pop();S.chars[ch]--;refund(c,`${ch} increase`);renderAll()}
 function eligibleTalent(n){return n.row===0||n.links.some(id=>S.talents.has(id))}
-function buyTalent(id){let n=tree().find(x=>x.id===id);if(!n||S.talents.has(id)||!eligibleTalent(n))return;if(n.name==='Dedication'){let ch=prompt('Dedication: choose Brawn, Agility, Intellect, Cunning, Willpower, or Presence');if(!S.chars[ch]||S.chars[ch]>=6){bLog('Dedication cancelled or invalid characteristic.');return}if(!charge(n.cost,'Dedication'))return;S.talents.add(id);S.chars[ch]++;S.dedication[id]=ch;bLog(`Dedication increased ${ch} to ${S.chars[ch]}.`);renderAll();return}if(charge(n.cost,n.name)){S.talents.add(id);if(n.name==='Force Rating'){S.forceRating++;bLog(`Force Rating increased to ${S.forceRating}.`)}renderAll()}}
+function buyTalent(id){let n=tree().find(x=>x.id===id);if(!n||S.talents.has(id)||!eligibleTalent(n))return;if(n.name==='Dedication'){let ch=prompt('Dedication: choose Brawn, Agility, Intellect, Cunning, Willpower, or Presence');if(!S.chars[ch]||S.chars[ch]>=6){bLog('Dedication cancelled or invalid characteristic.');return}if(!charge(n.cost,'Dedication'))return;S.talents.add(id);S.chars[ch]++;S.dedication[id]=ch;bLog(`Dedication increased ${ch} to ${S.chars[ch]}.`);renderAll();return}if(charge(n.cost,n.name)){S.talents.add(id);if(n.name==='Force Rating'&&S.forceRating>0){S.forceRating++;bLog(`Force Rating increased to ${S.forceRating}.`)}renderAll()}}
 function forceSet(power){return S.forceOwned[power]}
 function forceTreeData(){return FORCE_TREES[S.forceTab]}
 function forceEligible(n){let d=forceTreeData(),set=forceSet(S.forceTab);if(!set.has(d.basic.id))return false;return n.row===0||n.links.some(id=>set.has(id))}
@@ -3756,7 +3757,7 @@ function buyUniversalSpec(){
   if(!charge(cost,spec))return;
   S.universalSpecs.push(spec);S.universalView=spec;
   if(!S.universalTalents[spec])S.universalTalents[spec]=new Set();
-  if(S.forceRating<1&&(!window.CharacterCatalog97||CharacterCatalog97.data.universals[spec]?.grantsForce)){S.forceRating=1;bLog(`${spec} grants Force Rating 1.`)}
+  if(S.forceRating<1&&(!window.CharacterCatalog97||CharacterCatalog97.data.universals[spec]?.grantsForce)){gainInitialForceRating();bLog(`${spec} grants Force Rating 1, activating previously purchased Force Rating talents.`)}
   if(CharacterCatalog97.data.universals[spec]?.knowledgeChoice){S.universalKnowledge97=S.universalKnowledge97||{};S.universalKnowledge97[spec]=$('universalKnowledge97')?.value||'Knowledge (Education)'}
   renderAll()
 }
@@ -3776,8 +3777,8 @@ function buyUniversalTalent(spec,id){
   }
   if(!charge(n.cost,`${spec}: ${n.name}`))return;
   set.add(id);
-  if(n.name==='Force Rating'){S.forceRating++;bLog(`Force Rating increased to ${S.forceRating}.`)}
-  if(n.name==='Witchcraft'&&S.forceRating<1){S.forceRating=1;bLog('Witchcraft grants Force Rating 1.')}
+  if(n.name==='Force Rating'&&S.forceRating>0){S.forceRating++;bLog(`Force Rating increased to ${S.forceRating}.`)}
+  if(n.name==='Witchcraft'&&S.forceRating<1){gainInitialForceRating();bLog('Witchcraft grants Force Rating 1, activating previously purchased Force Rating talents.')}
   renderAll()
 }
 function actors(){ensurePhase13State();return[{id:'pc',name:S.name,c:S.chars,sk:S.skills},...S.crew.map(effectiveCrew).filter(Boolean)]}
@@ -5600,7 +5601,8 @@ function endTurn(){
 function commitSense(){if(S.forceCommitted.sense){S.forceCommitted.sense=false;cLog('Sense die uncommitted.')}else if(forceAvailable()>0&&S.forceRating>0&&S.forceOwned.Sense.has('sn-def')){S.forceCommitted.sense=true;cLog('One Force die committed to Sense.')}renderCombat()}
 function secondWind(){
   if(!startTurnActor())return;
-  let r=talentRank('Second Wind');if(!r||S.combat.turn?.actorId!=='pc'||S.combat.secondWindRound===S.combat.round)return;
+  // Keep the saved round marker as the encounter-use flag, including older saves.
+  let r=talentRank('Second Wind');if(!r||S.combat.turn?.actorId!=='pc'||S.combat.secondWindRound!=null)return;
   S.strain=Math.max(0,S.strain-r);S.combat.secondWindRound=S.combat.round;cLog(`Second Wind recovers ${r} strain.`);renderCombat()
 }
 
@@ -6986,7 +6988,7 @@ async function runSableReachSmoke(){
 
     // Purchasing a specialization Force Rating node must change the actual Force Rating.
     let buySnapshot={owned:[...S.ownedSpecs],sets:Object.fromEntries(Object.entries(S.specTalents).map(([k,v])=>[k,new Set(v)])),view:S.talentView,fr:S.forceRating,xp:S.earnedXp};
-    if(!S.ownedSpecs.includes('Armorer'))S.ownedSpecs.push('Armorer');S.specTalents.Armorer=new Set(['ar30']);S.talentView='Armorer';S.earnedXp=Math.max(S.earnedXp,100);
+    if(!S.ownedSpecs.includes('Armorer'))S.ownedSpecs.push('Armorer');S.specTalents.Armorer=new Set(['ar30']);S.talentView='Armorer';S.earnedXp=Math.max(S.earnedXp,100);S.forceRating=Math.max(1,S.forceRating);
     let frBefore=S.forceRating;buyViewedTalent('ar40');
     test('specialization Force Rating purchase is functional',()=>S.specTalents.Armorer.has('ar40')&&S.forceRating===frBefore+1);
     S.ownedSpecs=[...buySnapshot.owned];S.specTalents=Object.fromEntries(Object.entries(buySnapshot.sets).map(([k,v])=>[k,new Set(v)]));S.talentView=buySnapshot.view;S.forceRating=buySnapshot.fr;S.earnedXp=buySnapshot.xp;ensurePhase9State();

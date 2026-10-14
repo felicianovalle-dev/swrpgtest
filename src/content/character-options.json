@@ -11174,6 +11174,980 @@
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "core101"
+    },
+    "Healer": {
+      "names": [
+        "Surgeon",
+        "Healing Trance",
+        "Rapid Recovery",
+        "Physician",
+        "Physician",
+        "Physician",
+        "Grit",
+        "Healing Trance",
+        "Healing Trance",
+        "Grit",
+        "Knowledgeable Healing",
+        "Rapid Recovery",
+        "Surgeon",
+        "Improved Healing Trance",
+        "Calming Aura",
+        "Toughened",
+        "Dedication",
+        "Natural Doctor",
+        "Force Rating",
+        "Improved Calming Aura"
+      ],
+      "nodeIds": [
+        "he00",
+        "he01",
+        "he02",
+        "he03",
+        "he10",
+        "he11",
+        "he12",
+        "he13",
+        "he20",
+        "he21",
+        "he22",
+        "he23",
+        "he30",
+        "he31",
+        "he32",
+        "he33",
+        "he40",
+        "he41",
+        "he42",
+        "he43"
+      ],
+      "types": [
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Force Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Passive",
+        "Force Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Force and Destiny Core \u00b7 p.69 \u00b7 supplied FND tree collection, PDF p.4",
+      "collection": "fnd",
+      "page": 4,
+      "bookPdfPage": 72,
+      "bookFile": "fnd-core",
+      "bookPage": 69,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndCore102"
+    },
+    "Niman Disciple": {
+      "names": [
+        "Parry",
+        "Nobody's Fool",
+        "Reflect",
+        "Grit",
+        "Defensive Training",
+        "Niman Technique",
+        "Toughened",
+        "Parry",
+        "Parry",
+        "Sense Emotions",
+        "Reflect",
+        "Defensive Training",
+        "Sum Djem",
+        "Reflect",
+        "Draw Closer",
+        "Center of Being",
+        "Dedication",
+        "Force Assault",
+        "Force Rating",
+        "Improved Center of Being"
+      ],
+      "nodeIds": [
+        "n00",
+        "n01",
+        "n02",
+        "n03",
+        "n10",
+        "n11",
+        "n12",
+        "n13",
+        "n20",
+        "n21",
+        "n22",
+        "n23",
+        "n30",
+        "n31",
+        "n32",
+        "n33",
+        "n40",
+        "n41",
+        "n42",
+        "n43"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Force Passive",
+        "Force Active",
+        "Passive",
+        "Force Passive",
+        "Force Active",
+        "Force Active",
+        "Force Active",
+        "Passive",
+        "Force Passive",
+        "Force Passive",
+        "Force Passive"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Force and Destiny Core \u00b7 p.70 \u00b7 supplied FND tree collection, PDF p.5",
+      "collection": "fnd",
+      "page": 5,
+      "bookPdfPage": 73,
+      "bookFile": "fnd-core",
+      "bookPage": 70,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndCore102"
+    },
+    "Sage": {
+      "names": [
+        "Grit",
+        "Kill with Kindness",
+        "Researcher",
+        "Grit",
+        "Smooth Talker",
+        "Researcher",
+        "Confidence",
+        "Knowledge Specialization",
+        "Valuable Facts",
+        "Smooth Talker",
+        "Knowledge Specialization",
+        "One with the Universe",
+        "Force Rating",
+        "Grit",
+        "Preemptive Avoidance",
+        "Knowledge Specialization",
+        "Balance",
+        "The Force Is My Ally",
+        "Natural Negotiator",
+        "Force Rating"
+      ],
+      "nodeIds": [
+        "sg00",
+        "sg01",
+        "sg02",
+        "sg03",
+        "sg10",
+        "sg11",
+        "sg12",
+        "sg13",
+        "sg20",
+        "sg21",
+        "sg22",
+        "sg23",
+        "sg30",
+        "sg31",
+        "sg32",
+        "sg33",
+        "sg40",
+        "sg41",
+        "sg42",
+        "sg43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Force Active",
+        "Force Passive",
+        "Passive",
+        "Force Active",
+        "Active",
+        "Force Active",
+        "Force Active",
+        "Active",
+        "Force Passive"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Force and Destiny Core \u00b7 p.71 \u00b7 supplied FND tree collection, PDF p.6",
+      "collection": "fnd",
+      "page": 6,
+      "bookPdfPage": 74,
+      "bookFile": "fnd-core",
+      "bookPage": 71,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndCore102"
+    },
+    "Peacekeeper": {
+      "names": [
+        "Command",
+        "Confidence",
+        "Second Wind",
+        "Commanding Presence",
+        "Commanding Presence",
+        "Toughened",
+        "Second Wind",
+        "Confidence",
+        "Toughened",
+        "Enhanced Leader",
+        "Command",
+        "Field Commander",
+        "Steely Nerves",
+        "Second Wind",
+        "Toughened",
+        "Improved Field Commander",
+        "Unity Assault",
+        "Dedication",
+        "Force Rating",
+        "Natural Leader"
+      ],
+      "nodeIds": [
+        "pk00",
+        "pk01",
+        "pk02",
+        "pk03",
+        "pk10",
+        "pk11",
+        "pk12",
+        "pk13",
+        "pk20",
+        "pk21",
+        "pk22",
+        "pk23",
+        "pk30",
+        "pk31",
+        "pk32",
+        "pk33",
+        "pk40",
+        "pk41",
+        "pk42",
+        "pk43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Force Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Force and Destiny Core \u00b7 p.75 \u00b7 supplied FND tree collection, PDF p.10",
+      "collection": "fnd",
+      "page": 10,
+      "bookPdfPage": 78,
+      "bookFile": "fnd-core",
+      "bookPage": 75,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndCore102"
+    },
+    "Protector": {
+      "names": [
+        "Toughened",
+        "Body Guard",
+        "Grit",
+        "Toughened",
+        "Parry",
+        "Physician",
+        "Stimpack Specialization",
+        "Force Protection",
+        "Reflect",
+        "Stimpack Specialization",
+        "Heightened Awareness",
+        "Center of Being",
+        "Circle of Shelter",
+        "Force Protection",
+        "Grit",
+        "Body Guard",
+        "Center of Being",
+        "Force Rating",
+        "Dedication",
+        "Improved Body Guard"
+      ],
+      "nodeIds": [
+        "pr00",
+        "pr01",
+        "pr02",
+        "pr03",
+        "pr10",
+        "pr11",
+        "pr12",
+        "pr13",
+        "pr20",
+        "pr21",
+        "pr22",
+        "pr23",
+        "pr30",
+        "pr31",
+        "pr32",
+        "pr33",
+        "pr40",
+        "pr41",
+        "pr42",
+        "pr43"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Passive",
+        "Force Active",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Force Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Force and Destiny Core \u00b7 p.76 \u00b7 supplied FND tree collection, PDF p.11",
+      "collection": "fnd",
+      "page": 11,
+      "bookPdfPage": 79,
+      "bookFile": "fnd-core",
+      "bookPage": 76,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndCore102"
+    },
+    "Soresu Defender": {
+      "names": [
+        "Parry",
+        "Parry",
+        "Toughened",
+        "Defensive Stance",
+        "Soresu Technique",
+        "Reflect",
+        "Grit",
+        "Grit",
+        "Confidence",
+        "Improved Parry",
+        "Defensive Circle",
+        "Parry",
+        "Parry",
+        "Reflect",
+        "Reflect",
+        "Defensive Stance",
+        "Supreme Parry",
+        "Dedication",
+        "Improved Reflect",
+        "Strategic Form"
+      ],
+      "nodeIds": [
+        "so00",
+        "so01",
+        "so02",
+        "so03",
+        "so10",
+        "so11",
+        "so12",
+        "so13",
+        "so20",
+        "so21",
+        "so22",
+        "so23",
+        "so30",
+        "so31",
+        "so32",
+        "so33",
+        "so40",
+        "so41",
+        "so42",
+        "so43"
+      ],
+      "types": [
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Force Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Active",
+        "Active",
+        "Force Active",
+        "Force Active",
+        "Active",
+        "Force Passive",
+        "Passive",
+        "Force Active",
+        "Force Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Force and Destiny Core \u00b7 p.77 \u00b7 supplied FND tree collection, PDF p.12",
+      "collection": "fnd",
+      "page": 12,
+      "bookPdfPage": 80,
+      "bookFile": "fnd-core",
+      "bookPage": 77,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndCore102"
     }
   },
   "universals": {
@@ -23440,8 +24414,9 @@
     "Heightened Awareness": [
       {
         "book": "Force and Destiny Core",
-        "ranked": true,
-        "source": "Force and Destiny Core \u00b7 p.145"
+        "ranked": false,
+        "source": "Force and Destiny Core \u00b7 p.145",
+        "errata": "Force and Destiny errata v1.0 \u00b7 p.1: Heightened Awareness is unranked (core pp.137 and 145)."
       }
     ]
   },
@@ -25614,6 +26589,668 @@
       "summary": "Once per round, use a maneuver to gain normal aiming benefits and upgrade your next combat check once per rank.",
       "resolution": "manual",
       "resolutionNote": "Resolve the maneuver\u2019s aiming benefits and per-rank upgrades manually."
+    }
+  },
+  "talentRules102": {
+    "Balance": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": true,
+      "page": 139,
+      "pdfPage": 142,
+      "source": "Force and Destiny Core \u00b7 p.139",
+      "summary": "After an encounter, roll available Force dice up to your Force rating and recover extra strain equal to generated Force points.",
+      "resolutionNote": "After combat, offers recovery from your alignment\u2019s Force points. Opposite-alignment points and committed dice require manual resolution.",
+      "resolution": "manual"
+    },
+    "Body Guard": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Once per round, use a maneuver and suffer strain up to your ranks to upgrade attacks against one engaged ally until your next turn.",
+      "resolutionNote": "Resolve the guarding maneuver, strain and temporary protection manually.",
+      "resolution": "manual"
+    },
+    "Improved Body Guard": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Once per session, take a hit that would otherwise strike an ally protected by your Body Guard maneuver.",
+      "resolutionNote": "Resolve the protected ally\u2019s hit transfer and session limit manually.",
+      "resolution": "manual"
+    },
+    "Calming Aura": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "When an opponent targets you with a Force power, reduce the Force points generated by one, to a minimum of zero.",
+      "resolutionNote": "Resolve the opponent\u2019s Force-point reduction manually.",
+      "resolution": "manual"
+    },
+    "Improved Center of Being": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Suffer 1 strain to use Center of Being as an incidental instead of a maneuver; its normal limits still apply.",
+      "resolutionNote": "Resolve the incidental conversion, strain and once-per-round limit manually.",
+      "resolution": "manual"
+    },
+    "Circle of Shelter": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Use your Parry or Reflect incidental against a qualifying hit on an engaged ally, paying its normal strain cost.",
+      "resolutionNote": "Resolve Parry or Reflect on the engaged ally\u2019s hit manually.",
+      "resolution": "manual"
+    },
+    "Improved Calming Aura": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": true,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Use a maneuver and suffer 2 strain to extend Calming Aura to short-range allies up to Willpower until your next turn.",
+      "resolutionNote": "Resolve the maneuver, strain, affected allies and expiry manually.",
+      "resolution": "manual"
+    },
+    "Center of Being": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": true,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Once per round while wielding a lightsaber, use a maneuver to raise incoming melee weapons\u2019 critical ratings by one per rank until your next turn.",
+      "resolutionNote": "Resolve the lightsaber maneuver and incoming melee critical ratings manually.",
+      "resolution": "manual"
+    },
+    "Command": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Add one Boost per rank to Leadership checks. Affected targets gain a Boost on Discipline checks for twenty-four hours.",
+      "resolutionNote": "Adds Boost to PC Leadership checks. Resolve inspired allies\u2019 Discipline benefit manually."
+    },
+    "Commanding Presence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Remove one Setback per rank from Leadership and Cool checks.",
+      "resolutionNote": "Removes setbacks from PC Leadership and Cool checks."
+    },
+    "Confidence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Reduce the difficulty of Discipline fear checks by one per rank; no check is needed if difficulty reaches zero.",
+      "resolutionNote": "Reduces difficulty on PC Discipline checks explicitly marked as fear checks."
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Increase one chosen characteristic by 1, to a maximum of 6.",
+      "resolutionNote": "Applies your chosen characteristic once when purchased and retains that choice on reload."
+    },
+    "Defensive Training": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Your wielded Lightsaber, Melee or Brawl weapon gains Defensive equal to your ranks, replacing its existing Defensive ranks.",
+      "resolutionNote": "Resolve the wielded weapon\u2019s replacement Defensive rating manually.",
+      "resolution": "manual"
+    },
+    "Defensive Stance": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Once per round, use a maneuver and suffer strain up to your ranks to upgrade incoming melee attacks until your next turn.",
+      "resolutionNote": "The maneuver charges strain. Resolve incoming melee difficulty upgrades manually.",
+      "resolution": "manual"
+    },
+    "Defensive Circle": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": true,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "While wielding a lightsaber, use a Hard Lightsaber (Intellect) action. Success gives you and one short-range ally per Advantage defense 1, plus 1 per pair of Triumphs, until your next turn.",
+      "resolutionNote": "Resolve the Hard Lightsaber action, allied defense and expiry manually.",
+      "resolution": "manual"
+    },
+    "Draw Closer": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": true,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Use a Lightsaber (Willpower) action against one silhouette 1 or smaller target within medium range, adding Force dice up to your rating. Spend Force points to draw it closer or add Success; the attack misses unless it reaches engaged range.",
+      "resolutionNote": "Resolve the special attack, Force points, target movement and engaged-range condition manually.",
+      "resolution": "manual"
+    },
+    "Enhanced Leader": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Add Force dice up to your rating to Leadership checks; spend generated Force points for Success or Advantage.",
+      "resolutionNote": "Offers Force dice and Success/Advantage conversion on PC Leadership checks."
+    },
+    "Field Commander": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "An Average Leadership action lets short-range allies up to Presence suffer 1 strain each for an immediate maneuver, within the usual maneuver limits.",
+      "resolutionNote": "Resolve the Leadership action, immediate ally maneuvers and their limits manually.",
+      "resolution": "manual"
+    },
+    "Improved Field Commander": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Field Commander can affect twice Presence in allies. Spend Triumph to let one ally take an action instead, still suffering 1 strain.",
+      "resolutionNote": "Resolve the extra allies and Triumph-for-action option manually.",
+      "resolution": "manual"
+    },
+    "Force Assault": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "After a missed Lightsaber (Willpower) check, spend Triumph or 3 Advantage to use your purchased Move power as a maneuver this turn. The normal two-maneuver limit still applies.",
+      "resolutionNote": "Resolve the missed-attack trigger, symbol spending and Move-as-maneuver manually. Purchasing this talent does not grant Move.",
+      "resolution": "manual"
+    },
+    "Force Protection": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": true,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Use a maneuver, suffer 1 strain and commit Force dice up to your rating and ranks to gain that much soak. Suffer 1 strain at the start of each turn you keep them committed.",
+      "resolutionNote": "Resolve die commitment, added soak and ongoing strain manually.",
+      "resolution": "manual"
+    },
+    "Force Rating": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": true,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Once you are Force-sensitive, increase your Force rating by 1 per rank. Purchasing this talent does not create initial Force sensitivity.",
+      "resolutionNote": "Increases your rating when already Force-sensitive. Earlier inactive ranks activate once when a granting universal specialization or Witchcraft provides your initial rating."
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 144,
+      "pdfPage": 147,
+      "source": "Force and Destiny Core \u00b7 p.144",
+      "summary": "Increase your strain threshold by 1 per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Healing Trance": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": true,
+      "force": true,
+      "page": 144,
+      "pdfPage": 147,
+      "source": "Force and Destiny Core \u00b7 p.144",
+      "summary": "Use an action to commit one Force die. Each full encounter it remains committed heals one wound per rank; outside encounters, the GM may use twelve-hour intervals.",
+      "resolutionNote": "Resolve Force commitment, full-encounter healing and release manually.",
+      "resolution": "manual"
+    },
+    "Improved Healing Trance": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 144,
+      "pdfPage": 147,
+      "source": "Force and Destiny Core \u00b7 p.144",
+      "summary": "When Healing Trance heals wounds, attempt a Resilience check against one Critical Injury\u2019s severity to recover from it.",
+      "resolutionNote": "Resolve the Resilience check and chosen Critical Injury manually.",
+      "resolution": "manual"
+    },
+    "Heightened Awareness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Nearby allies gain one Boost on Perception and Vigilance; engaged allies gain two. This talent is unranked under official errata.",
+      "resolutionNote": "Resolve allied Perception and Vigilance bonuses manually. Existing duplicate purchases remain saved; no new duplicate ranks can be bought.",
+      "resolution": "manual",
+      "errata": "Force and Destiny errata v1.0 \u00b7 p.1: Heightened Awareness is unranked (core pp.137 and 145)."
+    },
+    "Kill with Kindness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Remove one Setback per rank from Charm and Leadership checks.",
+      "resolutionNote": "Removes setbacks from PC Charm and Leadership checks."
+    },
+    "Knowledge Specialization": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Choose a Knowledge skill when first acquired. Spend a Triumph on that skill for extra Successes equal to your ranks.",
+      "resolutionNote": "Records your Knowledge skill and offers Triumph conversion on qualifying party checks."
+    },
+    "Knowledgeable Healing": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "After a successful Medicine check to heal an ally, spend a Destiny Point to heal extra wounds equal to your Knowledge (Xenology) ranks.",
+      "resolutionNote": "Offers the Destiny expenditure and extra wounds after a successful PC Medicine check to heal an ally."
+    },
+    "Natural Doctor": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Medicine check.",
+      "resolutionNote": "Offers one failed Medicine-check reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Natural Leader": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Cool or Leadership check.",
+      "resolutionNote": "Offers one failed Cool or Leadership reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Natural Negotiator": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Cool or Negotiation check.",
+      "resolutionNote": "Offers one failed Cool or Negotiation reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Niman Technique": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "You may use Willpower instead of Brawn for Lightsaber checks.",
+      "resolutionNote": "Uses Willpower for Lightsaber checks. Switching among multiple known techniques requires manual resolution."
+    },
+    "Nobody's Fool": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Upgrade incoming Charm, Coercion and Deception checks once per rank.",
+      "resolutionNote": "Resolve incoming social-check difficulty upgrades manually.",
+      "resolution": "manual"
+    },
+    "One with the Universe": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": true,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "Once per session, meditate and make an Average Astrogation action. Success adds a light Force point to Force power checks next encounter; success with Threat adds a dark point instead.",
+      "resolutionNote": "Resolve meditation, the Astrogation action and next-encounter Force points manually.",
+      "resolution": "manual"
+    },
+    "Parry": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "When hit by Brawl, Melee or Lightsaber while wielding a Melee or Lightsaber weapon, suffer 3 strain to reduce that hit\u2019s damage by 2 plus ranks before soak.",
+      "resolutionNote": "A damage-reduction prompt charges the normal strain cost. Resolve improved counterattacks and exceptional strain discounts manually."
+    },
+    "Improved Parry": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "After Parry reduces a hit, spend that attack\u2019s Despair or 3 Threat to hit the attacker once with your weapon\u2019s base damage plus applicable bonuses, after the original attack resolves. It cannot activate if you are incapacitated.",
+      "resolutionNote": "Resolve the original attack\u2019s symbols and counterattack manually after that attack finishes.",
+      "resolution": "manual"
+    },
+    "Supreme Parry": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "If you made no combat check on your previous turn, Parry costs 1 strain instead of 3.",
+      "resolutionNote": "Resolve the previous-turn requirement and reduced strain cost manually; the damage-reduction prompt uses the normal cost.",
+      "resolution": "manual"
+    },
+    "Physician": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "Successful Medicine checks to treat wounds also heal one strain per rank.",
+      "resolutionNote": "Adds strain healing to successful PC Medicine wound-treatment checks."
+    },
+    "Preemptive Avoidance": {
+      "type": "Force Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": true,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "Immediately after an opponent engages you, spend a Destiny Point to disengage as an out-of-turn incidental.",
+      "resolutionNote": "Resolve the engagement trigger, Destiny cost and disengagement manually.",
+      "resolution": "manual"
+    },
+    "Rapid Recovery": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "After an encounter, recover one additional strain per rank.",
+      "resolutionNote": "Adds strain recovery after an encounter."
+    },
+    "Researcher": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "Remove one Setback per rank from Knowledge checks. Research takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks from PC Knowledge checks. Resolve research time manually."
+    },
+    "Reflect": {
+      "type": "Force Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": true,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "When a qualifying ranged hit lands while wielding a lightsaber, suffer 3 strain to reduce its damage by 2 plus ranks before soak. Use once per hit.",
+      "resolutionNote": "A damage-reduction prompt charges the normal strain cost. Confirm the lightsaber and qualifying-hit requirements; resolve redirected hits manually."
+    },
+    "Improved Reflect": {
+      "type": "Force Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": true,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "After Reflect reduces a redirectable energy hit, spend that attack\u2019s Despair or 3 Threat to hit one medium-range target for the initial hit\u2019s damage, after the original attack resolves. It cannot activate if you are incapacitated.",
+      "resolutionNote": "Resolve the original attack\u2019s symbols, eligible energy hit and redirected target manually.",
+      "resolution": "manual"
+    },
+    "Second Wind": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 151,
+      "pdfPage": 154,
+      "source": "Force and Destiny Core \u00b7 p.151",
+      "summary": "Once per encounter, use an incidental to recover strain equal to your ranks.",
+      "resolutionNote": "The combat control recovers strain once per encounter; its use remains spent after saving and resuming."
+    },
+    "Sense Emotions": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 151,
+      "pdfPage": 154,
+      "source": "Force and Destiny Core \u00b7 p.151",
+      "summary": "Add one Boost to Charm, Coercion and Deception unless the target is immune to Force powers.",
+      "resolutionNote": "Adds a Boost to PC Charm, Coercion and Deception checks. Resolve the target\u2019s Force immunity manually."
+    },
+    "Smooth Talker": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Choose Charm, Coercion, Deception or Negotiation on first acquisition. Spend Triumph on that skill to gain extra Successes equal to your ranks.",
+      "resolutionNote": "Record the chosen social skill and resolve Triumph conversion manually.",
+      "resolution": "manual"
+    },
+    "Soresu Technique": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "You may use Intellect instead of Brawn for Lightsaber checks.",
+      "resolutionNote": "Uses Intellect for Lightsaber checks. Switching among multiple known techniques requires manual resolution."
+    },
+    "Sum Djem": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "After a successful Lightsaber check, spend Triumph or 2 Advantage to disarm with GM approval; the weapon lands within short range.",
+      "resolutionNote": "Resolve symbol spending, GM approval and the disarmed weapon\u2019s position manually.",
+      "resolution": "manual"
+    },
+    "Steely Nerves": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Spend one Destiny Point to ignore Critical Injury effects on Presence or Willpower checks until the encounter ends; the injuries remain.",
+      "resolutionNote": "Resolve the Destiny cost and temporary Critical Injury suppression manually.",
+      "resolution": "manual"
+    },
+    "Stimpack Specialization": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Stimpacks heal one extra wound per rank. The sixth and later stimpacks that day still heal nothing.",
+      "resolutionNote": "Adds healing to your first five daily stimpack uses; the sixth and later uses heal nothing."
+    },
+    "Strategic Form": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": true,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "While wielding a lightsaber, use a Hard Lightsaber (Intellect) action with Force dice up to your rating. Each Success affects one short-range target, which can attack only you until the following round ends. Spend Force points to extend one target by one round; incapacitation ends the effects.",
+      "resolutionNote": "Resolve the Hard Lightsaber action, affected targets, expiry and Force-point extensions manually.",
+      "resolution": "manual"
+    },
+    "Surgeon": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "Successful Medicine checks to treat wounds heal one additional wound per rank.",
+      "resolutionNote": "Adds wound healing to successful PC Medicine wound-treatment checks."
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "Increase your wound threshold by 2 per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "The Force Is My Ally": {
+      "type": "Force Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": true,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "Once per session, suffer 2 strain to perform a Force power action as a maneuver.",
+      "resolutionNote": "Resolve the strain cost, session limit and action-as-maneuver manually.",
+      "resolution": "manual"
+    },
+    "Unity Assault": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": true,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "After a missed combat check, spend Triumph or 3 Advantage to use an ally-targeting Force power as a maneuver. You must know that power and remain within the two-maneuver limit.",
+      "resolutionNote": "Resolve the missed-attack trigger, symbol spending and ally-targeting power manually.",
+      "resolution": "manual"
+    },
+    "Valuable Facts": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "Once per encounter, make an Average Knowledge action. Success grants one Triumph to a related allied check during the encounter.",
+      "resolutionNote": "Resolve the Knowledge action and one allied check\u2019s added Triumph manually.",
+      "resolution": "manual"
     }
   }
 }

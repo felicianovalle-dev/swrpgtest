@@ -2,6 +2,8 @@
 window.CharacterCatalog97 = (() => {
   'use strict';
   const data = @@CHARACTER_OPTIONS@@;
+  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102};
+  function rulesFor(spec){return ruleSets[data.trees[spec]?.ruleSet];}
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
   for(const rules of [data.talentRules98,data.talentRules100,data.talentRules101])
@@ -10,7 +12,7 @@ window.CharacterCatalog97 = (() => {
     const prefix = (record.idPrefix||'cw97')+'-' + name.toLowerCase().replace(/[^a-z0-9]+/g,'-');
     const ids = record.nodeIds || record.names.map((_,i) => `${prefix}-${i}`);
     const nodes = record.names.map((talent,i) => node(ids[i],talent,Math.floor(i/4),i%4,
-      (Math.floor(i/4)+1)*5, TALENT_BLURBS[talent] ||
+      (Math.floor(i/4)+1)*5, rulesFor(name)?.[talent]?.summary || TALENT_BLURBS[talent] ||
       `Resolve this ability using ${record.source}. Its special action requires narrative resolution.`,
       record.types[i], record.edges.filter(edge=>edge.includes(i)).map(edge=>ids[edge[0]===i?edge[1]:edge[0]])));
     if (record.universal) UNIVERSAL_TREES[name] = nodes;
@@ -60,5 +62,5 @@ window.CharacterCatalog97 = (() => {
     refill('careerSelect',Object.keys(CAREERS).map(n=>[n,n]),S.career);
     refill('universalSelect',Object.keys(UNIVERSAL_TREES).map(n=>[n,n]),S.universalView);
   }
-  return {data,requirement,eligible,status,coverage,bonusSkills,installOptions};
+  return {data,rulesFor,requirement,eligible,status,coverage,bonusSkills,installOptions};
 })();

@@ -9,9 +9,8 @@ window.Talents98=(()=>{
   const legacy=Object.fromEntries(replaced.map(spec=>[spec,catalog.data.legacyTrees99?.[spec]?.map(n=>({...n,effect:TALENT_BLURBS[n.name]||'Earlier purchased game option.'}))||genericTree(spec)]));
   const sameName=(a,b)=>a.replace(/[\u2018\u2019]/g,"'")===b.replace(/[\u2018\u2019]/g,"'");
   const legacyNodes=(spec,set)=> (legacy[spec]||[]).filter(n=>set?.has(n.id));
-  const ruleSets={aor100:catalog.data.talentRules100,core101:catalog.data.talentRules101};
   function ruleFor(name,spec=S.talentView){
-    const scoped=ruleSets[catalog.data.trees[spec]?.ruleSet];
+    const scoped=catalog.rulesFor(spec);
     if(scoped)return scoped[name];
     const variant=catalog.data.talentRuleVariants99?.[name]?.find(r=>(SPECIALIZATION_TREE_SOURCE[spec]||'').includes(r.book));
     return variant||catalog.data.talentRules98[name];
@@ -117,8 +116,8 @@ window.Talents98=(()=>{
   const manual100=new Set(['A Step Ahead','Ambush','Analyze Data','Bad Press','Blackmail','Bought Info','Combat Programming','Construction Specialist','Contingency Plan','Creative Design','Creative Killer','Cunning Persona','Cunning Snare','Cutting Question','Debilitating Shot','Design Flaw','Desperate Repairs','Discredit','Dockyard Expertise','Dynamic Fire','Encoded Communique','Exhaust Port','Exhaustive Questioning','Good Cop','Greased Palms','Improved Body Guard','Improved Hidden Storage','Improved In the Know','Improved Indistinguishable','Improved Know Their Weakness','Improved Plausible Deniability','Improved Positive Spin','Improved Researcher','Improved Resist Questioning','Improved Time to Go','Improvised Defenses','Improvised Detonation','Improvised Position','In the Know','Incite Distraction','Incite Rebellion','Informant','Inside Knowledge','Inside Person','Interjection',"It's Not That Bad",'Know Their Weakness','Know-It-All','Lose Them','Machine Mender','Made You Talk','Master Artisan','Master Demolitionist','Master Grenadier','Moving Target','Positive Spin','Push the Specs','Quick Fix','Repair Patch Specialization','Reroute Processors','Resist Questioning','Seize the Initiative','Selective Detonation','Smart Handling','Supporting Evidence','Supreme Body Guard','Targeted Blow','Technical Aptitude','Thorough Assessment','Time to Go','Weak Foundation']);
   function status(name){return ruleFor(name)?.resolutionNote||statuses[name]||(manual.has(name)||manual100.has(name)?'Resolve this ability manually using the listed source. Its costs, timing, and limits still apply.':null);}
   function knownUnranked(name){
-    // The core books disagree on Heightened Awareness's ranked label. Scout
-    // follows EotE; Protector must keep the ranked F&D version available.
+    // Book-specific labels include official errata. Existing purchases are
+    // retained even when an unranked ability can no longer be bought twice.
     return ruleFor(name)?.ranked===false&&hasTalent(name);
   }
   function validateSnapshot(state){
@@ -154,7 +153,7 @@ window.Talents98=(()=>{
       const card=parent.children[i],n=tree[i];if(!card)continue;
       card.classList.add('source-tal98');
       card.querySelector('.talent-path98')?.remove();const p=document.createElement('p');p.className='tiny talent-path98';
-      const rule=ruleFor(n.name,spec);p.textContent=`${rule.source} · ${rule.activation} · ${rule.ranked?'Ranked':'Unranked'}. Connected talents: ${n.links.length?n.links.map(id=>{const v=tree.find(x=>x.id===id);return `${v.name} (${v.cost} XP)`;}).join(' · '):'No linked purchases.'}`;card.insertBefore(p,card.querySelector('button'));
+      const rule=ruleFor(n.name,spec);p.textContent=`${rule.source} · ${rule.activation} · ${rule.ranked?'Ranked':'Unranked'}${rule.force?' · Force Rating 1+ required to use':''}. Connected talents: ${n.links.length?n.links.map(id=>{const v=tree.find(x=>x.id===id);return `${v.name} (${v.cost} XP)`;}).join(' · '):'No linked purchases.'}`;card.insertBefore(p,card.querySelector('button'));
     }
     if(!retained.length&&!mapped.length&&!pending.length&&!owned.some(n=>['Well Rounded','Knowledge Specialization'].includes(n.name)))return;
     const box=document.createElement('section');box.id='talentCompatibility98';box.className='creation-note97';

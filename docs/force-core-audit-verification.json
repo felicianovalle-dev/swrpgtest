@@ -1,0 +1,401 @@
+{
+  "build": "96.6-force-core-audit",
+  "package": "1.9.12",
+  "baselineCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3685966,
+    "gitBlob": "70150b4faab7a0dc97f60df361e9092a215ad0b1",
+    "sha256": "e38b5f1683b81459621dddd7cba4bdcb4bf48c79fb9b1ec9708ec22dd455babe"
+  },
+  "reviewedLayouts": 6,
+  "reviewedNodes": 120,
+  "retainedIds": 120,
+  "frozenLayouts": 48,
+  "frozenNodes": 960,
+  "remainingLayouts": 42,
+  "sourceRules": 57,
+  "distinctSourceNames": 350,
+  "sources": {
+    "Healer": {
+      "book": "Force and Destiny Core",
+      "printedPage": 69,
+      "physicalPdfPage": 72,
+      "collectionPdfPage": 4,
+      "glossaryChecked": true
+    },
+    "Niman Disciple": {
+      "book": "Force and Destiny Core",
+      "printedPage": 70,
+      "physicalPdfPage": 73,
+      "collectionPdfPage": 5,
+      "glossaryChecked": true
+    },
+    "Sage": {
+      "book": "Force and Destiny Core",
+      "printedPage": 71,
+      "physicalPdfPage": 74,
+      "collectionPdfPage": 6,
+      "glossaryChecked": true
+    },
+    "Peacekeeper": {
+      "book": "Force and Destiny Core",
+      "printedPage": 75,
+      "physicalPdfPage": 78,
+      "collectionPdfPage": 10,
+      "glossaryChecked": true
+    },
+    "Protector": {
+      "book": "Force and Destiny Core",
+      "printedPage": 76,
+      "physicalPdfPage": 79,
+      "collectionPdfPage": 11,
+      "glossaryChecked": true
+    },
+    "Soresu Defender": {
+      "book": "Force and Destiny Core",
+      "printedPage": 77,
+      "physicalPdfPage": 80,
+      "collectionPdfPage": 12,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Healer": {
+      "addedEdges": [
+        [
+          5,
+          9
+        ]
+      ],
+      "removedEdges": [
+        [
+          13,
+          17
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "he22",
+          "talent": "Knowledgeable Healing",
+          "from": "Active",
+          "to": "Passive"
+        }
+      ]
+    },
+    "Niman Disciple": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "n02",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "n22",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "n31",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        }
+      ]
+    },
+    "Sage": {
+      "addedEdges": [
+        [
+          14,
+          15
+        ]
+      ],
+      "removedEdges": [
+        [
+          4,
+          8
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Peacekeeper": {
+      "addedEdges": [
+        [
+          9,
+          10
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "removedEdges": [
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          10,
+          14
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Protector": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "pr20",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        }
+      ]
+    },
+    "Soresu Defender": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "so11",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "so21",
+          "talent": "Improved Parry",
+          "from": "Passive",
+          "to": "Active"
+        },
+        {
+          "id": "so31",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "so32",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "so40",
+          "talent": "Supreme Parry",
+          "from": "Passive",
+          "to": "Force Passive"
+        },
+        {
+          "id": "so42",
+          "talent": "Improved Reflect",
+          "from": "Passive",
+          "to": "Force Active"
+        }
+      ]
+    }
+  },
+  "compatibility": {
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 42,
+    "originalEarlierCatalogRecords": 79,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false
+  },
+  "suites": {
+    "forceCore": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112,
+    "executions": [
+      {
+        "name": "check_world94",
+        "returncode": 0,
+        "seconds": 33.59
+      },
+      {
+        "name": "check_work96",
+        "returncode": 0,
+        "seconds": 49.57
+      },
+      {
+        "name": "check_save97",
+        "returncode": 0,
+        "seconds": 33.34
+      },
+      {
+        "name": "check_home",
+        "returncode": 0,
+        "seconds": 35.04
+      },
+      {
+        "name": "check_workshop",
+        "returncode": 0,
+        "seconds": 39.63
+      },
+      {
+        "name": "check_save_reliability",
+        "returncode": 0,
+        "seconds": 45.05
+      },
+      {
+        "name": "check_gameplay_audit",
+        "returncode": 0,
+        "seconds": 29.83
+      },
+      {
+        "name": "check_story_combat",
+        "returncode": 0,
+        "seconds": 30.05
+      },
+      {
+        "name": "check_mission_playthrough",
+        "returncode": 0,
+        "seconds": 29.91
+      },
+      {
+        "name": "check_setbacks",
+        "returncode": 0,
+        "seconds": 20.84
+      }
+    ]
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Healer",
+      "career": "Consular",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "he00",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": true
+    },
+    {
+      "spec": "Niman Disciple",
+      "career": "Consular",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "n02",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    },
+    {
+      "spec": "Soresu Defender",
+      "career": "Guardian",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "originalNode": "so00",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not tested.",
+    "Many special Force and allied actions remain manual as stated on their cards.",
+    "Existing saved purchases and ratings are not retrospectively recalculated."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "70150b4faab7a0dc97f60df361e9092a215ad0b1"
+  }
+}
