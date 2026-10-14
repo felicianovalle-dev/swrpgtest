@@ -735,7 +735,59 @@
   "limits": [
     "Chromium touch/phone geometry is not physical iPhone Safari validation",
     "No new automation for manual vehicle, command or item actions",
-    "No new opening-content phase",
-    "Live deployment verification is performed after publication"
-  ]
+    "No new opening-content phase"
+  ],
+  "hostedVerification": {
+    "sourceCommit": "4e8549464b3ba17bab42a055a037fccdea9ef2f6",
+    "distribution": {
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=4e85494",
+      "bytes": 3639955,
+      "gitBlob": "61e11b35561e20a338dd156ca9134a5cf295e876",
+      "matchesTestedDistribution": true
+    },
+    "liveFlows": {
+      "build": "96.5-core-tree-audit",
+      "target": "https://felicianovalle-dev.github.io/swrpgtest/?v=4e85494",
+      "checks": [
+        {
+          "spec": "Driver",
+          "career": "Ace",
+          "width": 390,
+          "height": 844,
+          "creation": true,
+          "originalNode": "drv00",
+          "purchase": true,
+          "saveReload": true,
+          "overflow": false,
+          "restoredConnection": false
+        },
+        {
+          "spec": "Commodore",
+          "career": "Commander",
+          "width": 390,
+          "height": 844,
+          "creation": true,
+          "originalNode": "com00",
+          "purchase": true,
+          "saveReload": true,
+          "overflow": false,
+          "restoredConnection": true
+        },
+        {
+          "spec": "Gunner",
+          "career": "Ace",
+          "width": 1280,
+          "height": 800,
+          "creation": true,
+          "originalNode": "gun00",
+          "purchase": true,
+          "saveReload": true,
+          "overflow": false,
+          "restoredConnection": false
+        }
+      ],
+      "errors": [],
+      "complete": true
+    }
+  }
 }

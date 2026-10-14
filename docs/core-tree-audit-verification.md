@@ -64,4 +64,6 @@ All ten regression targets from `npm test` passed, including 266 smoke checks an
 
 The tested distribution has Git blob `61e11b35561e20a338dd156ca9134a5cf295e876`. Deployment is checked against this exact distribution before the working version is delivered.
 
+The published HTML matched the tested Git blob byte for byte. Fresh Driver and Commodore characters at 390×844 and a Gunner at 1280×800 passed live creation, original-ID purchases, finalization, manual save and reload. Commodore also purchased through the restored Command → Commanding Presence connection. These live flows reported no horizontal overflow or application errors.
+
 Phone geometry uses Chromium at 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. It checks overflow and source-text/button overlap. Physical iPhone Safari, installed-PWA offline behavior and ordinary-character difficulty balance were not newly evaluated.
