@@ -2,7 +2,7 @@
 
 The published `38fc8aa` build contained 48 distinct older career layouts awaiting a fresh source audit. `scripts/fixtures/older-layouts102.json` freezes their 960 original nodes, connections, types and source labels. Heavy and Slicer appear under two careers each but are counted once.
 
-Seven batches now cover the eighteen F&D core layouts, four older F&D supplement layouts, three EotE core layouts, three No Disintegrations layouts and three Fly Casual layouts. Thirty-one of the original 48 are reviewed; 17 remain pending. Existing purchases and XP are retained; source corrections govern new purchases. Source files and private download URLs are excluded from the repository.
+Eight batches now cover the eighteen F&D core layouts, four older F&D supplement layouts, three EotE core layouts, three No Disintegrations layouts, three Fly Casual layouts and three Special Modifications layouts. Thirty-four of the original 48 are reviewed; 14 remain pending. Existing purchases and XP are retained; source corrections govern new purchases. Source files and private download URLs are excluded from the repository.
 
 | Source group | Trees | Original count | Remaining |
 | --- | --- | ---: | ---: |
@@ -14,16 +14,16 @@ Seven batches now cover the eighteen F&D core layouts, four older F&D supplement
 | Edge of the Empire Core | Assassin, Scoundrel, Slicer | 3 | 0 |
 | No Disintegrations | Martial Artist, Operator, Skip Tracer | 3 | 0 |
 | Fly Casual | Charmer, Gambler, Gunslinger | 3 | 0 |
-| Special Modifications | Cyber Tech, Droid Tech, Modder | 3 | 3 |
+| Special Modifications | Cyber Tech, Droid Tech, Modder | 3 | 0 |
 | Dangerous Covenants | Demolitionist, Enforcer, Heavy | 3 | 3 |
 | Enter the Unknown | Archaeologist, Big-Game Hunter | 2 | 2 |
 | Far Horizons | Entrepreneur, Marshal, Performer | 3 | 3 |
 | Lead by Example | Figurehead, Instructor, Strategist | 3 | 3 |
 | Stay on Target | Beast Rider, Hotshot, Rigger | 3 | 3 |
-| **Total** | **Distinct trees** | **48** | **17** |
+| **Total** | **Distinct trees** | **48** | **14** |
 
 These pending sourcebook assignments come from the saved catalog and identify where to audit next; they do not claim that the remaining books have been freshly checked. Heavy's Soldier placement shares the Hired Gun layout; Slicer's Spy placement shares the Technician layout.
 
 Each batch checks the book diagram, any supplied compilation, glossary and applicable official errata; retains node IDs and XP tiers; tests old saves and real purchases; verifies phone layouts; and publishes only after checks pass. Broader talent automation and campaign-opening additions remain separate work.
 
-See [Force core audit verification](force-core-audit-verification.md) for the first batch's exact source pages, corrections, continuation checks and limits. See [Mystic and Seeker verification](mystic-seeker-audit-verification.md) for the second batch, and [Sentinel and Warrior verification](sentinel-warrior-audit-verification.md) for the third. [Force supplement verification](force-supplement-audit-verification.md) covers Armorer, Colossus, Juyo Berserker and Steel Hand Adept. All 22 older F&D layouts are reviewed. [EotE core verification](eote-core-audit-verification.md) covers Assassin, Scoundrel and Slicer. [No Disintegrations verification](no-disintegrations-audit-verification.md) covers Martial Artist, Operator and Skip Tracer. [Fly Casual verification](fly-casual-audit-verification.md) covers Charmer, Gambler and Gunslinger. The next group is Cyber Tech, Droid Tech and Modder from Special Modifications; that work has not started.
+See [Force core audit verification](force-core-audit-verification.md) for the first batch's exact source pages, corrections, continuation checks and limits. See [Mystic and Seeker verification](mystic-seeker-audit-verification.md) for the second batch, and [Sentinel and Warrior verification](sentinel-warrior-audit-verification.md) for the third. [Force supplement verification](force-supplement-audit-verification.md) covers Armorer, Colossus, Juyo Berserker and Steel Hand Adept. All 22 older F&D layouts are reviewed. [EotE core verification](eote-core-audit-verification.md) covers Assassin, Scoundrel and Slicer. [No Disintegrations verification](no-disintegrations-audit-verification.md) covers Martial Artist, Operator and Skip Tracer. [Fly Casual verification](fly-casual-audit-verification.md) covers Charmer, Gambler and Gunslinger. [Special Modifications verification](special-modifications-audit-verification.md) covers Cyber Tech, Droid Tech and Modder. The next group is Demolitionist, Enforcer and Heavy from Dangerous Covenants; that work has not started.

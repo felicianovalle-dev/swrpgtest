@@ -3809,8 +3809,8 @@ function talentCheckMods(actor,skill,ctx={}){
     if(skill==='Leadership')boost+=talentRank('Command');if(ctx.initiative&&(skill==='Cool'||skill==='Vigilance'))setback=Math.max(0,setback-talentRank('Ready for Anything'));
     if(ctx.beast)boost+=talentRank('Hunter')+talentRank('Beast Wrangler');if(ctx.riding&&skill==='Survival')setback=Math.max(0,setback-talentRank('Expert Handler'));
     if(skill==='Mechanics')setback=Math.max(0,setback-talentRank('Gearhead'));
-    if(skill==='Mechanics'&&ctx.cybernetic)setback=Math.max(0,setback-talentRank('Cyberneticist'));
-    if(skill==='Mechanics'&&ctx.droid)setback=Math.max(0,setback-talentRank('Deft Maker'));
+    if(['Mechanics','Medicine'].includes(skill)&&ctx.cybernetic)setback=Math.max(0,setback-talentRank('Cyberneticist'));
+    if(['Mechanics','Computers'].includes(skill)&&ctx.droid)setback=Math.max(0,setback-talentRank('Deft Maker'));
     if(skill==='Coordination'||skill==='Resilience')setback=Math.max(0,setback-talentRank('Iron Body'));
     if(skill==='Mechanics'&&(ctx.construct||ctx.modify)&&talentRank('Inventor')){
       let inv=talentRank('Inventor'),removed=Math.min(setback,inv);setback-=removed;boost+=inv-removed
@@ -3982,7 +3982,7 @@ function performBest(skill,ctx={}){
   if(q.actor.id==='pc'&&['Mechanics','Computers'].includes(skill)&&talentRank('Eye for Detail')&&r.ns>0&&canVoluntarilySufferStrain('pc')){
     let max=Math.min(talentRank('Eye for Detail'),r.ns-1,Math.max(0,strainThreshold()-S.strain));
     if(max>0&&confirm(`Use Eye for Detail? Suffer up to ${max} strain to convert that many Successes into Advantages.`)){
-      let n=Math.max(0,Math.min(max,Number(prompt('Eye for Detail conversions',String(max)))||0));
+      let n=promptTalentStrain('Eye for Detail conversions',max);
       if(n){S.strain+=n;r.ns-=n;r.na+=n;r.ok=r.ns>0;bLog(`Eye for Detail converts ${n} Success${n===1?'':'es'} into ${n} Advantage.`)}
     }
   }
@@ -6021,16 +6021,20 @@ function applyCraftAdvantage(id,t,r){
   }
   return m
 }
+function craftMaterialCost(t){
+  return t.category==='droid'&&hasTalent('Deft Maker')?Math.ceil(t.materialPrice/2):t.materialPrice
+}
 function phase43CraftMaterials(){
   ensurePhase43State();let id=$('craftTemplate')?.value,t=CRAFT_TEMPLATES[id];if(!t)return;
   if(S.crafting.materials[id]){bLog('Materials already acquired for that project.');return}
-  if(S.credits<t.materialPrice){bLog('Not enough credits for crafting materials.');return}
+  const price=craftMaterialCost(t);
+  if(S.credits<price){bLog('Not enough credits for crafting materials.');return}
   let ap=acquisitionProfile(t.rarity),r=performBest(t.restricted?'Streetwise':'Negotiation',{diff:ap.diff,upgrade:ap.upgrade});if(!r.r.ok){bLog(`Could not acquire the materials for ${t.name}.`);return}
-  S.credits-=t.materialPrice;ledgerEntry(-t.materialPrice,`Crafting materials: ${t.name}`);S.crafting.materials[id]=true;bLog(`Materials acquired for ${t.name} (${t.materialPrice} cr).`);renderAll()
+  S.credits-=price;ledgerEntry(-price,`Crafting materials: ${t.name}`);S.crafting.materials[id]=true;bLog(`Materials acquired for ${t.name} (${price} cr).`);renderAll()
 }
 function phase43CraftBuild(){
   ensurePhase43State();let id=$('craftTemplate')?.value,t=CRAFT_TEMPLATES[id];if(!t)return;if(!S.crafting.materials[id]){bLog('Acquire the materials first.');return}
-  let q=actorPool(actorById('pc'),'Mechanics',{diff:t.diff,construct:true,commit:true}),r=rollNarr(q.p);S.crafting.materials[id]=false;
+  let q=actorPool(actorById('pc'),'Mechanics',{diff:t.diff,construct:true,droid:t.category==='droid',commit:true}),r=rollNarr(q.p);S.crafting.materials[id]=false;
   if(!r.ok){bLog(`${t.name} construction fails; the materials are lost. ${rtxt(r)}`);renderAll();return}
   let hours=Math.max(1,(t.timeHours||1)-2*Math.max(0,r.ns));S.crafting.crafted[id]=(S.crafting.crafted[id]||0)+1;
   if(t.category==='weapon'){
@@ -6049,7 +6053,7 @@ function phase43CraftBuild(){
 function selectedDroidForProgramming(){ensurePhase43State();return S.droids.find(d=>d.id===($('droidPending')?.value||S.crafting.pendingDroids[0]))}
 function programCraftedDroid(){
   let d=selectedDroidForProgramming(),key=$('droidDirective')?.value,dir=DROID_DIRECTIVES[key];if(!d||!dir)return;
-  let q=actorPool(actorById('pc'),'Computers',{diff:dir.diff,commit:true}),r=rollNarr(q.p);if(!r.ok){bLog(`${d.name} programming fails; the chassis remains intact for another attempt. ${rtxt(r)}`);return}
+  let q=actorPool(actorById('pc'),'Computers',{diff:dir.diff,droid:true,commit:true}),r=rollNarr(q.p);if(!r.ok){bLog(`${d.name} programming fails; the chassis remains intact for another attempt. ${rtxt(r)}`);return}
   d.directive=key;d.status='active';d.skills={...(dir.skills||{})};d.groupSkills=[];
   let chosen=craftSkillSelection();
   if(dir.pickGeneral){if(d.type==='minion')d.groupSkills.push(chosen);else d.skills[chosen]=dir.pickGeneral}
@@ -6153,7 +6157,7 @@ renderFramework=function(){_p43RenderFramework();injectPhase43UI();renderCampaig
 const _p43RenderEquipment=renderEquipment;
 renderEquipment=function(){_p43RenderEquipment();injectPhase43UI();ensurePhase43State();let sel=$('craftTemplate'),current=sel?.value,currentSkill=$('craftSkill')?.value;sel.innerHTML=sourceCraftTemplates().map(t=>`<option value="${t.id}">${t.category==='droid'?'DROID · ':t.category==='gadget'?'GADGET · ':''}${t.name}</option>`).join('');if(current&&CRAFT_TEMPLATES[current]?.category)sel.value=current;if(!sel.value)sel.value=sourceCraftTemplates()[0]?.id||'';if($('craftSkill')){$('craftSkill').innerHTML=GENERAL_SKILLS.map(s=>`<option>${s}</option>`).join('');if(GENERAL_SKILLS.includes(currentSkill))$('craftSkill').value=currentSkill}$('craftBuyMaterials').onclick=phase43CraftMaterials;$('craftBuild').onclick=phase43CraftBuild;$('craftTemplate').onchange=updateCraftPreview;$('workshopStatus').textContent='To build a droid: select a DROID chassis, acquire materials, construct it with Mechanics, then choose a directive and program it with Computers below. Failed construction consumes materials; failed programming leaves the chassis intact.';updateCraftPreview();renderDroidWorkshop()};
 const _p43UpdateCraftPreview=updateCraftPreview;
-updateCraftPreview=function(){if(!$('craftPreview'))return;ensurePhase43State();let t=CRAFT_TEMPLATES[$('craftTemplate')?.value]||sourceCraftTemplates()[0];if(!t)return;$('craftPreview').innerHTML=`<b>${t.name}</b><br>Materials ${t.materialPrice.toLocaleString()} cr · rarity ${t.rarity} · Mechanics ${acquisitionLabel(t.diff)} · base time ${t.time}<div class="tiny" style="margin-top:5px">${t.desc}<br>Materials acquired: ${S.crafting.materials[t.id]?'yes':'no'} · completed: ${S.crafting.crafted[t.id]||0}</div>`;$('craftBuyMaterials').disabled=!!S.crafting.materials[t.id]||S.credits<t.materialPrice;$('craftBuild').disabled=!S.crafting.materials[t.id];let reason=S.crafting.materials[t.id]?'Materials ready. Construct this project with Mechanics.':S.credits<t.materialPrice?`You need ${(t.materialPrice-S.credits).toLocaleString()} more credits to acquire these materials.`:'Acquire materials first; a successful acquisition check is required.';$('craftPreview').insertAdjacentHTML('beforeend',`<div class="small" role="status" style="margin-top:8px">${reason} Failed construction consumes the materials.</div>`)};
+updateCraftPreview=function(){if(!$('craftPreview'))return;ensurePhase43State();let t=CRAFT_TEMPLATES[$('craftTemplate')?.value]||sourceCraftTemplates()[0];if(!t)return;const price=craftMaterialCost(t);$('craftPreview').innerHTML=`<b>${t.name}</b><br>Materials ${price.toLocaleString()} cr${price<t.materialPrice?' (Deft Maker: 50% off)':''} · rarity ${t.rarity} · Mechanics ${acquisitionLabel(t.diff)} · base time ${t.time}<div class="tiny" style="margin-top:5px">${t.desc}<br>Materials acquired: ${S.crafting.materials[t.id]?'yes':'no'} · completed: ${S.crafting.crafted[t.id]||0}</div>`;$('craftBuyMaterials').disabled=!!S.crafting.materials[t.id]||S.credits<price;$('craftBuild').disabled=!S.crafting.materials[t.id];let reason=S.crafting.materials[t.id]?'Materials ready. Construct this project with Mechanics.':S.credits<price?`You need ${(price-S.credits).toLocaleString()} more credits to acquire these materials.`:'Acquire materials first; a successful acquisition check is required.';$('craftPreview').insertAdjacentHTML('beforeend',`<div class="small" role="status" style="margin-top:8px">${reason} Failed construction consumes the materials.</div>`)};
 const _p43RenderDatabase=renderDatabase;
 renderDatabase=function(){_p43RenderDatabase();injectPhase43UI();$('dbAdvCount').textContent=ADVERSARY_DB.length;$('dbCoverage').innerHTML=`<b>Curated coverage:</b> ${Object.keys(SPECIES).length} playable species · ${Object.keys(CAREERS).length} careers · ${Object.values(CAREERS).reduce((n,c)=>n+Object.keys(c.specs).length,0)} specialization placements · ${ADVERSARY_DB.length} adversary records (${Object.keys(PLAYABLE_ADVERSARIES).length} encounter-ready) · ${STARSHIP_DB.length} starship + ${VEHICLE_DB.length} vehicle records. Coverage remains curated rather than a claim that every source-book entry is imported.`;renderEncounterBuilder()};
 

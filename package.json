@@ -1,6 +1,6 @@
 {
   "name": "sable-reach-pwa",
-  "version": "1.9.18",
+  "version": "1.9.19",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
@@ -21,7 +21,9 @@
     "test:talents:no-disintegrations": "node scripts/check_talents107.cjs",
     "test:creation:no-disintegrations": "node scripts/check_creation107.cjs local",
     "test:talents:fly-casual": "node scripts/check_talents108.cjs",
-    "test:creation:fly-casual": "node scripts/check_creation108.cjs local"
+    "test:creation:fly-casual": "node scripts/check_creation108.cjs local",
+    "test:talents:special-modifications": "node scripts/check_talents109.cjs",
+    "test:creation:special-modifications": "node scripts/check_creation109.cjs local"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.10",

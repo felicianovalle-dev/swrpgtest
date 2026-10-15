@@ -16201,6 +16201,505 @@
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "flyCasual108"
+    },
+    "Cyber Tech": {
+      "names": [
+        "Cyberneticist",
+        "More Machine than Man",
+        "Engineered Redundancies",
+        "Toughened",
+        "Eye for Detail",
+        "Toughened",
+        "Energy Transfer",
+        "Cyberneticist",
+        "Overcharge",
+        "More Machine than Man",
+        "Durable",
+        "Surgeon",
+        "Improved Overcharge",
+        "Utility Belt",
+        "More Machine than Man",
+        "Surgeon",
+        "More Machine than Man",
+        "Durable",
+        "Supreme Overcharge",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "ct00",
+        "ct01",
+        "ct02",
+        "ct03",
+        "ct10",
+        "ct11",
+        "ct12",
+        "ct13",
+        "ct20",
+        "ct21",
+        "ct22",
+        "ct23",
+        "ct30",
+        "ct31",
+        "ct32",
+        "ct33",
+        "ct40",
+        "ct41",
+        "ct42",
+        "ct43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Special Modifications \u00b7 p.29",
+      "collection": "special-modifications",
+      "page": 32,
+      "bookPdfPage": 32,
+      "bookFile": "special-modifications",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "specialMods109"
+    },
+    "Droid Tech": {
+      "names": [
+        "Machine Mender",
+        "Hidden Storage",
+        "Speaks Binary",
+        "Grit",
+        "Deft Maker",
+        "Eye for Detail",
+        "Grit",
+        "Speaks Binary",
+        "Grit",
+        "Supreme Speaks Binary",
+        "Improved Speaks Binary",
+        "Hidden Storage",
+        "Redundant Systems",
+        "Machine Mender",
+        "Speaks Binary",
+        "Deft Maker",
+        "Eye for Detail",
+        "Reroute Processors",
+        "Dedication",
+        "Machine Mender"
+      ],
+      "nodeIds": [
+        "dt00",
+        "dt01",
+        "dt02",
+        "dt03",
+        "dt10",
+        "dt11",
+        "dt12",
+        "dt13",
+        "dt20",
+        "dt21",
+        "dt22",
+        "dt23",
+        "dt30",
+        "dt31",
+        "dt32",
+        "dt33",
+        "dt40",
+        "dt41",
+        "dt42",
+        "dt43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Special Modifications \u00b7 p.31",
+      "collection": "special-modifications",
+      "page": 34,
+      "bookPdfPage": 34,
+      "bookFile": "special-modifications",
+      "bookPage": 31,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "specialMods109"
+    },
+    "Modder": {
+      "names": [
+        "Tinkerer",
+        "Resolve",
+        "Know Somebody",
+        "Signature Vehicle",
+        "Gearhead",
+        "Tinkerer",
+        "Fancy Paint Job",
+        "Larger Project",
+        "Resourceful Refit",
+        "Resolve",
+        "Larger Project",
+        "Toughened",
+        "Jury Rigged",
+        "Hidden Storage",
+        "Tinkerer",
+        "Gearhead",
+        "Jury Rigged",
+        "Dedication",
+        "Natural Tinkerer",
+        "Custom Loadout"
+      ],
+      "nodeIds": [
+        "md00",
+        "md01",
+        "md02",
+        "md03",
+        "md10",
+        "md11",
+        "md12",
+        "md13",
+        "md20",
+        "md21",
+        "md22",
+        "md23",
+        "md30",
+        "md31",
+        "md32",
+        "md33",
+        "md40",
+        "md41",
+        "md42",
+        "md43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "universal": false,
+      "source": "Special Modifications \u00b7 p.33",
+      "collection": "special-modifications",
+      "page": 36,
+      "bookPdfPage": 36,
+      "bookFile": "special-modifications",
+      "bookPage": 33,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "specialMods109"
     }
   },
   "universals": {
@@ -34679,6 +35178,393 @@
       "source": "Fly Casual \u00b7 p.33",
       "summary": "Once per session, use Presence instead of the usual characteristic for one skill check. Explain how your social ability helps with that challenge.",
       "resolutionNote": "Party checks offer the substitution and save session use. Resolve checks outside that workflow manually."
+    }
+  },
+  "talentRules109": {
+    "Custom Loadout": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "Add two hard points to your Signature Vehicle.",
+      "resolutionNote": "Track the chosen Signature Vehicle and its two additional hard points manually.",
+      "resolution": "manual"
+    },
+    "Cyberneticist": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "Remove one Setback per rank from checks to build, repair or install cybernetic implants. Cybernetics and materials to craft them cost 50 percent less; additional ranks do not increase the discount.",
+      "resolutionNote": "Explicitly marked cybernetic Mechanics and Medicine checks remove setbacks automatically. Apply the single 50 percent discount and checks outside that workflow manually."
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Deft Maker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "Remove one Setback per rank from checks to repair, modify, construct or program droids. Materials to craft droids cost 50 percent less; additional ranks do not increase the discount.",
+      "resolutionNote": "Marked droid Mechanics and Computers checks remove setbacks automatically. The Workshop applies the single 50 percent chassis-material discount to its preview, affordability and payment. Other contexts require manual handling."
+    },
+    "Durable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Reduce a Critical Injury result you suffer by 10 per rank, to a minimum result of 1.",
+      "resolutionNote": "Reduces your Critical Injury results automatically."
+    },
+    "Energy Transfer": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "With at least one cybernetic implant installed, suffer 1 strain and take a maneuver to power an appropriate unpowered device until this encounter ends, or restore an energy weapon\u2019s ammunition and ignore an out-of-ammo Despair result.",
+      "resolutionNote": "Resolve the installed-implant requirement, maneuver, strain and temporary power or ammunition manually.",
+      "resolution": "manual"
+    },
+    "Engineered Redundancies": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "You can heal with emergency repair patches and Mechanics as a droid does. You still benefit from stimpacks, but can receive only five stimpack and/or emergency-patch treatments combined per day.",
+      "resolutionNote": "Resolve Mechanics treatment, repair patches and the shared five-treatment daily limit manually. Existing stimpack controls do not track a combined patch allowance.",
+      "resolution": "manual"
+    },
+    "Eye for Detail": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "After rolling Mechanics or Computers but before resolving it, suffer strain up to ranks to convert that many Successes into Advantage. Retain at least one Success to succeed.",
+      "resolutionNote": "Party checks offer whole Success-to-Advantage conversions within ranks and strain capacity, preserving one Success. Cancel or invalid input spends nothing; Winded blocks use. Workshop and other direct rolls require manual conversion."
+    },
+    "Fancy Paint Job": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "Upgrade your Charm, Deception and Negotiation checks once when made in the presence of your Signature Vehicle.",
+      "resolutionNote": "Resolve the chosen Signature Vehicle, its presence and the one ability upgrade manually. Other social skills do not qualify.",
+      "resolution": "manual"
+    },
+    "Gearhead": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "Remove one Setback per rank from Mechanics checks. Halve the credit cost of adding mods to attachments; extra ranks do not halve the cost again.",
+      "resolutionNote": "Removes Mechanics setbacks automatically. Halve attachment-modification credit costs manually."
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Hidden Storage": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 137,
+      "pdfPage": 146,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "Your large equipment, vehicles or droids can conceal items with total encumbrance up to your ranks. Compartments must fit the carrier\u2019s size; detecting them is Formidable.",
+      "resolutionNote": "Resolve concealed items, their total encumbrance, carrier size and Formidable detection checks manually. It does not increase carrying capacity.",
+      "resolution": "manual"
+    },
+    "Improved Overcharge": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "Once per round when using Overcharge, spend two Advantage or one Triumph from its Mechanics check to immediately take one additional action.",
+      "resolutionNote": "Requires the Overcharge action; spend the qualifying symbols and track the extra action and round limit manually.",
+      "resolution": "manual"
+    },
+    "Improved Speaks Binary": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "When you direct an NPC droid to assist a character\u2019s check, that droid supplies one additional Boost beyond the normal assistance benefits.",
+      "resolutionNote": "Resolve the assisting NPC droid and the extra Boost on the assisted check manually. This differs from the base talent\u2019s bonus to a directed droid\u2019s own checks.",
+      "resolution": "manual"
+    },
+    "Jury Rigged": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 150,
+      "pdfPage": 151,
+      "source": "Age of Rebellion Core \u00b7 p.150",
+      "summary": "Choose one personal item per rank and one permitted permanent improvement. Reassign only when that item is lost or destroyed.",
+      "resolution": "manual",
+      "resolutionNote": "Record each chosen item and allowed improvement manually.",
+      "force": false
+    },
+    "Know Somebody": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Once per session, reduce the rarity of a legally available item you are purchasing by one per rank.",
+      "resolutionNote": "Resolve legal availability, rarity reduction and the session limit manually.",
+      "resolution": "manual"
+    },
+    "Larger Project": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "Each rank allows your Signature Vehicle to have a silhouette one higher than its normal limit.",
+      "resolutionNote": "Track the Signature Vehicle silhouette limit of 3 plus ranks manually.",
+      "resolution": "manual"
+    },
+    "Machine Mender": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "When your Mechanics check heals a character\u2019s wounds, heal one additional wound per rank. This usually applies to droids.",
+      "resolutionNote": "Resolve eligible Mechanics wound treatment and extra wounds manually. It does not add to Medicine healing, hull repairs or system-strain recovery.",
+      "resolution": "manual"
+    },
+    "More Machine than Man": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 37,
+      "source": "Special Modifications \u00b7 p.34",
+      "summary": "Increase your cybernetic implant cap by one per rank.",
+      "resolutionNote": "Track your implant cap and installed cybernetics manually; this does not itself install an implant or grant its benefits.",
+      "resolution": "manual"
+    },
+    "Natural Tinkerer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Mechanics check.",
+      "resolutionNote": "Offers one failed Mechanics-check reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Overcharge": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "Once per encounter, make a Hard Mechanics action on one of your installed cybernetics that grants a characteristic, skill or ranked talent. On success, increase those granted benefits by 1 until the encounter ends; characteristics cap at 7 and skills at 5. The GM may spend Despair to short out the implant at encounter end.",
+      "resolutionNote": "Resolve the action, installed implant, temporary bonuses and encounter limit manually. A shorted implant gives no benefit until repaired with an Average Mechanics check taking several hours.",
+      "resolution": "manual"
+    },
+    "Redundant Systems": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "force": false,
+      "summary": "Once per session, make an Easy Mechanics action to use components from a functioning device to repair a broken device, without breaking the donor device.",
+      "resolutionNote": "Resolve the action, suitable devices, repairs and session use manually.",
+      "resolution": "manual"
+    },
+    "Reroute Processors": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "Once per encounter, make an Average Computers action on an engaged droid. On success, lower one characteristic by 1, to a minimum of 0, and raise another by 1, to a maximum of 7, until the encounter ends. A droid may target itself.",
+      "resolutionNote": "Resolve engagement, the check, both temporary changes and encounter use manually.",
+      "resolution": "manual"
+    },
+    "Resolve": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Reduce involuntary strain suffered by one per rank, to a minimum of 1. Voluntary strain costs are unchanged.",
+      "resolutionNote": "Reduces strain in supported Threat and failed-check results. Apply its reduction to other involuntary strain manually; voluntary costs stay unchanged."
+    },
+    "Resourceful Refit": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "Make an Average Mechanics action using an attachment installed in an item, ship or vehicle. On success, destroy that attachment and reduce the next attachment\u2019s price for that same host by the destroyed attachment\u2019s price, to a minimum of 0 credits. You must still acquire and install the replacement.",
+      "resolutionNote": "Resolve the installed donor, successful check, destruction, same-host credit and replacement acquisition manually.",
+      "resolution": "manual"
+    },
+    "Signature Vehicle": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "Choose one owned ship or vehicle of silhouette 3 or lower, increased by Larger Project ranks. Upgrade Mechanics checks to work on that vehicle once. A lost or destroyed Signature Vehicle may be replaced at the GM\u2019s discretion; two characters cannot share one Signature Vehicle.",
+      "resolutionNote": "Record the owned vehicle and one ability upgrade manually. Acclimating to a replacement may take time; this does not grant a free vehicle.",
+      "resolution": "manual"
+    },
+    "Speaks Binary": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 157,
+      "pdfPage": 158,
+      "source": "Age of Rebellion Core \u00b7 p.157",
+      "force": false,
+      "summary": "When you direct NPC droids, give those droids one Boost per rank on their checks.",
+      "resolutionNote": "Resolve the directed NPC droids and their Boost dice manually. This does not add dice to every PC or utility-droid check.",
+      "resolution": "manual"
+    },
+    "Supreme Overcharge": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "Overcharge may target multiple installed cybernetics. Upgrade the Mechanics check\u2019s difficulty once for each implant after the first. The GM may spend Despair to short out any one affected implant at encounter end.",
+      "resolutionNote": "Resolve the selected implants, difficulty upgrades and temporary benefits manually. Each shorted implant needs several hours and an Average Mechanics check to repair.",
+      "resolution": "manual"
+    },
+    "Supreme Speaks Binary": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 38,
+      "source": "Special Modifications \u00b7 p.35",
+      "summary": "Once per encounter, choose one skill as a maneuver. Until the start of your next turn, NPC non-minion droids up to your Speaks Binary ranks may use your ranks in that skill instead of their own.",
+      "resolutionNote": "Resolve the maneuver, chosen skill, eligible non-minion droids, duration and encounter limit manually.",
+      "resolution": "manual"
+    },
+    "Surgeon": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "Successful Medicine checks to treat wounds heal one additional wound per rank.",
+      "resolutionNote": "Adds wound healing to successful PC Medicine wound-treatment checks."
+    },
+    "Tinkerer": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31",
+      "summary": "Add one hard point to one chosen piece of equipment per rank. Each item can benefit only once; if an item is lost, you may apply that rank to a new item.",
+      "resolutionNote": "Resolve the selected items, one-hard-point limit and replacement of lost items manually.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Utility Belt": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 159,
+      "pdfPage": 160,
+      "source": "Age of Rebellion Core \u00b7 p.159",
+      "force": false,
+      "summary": "Spend one Destiny Point as an incidental to produce a plausible previously unrecorded item from your belt or satchel. It must be unrestricted, rarity 4 or lower, and encumbrance 1 or lower; a weapon must also have Limited Ammo 1.",
+      "resolutionNote": "Resolve the Destiny cost, item restrictions, plausibility and produced item manually.",
+      "resolution": "manual"
     }
   }
 }
