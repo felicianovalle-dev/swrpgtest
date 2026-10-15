@@ -445,7 +445,63 @@
     "testFixtureAdjustment": "Suppress NPC initiative actions before establishing the controlled PC turn; check Unstoppable preserves existing injuries."
   },
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "08cea2a0b231fcfdfe83a6547bfc55517da6cf42"
+    "status": "passed",
+    "sourceCommit": "a5f35eecf3a6a63ac0f5124cb6d2f42c67b79c42",
+    "sourceTree": "3bc741134e522358a07b8d46bb105c58016ea3fc",
+    "distribution": {
+      "status": "passed",
+      "commit": "a5f35eecf3a6a63ac0f5124cb6d2f42c67b79c42",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=a5f35eecf3a6&check=1792093002",
+      "httpStatus": 200,
+      "bytes": 3824948,
+      "gitBlob": "08cea2a0b231fcfdfe83a6547bfc55517da6cf42",
+      "sha256": "8dcf0662a3288ff7745220f065a1b2f36501d593380c7127f83b3106045c44ba"
+    },
+    "deployment": {
+      "id": 38795083879,
+      "head_sha": "a5f35eecf3a6a63ac0f5124cb6d2f42c67b79c42",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38795083879"
+    },
+    "flows": [
+      {
+        "spec": "Armorer",
+        "career": "Guardian",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "ar02",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": true
+      },
+      {
+        "spec": "Juyo Berserker",
+        "career": "Warrior",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "ju03",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      },
+      {
+        "spec": "Steel Hand Adept",
+        "career": "Warrior",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "originalNode": "sha00",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      }
+    ],
+    "errors": []
   }
 }
