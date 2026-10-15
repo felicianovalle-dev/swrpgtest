@@ -34,4 +34,25 @@ The original fixture contains 960 nodes across 48 layouts. This batch brings rev
 
 Checks cover 960 individual old purchases, combined 2,040-purchase continuation, 60 real purchase buttons, 20 changed routes, scoped cards, affected mechanics and save/reload/Resume. Six viewports cover 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Three visible creation/save/resume flows use restored connections in Martial Artist, Operator and Skip Tracer. Existing EotE creation flows remain regression targets. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the final-build run. The next group is Charmer, Gambler and Gunslinger from Fly Casual; it has not started.
+The final-build verification completed successfully. The next group is Charmer, Gambler and Gunslinger from Fly Casual; it has not started.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| noDisintegrations | 114 |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All twelve browser/source suites passed 2,028 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Three new and four earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
+
+Every target in this final run used the same distribution: Git blob `3f5d4335d05f42a98cf603b2f352b587bb9009be`, 3,879,419 bytes, SHA-256 `edf8148aefa1b4d1e2f9deed9b6cf6bdc4250874547a1ed8b904a773ba2c06da`. No runtime changes followed this run. Machine-readable evidence is in [no-disintegrations-audit-verification.json](no-disintegrations-audit-verification.json). Hosted verification will compare these exact bytes and repeat the three new creation/save/resume flows.

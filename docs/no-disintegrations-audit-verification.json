@@ -1,0 +1,452 @@
+{
+  "build": "96.11-no-disintegrations-audit",
+  "package": "1.9.17",
+  "reviewedDate": "2026-10-15",
+  "baselineCommit": "ecbaa9092f05f2c7473b6b5f266c1cd43ece4c33",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3879419,
+    "gitBlob": "3f5d4335d05f42a98cf603b2f352b587bb9009be",
+    "sha256": "edf8148aefa1b4d1e2f9deed9b6cf6bdc4250874547a1ed8b904a773ba2c06da"
+  },
+  "reviewedLayouts": 3,
+  "reviewedNodes": 60,
+  "retainedIds": 60,
+  "completedOriginal48": 28,
+  "remainingLayouts": 20,
+  "totalAuditedOriginalIdLayouts": 34,
+  "sourceRules": 39,
+  "distinctLiteralSourceNames": 412,
+  "sources": {
+    "Martial Artist": {
+      "book": "No Disintegrations",
+      "printedPage": 29,
+      "physicalPdfPage": 30,
+      "glossaryChecked": true
+    },
+    "Operator": {
+      "book": "No Disintegrations",
+      "printedPage": 31,
+      "physicalPdfPage": 32,
+      "glossaryChecked": true
+    },
+    "Skip Tracer": {
+      "book": "No Disintegrations",
+      "printedPage": 33,
+      "physicalPdfPage": 34,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Martial Artist": {
+      "addedEdges": [
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "removedEdges": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Operator": {
+      "addedEdges": [
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ]
+      ],
+      "removedEdges": [
+        [
+          1,
+          5
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Skip Tracer": {
+      "addedEdges": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "removedEdges": [],
+      "typeChanges": []
+    }
+  },
+  "newTalentGlossary": {
+    "entries": 24,
+    "printedPages": [
+      34,
+      35,
+      36
+    ],
+    "physicalPdfPages": [
+      35,
+      36,
+      37
+    ]
+  },
+  "sharedCoreRules": 15,
+  "officialErrata": {
+    "version": "2.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/eote_errata_v20.pdf",
+    "note": "No Disintegrations p.29 Martial Grace: once per round, 2 strain, Coordination ranks added to one hit of a successful Brawl check."
+  },
+  "fixes": [
+    "Precision Strike and its improvement spend strain and round use only after a valid Critical result selection. Cancel and invalid selections preserve both.",
+    "About derives the reviewed count from catalog records; current totals are 34 audited original-ID layouts and 20 pending."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 20,
+    "unchangedEarlierCatalogRecords": 104,
+    "earlierCatalogSerializationPreserved": true,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realPurchaseButtons": 60,
+    "fullTreeXpCost": 300
+  },
+  "suites": {
+    "noDisintegrations": {
+      "checks": 114,
+      "errors": []
+    },
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 2028,
+  "executions": [
+    {
+      "name": "no-disintegrations",
+      "returncode": 0,
+      "seconds": 90.58
+    },
+    {
+      "name": "no-dis-creation",
+      "returncode": 0,
+      "seconds": 32.88
+    },
+    {
+      "name": "eote-core",
+      "returncode": 0,
+      "seconds": 83.79
+    },
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 99.63
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 105.85
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 166.0
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 94.26
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 96.67
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 80.52
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 126.28
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 165.94
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 235.34
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 17.72
+    },
+    {
+      "name": "creation",
+      "returncode": 0,
+      "seconds": 30.59
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 36.74
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 59.57
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 39.14
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 45.63
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 45.14
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 48.27
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 31.77
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 28.4
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 27.21
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 19.35
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Martial Artist",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Operator",
+      "career": "Bounty Hunter",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Skip Tracer",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "earlierCreationRegressionFlows": [
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Manual talent steps are disclosed on cards, including vehicle/chase effects, contacts/clues, Destiny abilities and Supreme Precision Strike Hard-result selection.",
+    "Critical talent cancellation leaves the underlying Critical Injury to resolve normally.",
+    "Martial Grace prompts support unarmed/Far Strike, and Unarmed Parry readiness follows an unarmed attack; other eligible contexts need manual handling.",
+    "Hard-Boiled recovery uses Advantage automatically; encounter timing and repeat recovery attempts are not enforced.",
+    "Natural Brawler prompts cover failed checks; successful-check rerolls remain manual.",
+    "Earlier documented mechanics limitations remain."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "3f5d4335d05f42a98cf603b2f352b587bb9009be"
+  }
+}
