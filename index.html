@@ -6870,13 +6870,16 @@ function choosePrecisionCritical(w){
   if(!basic&&!improved)return null;
   let useImproved=improved&&canVoluntarilySufferStrain('pc')&&S.strain+2<=strainThreshold()&&confirm('Use Improved Precision Strike? Suffer 2 strain to choose any Average Critical Injury result for this Brawl/Melee Critical.');
   let list,cost;
-  if(useImproved){list=PRECISION_AVERAGE_CRITS;cost=2;C.precisionImprovedRound=C.round}
+  if(useImproved){list=PRECISION_AVERAGE_CRITS;cost=2}
   else{
     if(!basic||!canVoluntarilySufferStrain('pc')||S.strain+1>strainThreshold()||!confirm('Use Precision Strike? Suffer 1 strain to choose any Easy Critical Injury result.'))return null;
     list=PRECISION_EASY_CRITS;cost=1
   }
-  let menu=list.map((x,i)=>`${i+1}. ${x[1]}`).join('\n'),pick=Math.max(1,Math.min(list.length,Number(prompt(`Choose Critical Injury:\n${menu}`,'1'))||1));
-  S.strain+=cost;let chosen=list[pick-1];cLog(`${useImproved?'Improved ':''}Precision Strike selects ${chosen[1]}.`);return chosen[0]
+  let menu=list.map((x,i)=>`${i+1}. ${x[1]}`).join('\n'),answer=prompt(`Choose Critical Injury:\n${menu}`,'1');
+  if(answer===null)return null;
+  let pick=Math.floor(Number(answer));if(!Number.isFinite(pick)||pick<1||pick>list.length)return null;
+  S.strain+=cost;if(useImproved)C.precisionImprovedRound=C.round;
+  let chosen=list[pick-1];cLog(`${useImproved?'Improved ':''}Precision Strike selects ${chosen[1]}.`);return chosen[0]
 }
 function inflictCritical(target,w,bonus=0,forcedRoll=null){
   if(target.type==='minion'){
@@ -30434,6 +30437,525 @@ window.CharacterCatalog97 = (() => {
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "eoteCore106"
+    },
+    "Martial Artist": {
+      "names": [
+        "Iron Body",
+        "Parry",
+        "Grit",
+        "Precision Strike",
+        "Parry",
+        "Toughened",
+        "Martial Grace",
+        "Grit",
+        "Unarmed Parry",
+        "Grapple",
+        "Iron Body",
+        "Improved Precision Strike",
+        "Overbalance",
+        "Toughened",
+        "Mind Over Matter",
+        "Grit",
+        "Coordination Dodge",
+        "Dedication",
+        "Natural Brawler",
+        "Supreme Precision Strike"
+      ],
+      "nodeIds": [
+        "ma00",
+        "ma01",
+        "ma02",
+        "ma03",
+        "ma10",
+        "ma11",
+        "ma12",
+        "ma13",
+        "ma20",
+        "ma21",
+        "ma22",
+        "ma23",
+        "ma30",
+        "ma31",
+        "ma32",
+        "ma33",
+        "ma40",
+        "ma41",
+        "ma42",
+        "ma43"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "No Disintegrations \u00b7 p.29",
+      "collection": "no-disintegrations",
+      "page": 30,
+      "bookPdfPage": 30,
+      "bookFile": "no-disintegrations",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "noDis107"
+    },
+    "Operator": {
+      "names": [
+        "Grit",
+        "Galaxy Mapper",
+        "Shortcut",
+        "Overwhelm Defenses",
+        "Full Throttle",
+        "Planet Mapper",
+        "Grit",
+        "Debilitating Shot",
+        "Skilled Jockey",
+        "All-Terrain Driver",
+        "Offensive Driving",
+        "Grit",
+        "Let's Ride",
+        "Shortcut",
+        "Grit",
+        "Overwhelm Defenses",
+        "Dedication",
+        "Improved Shortcut",
+        "Skilled Jockey",
+        "Hindering Shot"
+      ],
+      "nodeIds": [
+        "op00",
+        "op01",
+        "op02",
+        "op03",
+        "op10",
+        "op11",
+        "op12",
+        "op13",
+        "op20",
+        "op21",
+        "op22",
+        "op23",
+        "op30",
+        "op31",
+        "op32",
+        "op33",
+        "op40",
+        "op41",
+        "op42",
+        "op43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "No Disintegrations \u00b7 p.31",
+      "collection": "no-disintegrations",
+      "page": 32,
+      "bookPdfPage": 32,
+      "bookFile": "no-disintegrations",
+      "bookPage": 31,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "noDis107"
+    },
+    "Skip Tracer": {
+      "names": [
+        "Bypass Security",
+        "Hard-Boiled",
+        "Good Cop",
+        "Rapid Recovery",
+        "Toughened",
+        "Expert Tracker",
+        "Street Smarts",
+        "Bought Info",
+        "Hard-Boiled",
+        "Rapid Recovery",
+        "Improved Street Smarts",
+        "Street Smarts",
+        "Bypass Security",
+        "Nobody's Fool",
+        "Good Cop",
+        "Informant",
+        "Reconstruct the Scene",
+        "Hard-Boiled",
+        "Dedication",
+        "Soft Spot"
+      ],
+      "nodeIds": [
+        "st00",
+        "st01",
+        "st02",
+        "st03",
+        "st10",
+        "st11",
+        "st12",
+        "st13",
+        "st20",
+        "st21",
+        "st22",
+        "st23",
+        "st30",
+        "st31",
+        "st32",
+        "st33",
+        "st40",
+        "st41",
+        "st42",
+        "st43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "No Disintegrations \u00b7 p.33",
+      "collection": "no-disintegrations",
+      "page": 34,
+      "bookPdfPage": 34,
+      "bookFile": "no-disintegrations",
+      "bookPage": 33,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "noDis107"
     }
   },
   "universals": {
@@ -48012,10 +48534,464 @@ window.CharacterCatalog97 = (() => {
       "summary": "Increase your wound threshold by two per rank.",
       "resolutionNote": "Adds to your wound threshold automatically."
     }
+  },
+  "talentRules107": {
+    "All-Terrain Driver": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "While driving with Piloting (Planetary), ignore the usual difficult-terrain penalties.",
+      "resolutionNote": "Resolve terrain penalties manually; generic Piloting checks are unchanged.",
+      "resolution": "manual"
+    },
+    "Bought Info": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "Instead of a Knowledge check, spend 50 credits per difficulty die as an action to succeed with one Success. Information must be purchasable and available; the GM may exclude obscure subjects.",
+      "resolutionNote": "Pay the credits and resolve the Knowledge success manually. This does not reduce check difficulty.",
+      "resolution": "manual"
+    },
+    "Bypass Security": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 133,
+      "pdfPage": 142,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Remove one Setback per rank from Skulduggery or Computers checks to disable a security device or open a locked door.",
+      "resolutionNote": "Removes PC setbacks on checks marked as security tasks. Only Computers or Skulduggery checks to disable security or open locked doors qualify."
+    },
+    "Coordination Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "When targeted by a combat check, spend one Destiny Point to add Failures equal to your Coordination ranks to that check.",
+      "resolutionNote": "Resolve the Destiny cost and added Failures manually. There is no once-per-session limit.",
+      "resolution": "manual"
+    },
+    "Debilitating Shot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "After a successful vehicle or starship weapon attack, spend 2 Advantage to reduce the target\u2019s maximum speed by 1, to a minimum of 1, through the end of the next round. Reduce current speed too if it exceeds the new maximum.",
+      "resolutionNote": "Spend Advantage and track both speed changes and their expiry manually.",
+      "resolution": "manual"
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Expert Tracker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Remove one Setback per rank from checks to find tracks or track targets. Survival tracking takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks on party checks explicitly marked as tracking. Resolve tracking time manually."
+    },
+    "Full Throttle": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Make a Hard Piloting action to raise a ship or vehicle\u2019s top speed by one for rounds equal to Cunning. Its normal action and maneuver restrictions still apply.",
+      "resolutionNote": "Resolve the Piloting action, temporary top speed and duration manually.",
+      "resolution": "manual"
+    },
+    "Galaxy Mapper": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 144,
+      "pdfPage": 147,
+      "source": "Force and Destiny Core \u00b7 p.144",
+      "summary": "Remove one Setback per rank from Astrogation. Astrogation checks take half the normal time; additional ranks do not reduce time further.",
+      "resolutionNote": "Removes Astrogation setbacks. Resolve the time reduction manually."
+    },
+    "Good Cop": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "Spend 2 Advantage from Charm or Negotiation to upgrade one ally\u2019s subsequent social check against the same target in this encounter once per rank. Only one Good Cop use may benefit that check.",
+      "resolutionNote": "Resolve the Advantage cost, ally, target and upgrades manually.",
+      "resolution": "manual"
+    },
+    "Grapple": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "Once per round, use a maneuver so enemies must spend two maneuvers to move from engaged to short range of you until your next turn begins.",
+      "resolutionNote": "Resolve the maneuver, affected enemies and next-turn expiry manually.",
+      "resolution": "manual"
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Hard-Boiled": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "On an end-of-encounter strain-recovery check, spend Advantage to heal one wound each, spending no more Advantage than your ranks.",
+      "resolutionNote": "The recovery control automatically uses Advantage up to ranks to heal wounds. Use it after an encounter; recovery timing and repeat attempts are not enforced."
+    },
+    "Hindering Shot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "Increase a Gunnery combat check\u2019s difficulty by 1. If it succeeds and inflicts hull trauma, the target craft suffers system strain equal to its current speed whenever it moves for the rest of this encounter.",
+      "resolutionNote": "Declare before rolling; resolve the increased difficulty, hull-damage requirement and each movement cost manually.",
+      "resolution": "manual"
+    },
+    "Improved Precision Strike": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "Once per round when inflicting a Critical Injury with Brawl or Melee, suffer 2 strain to choose any Average Critical Injury result.",
+      "resolutionNote": "Combat Critical controls offer Average selection once per round. Canceling selection spends no strain or round use."
+    },
+    "Improved Shortcut": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 36,
+      "pdfPage": 37,
+      "source": "No Disintegrations \u00b7 p.36",
+      "summary": "During a chase or race, suffer 2 strain to add Successes equal to your Shortcut ranks to the check.",
+      "resolutionNote": "Resolve the strain cost and added Successes manually; these are separate from Shortcut\u2019s Boost dice.",
+      "resolution": "manual"
+    },
+    "Improved Street Smarts": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 36,
+      "pdfPage": 37,
+      "source": "No Disintegrations \u00b7 p.36",
+      "summary": "Once per session, make a Formidable Streetwise or Knowledge (Underworld) action, reducing difficulty once per Street Smarts rank. On success, the GM reveals one otherwise unavailable vital clue to a current mystery.",
+      "resolutionNote": "Resolve the check, clue and session use manually. The clue need not solve the whole mystery.",
+      "resolution": "manual"
+    },
+    "Informant": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "Once per session, reveal an available contact with information about a chosen subject. Explain the relationship and relevance; the GM decides what the expertise costs.",
+      "resolutionNote": "Agree the contact, information and price with the GM and track session use manually.",
+      "resolution": "manual"
+    },
+    "Iron Body": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "No Disintegrations \u00b7 p.34",
+      "summary": "Remove one Setback per rank from Coordination and Resilience checks. Reduce unarmed Critical rating by one per rank, to a minimum of 1.",
+      "resolutionNote": "PC Coordination and Resilience setbacks and the unarmed attack profile update automatically."
+    },
+    "Let's Ride": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "force": false,
+      "summary": "Once per round, mount or dismount a vehicle or beast, or enter a vehicle cockpit or weapon station, as an incidental.",
+      "resolutionNote": "Resolve the eligible movement and once-per-round limit manually.",
+      "resolution": "manual"
+    },
+    "Martial Grace": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "Once per round after a successful Brawl check, suffer 2 strain to add your Coordination ranks in damage to one hit.",
+      "resolutionNote": "Successful unarmed and Far Strike attacks offer the cost and one-hit bonus once per round. Resolve other Brawl weapons manually.",
+      "errata": "Official EotE errata v2.0 (2017-11-20), No Disintegrations p.29: 2 strain, once per round, one hit of a successful Brawl check."
+    },
+    "Mind Over Matter": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "Spend one Destiny Point to recover strain equal to your Willpower.",
+      "resolutionNote": "Resolve the Destiny cost and strain recovery manually; this talent has no stated session limit.",
+      "resolution": "manual"
+    },
+    "Natural Brawler": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153",
+      "force": false,
+      "summary": "Once per session, reroll one Brawl or Melee check.",
+      "resolutionNote": "Failed Brawl and Melee checks offer a reroll and save its session use. Rerolling a successful check requires manual resolution."
+    },
+    "Nobody's Fool": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Upgrade incoming Charm, Coercion and Deception checks once per rank.",
+      "resolutionNote": "Resolve incoming social-check difficulty upgrades manually.",
+      "resolution": "manual"
+    },
+    "Offensive Driving": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "As a maneuver, inflict system strain on your own craft up to its highest defense value and choose a craft at close range. Upgrade that pilot\u2019s next Piloting (Planetary) or Piloting (Space) difficulty before this encounter ends once per strain inflicted.",
+      "resolutionNote": "Resolve the maneuver, close-range target, own-craft strain and next-check upgrades manually.",
+      "resolution": "manual"
+    },
+    "Overbalance": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "After an engaged enemy\u2019s combat check resolves, spend its Despair or 3 Threat to stagger that attacker until the end of its next turn.",
+      "resolutionNote": "Resolve the enemy\u2019s symbols, stagger and next-turn expiry manually.",
+      "resolution": "manual"
+    },
+    "Overwhelm Defenses": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "After an unsuccessful vehicle or starship weapon attack, spend pairs of Advantage up to your ranks to reduce the targeted defense zone by 1 per pair for this encounter.",
+      "resolutionNote": "Resolve the unsuccessful-attack requirement, Advantage and affected defense zone manually.",
+      "resolution": "manual"
+    },
+    "Parry": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "When hit by Brawl, Melee or Lightsaber while wielding a Melee or Lightsaber weapon, suffer 3 strain to reduce that hit\u2019s damage by 2 plus ranks before soak. Use once per hit.",
+      "resolutionNote": "Enemy attacks offer damage reduction and charge strain for a compatible weapon. Unarmed Parry also works after using an unarmed attack; other unarmed readiness requires manual handling."
+    },
+    "Planet Mapper": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "Remove one Setback per rank from Streetwise or Survival checks to navigate on a world. Such checks take half the usual time; more ranks do not shorten it further.",
+      "resolutionNote": "Resolve planetary navigation setbacks and time manually. Street Smarts may separately apply to Streetwise.",
+      "resolution": "manual"
+    },
+    "Precision Strike": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "No Disintegrations \u00b7 p.35",
+      "summary": "When inflicting a Critical Injury with Brawl, Melee or Lightsaber, suffer 1 strain to choose any Easy Critical Injury result. You may also defeat minions or rivals nonlethally, even in otherwise exceptional circumstances.",
+      "resolutionNote": "Combat Critical controls offer Easy result selection. Resolve the optional nonlethal defeat manually."
+    },
+    "Rapid Recovery": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "After an encounter, recover one additional strain per rank.",
+      "resolutionNote": "Adds strain recovery in the recovery control. Use it after an encounter; recovery timing and repeat attempts are not enforced."
+    },
+    "Reconstruct the Scene": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 36,
+      "pdfPage": 37,
+      "source": "No Disintegrations \u00b7 p.36",
+      "summary": "Once per session, make a Hard Perception action at a crime scene or similar location. On success, identify the prominent physical characteristics of one person present within the last 24 hours per Success.",
+      "resolutionNote": "Resolve the Perception action, scene details, people and session use manually.",
+      "resolution": "manual"
+    },
+    "Shortcut": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 155,
+      "pdfPage": 156,
+      "source": "Age of Rebellion Core \u00b7 p.155",
+      "force": false,
+      "summary": "During a chase, add one Boost per rank to checks made to catch or escape an opponent.",
+      "resolutionNote": "Resolve chase-specific Boost dice manually; ordinary Piloting checks do not gain them automatically.",
+      "resolution": "manual"
+    },
+    "Skilled Jockey": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Remove one Setback per rank from Piloting (Planetary) and Piloting (Space).",
+      "resolutionNote": "Removes setbacks from PC piloting checks."
+    },
+    "Soft Spot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 152,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "After a successful personal-weapon attack, spend one Destiny Point to add your Cunning in damage to one hit.",
+      "resolutionNote": "Resolve the Destiny cost and bonus on only one personal-weapon hit manually.",
+      "resolution": "manual"
+    },
+    "Street Smarts": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Remove one Setback per rank from Streetwise and Knowledge (Underworld).",
+      "resolutionNote": "Removes setbacks from PC Streetwise and Knowledge (Underworld)."
+    },
+    "Supreme Precision Strike": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 36,
+      "pdfPage": 37,
+      "source": "No Disintegrations \u00b7 p.36",
+      "summary": "Once per session when an unarmed attack inflicts a Critical Injury, suffer 3 strain to choose any Hard Critical Injury result. No weapon may be used for that attack.",
+      "resolutionNote": "Resolve the cost, Hard result and session use manually. The Critical controls offer only Easy and Average selection.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Unarmed Parry": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 36,
+      "pdfPage": 37,
+      "source": "No Disintegrations \u00b7 p.36",
+      "summary": "You may use Parry while unarmed. Doing so costs one less strain, to a minimum cost of 1.",
+      "resolutionNote": "Enemy-attack Parry prompts support the reduced cost after using an unarmed attack. Other unarmed readiness requires manual handling."
+    }
   }
 }
 ;
-  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106};
+  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106,noDis107:data.talentRules107};
   function rulesFor(spec){return ruleSets[data.trees[spec]?.ruleSet];}
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
@@ -49117,7 +50093,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.10-eote-core-audit';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.11-no-disintegrations-audit';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 

@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.10-eote-core-audit` / package `1.9.16`. Reviewed 2026-10-15 against the saved repository and the supplied source collections.
+Build: `96.11-no-disintegrations-audit` / package `1.9.17`. Reviewed 2026-10-15 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -318,10 +318,14 @@ Older finalized saves keep their original quests, purchase benefits, and economy
 
 ## Remaining content work
 
-Fresh source reviews for the remaining 42 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
+Fresh source reviews for the remaining 20 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
 
 ## Older EotE core audit: Assassin, Scoundrel and Slicer
 
 All 60 original IDs, names, positions and XP costs remain. Six missing connections are restored and seven unsupported shortcuts removed. The book diagrams are printed pp.59, 84 and 91 / physical PDF pp.68, 93 and 100. Slicer remains shared between Technician and Spy. `talentRules106` contains 32 scoped glossary rules, bringing the shared/scoped union to 406 distinct names. Cards explain costs, timing and manual limits.
 
 Precise Aim Attack now spends its required maneuver and chosen whole-number strain before rolling. Canceled or blocked attempts preserve resources and existing unarmed-defense readiness. A second maneuver must be paid without giving away the attack action. This completes 25 of the original 48 older layouts; 23 remain. See [EotE core verification](eote-core-audit-verification.md).
+
+## No Disintegrations audit: Martial Artist, Operator and Skip Tracer
+
+All 60 original IDs, names, positions, costs and activation labels remain. Fifteen connections are restored and five unsupported routes removed, based on printed pp.29, 31 and 33 / physical pp.30, 32 and 34. Thirty-nine scoped rule entries clarify costs, timing and manual limits, including the official Martial Grace errata. The literal shared/scoped name union is 412 (Mind Over Matter preserves its existing capitalization). Precision Strike selection cancellation now preserves strain and the improvement’s round use. This completes 28 of the original 48 layouts; 20 remain. See [No Disintegrations verification](no-disintegrations-audit-verification.md).

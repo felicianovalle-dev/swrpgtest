@@ -4983,13 +4983,16 @@ function choosePrecisionCritical(w){
   if(!basic&&!improved)return null;
   let useImproved=improved&&canVoluntarilySufferStrain('pc')&&S.strain+2<=strainThreshold()&&confirm('Use Improved Precision Strike? Suffer 2 strain to choose any Average Critical Injury result for this Brawl/Melee Critical.');
   let list,cost;
-  if(useImproved){list=PRECISION_AVERAGE_CRITS;cost=2;C.precisionImprovedRound=C.round}
+  if(useImproved){list=PRECISION_AVERAGE_CRITS;cost=2}
   else{
     if(!basic||!canVoluntarilySufferStrain('pc')||S.strain+1>strainThreshold()||!confirm('Use Precision Strike? Suffer 1 strain to choose any Easy Critical Injury result.'))return null;
     list=PRECISION_EASY_CRITS;cost=1
   }
-  let menu=list.map((x,i)=>`${i+1}. ${x[1]}`).join('\n'),pick=Math.max(1,Math.min(list.length,Number(prompt(`Choose Critical Injury:\n${menu}`,'1'))||1));
-  S.strain+=cost;let chosen=list[pick-1];cLog(`${useImproved?'Improved ':''}Precision Strike selects ${chosen[1]}.`);return chosen[0]
+  let menu=list.map((x,i)=>`${i+1}. ${x[1]}`).join('\n'),answer=prompt(`Choose Critical Injury:\n${menu}`,'1');
+  if(answer===null)return null;
+  let pick=Math.floor(Number(answer));if(!Number.isFinite(pick)||pick<1||pick>list.length)return null;
+  S.strain+=cost;if(useImproved)C.precisionImprovedRound=C.round;
+  let chosen=list[pick-1];cLog(`${useImproved?'Improved ':''}Precision Strike selects ${chosen[1]}.`);return chosen[0]
 }
 function inflictCritical(target,w,bonus=0,forcedRoll=null){
   if(target.type==='minion'){
