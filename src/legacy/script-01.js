@@ -2713,13 +2713,14 @@ function shipFire(){
   if(gun.id==='pc'&&hasTalent('Intuitive Strike')&&forceAvailable()>0&&confirm('Use Intuitive Strike and add Force dice to this Gunnery check?')){
     let fr=rollForce(forceAvailable()),preferred=preferredForcePips(fr),opposite=oppositeForcePips(fr),want=preferred;
     if(opposite>0&&canUseOppositePips()&&confirm(`Intuitive Strike rolled ${opposite} opposite-alignment Force point${opposite===1?'':'s'}. Use them too?`)){
-      let paid=useForcePoints(fr,preferred+opposite);if(paid.ok)want=preferred+opposite
+      want=preferred+opposite
     }
-    if(want>0){
-      let succ=Math.max(0,Math.min(want,Number(prompt(`Intuitive Strike has ${want} usable Force point${want===1?'':'s'}. How many become automatic Success? The rest become Advantage.`,String(want)))||0)),
-          adv=want-succ;r.ns+=succ;r.na+=adv;r.ok=r.ns>0;
-      shipLog(`Intuitive Strike converts ${want} Force point${want===1?'':'s'} into ${succ} Success and ${adv} Advantage.`)
-    }
+    const symbols=Math.floor(want/2),points=symbols*2;
+    if(symbols>0&&useForcePoints(fr,points).ok){
+      let succ=Math.max(0,Math.min(symbols,Math.floor(Number(prompt(`Intuitive Strike spends ${points} Force points for ${symbols} result${symbols===1?'':'s'}. How many become Success? The rest become Advantage.`,String(symbols)))||0))),
+          adv=symbols-succ;r.ns+=succ;r.na+=adv;r.ok=r.ns>0;
+      shipLog(`Intuitive Strike converts ${points} Force points into ${succ} Success and ${adv} Advantage.`)
+    }else if(symbols<1)shipLog('Intuitive Strike needs two usable Force points for each Success or Advantage.');
   }
   if(r.ok){let dmg=Math.max(0,w.damage+r.ns-target.armor);target.hullNow+=dmg;shipLog(`${gun.name} hits ${target.name} for ${dmg} hull trauma. ${rtxt(r)}`);if(r.na>=w.crit&&dmg>0){target.criticals.push({name:'Critical Hit'});target.hullNow+=2;shipLog(`${target.name} suffers a critical hit (+2 hull trauma in this encounter abstraction).`)}}
   else shipLog(`${gun.name} misses ${target.name}. ${rtxt(r)}`);
@@ -4833,17 +4834,21 @@ function defensiveStanceManeuver(){
   n=Math.max(0,Math.min(max,n));S.strain+=n;S.combat.meleeDefUpgrade=Math.max(S.combat.meleeDefUpgrade||0,n);renderCombat()
 }
 function toggleStun(){let w=WEAPONS[S.weapon];if(!w.qualities?.stun)return;S.stunMode=!S.stunMode;cLog(`Blaster set to ${S.stunMode?'STUN':'KILL'}.`);renderCombat()}
+function engagedOpponentCount(actor){
+  return activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0).reduce((count,e)=>count+(e.type==='minion'?Math.max(1,e.members||1):1),0);
+}
 function duelistTrainingBoost(actor,skill,range){
   if(actor.id!=='pc'||!['Melee','Lightsaber'].includes(skill)||range!==0||!hasTalent("Duelist's Training"))return 0;
-  const engaged=activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0);
-  if(engaged.length!==1)return 0;
-  return engaged[0].type==='minion'&&(engaged[0].members||1)>1?0:1;
+  return engagedOpponentCount(actor)===1?1:0;
+}
+function multipleOpponentBoost(actor,skill){
+  return actor.id==='pc'&&['Brawl','Melee','Lightsaber'].includes(skill)&&hasTalent('Multiple Opponents')&&engagedOpponentCount(actor)>1?1:0;
 }
 function combatTalentBoost(actor,target){
-  let b=0,ri=target?rangeBandBetween(actor.id,target.id):2,engaged=activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0).length;
+  let b=0,ri=target?rangeBandBetween(actor.id,target.id):2;
   if(actor.id==='pc'&&target&&!target.hasActedEncounter)b+=talentRank('Quick Strike');
   b+=duelistTrainingBoost(actor,actorWeapon(actor).skill,ri);
-  if(actor.id==='pc'&&ri===0&&engaged>1)b+=talentRank('Multiple Opponents')?1:0;
+  b+=multipleOpponentBoost(actor,actorWeapon(actor).skill);
   return b
 }
 function combatPool(actor,target,extraBoost=0,ignoreDef=0,commit=false){
@@ -5204,10 +5209,10 @@ function specialCombatPool(actor,target,w,ri,commit=false){
   if((skill==='Brawl'||skill==='Lightsaber')&&ri===0)diff=2;
   if(diff===99)return{invalid:true,reason:`${w.name} cannot be used at ${RANGE_NAMES[ri]} range.`};
   diff+=crippledDifficulty(id,skill)+(st.conditions.nextDifficulty||0)+cm.diff;
-  let engaged=activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0).length,talentBoost=0;
+  let talentBoost=0;
   if(actor.id==='pc'&&target&&!target.hasActedEncounter)talentBoost+=talentRank('Quick Strike');
   talentBoost+=duelistTrainingBoost(actor,skill,ri);
-  if(actor.id==='pc'&&['Brawl','Melee','Lightsaber'].includes(skill)&&ri===0&&engaged>1)talentBoost+=talentRank('Multiple Opponents')?1:0;
+  talentBoost+=multipleOpponentBoost(actor,skill);
   let boost=talentBoost+approvalBoost(actor,skill)+crewRoleBoost(actor,skill,target)+(S.combat?.nextAllyBoost||0)+(actor.id==='pc'&&S.foreseeBoost?1:0),
       setback=(target.def||0)+(target.cover&&ri>0?1:0)+(st.conditions.disoriented>0?1:0)+(st.conditions.suppressed||0)*2+(st.conditions.nextSetback||0)+cm.setback,
       p=makePool(effectiveCharacteristic(actor,ch),rank,diff,cm.removeBoost?0:boost,setback,(target.adversary||0)+(st.conditions.nextUpgrade||0)+cm.upgrade);

@@ -1,0 +1,466 @@
+{
+  "build": "96.8-sentinel-warrior-audit",
+  "package": "1.9.14",
+  "reviewedDate": "2026-10-14",
+  "baselineCommit": "d3afcd8ae611b64196471f418a10a6b416844af3",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3788603,
+    "gitBlob": "6b03894ea1dba6041e4d6553e82424d3d84ad6ed",
+    "sha256": "cabe7e02efcf8e673f52b5bc2a7d9080af021cb25275b84dc852588d119fc269"
+  },
+  "reviewedLayouts": 6,
+  "reviewedNodes": 120,
+  "retainedIds": 120,
+  "frozenLayouts": 48,
+  "frozenNodes": 960,
+  "completedOriginal48": 18,
+  "remainingLayouts": 30,
+  "sourceRules": 70,
+  "distinctSourceNames": 385,
+  "sources": {
+    "Artisan": {
+      "book": "Force and Destiny Core",
+      "printedPage": 93,
+      "physicalPdfPage": 96,
+      "collectionPdfPage": 30,
+      "glossaryChecked": true
+    },
+    "Shadow": {
+      "book": "Force and Destiny Core",
+      "printedPage": 94,
+      "physicalPdfPage": 97,
+      "collectionPdfPage": 34,
+      "glossaryChecked": true
+    },
+    "Shien Expert": {
+      "book": "Force and Destiny Core",
+      "printedPage": 95,
+      "physicalPdfPage": 98,
+      "collectionPdfPage": 35,
+      "glossaryChecked": true
+    },
+    "Aggressor": {
+      "book": "Force and Destiny Core",
+      "printedPage": 99,
+      "physicalPdfPage": 102,
+      "collectionPdfPage": 37,
+      "glossaryChecked": true
+    },
+    "Shii-Cho Knight": {
+      "book": "Force and Destiny Core",
+      "printedPage": 100,
+      "physicalPdfPage": 103,
+      "collectionPdfPage": 40,
+      "glossaryChecked": true
+    },
+    "Starfighter Ace": {
+      "book": "Force and Destiny Core",
+      "printedPage": 101,
+      "physicalPdfPage": 104,
+      "collectionPdfPage": 41,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Artisan": {
+      "addedEdges": [
+        [
+          2,
+          6
+        ]
+      ],
+      "removedEdges": [
+        [
+          6,
+          10
+        ],
+        [
+          9,
+          13
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Shadow": {
+      "addedEdges": [
+        [
+          6,
+          10
+        ]
+      ],
+      "removedEdges": [
+        [
+          3,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "sd32",
+          "talent": "Now You See Me",
+          "from": "Active",
+          "to": "Force Active"
+        }
+      ]
+    },
+    "Shien Expert": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "sh03",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "sh13",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        },
+        {
+          "id": "sh23",
+          "talent": "Improved Reflect",
+          "from": "Passive",
+          "to": "Force Active"
+        },
+        {
+          "id": "sh33",
+          "talent": "Reflect",
+          "from": "Active",
+          "to": "Force Active"
+        }
+      ]
+    },
+    "Aggressor": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          18,
+          19
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Shii-Cho Knight": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          4,
+          5
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "sc32",
+          "talent": "Improved Parry",
+          "from": "Passive",
+          "to": "Active"
+        }
+      ]
+    },
+    "Starfighter Ace": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          4,
+          8
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "sa30",
+          "talent": "Intuitive Strike",
+          "from": "Force Active",
+          "to": "Force Passive"
+        }
+      ]
+    }
+  },
+  "sourceDiscrepancies": [
+    "Shii-Cho Knight: compilation adds Second Wind\u2013Conditioned and Parry\u2013Defensive Training connections absent from the core diagram; the core governs. The Conditioned\u2013Multiple Opponents connection is retained.",
+    "Counterstrike: the glossary limits the benefit to the next turn; the diagram says the encounter.",
+    "Touch of Fate: the core glossary and diagram identify a Force talent; the compilation omits the Force marker.",
+    "Intuitive Strike: the glossary identifies passive, unranked behavior; the compilation has a rank icon. Two Force points purchase each added Success or Advantage.",
+    "Well Rounded: ranked in the F&D glossary; each rank grants two selected career skills without free ranks.",
+    "Conditioned: official errata replaces Coordination ranks with Conditioned ranks for falling damage and strain."
+  ],
+  "compatibility": {
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 30,
+    "originalEarlierCatalogRecords": 91,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realNewPurchaseButtons": 120,
+    "costPerFullTree": 300
+  },
+  "suites": {
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 1706,
+  "suiteExitStatuses": [
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 91.22
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 149.03
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 84.44
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 86.49
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 74.07
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 118.41
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 152.53
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 218.66
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 16.54
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112,
+    "executions": [
+      {
+        "name": "check_world94",
+        "returncode": 0,
+        "seconds": 35.45
+      },
+      {
+        "name": "check_work96",
+        "returncode": 0,
+        "seconds": 53.58
+      },
+      {
+        "name": "check_save97",
+        "returncode": 0,
+        "seconds": 32.69
+      },
+      {
+        "name": "check_home",
+        "returncode": 0,
+        "seconds": 36.0
+      },
+      {
+        "name": "check_workshop",
+        "returncode": 0,
+        "seconds": 39.55
+      },
+      {
+        "name": "check_save_reliability",
+        "returncode": 0,
+        "seconds": 42.67
+      },
+      {
+        "name": "check_gameplay_audit",
+        "returncode": 0,
+        "seconds": 29.91
+      },
+      {
+        "name": "check_story_combat",
+        "returncode": 0,
+        "seconds": 25.16
+      },
+      {
+        "name": "check_mission_playthrough",
+        "returncode": 0,
+        "seconds": 24.87
+      },
+      {
+        "name": "check_setbacks",
+        "returncode": 0,
+        "seconds": 18.07
+      }
+    ]
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Artisan",
+      "career": "Sentinel",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "art02",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    },
+    {
+      "spec": "Shadow",
+      "career": "Sentinel",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "sd02",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": true
+    },
+    {
+      "spec": "Shii-Cho Knight",
+      "career": "Warrior",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "originalNode": "sc00",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not tested.",
+    "Many item, Force and vehicle special actions remain manual as disclosed on cards.",
+    "Terrify session-start Conflict and the once-per-round limits of Master Artisan, Master of Shadows and Falling Avalanche require manual tracking.",
+    "The outgoing Intimidating prompt reduces difficulty dice; proper challenge-die downgrades and incoming Coercion require manual resolution.",
+    "Side Step retains its round-boundary reset; enforce the once-per-round limit and until-next-turn expiry manually.",
+    "Force use prerequisites are visible but older automatic handlers do not uniformly enforce them.",
+    "Existing saved purchases, ratings and characteristics are not retrospectively recalculated.",
+    "Multiple known lightsaber techniques retain the established engine priority; selecting another requires manual resolution."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "6b03894ea1dba6041e4d6553e82424d3d84ad6ed"
+  }
+}
