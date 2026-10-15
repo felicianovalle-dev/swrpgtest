@@ -1,0 +1,465 @@
+{
+  "build": "96.12-fly-casual-audit",
+  "package": "1.9.18",
+  "reviewedDate": "2026-10-15",
+  "baselineCommit": "e6ce75b2362c44fed9dc6e33e92dc955a1b986ee",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3906607,
+    "gitBlob": "4f98d6edfeb6a8fd4416f09deaa8d9b2bf7a2c45",
+    "sha256": "a761a575077b32c1b6bfc6ae43dfef4054cfb823658882b44562b6633f6d7d0c"
+  },
+  "reviewedLayouts": 3,
+  "reviewedNodes": 60,
+  "retainedIds": 60,
+  "completedOriginal48": 31,
+  "remainingLayouts": 17,
+  "totalAuditedOriginalIdLayouts": 37,
+  "sourceRules": 39,
+  "distinctLiteralSourceNames": 426,
+  "sources": {
+    "Charmer": {
+      "book": "Fly Casual",
+      "printedPage": 27,
+      "physicalPdfPage": 28,
+      "glossaryChecked": true
+    },
+    "Gambler": {
+      "book": "Fly Casual",
+      "printedPage": 29,
+      "physicalPdfPage": 30,
+      "glossaryChecked": true
+    },
+    "Gunslinger": {
+      "book": "Fly Casual",
+      "printedPage": 31,
+      "physicalPdfPage": 32,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Charmer": {
+      "addedEdges": [
+        [
+          13,
+          14
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "removedEdges": [],
+      "typeChanges": []
+    },
+    "Gambler": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Gunslinger": {
+      "addedEdges": [
+        [
+          9,
+          10
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "removedEdges": [
+        [
+          10,
+          14
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "typeChanges": []
+    }
+  },
+  "newTalentGlossary": {
+    "entries": 17,
+    "printedPages": [
+      32,
+      33
+    ],
+    "physicalPdfPages": [
+      33,
+      34
+    ]
+  },
+  "sharedCoreRules": 22,
+  "officialErrata": {
+    "version": "2.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/eote_errata_v20.pdf",
+    "note": "Fly Casual p.51 adds Crit 5 to an equipment modifier; no changes to these three talent layouts."
+  },
+  "fixes": [
+    "Standard encounters use the shared initiative roll once; the duplicate Rapid Reaction charge and first-PC-slot bonus are removed.",
+    "Rapid Reaction is blocked by Winded. Rapid Reaction and outgoing Congenial share bounded finite whole-strain input; canceled or invalid input spends nothing."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 17,
+    "unchangedEarlierTreeRecords": 107,
+    "earlierCatalogSerializationPreservedExcept": [
+      "talentRules106/Rapid Reaction/resolutionNote"
+    ],
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realPurchaseButtons": 60,
+    "fullTreeXpCost": 300
+  },
+  "suites": {
+    "flyCasual": {
+      "checks": 123,
+      "errors": []
+    },
+    "noDisintegrations": {
+      "checks": 114,
+      "errors": []
+    },
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 2151,
+  "executions": [
+    {
+      "name": "fly-casual",
+      "returncode": 0,
+      "seconds": 99.52
+    },
+    {
+      "name": "fly-casual-creation",
+      "returncode": 0,
+      "seconds": 27.33
+    },
+    {
+      "name": "no-disintegrations",
+      "returncode": 0,
+      "seconds": 86.74
+    },
+    {
+      "name": "no-dis-creation",
+      "returncode": 0,
+      "seconds": 27.0
+    },
+    {
+      "name": "eote-core",
+      "returncode": 0,
+      "seconds": 78.21
+    },
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 93.9
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 108.46
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 169.47
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 96.96
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 101.13
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 81.47
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 128.98
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 167.79
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 236.03
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 18.51
+    },
+    {
+      "name": "creation",
+      "returncode": 0,
+      "seconds": 30.64
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 38.67
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 61.51
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 41.39
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 44.27
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 44.78
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 49.59
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 33.41
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 31.09
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 29.04
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 21.55
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Charmer",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gambler",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gunslinger",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    }
+  ],
+  "earlierCreationRegressionFlows": [
+    {
+      "spec": "Martial Artist",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Operator",
+      "career": "Bounty Hunter",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Skip Tracer",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Selected-die Second Chances rerolls, Double or Nothing symbol changes, two-weapon attacks and their related talents retain manual steps disclosed on cards.",
+    "Social protection, defense changes, incoming Congenial, Inspiring Rhetoric, Smooth Talker, item handling and gambling winnings retain manual steps.",
+    "Works Like a Charm and Clever Solution operate through party checks; other contexts need manual handling.",
+    "Natural reroll prompts cover failed checks; successful-check rerolls remain manual.",
+    "Deadly Accuracy stores one current skill; further distinct choices and repeated bonuses on additional hits require manual tracking.",
+    "Earlier documented defense, Force-use and other controls limitations remain."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "4f98d6edfeb6a8fd4416f09deaa8d9b2bf7a2c45"
+  }
+}
