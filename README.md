@@ -1,6 +1,13 @@
-# Sable Reach — Jobs & Training (96.0)
+# Sable Reach — Star Wars RPG
 
 Play at https://felicianovalle-dev.github.io/swrpgtest/.
+
+Current talent-tree review progress and verification are recorded in the
+[older-layout audit](docs/older-layouts-audit.md) and
+[character-options audit](docs/character-options-audit.md). Each completed batch
+links to its source findings, save-compatibility checks and gameplay limits.
+
+## Mobile navigation and downtime history
 
 Phases 95–96 repair the mobile shell and make downtime discoverable. The iPhone
 HUD flows with the page, redundant sticky toolbars are hidden, and standalone

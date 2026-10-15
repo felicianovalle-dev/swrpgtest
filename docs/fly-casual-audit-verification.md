@@ -59,3 +59,9 @@ The final-build verification completed successfully. The next group is Cyber Tec
 All thirteen browser/source suites passed 2,151 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Three new and seven earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
 
 Every target in this final run used the same distribution: Git blob `4f98d6edfeb6a8fd4416f09deaa8d9b2bf7a2c45`, 3,906,607 bytes, SHA-256 `a761a575077b32c1b6bfc6ae43dfef4054cfb823658882b44562b6633f6d7d0c`. No runtime changes followed this run. Machine-readable evidence is in [fly-casual-audit-verification.json](fly-casual-audit-verification.json). Hosted verification will compare these exact bytes and repeat the three new creation/save/resume flows.
+
+## Hosted proof
+
+Published source commit `c65f5a98ec652c09c56818b7a6efc4f7a2ac6553`, tree `e58b3a8732d42a86707f41288c0aea7051a4e49a`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38820325060) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=c65f5a98ec65) returned HTTP 200 and matched the tested distribution exactly: Git blob `4f98d6edfeb6a8fd4416f09deaa8d9b2bf7a2c45`, 3,906,607 bytes, SHA-256 `a761a575077b32c1b6bfc6ae43dfef4054cfb823658882b44562b6633f6d7d0c`.
+
+Fresh hosted Charmer and Gunslinger characters at 390×844 and Gambler at 1280×800 passed visible creation, original-ID purchases along source-checked routes, including restored Charmer and Gunslinger connections, finalization, manual save, reload and Resume. All three preserved character, campaign, XP and purchases, with no horizontal overflow or application errors. These isolated contexts contained no user saves.

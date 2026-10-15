@@ -459,7 +459,63 @@
     "Earlier documented defense, Force-use and other controls limitations remain."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "4f98d6edfeb6a8fd4416f09deaa8d9b2bf7a2c45"
+    "status": "passed",
+    "sourceCommit": "c65f5a98ec652c09c56818b7a6efc4f7a2ac6553",
+    "sourceTree": "e58b3a8732d42a86707f41288c0aea7051a4e49a",
+    "deployment": {
+      "id": 38820325060,
+      "head_sha": "c65f5a98ec652c09c56818b7a6efc4f7a2ac6553",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38820325060"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "c65f5a98ec652c09c56818b7a6efc4f7a2ac6553",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=c65f5a98ec65&check=1792104997",
+      "httpStatus": 200,
+      "bytes": 3906607,
+      "gitBlob": "4f98d6edfeb6a8fd4416f09deaa8d9b2bf7a2c45",
+      "sha256": "a761a575077b32c1b6bfc6ae43dfef4054cfb823658882b44562b6633f6d7d0c"
+    },
+    "flows": [
+      {
+        "spec": "Charmer",
+        "career": "Smuggler",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnections": true,
+        "sourceRoute": true
+      },
+      {
+        "spec": "Gambler",
+        "career": "Smuggler",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnections": false,
+        "sourceRoute": true
+      },
+      {
+        "spec": "Gunslinger",
+        "career": "Smuggler",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnections": true,
+        "sourceRoute": true
+      }
+    ],
+    "errors": []
   }
 }
