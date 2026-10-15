@@ -2,7 +2,7 @@
 window.CharacterCatalog97 = (() => {
   'use strict';
   const data = @@CHARACTER_OPTIONS@@;
-  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105};
+  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106};
   function rulesFor(spec){return ruleSets[data.trees[spec]?.ruleSet];}
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);

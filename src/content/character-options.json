@@ -14716,6 +14716,497 @@
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "fndSupp105"
+    },
+    "Assassin": {
+      "names": [
+        "Grit",
+        "Lethal Blows",
+        "Stalker",
+        "Dodge",
+        "Precise Aim",
+        "Jump Up",
+        "Quick Strike",
+        "Quick Draw",
+        "Targeted Blow",
+        "Stalker",
+        "Lethal Blows",
+        "Anatomy Lessons",
+        "Stalker",
+        "Sniper Shot",
+        "Dodge",
+        "Lethal Blows",
+        "Precise Aim",
+        "Deadly Accuracy",
+        "Dedication",
+        "Master of Shadows"
+      ],
+      "nodeIds": [
+        "a00",
+        "a01",
+        "a02",
+        "a03",
+        "a10",
+        "a11",
+        "a12",
+        "a13",
+        "a20",
+        "a21",
+        "a22",
+        "a23",
+        "a30",
+        "a31",
+        "a32",
+        "a33",
+        "a40",
+        "a41",
+        "a42",
+        "a43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.59",
+      "collection": "eote-core",
+      "page": 68,
+      "bookPdfPage": 68,
+      "bookFile": "eote-core",
+      "bookPage": 59,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "eoteCore106"
+    },
+    "Scoundrel": {
+      "names": [
+        "Black Market Contacts",
+        "Convincing Demeanor",
+        "Quick Draw",
+        "Rapid Reaction",
+        "Convincing Demeanor",
+        "Black Market Contacts",
+        "Convincing Demeanor",
+        "Quick Strike",
+        "Hidden Storage",
+        "Toughened",
+        "Black Market Contacts",
+        "Side Step",
+        "Toughened",
+        "Rapid Reaction",
+        "Hidden Storage",
+        "Side Step",
+        "Dedication",
+        "Natural Charmer",
+        "Soft Spot",
+        "Quick Strike"
+      ],
+      "nodeIds": [
+        "s00",
+        "s01",
+        "s02",
+        "s03",
+        "s10",
+        "s11",
+        "s12",
+        "s13",
+        "s20",
+        "s21",
+        "s22",
+        "s23",
+        "s30",
+        "s31",
+        "s32",
+        "s33",
+        "s40",
+        "s41",
+        "s42",
+        "s43"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.84",
+      "collection": "eote-core",
+      "page": 93,
+      "bookPdfPage": 93,
+      "bookFile": "eote-core",
+      "bookPage": 84,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "eoteCore106"
+    },
+    "Slicer": {
+      "names": [
+        "Codebreaker",
+        "Grit",
+        "Technical Aptitude",
+        "Bypass Security",
+        "Defensive Slicing",
+        "Technical Aptitude",
+        "Grit",
+        "Bypass Security",
+        "Natural Programmer",
+        "Bypass Security",
+        "Defensive Slicing",
+        "Grit",
+        "Defensive Slicing",
+        "Improved Defensive Slicing",
+        "Codebreaker",
+        "Resolve",
+        "Skilled Slicer",
+        "Master Slicer",
+        "Mental Fortress",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "z00",
+        "z01",
+        "z02",
+        "z03",
+        "z10",
+        "z11",
+        "z12",
+        "z13",
+        "z20",
+        "z21",
+        "z22",
+        "z23",
+        "z30",
+        "z31",
+        "z32",
+        "z33",
+        "z40",
+        "z41",
+        "z42",
+        "z43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Edge of the Empire Core \u00b7 p.91",
+      "collection": "eote-core",
+      "page": 100,
+      "bookPdfPage": 100,
+      "bookFile": "eote-core",
+      "bookPage": 91,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "eoteCore106"
     }
   },
   "universals": {
@@ -31924,6 +32415,375 @@
       "source": "Knights of Fate \u00b7 p.31",
       "summary": "You may use Parry while unarmed. Doing so costs one less strain, to a minimum cost of 1.",
       "resolutionNote": "The enemy-attack Parry prompt supports unarmed defense and its lower strain cost after using an unarmed attack."
+    }
+  },
+  "talentRules106": {
+    "Anatomy Lessons": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 132,
+      "pdfPage": 141,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "After a successful personal-weapon attack, spend one Destiny Point to add your Intellect in damage to one hit.",
+      "resolutionNote": "Resolve the Destiny cost and bonus on only one personal-weapon hit manually.",
+      "resolution": "manual"
+    },
+    "Black Market Contacts": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 132,
+      "pdfPage": 141,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "When buying illegal, exotic or black market goods, reduce rarity by up to your ranks. Each level removed adds 50% of the item\u2019s base cost.",
+      "resolutionNote": "Restricted-item purchases offer rarity reduction and a markup on the local price. Apply exotic-item eligibility, whole ranks and any base-price adjustment manually."
+    },
+    "Bypass Security": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 133,
+      "pdfPage": 142,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Remove one Setback per rank from Skulduggery or Computers checks to disable a security device or open a locked door.",
+      "resolutionNote": "Removes PC setbacks on checks marked as security tasks. Only Computers or Skulduggery checks to disable security or open locked doors qualify."
+    },
+    "Codebreaker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 133,
+      "pdfPage": 142,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Remove one Setback per rank from codebreaking or decryption checks. Reduce their Computers or Intellect difficulty by one; additional ranks do not increase that reduction.",
+      "resolutionNote": "Applies to PC checks marked as decryption. Other qualifying Intellect checks and any reduction below Easy require manual resolution."
+    },
+    "Convincing Demeanor": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 133,
+      "pdfPage": 142,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Remove one Setback per rank from Deception and Skulduggery checks.",
+      "resolutionNote": "Removes PC Deception and Skulduggery setbacks automatically."
+    },
+    "Deadly Accuracy": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "For each rank, choose a different combat skill. Add your trained ranks in that skill as damage to one hit of a successful personal-weapon attack using it.",
+      "resolutionNote": "The purchase prompts for one combat skill. The current selected skill adds damage automatically; track distinct choices for further ranks manually. If additional hits repeat the bonus, subtract it from those hits."
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Defensive Slicing": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "When defending a computer system, or when an opponent slices a computer you own or programmed, add one Setback per rank to the opponent\u2019s checks.",
+      "resolutionNote": "Resolve opponents\u2019 intrusion checks and their added Setback dice manually.",
+      "resolution": "manual"
+    },
+    "Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 135,
+      "pdfPage": 144,
+      "source": "Edge of the Empire Core \u00b7 p.135",
+      "summary": "When targeted by a combat check, suffer strain up to your ranks as an out-of-turn incidental. Upgrade that attack\u2019s difficulty by the amount suffered.",
+      "resolutionNote": "Enemy attacks offer its strain-for-difficulty upgrade. Resolve attacks outside those prompts manually."
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Hidden Storage": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 137,
+      "pdfPage": 146,
+      "source": "Edge of the Empire Core \u00b7 p.137",
+      "summary": "Your large equipment, vehicles or droids can conceal items with total encumbrance up to your ranks. Compartments must fit the carrier\u2019s size; detecting them is Formidable.",
+      "resolutionNote": "Resolve concealed items, their total encumbrance, carrier size and Formidable detection checks manually. It does not increase carrying capacity.",
+      "resolution": "manual"
+    },
+    "Improved Defensive Slicing": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "When defending a computer system, upgrade the opponent\u2019s difficulty once per rank of Defensive Slicing. This replaces its usual Setback dice.",
+      "resolutionNote": "Resolve intrusion checks manually, using difficulty upgrades instead of Defensive Slicing\u2019s Setback dice.",
+      "resolution": "manual"
+    },
+    "Jump Up": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 138,
+      "pdfPage": 147,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Once per round on your turn, stand from prone or seated as an incidental.",
+      "resolutionNote": "Resolve standing as an incidental and its once-per-round limit manually.",
+      "resolution": "manual"
+    },
+    "Lethal Blows": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 138,
+      "pdfPage": 147,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Add ten per rank to Critical Injury rolls you inflict on opponents.",
+      "resolutionNote": "Adds its bonus to PC combat Critical Injury rolls automatically."
+    },
+    "Master Slicer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 139,
+      "pdfPage": 148,
+      "source": "Edge of the Empire Core \u00b7 p.139",
+      "summary": "Once per round, suffer 2 strain as an incidental to reduce your next Computers or other slicing check\u2019s difficulty by one, to a minimum of Easy.",
+      "resolutionNote": "Resolve the 2-strain cost, next-check reduction and once-per-round limit manually.",
+      "resolution": "manual"
+    },
+    "Master of Shadows": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 138,
+      "pdfPage": 147,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Once per round, suffer 2 strain to reduce your next Stealth or Skulduggery check\u2019s difficulty by one, to a minimum of Easy.",
+      "resolutionNote": "PC Stealth and Skulduggery checks offer the 2-strain reduction. Track once-per-round use manually."
+    },
+    "Mental Fortress": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 139,
+      "pdfPage": 148,
+      "source": "Edge of the Empire Core \u00b7 p.139",
+      "summary": "Spend one Destiny Point to ignore ongoing Critical Injury effects on Intellect or Cunning checks until the encounter ends. The injuries remain.",
+      "resolutionNote": "Resolve the Destiny cost and temporary suppression on Intellect or Cunning checks manually; keep the Critical Injuries recorded.",
+      "resolution": "manual"
+    },
+    "Natural Charmer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 139,
+      "pdfPage": 148,
+      "source": "Edge of the Empire Core \u00b7 p.139",
+      "summary": "Once per session, reroll one Charm or Deception check, whether it succeeded or failed.",
+      "resolutionNote": "Failed eligible PC checks offer its reroll and save the session use. Rerolling a successful check requires manual resolution."
+    },
+    "Natural Programmer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 139,
+      "pdfPage": 148,
+      "source": "Edge of the Empire Core \u00b7 p.139",
+      "summary": "Once per session, reroll one Computers or Astrogation check, whether it succeeded or failed.",
+      "resolutionNote": "Failed eligible PC checks offer its reroll and save the session use. Rerolling a successful check requires manual resolution."
+    },
+    "Precise Aim": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Once per round on your turn, use a maneuver before a combat check and suffer strain up to your ranks. Reduce the target\u2019s melee and ranged defense by that amount for this attack.",
+      "resolutionNote": "Precise Aim Attack asks for strain, spends its maneuver and action, and reduces defense for that attack. Canceling or selecting zero spends nothing. Track once-per-round use across extra turns manually."
+    },
+    "Quick Draw": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Once per round on your turn, draw or holster an easily accessible weapon as an incidental. Reduce longer weapon preparation or stowing requirements by one maneuver.",
+      "resolutionNote": "Resolve the accessible weapon and reduced preparation requirement manually.",
+      "resolution": "manual"
+    },
+    "Quick Strike": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Add one Boost per rank to combat checks against a target that has not yet acted in the encounter.",
+      "resolutionNote": "Adds combat Boost against targets that have not yet acted in the encounter."
+    },
+    "Rapid Reaction": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "When rolling Cool or Vigilance for initiative, suffer strain up to your ranks to add that many automatic Successes.",
+      "resolutionNote": "Initiative prompts offer strain-for-Success conversion. Choose whole strain amounts; fractions require manual correction."
+    },
+    "Resolve": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Reduce involuntary strain suffered by one per rank, to a minimum of 1. Voluntary strain costs are unchanged.",
+      "resolutionNote": "Reduces strain in supported Threat and failed-check results. Apply its reduction to other involuntary strain manually; voluntary costs stay unchanged."
+    },
+    "Side Step": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Once per round on your turn, use a maneuver and suffer strain up to your ranks. Until your next turn, upgrade incoming ranged attacks by that amount.",
+      "resolutionNote": "The combat control spends a maneuver and strain and upgrades ranged attacks. Track once-per-round use and until-next-turn expiry manually; the effect clears at the round boundary. Canceling its prompt still spends the maneuver.",
+      "sourceNote": "The glossary on p.142 lasts until the next turn; the tree\u2019s abbreviated text says this round."
+    },
+    "Skilled Slicer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "When making a Computers check, spend one Triumph to gain control of that system. Further Computers checks within it may be made as maneuvers.",
+      "resolutionNote": "Resolve the Triumph cost, system control and subsequent maneuver checks manually.",
+      "resolution": "manual"
+    },
+    "Sniper Shot": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Once per round before a non-thrown ranged attack, use a maneuver to extend weapon range by up to one band per rank. Upgrade attack difficulty once per added band, in addition to normal range difficulty.",
+      "resolutionNote": "Resolve the maneuver, extra range and difficulty upgrades manually; the attack control does not extend weapon range.",
+      "resolution": "manual"
+    },
+    "Soft Spot": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 152,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "After a successful personal-weapon attack, spend one Destiny Point to add your Cunning in damage to one hit.",
+      "resolutionNote": "Resolve the Destiny cost and bonus on only one personal-weapon hit manually.",
+      "resolution": "manual"
+    },
+    "Stalker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 143,
+      "pdfPage": 152,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "Add one Boost per rank to Stealth and Coordination checks.",
+      "resolutionNote": "Adds PC Stealth and Coordination Boost dice automatically."
+    },
+    "Targeted Blow": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 144,
+      "pdfPage": 153,
+      "source": "Edge of the Empire Core \u00b7 p.144",
+      "summary": "After a successful personal-weapon attack, spend one Destiny Point to add your Agility in damage to one hit.",
+      "resolutionNote": "Resolve the Destiny cost and bonus on only one personal-weapon hit manually.",
+      "resolution": "manual",
+      "errata": "Official EotE errata v2.0 p.1 removes Mercenary Soldier from the glossary Trees list; Assassin retains it."
+    },
+    "Technical Aptitude": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Reduce the time needed for computer-related tasks by 25% per rank.",
+      "resolutionNote": "Resolve computer-task time reductions manually.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
     }
   }
 }

@@ -4740,7 +4740,7 @@ function endPCSlot(){
   if(a){let st=actorState(a),c=st.conditions;if(c.disoriented>0)c.disoriented--;if(c.immobilized>0)c.immobilized--;if(c.staggered>0)c.staggered--;if(c.suppressed>0)c.suppressed--;if(c.noFreeManeuver>0)c.noFreeManeuver--;}
   C.turn=null;C.slotIndex++;beginSlot()
 }
-function spendManeuver(count=1,label='maneuver'){
+function spendManeuver(count=1,label='maneuver',keepAction=false){
   let C=S.combat,T=C.turn;if(!T||!startTurnActor())return false;T=C.turn;if(!T)return false;let id=T.actorId,st=actorState(id),name=actorById(id)?.name||id;
   if(st.conditions.immobilized>0){cLog(`${name} is immobilized and cannot perform maneuvers.`);return false}
   for(let i=0;i<count;i++){
@@ -4748,7 +4748,12 @@ function spendManeuver(count=1,label='maneuver'){
     let freeBlocked=st.conditions.hamstrung||st.conditions.noFreeManeuver>0;
     if(T.maneuvers===0&&!freeBlocked){T.maneuvers++}
     else if(T.maneuvers<2){
-      if(st.conditions.winded){if(!T.actionUsed){T.actionUsed=true;T.maneuvers++}else{cLog(`${name} is Winded and cannot voluntarily suffer strain for another maneuver.`);return false}}
+      if(keepAction){
+        if(st.conditions.winded||st.strain+2>actorST(id)){cLog(`${name} cannot pay for another maneuver and keep the attack action.`);return false}
+        if(!confirm(`${label} needs another maneuver. Suffer 2 strain and keep your action for the attack?`))return false;
+        actorStrain(id,2);T.maneuvers++
+      }
+      else if(st.conditions.winded){if(!T.actionUsed){T.actionUsed=true;T.maneuvers++}else{cLog(`${name} is Winded and cannot voluntarily suffer strain for another maneuver.`);return false}}
       else if(!T.actionUsed&&confirm(`${label} needs another maneuver. OK = suffer 2 strain. Cancel = trade your action for the maneuver.`)){
         if(st.strain+2>actorST(id)){cLog(`${name} cannot safely suffer 2 more strain.`);return false}actorStrain(id,2);T.maneuvers++
       }else if(!T.actionUsed){T.actionUsed=true;T.maneuvers++}
@@ -5325,8 +5330,21 @@ function maybeBringItDown(target){
 function pcAttack(kind='normal'){
   let C=S.combat,T=C.turn;if(!T||C.pendingSpend)return;if(!startTurnActor())return;T=C.turn;if(!T||T.actorId!=='pc'||T.actionUsed)return;
   let actor=squadActors().find(a=>a.id==='pc'),target=C.enemies[Number($('target').value)||0];if(!target||enemyDefeated(target))return;
-  let w=WEAPONS[S.weapon];C.unarmedReady=false;if(C.outOfAmmo?.[w.id]){cLog(`${w.name} is out of ammunition for this encounter.`);renderCombat();return}
-  let precise=kind==='precise'&&canVoluntarilySufferStrain('pc')?Math.min(talentRank('Precise Aim'),Math.max(0,strainThreshold()-S.strain)):0;if(precise)S.strain+=precise;
+  let w=WEAPONS[S.weapon];if(kind!=='precise')C.unarmedReady=false;if(C.outOfAmmo?.[w.id]){cLog(`${w.name} is out of ammunition for this encounter.`);renderCombat();return}
+  let precise=0;
+  if(kind==='precise'){
+    const preview=combatPool(actor,target,T.aim,0,false);
+    if(preview.invalid){cLog(preview.reason);renderCombat();return}
+    const max=Math.min(talentRank('Precise Aim'),Math.max(0,strainThreshold()-S.strain));
+    if(T.preciseAimUsed||max<1||!canVoluntarilySufferStrain('pc'))return;
+    const answer=prompt(`Precise Aim: suffer how much strain (1–${max}) to reduce this target’s defense?`,String(max));
+    if(answer===null)return;
+    const value=Number(answer);if(!Number.isFinite(value))return;
+    precise=Math.max(0,Math.min(max,Math.floor(value)));if(!precise)return;
+    S.strain+=precise;
+    if(!spendManeuver(1,'Precise Aim',true)){S.strain-=precise;renderCombat();return}
+    T.preciseAimUsed=true;C.unarmedReady=false;
+  }
   let q=combatPool(actor,target,T.aim,precise,true);if(q.invalid){cLog(q.reason);renderCombat();return}
   if(C.nextAllyUpgrade){let up=C.nextAllyUpgrade;upgradePositivePool(q.p,up);C.nextAllyUpgrade=0}
   maybeUseVaapadControl(q.p,q.skill);
