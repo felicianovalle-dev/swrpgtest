@@ -5760,6 +5760,12 @@ function naturalReroll(skill,q,r){
   if(o&&confirm(`Use ${o.name} to reroll this failed ${skill} check?`)){S.sessionUsed[o.key]=true;return rollNarr(q.p)}
   return r
 }
+function promptTalentStrain(label,limit){
+  const max=Number.isFinite(limit)?Math.max(0,Math.floor(limit)):0;
+  if(!max)return 0;
+  const answer=prompt(label,String(max));if(answer===null)return 0;
+  const value=Number(answer);return Number.isFinite(value)?Math.max(0,Math.min(max,Math.floor(value))):0
+}
 function useFortuneFavorsBold(){
   if(!hasTalent('Fortune Favors the Bold')||S.sessionUsed.fortuneFavorsBold)return;
   if(S.destiny.dark<1){bLog('Fortune Favors the Bold needs at least one dark Destiny Point.');return}
@@ -5812,7 +5818,7 @@ function performBest(skill,ctx={}){
     if(['Charm','Negotiation'].includes(skill)&&talentRank('Congenial')&&canVoluntarilySufferStrain('pc')){
       let max=Math.min(talentRank('Congenial'),Math.max(0,strainThreshold()-S.strain));
       if(max>0&&confirm(`Use Congenial? Suffer up to ${max} strain to downgrade that many challenge dice on this ${skill} check.`)){
-        let n=Math.max(0,Math.min(max,Number(prompt('Congenial strain to suffer',String(max)))||0));
+        let n=promptTalentStrain('Congenial strain to suffer',max);
         if(n){S.strain+=n;live.difficultyDowngrade=(live.difficultyDowngrade||0)+n}
       }
     }
@@ -6224,8 +6230,8 @@ function initiativeRoll(actor,skill){
   const r=rollNarr(p);let autoAdv=0,foresee=null;
   if(actor.id==='pc'){
     let rr=talentRank('Rapid Reaction'),capacity=Math.max(0,strainThreshold()-S.strain),max=Math.min(rr,capacity);
-    if(max>0&&confirm(`Use Rapid Reaction? Suffer up to ${max} strain to add the same number of Successes to Initiative.`)){
-      let n=Math.max(0,Math.min(max,Number(prompt('Rapid Reaction strain to suffer',String(max)))||0));
+    if(max>0&&canVoluntarilySufferStrain('pc')&&confirm(`Use Rapid Reaction? Suffer up to ${max} strain to add the same number of Successes to Initiative.`)){
+      let n=promptTalentStrain('Rapid Reaction strain to suffer',max);
       if(n){S.strain+=n;r.ns+=n;r.ok=r.ns>0}
     }
   }
@@ -6541,13 +6547,7 @@ function enemySet(kind){
 function startCombat(kind){
   ensurePhase12State();
   let prepared=confirm('Were you prepared for this encounter? OK = Cool for your squad. Cancel = Vigilance.');
-  let enemies=enemySet(kind),rr=talentRank('Rapid Reaction'),rrUsed=0;
-  let slots=buildInitiative(enemies,prepared);
-  if(rr&&S.strain<strainThreshold()){
-    let v=Number(prompt(`Rapid Reaction rank ${rr}. Spend strain to add automatic successes to your initiative result?`,'0'))||0;
-    rrUsed=canVoluntarilySufferStrain('pc')?Math.max(0,Math.min(rr,v,strainThreshold()-S.strain)):0;S.strain+=rrUsed;
-    if(rrUsed&&slots.length){let firstPc=slots.find(x=>x.side==='PC');if(firstPc)firstPc.success+=rrUsed;slots.sort((a,b)=>b.success-a.success||b.adv-a.adv||(a.side==='PC'?-1:1))}
-  }
+  let enemies=enemySet(kind),slots=buildInitiative(enemies,prepared);
   S.combat={kind,enemies,round:1,slots,slotIndex:0,actedPC:[],actedNPC:[],range:2,turn:null,cover:false,defUpgrade:0,log:[],prepared,critPending:null,pendingSpend:null,nextAllyBoost:0,nextAllyUpgrade:0,tempDefense:0,outOfAmmo:{},setTriggerUsed:{},overwatch:{},positions:{},lastAIIntent:'Enemy AI is evaluating positions and roles.'};
   initializeTacticalState(S.combat);
   if(S.pendingForeseeCombat){
@@ -30956,6 +30956,481 @@ window.CharacterCatalog97 = (() => {
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "noDis107"
+    },
+    "Charmer": {
+      "names": [
+        "Smooth Talker",
+        "Inspiring Rhetoric",
+        "Kill with Kindness",
+        "Grit",
+        "Kill with Kindness",
+        "Improved Inspiring Rhetoric",
+        "Congenial",
+        "Plausible Deniability",
+        "Disarming Smile",
+        "Works Like a Charm",
+        "Disarming Smile",
+        "Grit",
+        "Smooth Talker",
+        "Congenial",
+        "Just Kidding!",
+        "Intense Presence",
+        "Natural Charmer",
+        "Dedication",
+        "Don't Shoot!",
+        "Resolve"
+      ],
+      "nodeIds": [
+        "ch00",
+        "ch01",
+        "ch02",
+        "ch03",
+        "ch10",
+        "ch11",
+        "ch12",
+        "ch13",
+        "ch20",
+        "ch21",
+        "ch22",
+        "ch23",
+        "ch30",
+        "ch31",
+        "ch32",
+        "ch33",
+        "ch40",
+        "ch41",
+        "ch42",
+        "ch43"
+      ],
+      "types": [
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Fly Casual \u00b7 p.27",
+      "collection": "fly-casual",
+      "page": 28,
+      "bookPdfPage": 28,
+      "bookFile": "fly-casual",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "flyCasual108"
+    },
+    "Gambler": {
+      "names": [
+        "Convincing Demeanor",
+        "Grit",
+        "Toughened",
+        "Up the Ante",
+        "Grit",
+        "Second Chances",
+        "Dedication",
+        "Supreme Double or Nothing",
+        "Second Chances",
+        "Convincing Demeanor",
+        "Fortune Favors the Bold",
+        "Natural Rogue",
+        "Up the Ante",
+        "Up the Ante",
+        "Clever Solution",
+        "Second Chances",
+        "Double or Nothing",
+        "Smooth Talker",
+        "Natural Negotiator",
+        "Improved Double or Nothing"
+      ],
+      "nodeIds": [
+        "ga00",
+        "ga01",
+        "ga02",
+        "ga03",
+        "ga10",
+        "ga11",
+        "ga12",
+        "ga13",
+        "ga20",
+        "ga21",
+        "ga22",
+        "ga23",
+        "ga30",
+        "ga31",
+        "ga32",
+        "ga33",
+        "ga40",
+        "ga41",
+        "ga42",
+        "ga43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Fly Casual \u00b7 p.29",
+      "collection": "fly-casual",
+      "page": 30,
+      "bookPdfPage": 30,
+      "bookFile": "fly-casual",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "flyCasual108"
+    },
+    "Gunslinger": {
+      "names": [
+        "Grit",
+        "Quick Strike",
+        "Rapid Reaction",
+        "Quick Draw",
+        "Lethal Blows",
+        "Grit",
+        "Quick Strike",
+        "Improved Quick Draw",
+        "Toughened",
+        "Call 'Em",
+        "Dodge",
+        "Sorry About the Mess",
+        "Confidence",
+        "Lethal Blows",
+        "Guns Blazing",
+        "Rapid Reaction",
+        "Dedication",
+        "Spitfire",
+        "Natural Marksman",
+        "Deadly Accuracy"
+      ],
+      "nodeIds": [
+        "gs00",
+        "gs01",
+        "gs02",
+        "gs03",
+        "gs10",
+        "gs11",
+        "gs12",
+        "gs13",
+        "gs20",
+        "gs21",
+        "gs22",
+        "gs23",
+        "gs30",
+        "gs31",
+        "gs32",
+        "gs33",
+        "gs40",
+        "gs41",
+        "gs42",
+        "gs43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Fly Casual \u00b7 p.31",
+      "collection": "fly-casual",
+      "page": 32,
+      "bookPdfPage": 32,
+      "bookFile": "fly-casual",
+      "bookPage": 31,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "flyCasual108"
     }
   },
   "universals": {
@@ -48426,7 +48901,7 @@ window.CharacterCatalog97 = (() => {
       "pdfPage": 150,
       "source": "Edge of the Empire Core \u00b7 p.141",
       "summary": "When rolling Cool or Vigilance for initiative, suffer strain up to your ranks to add that many automatic Successes.",
-      "resolutionNote": "Initiative prompts offer strain-for-Success conversion. Choose whole strain amounts; fractions require manual correction."
+      "resolutionNote": "The initiative roll offers a whole strain spend up to ranks and available capacity, adding that many Successes once. Cancel or invalid input spends nothing; Winded blocks use."
     },
     "Resolve": {
       "type": "Passive",
@@ -48988,10 +49463,457 @@ window.CharacterCatalog97 = (() => {
       "summary": "You may use Parry while unarmed. Doing so costs one less strain, to a minimum cost of 1.",
       "resolutionNote": "Enemy-attack Parry prompts support the reduced cost after using an unarmed attack. Other unarmed readiness requires manual handling."
     }
+  },
+  "talentRules108": {
+    "Call 'Em": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "Do not add Setback dice to your combat checks from using the Aim maneuver to target a specific location or item.",
+      "resolutionNote": "Resolve called-shot Aim setbacks manually. Ordinary Aim and other setbacks are unchanged.",
+      "resolution": "manual"
+    },
+    "Clever Solution": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "Once per session, use Cunning instead of the usual characteristic for one skill check. Explain how your resourcefulness helps with that challenge.",
+      "resolutionNote": "Party checks offer the substitution and save session use. Resolve checks outside that workflow manually."
+    },
+    "Confidence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Reduce the difficulty of Discipline fear checks by one per rank; no check is needed if difficulty reaches zero.",
+      "resolutionNote": "Reduces difficulty on PC Discipline checks explicitly marked as fear checks."
+    },
+    "Congenial": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "On your Charm or Negotiation check, suffer strain up to ranks to downgrade difficulty that many times. When targeted by Charm or Negotiation, the same cost upgrades that incoming check\u2019s difficulty.",
+      "resolutionNote": "Party checks offer the outgoing downgrade with whole strain costs. Apply incoming social-check upgrades manually; downgrading cannot remove ordinary difficulty dice."
+    },
+    "Convincing Demeanor": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 133,
+      "pdfPage": 142,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Remove one Setback per rank from Deception and Skulduggery checks.",
+      "resolutionNote": "Removes PC Deception and Skulduggery setbacks automatically."
+    },
+    "Deadly Accuracy": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "For each rank, choose a different combat skill. Add your trained ranks in that skill as damage to one hit of a successful personal-weapon attack using it.",
+      "resolutionNote": "The purchase prompts for one combat skill. The current selected skill adds damage automatically; track distinct choices for further ranks manually. If additional hits repeat the bonus, subtract it from those hits."
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Disarming Smile": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "Make an opposed Charm action against one target within short range. On success, lower its melee and ranged defense by your ranks, to a minimum of 0, for the rest of the encounter.",
+      "resolutionNote": "Resolve the opposed check, short-range target and both defense changes manually.",
+      "resolution": "manual"
+    },
+    "Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 135,
+      "pdfPage": 144,
+      "source": "Edge of the Empire Core \u00b7 p.135",
+      "summary": "When targeted by a combat check, suffer strain up to your ranks as an out-of-turn incidental. Upgrade that attack\u2019s difficulty by the amount suffered.",
+      "resolutionNote": "Enemy attacks offer its strain-for-difficulty upgrade. Resolve attacks outside those prompts manually."
+    },
+    "Don't Shoot!": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "Once per session, make a Hard Charm action. On success, you cannot be targeted by combat checks until this encounter ends or you make a combat check. Explain the ruse; the GM decides whether it can work.",
+      "resolutionNote": "Resolve the action, GM approval, protection and session use manually.",
+      "resolution": "manual"
+    },
+    "Double or Nothing": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "Once per check, suffer 2 strain and increase difficulty by 1. After canceling opposing symbols, double the remaining Advantage.",
+      "resolutionNote": "Declare before rolling and resolve the strain, increased difficulty and Advantage doubling manually.",
+      "resolution": "manual"
+    },
+    "Fortune Favors the Bold": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "Once per session, suffer 2 strain to turn one dark Destiny Point into a light point. This cannot interrupt the spending of a Destiny Point.",
+      "resolutionNote": "The utility control pays strain, flips one available dark point and saves session use. Do not use it to interrupt a Destiny spend."
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Guns Blazing": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "When making a combined attack with two Ranged (Light) weapons, suffer 2 strain to avoid the usual difficulty increase for attacking with two weapons.",
+      "resolutionNote": "Resolve the two-weapon attack, strain and difficulty manually. This does not waive the Advantage needed for an additional hit.",
+      "resolution": "manual"
+    },
+    "Improved Double or Nothing": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "When using Double or Nothing, also double the remaining Successes after canceling opposing symbols.",
+      "resolutionNote": "Requires Double or Nothing to activate; resolve its additional Success doubling manually.",
+      "resolution": "manual"
+    },
+    "Improved Inspiring Rhetoric": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 149,
+      "pdfPage": 150,
+      "source": "Age of Rebellion Core \u00b7 p.149",
+      "force": false,
+      "summary": "Each ally affected by Inspiring Rhetoric gains one Boost on skill checks for rounds equal to your Leadership ranks.",
+      "resolutionNote": "Track the affected allies, Boost and Leadership-based duration manually.",
+      "resolution": "manual"
+    },
+    "Improved Quick Draw": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "You may activate Quick Draw twice per round instead of once.",
+      "resolutionNote": "Resolve item handling manually; this increases Quick Draw\u2019s use limit rather than granting a free attack.",
+      "resolution": "manual"
+    },
+    "Inspiring Rhetoric": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 149,
+      "pdfPage": 150,
+      "source": "Age of Rebellion Core \u00b7 p.149",
+      "force": false,
+      "summary": "As an action, make an Average Leadership check. Each Success lets one ally within short range recover 1 strain; spend each Advantage to heal 1 more strain on an affected ally.",
+      "resolutionNote": "Resolve the Leadership action, nearby allies and strain recovery manually.",
+      "resolution": "manual"
+    },
+    "Intense Presence": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Spend one Destiny Point to recover strain equal to your Presence.",
+      "resolutionNote": "The utility control spends a light Destiny Point and recovers strain equal to Presence."
+    },
+    "Just Kidding!": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "Once per round when you or an ally within short range rolls Despair on a social check, spend one Destiny Point to turn one Despair into one Failure. Explain how you smooth over the misstep.",
+      "resolutionNote": "Resolve the Destiny cost, range, Failure replacement and round limit manually. The glossary converts the Despair; it does not simply erase the result.",
+      "resolution": "manual"
+    },
+    "Kill with Kindness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Remove one Setback per rank from Charm and Leadership checks.",
+      "resolutionNote": "Removes setbacks from PC Charm and Leadership checks."
+    },
+    "Lethal Blows": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 138,
+      "pdfPage": 147,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Add ten per rank to Critical Injury rolls you inflict on opponents.",
+      "resolutionNote": "Adds its bonus to PC combat Critical Injury rolls automatically."
+    },
+    "Natural Charmer": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 139,
+      "pdfPage": 148,
+      "source": "Edge of the Empire Core \u00b7 p.139",
+      "summary": "Once per session, reroll one Charm or Deception check, whether it succeeded or failed.",
+      "resolutionNote": "Failed eligible PC checks offer its reroll and save the session use. Rerolling a successful check requires manual resolution."
+    },
+    "Natural Marksman": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153",
+      "force": false,
+      "summary": "Once per session, reroll one Ranged (Light) or Ranged (Heavy) check.",
+      "resolutionNote": "Eligible failed checks offer one reroll and save session use. Rerolling a successful check requires manual resolution."
+    },
+    "Natural Negotiator": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Cool or Negotiation check.",
+      "resolutionNote": "Offers one failed Cool or Negotiation reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Natural Rogue": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153",
+      "force": false,
+      "summary": "Once per session, reroll one Skulduggery or Stealth check.",
+      "resolutionNote": "Eligible failed checks offer one reroll and save session use. Rerolling a successful check requires manual resolution."
+    },
+    "Plausible Deniability": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "Remove one Setback per rank from Coercion and Deception.",
+      "resolutionNote": "Removes setbacks from PC Coercion and Deception."
+    },
+    "Quick Draw": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Once per round on your turn, draw or holster an easily accessible weapon as an incidental. Reduce longer weapon preparation or stowing requirements by one maneuver.",
+      "resolutionNote": "Resolve the accessible weapon and reduced preparation requirement manually.",
+      "resolution": "manual"
+    },
+    "Quick Strike": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Add one Boost per rank to combat checks against a target that has not yet acted in the encounter.",
+      "resolutionNote": "Adds combat Boost against targets that have not yet acted in the encounter."
+    },
+    "Rapid Reaction": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "When rolling Cool or Vigilance for initiative, suffer strain up to your ranks to add that many automatic Successes.",
+      "resolutionNote": "The initiative roll offers a whole strain spend up to ranks and available capacity, adding that many Successes once. Cancel or invalid input spends nothing; Winded blocks use."
+    },
+    "Resolve": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Reduce involuntary strain suffered by one per rank, to a minimum of 1. Voluntary strain costs are unchanged.",
+      "resolutionNote": "Reduces strain in supported Threat and failed-check results. Apply its reduction to other involuntary strain manually; voluntary costs stay unchanged."
+    },
+    "Second Chances": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "Once per encounter after rolling a skill check but before resolving it, reroll selected positive dice up to your ranks and accept their new results. Force dice cannot be rerolled.",
+      "resolutionNote": "Select and reroll eligible dice manually, retain the other dice, recalculate cancellations and track encounter use.",
+      "resolution": "manual"
+    },
+    "Smooth Talker": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Choose Charm, Coercion, Deception or Negotiation on first acquisition. Spend Triumph on that skill to gain extra Successes equal to your ranks.",
+      "resolutionNote": "Record the chosen social skill and resolve Triumph conversion manually.",
+      "resolution": "manual"
+    },
+    "Sorry About the Mess": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "Reduce the Critical rating of a non-starship weapon you wield by 1, to a minimum of 1, against a target that has not acted this encounter.",
+      "resolutionNote": "Personal-combat Critical controls apply the lower Advantage cost before the target acts. This changes the rating, not Critical Injury severity or damage."
+    },
+    "Spitfire": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "After a successful combined attack with two Ranged (Light) weapons, allocate each additional hit to another target within that weapon\u2019s range.",
+      "resolutionNote": "Resolve the combined attack, additional-hit costs, legal targets and damage manually.",
+      "resolution": "manual"
+    },
+    "Supreme Double or Nothing": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Fly Casual \u00b7 p.32",
+      "summary": "When using Double or Nothing, also double Triumph and Despair counts.",
+      "resolutionNote": "Requires Double or Nothing to activate; resolve doubled Triumph and Despair manually, including their consequences.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Up the Ante": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "When you win at gambling, receive 10 percent more credits per rank.",
+      "resolutionNote": "Apply the bonus to gambling winnings manually. Jobs, sales, mission rewards and other income do not qualify.",
+      "resolution": "manual"
+    },
+    "Works Like a Charm": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Fly Casual \u00b7 p.33",
+      "summary": "Once per session, use Presence instead of the usual characteristic for one skill check. Explain how your social ability helps with that challenge.",
+      "resolutionNote": "Party checks offer the substitution and save session use. Resolve checks outside that workflow manually."
+    }
   }
 }
 ;
-  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106,noDis107:data.talentRules107};
+  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106,noDis107:data.talentRules107,flyCasual108:data.talentRules108};
   function rulesFor(spec){return ruleSets[data.trees[spec]?.ruleSet];}
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
@@ -50093,7 +51015,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.11-no-disintegrations-audit';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.12-fly-casual-audit';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 

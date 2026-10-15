@@ -3873,6 +3873,12 @@ function naturalReroll(skill,q,r){
   if(o&&confirm(`Use ${o.name} to reroll this failed ${skill} check?`)){S.sessionUsed[o.key]=true;return rollNarr(q.p)}
   return r
 }
+function promptTalentStrain(label,limit){
+  const max=Number.isFinite(limit)?Math.max(0,Math.floor(limit)):0;
+  if(!max)return 0;
+  const answer=prompt(label,String(max));if(answer===null)return 0;
+  const value=Number(answer);return Number.isFinite(value)?Math.max(0,Math.min(max,Math.floor(value))):0
+}
 function useFortuneFavorsBold(){
   if(!hasTalent('Fortune Favors the Bold')||S.sessionUsed.fortuneFavorsBold)return;
   if(S.destiny.dark<1){bLog('Fortune Favors the Bold needs at least one dark Destiny Point.');return}
@@ -3925,7 +3931,7 @@ function performBest(skill,ctx={}){
     if(['Charm','Negotiation'].includes(skill)&&talentRank('Congenial')&&canVoluntarilySufferStrain('pc')){
       let max=Math.min(talentRank('Congenial'),Math.max(0,strainThreshold()-S.strain));
       if(max>0&&confirm(`Use Congenial? Suffer up to ${max} strain to downgrade that many challenge dice on this ${skill} check.`)){
-        let n=Math.max(0,Math.min(max,Number(prompt('Congenial strain to suffer',String(max)))||0));
+        let n=promptTalentStrain('Congenial strain to suffer',max);
         if(n){S.strain+=n;live.difficultyDowngrade=(live.difficultyDowngrade||0)+n}
       }
     }
@@ -4337,8 +4343,8 @@ function initiativeRoll(actor,skill){
   const r=rollNarr(p);let autoAdv=0,foresee=null;
   if(actor.id==='pc'){
     let rr=talentRank('Rapid Reaction'),capacity=Math.max(0,strainThreshold()-S.strain),max=Math.min(rr,capacity);
-    if(max>0&&confirm(`Use Rapid Reaction? Suffer up to ${max} strain to add the same number of Successes to Initiative.`)){
-      let n=Math.max(0,Math.min(max,Number(prompt('Rapid Reaction strain to suffer',String(max)))||0));
+    if(max>0&&canVoluntarilySufferStrain('pc')&&confirm(`Use Rapid Reaction? Suffer up to ${max} strain to add the same number of Successes to Initiative.`)){
+      let n=promptTalentStrain('Rapid Reaction strain to suffer',max);
       if(n){S.strain+=n;r.ns+=n;r.ok=r.ns>0}
     }
   }
@@ -4654,13 +4660,7 @@ function enemySet(kind){
 function startCombat(kind){
   ensurePhase12State();
   let prepared=confirm('Were you prepared for this encounter? OK = Cool for your squad. Cancel = Vigilance.');
-  let enemies=enemySet(kind),rr=talentRank('Rapid Reaction'),rrUsed=0;
-  let slots=buildInitiative(enemies,prepared);
-  if(rr&&S.strain<strainThreshold()){
-    let v=Number(prompt(`Rapid Reaction rank ${rr}. Spend strain to add automatic successes to your initiative result?`,'0'))||0;
-    rrUsed=canVoluntarilySufferStrain('pc')?Math.max(0,Math.min(rr,v,strainThreshold()-S.strain)):0;S.strain+=rrUsed;
-    if(rrUsed&&slots.length){let firstPc=slots.find(x=>x.side==='PC');if(firstPc)firstPc.success+=rrUsed;slots.sort((a,b)=>b.success-a.success||b.adv-a.adv||(a.side==='PC'?-1:1))}
-  }
+  let enemies=enemySet(kind),slots=buildInitiative(enemies,prepared);
   S.combat={kind,enemies,round:1,slots,slotIndex:0,actedPC:[],actedNPC:[],range:2,turn:null,cover:false,defUpgrade:0,log:[],prepared,critPending:null,pendingSpend:null,nextAllyBoost:0,nextAllyUpgrade:0,tempDefense:0,outOfAmmo:{},setTriggerUsed:{},overwatch:{},positions:{},lastAIIntent:'Enemy AI is evaluating positions and roles.'};
   initializeTacticalState(S.combat);
   if(S.pendingForeseeCombat){
