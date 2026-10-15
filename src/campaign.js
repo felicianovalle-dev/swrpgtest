@@ -185,6 +185,6 @@
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.8-sentinel-warrior-audit';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.9-force-supplement-audit';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();

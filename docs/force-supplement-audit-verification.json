@@ -1,0 +1,451 @@
+{
+  "build": "96.9-force-supplement-audit",
+  "package": "1.9.15",
+  "reviewedDate": "2026-10-15",
+  "baselineCommit": "6a7fc68132f0b3ffcba58f4685ba96ded604955a",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3824948,
+    "gitBlob": "08cea2a0b231fcfdfe83a6547bfc55517da6cf42",
+    "sha256": "8dcf0662a3288ff7745220f065a1b2f36501d593380c7127f83b3106045c44ba"
+  },
+  "reviewedLayouts": 4,
+  "reviewedNodes": 80,
+  "retainedIds": 80,
+  "frozenLayouts": 48,
+  "frozenNodes": 960,
+  "completedOriginal48": 22,
+  "remainingLayouts": 26,
+  "sourceRules": 47,
+  "distinctSourceNames": 403,
+  "sources": {
+    "Armorer": {
+      "book": "Keeping the Peace",
+      "printedPage": 25,
+      "physicalPdfPage": 29,
+      "collectionPdfPage": 9,
+      "glossaryChecked": true
+    },
+    "Colossus": {
+      "book": "Knights of Fate",
+      "printedPage": 25,
+      "physicalPdfPage": 27,
+      "collectionPdfPage": 38,
+      "glossaryChecked": true
+    },
+    "Juyo Berserker": {
+      "book": "Knights of Fate",
+      "printedPage": 27,
+      "physicalPdfPage": 29,
+      "collectionPdfPage": 39,
+      "glossaryChecked": true
+    },
+    "Steel Hand Adept": {
+      "book": "Knights of Fate",
+      "printedPage": 29,
+      "physicalPdfPage": 31,
+      "collectionPdfPage": 42,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Armorer": {
+      "addedEdges": [
+        [
+          10,
+          11
+        ]
+      ],
+      "removedEdges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Colossus": {
+      "addedEdges": [],
+      "removedEdges": [],
+      "typeChanges": []
+    },
+    "Juyo Berserker": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "ju23",
+          "talent": "Embrace Your Hate",
+          "from": "Force Active",
+          "to": "Active"
+        },
+        {
+          "id": "ju41",
+          "talent": "Embrace Your Hate",
+          "from": "Force Active",
+          "to": "Active"
+        }
+      ]
+    },
+    "Steel Hand Adept": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "typeChanges": []
+    }
+  },
+  "sourceDiscrepancies": [
+    "Armorer: the core sourcebook includes Tinkerer\u2013Falling Avalanche and Imbue Item\u2013Reinforce Item; the compilation omits them. Both saved connections remain.",
+    "Headbutt and Unstoppable: unranked in the sourcebook glossary despite compilation rank markers.",
+    "Hard Headed: glossary starts at Daunting and reduces difficulty only per additional rank; Improved Hard Headed starts at Formidable and likewise excludes the first rank.",
+    "Acklay\u2019s Scything Strike: the compilation says Attack; the original source name and IDs remain.",
+    "Embrace Your Hate: ordinary active, ranked; both saved Force labels are removed."
+  ],
+  "mechanicsFixes": [
+    "Inner Peace cancellation, zero and whole-point input.",
+    "Indomitable Will commitment validation before maneuver spending, plus activation-strain reservation and refund.",
+    "Far Strike action spending on failed range extension or declined Force costs, Short-range use with committed dice and zero-Force guard.",
+    "Hard Headed one-action limit, staggered exception, disabled spent button and save/resume of the exception."
+  ],
+  "compatibility": {
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 26,
+    "originalEarlierCatalogRecords": 97,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realNewPurchaseButtons": 80,
+    "costPerFullTree": 300
+  },
+  "suites": {
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 1810,
+  "suiteExitStatuses": [
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 102.62
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 115.4
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 178.7
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 103.82
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 108.39
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 103.09
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 157.15
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 194.17
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 298.56
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 20.55
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112,
+    "executions": [
+      {
+        "name": "check_world94",
+        "returncode": 0,
+        "seconds": 30.05
+      },
+      {
+        "name": "check_work96",
+        "returncode": 0,
+        "seconds": 50.39
+      },
+      {
+        "name": "check_save97",
+        "returncode": 0,
+        "seconds": 37.85
+      },
+      {
+        "name": "check_home",
+        "returncode": 0,
+        "seconds": 58.5
+      },
+      {
+        "name": "check_workshop",
+        "returncode": 0,
+        "seconds": 42.03
+      },
+      {
+        "name": "check_save_reliability",
+        "returncode": 0,
+        "seconds": 42.84
+      },
+      {
+        "name": "check_gameplay_audit",
+        "returncode": 0,
+        "seconds": 36.0
+      },
+      {
+        "name": "check_story_combat",
+        "returncode": 0,
+        "seconds": 29.96
+      },
+      {
+        "name": "check_mission_playthrough",
+        "returncode": 0,
+        "seconds": 21.49
+      },
+      {
+        "name": "check_setbacks",
+        "returncode": 0,
+        "seconds": 15.62
+      }
+    ]
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Armorer",
+      "career": "Guardian",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "ar02",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": true
+    },
+    {
+      "spec": "Juyo Berserker",
+      "career": "Warrior",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "originalNode": "ju03",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    },
+    {
+      "spec": "Steel Hand Adept",
+      "career": "Warrior",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "originalNode": "sha00",
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnection": false
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not tested.",
+    "Gearhead attachment-cost reduction, Reinforce Item, Tinkerer item selection, Sapith Sundering, Improved Dodge movement, difficult terrain and Improved Hard Headed recovery remain manual.",
+    "Headbutt non-vehicle/silhouette eligibility and exact next-round expiry require manual checking.",
+    "Indomitable Will reduces ordinary enemy-weapon damage automatically; other damage sources require manual handling.",
+    "Additional hits can repeat Embrace Your Hate and Falling Avalanche bonuses; subtract repeated damage manually.",
+    "Automatic dark-talent Conflict is added at Morality resolution rather than displayed at session start; avoid entering it twice.",
+    "Acklay Pierce and Martial Grace automatic support covers unarmed/Far Strike profiles; other Brawl weapons require manual resolution.",
+    "Force-use eligibility, multiple lightsaber-form selection and the official defense cap are not uniformly enforced by older handlers.",
+    "Older action-used turns without the new staggered marker are treated as already spent.",
+    "Existing saved purchases, ratings and characteristics are not retrospectively recalculated."
+  ],
+  "fullRegressionDistribution": {
+    "bytes": 3824824,
+    "gitBlob": "470206fdb222f8341cdfbe7ba74a61c2f8aaa813",
+    "sha256": "fe92e010979aa625bc6aa548c23ff84be252992162cb258f7612b715e1f4edd7"
+  },
+  "finalNoteVerification": {
+    "returncode": 0,
+    "seconds": 95.09,
+    "fullRegressionDistribution": {
+      "bytes": 3824824,
+      "gitBlob": "470206fdb222f8341cdfbe7ba74a61c2f8aaa813",
+      "sha256": "fe92e010979aa625bc6aa548c23ff84be252992162cb258f7612b715e1f4edd7"
+    },
+    "finalDistribution": {
+      "bytes": 3824948,
+      "gitBlob": "08cea2a0b231fcfdfe83a6547bfc55517da6cf42",
+      "sha256": "8dcf0662a3288ff7745220f065a1b2f36501d593380c7127f83b3106045c44ba"
+    },
+    "changes": [
+      {
+        "talent": "Gearhead",
+        "field": "resolutionNote",
+        "before": "Removes Mechanics setbacks and reduces attachment-modification costs automatically.",
+        "after": "Removes Mechanics setbacks automatically. Halve attachment-modification credit costs manually."
+      },
+      {
+        "talent": "Improved Armor Master",
+        "field": "resolutionNote",
+        "before": "Adds defense for qualifying armor. Apply the official maximum defense of 4 manually where older handlers exceed it.",
+        "after": "Adds defense for qualifying armor. If your displayed total exceeds 4, apply the maximum defense of 4 manually."
+      },
+      {
+        "talent": "Indomitable Will",
+        "field": "resolutionNote",
+        "before": "The combat control commits dice, reserves activation strain, tracks its use and charges continuing strain. Weapon attacks reduce damage automatically; resolve other damage sources manually.",
+        "after": "Commits chosen dice, pays activation and maneuver costs, tracks its encounter use and charges continuing strain. Weapon attacks reduce damage automatically; resolve other damage sources manually."
+      },
+      {
+        "talent": "Embrace Your Hate",
+        "field": "resolutionNote",
+        "before": "Successful close-combat attacks offer its Destiny cost, one-hit damage and use limit. Morality resolution adds the automatic +1 Conflict at session end; treat it as pending from session start and avoid entering it twice.",
+        "after": "Successful close-combat attacks offer its Destiny cost, damage and encounter-use limit. If additional hits repeat this bonus, subtract it from those hits manually. Morality resolution adds the automatic +1 Conflict at session end; treat it as pending from session start and avoid entering it twice."
+      },
+      {
+        "talent": "Falling Avalanche",
+        "field": "resolutionNote",
+        "before": "Successful Lightsaber attacks offer strain-for-Brawn damage on one hit. Enforce its once-per-round limit manually.",
+        "after": "Successful Lightsaber attacks offer strain-for-Brawn damage. Track once-per-round use manually and subtract any repeated bonus from additional hits."
+      }
+    ],
+    "playBehaviorChanged": false,
+    "smokeFixtureCorrection": {
+      "before": "ar30",
+      "after": "ar41",
+      "target": "ar40",
+      "reason": "Use the verified Imbue Item\u2013Force Rating connection",
+      "testSetupOnly": true
+    },
+    "worldRetry": {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 30.05
+    },
+    "checks": 104,
+    "testFixtureAdjustment": "Suppress NPC initiative actions before establishing the controlled PC turn; check Unstoppable preserves existing injuries."
+  },
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "08cea2a0b231fcfdfe83a6547bfc55517da6cf42"
+  }
+}

@@ -39,11 +39,12 @@ function edgeSet(nodes){const ix=Object.fromEntries(nodes.map((n,i)=>[n.id,i]));
  await test('The original six reviews keep coverage and schema intact as later batches are added',async()=>{
   assert.equal(Object.keys(fixture.trees).length,48);assert.equal(Object.values(fixture.trees).flat().length,960);
   assert.deepEqual(await page.evaluate(()=>CharacterCatalog97.coverage()),{careers:20,placements:118,species:44,trees:112,universal:17,full:112,simplified:0,prototype:0});
-  assert.deepEqual(await page.evaluate(()=>({audited:Object.values(CharacterCatalog97.data.trees).filter(r=>r.ruleSet==='fndCore102').length,pending:[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(s=>CharacterCatalog97.status(s)==='Full layout in saved build').length,replaced:Talents98.replaced.length,schema:BUILD_INFO.saveSchema,build:BUILD_INFO.version})),{audited:6,pending:30,replaced:48,schema:92,build:'96.8-sentinel-warrior-audit'});
+  assert.deepEqual(await page.evaluate(()=>({audited:Object.values(CharacterCatalog97.data.trees).filter(r=>r.ruleSet==='fndCore102').length,pending:[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(s=>CharacterCatalog97.status(s)==='Full layout in saved build').length,replaced:Talents98.replaced.length,schema:BUILD_INFO.saveSchema,build:BUILD_INFO.version})),{audited:6,pending:26,replaced:48,schema:92,build:'96.9-force-supplement-audit'});
  });
  for(const [spec,old]of Object.entries(fixture.trees))await test(`${spec}: original IDs and tiers survive; only reviewed source changes occur`,async()=>{
   const tree=await page.evaluate(s=>treeForSpec(s),spec);
   if(!deltas[spec]){
+   if(['Armorer','Colossus','Juyo Berserker','Steel Hand Adept'].includes(spec)){assert.deepEqual(tree.map(n=>[n.id,n.name,n.row,n.col,n.cost]),old.map(n=>[n.id,n.name,n.row,n.col,n.cost]));assert.equal(await page.evaluate(s=>CharacterCatalog97.status(s),spec),'Reviewed layout');return}
    if(['Artisan','Shadow','Shien Expert','Aggressor','Shii-Cho Knight','Starfighter Ace'].includes(spec)){assert.deepEqual(tree.map(n=>[n.id,n.name,n.row,n.col,n.cost]),old.map(n=>[n.id,n.name,n.row,n.col,n.cost]));assert.equal(await page.evaluate(s=>CharacterCatalog97.status(s),spec),'Reviewed layout');return}
 
    if(['Advisor','Makashi Duelist','Seer','Ataru Striker','Hunter','Pathfinder'].includes(spec)){assert.deepEqual(tree.map(n=>[n.id,n.name,n.row,n.col,n.cost]),old.map(n=>[n.id,n.name,n.row,n.col,n.cost]));assert.equal(await page.evaluate(s=>CharacterCatalog97.status(s),spec),'Reviewed layout')}
@@ -173,6 +174,6 @@ function edgeSet(nodes){const ix=Object.fromEntries(nodes.map((n,i)=>[n.id,i]));
   await page.setViewportSize({width,height});for(const spec of specs){await fresh(spec);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,spec);assert.equal(await page.evaluate(()=>[...document.querySelectorAll('#talentTree .tal')].every(c=>c.querySelector('.talent-path98').getBoundingClientRect().bottom<=c.querySelector('button').getBoundingClientRect().top)),true,spec)}
  });
  await page.setViewportSize({width:390,height:844});await fresh('Protector');await page.screenshot({path:path.join(out,'protector-phone.png'),fullPage:true});assert.deepEqual(errors,[]);
- const report={passed:checks.length,reviewedLayouts:6,reviewedNodes:120,retainedIds:120,frozenLayouts:48,frozenNodes:960,sourceRules:57,connectionChanges:21,labelChanges:11,priorCases:960,combinedPriorCases:2040,remainingLayouts:30,coverage:await page.evaluate(()=>CharacterCatalog97.coverage()),errors,checks};
+ const report={passed:checks.length,reviewedLayouts:6,reviewedNodes:120,retainedIds:120,frozenLayouts:48,frozenNodes:960,sourceRules:57,connectionChanges:21,labelChanges:11,priorCases:960,combinedPriorCases:2040,remainingLayouts:26,coverage:await page.evaluate(()=>CharacterCatalog97.coverage()),errors,checks};
  fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({...report,checks:undefined},null,2));
 })().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{await browser?.close();server?.close()});

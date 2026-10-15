@@ -1,6 +1,6 @@
 {
   "name": "sable-reach-pwa",
-  "version": "1.9.14",
+  "version": "1.9.15",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
@@ -14,7 +14,8 @@
     "test:talents:core": "node scripts/check_talents101.cjs",
     "test:talents:force-core": "node scripts/check_talents102.cjs",
     "test:talents:mystic-seeker": "node scripts/check_talents103.cjs",
-    "test:talents:sentinel-warrior": "node scripts/check_talents104.cjs"
+    "test:talents:sentinel-warrior": "node scripts/check_talents104.cjs",
+    "test:talents:force-supplements": "node scripts/check_talents105.cjs"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.10",

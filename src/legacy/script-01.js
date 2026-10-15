@@ -4731,7 +4731,7 @@ function startTurnActor(){
     if(!C.actedPC.includes(id))C.actedPC.push(id);C.turn=null;C.slotIndex++;beginSlot();return false
   }
   if(st.conditions.staggered>0||st.conditions.knockedSenseless){
-    T.actionUsed=true;cLog(`${actorById(id).name} is staggered and cannot perform an action this turn.`)
+    T.actionUsed=true;T.staggeredActionBlocked=st.conditions.staggered>0&&!st.conditions.knockedSenseless;cLog(`${actorById(id).name} is staggered and cannot perform an action this turn.`)
   }
   return true
 }
@@ -5248,12 +5248,12 @@ function farStrikeTalent(){
   let C=S.combat,T=C?.turn;if(!T||T.actorId!=='pc'||C.pendingSpend||!hasTalent('Far Strike'))return;if(!startTurnActor())return;T=C.turn;if(T.actionUsed)return;
   let actor=actorById('pc'),target=selectedEnemy();if(!target)return;let ri=rangeBandBetween('pc',target.id);
   if(ri<1||ri>3){cLog('Far Strike targets an enemy from Short through Long range.');return}
-  let need=Math.max(0,ri-1),fr=rollForce(forceAvailable()),forceUse=need?useForcePoints(fr,need):{ok:true};
-  if(!forceUse.ok){cLog(`Far Strike cannot generate enough usable Force points to reach ${RANGE_NAMES[ri]}. Force ${fr.faces.join(' ')}`);return}
+  if(effectiveForceRating()<1){cLog('Far Strike requires Force Rating 1 or higher.');return}
   let w=unarmedWeapon(),q=specialCombatPool(actor,target,w,ri,true);if(q.invalid){cLog(q.reason);return}
   if(C.nextAllyUpgrade){upgradePositivePool(q.p,C.nextAllyUpgrade);C.nextAllyUpgrade=0}
   let usedDark=maybeGMDarkDifficulty(q.p,'Far Strike');T.actionUsed=true;beforeCombatAction('pc');C.unarmedReady=true;
-  let r=combatNaturalReroll('Brawl',q.p,rollNarr(q.p)),dmg=0;
+  let r=combatNaturalReroll('Brawl',q.p,rollNarr(q.p)),dmg=0,need=Math.max(0,ri-1),fr=rollForce(forceAvailable()),forceUse=need?useForcePoints(fr,need):{ok:true};
+  if(!forceUse.ok){r={...r,ok:false};cLog(`Far Strike cannot reach ${RANGE_NAMES[ri]}; the action is spent. Force ${fr.faces.join(' ')}`)}
   if(r.ok){
     let deadly=deadlyAccuracyDamage('Brawl'),bonus=maybeMartialGrace()+maybeEmbraceYourHate('Brawl')+deadly+feralStrengthDamage('Brawl'),pierce=quality(w,'pierce'),
         raw=effectiveCharacteristic(actor,'Brawn')+r.ns+bonus;
@@ -5626,7 +5626,7 @@ function improvedToughenedTalent(){
 function innerPeaceTalent(){
   let C=S.combat,ranks=talentRank('Inner Peace');if(!C||!ranks||C.innerPeaceUsed)return;
   let max=Math.min(ranks,S.destiny.dark);if(max<1){cLog('Inner Peace has no dark Destiny Point available to convert.');return}
-  let n=Math.max(1,Math.min(max,Number(prompt(`Inner Peace rank ${ranks}: convert how many dark Destiny Points to light? Maximum ${max}.`,String(max)))||0));if(n<1)return;
+  let n=Math.max(0,Math.min(max,Math.floor(Number(prompt(`Inner Peace rank ${ranks}: convert how many dark Destiny Points to light? Maximum ${max}.`,String(max)))||0)));if(n<1)return;
   S.destiny.dark-=n;S.destiny.light+=n;S.conflictReduction=(S.conflictReduction||0)+1+n;C.innerPeaceUsed=true;
   cLog(`Inner Peace converts ${n} dark Destiny Point(s) to light and prepares ${1+n} Conflict reduction for this session.`);renderCombat()
 }
@@ -5644,10 +5644,11 @@ function powerFromPainTalent(){
 function indomitableWillTalent(){
   let C=S.combat,T=C?.turn;if(!C||!T||T.actorId!=='pc'||!hasTalent('Indomitable Will')||C.indomitableUsed)return;
   if(!canVoluntarilySufferStrain('pc')||S.strain+3>strainThreshold()){cLog('Not enough strain capacity for Indomitable Will.');return}
-  if(!spendManeuver(1,'Indomitable Will'))return;
   let max=forceAvailable();if(max<1){cLog('No uncommitted Force dice are available for Indomitable Will.');return}
-  let n=Math.max(1,Math.min(max,Number(prompt(`Commit how many Force dice to Indomitable Will? Maximum ${max}.`,String(max)))||0));if(n<1)return;
-  S.strain+=3;C.indomitableCommitted=n;C.indomitableUsed=true;
+  let n=Math.max(0,Math.min(max,Math.floor(Number(prompt(`Commit how many Force dice to Indomitable Will? Maximum ${max}.`,String(max)))||0)));if(n<1)return;
+  // Reserve activation strain before checking any extra-maneuver strain cost.
+  S.strain+=3;if(!spendManeuver(1,'Indomitable Will')){S.strain-=3;return}
+  C.indomitableCommitted=n;C.indomitableUsed=true;
   cLog(`Indomitable Will commits ${n} Force die/dice. Incoming damage is reduced by ${n}; sustaining it costs 1 strain at the start of each turn.`);renderCombat();renderForce()
 }
 function releaseIndomitableWill(){
@@ -5662,8 +5663,10 @@ function headbuttTalent(){
 function hardHeadedTalent(){
   let C=S.combat,T=C?.turn;if(!C||!T||T.actorId!=='pc'||!hasTalent('Hard Headed'))return;
   let st=actorState('pc'),affected=st.conditions.staggered>0||st.conditions.disoriented>0;if(!affected){cLog('Hard Headed has no staggered or disoriented condition to clear.');return}
+  if(T.actionUsed&&!T.staggeredActionBlocked)return;
   if(!startTurnActor())return;T=C.turn;if(!T)return;
-  let diff=Math.max(1,5-talentRank('Hard Headed')),q=actorPool(actorById('pc'),'Discipline',{diff,commit:true}),r=rollNarr(q.p);T.actionUsed=true;
+  if(T.actionUsed&&!T.staggeredActionBlocked)return;
+  let diff=Math.max(1,5-talentRank('Hard Headed')),q=actorPool(actorById('pc'),'Discipline',{diff,commit:true}),r=rollNarr(q.p);T.actionUsed=true;T.staggeredActionBlocked=false;
   if(r.ok){st.conditions.staggered=0;st.conditions.disoriented=0;cLog(`Hard Headed clears staggered/disoriented. ${rtxt(r)}`)}
   else cLog(`Hard Headed fails to clear the condition. ${rtxt(r)}`);renderCombat()
 }
@@ -5795,10 +5798,10 @@ function renderCombat(){
       if(S.forceOwned.Sense.has('sn-def')&&S.forceRating>0)ab.push(`<button class="btn" id="cSense">${S.forceCommitted.sense?'Uncommit':'Commit'} Sense Defense</button>`);
       if(S.forceOwned.Influence.has('i-basic')&&forceAvailable()>0)ab.push(`<button class="btn" id="cInfluence" ${T.actionUsed?'disabled':''}>Influence</button>`);
       ab.push(`<button class="btn" id="cUnarmed" ${T.actionUsed?'disabled':''}>Unarmed Strike</button>`);
-      if(hasTalent('Far Strike')&&forceAvailable()>0)ab.push(`<button class="btn" id="cFarStrike" ${T.actionUsed?'disabled':''}>Far Strike</button>`);
+      if(hasTalent('Far Strike')&&effectiveForceRating()>0)ab.push(`<button class="btn" id="cFarStrike" ${T.actionUsed?'disabled':''}>Far Strike</button>`);
       if(hasTalent('Saber Throw')&&effectiveWeapon(S.weapon)?.skill==='Lightsaber'&&forceAvailable()>0)ab.push(`<button class="btn" id="cSaberThrow" ${T.actionUsed?'disabled':''}>Saber Throw</button>`);
       if(hasTalent('Headbutt')&&!C.headbuttUsed)ab.push(`<button class="btn" id="cHeadbutt">Headbutt</button>`);
-      if(hasTalent('Hard Headed')&&(actorState('pc').conditions.staggered||actorState('pc').conditions.disoriented))ab.push(`<button class="btn" id="cHardHeaded">Hard Headed</button>`);
+      if(hasTalent('Hard Headed')&&(actorState('pc').conditions.staggered||actorState('pc').conditions.disoriented))ab.push(`<button class="btn" id="cHardHeaded" ${T.actionUsed&&!T.staggeredActionBlocked?'disabled':''}>Hard Headed</button>`);
       if(hasTalent('Inner Peace')&&!C.innerPeaceUsed&&S.destiny.dark>0)ab.push(`<button class="btn" id="cInnerPeace">Inner Peace</button>`);
       if(hasTalent('Heroic Fortitude')&&!C.heroicFortitude&&S.destiny.light>0)ab.push(`<button class="btn" id="cHeroic">Heroic Fortitude</button>`);
       if(hasTalent('Power From Pain')&&!S.sessionUsed.powerFromPain&&actorState('pc').criticals.length&&S.destiny.light>0)ab.push(`<button class="btn" id="cPowerPain">Power From Pain</button>`);
@@ -6999,7 +7002,7 @@ async function runSableReachSmoke(){
 
     // Purchasing a specialization Force Rating node must change the actual Force Rating.
     let buySnapshot={owned:[...S.ownedSpecs],sets:Object.fromEntries(Object.entries(S.specTalents).map(([k,v])=>[k,new Set(v)])),view:S.talentView,fr:S.forceRating,xp:S.earnedXp};
-    if(!S.ownedSpecs.includes('Armorer'))S.ownedSpecs.push('Armorer');S.specTalents.Armorer=new Set(['ar30']);S.talentView='Armorer';S.earnedXp=Math.max(S.earnedXp,100);S.forceRating=Math.max(1,S.forceRating);
+    if(!S.ownedSpecs.includes('Armorer'))S.ownedSpecs.push('Armorer');S.specTalents.Armorer=new Set(['ar41']);S.talentView='Armorer';S.earnedXp=Math.max(S.earnedXp,100);S.forceRating=Math.max(1,S.forceRating);
     let frBefore=S.forceRating;buyViewedTalent('ar40');
     test('specialization Force Rating purchase is functional',()=>S.specTalents.Armorer.has('ar40')&&S.forceRating===frBefore+1);
     S.ownedSpecs=[...buySnapshot.owned];S.specTalents=Object.fromEntries(Object.entries(buySnapshot.sets).map(([k,v])=>[k,new Set(v)]));S.talentView=buySnapshot.view;S.forceRating=buySnapshot.fr;S.earnedXp=buySnapshot.xp;ensurePhase9State();

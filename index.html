@@ -6618,7 +6618,7 @@ function startTurnActor(){
     if(!C.actedPC.includes(id))C.actedPC.push(id);C.turn=null;C.slotIndex++;beginSlot();return false
   }
   if(st.conditions.staggered>0||st.conditions.knockedSenseless){
-    T.actionUsed=true;cLog(`${actorById(id).name} is staggered and cannot perform an action this turn.`)
+    T.actionUsed=true;T.staggeredActionBlocked=st.conditions.staggered>0&&!st.conditions.knockedSenseless;cLog(`${actorById(id).name} is staggered and cannot perform an action this turn.`)
   }
   return true
 }
@@ -7135,12 +7135,12 @@ function farStrikeTalent(){
   let C=S.combat,T=C?.turn;if(!T||T.actorId!=='pc'||C.pendingSpend||!hasTalent('Far Strike'))return;if(!startTurnActor())return;T=C.turn;if(T.actionUsed)return;
   let actor=actorById('pc'),target=selectedEnemy();if(!target)return;let ri=rangeBandBetween('pc',target.id);
   if(ri<1||ri>3){cLog('Far Strike targets an enemy from Short through Long range.');return}
-  let need=Math.max(0,ri-1),fr=rollForce(forceAvailable()),forceUse=need?useForcePoints(fr,need):{ok:true};
-  if(!forceUse.ok){cLog(`Far Strike cannot generate enough usable Force points to reach ${RANGE_NAMES[ri]}. Force ${fr.faces.join(' ')}`);return}
+  if(effectiveForceRating()<1){cLog('Far Strike requires Force Rating 1 or higher.');return}
   let w=unarmedWeapon(),q=specialCombatPool(actor,target,w,ri,true);if(q.invalid){cLog(q.reason);return}
   if(C.nextAllyUpgrade){upgradePositivePool(q.p,C.nextAllyUpgrade);C.nextAllyUpgrade=0}
   let usedDark=maybeGMDarkDifficulty(q.p,'Far Strike');T.actionUsed=true;beforeCombatAction('pc');C.unarmedReady=true;
-  let r=combatNaturalReroll('Brawl',q.p,rollNarr(q.p)),dmg=0;
+  let r=combatNaturalReroll('Brawl',q.p,rollNarr(q.p)),dmg=0,need=Math.max(0,ri-1),fr=rollForce(forceAvailable()),forceUse=need?useForcePoints(fr,need):{ok:true};
+  if(!forceUse.ok){r={...r,ok:false};cLog(`Far Strike cannot reach ${RANGE_NAMES[ri]}; the action is spent. Force ${fr.faces.join(' ')}`)}
   if(r.ok){
     let deadly=deadlyAccuracyDamage('Brawl'),bonus=maybeMartialGrace()+maybeEmbraceYourHate('Brawl')+deadly+feralStrengthDamage('Brawl'),pierce=quality(w,'pierce'),
         raw=effectiveCharacteristic(actor,'Brawn')+r.ns+bonus;
@@ -7513,7 +7513,7 @@ function improvedToughenedTalent(){
 function innerPeaceTalent(){
   let C=S.combat,ranks=talentRank('Inner Peace');if(!C||!ranks||C.innerPeaceUsed)return;
   let max=Math.min(ranks,S.destiny.dark);if(max<1){cLog('Inner Peace has no dark Destiny Point available to convert.');return}
-  let n=Math.max(1,Math.min(max,Number(prompt(`Inner Peace rank ${ranks}: convert how many dark Destiny Points to light? Maximum ${max}.`,String(max)))||0));if(n<1)return;
+  let n=Math.max(0,Math.min(max,Math.floor(Number(prompt(`Inner Peace rank ${ranks}: convert how many dark Destiny Points to light? Maximum ${max}.`,String(max)))||0)));if(n<1)return;
   S.destiny.dark-=n;S.destiny.light+=n;S.conflictReduction=(S.conflictReduction||0)+1+n;C.innerPeaceUsed=true;
   cLog(`Inner Peace converts ${n} dark Destiny Point(s) to light and prepares ${1+n} Conflict reduction for this session.`);renderCombat()
 }
@@ -7531,10 +7531,11 @@ function powerFromPainTalent(){
 function indomitableWillTalent(){
   let C=S.combat,T=C?.turn;if(!C||!T||T.actorId!=='pc'||!hasTalent('Indomitable Will')||C.indomitableUsed)return;
   if(!canVoluntarilySufferStrain('pc')||S.strain+3>strainThreshold()){cLog('Not enough strain capacity for Indomitable Will.');return}
-  if(!spendManeuver(1,'Indomitable Will'))return;
   let max=forceAvailable();if(max<1){cLog('No uncommitted Force dice are available for Indomitable Will.');return}
-  let n=Math.max(1,Math.min(max,Number(prompt(`Commit how many Force dice to Indomitable Will? Maximum ${max}.`,String(max)))||0));if(n<1)return;
-  S.strain+=3;C.indomitableCommitted=n;C.indomitableUsed=true;
+  let n=Math.max(0,Math.min(max,Math.floor(Number(prompt(`Commit how many Force dice to Indomitable Will? Maximum ${max}.`,String(max)))||0)));if(n<1)return;
+  // Reserve activation strain before checking any extra-maneuver strain cost.
+  S.strain+=3;if(!spendManeuver(1,'Indomitable Will')){S.strain-=3;return}
+  C.indomitableCommitted=n;C.indomitableUsed=true;
   cLog(`Indomitable Will commits ${n} Force die/dice. Incoming damage is reduced by ${n}; sustaining it costs 1 strain at the start of each turn.`);renderCombat();renderForce()
 }
 function releaseIndomitableWill(){
@@ -7549,8 +7550,10 @@ function headbuttTalent(){
 function hardHeadedTalent(){
   let C=S.combat,T=C?.turn;if(!C||!T||T.actorId!=='pc'||!hasTalent('Hard Headed'))return;
   let st=actorState('pc'),affected=st.conditions.staggered>0||st.conditions.disoriented>0;if(!affected){cLog('Hard Headed has no staggered or disoriented condition to clear.');return}
+  if(T.actionUsed&&!T.staggeredActionBlocked)return;
   if(!startTurnActor())return;T=C.turn;if(!T)return;
-  let diff=Math.max(1,5-talentRank('Hard Headed')),q=actorPool(actorById('pc'),'Discipline',{diff,commit:true}),r=rollNarr(q.p);T.actionUsed=true;
+  if(T.actionUsed&&!T.staggeredActionBlocked)return;
+  let diff=Math.max(1,5-talentRank('Hard Headed')),q=actorPool(actorById('pc'),'Discipline',{diff,commit:true}),r=rollNarr(q.p);T.actionUsed=true;T.staggeredActionBlocked=false;
   if(r.ok){st.conditions.staggered=0;st.conditions.disoriented=0;cLog(`Hard Headed clears staggered/disoriented. ${rtxt(r)}`)}
   else cLog(`Hard Headed fails to clear the condition. ${rtxt(r)}`);renderCombat()
 }
@@ -7682,10 +7685,10 @@ function renderCombat(){
       if(S.forceOwned.Sense.has('sn-def')&&S.forceRating>0)ab.push(`<button class="btn" id="cSense">${S.forceCommitted.sense?'Uncommit':'Commit'} Sense Defense</button>`);
       if(S.forceOwned.Influence.has('i-basic')&&forceAvailable()>0)ab.push(`<button class="btn" id="cInfluence" ${T.actionUsed?'disabled':''}>Influence</button>`);
       ab.push(`<button class="btn" id="cUnarmed" ${T.actionUsed?'disabled':''}>Unarmed Strike</button>`);
-      if(hasTalent('Far Strike')&&forceAvailable()>0)ab.push(`<button class="btn" id="cFarStrike" ${T.actionUsed?'disabled':''}>Far Strike</button>`);
+      if(hasTalent('Far Strike')&&effectiveForceRating()>0)ab.push(`<button class="btn" id="cFarStrike" ${T.actionUsed?'disabled':''}>Far Strike</button>`);
       if(hasTalent('Saber Throw')&&effectiveWeapon(S.weapon)?.skill==='Lightsaber'&&forceAvailable()>0)ab.push(`<button class="btn" id="cSaberThrow" ${T.actionUsed?'disabled':''}>Saber Throw</button>`);
       if(hasTalent('Headbutt')&&!C.headbuttUsed)ab.push(`<button class="btn" id="cHeadbutt">Headbutt</button>`);
-      if(hasTalent('Hard Headed')&&(actorState('pc').conditions.staggered||actorState('pc').conditions.disoriented))ab.push(`<button class="btn" id="cHardHeaded">Hard Headed</button>`);
+      if(hasTalent('Hard Headed')&&(actorState('pc').conditions.staggered||actorState('pc').conditions.disoriented))ab.push(`<button class="btn" id="cHardHeaded" ${T.actionUsed&&!T.staggeredActionBlocked?'disabled':''}>Hard Headed</button>`);
       if(hasTalent('Inner Peace')&&!C.innerPeaceUsed&&S.destiny.dark>0)ab.push(`<button class="btn" id="cInnerPeace">Inner Peace</button>`);
       if(hasTalent('Heroic Fortitude')&&!C.heroicFortitude&&S.destiny.light>0)ab.push(`<button class="btn" id="cHeroic">Heroic Fortitude</button>`);
       if(hasTalent('Power From Pain')&&!S.sessionUsed.powerFromPain&&actorState('pc').criticals.length&&S.destiny.light>0)ab.push(`<button class="btn" id="cPowerPain">Power From Pain</button>`);
@@ -8886,7 +8889,7 @@ async function runSableReachSmoke(){
 
     // Purchasing a specialization Force Rating node must change the actual Force Rating.
     let buySnapshot={owned:[...S.ownedSpecs],sets:Object.fromEntries(Object.entries(S.specTalents).map(([k,v])=>[k,new Set(v)])),view:S.talentView,fr:S.forceRating,xp:S.earnedXp};
-    if(!S.ownedSpecs.includes('Armorer'))S.ownedSpecs.push('Armorer');S.specTalents.Armorer=new Set(['ar30']);S.talentView='Armorer';S.earnedXp=Math.max(S.earnedXp,100);S.forceRating=Math.max(1,S.forceRating);
+    if(!S.ownedSpecs.includes('Armorer'))S.ownedSpecs.push('Armorer');S.specTalents.Armorer=new Set(['ar41']);S.talentView='Armorer';S.earnedXp=Math.max(S.earnedXp,100);S.forceRating=Math.max(1,S.forceRating);
     let frBefore=S.forceRating;buyViewedTalent('ar40');
     test('specialization Force Rating purchase is functional',()=>S.specTalents.Armorer.has('ar40')&&S.forceRating===frBefore+1);
     S.ownedSpecs=[...buySnapshot.owned];S.specTalents=Object.fromEntries(Object.entries(buySnapshot.sets).map(([k,v])=>[k,new Set(v)]));S.talentView=buySnapshot.view;S.forceRating=buySnapshot.fr;S.earnedXp=buySnapshot.xp;ensurePhase9State();
@@ -29318,6 +29321,610 @@ window.CharacterCatalog97 = (() => {
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "fndCore104"
+    },
+    "Armorer": {
+      "names": [
+        "Grit",
+        "Toughened",
+        "Gearhead",
+        "Inventor",
+        "Saber Throw",
+        "Armor Master",
+        "Grit",
+        "Gearhead",
+        "Toughened",
+        "Improved Armor Master",
+        "Inventor",
+        "Mental Tools",
+        "Comprehend Technology",
+        "Tinkerer",
+        "Falling Avalanche",
+        "Supreme Armor Master",
+        "Force Rating",
+        "Imbue Item",
+        "Reinforce Item",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "ar00",
+        "ar01",
+        "ar02",
+        "ar03",
+        "ar10",
+        "ar11",
+        "ar12",
+        "ar13",
+        "ar20",
+        "ar21",
+        "ar22",
+        "ar23",
+        "ar30",
+        "ar31",
+        "ar32",
+        "ar33",
+        "ar40",
+        "ar41",
+        "ar42",
+        "ar43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Force Passive",
+        "Force Active",
+        "Passive",
+        "Force Active",
+        "Active",
+        "Force Passive",
+        "Force Active",
+        "Force Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Keeping the Peace \u00b7 p.25 \u00b7 supplied FND tree collection, PDF p.9",
+      "collection": "fnd",
+      "page": 9,
+      "bookPdfPage": 29,
+      "bookFile": "keeping-peace",
+      "bookPage": 25,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndSupp105"
+    },
+    "Colossus": {
+      "names": [
+        "Toughened",
+        "Durable",
+        "Hard Headed",
+        "Grit",
+        "Toughened",
+        "Durable",
+        "Hard Headed",
+        "Grit",
+        "Toughened",
+        "Durable",
+        "Headbutt",
+        "Enduring",
+        "Toughened",
+        "Unstoppable",
+        "Improved Hard Headed",
+        "Indomitable Will",
+        "Improved Toughened",
+        "Heroic Fortitude",
+        "Dedication",
+        "Power From Pain"
+      ],
+      "nodeIds": [
+        "co00",
+        "co01",
+        "co02",
+        "co03",
+        "co10",
+        "co11",
+        "co12",
+        "co13",
+        "co20",
+        "co21",
+        "co22",
+        "co23",
+        "co30",
+        "co31",
+        "co32",
+        "co33",
+        "co40",
+        "co41",
+        "co42",
+        "co43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Force Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Knights of Fate \u00b7 p.25 \u00b7 supplied FND tree collection, PDF p.38",
+      "collection": "fnd",
+      "page": 38,
+      "bookPdfPage": 27,
+      "bookFile": "knights-fate",
+      "bookPage": 25,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndSupp105"
+    },
+    "Juyo Berserker": {
+      "names": [
+        "Toughened",
+        "Parry",
+        "Grit",
+        "Intimidating",
+        "Inner Peace",
+        "Parry",
+        "Vaapad Control",
+        "Lethal Blows",
+        "Balance",
+        "Lethal Blows",
+        "Quick Strike",
+        "Embrace Your Hate",
+        "Inner Peace",
+        "Intimidating",
+        "Juyo Savagery",
+        "Quick Strike",
+        "Parry",
+        "Embrace Your Hate",
+        "Dedication",
+        "Multiple Opponents"
+      ],
+      "nodeIds": [
+        "ju00",
+        "ju01",
+        "ju02",
+        "ju03",
+        "ju10",
+        "ju11",
+        "ju12",
+        "ju13",
+        "ju20",
+        "ju21",
+        "ju22",
+        "ju23",
+        "ju30",
+        "ju31",
+        "ju32",
+        "ju33",
+        "ju40",
+        "ju41",
+        "ju42",
+        "ju43"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Force Active",
+        "Passive",
+        "Force Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Force Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Knights of Fate \u00b7 p.27 \u00b7 supplied FND tree collection, PDF p.39",
+      "collection": "fnd",
+      "page": 39,
+      "bookPdfPage": 29,
+      "bookFile": "knights-fate",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndSupp105"
+    },
+    "Steel Hand Adept": {
+      "names": [
+        "Grit",
+        "Iron Body",
+        "Iron Body",
+        "Toughened",
+        "Martial Grace",
+        "Acklay's Scything Strike",
+        "Unarmed Parry",
+        "Precision Strike",
+        "Dodge",
+        "Swift",
+        "Parry",
+        "Improved Precision Strike",
+        "Improved Dodge",
+        "Toughened",
+        "Grit",
+        "Sapith Sundering",
+        "Force Rating",
+        "Far Strike",
+        "Dedication",
+        "Dodge"
+      ],
+      "nodeIds": [
+        "sha00",
+        "sha01",
+        "sha02",
+        "sha03",
+        "sha10",
+        "sha11",
+        "sha12",
+        "sha13",
+        "sha20",
+        "sha21",
+        "sha22",
+        "sha23",
+        "sha30",
+        "sha31",
+        "sha32",
+        "sha33",
+        "sha40",
+        "sha41",
+        "sha42",
+        "sha43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Force Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Force Active",
+        "Force Passive",
+        "Force Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Knights of Fate \u00b7 p.29 \u00b7 supplied FND tree collection, PDF p.42",
+      "collection": "fnd",
+      "page": 42,
+      "bookPdfPage": 31,
+      "bookFile": "knights-fate",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "fndSupp105"
     }
   },
   "universals": {
@@ -45989,10 +46596,548 @@ window.CharacterCatalog97 = (() => {
       "resolutionNote": "Resolve the piloted vehicle\u2019s apparent silhouette for incoming attacks manually.",
       "resolution": "manual"
     }
+  },
+  "talentRules105": {
+    "Armor Master": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "While wearing armor, increase your total soak by one.",
+      "resolutionNote": "Adds soak automatically while armor is equipped."
+    },
+    "Balance": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": true,
+      "page": 139,
+      "pdfPage": 142,
+      "source": "Force and Destiny Core \u00b7 p.139",
+      "summary": "After an encounter, roll available Force dice up to your Force rating and recover extra strain equal to generated Force points.",
+      "resolutionNote": "After combat, offers recovery from your alignment\u2019s Force points. Opposite-alignment points and committed dice require manual resolution.",
+      "resolution": "manual"
+    },
+    "Comprehend Technology": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": true,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Once per session, make an Average Knowledge (Education) action about one item of personal gear. Success lets you use your Force rating as skill ranks to use or repair that item for the encounter.",
+      "resolutionNote": "Resolve the Knowledge action, chosen personal item, substituted skill ranks and encounter expiry manually.",
+      "resolution": "manual"
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Increase one chosen characteristic by 1, to a maximum of 6.",
+      "resolutionNote": "Applies your chosen characteristic once when purchased and retains that choice on reload."
+    },
+    "Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "When targeted by a combat check, suffer strain up to your ranks to upgrade that check\u2019s difficulty by the same amount.",
+      "resolutionNote": "Resolve incoming-check upgrades and their strain cost manually.",
+      "resolution": "manual"
+    },
+    "Durable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Reduce a Critical Injury result you suffer by 10 per rank, to a minimum result of 1.",
+      "resolutionNote": "Reduces your Critical Injury results automatically."
+    },
+    "Enduring": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Increase your soak by 1 per rank.",
+      "resolutionNote": "Adds to your soak automatically."
+    },
+    "Falling Avalanche": {
+      "type": "Force Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": true,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Once per round, suffer 2 strain to add your Brawn in damage to one hit of a successful Lightsaber check.",
+      "resolutionNote": "Successful Lightsaber attacks offer strain-for-Brawn damage. Track once-per-round use manually and subtract any repeated bonus from additional hits."
+    },
+    "Force Rating": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": true,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Once you are Force-sensitive, increase your Force rating by 1 per rank. Purchasing this talent does not create initial Force sensitivity.",
+      "resolutionNote": "Increases your rating when already Force-sensitive. Earlier inactive ranks activate once when a granting universal specialization or Witchcraft provides your initial rating."
+    },
+    "Gearhead": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "Remove one Setback per rank from Mechanics checks. Halve the credit cost of adding mods to attachments; extra ranks do not halve the cost again.",
+      "resolutionNote": "Removes Mechanics setbacks automatically. Halve attachment-modification credit costs manually."
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 144,
+      "pdfPage": 147,
+      "source": "Force and Destiny Core \u00b7 p.144",
+      "summary": "Increase your strain threshold by 1 per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Hard Headed": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": true,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "While staggered or disoriented, make a Daunting Discipline action, even while staggered. Reduce difficulty by one per rank after the first, to a minimum of Easy. Success clears staggered and disoriented.",
+      "resolutionNote": "The combat action clears staggered/disoriented and uses glossary difficulty. A failed attempt spends the action and cannot retry that turn.",
+      "sourceNote": "Knights of Fate p.30 glossary starts at Daunting and reduces difficulty per additional rank; the tree says per rank. The glossary governs."
+    },
+    "Heroic Fortitude": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Spend one Destiny Point to ignore Critical Injury effects on Brawn and Agility checks until the encounter ends. The injuries remain.",
+      "resolutionNote": "Resolve the Destiny cost and temporary Critical Injury suppression manually.",
+      "resolution": "manual"
+    },
+    "Imbue Item": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": true,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Use a maneuver, suffer 1 strain and commit one Force die to enhance a short-range item: weapon damage +1; one critical/effect Advantage cost \u22121, minimum 1; one armor defense +1; or encumbrance \u22122, minimum 1. Suffer 1 strain at each turn\u2019s start while committed.",
+      "resolutionNote": "Resolve the chosen item enhancement, Force commitment, range and ongoing strain manually.",
+      "resolution": "manual"
+    },
+    "Improved Armor Master": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "While wearing armor with soak 2 or higher, increase your defense by one.",
+      "resolutionNote": "Adds defense for qualifying armor. If your displayed total exceeds 4, apply the maximum defense of 4 manually."
+    },
+    "Improved Hard Headed": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "On the next turn after strain incapacitates you, make a Formidable Discipline action. Reduce difficulty by one per Hard Headed rank after the first, to a minimum of Easy. Success lowers strain to one below its threshold.",
+      "resolutionNote": "Resolve strain-incapacitation recovery, next-turn timing and the Formidable baseline manually; the ordinary Hard Headed button does not perform this recovery.",
+      "resolution": "manual",
+      "sourceNote": "Knights of Fate p.30 glossary reduces the Formidable baseline only for Hard Headed ranks after the first."
+    },
+    "Intimidating": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Suffer strain up to your ranks to downgrade an outgoing Coercion check\u2019s difficulty that many times, or upgrade an incoming Coercion check\u2019s difficulty that many times.",
+      "resolutionNote": "The outgoing Coercion prompt spends strain and reduces difficulty dice. Resolve proper challenge-die downgrades and incoming Coercion checks manually."
+    },
+    "Inventor": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "When constructing items or modifying attachments, choose to add one Boost or remove one Setback per rank.",
+      "resolutionNote": "Eligible PC Mechanics construction/modification checks remove available setbacks, then add Boost for remaining ranks. Choosing a different allocation requires manual resolution."
+    },
+    "Lethal Blows": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Add ten per rank to Critical Injury rolls you inflict on opponents.",
+      "resolutionNote": "Adds its bonus to PC combat Critical Injury rolls automatically."
+    },
+    "Mental Tools": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 147,
+      "pdfPage": 150,
+      "source": "Force and Destiny Core \u00b7 p.147",
+      "summary": "Always count as having the right tools when making Mechanics checks.",
+      "resolutionNote": "Resolve missing-tool penalties manually. This talent does not provide materials or a workshop.",
+      "resolution": "manual"
+    },
+    "Multiple Opponents": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 147,
+      "pdfPage": 150,
+      "source": "Force and Destiny Core \u00b7 p.147",
+      "summary": "Add one Boost to Brawl, Melee and Lightsaber checks when engaged with multiple opponents, including a group of multiple minions.",
+      "resolutionNote": "Adds a Boost to Brawl, Melee and Lightsaber combat pools when engaged opponents include multiple minions or multiple separate enemies."
+    },
+    "Parry": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "When hit by Brawl, Melee or Lightsaber while wielding a Melee or Lightsaber weapon, suffer 3 strain to reduce that hit\u2019s damage by 2 plus ranks before soak.",
+      "resolutionNote": "A damage-reduction prompt charges the normal strain cost. Resolve improved counterattacks and exceptional strain discounts manually."
+    },
+    "Precision Strike": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "When inflicting a Critical Injury with Brawl, Melee or Lightsaber, suffer 1 strain to choose any Easy Critical Injury result. You may always defeat minion or rival NPCs nonlethally, even when circumstances would otherwise prevent it.",
+      "resolutionNote": "Combat Critical controls offer the strain cost and Easy result selection. Resolve guaranteed nonlethal defeats manually."
+    },
+    "Quick Strike": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "Add one Boost per rank to combat checks against a target that has not yet acted in the encounter.",
+      "resolutionNote": "Adds combat Boost against targets that have not yet acted in the encounter."
+    },
+    "Saber Throw": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": true,
+      "page": 151,
+      "pdfPage": 154,
+      "source": "Force and Destiny Core \u00b7 p.151",
+      "summary": "Make a ranged Lightsaber action against a target within medium range with Force dice up to your rating. Spend one Force point and succeed to hit; spend another to return the weapon.",
+      "resolutionNote": "The medium-range combat action rolls Force dice, spends points to hit and return the weapon, and records a dropped saber when it does not return."
+    },
+    "Swift": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Ignore the usual movement penalties for difficult terrain; it requires no extra maneuver.",
+      "resolutionNote": "Resolve difficult-terrain movement manually; the current position map does not model terrain costs.",
+      "resolution": "manual"
+    },
+    "Tinkerer": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31",
+      "summary": "Add one hard point to one chosen piece of equipment per rank. Each item can benefit only once; if an item is lost, you may apply that rank to a new item.",
+      "resolutionNote": "Resolve the selected items, one-hard-point limit and replacement of lost items manually.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "Increase your wound threshold by 2 per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Unstoppable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "If your Critical Injury roll is 1 or is reduced to 1, ignore that injury and all its effects.",
+      "resolutionNote": "Automatically ignores a PC Critical Injury reduced to result 1.",
+      "sourceNote": "Unranked in the sourcebook glossary; the supplied compilation prints a rank marker."
+    },
+    "Supreme Armor Master": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "Once per round when suffering a Critical Injury, suffer 3 strain as an out-of-turn incidental to reduce the result by ten times your soak, to a minimum result of 1.",
+      "resolutionNote": "The Critical Injury control offers its strain cost and reduction once per combat round. Resolve outside-combat use manually."
+    },
+    "Reinforce Item": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": true,
+      "page": 31,
+      "pdfPage": 35,
+      "source": "Keeping the Peace \u00b7 p.31",
+      "summary": "Use a maneuver and commit two Force dice to give one engaged weapon or piece of armor Cortosis. Suffer 3 strain at the start of each turn while keeping the dice committed.",
+      "resolutionNote": "Resolve the engaged item, two committed dice, Cortosis and continuing strain manually.",
+      "resolution": "manual"
+    },
+    "Acklay's Scything Strike": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "Your Brawl attacks gain Pierce equal to your Force rating, or increase their existing Pierce by that amount.",
+      "resolutionNote": "The unarmed attack profile adds Pierce from effective Force rating. Apply its benefit to other Brawl weapons manually."
+    },
+    "Improved Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "After using Dodge and resolving the triggering attack, you may perform a Move maneuver as an out-of-turn incidental.",
+      "resolutionNote": "Resolve the post-attack Move maneuver manually.",
+      "resolution": "manual"
+    },
+    "Headbutt": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "Once per encounter, suffer 2 wounds as an incidental to knock one engaged non-vehicle target prone and disorient it until the end of the next round. Its silhouette must be no more than one larger than yours.",
+      "resolutionNote": "The combat button pays wounds, knocks prone and applies a disorientation counter. Check non-vehicle eligibility, silhouette and next-round expiry manually.",
+      "sourceNote": "Unranked in the sourcebook glossary; the supplied compilation prints a rank marker."
+    },
+    "Embrace Your Hate": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "After a successful Brawl, Melee or Lightsaber check, spend one Destiny Point, then gain Conflict equal to the dark Destiny pool and add that amount of damage to one hit. Use once per encounter per rank. Owning this talent adds 1 Conflict at each session\u2019s start.",
+      "resolutionNote": "Successful close-combat attacks offer its Destiny cost, damage and encounter-use limit. If additional hits repeat this bonus, subtract it from those hits manually. Morality resolution adds the automatic +1 Conflict at session end; treat it as pending from session start and avoid entering it twice.",
+      "conflictTalent": true
+    },
+    "Far Strike": {
+      "type": "Force Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": true,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "Make a Brawl action as a ranged attack at Short range or farther, adding Force dice up to your rating. Spend one Force point per additional range band, up to Long. At Medium or Long, both enough range and a successful combat check are required to hit.",
+      "resolutionNote": "The combat action resolves range and the Brawl roll. An attempt with insufficient Force points still spends its action; it cannot reroll for free."
+    },
+    "Indomitable Will": {
+      "type": "Force Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": true,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "Once per encounter, use a maneuver, suffer 3 strain and commit Force dice up to your rating. Reduce all damage suffered by the committed amount; suffer 1 strain at the start of each turn while the dice stay committed.",
+      "resolutionNote": "Commits chosen dice, pays activation and maneuver costs, tracks its encounter use and charges continuing strain. Weapon attacks reduce damage automatically; resolve other damage sources manually."
+    },
+    "Inner Peace": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Once per encounter, convert dark Destiny Points to light, up to your ranks. Reduce the Conflict gained at session end by one plus the number of points converted.",
+      "resolutionNote": "The combat control converts whole Destiny Points once per encounter and saves pending Conflict reduction. Canceling or choosing zero changes nothing."
+    },
+    "Iron Body": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Remove one Setback per rank from Coordination and Resilience checks. Reduce the critical rating of unarmed attacks by one per rank, to a minimum of 1.",
+      "resolutionNote": "Removes PC Coordination/Resilience setbacks and lowers the unarmed profile\u2019s critical rating automatically."
+    },
+    "Juyo Savagery": {
+      "type": "Force Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": true,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Add five to Lightsaber Critical Injury rolls for each dark Destiny Point in the pool. Owning this talent adds 1 Conflict at each session\u2019s start.",
+      "resolutionNote": "Adds its Lightsaber Critical bonus automatically. Morality resolution adds the automatic +1 Conflict at session end; treat it as pending from session start and avoid entering it twice.",
+      "conflictTalent": true
+    },
+    "Martial Grace": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Once per round after a successful Brawl check, suffer 2 strain to add your Coordination ranks in damage to one hit.",
+      "resolutionNote": "Successful unarmed and Far Strike attacks offer the strain cost and one-hit bonus once per round. Resolve other Brawl weapons manually."
+    },
+    "Improved Toughened": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Once per session, heal wounds equal to your ranks in Toughened.",
+      "resolutionNote": "The combat button heals by Toughened ranks once per session; the spent use persists after reload."
+    },
+    "Power From Pain": {
+      "type": "Force Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": true,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Once per session, spend a Destiny Point to gain one Force rating per current Critical Injury until the encounter ends. Owning this talent adds 1 Conflict at each session\u2019s start.",
+      "resolutionNote": "The combat control saves the session use and encounter Force-rating increase. Morality resolution adds the automatic +1 Conflict at session end; treat it as pending from session start and avoid entering it twice.",
+      "conflictTalent": true
+    },
+    "Sapith Sundering": {
+      "type": "Force Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": true,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "When making a Brawl check, add Force dice up to your rating. The attack gains Sunder, and generated Force points may count as Advantage to activate Sunder.",
+      "resolutionNote": "Resolve the added Force dice, Sunder quality and Force-point expenditure manually.",
+      "resolution": "manual"
+    },
+    "Vaapad Control": {
+      "type": "Force Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": true,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "When making a Lightsaber check, suffer 1 strain to downgrade its difficulty once per light Destiny Point currently in the pool.",
+      "resolutionNote": "Lightsaber attacks offer the strain cost and challenge-die downgrades. Ordinary difficulty dice are not removed."
+    },
+    "Improved Precision Strike": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Once per round when inflicting a Critical Injury with Brawl or Melee, suffer 2 strain to choose any Average Critical Injury result.",
+      "resolutionNote": "Combat Critical controls offer Average result selection for Brawl/Melee once per round."
+    },
+    "Unarmed Parry": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "You may use Parry while unarmed. Doing so costs one less strain, to a minimum cost of 1.",
+      "resolutionNote": "The enemy-attack Parry prompt supports unarmed defense and its lower strain cost after using an unarmed attack."
+    }
   }
 }
 ;
-  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104};
+  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105};
   function rulesFor(spec){return ruleSets[data.trees[spec]?.ruleSet];}
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
@@ -47094,7 +48239,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.8-sentinel-warrior-audit';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.9-force-supplement-audit';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 

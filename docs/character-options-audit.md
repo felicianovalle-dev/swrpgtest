@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.8-sentinel-warrior-audit` / package `1.9.14`. Reviewed 2026-10-14 against the saved repository and the supplied source collections.
+Build: `96.9-force-supplement-audit` / package `1.9.15`. Reviewed 2026-10-15 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -19,11 +19,11 @@ Before the campaign-beginnings update, the saved game had the 18 careers from Ed
 
 Placements count shared specializations under each career; distinct trees count each shared specialization once. Species profiles count the three Aqualish variants separately: the update adds six species and eight profiles.
 
-The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. Twenty-four of the 54 older career layouts have now been reverified against the supplied AoR and F&D core books; 30 still await a fresh source audit. Layout coverage does not establish complete mechanical automation.
+The 25 Clone Wars and universal layouts contain 500 nodes checked against the supplied tree PDFs. Subsequent sourcebook reviews replaced 12 prototype layouts (240 nodes), Mechanic, Scout and 14 Force and Destiny layouts (320 nodes), and the remaining 20 Age of Rebellion layouts (400 nodes). These replacements total 73 imported layouts and 1,460 nodes, including universal options. All 48 former prototype/simplified career diagrams were visually compared with their supplied books and collections. Twenty-eight of the 54 older career layouts have now been reverified against the supplied AoR and F&D core books; 26 still await a fresh source audit. Layout coverage does not establish complete mechanical automation.
 
 ## Career and tree coverage
 
-“Existing full” is the saved engine label. “Imported” identifies replacement layouts. “Reviewed” identifies twenty-four older layouts checked against the AoR or F&D core books while keeping their original IDs. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
+“Existing full” is the saved engine label. “Imported” identifies replacement layouts. “Reviewed” identifies twenty-eight older layouts checked against the AoR or F&D core books while keeping their original IDs. No career entries remain labeled simplified or prototype. Earlier exact trees retain their IDs. Former prototype and simplified purchases are mapped by talent name to an available source node, keeping their original amount spent and dedication choice. Unmatched purchases remain as earlier game options and retain their existing effects; they do not unlock source-tree connections.
 
 | Career | Specializations and layout status |
 | --- | --- |
@@ -40,11 +40,11 @@ The 25 Clone Wars and universal layouts contain 500 nodes checked against the su
 | Engineer | Mechanic — Imported; Saboteur — Imported; Scientist — Imported; Droid Specialist — Imported; Sapper — Imported; Shipwright — Imported |
 | Spy | Infiltrator — Imported; Scout — Imported; Slicer — Existing full; Courier — Imported; Interrogator — Imported; Sleeper Agent — Imported |
 | Consular | Healer — Reviewed; Niman Disciple — Reviewed; Sage — Reviewed; Arbiter — Imported; Ascetic — Imported; Teacher — Imported |
-| Guardian | Peacekeeper — Reviewed; Protector — Reviewed; Soresu Defender — Reviewed; Armorer — Existing full; Warden — Imported; Warleader — Imported |
+| Guardian | Peacekeeper — Reviewed; Protector — Reviewed; Soresu Defender — Reviewed; Armorer — Reviewed; Warden — Imported; Warleader — Imported |
 | Mystic | Advisor — Reviewed; Makashi Duelist — Reviewed; Seer — Reviewed; Alchemist — Imported; Magus — Imported; Prophet — Imported |
 | Seeker | Ataru Striker — Reviewed; Hunter — Reviewed; Pathfinder — Reviewed; Executioner — Imported; Hermit — Imported; Navigator — Imported |
 | Sentinel | Artisan — Reviewed; Shadow — Reviewed; Shien Expert — Reviewed; Investigator — Imported; Racer — Imported; Sentry — Imported |
-| Warrior | Aggressor — Reviewed; Shii-Cho Knight — Reviewed; Starfighter Ace — Reviewed; Colossus — Existing full; Juyo Berserker — Existing full; Steel Hand Adept — Existing full |
+| Warrior | Aggressor — Reviewed; Shii-Cho Knight — Reviewed; Starfighter Ace — Reviewed; Colossus — Reviewed; Juyo Berserker — Reviewed; Steel Hand Adept — Reviewed |
 | Clone Soldier | Clone Trooper — Imported; Clone Officer — Imported; Clone Pilot — Imported; ARC Trooper — Imported; Clone Commander — Imported; Clone Veteran — Imported |
 | Jedi | Padawan — Imported; Knight — Imported; General — Imported; Master — Imported |
 
@@ -84,7 +84,7 @@ The [official F&D errata v1.0](https://cdn.svc.asmodee.net/production-edge/uploa
 
 `talentRules102` contains 57 source rules, bringing the union of scoped/shared rules to 350 distinct names. Source summaries and timing are scoped by tree. Complex Force and allied actions retain visible manual-resolution notes. Force-talent cards explain that Force Rating 1 is needed to use their benefits, while purchase paths remain open. Force Rating talents cannot grant initial sensitivity; saved inactive ranks activate once when a granting universal or Witchcraft provides the initial rating. Second Wind now enforces its once-per-encounter limit using the existing saved marker; the sixth and later daily stimpacks heal nothing even with Stimpack Specialization.
 
-The [48-layout tracker](older-layouts-audit.md) records the remaining 30 trees and source groups. See [force-core-audit-verification.md](force-core-audit-verification.md) for verification and limits.
+The [48-layout tracker](older-layouts-audit.md) records the remaining 26 trees and source groups. See [force-core-audit-verification.md](force-core-audit-verification.md) for verification and limits.
 
 ## Older Force core audit: Mystic and Seeker
 
@@ -102,7 +102,17 @@ Artisan, Shadow, Shien Expert, Aggressor, Shii-Cho Knight and Starfighter Ace no
 
 Multiple Opponents now counts individuals in an engaged minion group and adds its Boost only to Brawl, Melee or Lightsaber checks in both normal and special combat pools. Ship Gunnery now spends two Force points per Intuitive Strike result and charges opposite-alignment costs only for the points actually used. Complex item, Force and vehicle actions remain manual where the cards say so; Terrify's session-start Conflict and the once-per-round limits of Master Artisan, Master of Shadows and Falling Avalanche require manual tracking.
 
-This finishes 18 of the original 48 older layouts, leaving 30. The six earlier AoR core reviews bring the full reviewed total to 24 older layouts. Save schema remains 92; existing purchases and spending are retained. See [sentinel-warrior-audit-verification.md](sentinel-warrior-audit-verification.md) for exact source pages, changes, validation and limits.
+That batch finished 18 of the original 48 older layouts, leaving 30 at the time. The six earlier AoR core reviews bring the full reviewed total to 24 older layouts. Save schema remains 92; existing purchases and spending are retained. See [sentinel-warrior-audit-verification.md](sentinel-warrior-audit-verification.md) for exact source pages, changes, validation and limits.
+
+## Older Force supplement audit
+
+Armorer from Keeping the Peace and Colossus, Juyo Berserker and Steel Hand Adept from Knights of Fate now have reviewed source layouts. All 80 original IDs, names, positions and XP tiers remain. One missing connection is restored and fifteen unsupported connections removed. Colossus already matched its book diagram. Both Embrace Your Hate ranks are ordinary active talents, with the incorrect Force designation removed.
+
+The books govern conflicting compilation details: Armorer retains Tinkerer–Falling Avalanche and Imbue Item–Reinforce Item; Headbutt and Unstoppable are unranked. Hard Headed starts at Daunting and Improved Hard Headed at Formidable, with difficulty reductions only for ranks after the first. `talentRules105` contains 47 scoped rules; the shared/scoped union now covers 403 distinct names. All 97 earlier catalog records and other prior fields remain semantically unchanged.
+
+Inner Peace now accepts cancellation and zero without changing Destiny or pending Conflict reduction. Indomitable Will validates whole committed dice before spending a maneuver, reserves its activation strain when checking extra-maneuver costs, and refunds activation strain if the maneuver fails. Far Strike spends its action even when Force points cannot extend its range, preserving the narrative roll and preventing free retries. Its Short-range action remains available when all dice are committed, provided the character has Force rating. Hard Headed permits its staggered exception once, blocks repeated failed actions and preserves that distinction across save/resume.
+
+This completes all 22 older F&D layouts in the 48-layout tracker, leaving 26 EotE/AoR layouts. Combined with six earlier AoR core reviews, 28 older career layouts have been reviewed without replacing IDs. Save schema remains 92. Special item actions, some damage sources, Headbutt eligibility/expiry and Improved Hard Headed recovery remain manual where stated. Dark-talent automatic Conflict is still added at Morality resolution rather than displayed at session start; the cards explain the pending amount and avoid duplicate entry. See [force-supplement-audit-verification.md](force-supplement-audit-verification.md).
 
 ## Age of Rebellion completion
 
