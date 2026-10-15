@@ -1,0 +1,366 @@
+{
+  "build": "96.10-eote-core-audit",
+  "package": "1.9.16",
+  "reviewedDate": "2026-10-15",
+  "baselineCommit": "6660dd625c9f7f6fdfe71eca85ee64909586b453",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3850625,
+    "gitBlob": "93f83a1c5155f46c4265685aa884d924db18bccd",
+    "sha256": "d3db34baf556d90ed080f4f0ea2c133360af79cc59509df7ea92f7437e63157e"
+  },
+  "reviewedLayouts": 3,
+  "reviewedNodes": 60,
+  "retainedIds": 60,
+  "completedOriginal48": 25,
+  "remainingLayouts": 23,
+  "sourceRules": 32,
+  "distinctSourceNames": 406,
+  "sources": {
+    "Assassin": {
+      "book": "Edge of the Empire Core",
+      "printedPage": 59,
+      "physicalPdfPage": 68,
+      "glossaryChecked": true
+    },
+    "Scoundrel": {
+      "book": "Edge of the Empire Core",
+      "printedPage": 84,
+      "physicalPdfPage": 93,
+      "glossaryChecked": true
+    },
+    "Slicer": {
+      "book": "Edge of the Empire Core",
+      "printedPage": 91,
+      "physicalPdfPage": 100,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Assassin": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          16,
+          17
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Scoundrel": {
+      "addedEdges": [
+        [
+          9,
+          10
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "removedEdges": [
+        [
+          4,
+          5
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Slicer": {
+      "addedEdges": [
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "removedEdges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "typeChanges": []
+    }
+  },
+  "officialErrata": {
+    "version": "2.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/eote_errata_v20.pdf",
+    "note": "Targeted Blow removes Mercenary Soldier from its glossary Trees list; Assassin retains it."
+  },
+  "mechanicsFixes": [
+    "Precise Aim validates attack eligibility before costs, takes its maneuver and chosen whole strain, then spends the attack action.",
+    "A second maneuver must preserve the action; failed or declined maneuver costs refund activation strain.",
+    "Canceled or blocked attempts preserve existing unarmed-defense readiness. Spent action and turn-use marker survive reload."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 23,
+    "unchangedEarlierCatalogRecords": 101,
+    "earlierCatalogSerializationPreserved": true,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realPurchaseButtons": 60,
+    "fullTreeXpCost": 300,
+    "sharedSlicerCareers": [
+      "Technician",
+      "Spy"
+    ]
+  },
+  "suites": {
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 1914,
+  "executions": [
+    {
+      "name": "eote-core",
+      "returncode": 0,
+      "seconds": 65.53
+    },
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 78.04
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 91.12
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 142.49
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 80.22
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 80.4
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 69.0
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 105.3
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 139.17
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 197.33
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 15.49
+    },
+    {
+      "name": "creation",
+      "returncode": 0,
+      "seconds": 26.17
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 25.35
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 37.29
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 26.5
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 27.39
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 30.76
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 31.38
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 23.16
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 20.66
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 18.44
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 14.61
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Slicing intrusion, Master Slicer, Skilled Slicer, Mental Fortress, Hidden Storage, Sniper Shot, item handling and one-hit Destiny damage have manual steps described on cards.",
+    "Additional hits can repeat Deadly Accuracy damage; subtract repeated bonuses manually and track distinct skills for further ranks.",
+    "Natural reroll prompts cover failed checks; successful-check rerolls remain manual.",
+    "Precise Aim round limits across extra turns, Master of Shadows round limits and Side Step expiry require manual tracking.",
+    "Side Step cancellation spends its maneuver; Rapid Reaction accepts fractions, so choose whole numbers.",
+    "Black Market Contacts supports restricted purchases with local prices; exotic eligibility and base-price corrections remain manual.",
+    "Earlier documented defense-cap and Force-use limitations remain."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "93f83a1c5155f46c4265685aa884d924db18bccd"
+  }
+}

@@ -36,4 +36,24 @@ The original fixture contains 960 nodes across 48 layouts. This batch brings rev
 
 Six viewports cover 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Four visible creation/save/resume flows cover Assassin, Scoundrel, Technician Slicer and Spy Slicer; both Slicer flows use restored connections. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the current final-build run. The next source group is Martial Artist, Operator and Skip Tracer from No Disintegrations; it has not started.
+The current final-build verification completed successfully. The next source group is Martial Artist, Operator and Skip Tracer from No Disintegrations; it has not started.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All eleven browser/source suites passed 1,914 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. The four visible local creation flows also passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
+
+Every target in this final run used the same distribution: Git blob `93f83a1c5155f46c4265685aa884d924db18bccd`, 3,850,625 bytes, SHA-256 `d3db34baf556d90ed080f4f0ea2c133360af79cc59509df7ea92f7437e63157e`. No runtime changes followed this run. Machine-readable evidence is in [eote-core-audit-verification.json](eote-core-audit-verification.json). Hosted verification will compare this exact build and repeat all four creation/save/resume flows.
