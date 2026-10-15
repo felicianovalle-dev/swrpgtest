@@ -460,7 +460,63 @@
     "Multiple known lightsaber techniques retain the established engine priority; selecting another requires manual resolution."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "6b03894ea1dba6041e4d6553e82424d3d84ad6ed"
+    "status": "passed",
+    "sourceCommit": "7104f40ced8b895ce213f71176a0ddf6f8dd7af8",
+    "sourceTree": "4893c1864c8485b40656127d5da1a234e79737ed",
+    "distribution": {
+      "status": "passed",
+      "commit": "7104f40ced8b895ce213f71176a0ddf6f8dd7af8",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=7104f40ced8b&check=1792089345",
+      "httpStatus": 200,
+      "bytes": 3788603,
+      "gitBlob": "6b03894ea1dba6041e4d6553e82424d3d84ad6ed",
+      "sha256": "cabe7e02efcf8e673f52b5bc2a7d9080af021cb25275b84dc852588d119fc269"
+    },
+    "deployment": {
+      "id": 38786770433,
+      "head_sha": "7104f40ced8b895ce213f71176a0ddf6f8dd7af8",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38786770433"
+    },
+    "flows": [
+      {
+        "spec": "Artisan",
+        "career": "Sentinel",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "art02",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      },
+      {
+        "spec": "Shadow",
+        "career": "Sentinel",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "originalNode": "sd02",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": true
+      },
+      {
+        "spec": "Shii-Cho Knight",
+        "career": "Warrior",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "originalNode": "sc00",
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnection": false
+      }
+    ],
+    "errors": []
   }
 }

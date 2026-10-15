@@ -62,3 +62,9 @@ The nine browser/source suites passed 1,706 checks. All ten general regression t
 Fresh Artisan and Shadow characters at 390×844, plus Shii-Cho Knight at 1280×800, passed visible creation, original-ID purchases, finalization, manual save and reload. Shadow also purchased Sleight of Mind through the restored Grit connection. No overflow or application errors occurred.
 
 The checked distribution has Git blob `6b03894ea1dba6041e4d6553e82424d3d84ad6ed` (3,788,603 bytes). Hosted verification will compare the deployed HTML with this exact distribution and repeat these three flows.
+
+## Hosted proof
+
+Published source commit `7104f40ced8b895ce213f71176a0ddf6f8dd7af8`, tree `4893c1864c8485b40656127d5da1a234e79737ed`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38786770433) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=7104f40ced8b) returned HTTP 200 and exactly matched the tested distribution: Git blob `6b03894ea1dba6041e4d6553e82424d3d84ad6ed`, 3,788,603 bytes, SHA-256 `cabe7e02efcf8e673f52b5bc2a7d9080af021cb25275b84dc852588d119fc269`.
+
+Fresh hosted Artisan and Shadow characters at 390×844 and Shii-Cho Knight at 1280×800 passed visible creation, original-node purchases, finalization, manual save, reload and Resume latest. Shadow also used the restored Grit–Sleight of Mind connection. All three retained their character, campaign, XP and purchases; no horizontal overflow or application errors occurred. These isolated contexts contained no user campaign saves.
