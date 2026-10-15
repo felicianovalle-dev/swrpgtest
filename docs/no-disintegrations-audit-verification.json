@@ -446,7 +446,60 @@
     "Earlier documented mechanics limitations remain."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "3f5d4335d05f42a98cf603b2f352b587bb9009be"
+    "status": "passed",
+    "sourceCommit": "8396a230321042b8eecff8dd8923ddc6c36cac70",
+    "sourceTree": "6e717b34bb1b28e0b67984676d5c5527563fc94e",
+    "deployment": {
+      "id": 38816271279,
+      "head_sha": "8396a230321042b8eecff8dd8923ddc6c36cac70",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38816271279"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "8396a230321042b8eecff8dd8923ddc6c36cac70",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=8396a2303210&check=1792102808",
+      "httpStatus": 200,
+      "bytes": 3879419,
+      "gitBlob": "3f5d4335d05f42a98cf603b2f352b587bb9009be",
+      "sha256": "edf8148aefa1b4d1e2f9deed9b6cf6bdc4250874547a1ed8b904a773ba2c06da"
+    },
+    "flows": [
+      {
+        "spec": "Martial Artist",
+        "career": "Bounty Hunter",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnections": true
+      },
+      {
+        "spec": "Operator",
+        "career": "Bounty Hunter",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnections": true
+      },
+      {
+        "spec": "Skip Tracer",
+        "career": "Bounty Hunter",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "restoredConnections": true
+      }
+    ],
+    "errors": []
   }
 }

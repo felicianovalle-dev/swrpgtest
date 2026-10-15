@@ -56,3 +56,9 @@ The final-build verification completed successfully. The next group is Charmer, 
 All twelve browser/source suites passed 2,028 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Three new and four earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
 
 Every target in this final run used the same distribution: Git blob `3f5d4335d05f42a98cf603b2f352b587bb9009be`, 3,879,419 bytes, SHA-256 `edf8148aefa1b4d1e2f9deed9b6cf6bdc4250874547a1ed8b904a773ba2c06da`. No runtime changes followed this run. Machine-readable evidence is in [no-disintegrations-audit-verification.json](no-disintegrations-audit-verification.json). Hosted verification will compare these exact bytes and repeat the three new creation/save/resume flows.
+
+## Hosted proof
+
+Published source commit `8396a230321042b8eecff8dd8923ddc6c36cac70`, tree `6e717b34bb1b28e0b67984676d5c5527563fc94e`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38816271279) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=8396a2303210) returned HTTP 200 and matched the tested distribution exactly: Git blob `3f5d4335d05f42a98cf603b2f352b587bb9009be`, 3,879,419 bytes, SHA-256 `edf8148aefa1b4d1e2f9deed9b6cf6bdc4250874547a1ed8b904a773ba2c06da`.
+
+Fresh hosted Martial Artist and Skip Tracer characters at 390×844 and Operator at 1280×800 passed visible creation, original-ID purchases along restored connections, finalization, manual save, reload and Resume. All three preserved character, campaign, XP and purchases, with no horizontal overflow or application errors. These isolated contexts contained no user saves.
