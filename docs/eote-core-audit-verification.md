@@ -57,3 +57,9 @@ The current final-build verification completed successfully. The next source gro
 All eleven browser/source suites passed 1,914 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. The four visible local creation flows also passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
 
 Every target in this final run used the same distribution: Git blob `93f83a1c5155f46c4265685aa884d924db18bccd`, 3,850,625 bytes, SHA-256 `d3db34baf556d90ed080f4f0ea2c133360af79cc59509df7ea92f7437e63157e`. No runtime changes followed this run. Machine-readable evidence is in [eote-core-audit-verification.json](eote-core-audit-verification.json). Hosted verification will compare this exact build and repeat all four creation/save/resume flows.
+
+## Hosted proof
+
+Published source commit `d0a90e46d03da5988557bbf11363a1f5d40f6341`, tree `71df4af564f19492cbec9c7e08f56144d42bf180`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38807912926) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=d0a90e46d03d) returned HTTP 200 and matched the tested distribution exactly: Git blob `93f83a1c5155f46c4265685aa884d924db18bccd`, 3,850,625 bytes, SHA-256 `d3db34baf556d90ed080f4f0ea2c133360af79cc59509df7ea92f7437e63157e`.
+
+Fresh hosted Assassin, Scoundrel and Spy Slicer characters at 390×844 and Technician Slicer at 1280×800 passed visible creation, original-ID purchases, finalization, manual save, reload and Resume. Both Slicer flows used the restored 15-XP-row connections. All four preserved character, campaign, XP and purchases, with no horizontal overflow or application errors. These isolated contexts contained no user saves.
