@@ -512,7 +512,63 @@
     "Earlier documented defense, Force-use and other control limitations remain."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "d2db4a7dc000d9ada7768995e1b725ea560227bb"
+    "status": "passed",
+    "sourceCommit": "3fb9a41e83a8e4686b97f5786bdc520795d83859",
+    "sourceTree": "3f3f2450cd6c150896be4159064d3c6ae58a3ef3",
+    "deployment": {
+      "id": 38838730238,
+      "head_sha": "3fb9a41e83a8e4686b97f5786bdc520795d83859",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38838730238"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "3fb9a41e83a8e4686b97f5786bdc520795d83859",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=3fb9a41e83a8&check=1792116452",
+      "httpStatus": 200,
+      "bytes": 3933380,
+      "gitBlob": "d2db4a7dc000d9ada7768995e1b725ea560227bb",
+      "sha256": "e02985086742f02dd1aa651f9b964ed4d5420575efe9e5e722becdc0370852e2"
+    },
+    "flows": [
+      {
+        "spec": "Cyber Tech",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      },
+      {
+        "spec": "Droid Tech",
+        "career": "Technician",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      },
+      {
+        "spec": "Modder",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      }
+    ],
+    "errors": []
   }
 }

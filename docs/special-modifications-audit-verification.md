@@ -60,3 +60,9 @@ The final-build verification completed successfully. The next group is Demolitio
 All fourteen browser/source suites passed 2,268 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Three new and ten earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
 
 Every target in this final run used the same distribution: Git blob `d2db4a7dc000d9ada7768995e1b725ea560227bb`, 3,933,380 bytes, SHA-256 `e02985086742f02dd1aa651f9b964ed4d5420575efe9e5e722becdc0370852e2`. No runtime changes followed this run. Machine-readable evidence is in [special-modifications-audit-verification.json](special-modifications-audit-verification.json). Hosted verification will compare these exact bytes and repeat the three new creation/save/resume flows.
+
+## Hosted proof
+
+Published source commit `3fb9a41e83a8e4686b97f5786bdc520795d83859`, tree `3f3f2450cd6c150896be4159064d3c6ae58a3ef3`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38838730238) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=3fb9a41e83a8) returned HTTP 200 and matched the tested distribution exactly: Git blob `d2db4a7dc000d9ada7768995e1b725ea560227bb`, 3,933,380 bytes, SHA-256 `e02985086742f02dd1aa651f9b964ed4d5420575efe9e5e722becdc0370852e2`.
+
+Fresh hosted Cyber Tech and Modder characters at 390×844 and Droid Tech at 1280×800 passed visible creation, original-ID purchases along source-checked routes, finalization, manual save, reload and Resume. All three preserved character, campaign, XP and purchases, with no horizontal overflow or application errors. These isolated contexts contained no user saves.
