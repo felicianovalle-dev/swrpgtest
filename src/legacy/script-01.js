@@ -5378,7 +5378,7 @@ function pcAttack(kind='normal'){
     else{target.w+=dmg;if(target.type==='minion')target.members=Math.max(0,Math.ceil((target.wt-target.w)/target.perWt));cLog(`${S.name} hits ${target.name} for ${dmg}. ${rtxt(r)}`)}
   }else cLog(`${S.name} misses ${target.name}. ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?bringItDown+feralStrengthDamage(q.skill)+barrageDamage(q.skill,q.range)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
+  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?bringItDown+pointBlankDamage(q.skill,q.range)+feralStrengthDamage(q.skill)+barrageDamage(q.skill,q.range)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
   if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function crewAttack(){

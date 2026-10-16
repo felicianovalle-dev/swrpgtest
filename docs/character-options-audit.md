@@ -345,3 +345,8 @@ All 60 original IDs, names, positions and XP costs remain. Thirteen connections 
 ## Enter the Unknown audit: Archaeologist and Big-Game Hunter
 
 All 40 original IDs, names, positions and costs remain. One source connection is restored and one shortcut removed on printed pp.25 and 27 / physical pp.26 and 28. Knowledge Specialization becomes Active on both Archaeologist nodes; Knockdown becomes Passive, following the shared glossary. Improved Hunter’s Quarry remains Passive despite its red tree box. Twenty-eight scoped rules include five entries from printed p.30 / physical p.31 and 23 previously reviewed shared rules. Bring It Down’s paid bonus applies to one hit and is excluded from additional hits after save/reload; target Brawn zero is retained. This completes 39 of 48 older layouts, leaving 9 pending. See [verification](enter-unknown-audit-verification.md).
+
+
+## Far Horizons audit: Entrepreneur, Marshal and Performer
+
+All 60 original IDs, names, positions and XP costs remain. Five missing connections are restored on printed pp.27, 29 and 31 / physical pp.28, 30 and 32. Both Smooth Talker nodes become Active; Improved Distracting Behavior remains Passive under its glossary entry despite its red tree box. Thirty-nine scoped rules include 16 Far Horizons glossary entries from printed pp.32–33 / physical pp.33–34 and 23 previously reviewed shared entries. The literal source-name union reaches 459. Point Blank follows the official short/engaged range correction and its single-hit bonus is excluded from additional Auto-fire/Linked hits after save/reload. This completes 42 of the original 48 layouts; six remain. See [verification](far-horizons-audit-verification.md).

@@ -7265,7 +7265,7 @@ function pcAttack(kind='normal'){
     else{target.w+=dmg;if(target.type==='minion')target.members=Math.max(0,Math.ceil((target.wt-target.w)/target.perWt));cLog(`${S.name} hits ${target.name} for ${dmg}. ${rtxt(r)}`)}
   }else cLog(`${S.name} misses ${target.name}. ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?bringItDown+feralStrengthDamage(q.skill)+barrageDamage(q.skill,q.range)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
+  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?bringItDown+pointBlankDamage(q.skill,q.range)+feralStrengthDamage(q.skill)+barrageDamage(q.skill,q.range)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
   if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function crewAttack(){
@@ -32720,6 +32720,477 @@ window.CharacterCatalog97 = (() => {
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "unknown111"
+    },
+    "Entrepreneur": {
+      "names": [
+        "Sound Investments",
+        "Plausible Deniability",
+        "Rapid Recovery",
+        "Grit",
+        "Rapid Recovery",
+        "Wheel and Deal",
+        "Sound Investments",
+        "Wheel and Deal",
+        "Greased Palms",
+        "Throwing Credits",
+        "Bought Info",
+        "Sound Investments",
+        "Sound Investments",
+        "Toughened",
+        "Master Merchant",
+        "Know Somebody",
+        "Natural Merchant",
+        "Intense Focus",
+        "Dedication",
+        "Sound Investments"
+      ],
+      "nodeIds": [
+        "ent00",
+        "ent01",
+        "ent02",
+        "ent03",
+        "ent10",
+        "ent11",
+        "ent12",
+        "ent13",
+        "ent20",
+        "ent21",
+        "ent22",
+        "ent23",
+        "ent30",
+        "ent31",
+        "ent32",
+        "ent33",
+        "ent40",
+        "ent41",
+        "ent42",
+        "ent43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Far Horizons \u00b7 p.27",
+      "collection": "far-horizons",
+      "page": 28,
+      "bookPdfPage": 28,
+      "bookFile": "far-horizons",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "far112"
+    },
+    "Marshal": {
+      "names": [
+        "Hard Headed",
+        "Grit",
+        "Street Smarts",
+        "Toughened",
+        "Durable",
+        "Good Cop",
+        "Bad Cop",
+        "Quick Draw",
+        "Hard Headed",
+        "Grit",
+        "Good Cop",
+        "Point Blank",
+        "Durable",
+        "Unrelenting Skeptic",
+        "Bad Cop",
+        "Point Blank",
+        "Improved Hard Headed",
+        "Improved Unrelenting Skeptic",
+        "Dedication",
+        "Natural Marksman"
+      ],
+      "nodeIds": [
+        "mar00",
+        "mar01",
+        "mar02",
+        "mar03",
+        "mar10",
+        "mar11",
+        "mar12",
+        "mar13",
+        "mar20",
+        "mar21",
+        "mar22",
+        "mar23",
+        "mar30",
+        "mar31",
+        "mar32",
+        "mar33",
+        "mar40",
+        "mar41",
+        "mar42",
+        "mar43"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ]
+      ],
+      "universal": false,
+      "source": "Far Horizons \u00b7 p.29",
+      "collection": "far-horizons",
+      "page": 30,
+      "bookPdfPage": 30,
+      "bookFile": "far-horizons",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "far112"
+    },
+    "Performer": {
+      "names": [
+        "Smooth Talker",
+        "Kill with Kindness",
+        "Distracting Behavior",
+        "Convincing Demeanor",
+        "Distracting Behavior",
+        "Congenial",
+        "Dodge",
+        "Jump Up",
+        "Distracting Behavior",
+        "Intense Presence",
+        "Natural Athlete",
+        "Second Wind",
+        "Smooth Talker",
+        "Improved Distracting Behavior",
+        "Grit",
+        "Toughened",
+        "Biggest Fan",
+        "Deceptive Taunt",
+        "Coordination Dodge",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "per00",
+        "per01",
+        "per02",
+        "per03",
+        "per10",
+        "per11",
+        "per12",
+        "per13",
+        "per20",
+        "per21",
+        "per22",
+        "per23",
+        "per30",
+        "per31",
+        "per32",
+        "per33",
+        "per40",
+        "per41",
+        "per42",
+        "per43"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Far Horizons \u00b7 p.31",
+      "collection": "far-horizons",
+      "page": 32,
+      "bookPdfPage": 32,
+      "bookFile": "far-horizons",
+      "bookPage": 31,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "far112"
     }
   },
   "universals": {
@@ -52310,10 +52781,462 @@ window.CharacterCatalog97 = (() => {
       "summary": "Choose two skills per rank. They become career skills; this grants no free skill ranks.",
       "resolutionNote": "Saves two selected career skills for this node; the choice persists after reload and grants no free ranks."
     }
+  },
+  "talentRules112": {
+    "Bad Cop": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Far Horizons \u00b7 p.32",
+      "summary": "Spend two Advantage from Deception or Coercion to upgrade one ally\u2019s subsequent social check against the same target in this encounter once per rank. A check can benefit from only one use.",
+      "resolutionNote": "Resolve the Advantage payment, ally\u2019s check, same target, encounter limit and ability upgrades manually.",
+      "resolution": "manual"
+    },
+    "Biggest Fan": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Far Horizons \u00b7 p.32",
+      "summary": "Once per session, make a Hard Charm action to make one NPC in the current encounter your biggest fan. The GM decides the benefits and whether that NPC can be affected.",
+      "resolutionNote": "Resolve the Hard check, eligible NPC, narrative benefits and once-per-session limit manually; this does not automatically recruit a companion.",
+      "resolution": "manual"
+    },
+    "Bought Info": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Far Horizons \u00b7 p.32",
+      "summary": "Instead of a Knowledge check, spend credits equal to fifty times its difficulty to succeed with one uncanceled Success. The GM may rule that the information cannot be purchased.",
+      "resolutionNote": "Resolve information availability, difficulty, credit payment and replacement result manually. Ordinary Knowledge rolls do not activate or charge for this talent.",
+      "resolution": "manual"
+    },
+    "Congenial": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Far Horizons \u00b7 p.32",
+      "summary": "Suffer strain up to your ranks to downgrade your Charm or Negotiation check, or upgrade an incoming Charm or Negotiation check, once per strain.",
+      "resolutionNote": "Supported party Charm/Negotiation checks offer whole strain within capacity and downgrade Challenge dice. Resolve incoming social checks and other roll workflows manually."
+    },
+    "Convincing Demeanor": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 133,
+      "pdfPage": 142,
+      "source": "Edge of the Empire Core \u00b7 p.133",
+      "summary": "Remove one Setback per rank from Deception and Skulduggery checks.",
+      "resolutionNote": "Removes PC Deception and Skulduggery setbacks automatically."
+    },
+    "Coordination Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Far Horizons \u00b7 p.32",
+      "summary": "When targeted by a combat check, spend one Destiny Point to add automatic Failures equal to your Coordination ranks to that check.",
+      "resolutionNote": "Resolve the Destiny payment and automatic Failures manually; this is not extra difficulty or Setback dice.",
+      "resolution": "manual"
+    },
+    "Deceptive Taunt": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "Once per session, make an opposed Deception action against one NPC within medium range. On success it must attack you next turn, moving on subsequent turns until able to make that attack.",
+      "resolutionNote": "Resolve the opposed check, target, range and session limit manually. The effect ends after the attack, your incapacitation or your departure; the GM may allow a nonlethal attack outside combat.",
+      "resolution": "manual"
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Distracting Behavior": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Far Horizons \u00b7 p.32",
+      "summary": "Suffer strain up to Cunning to affect that many chosen NPCs. They add one automatic Threat to checks until the beginning of your next turn. Start with engaged range and extend it one band per rank.",
+      "resolutionNote": "Resolve the maneuver, strain, chosen NPCs and range manually. Add automatic Threat, not Setback dice; track expiry at the beginning of your next turn. NPC allies may be excluded.",
+      "resolution": "manual"
+    },
+    "Dodge": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 135,
+      "pdfPage": 144,
+      "source": "Edge of the Empire Core \u00b7 p.135",
+      "summary": "When targeted by a combat check, suffer strain up to your ranks as an out-of-turn incidental. Upgrade that attack\u2019s difficulty by the amount suffered.",
+      "resolutionNote": "Enemy attacks offer its strain-for-difficulty upgrade. Resolve attacks outside those prompts manually."
+    },
+    "Durable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Reduce a Critical Injury result you suffer by 10 per rank, to a minimum result of 1.",
+      "resolutionNote": "Reduces your Critical Injury results automatically."
+    },
+    "Good Cop": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "Spend two Advantage from Charm or Negotiation to upgrade one ally\u2019s subsequent social check against the same target in this encounter once per rank. A check can benefit from only one use.",
+      "resolutionNote": "Resolve the Advantage payment, ally\u2019s check, same target, encounter limit and ability upgrades manually.",
+      "resolution": "manual"
+    },
+    "Greased Palms": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "Before a social check, spend up to fifty credits per rank as a maneuver. Each fifty credits upgrades the check\u2019s ability once.",
+      "resolutionNote": "Resolve the maneuver, credit payment and ability upgrades manually. This is an ability upgrade, not a difficulty reduction.",
+      "resolution": "manual"
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Hard Headed": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": true,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "While staggered or disoriented, make a Daunting Discipline action, even while staggered. Reduce difficulty by one per rank after the first, to a minimum of Easy. Success clears staggered and disoriented.",
+      "resolutionNote": "The combat action clears staggered/disoriented and uses glossary difficulty. A failed attempt spends the action and cannot retry that turn.",
+      "sourceNote": "Knights of Fate p.30 glossary starts at Daunting and reduces difficulty per additional rank; the tree says per rank. The glossary governs."
+    },
+    "Improved Distracting Behavior": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "NPCs affected by Distracting Behavior add two automatic Threat instead of one when their checks target your allies.",
+      "resolutionNote": "The glossary labels this improvement Passive despite the red tree box. Resolve the base maneuver and duration manually; the extra Threat applies against allies, not against you.",
+      "resolution": "manual"
+    },
+    "Improved Hard Headed": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "On the next turn after strain incapacitates you, make a Formidable Discipline action. Reduce difficulty by one per Hard Headed rank after the first, to a minimum of Easy. Success lowers strain to one below its threshold.",
+      "resolutionNote": "Resolve strain-incapacitation recovery, next-turn timing and the Formidable baseline manually; the ordinary Hard Headed button does not perform this recovery.",
+      "resolution": "manual",
+      "sourceNote": "Knights of Fate p.30 glossary reduces the Formidable baseline only for Hard Headed ranks after the first."
+    },
+    "Improved Unrelenting Skeptic": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "After an incoming Deception check fails, spend one Destiny Point to retroactively add a Despair to its result.",
+      "resolutionNote": "Resolve the failed-check trigger, Destiny payment and added Despair manually. This is not a reroll or an automatic success for the deceiver.",
+      "resolution": "manual"
+    },
+    "Intense Focus": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "page": 150,
+      "pdfPage": 151,
+      "source": "Age of Rebellion Core \u00b7 p.150",
+      "force": false,
+      "summary": "As a maneuver, suffer one strain to upgrade the ability of your next skill check once.",
+      "resolutionNote": "Supported party checks offer the strain cost and ability upgrade. Account for the maneuver manually; direct roll workflows require manual resolution."
+    },
+    "Intense Presence": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Spend one Destiny Point to recover strain equal to your Presence.",
+      "resolutionNote": "The utility control spends a light Destiny Point and recovers strain equal to Presence."
+    },
+    "Jump Up": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 138,
+      "pdfPage": 147,
+      "source": "Edge of the Empire Core \u00b7 p.138",
+      "summary": "Once per round on your turn, stand from prone or seated as an incidental.",
+      "resolutionNote": "Resolve standing as an incidental and its once-per-round limit manually.",
+      "resolution": "manual"
+    },
+    "Kill with Kindness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Remove one Setback per rank from Charm and Leadership checks.",
+      "resolutionNote": "Removes setbacks from PC Charm and Leadership checks."
+    },
+    "Know Somebody": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Once per session, reduce the rarity of a legally available item you are purchasing by one per rank.",
+      "resolutionNote": "Resolve legal availability, rarity reduction and the session limit manually.",
+      "resolution": "manual"
+    },
+    "Master Merchant": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "force": false,
+      "summary": "When buying, selling or adjusting Obligation, suffer two strain to sell for twenty-five percent more, buy for twenty-five percent less, pay off one more Obligation or take one less.",
+      "resolutionNote": "Resolve the incidental, two strain and chosen transaction adjustment manually; market prices and Obligation do not change automatically.",
+      "resolution": "manual"
+    },
+    "Natural Athlete": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "Once per session, reroll one Athletics or Coordination check.",
+      "resolutionNote": "Supported failed party checks offer this reroll and save its session use. Successful checks and other workflows require manual resolution and session tracking."
+    },
+    "Natural Marksman": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 153,
+      "pdfPage": 154,
+      "source": "Age of Rebellion Core \u00b7 p.153",
+      "force": false,
+      "summary": "Once per session, reroll one Ranged (Light) or Ranged (Heavy) check.",
+      "resolutionNote": "Eligible failed checks offer one reroll and save session use. Rerolling a successful check requires manual resolution."
+    },
+    "Natural Merchant": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "Once per session, reroll one Streetwise or Negotiation check.",
+      "resolutionNote": "Supported failed party checks offer this reroll and save its session use. Successful checks and other workflows require manual resolution and session tracking."
+    },
+    "Plausible Deniability": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "Remove one Setback per rank from Coercion and Deception.",
+      "resolutionNote": "Removes setbacks from PC Coercion and Deception."
+    },
+    "Point Blank": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154",
+      "force": false,
+      "summary": "Add one damage per rank to one hit of a successful Ranged (Light) or Ranged (Heavy) attack at short or engaged range.",
+      "resolutionNote": "PC combat attacks apply this bonus to one hit; Auto-fire and Linked extra hits exclude it, including after save/reload. Far Horizons p.29 uses short or engaged range under official EotE errata v2.0. Resolve other attack workflows manually."
+    },
+    "Quick Draw": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Once per round on your turn, draw or holster an easily accessible weapon as an incidental. Reduce longer weapon preparation or stowing requirements by one maneuver.",
+      "resolutionNote": "Resolve the accessible weapon and reduced preparation requirement manually.",
+      "resolution": "manual"
+    },
+    "Rapid Recovery": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "After an encounter, recover one additional strain per rank.",
+      "resolutionNote": "Adds strain recovery in the recovery control. Use it after an encounter; recovery timing and repeat attempts are not enforced."
+    },
+    "Second Wind": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 151,
+      "pdfPage": 154,
+      "source": "Force and Destiny Core \u00b7 p.151",
+      "summary": "Once per encounter, use an incidental to recover strain equal to your ranks.",
+      "resolutionNote": "The combat control recovers strain once per encounter; its use remains spent after saving and resuming."
+    },
+    "Smooth Talker": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Choose Charm, Coercion, Deception or Negotiation on first acquisition. Spend Triumph on that skill to gain extra Successes equal to your ranks.",
+      "resolutionNote": "Record the chosen social skill and resolve Triumph conversion manually.",
+      "resolution": "manual"
+    },
+    "Sound Investments": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "At the beginning of each session, gain one hundred credits per rank. The GM may make this income temporarily unavailable because of the adventure.",
+      "resolutionNote": "Start Session pays the ranked income once; save/reload and repeating Start Session while active do not pay again. Resolve GM restrictions manually."
+    },
+    "Street Smarts": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Remove one Setback per rank from Streetwise and Knowledge (Underworld).",
+      "resolutionNote": "Removes setbacks from PC Streetwise and Knowledge (Underworld)."
+    },
+    "Throwing Credits": {
+      "type": "Active",
+      "activation": "Active",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "At session start after Obligation is triggered, you may spend one hundred credits to ignore all resulting strain-threshold penalties. Story complications still apply.",
+      "resolutionNote": "Resolve the timing, credit payment and strain-threshold adjustment manually. Start Session does not automatically spend credits or remove the triggered Obligation penalty.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Unrelenting Skeptic": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Far Horizons \u00b7 p.33",
+      "summary": "Incoming Deception checks gain automatic Failures equal to your Vigilance ranks.",
+      "resolutionNote": "Resolve incoming Deception and automatic Failures manually; this is not extra difficulty or Setback dice.",
+      "resolution": "manual"
+    },
+    "Wheel and Deal": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 159,
+      "pdfPage": 160,
+      "source": "Age of Rebellion Core \u00b7 p.159",
+      "force": false,
+      "summary": "When selling goods legally, receive ten percent more credits per rank.",
+      "resolutionNote": "Resolve the legal-sale requirement and ranked price increase manually. Market sale controls do not automatically apply this talent.",
+      "resolution": "manual"
+    }
   }
 }
 ;
-  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106,noDis107:data.talentRules107,flyCasual108:data.talentRules108,specialMods109:data.talentRules109,dangerous110:data.talentRules110,unknown111:data.talentRules111};
+  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106,noDis107:data.talentRules107,flyCasual108:data.talentRules108,specialMods109:data.talentRules109,dangerous110:data.talentRules110,unknown111:data.talentRules111,far112:data.talentRules112};
   function rulesFor(spec){return ruleSets[data.trees[spec]?.ruleSet];}
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
@@ -53415,7 +54338,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.15-enter-unknown-audit';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.16-far-horizons-audit';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 

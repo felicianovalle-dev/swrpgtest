@@ -1,6 +1,6 @@
 {
   "name": "sable-reach-pwa",
-  "version": "1.9.21",
+  "version": "1.9.22",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
@@ -27,7 +27,9 @@
     "test:talents:dangerous-covenants": "node scripts/check_talents110.cjs",
     "test:creation:dangerous-covenants": "node scripts/check_creation110.cjs local",
     "test:talents:enter-the-unknown": "node scripts/check_talents111.cjs",
-    "test:creation:enter-the-unknown": "node scripts/check_creation111.cjs local"
+    "test:creation:enter-the-unknown": "node scripts/check_creation111.cjs local",
+    "test:talents:far-horizons": "node scripts/check_talents112.cjs",
+    "test:creation:far-horizons": "node scripts/check_creation112.cjs local"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.10",
