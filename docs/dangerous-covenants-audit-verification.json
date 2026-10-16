@@ -667,7 +667,75 @@
     "Earlier documented controls and Force-use limitations remain."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "ef0adfcede5445f52da0fbbe7b0b9c1acd8c8bec"
+    "status": "passed",
+    "sourceCommit": "336f87c36db78492f7af5551d4da2a6373d98612",
+    "sourceTree": "ecddd5ee6ba0c9fde2beed6bc6b3d043da0d022b",
+    "deployment": {
+      "id": 38843585303,
+      "head_sha": "336f87c36db78492f7af5551d4da2a6373d98612",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38843585303"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "336f87c36db78492f7af5551d4da2a6373d98612",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=336f87c36db7&check=1792119913",
+      "httpStatus": 200,
+      "bytes": 3959662,
+      "gitBlob": "ef0adfcede5445f52da0fbbe7b0b9c1acd8c8bec",
+      "sha256": "f1c066055881b30a756ff02f06034497d72fdedf58cf2e4772959bd83f9868db"
+    },
+    "flows": [
+      {
+        "spec": "Demolitionist",
+        "career": "Hired Gun",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      },
+      {
+        "spec": "Enforcer",
+        "career": "Hired Gun",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      },
+      {
+        "spec": "Heavy",
+        "career": "Hired Gun",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      },
+      {
+        "spec": "Heavy",
+        "career": "Soldier",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      }
+    ],
+    "errors": []
   }
 }

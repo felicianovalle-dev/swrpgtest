@@ -63,3 +63,9 @@ The final-build verification completed successfully. The next group is Archaeolo
 All fifteen browser/source suites passed 2,439 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Four new and thirteen earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
 
 Every target in this final run used the same distribution: Git blob `ef0adfcede5445f52da0fbbe7b0b9c1acd8c8bec`, 3,959,662 bytes, SHA-256 `f1c066055881b30a756ff02f06034497d72fdedf58cf2e4772959bd83f9868db`. No runtime changes followed this run. Machine-readable evidence is in [dangerous-covenants-audit-verification.json](dangerous-covenants-audit-verification.json). Hosted verification will compare these exact bytes and repeat the four new creation/save/resume flows.
+
+## Hosted proof
+
+Published source commit `336f87c36db78492f7af5551d4da2a6373d98612`, tree `ecddd5ee6ba0c9fde2beed6bc6b3d043da0d022b`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38843585303) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=336f87c36db7) returned HTTP 200 and matched the tested distribution exactly: Git blob `ef0adfcede5445f52da0fbbe7b0b9c1acd8c8bec`, 3,959,662 bytes, SHA-256 `f1c066055881b30a756ff02f06034497d72fdedf58cf2e4772959bd83f9868db`.
+
+Fresh hosted Demolitionist and both Heavy career placements at 390×844 and Enforcer at 1280×800 passed visible creation, original-ID purchases along source-checked routes, finalization, manual save, reload and Resume. All four preserved character, campaign, XP and purchases, with no horizontal overflow or application errors. These isolated contexts contained no user saves.
