@@ -59,3 +59,9 @@ The final-build verification completed successfully. Next: Figurehead, Instructo
 All seventeen browser/source suites passed 2,630 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Three new and nineteen earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
 
 Every target used the same distribution: Git blob `d83882b592400fc8662f08613434131316cdf9c8`, 4,007,523 bytes, SHA-256 `2f15ab93fd51d5280315b692d360d5ee0152bc55f70195c80a04492e7035e312`. No runtime changes followed this run. Machine-readable evidence is in [far-horizons-audit-verification.json](far-horizons-audit-verification.json).
+
+## Hosted proof
+
+Published source commit `4ab978b953f0d6664c7cc4607b085aabe37f4195`, tree `019feaba2355bd1f13b879d8f0fa21395d64c478`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38974251427) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=4ab978b953f0) returned HTTP 200 and matched the tested distribution exactly: Git blob `d83882b592400fc8662f08613434131316cdf9c8`, 4,007,523 bytes, SHA-256 `2f15ab93fd51d5280315b692d360d5ee0152bc55f70195c80a04492e7035e312`.
+
+Fresh hosted Entrepreneur at 390×844, Marshal at 375×667 and Performer at 1280×800 passed visible creation, original-ID purchases along source-checked routes, finalization, manual save, reload and Resume. All three preserved character, campaign, XP and purchases, with no horizontal overflow or application errors. These isolated contexts contained no user saves.

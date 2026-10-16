@@ -645,7 +645,63 @@
     "Point Blank is supported in PC combat attacks. Existing pending extra-hit records without its single-hit subtraction are not rewritten retroactively. Earlier documented control and Force-use limits remain."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "d83882b592400fc8662f08613434131316cdf9c8"
+    "status": "passed",
+    "sourceCommit": "4ab978b953f0d6664c7cc4607b085aabe37f4195",
+    "sourceTree": "019feaba2355bd1f13b879d8f0fa21395d64c478",
+    "deployment": {
+      "id": 38974251427,
+      "head_sha": "4ab978b953f0d6664c7cc4607b085aabe37f4195",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38974251427"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "4ab978b953f0d6664c7cc4607b085aabe37f4195",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=4ab978b953f0&check=1792188774",
+      "httpStatus": 200,
+      "bytes": 4007523,
+      "gitBlob": "d83882b592400fc8662f08613434131316cdf9c8",
+      "sha256": "2f15ab93fd51d5280315b692d360d5ee0152bc55f70195c80a04492e7035e312"
+    },
+    "flows": [
+      {
+        "spec": "Entrepreneur",
+        "career": "Colonist",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "spec": "Marshal",
+        "career": "Colonist",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "spec": "Performer",
+        "career": "Colonist",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      }
+    ],
+    "errors": []
   }
 }
