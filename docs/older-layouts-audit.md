@@ -2,7 +2,7 @@
 
 The published `38fc8aa` build contained 48 distinct older career layouts awaiting a fresh source audit. `scripts/fixtures/older-layouts102.json` freezes their 960 original nodes, connections, types and source labels. Heavy and Slicer appear under two careers each but are counted once.
 
-Eleven batches now cover the eighteen F&D core layouts, four older F&D supplement layouts, three EotE core layouts, three No Disintegrations layouts, three Fly Casual layouts, three Special Modifications layouts, three Dangerous Covenants layouts two Enter the Unknown layouts and three Far Horizons layouts. Forty-two of the original 48 are reviewed; 6 remain pending. Existing purchases and XP are retained; source corrections govern new purchases. Source files and private download URLs are excluded from the repository.
+Eleven batches now cover the eighteen F&D core layouts, four older F&D supplement layouts, three EotE core layouts, three No Disintegrations layouts, three Fly Casual layouts, three Special Modifications layouts, three Dangerous Covenants layouts, two Enter the Unknown layouts and three Far Horizons layouts. Forty-two of the original 48 are reviewed; 6 remain pending. Existing purchases and XP are retained; source corrections govern new purchases. Source files and private download URLs are excluded from the repository.
 
 | Source group | Trees | Original count | Remaining |
 | --- | --- | ---: | ---: |

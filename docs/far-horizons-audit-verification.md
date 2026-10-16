@@ -32,4 +32,30 @@ Progress reaches 42 of the original 48 older layouts, with six pending. Includin
 
 Tests cover 960 original individual purchases, combined 2,040-purchase continuation, all 60 real purchase buttons, five restored routes, activation labels, whole-tree XP costs, ranked income, supported social modifiers, reroll session limits and Point Blank additional-hit continuation. Viewports: 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Three visible creation/save/resume flows follow source-checked routes; 19 earlier flows remain regression targets. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the final-build run. Next: Figurehead, Instructor and Strategist from Lead by Example.
+The final-build verification completed successfully. Next: Figurehead, Instructor and Strategist from Lead by Example.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| farHorizons | 102 |
+| enterTheUnknown | 89 |
+| dangerousCovenants | 171 |
+| specialModifications | 117 |
+| flyCasual | 123 |
+| noDisintegrations | 114 |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All seventeen browser/source suites passed 2,630 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Three new and nineteen earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
+
+Every target used the same distribution: Git blob `d83882b592400fc8662f08613434131316cdf9c8`, 4,007,523 bytes, SHA-256 `2f15ab93fd51d5280315b692d360d5ee0152bc55f70195c80a04492e7035e312`. No runtime changes followed this run. Machine-readable evidence is in [far-horizons-audit-verification.json](far-horizons-audit-verification.json).

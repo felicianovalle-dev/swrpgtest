@@ -1,0 +1,651 @@
+{
+  "build": "96.16-far-horizons-audit",
+  "package": "1.9.22",
+  "reviewedDate": "2026-10-16",
+  "baselineCommit": "7ddbf51f027677a83fb69d62135498998d7d2676",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 4007523,
+    "gitBlob": "d83882b592400fc8662f08613434131316cdf9c8",
+    "sha256": "2f15ab93fd51d5280315b692d360d5ee0152bc55f70195c80a04492e7035e312"
+  },
+  "reviewedLayouts": 3,
+  "reviewedNodes": 60,
+  "retainedIds": 60,
+  "completedOriginal48": 42,
+  "remainingLayouts": 6,
+  "totalAuditedOriginalIdLayouts": 48,
+  "sourceRules": 39,
+  "distinctLiteralSourceNames": 459,
+  "sources": {
+    "Entrepreneur": {
+      "book": "Far Horizons",
+      "printedPage": 27,
+      "physicalPdfPage": 28,
+      "glossaryChecked": true
+    },
+    "Marshal": {
+      "book": "Far Horizons",
+      "printedPage": 29,
+      "physicalPdfPage": 30,
+      "glossaryChecked": true
+    },
+    "Performer": {
+      "book": "Far Horizons",
+      "printedPage": 31,
+      "physicalPdfPage": 32,
+      "glossaryChecked": true
+    }
+  },
+  "sourceCopyNote": "Supplied readable 98-page scan checked visually, including enlarged connector crops. Shared entries retain previously reviewed source attribution. Source PDFs and private download URLs are excluded.",
+  "changes": {
+    "Entrepreneur": {
+      "addedEdges": [
+        [
+          7,
+          11
+        ],
+        [
+          13,
+          17
+        ]
+      ],
+      "removedEdges": [],
+      "typeChanges": []
+    },
+    "Marshal": {
+      "addedEdges": [
+        [
+          10,
+          14
+        ]
+      ],
+      "removedEdges": [],
+      "typeChanges": []
+    },
+    "Performer": {
+      "addedEdges": [
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ]
+      ],
+      "removedEdges": [],
+      "typeChanges": [
+        {
+          "id": "per00",
+          "from": "Passive",
+          "to": "Active"
+        },
+        {
+          "id": "per30",
+          "from": "Passive",
+          "to": "Active"
+        }
+      ]
+    }
+  },
+  "newTalentGlossary": {
+    "entries": 16,
+    "printedPages": [
+      32,
+      33
+    ],
+    "physicalPdfPages": [
+      33,
+      34
+    ]
+  },
+  "sharedPreviouslyReviewedRules": 23,
+  "officialErrata": {
+    "version": "2.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/eote_errata_v20.pdf",
+    "note": "Far Horizons p.29 both Point Blank nodes use short range or engaged. Its p.37 signature correction is outside this batch; no claim that every later ruling is exhausted."
+  },
+  "fixes": [
+    "Five missing source connections restored without changing saved IDs, positions or XP.",
+    "Both Smooth Talker nodes become Active (Incidental). Improved Distracting Behavior retains Passive under its glossary entry.",
+    "Point Blank ranked damage joins the existing serialized single-hit subtraction; Auto-fire and Linked extra hits do not repeat it after save/reload."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 6,
+    "unchangedEarlierTreeRecords": 118,
+    "earlierCatalogSerializationPreserved": true,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realPurchaseButtons": 60,
+    "fullTreeXpCost": 300
+  },
+  "suites": {
+    "farHorizons": {
+      "checks": 102,
+      "errors": []
+    },
+    "enterTheUnknown": {
+      "checks": 89,
+      "errors": []
+    },
+    "dangerousCovenants": {
+      "checks": 171,
+      "errors": []
+    },
+    "specialModifications": {
+      "checks": 117,
+      "errors": []
+    },
+    "flyCasual": {
+      "checks": 123,
+      "errors": []
+    },
+    "noDisintegrations": {
+      "checks": 114,
+      "errors": []
+    },
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 2630,
+  "executions": [
+    {
+      "name": "far-horizons",
+      "returncode": 0,
+      "seconds": 70.62
+    },
+    {
+      "name": "far-horizons-creation",
+      "returncode": 0,
+      "seconds": 29.52
+    },
+    {
+      "name": "enter-unknown",
+      "returncode": 0,
+      "seconds": 48.91
+    },
+    {
+      "name": "enter-unknown-creation",
+      "returncode": 0,
+      "seconds": 18.3
+    },
+    {
+      "name": "dangerous-covenants",
+      "returncode": 0,
+      "seconds": 110.49
+    },
+    {
+      "name": "dangerous-covenants-creation",
+      "returncode": 0,
+      "seconds": 32.95
+    },
+    {
+      "name": "special-modifications",
+      "returncode": 0,
+      "seconds": 73.76
+    },
+    {
+      "name": "special-modifications-creation",
+      "returncode": 0,
+      "seconds": 29.36
+    },
+    {
+      "name": "fly-casual",
+      "returncode": 0,
+      "seconds": 88.89
+    },
+    {
+      "name": "fly-casual-creation",
+      "returncode": 0,
+      "seconds": 24.04
+    },
+    {
+      "name": "no-disintegrations",
+      "returncode": 0,
+      "seconds": 78.64
+    },
+    {
+      "name": "no-dis-creation",
+      "returncode": 0,
+      "seconds": 24.69
+    },
+    {
+      "name": "eote-core",
+      "returncode": 0,
+      "seconds": 70.37
+    },
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 84.83
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 96.85
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 152.83
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 86.22
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 87.81
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 73.88
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 114.44
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 153.03
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 215.72
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 17.28
+    },
+    {
+      "name": "creation",
+      "returncode": 0,
+      "seconds": 28.83
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 31.69
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 48.81
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 33.3
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 35.88
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 39.44
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 43.44
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 28.41
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 24.4
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 23.53
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 16.84
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Entrepreneur",
+      "career": "Colonist",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "spec": "Marshal",
+      "career": "Colonist",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "spec": "Performer",
+      "career": "Colonist",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    }
+  ],
+  "earlierCreationRegressionFlows": [
+    {
+      "spec": "Archaeologist",
+      "career": "Explorer",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Big-Game Hunter",
+      "career": "Explorer",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Demolitionist",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Enforcer",
+      "career": "Hired Gun",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Soldier",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Cyber Tech",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Droid Tech",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Modder",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Charmer",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gambler",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gunslinger",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Martial Artist",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Operator",
+      "career": "Bounty Hunter",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Skip Tracer",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Distracting Behavior and its improvement retain manual maneuver, Cunning-limited strain, targets, range, automatic Threat and expiry.",
+    "Coordination Dodge, Unrelenting Skeptic and its improvement retain manual incoming-check resolution, costs and automatic symbols.",
+    "Good Cop and Bad Cop, Biggest Fan, Deceptive Taunt and the transaction talents retain manual targets, payments, check outcomes and timing.",
+    "Throwing Credits does not automatically pay or adjust triggered Obligation penalties. Sound Investments supports session income; GM availability restrictions remain manual.",
+    "Successful-check Natural Merchant/Athlete rerolls, incoming Congenial and Intense Focus maneuver accounting retain manual steps disclosed on cards.",
+    "Point Blank is supported in PC combat attacks. Existing pending extra-hit records without its single-hit subtraction are not rewritten retroactively. Earlier documented control and Force-use limits remain."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "d83882b592400fc8662f08613434131316cdf9c8"
+  }
+}
