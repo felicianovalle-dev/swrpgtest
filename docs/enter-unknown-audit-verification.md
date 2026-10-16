@@ -61,3 +61,9 @@ The final-build verification completed successfully. The next group is Entrepren
 All sixteen browser/source suites passed 2,528 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Two new and seventeen earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
 
 Every target used the same distribution: Git blob `5e9b631e39d4c50cd7ceae004e8018ee8d0caa98`, 3,978,992 bytes, SHA-256 `b0b87674998e78b0d638f70c9df29ad23ac19a018355219cdfca3509a8768961`. No runtime changes followed this run. Machine-readable evidence is in [enter-unknown-audit-verification.json](enter-unknown-audit-verification.json).
+
+## Hosted proof
+
+Published source commit `ef9c55733cff90f04583123708c394a3bd0afe11`, tree `6add7e0b9882dad3352a4d38ef12945c6e662245`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38971787414) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=ef9c55733cff) returned HTTP 200 and matched the tested distribution exactly: Git blob `5e9b631e39d4c50cd7ceae004e8018ee8d0caa98`, 3,978,992 bytes, SHA-256 `b0b87674998e78b0d638f70c9df29ad23ac19a018355219cdfca3509a8768961`.
+
+Fresh hosted Archaeologist at 390×844 and Big-Game Hunter at 1280×800 passed visible creation, original-ID purchases along source-checked routes, finalization, manual save, reload and Resume. Both preserved character, campaign, XP and purchases, with no horizontal overflow or application errors. These isolated contexts contained no user saves.

@@ -573,7 +573,51 @@
     "Earlier documented controls and Force-use limitations remain."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "5e9b631e39d4c50cd7ceae004e8018ee8d0caa98"
+    "status": "passed",
+    "sourceCommit": "ef9c55733cff90f04583123708c394a3bd0afe11",
+    "sourceTree": "6add7e0b9882dad3352a4d38ef12945c6e662245",
+    "deployment": {
+      "id": 38971787414,
+      "head_sha": "ef9c55733cff90f04583123708c394a3bd0afe11",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/38971787414"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "ef9c55733cff90f04583123708c394a3bd0afe11",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=ef9c55733cff&check=1792187326",
+      "httpStatus": 200,
+      "bytes": 3978992,
+      "gitBlob": "5e9b631e39d4c50cd7ceae004e8018ee8d0caa98",
+      "sha256": "b0b87674998e78b0d638f70c9df29ad23ac19a018355219cdfca3509a8768961"
+    },
+    "flows": [
+      {
+        "spec": "Archaeologist",
+        "career": "Explorer",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      },
+      {
+        "spec": "Big-Game Hunter",
+        "career": "Explorer",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "unsupportedShortcutRemoved": true
+      }
+    ],
+    "errors": []
   }
 }

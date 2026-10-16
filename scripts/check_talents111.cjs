@@ -1,5 +1,5 @@
 /* Saved layouts come from the published 38fc8aa build. Expected changes below
-   were checked against the three Enter the Unknown diagrams and glossary, not generated
+   were checked against the two Enter the Unknown diagrams and glossary, not generated
    from the new catalog. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {chromium}=require('playwright');
