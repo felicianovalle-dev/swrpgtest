@@ -17167,6 +17167,320 @@
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "dangerous110"
+    },
+    "Archaeologist": {
+      "names": [
+        "Well Rounded",
+        "Hard Headed",
+        "Researcher",
+        "Grit",
+        "Durable",
+        "Toughened",
+        "Resolve",
+        "Knowledge Specialization",
+        "Stunning Blow",
+        "Knockdown",
+        "Respected Scholar",
+        "Researcher",
+        "Hard Headed",
+        "Enduring",
+        "Grit",
+        "Knowledge Specialization",
+        "Pin",
+        "Dedication",
+        "Respected Scholar",
+        "Museum Worthy"
+      ],
+      "nodeIds": [
+        "arc00",
+        "arc01",
+        "arc02",
+        "arc03",
+        "arc10",
+        "arc11",
+        "arc12",
+        "arc13",
+        "arc20",
+        "arc21",
+        "arc22",
+        "arc23",
+        "arc30",
+        "arc31",
+        "arc32",
+        "arc33",
+        "arc40",
+        "arc41",
+        "arc42",
+        "arc43"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Enter the Unknown \u00b7 p.25",
+      "collection": "enter-the-unknown",
+      "page": 26,
+      "bookPdfPage": 26,
+      "bookFile": "enter-the-unknown",
+      "bookPage": 25,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "unknown111"
+    },
+    "Big-Game Hunter": {
+      "names": [
+        "Forager",
+        "Grit",
+        "Stalker",
+        "Outdoorsman",
+        "Toughened",
+        "Outdoorsman",
+        "Confidence",
+        "Swift",
+        "Stalker",
+        "Natural Hunter",
+        "Expert Tracker",
+        "Heightened Awareness",
+        "Grit",
+        "Hunter's Quarry",
+        "Quick Strike",
+        "Expert Tracker",
+        "Bring It Down",
+        "Improved Hunter's Quarry",
+        "Dedication",
+        "Superior Reflexes"
+      ],
+      "nodeIds": [
+        "bgh00",
+        "bgh01",
+        "bgh02",
+        "bgh03",
+        "bgh10",
+        "bgh11",
+        "bgh12",
+        "bgh13",
+        "bgh20",
+        "bgh21",
+        "bgh22",
+        "bgh23",
+        "bgh30",
+        "bgh31",
+        "bgh32",
+        "bgh33",
+        "bgh40",
+        "bgh41",
+        "bgh42",
+        "bgh43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Enter the Unknown \u00b7 p.27",
+      "collection": "enter-the-unknown",
+      "page": 28,
+      "bookPdfPage": 28,
+      "bookFile": "enter-the-unknown",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "unknown111"
     }
   },
   "universals": {
@@ -36436,6 +36750,326 @@
       "summary": "Spend one Destiny Point to add damage equal to Streetwise ranks to one hit of a successful Brawl check.",
       "resolutionNote": "Resolve the Destiny cost and bonus on one Brawl hit manually. Other combat skills do not qualify.",
       "resolution": "manual"
+    }
+  },
+  "talentRules111": {
+    "Bring It Down": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 31,
+      "source": "Enter the Unknown \u00b7 p.30",
+      "summary": "Once per attack, spend one Destiny Point to add the target\u2019s Brawn to a single hit.",
+      "resolutionNote": "A successful PC combat attack offers the light Destiny cost and adds the target\u2019s Brawn once. Additional Auto-fire or Linked hits exclude this bonus, including after save/reload. Resolve other attack workflows manually."
+    },
+    "Confidence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Reduce the difficulty of Discipline fear checks by one per rank; no check is needed if difficulty reaches zero.",
+      "resolutionNote": "Reduces difficulty on PC Discipline checks explicitly marked as fear checks."
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Durable": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Reduce a Critical Injury result you suffer by 10 per rank, to a minimum result of 1.",
+      "resolutionNote": "Reduces your Critical Injury results automatically."
+    },
+    "Enduring": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Increase your soak by 1 per rank.",
+      "resolutionNote": "Adds to your soak automatically."
+    },
+    "Expert Tracker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Remove one Setback per rank from checks to find tracks or track targets. Survival tracking takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks on party checks explicitly marked as tracking. Resolve tracking time manually."
+    },
+    "Forager": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Remove up to two Setbacks from checks to find food, water or shelter. Survival foraging takes half the normal time.",
+      "resolutionNote": "Removes two setbacks on party checks explicitly marked as foraging. Resolve foraging time manually."
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Hard Headed": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": true,
+      "force": false,
+      "page": 30,
+      "pdfPage": 32,
+      "source": "Knights of Fate \u00b7 p.30",
+      "summary": "While staggered or disoriented, make a Daunting Discipline action, even while staggered. Reduce difficulty by one per rank after the first, to a minimum of Easy. Success clears staggered and disoriented.",
+      "resolutionNote": "The combat action clears staggered/disoriented and uses glossary difficulty. A failed attempt spends the action and cannot retry that turn.",
+      "sourceNote": "Knights of Fate p.30 glossary starts at Daunting and reduces difficulty per additional rank; the tree says per rank. The glossary governs."
+    },
+    "Heightened Awareness": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Nearby allies gain one Boost on Perception and Vigilance; engaged allies gain two. This talent is unranked under official errata.",
+      "resolutionNote": "Resolve allied Perception and Vigilance bonuses manually. Existing duplicate purchases remain saved; no new duplicate ranks can be bought.",
+      "resolution": "manual",
+      "errata": "Force and Destiny errata v1.0 \u00b7 p.1: Heightened Awareness is unranked (core pp.137 and 145)."
+    },
+    "Hunter's Quarry": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 31,
+      "source": "Enter the Unknown \u00b7 p.30",
+      "summary": "Make a Hard Survival action against an opponent within long range. On success, upgrade the ability of all attacks against that opponent once until the end of your next turn.",
+      "resolutionNote": "Resolve the Survival action, target within long range, all attackers\u2019 one ability upgrade and until-next-turn expiry manually.",
+      "resolution": "manual"
+    },
+    "Improved Hunter's Quarry": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 31,
+      "source": "Enter the Unknown \u00b7 p.30",
+      "summary": "You may suffer two strain to perform Hunter\u2019s Quarry as a maneuver instead of an action.",
+      "resolutionNote": "The glossary labels this improvement Passive despite the red tree box. Resolve the two strain, maneuver, base Survival check and duration manually.",
+      "resolution": "manual"
+    },
+    "Knockdown": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 150,
+      "pdfPage": 151,
+      "source": "Age of Rebellion Core \u00b7 p.150",
+      "force": false,
+      "summary": "After hitting with a melee attack, spend one Triumph to knock the target prone. Each silhouette by which the target exceeds you costs one additional Triumph.",
+      "resolutionNote": "Resolve this talent\u2019s Triumph cost, relative silhouettes and prone effect manually. The weapon Knockdown quality uses a different Advantage cost.",
+      "resolution": "manual"
+    },
+    "Knowledge Specialization": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Choose a Knowledge skill when first acquired. Spend a Triumph on that skill for extra Successes equal to your ranks.",
+      "resolutionNote": "Records your Knowledge skill and offers Triumph conversion on qualifying party checks."
+    },
+    "Museum Worthy": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 31,
+      "source": "Enter the Unknown \u00b7 p.30",
+      "summary": "Once per session, make a Hard Knowledge (Education) action about one relic, ruin or piece of galactic history, subject to GM approval. Success reveals information in proportion to Successes rolled.",
+      "resolutionNote": "Resolve GM approval, the single subject, Hard check, information and once-per-session limit manually. This does not grant automatic credits or relics.",
+      "resolution": "manual"
+    },
+    "Natural Hunter": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Perception or Vigilance check.",
+      "resolutionNote": "Offers one failed Perception or Vigilance reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Outdoorsman": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "Remove one Setback per rank from terrain and environmental checks. Overland travel takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks on party checks explicitly marked as outdoors. Resolve overland travel time manually."
+    },
+    "Pin": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 30,
+      "pdfPage": 31,
+      "source": "Enter the Unknown \u00b7 p.30",
+      "summary": "Make an opposed Athletics action against an engaged opponent. Success immobilizes that opponent until the end of your next turn; spend a Triumph to extend the immobilization by one round.",
+      "resolutionNote": "Resolve engagement, opposed Athletics, immobilization, duration and Triumph extension manually. Pin does not deal automatic damage.",
+      "resolution": "manual"
+    },
+    "Quick Strike": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 150,
+      "source": "Edge of the Empire Core \u00b7 p.141",
+      "summary": "Add one Boost per rank to combat checks against a target that has not yet acted in the encounter.",
+      "resolutionNote": "Adds combat Boost against targets that have not yet acted in the encounter."
+    },
+    "Researcher": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "Remove one Setback per rank from Knowledge checks. Research takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks from PC Knowledge checks. Resolve research time manually."
+    },
+    "Resolve": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Reduce involuntary strain suffered by one per rank, to a minimum of 1. Voluntary strain costs are unchanged.",
+      "resolutionNote": "Reduces strain in supported Threat and failed-check results. Apply its reduction to other involuntary strain manually; voluntary costs stay unchanged."
+    },
+    "Respected Scholar": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 155,
+      "pdfPage": 156,
+      "source": "Age of Rebellion Core \u00b7 p.155",
+      "force": false,
+      "summary": "Downgrade the difficulty of checks to interact with institutes of learning once per rank.",
+      "resolutionNote": "Party checks explicitly marked academic downgrade Challenge dice. Apply the institute-of-learning requirement and other checks manually."
+    },
+    "Stalker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 143,
+      "pdfPage": 152,
+      "source": "Edge of the Empire Core \u00b7 p.143",
+      "summary": "Add one Boost per rank to Stealth and Coordination checks.",
+      "resolutionNote": "Adds PC Stealth and Coordination Boost dice automatically."
+    },
+    "Stunning Blow": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 157,
+      "pdfPage": 158,
+      "source": "Age of Rebellion Core \u00b7 p.157",
+      "force": false,
+      "summary": "When making a Melee check, choose to inflict its damage as strain instead of wounds. Soak still applies.",
+      "resolutionNote": "Resolve the Melee-only choice and strain damage manually. This does not grant a Brawl bonus or bypass soak.",
+      "resolution": "manual"
+    },
+    "Superior Reflexes": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 157,
+      "pdfPage": 158,
+      "source": "Age of Rebellion Core \u00b7 p.157",
+      "summary": "Increase melee defense by one.",
+      "force": false,
+      "resolutionNote": "Adds one melee defense automatically. This talent is unranked; existing duplicate purchases remain owned."
+    },
+    "Swift": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 31,
+      "pdfPage": 33,
+      "source": "Knights of Fate \u00b7 p.31",
+      "summary": "Ignore the usual movement penalties for difficult terrain; it requires no extra maneuver.",
+      "resolutionNote": "Resolve difficult-terrain movement manually; the current position map does not model terrain costs.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Well Rounded": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 153,
+      "pdfPage": 156,
+      "source": "Force and Destiny Core \u00b7 p.153",
+      "summary": "Choose two skills per rank. They become career skills; this grants no free skill ranks.",
+      "resolutionNote": "Saves two selected career skills for this node; the choice persists after reload and grants no free ranks."
     }
   }
 }

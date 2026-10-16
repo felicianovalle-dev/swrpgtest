@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.14-dangerous-covenants-audit` / package `1.9.20`. Reviewed 2026-10-15 against the saved repository and the supplied source collections.
+Build: `96.15-enter-unknown-audit` / package `1.9.21`. Reviewed 2026-10-15 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -318,7 +318,7 @@ Older finalized saves keep their original quests, purchase benefits, and economy
 
 ## Remaining content work
 
-Fresh source reviews for the remaining 11 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
+Fresh source reviews for the remaining 9 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
 
 ## Older EotE core audit: Assassin, Scoundrel and Slicer
 
@@ -341,3 +341,7 @@ All 60 original IDs, names, positions, costs and activation labels remain. Twelv
 ## Dangerous Covenants audit: Demolitionist, Enforcer and Heavy
 
 All 60 original IDs, names, positions and XP costs remain. Thirteen connections are restored and sixteen unsupported routes removed, based on printed pp.27, 29 and 31 / physical pp.28, 30 and 32. Improved Time to Go is corrected to Active; Improved Improvised Detonation retains the glossary’s Passive activation despite its red tree box. Thirty-five scoped rules cover 16 book-glossary entries and 19 shared entries, bringing the literal source-name union to 449. Heavy remains one layout shared by Hired Gun and Soldier. Intimidating now spends whole strain once and downgrades Challenge dice without deleting ordinary difficulty; defensive maneuver cancellation spends nothing; Master Grenadier’s Blast cost matches its preview; Barrage is excluded from additional hits. This completes 37 of the original 48 older layouts; 11 remain. See [Dangerous Covenants verification](dangerous-covenants-audit-verification.md).
+
+## Enter the Unknown audit: Archaeologist and Big-Game Hunter
+
+All 40 original IDs, names, positions and costs remain. One source connection is restored and one shortcut removed on printed pp.25 and 27 / physical pp.26 and 28. Knowledge Specialization becomes Active on both Archaeologist nodes; Knockdown becomes Passive, following the shared glossary. Improved Hunter’s Quarry remains Passive despite its red tree box. Twenty-eight scoped rules include five entries from printed p.30 / physical p.31 and 23 previously reviewed shared rules. Bring It Down’s paid bonus applies to one hit and is excluded from additional hits after save/reload; target Brawn zero is retained. This completes 39 of 48 older layouts, leaving 9 pending. See [verification](enter-unknown-audit-verification.md).

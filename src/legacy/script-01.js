@@ -5329,9 +5329,9 @@ function pointBlankDamage(skill,range){
 function feralStrengthDamage(skill){return ['Brawl','Melee'].includes(skill)?talentRank('Feral Strength'):0}
 function maybeBringItDown(target){
   if(!hasTalent('Bring It Down')||!target||S.destiny.light<1)return 0;
-  if(!confirm(`Use Bring It Down? Spend 1 light Destiny Point to add ${target.c?.Brawn||target.brawn||2} damage against ${target.name}.`))return 0;
+  if(!confirm(`Use Bring It Down? Spend 1 light Destiny Point to add ${target.c?.Brawn??target.brawn??2} damage against ${target.name}.`))return 0;
   S.destiny.light--;S.destiny.dark++;
-  let bonus=target.c?.Brawn||target.brawn||2;cLog(`Bring It Down adds ${bonus} damage and flips one light Destiny Point.`);return bonus
+  let bonus=target.c?.Brawn??target.brawn??2;cLog(`Bring It Down adds ${bonus} damage and flips one light Destiny Point.`);return bonus
 }
 
 function barrageDamage(skill,range){return ['Ranged (Heavy)','Gunnery'].includes(skill)&&(range===3||range===4)?talentRank('Barrage'):0}
@@ -5357,16 +5357,16 @@ function pcAttack(kind='normal'){
   if(C.nextAllyUpgrade){let up=C.nextAllyUpgrade;upgradePositivePool(q.p,up);C.nextAllyUpgrade=0}
   maybeUseVaapadControl(q.p,q.skill);
   let usedDark=maybeGMDarkDifficulty(q.p,`${actor.name}'s attack`);
-  T.actionUsed=true;beforeCombatAction(actor.id);let r=rollNarr(q.p),dmg=0;
+  T.actionUsed=true;beforeCombatAction(actor.id);let r=rollNarr(q.p),dmg=0,bringItDown=0;
   r=combatNaturalReroll(q.skill,q.p,r);
   if(hasAttachment(S.weapon,'setTrigger')&&!C.setTriggerUsed[S.weapon]){r.ns+=1;r.na-=1;r.ok=r.ns>0;C.setTriggerUsed[S.weapon]=true;cLog('Set Trigger: +1 Success and +1 Threat on this weapon’s first combat check of the encounter.')}
   if(r.ok){
     let pierce=quality(q.w,'pierce')+quality(q.w,'breach')*10,
         prey=(target.disoriented||0)>0?talentRank('Prey on the Weak'):0;
+    bringItDown=maybeBringItDown(target);
     let deadly=deadlyAccuracyDamage(q.skill),
         barrage=barrageDamage(q.skill,q.range),
         pointBlank=pointBlankDamage(q.skill,q.range),
-        bringItDown=maybeBringItDown(target),
         talentDamage=maybeFallingAvalanche(q.skill)+maybeEmbraceYourHate(q.skill)+prey+deadly+barrage+pointBlank+bringItDown+feralStrengthDamage(q.skill),
         raw=(q.w.addBrawn?effectiveCharacteristic(actor,'Brawn'):0)+q.w.damage+r.ns+talentDamage;
     if(prey)cLog(`Prey on the Weak adds ${prey} damage against the disoriented target.`);
@@ -5378,7 +5378,7 @@ function pcAttack(kind='normal'){
     else{target.w+=dmg;if(target.type==='minion')target.members=Math.max(0,Math.ceil((target.wt-target.w)/target.perWt));cLog(`${S.name} hits ${target.name} for ${dmg}. ${rtxt(r)}`)}
   }else cLog(`${S.name} misses ${target.name}. ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?feralStrengthDamage(q.skill)+barrageDamage(q.skill,q.range)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
+  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?bringItDown+feralStrengthDamage(q.skill)+barrageDamage(q.skill,q.range)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
   if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function crewAttack(){
