@@ -38,4 +38,28 @@ The frozen fixture holds 960 nodes across 48 older layouts. This batch brings re
 
 Checks cover old purchases, combined 2,040-purchase continuation, all 60 real purchase buttons, all 29 changed routes, activation, source cards, skill packages, costs, dice pools, combat continuation and six viewports: 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Four visible creation/save/resume flows cover Demolitionist, Enforcer and Heavy under both careers along restored source routes. Thirteen earlier creation flows remain regression targets. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the final-build run. The next group is Archaeologist and Big-Game Hunter from Enter the Unknown; it has not started.
+The final-build verification completed successfully. The next group is Archaeologist and Big-Game Hunter from Enter the Unknown; it has not started.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| dangerousCovenants | 171 |
+| specialModifications | 117 |
+| flyCasual | 123 |
+| noDisintegrations | 114 |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All fifteen browser/source suites passed 2,439 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Four new and thirteen earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
+
+Every target in this final run used the same distribution: Git blob `ef0adfcede5445f52da0fbbe7b0b9c1acd8c8bec`, 3,959,662 bytes, SHA-256 `f1c066055881b30a756ff02f06034497d72fdedf58cf2e4772959bd83f9868db`. No runtime changes followed this run. Machine-readable evidence is in [dangerous-covenants-audit-verification.json](dangerous-covenants-audit-verification.json). Hosted verification will compare these exact bytes and repeat the four new creation/save/resume flows.

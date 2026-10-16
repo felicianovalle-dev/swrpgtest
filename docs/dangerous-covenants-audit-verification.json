@@ -1,0 +1,673 @@
+{
+  "build": "96.14-dangerous-covenants-audit",
+  "package": "1.9.20",
+  "reviewedDate": "2026-10-15",
+  "baselineCommit": "62b28ea67023bc34da2813167d4eb5139f9f0000",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3959662,
+    "gitBlob": "ef0adfcede5445f52da0fbbe7b0b9c1acd8c8bec",
+    "sha256": "f1c066055881b30a756ff02f06034497d72fdedf58cf2e4772959bd83f9868db"
+  },
+  "reviewedLayouts": 3,
+  "reviewedNodes": 60,
+  "retainedIds": 60,
+  "completedOriginal48": 37,
+  "remainingLayouts": 11,
+  "totalAuditedOriginalIdLayouts": 43,
+  "sourceRules": 35,
+  "distinctLiteralSourceNames": 449,
+  "sources": {
+    "Demolitionist": {
+      "book": "Dangerous Covenants",
+      "printedPage": 29,
+      "physicalPdfPage": 30,
+      "glossaryChecked": true
+    },
+    "Enforcer": {
+      "book": "Dangerous Covenants",
+      "printedPage": 27,
+      "physicalPdfPage": 28,
+      "glossaryChecked": true
+    },
+    "Heavy": {
+      "book": "Dangerous Covenants",
+      "printedPage": 31,
+      "physicalPdfPage": 32,
+      "glossaryChecked": true
+    }
+  },
+  "sourceCopyNote": "Supplied copy has damaged binary/image streams. A readable scan of the same primary sourcebook was visually checked, including enlarged connector crops; source PDFs and private download URLs are excluded.",
+  "changes": {
+    "Demolitionist": {
+      "addedEdges": [
+        [
+          6,
+          7
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "removedEdges": [
+        [
+          2,
+          6
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "dm21",
+          "from": "Passive",
+          "to": "Active"
+        }
+      ]
+    },
+    "Enforcer": {
+      "addedEdges": [
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          14
+        ]
+      ],
+      "removedEdges": [
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Heavy": {
+      "addedEdges": [
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "removedEdges": [
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          13,
+          17
+        ]
+      ],
+      "typeChanges": []
+    }
+  },
+  "newTalentGlossary": {
+    "entries": 16,
+    "printedPages": [
+      32,
+      33
+    ],
+    "physicalPdfPages": [
+      33,
+      34
+    ]
+  },
+  "sharedPreviouslyReviewedRules": 19,
+  "officialErrata": {
+    "version": "2.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/eote_errata_v20.pdf",
+    "note": "Dangerous Covenants corrections concern its p.37 signature ability and equipment on pp.54 and 63, without changing these three talent layouts."
+  },
+  "fixes": [
+    "Intimidating uses finite bounded whole-strain input once in the selected-PC party-check workflow. It downgrades Challenge dice without deleting ordinary Difficulty dice and does not spend during previews.",
+    "Side Step and Defensive Stance validate activation strain before taking a maneuver, reserve that strain while checking extra-maneuver costs, and refund it on rejection. Cancel, invalid input, Winded and blocked activation preserve resources.",
+    "Master Grenadier discounts the PC Blast cost in preview and payment, including after a miss. Powerful Blast requires an actual Blast quality.",
+    "Barrage uses its eligible combat skills at long/extreme range and adds damage to one hit. Its serialized single-hit subtraction prevents repeating it on additional hits after reload."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 11,
+    "unchangedEarlierTreeRecords": 113,
+    "earlierCatalogSerializationPreservedExceptResolutionNotes": true,
+    "updatedEarlierResolutionNotes": [
+      {
+        "table": "talentRules105",
+        "talent": "Intimidating"
+      },
+      {
+        "table": "talentRules106",
+        "talent": "Side Step"
+      },
+      {
+        "table": "talentRules104",
+        "talent": "Defensive Stance"
+      }
+    ],
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realPurchaseButtons": 60,
+    "fullTreeXpCost": 300
+  },
+  "suites": {
+    "dangerousCovenants": {
+      "checks": 171,
+      "errors": []
+    },
+    "specialModifications": {
+      "checks": 117,
+      "errors": []
+    },
+    "flyCasual": {
+      "checks": 123,
+      "errors": []
+    },
+    "noDisintegrations": {
+      "checks": 114,
+      "errors": []
+    },
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 2439,
+  "executions": [
+    {
+      "name": "dangerous-covenants",
+      "returncode": 0,
+      "seconds": 118.19
+    },
+    {
+      "name": "dangerous-covenants-creation",
+      "returncode": 0,
+      "seconds": 35.75
+    },
+    {
+      "name": "special-modifications",
+      "returncode": 0,
+      "seconds": 80.01
+    },
+    {
+      "name": "special-modifications-creation",
+      "returncode": 0,
+      "seconds": 33.23
+    },
+    {
+      "name": "fly-casual",
+      "returncode": 0,
+      "seconds": 92.99
+    },
+    {
+      "name": "fly-casual-creation",
+      "returncode": 0,
+      "seconds": 24.9
+    },
+    {
+      "name": "no-disintegrations",
+      "returncode": 0,
+      "seconds": 82.32
+    },
+    {
+      "name": "no-dis-creation",
+      "returncode": 0,
+      "seconds": 25.54
+    },
+    {
+      "name": "eote-core",
+      "returncode": 0,
+      "seconds": 75.17
+    },
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 90.11
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 104.05
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 167.16
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 94.92
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 96.24
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 79.99
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 124.13
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 163.94
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 230.68
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 18.8
+    },
+    {
+      "name": "creation",
+      "returncode": 0,
+      "seconds": 29.62
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 37.91
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 62.32
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 39.81
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 43.51
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 40.18
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 44.89
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 30.63
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 27.55
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 25.3
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 19.79
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Demolitionist",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Enforcer",
+      "career": "Hired Gun",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Soldier",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    }
+  ],
+  "earlierCreationRegressionFlows": [
+    {
+      "spec": "Cyber Tech",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Droid Tech",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Modder",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Charmer",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gambler",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gunslinger",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Martial Artist",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Operator",
+      "career": "Bounty Hunter",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Skip Tracer",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Burly equipment adjustments, Fearsome, Heroic Fortitude, Heroic Resilience, Heavy Hitter, Rain of Death, Improvised Detonation and improvement, Selective Detonation exclusions, Time to Go and improvement, Talk the Talk, Loom, Walk the Walk and Stunning Blow retain manual steps disclosed on cards.",
+    "Blast positioning, explosive eligibility and net-Success damage remain manual.",
+    "Natural Enforcer prompts cover failed eligible party checks; rerolling a successful check remains manual. Brace environmental eligibility and remaining setbacks require manual handling.",
+    "Side Step and Defensive Stance once-per-round use and until-next-turn expiry remain manual; existing effects clear at round boundaries. Defensive Stance incoming melee upgrades remain manual.",
+    "Intimidating incoming Coercion and workflows outside the selected-PC party check remain manual.",
+    "Existing pending extra-hit records without a recorded Barrage subtraction are not rewritten retroactively.",
+    "Earlier documented controls and Force-use limitations remain."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "ef0adfcede5445f52da0fbbe7b0b9c1acd8c8bec"
+  }
+}
