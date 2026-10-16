@@ -3818,13 +3818,6 @@ function talentCheckMods(actor,skill,ctx={}){
     if(ctx.forage&&hasTalent('Forager'))setback=Math.max(0,setback-2);
     if(ctx.security)setback=Math.max(0,setback-talentRank('Bypass Security'));
     if(ctx.decrypt&&talentRank('Codebreaker')){setback=Math.max(0,setback-talentRank('Codebreaker'));diff=Math.max(1,diff-1)}
-    if(skill==='Coercion'&&ctx.commit&&talentRank('Intimidating')&&canVoluntarilySufferStrain('pc')){
-      let max=Math.min(talentRank('Intimidating'),Math.max(0,strainThreshold()-S.strain));
-      if(max>0&&confirm(`Use Intimidating? Suffer up to ${max} strain to reduce Coercion difficulty by the same amount.`)){
-        let n=Math.max(0,Math.min(max,Number(prompt('Strain to suffer for Intimidating',String(max)))||0));
-        if(n){S.strain+=n;diff=Math.max(0,diff-n)}
-      }
-    }
     if((skill==='Stealth'||skill==='Skulduggery')&&hasTalent('Master of Shadows')&&ctx.commit&&canVoluntarilySufferStrain('pc')&&S.strain+2<=strainThreshold()&&confirm('Use Master of Shadows? Suffer 2 strain to reduce difficulty by 1.')){S.strain+=2;diff=Math.max(1,diff-1)}
   }
   return{boost,setback,diff}
@@ -3927,6 +3920,13 @@ function performBest(skill,ctx={}){
     }
     if(!live.useWillpower&&!live.usePresence&&hasTalent('Clever Solution')&&!S.sessionUsed.cleverSolution&&confirm('Use Clever Solution to make this check with Cunning?')){
       live.useCunning=true;S.sessionUsed.cleverSolution=true
+    }
+    if(skill==='Coercion'&&talentRank('Intimidating')&&canVoluntarilySufferStrain('pc')){
+      const max=Math.min(talentRank('Intimidating'),Math.max(0,strainThreshold()-S.strain));
+      if(max>0&&confirm(`Use Intimidating? Suffer up to ${max} strain to downgrade that many challenge dice on this Coercion check.`)){
+        const n=promptTalentStrain('Intimidating strain to suffer',max);
+        if(n){S.strain+=n;live.difficultyDowngrade=(live.difficultyDowngrade||0)+n}
+      }
     }
     if(['Charm','Negotiation'].includes(skill)&&talentRank('Congenial')&&canVoluntarilySufferStrain('pc')){
       let max=Math.min(talentRank('Congenial'),Math.max(0,strainThreshold()-S.strain));
@@ -4826,18 +4826,17 @@ function triggerOverwatch(enemy){
   }
   return enemyDefeated(enemy)
 }
-function sideStepManeuver(){
-  let ranks=talentRank('Side Step');if(!ranks||S.combat.turn?.actorId!=='pc')return;
-  if(!spendManeuver(1,'Side Step'))return;
-  let max=Math.min(ranks,strainThreshold()-S.strain),n=Number(prompt(`Side Step rank ${ranks}: suffer how much strain to upgrade incoming ranged attacks?`,String(max)))||0;
-  n=Math.max(0,Math.min(max,n));S.strain+=n;S.combat.defUpgrade=Math.max(S.combat.defUpgrade,n);renderCombat()
+function defensiveTalentManeuver(name,field){
+  const C=S.combat,ranks=talentRank(name);
+  if(!ranks||C?.turn?.actorId!=='pc'||!canVoluntarilySufferStrain('pc'))return;
+  const n=promptTalentStrain(`${name}: strain to suffer for incoming attack upgrades`,Math.min(ranks,strainThreshold()-S.strain));
+  if(!n)return;
+  S.strain+=n;
+  if(!spendManeuver(1,name)){S.strain-=n;return}
+  C[field]=Math.max(C[field]||0,n);renderCombat()
 }
-function defensiveStanceManeuver(){
-  let ranks=talentRank('Defensive Stance');if(!ranks||S.combat.turn?.actorId!=='pc')return;
-  if(!spendManeuver(1,'Defensive Stance'))return;
-  let max=Math.min(ranks,strainThreshold()-S.strain),n=Number(prompt(`Defensive Stance rank ${ranks}: suffer how much strain?`,String(max)))||0;
-  n=Math.max(0,Math.min(max,n));S.strain+=n;S.combat.meleeDefUpgrade=Math.max(S.combat.meleeDefUpgrade||0,n);renderCombat()
-}
+function sideStepManeuver(){return defensiveTalentManeuver('Side Step','defUpgrade')}
+function defensiveStanceManeuver(){return defensiveTalentManeuver('Defensive Stance','meleeDefUpgrade')}
 function toggleStun(){let w=WEAPONS[S.weapon];if(!w.qualities?.stun)return;S.stunMode=!S.stunMode;cLog(`Blaster set to ${S.stunMode?'STUN':'KILL'}.`);renderCombat()}
 function engagedOpponentCount(actor){
   return activeEnemies().filter(e=>rangeBandBetween(actor.id,e.id)===0).reduce((count,e)=>count+(e.type==='minion'?Math.max(1,e.members||1):1),0);
@@ -5080,9 +5079,14 @@ function extraHit(){
   if(!max||P.extraHits>=max)return;
   spendAdv(2,auto?'Auto-Fire additional hit':'Linked additional hit',()=>{dealPendingHit(t,w,Math.max(0,P.baseDamage-(P.oneHitDamage98||0)),auto?'Auto-Fire':'Linked');P.extraHits++})
 }
+function blastProfile(){
+  const P=pendingSpend(),w=weaponFromPending(),base=quality(w,'blast');
+  if(!P||base<1)return null;
+  return{rating:base+(P.actorId==='pc'?talentRank('Powerful Blast'):0),cost:Math.max(1,(P.hit?2:3)-(P.actorId==='pc'&&hasTalent('Master Grenadier')?1:0))}
+}
 function activateBlast(){
-  let P=pendingSpend(),w=weaponFromPending(),t=targetFromPending(),rating=quality(w,'blast')+((P?.actorId==='pc')?talentRank('Powerful Blast'):0);if(!P||!rating)return;
-  let cost=P.hit?2:3;if(P.advantage<cost)return;
+  let P=pendingSpend(),w=weaponFromPending(),t=targetFromPending(),blast=blastProfile();if(!blast)return;
+  const {rating,cost}=blast;if(P.advantage<cost)return;
   spendAdv(cost,`Blast ${rating}`,()=>{
     let radius=w.blastRadius||0;
     S.combat.enemies.filter(e=>!enemyDefeated(e)&&(P.hit?e.id!==t?.id:true)&&(!t||rangeBandBetween(e.id,t.id)<=radius)).forEach(e=>{
@@ -5181,7 +5185,7 @@ function renderSpendPanel(){
   if(P.hit&&P.triumph>=1)parts.push(`<button class="btn" id="spTriCrit">Triumph: Critical</button>`);
   if(P.triumph>=1)parts.push(`<button class="btn" id="spTriUp">Triumph: upgrade next ally</button>`);
   if(P.hit&&((hasQuality(w,'autoFire')&&S.combat.autoFireMode)||quality(w,'linked'))&&P.advantage>=2)parts.push(`<button class="btn" id="spExtra">2A ${hasQuality(w,'autoFire')&&S.combat.autoFireMode?'Auto-Fire':'Linked'} hit</button>`);
-  if(quality(w,'blast')&&P.advantage>=(P.hit?2:3))parts.push(`<button class="btn" id="spBlast">${P.hit?2:3}A Blast ${quality(w,'blast')}</button>`);
+  const blast=blastProfile();if(blast&&P.advantage>=blast.cost)parts.push(`<button class="btn" id="spBlast">${blast.cost}A Blast ${blast.rating}</button>`);
   if(P.hit&&quality(w,'burn')&&P.advantage>=2)parts.push(`<button class="btn" id="spBurn">2A Burn ${quality(w,'burn')}</button>`);
   if(P.hit&&quality(w,'concussive')&&P.advantage>=2)parts.push(`<button class="btn" id="spConcussive">2A Concussive ${quality(w,'concussive')}</button>`);
   if(P.hit&&quality(w,'disorient')&&P.advantage>=2)parts.push(`<button class="btn" id="spDisorient">2A Disorient ${quality(w,'disorient')}</button>`);
@@ -5330,6 +5334,7 @@ function maybeBringItDown(target){
   let bonus=target.c?.Brawn||target.brawn||2;cLog(`Bring It Down adds ${bonus} damage and flips one light Destiny Point.`);return bonus
 }
 
+function barrageDamage(skill,range){return ['Ranged (Heavy)','Gunnery'].includes(skill)&&(range===3||range===4)?talentRank('Barrage'):0}
 function pcAttack(kind='normal'){
   let C=S.combat,T=C.turn;if(!T||C.pendingSpend)return;if(!startTurnActor())return;T=C.turn;if(!T||T.actorId!=='pc'||T.actionUsed)return;
   let actor=squadActors().find(a=>a.id==='pc'),target=C.enemies[Number($('target').value)||0];if(!target||enemyDefeated(target))return;
@@ -5359,7 +5364,7 @@ function pcAttack(kind='normal'){
     let pierce=quality(q.w,'pierce')+quality(q.w,'breach')*10,
         prey=(target.disoriented||0)>0?talentRank('Prey on the Weak'):0;
     let deadly=deadlyAccuracyDamage(q.skill),
-        barrage=(['Ranged (Heavy)','Gunnery'].includes(q.skill)&&q.range>=3)?talentRank('Barrage'):0,
+        barrage=barrageDamage(q.skill,q.range),
         pointBlank=pointBlankDamage(q.skill,q.range),
         bringItDown=maybeBringItDown(target),
         talentDamage=maybeFallingAvalanche(q.skill)+maybeEmbraceYourHate(q.skill)+prey+deadly+barrage+pointBlank+bringItDown+feralStrengthDamage(q.skill),
@@ -5373,7 +5378,7 @@ function pcAttack(kind='normal'){
     else{target.w+=dmg;if(target.type==='minion')target.members=Math.max(0,Math.ceil((target.wt-target.w)/target.perWt));cLog(`${S.name} hits ${target.name} for ${dmg}. ${rtxt(r)}`)}
   }else cLog(`${S.name} misses ${target.name}. ${rtxt(r)}`);
   if(q.destinyUsed)settleHeldDestiny('light',1);if(usedDark)settleHeldDestiny('dark',1);
-  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?feralStrengthDamage(q.skill)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
+  startSymbolSpend(actor,target,q.w,r,dmg,q.p,r.ok?feralStrengthDamage(q.skill)+barrageDamage(q.skill,q.range)+((target.disoriented||0)>0?talentRank('Prey on the Weak'):0):0);
   if((r.na<=0&&!r.tr)&&!r.de){finishSymbolSpend();return}renderCombat()
 }
 function crewAttack(){

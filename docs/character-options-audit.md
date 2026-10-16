@@ -1,6 +1,6 @@
 # Character options and campaign beginnings audit
 
-Build: `96.13-special-modifications-audit` / package `1.9.19`. Reviewed 2026-10-15 against the saved repository and the supplied source collections.
+Build: `96.14-dangerous-covenants-audit` / package `1.9.20`. Reviewed 2026-10-15 against the saved repository and the supplied source collections.
 
 Before the campaign-beginnings update, the saved game had the 18 careers from Edge of the Empire, Age of Rebellion, and Force and Destiny. Jedi and Clone Soldier were missing. All 20 published career names are now represented, along with 17 universal specializations. This is a catalog-coverage finding, not a claim that every talent or published rule is automated.
 
@@ -318,7 +318,7 @@ Older finalized saves keep their original quests, purchase benefits, and economy
 
 ## Remaining content work
 
-Fresh source reviews for the remaining 14 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
+Fresh source reviews for the remaining 11 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
 
 ## Older EotE core audit: Assassin, Scoundrel and Slicer
 
@@ -337,3 +337,7 @@ All 60 original IDs, names, positions, costs and activation labels remain. Five 
 ## Special Modifications audit: Cyber Tech, Droid Tech and Modder
 
 All 60 original IDs, names, positions, costs and activation labels remain. Twelve unsupported shortcuts are removed, based on printed pp.29, 31 and 33 / physical pp.32, 34 and 36. Thirty-three scoped rules cover 18 glossary entries on printed pp.34–35 / physical pp.37–38 and 15 previously reviewed shared rules, bringing the literal source-name union to 441. Eye for Detail uses whole strain and whole symbol conversions; Cyberneticist includes tagged Medicine installation checks, and Deft Maker includes tagged Computers programming checks. Deft Maker’s single 50 percent droid-material discount is applied consistently to Workshop preview, affordability and payment; actual construction/programming carry their droid context. Existing materials and purchases remain intact. This completes 34 of the original 48 layouts; 14 remain. See [Special Modifications verification](special-modifications-audit-verification.md).
+
+## Dangerous Covenants audit: Demolitionist, Enforcer and Heavy
+
+All 60 original IDs, names, positions and XP costs remain. Thirteen connections are restored and sixteen unsupported routes removed, based on printed pp.27, 29 and 31 / physical pp.28, 30 and 32. Improved Time to Go is corrected to Active; Improved Improvised Detonation retains the glossary’s Passive activation despite its red tree box. Thirty-five scoped rules cover 16 book-glossary entries and 19 shared entries, bringing the literal source-name union to 449. Heavy remains one layout shared by Hired Gun and Soldier. Intimidating now spends whole strain once and downgrades Challenge dice without deleting ordinary difficulty; defensive maneuver cancellation spends nothing; Master Grenadier’s Blast cost matches its preview; Barrage is excluded from additional hits. This completes 37 of the original 48 older layouts; 11 remain. See [Dangerous Covenants verification](dangerous-covenants-audit-verification.md).
