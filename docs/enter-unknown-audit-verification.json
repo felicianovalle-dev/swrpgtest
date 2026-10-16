@@ -1,0 +1,579 @@
+{
+  "build": "96.15-enter-unknown-audit",
+  "package": "1.9.21",
+  "reviewedDate": "2026-10-16",
+  "baselineCommit": "361b2df482d76e1d3d2f4ea564c5e41dd2b52cef",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3978992,
+    "gitBlob": "5e9b631e39d4c50cd7ceae004e8018ee8d0caa98",
+    "sha256": "b0b87674998e78b0d638f70c9df29ad23ac19a018355219cdfca3509a8768961"
+  },
+  "reviewedLayouts": 2,
+  "reviewedNodes": 40,
+  "retainedIds": 40,
+  "completedOriginal48": 39,
+  "remainingLayouts": 9,
+  "totalAuditedOriginalIdLayouts": 45,
+  "sourceRules": 28,
+  "distinctLiteralSourceNames": 452,
+  "sources": {
+    "Archaeologist": {
+      "book": "Enter the Unknown",
+      "printedPage": 25,
+      "physicalPdfPage": 26,
+      "glossaryChecked": true
+    },
+    "Big-Game Hunter": {
+      "book": "Enter the Unknown",
+      "printedPage": 27,
+      "physicalPdfPage": 28,
+      "glossaryChecked": true
+    }
+  },
+  "sourceCopyNote": "Supplied readable 98-page scan checked visually, including enlarged connector crops. Shared activation rules also checked in the supplied Age of Rebellion glossary p.150 / physical p.151. Source PDFs and private download URLs are excluded.",
+  "changes": {
+    "Archaeologist": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          5,
+          6
+        ]
+      ],
+      "typeChanges": [
+        {
+          "id": "arc13",
+          "from": "Passive",
+          "to": "Active"
+        },
+        {
+          "id": "arc21",
+          "from": "Active",
+          "to": "Passive"
+        },
+        {
+          "id": "arc33",
+          "from": "Passive",
+          "to": "Active"
+        }
+      ]
+    },
+    "Big-Game Hunter": {
+      "addedEdges": [
+        [
+          10,
+          14
+        ]
+      ],
+      "removedEdges": [],
+      "typeChanges": []
+    }
+  },
+  "newTalentGlossary": {
+    "entries": 5,
+    "printedPages": [
+      30
+    ],
+    "physicalPdfPages": [
+      31
+    ]
+  },
+  "sharedPreviouslyReviewedRules": 23,
+  "officialErrata": {
+    "version": "2.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/eote_errata_v20.pdf",
+    "note": "No Enter the Unknown entry in this official PDF. Official publisher searches found no additional book-specific talent correction; no claim that every later ruling is exhausted."
+  },
+  "fixes": [
+    "Bring It Down records its actual paid single-hit bonus in the existing serialized additional-hit subtraction. Auto-fire and Linked extra hits do not repeat the bonus or pay Destiny again, including after save/reload.",
+    "Target Brawn zero remains zero instead of falling through to the default of two.",
+    "Two Archaeologist Knowledge Specialization nodes become Active and Knockdown becomes Passive; Improved Hunter\u2019s Quarry retains the book glossary\u2019s Passive activation."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 9,
+    "unchangedEarlierTreeRecords": 116,
+    "earlierCatalogSerializationPreserved": true,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realPurchaseButtons": 40,
+    "fullTreeXpCost": 300
+  },
+  "suites": {
+    "enterTheUnknown": {
+      "checks": 89,
+      "errors": []
+    },
+    "dangerousCovenants": {
+      "checks": 171,
+      "errors": []
+    },
+    "specialModifications": {
+      "checks": 117,
+      "errors": []
+    },
+    "flyCasual": {
+      "checks": 123,
+      "errors": []
+    },
+    "noDisintegrations": {
+      "checks": 114,
+      "errors": []
+    },
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 2528,
+  "executions": [
+    {
+      "name": "enter-unknown",
+      "returncode": 0,
+      "seconds": 48.75
+    },
+    {
+      "name": "enter-unknown-creation",
+      "returncode": 0,
+      "seconds": 18.66
+    },
+    {
+      "name": "dangerous-covenants",
+      "returncode": 0,
+      "seconds": 111.48
+    },
+    {
+      "name": "dangerous-covenants-creation",
+      "returncode": 0,
+      "seconds": 33.9
+    },
+    {
+      "name": "special-modifications",
+      "returncode": 0,
+      "seconds": 74.92
+    },
+    {
+      "name": "special-modifications-creation",
+      "returncode": 0,
+      "seconds": 29.51
+    },
+    {
+      "name": "fly-casual",
+      "returncode": 0,
+      "seconds": 88.03
+    },
+    {
+      "name": "fly-casual-creation",
+      "returncode": 0,
+      "seconds": 24.0
+    },
+    {
+      "name": "no-disintegrations",
+      "returncode": 0,
+      "seconds": 78.15
+    },
+    {
+      "name": "no-dis-creation",
+      "returncode": 0,
+      "seconds": 24.94
+    },
+    {
+      "name": "eote-core",
+      "returncode": 0,
+      "seconds": 70.15
+    },
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 83.56
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 98.45
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 153.7
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 87.24
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 88.51
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 73.82
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 116.25
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 158.0
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 219.97
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 16.62
+    },
+    {
+      "name": "creation",
+      "returncode": 0,
+      "seconds": 27.97
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 33.67
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 52.69
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 35.01
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 38.68
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 37.99
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 41.44
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 28.18
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 25.39
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 23.02
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 17.24
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Archaeologist",
+      "career": "Explorer",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Big-Game Hunter",
+      "career": "Explorer",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    }
+  ],
+  "earlierCreationRegressionFlows": [
+    {
+      "spec": "Demolitionist",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Enforcer",
+      "career": "Hired Gun",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Soldier",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Cyber Tech",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Droid Tech",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Modder",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Charmer",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gambler",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gunslinger",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Martial Artist",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Operator",
+      "career": "Bounty Hunter",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Skip Tracer",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Hunter\u2019s Quarry and its improvement retain manual range, action/maneuver and strain costs, check, attack upgrades for all attackers and until-next-turn expiry.",
+    "Museum Worthy retains its once-per-session GM approval, Hard check, single subject and information resolution. Pin retains opposed Athletics, engagement, immobilization, duration and Triumph extension.",
+    "Knockdown and Stunning Blow remain manual talent effects. Heightened Awareness allied bonuses, Swift terrain movement, research/foraging/tracking/travel time and successful-check Natural Hunter rerolls retain manual steps disclosed on cards.",
+    "Bring It Down is supported in successful PC combat attacks; other attack workflows remain manual. Existing pending extra-hit records without its recorded single-hit subtraction are not rewritten retroactively.",
+    "Earlier documented controls and Force-use limitations remain."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "5e9b631e39d4c50cd7ceae004e8018ee8d0caa98"
+  }
+}

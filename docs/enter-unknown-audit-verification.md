@@ -35,4 +35,29 @@ Progress reaches 39 of the original 48 older layouts, with nine pending. Includi
 
 Tests cover the 960 original individual purchases, combined 2,040-purchase continuation, all 40 real purchase buttons, both changed routes, three activation corrections, whole-tree XP costs, skill choices, Triumph conversion, eligible source modifiers, Bring It Down costs and saved additional-hit continuation. Phone and desktop viewports are 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Two visible creation/save/resume flows follow both corrected layouts; 17 earlier flows remain regression targets. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the final-build run. The next group is Entrepreneur, Marshal and Performer from Far Horizons; it has not started.
+The final-build verification completed successfully. The next group is Entrepreneur, Marshal and Performer from Far Horizons; it has not started.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| enterTheUnknown | 89 |
+| dangerousCovenants | 171 |
+| specialModifications | 117 |
+| flyCasual | 123 |
+| noDisintegrations | 114 |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All sixteen browser/source suites passed 2,528 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Two new and seventeen earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
+
+Every target used the same distribution: Git blob `5e9b631e39d4c50cd7ceae004e8018ee8d0caa98`, 3,978,992 bytes, SHA-256 `b0b87674998e78b0d638f70c9df29ad23ac19a018355219cdfca3509a8768961`. No runtime changes followed this run. Machine-readable evidence is in [enter-unknown-audit-verification.json](enter-unknown-audit-verification.json).
