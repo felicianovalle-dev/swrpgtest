@@ -1,0 +1,518 @@
+{
+  "build": "96.13-special-modifications-audit",
+  "package": "1.9.19",
+  "reviewedDate": "2026-10-15",
+  "baselineCommit": "82c5e77132d396858432a1cb0e9a6fcf3abb9ec8",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 3933380,
+    "gitBlob": "d2db4a7dc000d9ada7768995e1b725ea560227bb",
+    "sha256": "e02985086742f02dd1aa651f9b964ed4d5420575efe9e5e722becdc0370852e2"
+  },
+  "reviewedLayouts": 3,
+  "reviewedNodes": 60,
+  "retainedIds": 60,
+  "completedOriginal48": 34,
+  "remainingLayouts": 14,
+  "totalAuditedOriginalIdLayouts": 40,
+  "sourceRules": 33,
+  "distinctLiteralSourceNames": 441,
+  "sources": {
+    "Cyber Tech": {
+      "book": "Special Modifications",
+      "printedPage": 29,
+      "physicalPdfPage": 32,
+      "glossaryChecked": true
+    },
+    "Droid Tech": {
+      "book": "Special Modifications",
+      "printedPage": 31,
+      "physicalPdfPage": 34,
+      "glossaryChecked": true
+    },
+    "Modder": {
+      "book": "Special Modifications",
+      "printedPage": 33,
+      "physicalPdfPage": 36,
+      "glossaryChecked": true
+    }
+  },
+  "changes": {
+    "Cyber Tech": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          2,
+          6
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Droid Tech": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          5,
+          9
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Modder": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          2,
+          6
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "typeChanges": []
+    }
+  },
+  "newTalentGlossary": {
+    "entries": 18,
+    "printedPages": [
+      34,
+      35
+    ],
+    "physicalPdfPages": [
+      37,
+      38
+    ]
+  },
+  "sharedPreviouslyReviewedRules": 15,
+  "officialErrata": {
+    "version": "2.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/eote_errata_v20.pdf",
+    "note": "No Special Modifications entry in this official PDF. Official publisher searches found no additional book-specific talent correction; no claim that every later ruling is exhausted."
+  },
+  "fixes": [
+    "Eye for Detail uses finite bounded whole-strain and whole-symbol conversion, retains one Success and spends nothing on canceled or invalid input.",
+    "Cyberneticist includes explicitly tagged Medicine installation checks; Deft Maker includes explicitly tagged Computers programming checks. Both remain PC-only.",
+    "Workshop construction/programming carry the droid context. Deft Maker applies one 50 percent droid-material discount consistently to price preview, affordability, shortfall and payment; no stacked discount or retroactive material refunds."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 14,
+    "unchangedEarlierTreeRecords": 110,
+    "earlierCatalogSerializationPreserved": true,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "existingMaterialsRepriced": false,
+    "realPurchaseButtons": 60,
+    "fullTreeXpCost": 300
+  },
+  "suites": {
+    "specialModifications": {
+      "checks": 117,
+      "errors": []
+    },
+    "flyCasual": {
+      "checks": 123,
+      "errors": []
+    },
+    "noDisintegrations": {
+      "checks": 114,
+      "errors": []
+    },
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 2268,
+  "executions": [
+    {
+      "name": "special-modifications",
+      "returncode": 0,
+      "seconds": 77.6
+    },
+    {
+      "name": "special-modifications-creation",
+      "returncode": 0,
+      "seconds": 31.99
+    },
+    {
+      "name": "fly-casual",
+      "returncode": 0,
+      "seconds": 93.05
+    },
+    {
+      "name": "fly-casual-creation",
+      "returncode": 0,
+      "seconds": 24.23
+    },
+    {
+      "name": "no-disintegrations",
+      "returncode": 0,
+      "seconds": 81.1
+    },
+    {
+      "name": "no-dis-creation",
+      "returncode": 0,
+      "seconds": 24.88
+    },
+    {
+      "name": "eote-core",
+      "returncode": 0,
+      "seconds": 72.17
+    },
+    {
+      "name": "force-supplements",
+      "returncode": 0,
+      "seconds": 86.95
+    },
+    {
+      "name": "sentinel-warrior",
+      "returncode": 0,
+      "seconds": 101.28
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 156.6
+    },
+    {
+      "name": "mystic-seeker",
+      "returncode": 0,
+      "seconds": 89.17
+    },
+    {
+      "name": "consular-guardian",
+      "returncode": 0,
+      "seconds": 87.96
+    },
+    {
+      "name": "older-aor-core",
+      "returncode": 0,
+      "seconds": 74.64
+    },
+    {
+      "name": "eote-replacements",
+      "returncode": 0,
+      "seconds": 118.98
+    },
+    {
+      "name": "force-replacements",
+      "returncode": 0,
+      "seconds": 159.3
+    },
+    {
+      "name": "aor-replacements",
+      "returncode": 0,
+      "seconds": 225.02
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 17.16
+    },
+    {
+      "name": "creation",
+      "returncode": 0,
+      "seconds": 29.28
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 34.2
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 57.58
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 37.36
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 37.88
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 44.18
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 45.77
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 31.14
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 27.69
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 26.13
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 18.61
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Cyber Tech",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Droid Tech",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Modder",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    }
+  ],
+  "earlierCreationRegressionFlows": [
+    {
+      "spec": "Charmer",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gambler",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gunslinger",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Martial Artist",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Operator",
+      "career": "Bounty Hunter",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Skip Tracer",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Cybernetic implant storage, installation, caps, Cyberneticist discounts, Engineered Redundancies treatment and combined daily allowance, Energy Transfer and Overcharge remain manual.",
+    "Reroute Processors, Machine Mender healing, Speaks Binary, Signature Vehicle, Resourceful Refit, item choices and other special abilities retain manual steps disclosed on cards.",
+    "Eye for Detail offers conversion through party checks; Workshop and other direct rolls require manual symbol conversion.",
+    "Natural Tinkerer prompts cover failed Mechanics checks; successful-check rerolls remain manual.",
+    "Gearhead attachment-modification discounts remain manual.",
+    "Earlier documented defense, Force-use and other control limitations remain."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "d2db4a7dc000d9ada7768995e1b725ea560227bb"
+  }
+}

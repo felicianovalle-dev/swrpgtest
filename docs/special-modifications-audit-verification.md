@@ -36,4 +36,27 @@ The frozen original fixture holds 960 nodes across 48 layouts. This batch brings
 
 Checks cover 960 individual old purchases, combined 2,040-purchase continuation, 60 real purchase buttons, all 12 removed routes, source cards, skill packages, affected controls and save/reload/Resume. Six viewports cover 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Three visible creation/save/resume flows cover Cyber Tech, Droid Tech and Modder along source routes. The earlier ten creation flows remain regression targets. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the final-build run. The next group is Demolitionist, Enforcer and Heavy from Dangerous Covenants; it has not started.
+The final-build verification completed successfully. The next group is Demolitionist, Enforcer and Heavy from Dangerous Covenants; it has not started.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| specialModifications | 117 |
+| flyCasual | 123 |
+| noDisintegrations | 114 |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All fourteen browser/source suites passed 2,268 checks without application errors. All ten general regression targets returned zero, including 266 smoke checks and 112 diagnostics. Three new and ten earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the checked distribution and `git diff --check` passes.
+
+Every target in this final run used the same distribution: Git blob `d2db4a7dc000d9ada7768995e1b725ea560227bb`, 3,933,380 bytes, SHA-256 `e02985086742f02dd1aa651f9b964ed4d5420575efe9e5e722becdc0370852e2`. No runtime changes followed this run. Machine-readable evidence is in [special-modifications-audit-verification.json](special-modifications-audit-verification.json). Hosted verification will compare these exact bytes and repeat the three new creation/save/resume flows.
