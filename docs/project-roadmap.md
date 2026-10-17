@@ -1,10 +1,10 @@
 # Sable Reach project roadmap
 
-Current update: **1.9.28**; local verification passed, hosted verification pending. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
+Current published release: **1.9.28**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The eight-profile 1.9.28 batch passed local verification and is awaiting hosted proof. After it ships, continue with the fifteen remaining profiles below, then finish the reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The eight-profile 1.9.28 batch is complete and published. Continue with the fifteen remaining profiles below, starting with Clone, then finish the reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -43,7 +43,7 @@ This batch's source reviews:
 
 - [x] Sluissi, p.261; Weequay, p.312; Wookiee, p.316; Toydarian, p.289.
 - [x] Trandoshan, p.290; Twi'lek, p.296; Nautolan, p.188; Mon Calamari, p.180.
-- [ ] Release Sluissi Solid Repairs after actual ship-repair and save/resume checks.
+- [x] Release Sluissi Solid Repairs after actual ship-repair and save/resume checks.
 - [ ] Implement the remaining reviewed species benefits: natural weapons/rage, healing, assistance, sensing/vision, environmental adaptations, movement, breathing and Force resistance. Keep manual disclosures until each effect is implemented and tested.
 - [ ] Assess additional species only after checking existing profiles; do not claim the full 300-plus-species guide is imported.
 
@@ -114,4 +114,4 @@ The papercraft game, detailed visual creator and Paper Mario-style exploration/c
 ## Release log
 
 - 1.9.27: Cerean Intellectuals and four species checks. [Verification](cerean-knowledge-verification.md).
-- 1.9.28: eight species reviews, Sluissi starting repairs and this resumable roadmap. Local verification: 21 targets and 28 browser flows passed. Hosted proof pending. [Verification](species-repairs-verification.md).
+- 1.9.28: eight species reviews, Sluissi starting repairs and this resumable roadmap. Verified: 21 regression targets, 28 local browser flows and 12 hosted flows passed. [Verification](species-repairs-verification.md).
