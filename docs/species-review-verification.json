@@ -1,0 +1,269 @@
+{
+  "build": "96.20-species-review",
+  "package": "1.9.26",
+  "baselineCommit": "85ed40d3355578a6003d2d53b563fea92128c943",
+  "saveSchema": 92,
+  "testedIndex": {
+    "bytes": 4070430,
+    "gitBlob": "af4182c331b51e889898bd78e6c53b44eacc22f1",
+    "sha256": "4dddf5d06b819e545a6277cc5d4e8cf53dd791ad28a790cd70f2a700257f5062"
+  },
+  "source": {
+    "title": "Complete Species Guide v6",
+    "kind": "fan supplement",
+    "copyPages": 358,
+    "sha256": "68b34c10313bdac68a9256022b1627260e3f9416273f6489bbec6e12a430fa68",
+    "visuallyReviewedPages": {
+      "Chiss": 60,
+      "Mirialan": 179,
+      "Pantoran": 207,
+      "Sullustan": 267
+    }
+  },
+  "baseStatChanges": false,
+  "newSaveFields": false,
+  "newSpecies": 0,
+  "newInnateRank": {
+    "Sullustan": "Skilled Jockey 1"
+  },
+  "reviewDisplaySpecies": [
+    "Bothan",
+    "Rodian",
+    "Duros",
+    "Jawa",
+    "Selkath",
+    "Sullustan"
+  ],
+  "newSpeciesChecks": 23,
+  "previousSpeciesChecks": 21,
+  "olderTalentChecks": 107,
+  "layoutChecks": 47,
+  "olderPurchaseCompatibility": {
+    "individual": 960,
+    "combined": 2040
+  },
+  "targets": [
+    {
+      "name": "species116",
+      "returncode": 0,
+      "seconds": 76.35
+    },
+    {
+      "name": "creation116",
+      "returncode": 0,
+      "seconds": 35.21,
+      "recheckedAfter": "instant scroll avoids sampling the rank text during animation"
+    },
+    {
+      "name": "species115",
+      "returncode": 0,
+      "seconds": 56.59
+    },
+    {
+      "name": "creation115",
+      "returncode": 0,
+      "seconds": 31.47
+    },
+    {
+      "name": "talents114",
+      "returncode": 0,
+      "seconds": 69.33
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 18.74
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 151.1
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 36.16
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 53.67
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 35.66
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 38.25
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 36.81
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 39.37
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 26.42
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 24.73
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 23.74
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 17.11
+    }
+  ],
+  "localCreationSaveResume": [
+    {
+      "species": "chiss",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 320,
+      "height": 568,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "mirialan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "pantoran",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "sullustan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "sullustan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "bothan",
+      "talent": "Convincing Demeanor",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "rodian",
+      "talent": "Expert Tracker",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "duros",
+      "talent": "Galaxy Mapper",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "jawa",
+      "talent": "Utinni!",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    }
+  ],
+  "hostedVerification": {
+    "status": "pending"
+  },
+  "limits": [
+    "Lighting and temperature traits remain narrative.",
+    "Other older species remain outside this batch.",
+    "Browser emulation does not constitute physical iPhone Safari testing."
+  ]
+}

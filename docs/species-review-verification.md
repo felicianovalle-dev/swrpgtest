@@ -10,4 +10,6 @@ Review now shows a dedicated species talents card with included and total ranks 
 
 ## Verification
 
-Pending final regression results.
+All 17 regression targets passed on the exact HTML fingerprint in [the machine-readable report](species-review-verification.json). Coverage includes 23 new species/review checks, 21 previous species checks, 107 older-talent checks (960 individual and 2,040 combined purchases), 47 layout checks at six viewports, the campaign suite and ten general system suites. Nine local browser creation/purchase/finalization/save/reload/Resume flows passed, including Sullustan at mobile and desktop sizes. The species rank text was hit-tested clear of the mobile navigation after scrolling. No browser errors were reported. Physical iPhone Safari was not newly tested.
+
+Hosted verification will be recorded after publication.
