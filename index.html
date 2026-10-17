@@ -5620,7 +5620,7 @@ function careerSkills(){
   if(window.CharacterCatalog97)for(const sk of CharacterCatalog97.bonusSkills())s.add(sk);
   return s
 }
-function resetCreationPurchases(){S.talentChoices98={};S.talentImports98=[];S.speciesBonus97=[];S.universalKnowledge97={};let sp=SPECIES[S.species];S.chars={...sp.c};S.charSpend={};S.skills={...(sp.free||{})};if(sp.freeChoice?.length){let pick=S.speciesSkillChoice&&sp.freeChoice.includes(S.speciesSkillChoice)?S.speciesSkillChoice:sp.freeChoice[0];S.speciesSkillChoice=pick;S.skills[pick]=(S.skills[pick]||0)+1}S.xpSpent=0;S.freeCareer=[];S.freeSpec=[];S.talents=new Set();S.dedication={};S.ownedSpecs=[S.spec];S.specTalents={[S.spec]:S.talents};S.talentView=S.spec;S.universalSpecs=[];S.universalTalents={'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()};S.universalView='Force Sensitive Exile';S.forceRating=isForceCareer()?1:0;S.forceOwned={Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()};S.forceCommitted={sense:false,brawn:false,agility:false};S.foreseeBoost=0}function selectSpecies(reset=true){if(S.finalized)return;let sp=SPECIES[$('species').value];S.species=$('species').value;S.speciesSkillChoice=sp.freeChoice?.[0]||null;S.base={...sp.c};S.xpStart=sp.xp;resetCreationPurchases();if(reset)bLog(`Species set to ${sp.name}; creation purchases reset.`);renderAll()}
+function resetCreationPurchases(){delete S.speciesCareerSkills117;S.talentChoices98={};S.talentImports98=[];S.speciesBonus97=[];S.universalKnowledge97={};let sp=SPECIES[S.species];S.chars={...sp.c};S.charSpend={};S.skills={...(sp.free||{})};if(sp.freeChoice?.length){let pick=S.speciesSkillChoice&&sp.freeChoice.includes(S.speciesSkillChoice)?S.speciesSkillChoice:sp.freeChoice[0];S.speciesSkillChoice=pick;S.skills[pick]=(S.skills[pick]||0)+1}S.xpSpent=0;S.freeCareer=[];S.freeSpec=[];S.talents=new Set();S.dedication={};S.ownedSpecs=[S.spec];S.specTalents={[S.spec]:S.talents};S.talentView=S.spec;S.universalSpecs=[];S.universalTalents={'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()};S.universalView='Force Sensitive Exile';S.forceRating=isForceCareer()?1:0;S.forceOwned={Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()};S.forceCommitted={sense:false,brawn:false,agility:false};S.foreseeBoost=0}function selectSpecies(reset=true){if(S.finalized)return;let sp=SPECIES[$('species').value];S.species=$('species').value;S.speciesSkillChoice=sp.freeChoice?.[0]||null;S.base={...sp.c};S.xpStart=sp.xp;resetCreationPurchases();if(reset)bLog(`Species set to ${sp.name}; creation purchases reset.`);renderAll()}
 function selectCareer(reset=true){if(S.finalized)return;let chosen=$('careerSelect').value;if(chosen==='Clone Soldier'&&S.species!=='clone'){$('careerSelect').value=S.career;bLog('Choose the Clone species to use Clone Soldier.');return}S.career=chosen;if(CAREERS[S.career].forceStart){S.framework='Morality';if($('framework'))$('framework').value='Morality'}let specs=Object.keys(CAREERS[S.career].specs);$('specSelect').innerHTML=specs.map(x=>`<option>${x}</option>`).join('');S.spec=specs[0];if(!S.finalized)resetCreationPurchases();if(reset)bLog(`Career set to ${S.career}; creation purchases reset for the new career.`);renderAll()}
 function selectSpec(){if(S.finalized)return;let chosen=$('specSelect').value;if(window.CharacterCatalog97?.requirement(chosen).forceRating){$('specSelect').value=S.spec;bLog('Begin as a Padawan. Acquire this advanced Jedi specialization after reaching its required Force Rating.');return}S.spec=chosen;if(!S.finalized)resetCreationPurchases();bLog(`Specialization set to ${S.spec}; creation purchases reset.`);renderAll()}
 function toggleFree(kind,sk){if(S.finalized)return;if(!(kind==='career'?CAREERS[S.career].skills:CAREERS[S.career].specs[S.spec]).includes(sk))return;let arr=kind==='career'?S.freeCareer:S.freeSpec,cap=kind==='career'?careerPickCap():2;if(arr.includes(sk)){arr.splice(arr.indexOf(sk),1);S.skills[sk]=Math.max(0,(S.skills[sk]||0)-1)}else if(arr.length<cap){if((S.skills[sk]||0)>=2){bLog('Starting skill ranks cannot exceed 2.');return}arr.push(sk);S.skills[sk]=(S.skills[sk]||0)+1}else bLog(`Only ${cap} free ${kind} picks are allowed.`);renderAll()}
@@ -5959,7 +5959,7 @@ function renderHud(){
   $('adventureTab').disabled=!S.finalized;if($('shipTab'))$('shipTab').disabled=!S.ship?.owned;updateGlobalStatus();renderQuickHud();applyVisualSettings()
 }
 function renderLogs(){$('buildLog').innerHTML=S.buildLog.map(x=>`<div>${x}</div>`).join('')||'<div class="small">No build events yet.</div>';$('gameLog').innerHTML=S.gameLog.map(x=>`<div>${x}</div>`).join('')||'<div class="small">No session events yet.</div>'}
-function finalize(){if(S.finalized)return;if(window.Game97?.campaign?.hasSetup()&&!Game97.campaign.checkBeforeFinalize())return;let cap=careerPickCap();if(S.freeCareer.length!==cap||S.freeSpec.length!==2){bLog('Complete your free skill selections first.');return}S.name=$('name').value.trim()||'Unnamed Drifter';let carry=Math.max(0,S.xpStart-S.xpSpent);S.earnedXp+=carry;S.finalized=true;let forms=['Niman Disciple','Soresu Defender','Makashi Duelist','Ataru Striker','Shien Expert','Shii-Cho Knight'];S.weapon=forms.includes(S.spec)?'lightsaber':S.career==='Bounty Hunter'||S.career==='Hired Gun'?'carbine':S.career==='Smuggler'?'pistol':'holdout';S.armor=S.armor||'heavyClothing';S.ep15={initialized:true,location:'cantina',mainStage:0,dungeonStage:0,quests:{},rep:{Rebels:0,Hutts:0,Empire:0,Guild:0,Local:0},intel:0,salvage:0,visited:{},flags:{},loot:{},completed:[],lastNpc:null};ensurePhase15State();ensureInventory();bLog(`Character finalized. ${carry} unspent creation XP carried into advancement. Episode 0 unlocked.`);renderAll();renderNavTab('adventure')}
+function finalize(){if(S.finalized)return;if(window.Species117?.pending()){bLog('Choose your two Intellectuals Knowledge career skills first.');renderNavTab('career');return;}if(window.Game97?.campaign?.hasSetup()&&!Game97.campaign.checkBeforeFinalize())return;let cap=careerPickCap();if(S.freeCareer.length!==cap||S.freeSpec.length!==2){bLog('Complete your free skill selections first.');return}S.name=$('name').value.trim()||'Unnamed Drifter';let carry=Math.max(0,S.xpStart-S.xpSpent);S.earnedXp+=carry;S.finalized=true;let forms=['Niman Disciple','Soresu Defender','Makashi Duelist','Ataru Striker','Shien Expert','Shii-Cho Knight'];S.weapon=forms.includes(S.spec)?'lightsaber':S.career==='Bounty Hunter'||S.career==='Hired Gun'?'carbine':S.career==='Smuggler'?'pistol':'holdout';S.armor=S.armor||'heavyClothing';S.ep15={initialized:true,location:'cantina',mainStage:0,dungeonStage:0,quests:{},rep:{Rebels:0,Hutts:0,Empire:0,Guild:0,Local:0},intel:0,salvage:0,visited:{},flags:{},loot:{},completed:[],lastNpc:null};ensurePhase15State();ensureInventory();bLog(`Character finalized. ${carry} unspent creation XP carried into advancement. Episode 0 unlocked.`);renderAll();renderNavTab('adventure')}
 function serializableState(){
   ensurePhase9State();ensurePhase16State();return {...S,schemaVersion:52,talents:[...S.talents],specTalents:Object.fromEntries(Object.entries(S.specTalents).map(([k,v])=>[k,[...v]])),forceOwned:Object.fromEntries(Object.entries(S.forceOwned).map(([k,v])=>[k,[...v]])),
     universalTalents:Object.fromEntries(Object.entries(S.universalTalents).map(([k,v])=>[k,[...v]]))}
@@ -15591,6 +15591,87 @@ window.CharacterCatalog97 = (() => {
       "bonusTalents97": {
         "Skilled Jockey": 1
       }
+    },
+    "cerean": {
+      "name": "Cerean",
+      "xp": 90,
+      "wt": 10,
+      "st": 11,
+      "c": {
+        "Brawn": 2,
+        "Agility": 1,
+        "Intellect": 3,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Vigilance": 1
+      },
+      "note": "Vigilance 1 is included. Intellectuals lets you choose two Knowledge career skills on the Career screen. It grants no free skill ranks.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.50",
+      "verifiedPage117": 50
+    },
+    "lannik": {
+      "name": "Lannik",
+      "xp": 95,
+      "wt": 9,
+      "st": 11,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Knowledge (Warfare)",
+        "Streetwise"
+      ],
+      "note": "Choose Knowledge (Warfare) or Streetwise for one starting rank. Indomitable removes Setback from critical injuries, fear or disorientation; resolve this and silhouette 0 narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.164",
+      "verifiedPage117": 164
+    },
+    "gungan": {
+      "name": "Gungan",
+      "xp": 90,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 3
+      },
+      "free": {
+        "Athletics": 1
+      },
+      "note": "Athletics 1 is included. Aquatic breathing, movement and humidity/dryness effects are resolved narratively. High Jump: once per round as a maneuver, suffer 3 strain to move two range bands vertically or horizontally; resolve this movement narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.117",
+      "verifiedPage117": 117
+    },
+    "keldor": {
+      "name": "Kel Dor",
+      "xp": 110,
+      "wt": 9,
+      "st": 10,
+      "c": {
+        "Brawn": 1,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 2
+      },
+      "free": {
+        "Knowledge (Education)": 1
+      },
+      "note": "Knowledge (Education) 1 is included. Helium Breathers require a helium mask and goggles in a normal atmosphere. Oxygen is a rating-4 dangerous atmosphere; resolve breathing and vision effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.143",
+      "verifiedPage117": 143
     }
   },
   "careers": {
@@ -55305,7 +55386,7 @@ window.CharacterCatalog97 = (() => {
     'Improved Secrets of the Jedi':['Discipline']
   };
   function bonusSkills() {
-    const skills=new Set();
+    const skills=new Set(window.Species117?.careerSkills()||[]);
     for(const sk of window.Talents98?.careerSkills()||[])skills.add(sk);
     for (const spec of S.universalSpecs || []) for (const sk of data.universals[spec]?.skills || []) skills.add(sk);
     for (const n of [...allOwnedSpecNodes(),...ownedUniversalNodes()]) for (const sk of talentSkills[n.name]||[]) skills.add(sk);
@@ -55618,6 +55699,7 @@ window.Talents98?.attach(window.Game97);
     }
     game.campaign?.validateSnapshot(data);
     window.Talents98?.validateSnapshot(data);
+    window.Species117?.validateSnapshot(data);
     return data;
   }
   function candidates() {
@@ -56229,6 +56311,7 @@ window.CampaignContent97 = (() => {
   function issues(state=S) {
     if(!hasSetup(state))return [];
     const c=config(state), errors=[];
+    if(window.Species117?.pending(state))errors.push('Choose two Knowledge career skills for Intellectuals on the Career screen.');
     if(!compatible(c))errors.push('Choose an allegiance available at your era start.');
     if(!initialMissions(state).some(m=>m.id===c.mission))errors.push('Choose an opening for your story type.');
     if(!state.name?.trim())errors.push('Give your character a name.');
@@ -56326,6 +56409,7 @@ window.CampaignContent97 = (() => {
   }
   function refreshReview() {
     renderSpeciesTalents();
+    window.Species117?.renderReview();
     if(!hasSetup()||!$('reviewBody'))return;const c=config(),p=c.profile,errors=issues();let box=$('campaignReview97');
     if(!box){box=document.createElement('div');box.id='campaignReview97';box.className='creation-profile97';$('reviewBody').appendChild(box);}
     box.innerHTML=`<h3>Your beginning</h3><p><b>${esc(content.eras[c.era].name)}</b> · ${esc(content.factions[c.faction].name)}<br>${esc(STORY_TEMPLATES_61[c.mission].name)}</p><p>500 credits · ${esc(WEAPONS[c.weapon].name)} · Heavy clothing · Shared transport: ${esc(p.shipName.trim()||'First Light')}</p><p>${esc(p.callsign?`${p.callsign} · `:'')}${esc(p.motivation)}${p.pronouns?` · ${esc(p.pronouns)}`:''}</p>${p.appearance?`<p>${esc(p.appearance)}</p>`:''}${p.background?`<p>${esc(p.background)}</p>`:''}${p.goal?`<p><b>Personal goal:</b> ${esc(p.goal)}</p>`:''}${S.finalized?'':errorHTML(errors)}<p class="campaign-source97">Unspent starting XP carries into advancement once. Starting equipment and transport are supplied by this game beginning.</p>`;
@@ -56373,7 +56457,7 @@ window.CampaignContent97 = (() => {
   function renderAudit() {
     const parent=$('about97');if(!parent)return;let box=$('catalogAudit97');if(!box){box=document.createElement('section');box.id='catalogAudit97';box.className='creation-profile97';parent.prepend(box);}
     const c=catalog.coverage();
-    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Other older profiles still await a complete source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
+    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Cerean, Lannik, Gungan and Kel Dor have also been checked. Cerean Intellectuals now supports two chosen Knowledge career skills without free ranks. Lannik, Gungan and Kel Dor situational effects remain narrative. Other older profiles still await a complete source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
   }
   function render() { renderSetup();renderPersonal();renderOpening();renderCreationExtras();renderAudit();const q=S.story61?.active,t=STORY_TEMPLATES_61[q?.templateId],panel=$('story61tab');if(t?.campaign97&&panel&&!panel.querySelector('.campaign-source97')){const p=document.createElement('p');p.className='campaign-source97';p.textContent=`${t.campaign97.kind} · ${t.campaign97.source}`;panel.appendChild(p);} }
   function install() {
@@ -56390,8 +56474,54 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.20-species-review';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.21-cerean-knowledge';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
+})();
+
+/* Cerean Intellectuals: two permanent career-skill choices, never free ranks. */
+(() => {
+  'use strict';
+  const game=window.Game97,esc=pxEsc67;
+  const knowledge=()=>Object.keys(SKILL_CHAR).filter(skill=>skill.startsWith('Knowledge ('));
+  function valid(skills){return Array.isArray(skills)&&skills.length===2&&new Set(skills).size===2&&skills.every(skill=>knowledge().includes(skill));}
+  function chosen(state=S){return state.species==='cerean'&&valid(state.speciesCareerSkills117)?state.speciesCareerSkills117:[];}
+  function pending(state=S){return state.species==='cerean'&&chosen(state).length!==2;}
+  // During creation, do not change the refund price of an already-purchased rank.
+  function available(skill){return S.finalized||careerSkills().has(skill)||(S.skills[skill]||0)<=freeFloor(skill);}
+  function choose(skills){
+    if(!pending()||!valid(skills)||!skills.every(available))return false;
+    S.speciesCareerSkills117=[...skills];
+    bLog(`Intellectuals: ${skills.join(' and ')} are now career skills. No free ranks or XP refunds are granted.`);
+    renderAll();return true;
+  }
+  function validateSnapshot(state){
+    if(state.speciesCareerSkills117!==undefined&&(state.species!=='cerean'||!valid(state.speciesCareerSkills117)))throw new Error('Invalid Cerean Knowledge career skills.');
+  }
+  function renderReview(){
+    $('cereanReview117')?.remove();if(S.species!=='cerean'||!$('reviewBody'))return;
+    const box=document.createElement('div');box.id='cereanReview117';box.className='creation-profile97';
+    box.innerHTML=`<h3>Intellectuals · Cerean</h3>${pending()?'<p>Choose two Knowledge career skills on the Career screen.</p><button class="btn" id="cereanReviewChoose117">Choose Knowledge skills</button>':`<p>${chosen().map(esc).join(' · ')}</p><p>These are career skills. Skill ranks still cost XP.</p>`}`;
+    $('reviewBody').appendChild(box);
+    $('cereanReviewChoose117')?.addEventListener('click',()=>renderNavTab('career'));
+    if(!S.finalized&&pending()&&$('finalize'))$('finalize').disabled=true;
+  }
+  function render(){
+    $('cereanKnowledge117')?.remove();renderReview();if(S.species!=='cerean'||!$('careerInfo'))return;
+    const box=document.createElement('div');box.id='cereanKnowledge117';box.className='creation-note97';
+    if(!pending())box.innerHTML=`<h3>Intellectuals · confirmed</h3><p>${chosen().map(esc).join(' · ')}</p><p>These are career skills. No free ranks are granted; existing XP spending is unchanged.</p>`;
+    else {
+      const options=knowledge().map(skill=>`<option value="${esc(skill)}" ${available(skill)?'':'disabled'}>${esc(skill)}${available(skill)?careerSkills().has(skill)?' · already career':'':' · undo purchased ranks first'}</option>`).join('');
+      box.innerHTML=`<h3>Intellectuals · choose two Knowledge skills</h3><p>Your choices become career skills, without free ranks. Choices are fixed when confirmed.</p>${knowledge().some(skill=>!available(skill))?'<p>To choose a skill bought during creation, undo its purchased ranks first. This preserves the original XP refund.</p>':''}<label>First Knowledge skill<select id="cereanFirst117"><option value="">Choose a skill</option>${options}</select></label><label>Second Knowledge skill<select id="cereanSecond117"><option value="">Choose another skill</option>${options}</select></label><button class="btn" id="cereanConfirm117" disabled>Confirm Knowledge skills</button>`;
+    }
+    $('careerInfo').after(box);
+    if(pending()){
+      const values=()=>[$('cereanFirst117').value,$('cereanSecond117').value];
+      for(const id of ['cereanFirst117','cereanSecond117'])$(id).onchange=()=>{$('cereanConfirm117').disabled=!valid(values())||!values().every(available);};
+      $('cereanConfirm117').onclick=()=>choose(values());
+    }
+  }
+  window.Species117={careerSkills:chosen,pending,choose,validateSnapshot,renderReview};
+  game.on('render',render);game.on('hydrate',render);game.on('navigate',({id})=>{if(['career','review'].includes(id))render();});
 })();
 
 try{Game97.boot();markBoot90('Ready to play.',true)}catch(e){showRuntimeError(`Opening failed: ${e.message}`)}</script>

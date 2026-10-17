@@ -212,3 +212,7 @@ Precise Aim previews weapon validity before charging. It reserves chosen whole-n
 ## Stay on Target original-layout audit
 
 `npm run test:talents:stay-on-target` checks three original-ID layouts, 19 route corrections, two activation labels, 37 scoped rules, saved purchases and supported animal/piloting/Mechanics modifiers at six viewports. `npm run test:creation:stay-on-target` exercises three visible creation/save/resume flows and accepts a hosted URL. The `target114` table preserves every earlier catalog entry. Beast Wrangler uses explicit `ctx.wrangle` for tame/wrangle checks; generic `ctx.beast` retains its earlier Hunter behavior without adding Beast Wrangler. Expert Handler still requires riding plus Survival. There are no new state fields, migrations or resource costs. Schema and storage keys remain 92. See `docs/stay-target-audit-verification.md`.
+
+### Cerean Knowledge choices
+
+`src/species117.js` owns Cerean Intellectuals selection, its Career/Review UI and validation. `CharacterCatalog97.bonusSkills()` merges its confirmed choices into the existing career-skill set. `save97.js` validates the optional `speciesCareerSkills117` field before hydration. The legacy creation reset clears it and finalization checks for a pending choice; existing finalized campaigns remain playable without a recorded choice and can confirm it once. The build includes this module after campaign setup and before boot. No save migration recalculates prior XP or adds skill ranks.

@@ -47,7 +47,7 @@ window.CharacterCatalog97 = (() => {
     'Improved Secrets of the Jedi':['Discipline']
   };
   function bonusSkills() {
-    const skills=new Set();
+    const skills=new Set(window.Species117?.careerSkills()||[]);
     for(const sk of window.Talents98?.careerSkills()||[])skills.add(sk);
     for (const spec of S.universalSpecs || []) for (const sk of data.universals[spec]?.skills || []) skills.add(sk);
     for (const n of [...allOwnedSpecNodes(),...ownedUniversalNodes()]) for (const sk of talentSkills[n.name]||[]) skills.add(sk);
