@@ -267,6 +267,90 @@
       "bonusTalents97": {
         "Utinni!": 1
       }
+    },
+    "chiss": {
+      "name": "Chiss",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 3,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 1
+      },
+      "free": {
+        "Cool": 1
+      },
+      "note": "Cool 1 is included. Infrared Vision removes lighting-related Setback; resolve this situational benefit narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.60",
+      "verifiedPage116": 60
+    },
+    "mirialan": {
+      "name": "Mirialan",
+      "xp": 100,
+      "wt": 10,
+      "st": 11,
+      "c": {
+        "Brawn": 2,
+        "Agility": 3,
+        "Intellect": 2,
+        "Cunning": 1,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Discipline": 1
+      },
+      "note": "Discipline 1 is included.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.179",
+      "verifiedPage116": 179
+    },
+    "pantoran": {
+      "name": "Pantoran",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 1,
+        "Willpower": 2,
+        "Presence": 3
+      },
+      "freeChoice": [
+        "Cool",
+        "Negotiation"
+      ],
+      "note": "Choose Cool or Negotiation for one starting rank. Cold Adaptations removes cold-related Setback and adds one Setback in hot conditions; resolve these environmental effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.207",
+      "verifiedPage116": 207
+    },
+    "sullustan": {
+      "name": "Sullustan",
+      "xp": 100,
+      "wt": 9,
+      "st": 10,
+      "c": {
+        "Brawn": 1,
+        "Agility": 3,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Astrogation": 1
+      },
+      "note": "Astrogation 1 is included. Born Pilots includes Skilled Jockey 1: removes one Setback from Piloting (Planetary) and Piloting (Space) checks. Large Eyes removes darkness-related Setback and adds one in bright conditions; resolve lighting effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.267",
+      "verifiedPage116": 267,
+      "bonusTalents97": {
+        "Skilled Jockey": 1
+      }
     }
   },
   "careers": {

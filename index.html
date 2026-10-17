@@ -15507,6 +15507,90 @@ window.CharacterCatalog97 = (() => {
       "bonusTalents97": {
         "Utinni!": 1
       }
+    },
+    "chiss": {
+      "name": "Chiss",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 3,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 1
+      },
+      "free": {
+        "Cool": 1
+      },
+      "note": "Cool 1 is included. Infrared Vision removes lighting-related Setback; resolve this situational benefit narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.60",
+      "verifiedPage116": 60
+    },
+    "mirialan": {
+      "name": "Mirialan",
+      "xp": 100,
+      "wt": 10,
+      "st": 11,
+      "c": {
+        "Brawn": 2,
+        "Agility": 3,
+        "Intellect": 2,
+        "Cunning": 1,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Discipline": 1
+      },
+      "note": "Discipline 1 is included.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.179",
+      "verifiedPage116": 179
+    },
+    "pantoran": {
+      "name": "Pantoran",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 1,
+        "Willpower": 2,
+        "Presence": 3
+      },
+      "freeChoice": [
+        "Cool",
+        "Negotiation"
+      ],
+      "note": "Choose Cool or Negotiation for one starting rank. Cold Adaptations removes cold-related Setback and adds one Setback in hot conditions; resolve these environmental effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.207",
+      "verifiedPage116": 207
+    },
+    "sullustan": {
+      "name": "Sullustan",
+      "xp": 100,
+      "wt": 9,
+      "st": 10,
+      "c": {
+        "Brawn": 1,
+        "Agility": 3,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Astrogation": 1
+      },
+      "note": "Astrogation 1 is included. Born Pilots includes Skilled Jockey 1: removes one Setback from Piloting (Planetary) and Piloting (Space) checks. Large Eyes removes darkness-related Setback and adds one in bright conditions; resolve lighting effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.267",
+      "verifiedPage116": 267,
+      "bonusTalents97": {
+        "Skilled Jockey": 1
+      }
     }
   },
   "careers": {
@@ -56232,7 +56316,16 @@ window.CampaignContent97 = (() => {
     for(const [id,key]of [['personalCallsign97','callsign'],['personalPronouns97','pronouns'],['personalMotivation97','motivation'],['personalShip97','shipName'],['personalAppearance97','appearance'],['personalBackground97','background'],['personalGoal97','goal']])$(id).oninput=()=>{const next=config();next.profile[key]=$(id).value;S.campaign97=next;};
     $('personalWeapon97').onchange=()=>choose('weapon',$('personalWeapon97').value);
   }
+  function renderSpeciesTalents() {
+    const body=$('reviewBody');if(!body)return;
+    body.querySelector('#speciesTalents116')?.remove();
+    const included=Object.entries(SPECIES[S.species]?.bonusTalents97||{});if(!included.length)return;
+    const box=document.createElement('div');box.id='speciesTalents116';box.className='creation-profile97';
+    box.innerHTML=`<h3>Species talents · ${esc(SPECIES[S.species].name)}</h3><p>Included with your species at no XP cost. Total ranks include purchased talents.</p><ul>${included.map(([name,rank])=>`<li><b>${esc(name)}</b> · ${rank} included · ${talentRank(name)} total</li>`).join('')}</ul>`;
+    body.appendChild(box);
+  }
   function refreshReview() {
+    renderSpeciesTalents();
     if(!hasSetup()||!$('reviewBody'))return;const c=config(),p=c.profile,errors=issues();let box=$('campaignReview97');
     if(!box){box=document.createElement('div');box.id='campaignReview97';box.className='creation-profile97';$('reviewBody').appendChild(box);}
     box.innerHTML=`<h3>Your beginning</h3><p><b>${esc(content.eras[c.era].name)}</b> · ${esc(content.factions[c.faction].name)}<br>${esc(STORY_TEMPLATES_61[c.mission].name)}</p><p>500 credits · ${esc(WEAPONS[c.weapon].name)} · Heavy clothing · Shared transport: ${esc(p.shipName.trim()||'First Light')}</p><p>${esc(p.callsign?`${p.callsign} · `:'')}${esc(p.motivation)}${p.pronouns?` · ${esc(p.pronouns)}`:''}</p>${p.appearance?`<p>${esc(p.appearance)}</p>`:''}${p.background?`<p>${esc(p.background)}</p>`:''}${p.goal?`<p><b>Personal goal:</b> ${esc(p.goal)}</p>`:''}${S.finalized?'':errorHTML(errors)}<p class="campaign-source97">Unspent starting XP carries into advancement once. Starting equipment and transport are supplied by this game beginning.</p>`;
@@ -56280,7 +56373,7 @@ window.CampaignContent97 = (() => {
   function renderAudit() {
     const parent=$('about97');if(!parent)return;let box=$('catalogAudit97');if(!box){box=document.createElement('section');box.id='catalogAudit97';box.className='creation-profile97';parent.prepend(box);}
     const c=catalog.coverage();
-    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Other older profiles still await a complete source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
+    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Other older profiles still await a complete source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
   }
   function render() { renderSetup();renderPersonal();renderOpening();renderCreationExtras();renderAudit();const q=S.story61?.active,t=STORY_TEMPLATES_61[q?.templateId],panel=$('story61tab');if(t?.campaign97&&panel&&!panel.querySelector('.campaign-source97')){const p=document.createElement('p');p.className='campaign-source97';p.textContent=`${t.campaign97.kind} · ${t.campaign97.source}`;panel.appendChild(p);} }
   function install() {
@@ -56297,7 +56390,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.19-species-talents';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.20-species-review';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 
