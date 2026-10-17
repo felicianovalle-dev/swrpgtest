@@ -804,7 +804,63 @@
     "All 48 original older layouts are source reviewed; this does not claim complete talent automation or a complete species audit."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "1834528103862139204631b250968e0c6e2609e0"
+    "status": "passed",
+    "sourceCommit": "a850763a39323f5270a95b8d865257a38c8c2e36",
+    "sourceTree": "d965ec8e8d219be39059c05bde3cd36ade8d2d12",
+    "deployment": {
+      "id": 39067098883,
+      "head_sha": "a850763a39323f5270a95b8d865257a38c8c2e36",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39067098883"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "a850763a39323f5270a95b8d865257a38c8c2e36",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=a850763a3932&check=1792269161",
+      "httpStatus": 200,
+      "bytes": 4064037,
+      "gitBlob": "1834528103862139204631b250968e0c6e2609e0",
+      "sha256": "0e719e95072abb34a20e6c4b2227230a00cd725bb8f6d20fcbfcd29cea8b5e78"
+    },
+    "flows": [
+      {
+        "spec": "Beast Rider",
+        "career": "Ace",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "spec": "Hotshot",
+        "career": "Ace",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "spec": "Rigger",
+        "career": "Ace",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      }
+    ],
+    "errors": []
   }
 }

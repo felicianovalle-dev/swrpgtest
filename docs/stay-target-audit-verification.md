@@ -65,3 +65,9 @@ The final-build verification completed successfully. The original 48-layout audi
 All nineteen browser/source suites passed 2,837 checks without application errors. All ten general regression targets passed, including 266 smoke checks and 112 diagnostics. Three new and twenty-five earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the tested distribution, and `git diff --check` passes.
 
 The same distribution was used throughout: Git blob `1834528103862139204631b250968e0c6e2609e0`, 4,064,037 bytes, SHA-256 `0e719e95072abb34a20e6c4b2227230a00cd725bb8f6d20fcbfcd29cea8b5e78`. No runtime changes followed this run. See [machine-readable evidence](stay-target-audit-verification.json).
+
+## Hosted proof
+
+Published source commit `a850763a39323f5270a95b8d865257a38c8c2e36`, tree `d965ec8e8d219be39059c05bde3cd36ade8d2d12`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39067098883) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=a850763a3932) returned HTTP 200 and exactly matched the tested distribution: Git blob `1834528103862139204631b250968e0c6e2609e0`, 4,064,037 bytes, SHA-256 `0e719e95072abb34a20e6c4b2227230a00cd725bb8f6d20fcbfcd29cea8b5e78`.
+
+Fresh hosted Beast Rider at 390×844, Hotshot at 375×667 and Rigger at 1280×800 passed visible creation, original-ID purchases, finalization, manual save, reload and Resume. Character, campaign, XP, purchases and talent choices were preserved. No horizontal page overflow or application errors occurred. These isolated contexts contained no user saves.
