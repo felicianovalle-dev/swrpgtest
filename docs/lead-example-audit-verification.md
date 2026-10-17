@@ -34,4 +34,31 @@ Progress reaches 45 of the original 48 older layouts, with three pending. Includ
 
 Tests cover all 960 original individual purchases, combined 2,040-purchase continuation, all 60 real purchase buttons, seven blocked shortcuts, unchanged activation labels, whole-tree XP, Well Read’s purchase/cancel/import/older-owner behavior, Knowledge Specialization, reroll session limits and supported modifiers. Viewports: 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Three visible creation/save/resume flows include a Strategist’s Well Read choices. All 22 earlier flows remain regression targets. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the final-build run. Next: Beast Rider, Hotshot and Rigger from Stay on Target.
+The final-build verification completed successfully. Next: Beast Rider, Hotshot and Rigger from Stay on Target.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| leadByExample | 100 |
+| farHorizons | 102 |
+| enterTheUnknown | 89 |
+| dangerousCovenants | 171 |
+| specialModifications | 117 |
+| flyCasual | 123 |
+| noDisintegrations | 114 |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All eighteen browser/source suites passed 2,730 checks without application errors. All ten general regression targets passed, including 266 smoke checks and 112 diagnostics. Three new and twenty-two earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the tested distribution, and `git diff --check` passes.
+
+The same distribution was used throughout: Git blob `c1c96f61c7484927266f604626821e0a75842c6e`, 4,036,583 bytes, SHA-256 `c883ebf3fd34a06df9afa115b8afe4263d6738be3682392a0e74c2febc21135b`. No runtime changes followed this run. See [machine-readable evidence](lead-example-audit-verification.json).

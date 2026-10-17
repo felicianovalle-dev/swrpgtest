@@ -1,0 +1,697 @@
+{
+  "build": "96.17-lead-example-audit",
+  "package": "1.9.23",
+  "reviewedDate": "2026-10-17",
+  "baselineCommit": "4b05f750a6fdc408d6ed8ccbf2ddb5ae48113a7e",
+  "fixtureCommit": "38fc8aa165576352bfcb37d4adc141a517b5c45b",
+  "testedIndex": {
+    "bytes": 4036583,
+    "gitBlob": "c1c96f61c7484927266f604626821e0a75842c6e",
+    "sha256": "c883ebf3fd34a06df9afa115b8afe4263d6738be3682392a0e74c2febc21135b"
+  },
+  "reviewedLayouts": 3,
+  "reviewedNodes": 60,
+  "retainedIds": 60,
+  "completedOriginal48": 45,
+  "remainingLayouts": 3,
+  "totalAuditedOriginalIdLayouts": 51,
+  "sourceRules": 37,
+  "distinctLiteralSourceNames": 469,
+  "sources": {
+    "Figurehead": {
+      "book": "Lead by Example",
+      "printedPage": 29,
+      "physicalPdfPage": 30,
+      "glossaryChecked": true
+    },
+    "Instructor": {
+      "book": "Lead by Example",
+      "printedPage": 31,
+      "physicalPdfPage": 32,
+      "glossaryChecked": true
+    },
+    "Strategist": {
+      "book": "Lead by Example",
+      "printedPage": 33,
+      "physicalPdfPage": 34,
+      "glossaryChecked": true
+    }
+  },
+  "sourceCopyNote": "Supplied readable 98-page scan checked visually with enlarged connectors; shared entries retain previously checked attribution. Source PDFs and private download URLs are excluded.",
+  "changes": {
+    "Figurehead": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          5,
+          9
+        ],
+        [
+          14,
+          18
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Instructor": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          9,
+          10
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          16,
+          17
+        ]
+      ],
+      "typeChanges": []
+    },
+    "Strategist": {
+      "addedEdges": [],
+      "removedEdges": [
+        [
+          7,
+          11
+        ],
+        [
+          12,
+          13
+        ]
+      ],
+      "typeChanges": []
+    }
+  },
+  "newTalentGlossary": {
+    "entries": 17,
+    "printedPages": [
+      34,
+      35
+    ],
+    "physicalPdfPages": [
+      35,
+      36
+    ]
+  },
+  "sharedPreviouslyReviewedRules": 20,
+  "officialErrata": {
+    "version": "1.0",
+    "updated": "2017-11-20",
+    "url": "https://cdn.svc.asmodee.net/production-edge/uploads/2021/09/aor_errata_v10.pdf",
+    "note": "Lead by Example p.25 Lannik species corrections are outside this layout batch. No correction to these talent diagrams appears in this PDF. Coordinated Assault retains its earlier additional-rank range correction."
+  },
+  "fixes": [
+    "Seven unsupported source connections removed; all original IDs, costs and activation labels retained.",
+    "Well Read stores three different Knowledge career skills per owned talent, grants no free ranks, supports older owners without repurchase and validates saved selections.",
+    "Insufficient XP is rejected before purchase-choice prompts; the final charge guard remains."
+  ],
+  "compatibility": {
+    "originalFixtureLayouts": 48,
+    "individualSavedPurchases": 960,
+    "combinedPriorPurchases": 2040,
+    "unchangedPendingLayouts": 3,
+    "unchangedEarlierTreeRecords": 121,
+    "earlierCatalogSerializationPreserved": true,
+    "saveSchema": 92,
+    "existingPurchasesRepriced": false,
+    "realPurchaseButtons": 60,
+    "fullTreeXpCost": 300
+  },
+  "suites": {
+    "leadByExample": {
+      "checks": 100,
+      "errors": []
+    },
+    "farHorizons": {
+      "checks": 102,
+      "errors": []
+    },
+    "enterTheUnknown": {
+      "checks": 89,
+      "errors": []
+    },
+    "dangerousCovenants": {
+      "checks": 171,
+      "errors": []
+    },
+    "specialModifications": {
+      "checks": 117,
+      "errors": []
+    },
+    "flyCasual": {
+      "checks": 123,
+      "errors": []
+    },
+    "noDisintegrations": {
+      "checks": 114,
+      "errors": []
+    },
+    "eoteCore": {
+      "checks": 104,
+      "errors": []
+    },
+    "forceSupplements": {
+      "checks": 104,
+      "errors": []
+    },
+    "sentinelWarrior": {
+      "checks": 102,
+      "errors": []
+    },
+    "mysticSeeker": {
+      "checks": 92,
+      "errors": []
+    },
+    "consularGuardian": {
+      "checks": 91,
+      "errors": []
+    },
+    "olderAoRCore": {
+      "checks": 156,
+      "errors": []
+    },
+    "eotEReplacements": {
+      "checks": 286,
+      "errors": []
+    },
+    "forceReplacements": {
+      "checks": 371,
+      "errors": []
+    },
+    "aorReplacements": {
+      "checks": 466,
+      "errors": []
+    },
+    "campaign": {
+      "checks": 95,
+      "errors": []
+    },
+    "browser": {
+      "checks": 47,
+      "errors": []
+    }
+  },
+  "suiteChecks": 2730,
+  "executions": [
+    {
+      "name": "talents113",
+      "returncode": 0,
+      "seconds": 65.84
+    },
+    {
+      "name": "creation113",
+      "returncode": 0,
+      "seconds": 31.34
+    },
+    {
+      "name": "talents112",
+      "returncode": 0,
+      "seconds": 69.29
+    },
+    {
+      "name": "creation112",
+      "returncode": 0,
+      "seconds": 28.5
+    },
+    {
+      "name": "talents111",
+      "returncode": 0,
+      "seconds": 49.09
+    },
+    {
+      "name": "creation111",
+      "returncode": 0,
+      "seconds": 18.62
+    },
+    {
+      "name": "talents110",
+      "returncode": 0,
+      "seconds": 115.46
+    },
+    {
+      "name": "creation110",
+      "returncode": 0,
+      "seconds": 33.15
+    },
+    {
+      "name": "talents109",
+      "returncode": 0,
+      "seconds": 78.58
+    },
+    {
+      "name": "creation109",
+      "returncode": 0,
+      "seconds": 29.9
+    },
+    {
+      "name": "talents108",
+      "returncode": 0,
+      "seconds": 93.33
+    },
+    {
+      "name": "creation108",
+      "returncode": 0,
+      "seconds": 23.94
+    },
+    {
+      "name": "talents107",
+      "returncode": 0,
+      "seconds": 83.21
+    },
+    {
+      "name": "creation107",
+      "returncode": 0,
+      "seconds": 26.28
+    },
+    {
+      "name": "talents106",
+      "returncode": 0,
+      "seconds": 70.6
+    },
+    {
+      "name": "creation106",
+      "returncode": 0,
+      "seconds": 30.41
+    },
+    {
+      "name": "talents105",
+      "returncode": 0,
+      "seconds": 86.08
+    },
+    {
+      "name": "talents104",
+      "returncode": 0,
+      "seconds": 99.39
+    },
+    {
+      "name": "talents103",
+      "returncode": 0,
+      "seconds": 89.81
+    },
+    {
+      "name": "talents102",
+      "returncode": 0,
+      "seconds": 88.97
+    },
+    {
+      "name": "talents101",
+      "returncode": 0,
+      "seconds": 73.07
+    },
+    {
+      "name": "talents100",
+      "returncode": 0,
+      "seconds": 218.92
+    },
+    {
+      "name": "talents99",
+      "returncode": 0,
+      "seconds": 153.44
+    },
+    {
+      "name": "talents98",
+      "returncode": 0,
+      "seconds": 113.32
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 148.63
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 17.4
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 33.74
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 50.61
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 34.27
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 36.23
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 35.24
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 40.28
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 28.2
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 24.4
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 24.01
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 16.93
+    }
+  ],
+  "generalRegression": {
+    "targets": 10,
+    "allExitCodesZero": true,
+    "smokeChecks": 266,
+    "diagnostics": 112
+  },
+  "localCreationFlows": [
+    {
+      "spec": "Figurehead",
+      "career": "Commander",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "spec": "Instructor",
+      "career": "Commander",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "spec": "Strategist",
+      "career": "Commander",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    }
+  ],
+  "earlierCreationRegressionFlows": [
+    {
+      "spec": "Entrepreneur",
+      "career": "Colonist",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "spec": "Marshal",
+      "career": "Colonist",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "spec": "Performer",
+      "career": "Colonist",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "spec": "Archaeologist",
+      "career": "Explorer",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Big-Game Hunter",
+      "career": "Explorer",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Demolitionist",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Enforcer",
+      "career": "Hired Gun",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Hired Gun",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Heavy",
+      "career": "Soldier",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Cyber Tech",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Droid Tech",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Modder",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "unsupportedShortcutRemoved": true
+    },
+    {
+      "spec": "Charmer",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gambler",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Gunslinger",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true,
+      "sourceRoute": true
+    },
+    {
+      "spec": "Martial Artist",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Operator",
+      "career": "Bounty Hunter",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Skip Tracer",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Assassin",
+      "career": "Bounty Hunter",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Scoundrel",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": false
+    },
+    {
+      "spec": "Slicer",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    },
+    {
+      "spec": "Slicer",
+      "career": "Spy",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "restoredConnections": true
+    }
+  ],
+  "localRuntimeErrors": [],
+  "limits": [
+    "Physical iPhone Safari and installed-PWA offline behavior were not newly tested.",
+    "Mass-combat substitutions and checks, Master Strategist, initiative Triumph conversion and Improved Confidence allied symbols remain manual.",
+    "Ally actions, targeting, costs, range, durations and session/round limits remain manual where disclosed on cards.",
+    "Positive Spin does not automatically alter Duty awards. Thorough Assessment Boost allocation and That\u2019s How It\u2019s Done/Improved Researcher automatic Advantage remain manual.",
+    "Successful-check Natural Instructor rerolls, falling reductions, allied Command bonuses and earlier documented control/Force limitations remain.",
+    "Existing Well Read owners choose missing skills explicitly; old saves are not populated with invented choices or refunded for earlier skill purchases."
+  ],
+  "hostedVerification": {
+    "status": "pending deployment",
+    "expectedGitBlob": "c1c96f61c7484927266f604626821e0a75842c6e"
+  }
+}
