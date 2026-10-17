@@ -36,4 +36,32 @@ All 48 original older layouts / 960 nodes are now reviewed. Including the earlie
 
 Tests cover all 960 original individual purchases, combined 2,040-purchase continuation, all 60 real purchase buttons, 19 source-route corrections, two activation labels, whole-tree XP, supported modifier scopes and saved Natural Outdoorsman session use. Viewports: 320×568, 375×667, 390×844, 428×926, 844×390 and 1280×800. Three visible creation/save/resume flows follow corrected source routes; all 25 earlier flows remain regression targets. Physical iPhone Safari and installed-PWA offline behavior are not newly tested.
 
-Verification results are pending the final-build run. The original 48-layout audit is complete; no additional phase has started.
+The final-build verification completed successfully. The original 48-layout audit is complete; no additional phase has started.
+
+## Completed verification
+
+| Suite | Passed checks |
+| --- | ---: |
+| stayOnTarget | 107 |
+| leadByExample | 100 |
+| farHorizons | 102 |
+| enterTheUnknown | 89 |
+| dangerousCovenants | 171 |
+| specialModifications | 117 |
+| flyCasual | 123 |
+| noDisintegrations | 114 |
+| eoteCore | 104 |
+| forceSupplements | 104 |
+| sentinelWarrior | 102 |
+| mysticSeeker | 92 |
+| consularGuardian | 91 |
+| olderAoRCore | 156 |
+| eotEReplacements | 286 |
+| forceReplacements | 371 |
+| aorReplacements | 466 |
+| campaign | 95 |
+| browser | 47 |
+
+All nineteen browser/source suites passed 2,837 checks without application errors. All ten general regression targets passed, including 266 smoke checks and 112 diagnostics. Three new and twenty-five earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the tested distribution, and `git diff --check` passes.
+
+The same distribution was used throughout: Git blob `1834528103862139204631b250968e0c6e2609e0`, 4,064,037 bytes, SHA-256 `0e719e95072abb34a20e6c4b2227230a00cd725bb8f6d20fcbfcd29cea8b5e78`. No runtime changes followed this run. See [machine-readable evidence](stay-target-audit-verification.json).
