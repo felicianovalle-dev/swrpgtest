@@ -350,3 +350,8 @@ All 40 original IDs, names, positions and costs remain. One source connection is
 ## Far Horizons audit: Entrepreneur, Marshal and Performer
 
 All 60 original IDs, names, positions and XP costs remain. Five missing connections are restored on printed pp.27, 29 and 31 / physical pp.28, 30 and 32. Both Smooth Talker nodes become Active; Improved Distracting Behavior remains Passive under its glossary entry despite its red tree box. Thirty-nine scoped rules include 16 Far Horizons glossary entries from printed pp.32–33 / physical pp.33–34 and 23 previously reviewed shared entries. The literal source-name union reaches 459. Point Blank follows the official short/engaged range correction and its single-hit bonus is excluded from additional Auto-fire/Linked hits after save/reload. This completes 42 of the original 48 layouts; six remain. See [verification](far-horizons-audit-verification.md).
+
+
+## Lead by Example audit: Figurehead, Instructor and Strategist
+
+All 60 original IDs, names, positions, XP costs and activation labels remain. Seven unsupported connections are removed on printed pp.29, 31 and 33 / physical pp.30, 32 and 34. Thirty-seven scoped rules include 17 book-glossary entries from printed pp.34–35 / physical pp.35–36 and 20 previously reviewed shared entries, bringing the literal source-name union to 469. Well Read now records three distinct Knowledge career skills, persists them through save/resume and supports existing owners without repurchase. Canceling or invalid selections charge no XP; no free skill ranks are granted. This completes 45 of the original 48 layouts; three remain. See [verification](lead-example-audit-verification.md).

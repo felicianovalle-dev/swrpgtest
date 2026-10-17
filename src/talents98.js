@@ -45,6 +45,15 @@ window.Talents98=(()=>{
       const second=ask('Well Rounded: choose a different second career skill.',skills.filter(sk=>sk!==first));
       return second?{wellRounded:[first,second]}:false;
     }
+    if(n.name==='Well Read'){
+      const selected=[];
+      for(let i=0;i<3;i++){
+        const skill=ask(`Well Read: choose Knowledge career skill ${i+1} of 3.`,Object.keys(SKILL_CHAR).filter(sk=>sk.startsWith('Knowledge (')&&!selected.includes(sk)));
+        if(!skill)return false;
+        selected.push(skill);
+      }
+      return {wellRead:selected};
+    }
     if(n.name==='Knowledge Specialization'&&!S.talentChoices98?.knowledgeSkill){
       const skill=ask('Knowledge Specialization: choose the Knowledge skill for all ranks.',Object.keys(SKILL_CHAR).filter(sk=>sk.startsWith('Knowledge (')));
       return skill?{knowledgeSkill:skill}:false;
@@ -52,14 +61,17 @@ window.Talents98=(()=>{
     return {};
   }
   function commitChoice(spec,id,choice){
-    if(!choice.wellRounded&&!choice.knowledgeSkill)return;
+    if(!choice.wellRounded&&!choice.wellRead&&!choice.knowledgeSkill)return;
     const choices=S.talentChoices98=S.talentChoices98||{};
     if(choice.wellRounded){choices.wellRounded=choices.wellRounded||{};choices.wellRounded[`${spec}:${id}`]=choice.wellRounded;}
+    if(choice.wellRead){choices.wellRead=choices.wellRead||{};choices.wellRead[`${spec}:${id}`]=choice.wellRead;}
     if(choice.knowledgeSkill)choices.knowledgeSkill=choice.knowledgeSkill;
   }
   function careerSkills(){
     const selected=S.talentChoices98?.wellRounded||{},skills=new Set();
     for(const spec of S.ownedSpecs||[])for(const n of treeForSpec(spec))if(n.name==='Well Rounded'&&S.specTalents?.[spec]?.has(n.id))for(const sk of selected[`${spec}:${n.id}`]||[])skills.add(sk);
+    const read=S.talentChoices98?.wellRead||{};
+    for(const spec of S.ownedSpecs||[])for(const n of treeForSpec(spec))if(n.name==='Well Read'&&S.specTalents?.[spec]?.has(n.id))for(const sk of read[`${spec}:${n.id}`]||[])skills.add(sk);
     return skills;
   }
   function spendKnowledgeTriumph(skill,q,r){
@@ -127,6 +139,13 @@ window.Talents98=(()=>{
     if(choices!==undefined){
       if(!choices||typeof choices!=='object'||Array.isArray(choices))throw new Error('Invalid talent choices.');
       if(choices.knowledgeSkill!==undefined&&(!SKILL_CHAR[choices.knowledgeSkill]||!choices.knowledgeSkill.startsWith('Knowledge (')))throw new Error('Invalid Knowledge Specialization choice.');
+      if(choices.wellRead!==undefined){
+        if(!choices.wellRead||typeof choices.wellRead!=='object'||Array.isArray(choices.wellRead))throw new Error('Invalid Well Read choices.');
+        for(const [key,skills]of Object.entries(choices.wellRead)){
+          const owned=Object.entries(state.specTalents||{}).some(([spec,ids])=>treeForSpec(spec).some(n=>`${spec}:${n.id}`===key&&n.name==='Well Read'&&ids.includes(n.id)));
+          if(!owned||!Array.isArray(skills)||skills.length!==3||new Set(skills).size!==3||skills.some(sk=>!Object.hasOwn(SKILL_CHAR,sk)||!sk.startsWith('Knowledge (')))throw new Error('Invalid Well Read skills.');
+        }
+      }
       if(choices.wellRounded!==undefined){
         if(!choices.wellRounded||typeof choices.wellRounded!=='object'||Array.isArray(choices.wellRounded))throw new Error('Invalid Well Rounded choices.');
         for(const [key,skills]of Object.entries(choices.wellRounded)){
@@ -148,16 +167,16 @@ window.Talents98=(()=>{
     $('talentCompatibility98')?.remove();
     const parent=$('talentTree');if(!parent)return;
     const spec=S.talentView,set=S.specTalents?.[spec]||new Set(),retained=legacyNodes(spec,set),mapped=(S.talentImports98||[]).filter(r=>r.spec===spec&&set.has(r.to));
-    const tree=treeForSpec(spec),owned=tree.filter(n=>set.has(n.id)),pending=owned.filter(n=>n.name==='Well Rounded'&&!S.talentChoices98?.wellRounded?.[`${spec}:${n.id}`]||n.name==='Knowledge Specialization'&&!S.talentChoices98?.knowledgeSkill);
+    const tree=treeForSpec(spec),owned=tree.filter(n=>set.has(n.id)),pending=owned.filter(n=>n.name==='Well Read'&&!S.talentChoices98?.wellRead?.[`${spec}:${n.id}`]||n.name==='Well Rounded'&&!S.talentChoices98?.wellRounded?.[`${spec}:${n.id}`]||n.name==='Knowledge Specialization'&&!S.talentChoices98?.knowledgeSkill);
     if(catalog.data.trees[spec]?.coreReviewed||catalog.data.trees[spec]?.bookReviewed)for(let i=0;i<tree.length;i++){
       const card=parent.children[i],n=tree[i];if(!card)continue;
       card.classList.add('source-tal98');
       card.querySelector('.talent-path98')?.remove();const p=document.createElement('p');p.className='tiny talent-path98';
       const rule=ruleFor(n.name,spec);p.textContent=`${rule.source} · ${rule.activation} · ${rule.ranked?'Ranked':'Unranked'}${rule.force?' · Force Rating 1+ required to use':''}. Connected talents: ${n.links.length?n.links.map(id=>{const v=tree.find(x=>x.id===id);return `${v.name} (${v.cost} XP)`;}).join(' · '):'No linked purchases.'}`;card.insertBefore(p,card.querySelector('button'));
     }
-    if(!retained.length&&!mapped.length&&!pending.length&&!owned.some(n=>['Well Rounded','Knowledge Specialization'].includes(n.name)))return;
+    if(!retained.length&&!mapped.length&&!pending.length&&!owned.some(n=>['Well Read','Well Rounded','Knowledge Specialization'].includes(n.name)))return;
     const box=document.createElement('section');box.id='talentCompatibility98';box.className='creation-note97';
-    box.innerHTML=`<h3>Your talent purchases</h3>${mapped.length?`<p>${mapped.length} earlier purchase${mapped.length===1?'':'s'} now match nodes in this tree. Your XP, characteristics, and original amounts spent are preserved.</p><details><summary>Earlier purchase amounts</summary><ul>${mapped.map(r=>{const n=tree.find(n=>n.id===r.to);return `<li>${esc(n.name)}: ${r.paid} XP originally; ${n.cost} XP for a new purchase in this tree.</li>`;}).join('')}</ul></details>`:''}${retained.length?`<p>Earlier purchases retained: ${retained.map(n=>`${esc(n.name)} (${n.cost} XP originally)`).join(' · ')}.</p><p>These preserve your earlier abilities as game options. They do not unlock connections in the published tree and cannot be bought again from the earlier layout.</p>`:''}${owned.filter(n=>n.name==='Well Rounded'||n.name==='Knowledge Specialization').map(n=>{const skills=n.name==='Well Rounded'?S.talentChoices98?.wellRounded?.[`${spec}:${n.id}`]:S.talentChoices98?.knowledgeSkill;return `<p><b>${esc(n.name)}:</b> ${skills?esc(Array.isArray(skills)?skills.join(' · '):skills):'Choose the required skill below.'}</p>`;}).join('')}${pending.map(n=>`<button class="btn" data-talent-choice98="${esc(n.id)}">Choose skills · ${esc(n.name)}</button>`).join('')}`;
+    box.innerHTML=`<h3>Your talent purchases</h3>${mapped.length?`<p>${mapped.length} earlier purchase${mapped.length===1?'':'s'} now match nodes in this tree. Your XP, characteristics, and original amounts spent are preserved.</p><details><summary>Earlier purchase amounts</summary><ul>${mapped.map(r=>{const n=tree.find(n=>n.id===r.to);return `<li>${esc(n.name)}: ${r.paid} XP originally; ${n.cost} XP for a new purchase in this tree.</li>`;}).join('')}</ul></details>`:''}${retained.length?`<p>Earlier purchases retained: ${retained.map(n=>`${esc(n.name)} (${n.cost} XP originally)`).join(' · ')}.</p><p>These preserve your earlier abilities as game options. They do not unlock connections in the published tree and cannot be bought again from the earlier layout.</p>`:''}${owned.filter(n=>['Well Read','Well Rounded','Knowledge Specialization'].includes(n.name)).map(n=>{const skills=n.name==='Well Read'?S.talentChoices98?.wellRead?.[`${spec}:${n.id}`]:n.name==='Well Rounded'?S.talentChoices98?.wellRounded?.[`${spec}:${n.id}`]:S.talentChoices98?.knowledgeSkill;return `<p><b>${esc(n.name)}:</b> ${skills?esc(Array.isArray(skills)?skills.join(' · '):skills):'Choose the required skill below.'}</p>`;}).join('')}${pending.map(n=>`<button class="btn" data-talent-choice98="${esc(n.id)}">Choose skills · ${esc(n.name)}</button>`).join('')}`;
     parent.before(box);
     box.querySelectorAll('[data-talent-choice98]').forEach(b=>b.onclick=()=>{const n=owned.find(n=>n.id===b.dataset.talentChoice98),choice=choiceForPurchase(n);if(choice!==false){commitChoice(spec,n.id,choice);renderAll();safeAutosave();}});
   }

@@ -12,7 +12,7 @@ let browser,server;const checks=[],errors=[];
  for(const [spec,career,id,width,height]of [['Martial Artist','Bounty Hunter','ma00',390,844],['Operator','Bounty Hunter','op00',1280,800],['Skip Tracer','Bounty Hunter','st00',390,844]]){
   const context=await browser.newContext({viewport:{width,height},hasTouch:true,serviceWorkers:'block',ignoreHTTPSErrors:!!proxy});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));page.on('dialog',d=>d.accept());page.setDefaultTimeout(60000);page.setDefaultNavigationTimeout(60000);
-  await page.goto(target,{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>window.Game97?.ready);assert.equal(await page.evaluate(()=>BUILD_INFO.version),'96.16-far-horizons-audit');
+  await page.goto(target,{waitUntil:'domcontentloaded'});await page.waitForFunction(()=>window.Game97?.ready);assert.equal(await page.evaluate(()=>BUILD_INFO.version),'96.17-lead-example-audit');
   await page.locator('#beginIdentity97').click();await page.locator('#name').fill('Creation '+spec+' check');await page.locator('[data-create-step97="career"]:visible').first().click();
   await page.locator('#careerSelect').selectOption(career);await page.locator('#specSelect').selectOption(spec);
   for(let i=0;i<4;i++)await page.locator('[data-cp]:visible:not(.on):not(:disabled)').first().click();
@@ -26,7 +26,7 @@ let browser,server;const checks=[],errors=[];
   const snapshot=()=>page.evaluate(()=>JSON.stringify({name:S.name,career:S.career,spec:S.spec,xp:S.earnedXp,spent:S.xpSpent,credits:S.credits,chars:S.chars,ids:[...S.talents],camp:S.campaign97}));const before=await snapshot();
   await page.evaluate(()=>{S.settings.autosave=false;renderNavTab('save97')});await page.locator('#manualSave97').click();await page.reload({waitUntil:'domcontentloaded'});await page.waitForFunction(()=>window.Game97?.ready);await page.locator('#hubResumeLatest97').click();assert.equal(await snapshot(),before);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   await page.screenshot({path:path.join(out,'creation-'+spec.toLowerCase().replaceAll(' ','-')+'.png'),fullPage:true});checks.push({spec,career,width,height,creation:true,purchase:true,saveReload:true,overflow:false,restoredConnections:true});
-  fs.writeFileSync(path.join(out,local?'local-live-results.json':'live-results.json'),JSON.stringify({build:'96.16-far-horizons-audit',target,checks,errors,complete:false},null,2)+'\n');console.log('Verified '+career+' / '+spec);await context.close();
+  fs.writeFileSync(path.join(out,local?'local-live-results.json':'live-results.json'),JSON.stringify({build:'96.17-lead-example-audit',target,checks,errors,complete:false},null,2)+'\n');console.log('Verified '+career+' / '+spec);await context.close();
  }
- assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,local?'local-live-results.json':'live-results.json'),JSON.stringify({build:'96.16-far-horizons-audit',target,checks,errors,complete:true},null,2)+'\n');
+ assert.deepEqual(errors,[]);fs.writeFileSync(path.join(out,local?'local-live-results.json':'live-results.json'),JSON.stringify({build:'96.17-lead-example-audit',target,checks,errors,complete:true},null,2)+'\n');
 })().catch(e=>{console.error(e);process.exitCode=1}).finally(async()=>{await browser?.close();server?.close()});

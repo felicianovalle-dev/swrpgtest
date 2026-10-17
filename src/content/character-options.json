@@ -17952,6 +17952,521 @@
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "far112"
+    },
+    "Figurehead": {
+      "names": [
+        "Grit",
+        "Resolve",
+        "Confidence",
+        "Command",
+        "Command",
+        "Inspiring Rhetoric",
+        "Calm Commander",
+        "Grit",
+        "Commanding Presence",
+        "Grit",
+        "Improved Inspiring Rhetoric",
+        "Positive Spin",
+        "Resolve",
+        "Confidence",
+        "Improved Confidence",
+        "Commanding Presence",
+        "Intense Presence",
+        "Natural Leader",
+        "Dedication",
+        "Improved Commanding Presence"
+      ],
+      "nodeIds": [
+        "fig00",
+        "fig01",
+        "fig02",
+        "fig03",
+        "fig10",
+        "fig11",
+        "fig12",
+        "fig13",
+        "fig20",
+        "fig21",
+        "fig22",
+        "fig23",
+        "fig30",
+        "fig31",
+        "fig32",
+        "fig33",
+        "fig40",
+        "fig41",
+        "fig42",
+        "fig43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Lead by Example \u00b7 p.29",
+      "collection": "lead-by-example",
+      "page": 30,
+      "bookPdfPage": 30,
+      "bookFile": "lead-by-example",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "lead113"
+    },
+    "Instructor": {
+      "names": [
+        "Conditioned",
+        "Physical Training",
+        "Body Guard",
+        "Grit",
+        "Toughened",
+        "Encouraging Words",
+        "Conditioned",
+        "Stimpack Specialization",
+        "Physical Training",
+        "Master Instructor",
+        "Body Guard",
+        "Improved Body Guard",
+        "Field Commander",
+        "Grit",
+        "Stimpack Specialization",
+        "Toughened",
+        "Improved Field Commander",
+        "Natural Instructor",
+        "That's How It's Done",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "ins00",
+        "ins01",
+        "ins02",
+        "ins03",
+        "ins10",
+        "ins11",
+        "ins12",
+        "ins13",
+        "ins20",
+        "ins21",
+        "ins22",
+        "ins23",
+        "ins30",
+        "ins31",
+        "ins32",
+        "ins33",
+        "ins40",
+        "ins41",
+        "ins42",
+        "ins43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Lead by Example \u00b7 p.31",
+      "collection": "lead-by-example",
+      "page": 32,
+      "bookPdfPage": 32,
+      "bookFile": "lead-by-example",
+      "bookPage": 31,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "lead113"
+    },
+    "Strategist": {
+      "names": [
+        "Researcher",
+        "Grit",
+        "Ready for Anything",
+        "Grit",
+        "Grit",
+        "Clever Commander",
+        "Command",
+        "Well Read",
+        "Knowledge Specialization",
+        "Researcher",
+        "Ready for Anything",
+        "Master Strategist",
+        "Improved Researcher",
+        "Knowledge Specialization",
+        "Coordinated Assault",
+        "Command",
+        "Thorough Assessment",
+        "Careful Planning",
+        "Improved Ready for Anything",
+        "Dedication"
+      ],
+      "nodeIds": [
+        "str00",
+        "str01",
+        "str02",
+        "str03",
+        "str10",
+        "str11",
+        "str12",
+        "str13",
+        "str20",
+        "str21",
+        "str22",
+        "str23",
+        "str30",
+        "str31",
+        "str32",
+        "str33",
+        "str40",
+        "str41",
+        "str42",
+        "str43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          16,
+          17
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Lead by Example \u00b7 p.33",
+      "collection": "lead-by-example",
+      "page": 34,
+      "bookPdfPage": 34,
+      "bookFile": "lead-by-example",
+      "bookPage": 33,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "lead113"
     }
   },
   "universals": {
@@ -37993,6 +38508,436 @@
       "summary": "When selling goods legally, receive ten percent more credits per rank.",
       "resolutionNote": "Resolve the legal-sale requirement and ranked price increase manually. Market sale controls do not automatically apply this talent.",
       "resolution": "manual"
+    }
+  },
+  "talentRules113": {
+    "Body Guard": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "force": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Once per round, use a maneuver and suffer strain up to your ranks to upgrade attacks against one engaged ally until your next turn.",
+      "resolutionNote": "Resolve the guarding maneuver, strain and temporary protection manually.",
+      "resolution": "manual"
+    },
+    "Calm Commander": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "When commanding a force in mass combat, substitute Cool ranks for Leadership ranks when upgrading the acting force\u2019s ability or the enemy\u2019s difficulty.",
+      "resolutionNote": "Resolve mass-combat command and the appropriate rank substitution manually. This does not replace ordinary Leadership checks.",
+      "resolution": "manual"
+    },
+    "Careful Planning": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 144,
+      "pdfPage": 145,
+      "source": "Age of Rebellion Core \u00b7 p.144",
+      "summary": "Once per session, introduce one fact into the story as though you had spent a Destiny Point.",
+      "resolutionNote": "Resolve the action, fact, GM agreement and session limit manually. This does not automatically spend or create a Destiny Point.",
+      "resolution": "manual",
+      "force": false
+    },
+    "Clever Commander": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "When commanding a force in mass combat, substitute Knowledge (Warfare) ranks for Leadership ranks when upgrading the acting force\u2019s ability or the enemy\u2019s difficulty.",
+      "resolutionNote": "Resolve mass-combat command and the appropriate rank substitution manually. This does not replace ordinary Leadership checks.",
+      "resolution": "manual"
+    },
+    "Command": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Add one Boost per rank to Leadership checks. Affected targets gain a Boost on Discipline checks for twenty-four hours.",
+      "resolutionNote": "Adds Boost to PC Leadership checks. Resolve inspired allies\u2019 Discipline benefit manually."
+    },
+    "Commanding Presence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 140,
+      "pdfPage": 143,
+      "source": "Force and Destiny Core \u00b7 p.140",
+      "summary": "Remove one Setback per rank from Leadership and Cool checks.",
+      "resolutionNote": "Removes setbacks from PC Leadership and Cool checks."
+    },
+    "Conditioned": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "Remove one Setback per rank from Athletics and Coordination. Reduce falling damage and falling strain by one per rank.",
+      "resolutionNote": "PC Athletics and Coordination remove the ranked Setback automatically. Resolve falling damage and strain manually."
+    },
+    "Confidence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 141,
+      "pdfPage": 144,
+      "source": "Force and Destiny Core \u00b7 p.141",
+      "summary": "Reduce the difficulty of Discipline fear checks by one per rank; no check is needed if difficulty reaches zero.",
+      "resolutionNote": "Reduces difficulty on PC Discipline checks explicitly marked as fear checks."
+    },
+    "Coordinated Assault": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": true,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "summary": "Use a maneuver to give one Advantage on combat checks to engaged allies up to your Leadership ranks until your next turn. Each additional rank extends the range by one band.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the ally maneuver, range, duration and Advantage manually.",
+      "errata": "Age of Rebellion errata v1.0 \u00b7 p.1: range increases for additional ranks.",
+      "force": false
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Encouraging Words": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "After an engaged ally fails a check, suffer one strain to assist that ally\u2019s next check in this encounter as an out-of-turn incidental instead of a maneuver.",
+      "resolutionNote": "Resolve the failed-check trigger, engagement, strain and assistance manually.",
+      "resolution": "manual"
+    },
+    "Field Commander": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "An Average Leadership action lets short-range allies up to Presence suffer 1 strain each for an immediate maneuver, within the usual maneuver limits.",
+      "resolutionNote": "Resolve the Leadership action, immediate ally maneuvers and their limits manually.",
+      "resolution": "manual"
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "Improved Body Guard": {
+      "type": "Active",
+      "activation": "Active",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "Once per session, take a hit suffered by an ally currently protected by your Body Guard maneuver.",
+      "resolutionNote": "Resolve the protected ally, hit transfer and session limit manually.",
+      "resolution": "manual"
+    },
+    "Improved Commanding Presence": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "Once per session, make Cool opposed by Discipline against a minion, minion group or rival. Success removes that target from hostile participation for the encounter; attacking it ends the effect.",
+      "resolutionNote": "Resolve target eligibility, opposed check and session limit manually. The target may defend itself if attacked; narrative uses and consequences are subject to GM discretion.",
+      "resolution": "manual"
+    },
+    "Improved Confidence": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "Spend a Triumph on your fear check to give each short-range ally making that same fear check automatic Successes equal to your Confidence ranks.",
+      "resolutionNote": "Resolve the Triumph, allies, range and automatic Successes manually. The glossary labels this talent Passive.",
+      "resolution": "manual"
+    },
+    "Improved Field Commander": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Field Commander can affect twice Presence in allies. Spend Triumph to let one ally take an action instead, still suffering 1 strain.",
+      "resolutionNote": "Resolve the extra allies and Triumph-for-action option manually.",
+      "resolution": "manual"
+    },
+    "Improved Inspiring Rhetoric": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "page": 149,
+      "pdfPage": 150,
+      "source": "Age of Rebellion Core \u00b7 p.149",
+      "force": false,
+      "summary": "Each ally affected by Inspiring Rhetoric gains one Boost on skill checks for rounds equal to your Leadership ranks.",
+      "resolutionNote": "Track the affected allies, Boost and Leadership-based duration manually.",
+      "resolution": "manual"
+    },
+    "Improved Ready for Anything": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "Lead by Example \u00b7 p.35",
+      "summary": "On a Cool or Vigilance initiative check, spend a Triumph to add Successes equal to your Ready for Anything ranks.",
+      "resolutionNote": "Resolve the initiative trigger, Triumph conversion and automatic Successes manually. Ordinary Cool and Vigilance checks do not qualify.",
+      "resolution": "manual"
+    },
+    "Improved Researcher": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "Lead by Example \u00b7 p.35",
+      "summary": "After a successful Knowledge check for information, you and allies gain automatic Advantage equal to Researcher ranks on checks acting on that information until the end of your next turn.",
+      "resolutionNote": "Resolve the information check, related follow-up checks, automatic Advantage and expiry manually.",
+      "resolution": "manual"
+    },
+    "Inspiring Rhetoric": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "page": 149,
+      "pdfPage": 150,
+      "source": "Age of Rebellion Core \u00b7 p.149",
+      "force": false,
+      "summary": "As an action, make an Average Leadership check. Each Success lets one ally within short range recover 1 strain; spend each Advantage to heal 1 more strain on an affected ally.",
+      "resolutionNote": "Resolve the Leadership action, nearby allies and strain recovery manually.",
+      "resolution": "manual"
+    },
+    "Intense Presence": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Spend one Destiny Point to recover strain equal to your Presence.",
+      "resolutionNote": "The utility control spends a light Destiny Point and recovers strain equal to Presence."
+    },
+    "Knowledge Specialization": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 146,
+      "pdfPage": 149,
+      "source": "Force and Destiny Core \u00b7 p.146",
+      "summary": "Choose a Knowledge skill when first acquired. Spend a Triumph on that skill for extra Successes equal to your ranks.",
+      "resolutionNote": "Records your Knowledge skill and offers Triumph conversion on qualifying party checks."
+    },
+    "Master Instructor": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "Once per round, suffer two strain to let one ally within short range use your Discipline ranks for that ally\u2019s next Discipline check.",
+      "resolutionNote": "Resolve the out-of-turn timing, range, strain, rank substitution and round limit manually.",
+      "resolution": "manual"
+    },
+    "Master Strategist": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "Once per mass-combat phase, suffer two strain to lower the difficulty of the next Mass Combat check once.",
+      "resolutionNote": "Resolve the strain payment, phase limit, next-check timing and difficulty decrease manually.",
+      "resolution": "manual"
+    },
+    "Natural Instructor": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 34,
+      "pdfPage": 35,
+      "source": "Lead by Example \u00b7 p.34",
+      "summary": "Once per session, reroll one Discipline or Leadership check.",
+      "resolutionNote": "Supported failed party checks offer this reroll and save its session use. Successful checks and other workflows require manual resolution and session tracking."
+    },
+    "Natural Leader": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Cool or Leadership check.",
+      "resolutionNote": "Offers one failed Cool or Leadership reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Physical Training": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 154,
+      "pdfPage": 155,
+      "source": "Age of Rebellion Core \u00b7 p.154",
+      "summary": "Add one Boost per rank to Athletics and Resilience checks.",
+      "resolutionNote": "Adds the ranked Boost to PC Athletics and Resilience checks.",
+      "force": false
+    },
+    "Positive Spin": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "Lead by Example \u00b7 p.35",
+      "summary": "When any character gains at least one Duty, add one extra Duty per rank to that increase.",
+      "resolutionNote": "Resolve the qualifying Duty gain and ranked bonus manually. Duty award controls do not automatically apply this bonus.",
+      "resolution": "manual"
+    },
+    "Ready for Anything": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "Lead by Example \u00b7 p.35",
+      "summary": "Remove one Setback per rank from acting-side Mass Combat checks and from your Cool or Vigilance initiative checks.",
+      "resolutionNote": "PC checks explicitly marked initiative remove the ranked Setback. Resolve mass-combat scope and other workflows manually."
+    },
+    "Researcher": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 150,
+      "pdfPage": 153,
+      "source": "Force and Destiny Core \u00b7 p.150",
+      "summary": "Remove one Setback per rank from Knowledge checks. Research takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks from PC Knowledge checks. Resolve research time manually."
+    },
+    "Resolve": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 151,
+      "source": "Edge of the Empire Core \u00b7 p.142",
+      "summary": "Reduce involuntary strain suffered by one per rank, to a minimum of 1. Voluntary strain costs are unchanged.",
+      "resolutionNote": "Reduces strain in supported Threat and failed-check results. Apply its reduction to other involuntary strain manually; voluntary costs stay unchanged."
+    },
+    "Stimpack Specialization": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Stimpacks heal one extra wound per rank. The sixth and later stimpacks that day still heal nothing.",
+      "resolutionNote": "Adds healing to your first five daily stimpack uses; the sixth and later uses heal nothing."
+    },
+    "That's How It's Done": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "Lead by Example \u00b7 p.35",
+      "summary": "After a successful skill check, suffer one strain. Allies up to your Willpower within short range add one automatic Advantage on the same skill until the start of your next turn. Each rank beyond the first extends range one band.",
+      "resolutionNote": "Resolve strain, selected allies, range, automatic Advantage and start-of-next-turn expiry manually. This does not add Boost dice.",
+      "resolution": "manual"
+    },
+    "Thorough Assessment": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "Lead by Example \u00b7 p.35",
+      "summary": "Once per session, make a Hard check using a GM-approved Knowledge skill. Each Success provides one Boost for a useful check by another character before encounter end, at most one per check.",
+      "resolutionNote": "Resolve the action, skill, check, pool of Boost dice and allocation manually. Unused dice expire at encounter end.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Well Read": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 35,
+      "pdfPage": 36,
+      "source": "Lead by Example \u00b7 p.35",
+      "summary": "Choose three different Knowledge skills per rank. They permanently become career skills; this grants no free skill ranks.",
+      "resolutionNote": "Purchasing asks for three valid Knowledge skills and saves them. Existing owners can choose skills without repurchasing; only owned talent choices affect career skills."
     }
   }
 }

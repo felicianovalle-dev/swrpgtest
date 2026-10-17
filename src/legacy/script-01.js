@@ -1954,6 +1954,7 @@ function buyViewedTalent(id){
   if(!n||set.has(id))return;
   if(window.Talents98?.knownUnranked(n.name)){bLog(`${n.name} is already known. No XP is spent; its connections are available in this tree.`);return;}
   if(!eligibleSpecTalent(spec,n))return;
+  if(availableXp()<n.cost){bLog(`Not enough XP: ${spec}: ${n.name} costs ${n.cost}.`);return;}
   const choice=window.Talents98?Talents98.choiceForPurchase(n):{};
   if(choice===false){bLog('Talent purchase cancelled. Choose valid required skills; no XP was spent.');return;}
   if(n.name==='Dedication'){

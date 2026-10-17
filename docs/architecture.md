@@ -202,3 +202,8 @@ Precise Aim previews weapon validity before charging. It reserves chosen whole-n
 ## Far Horizons original-layout audit
 
 `npm run test:talents:far-horizons` checks three original-ID layouts, five restored routes, two activation labels, 39 scoped rules, saved purchases, ranked session income and saved additional-hit continuation at six viewports. `npm run test:creation:far-horizons` exercises three visible creation/save/resume flows and accepts a hosted URL. The `far112` table preserves all earlier catalog entries. Point Blank joins the existing serialized `oneHitDamage98` subtraction, excluding its single-hit bonus from Auto-fire and Linked continuation. Schema and storage keys remain 92. See `docs/far-horizons-audit-verification.md`.
+
+
+## Lead by Example original-layout audit
+
+`npm run test:talents:lead-by-example` checks three original-ID layouts, seven removed shortcuts, 37 scoped rules, saved purchases, Well Read choices and six viewports. `npm run test:creation:lead-by-example` exercises three visible creation/save/resume flows and accepts a hosted URL. The `lead113` table preserves all earlier catalog records. Well Read adds a validated `talentChoices98.wellRead` map keyed by specialization and original node ID; it records three different Knowledge skills, grants career eligibility only while the talent is owned, and permits older owners to choose missing skills without repurchasing. It shares the existing atomic purchase-choice lifecycle. No free ranks or retroactive XP refunds are awarded. Schema and storage keys remain 92. See `docs/lead-example-audit-verification.md`.
