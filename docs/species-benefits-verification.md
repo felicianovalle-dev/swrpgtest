@@ -17,4 +17,6 @@ No base stats, XP prices, purchased IDs or save fields change. Existing characte
 
 ## Verification
 
-Results are recorded in species-benefits-verification.json after the regression run completes.
+All 15 regression targets passed on the exact generated HTML fingerprint recorded in [the machine-readable report](species-benefits-verification.json). These include 21 species assertions, 107 talent checks (960 individual and 2,040 combined older purchases), 47 layout checks at six viewports, the campaign suite and ten general system suites. Four visible browser flows complete species selection, skill selection where applicable, talent purchase, finalization, manual save, reload and Resume. Notes and skill controls were visually inspected at mobile and desktop sizes. Physical iPhone Safari was not newly tested.
+
+Hosted deployment and byte verification will be recorded after publication.

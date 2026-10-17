@@ -17,7 +17,7 @@ let browser,server;const checks=[],errors=[];
   await page.locator('#careerSelect').selectOption(career);await page.locator('#specSelect').selectOption(spec);
   for(let i=0;i<4;i++)await page.locator('[data-cp]:visible:not(.on):not(:disabled)').first().click();
   for(let i=0;i<2;i++)await page.locator('[data-sp]:visible:not(.on):not(:disabled)').first().click();
-  
+
   await page.locator('[data-create-step97="chars"]:visible').first().click();await page.locator('.creation-next97 [data-create-step97="talents"]:visible').click();
   const xpBefore=await page.evaluate(()=>S.xpSpent);await page.locator(`[data-tal="${id}"]`).click();assert.equal(await page.evaluate(()=>S.xpSpent),xpBefore+5);assert.equal(await page.locator('#talentTree .talent-path98').count(),20);assert.equal(await page.evaluate(()=>CharacterCatalog97.status(S.spec)),'Reviewed layout');
   assert.equal(await page.evaluate(t=>talentRank(t),talent),talent==='Galaxy Mapper'?2:1);

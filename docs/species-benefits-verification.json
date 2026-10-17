@@ -1,0 +1,212 @@
+{
+  "build": "96.19-species-talents",
+  "package": "1.9.25",
+  "baselineCommit": "10efcbdacf99a45a7c4c5f893fdb8906a1454d2c",
+  "saveSchema": 92,
+  "testedIndex": {
+    "bytes": 4067060,
+    "gitBlob": "2b63986dac360946626a274c38625f5913651846",
+    "sha256": "9280e7889672df0f3a414886188fe8f8df9a6649d8cc7f080c38ed3498db897f"
+  },
+  "source": {
+    "title": "Complete Species Guide v6",
+    "kind": "fan supplement",
+    "copyPages": 358,
+    "copyBytes": 42374293,
+    "sha256": "68b34c10313bdac68a9256022b1627260e3f9416273f6489bbec6e12a430fa68",
+    "visuallyReviewedPages": {
+      "Bothan": 44,
+      "Duros": 87,
+      "Jawa": 137,
+      "Rodian": 233
+    }
+  },
+  "automatedSpeciesTalentRanks": {
+    "Bothan": "Convincing Demeanor 1",
+    "Rodian": "Expert Tracker 1",
+    "Duros": "Galaxy Mapper 1",
+    "Jawa": "Utinni! 1"
+  },
+  "baseStatChanges": false,
+  "newSaveFields": false,
+  "newSpecies": 0,
+  "speciesChecks": 21,
+  "olderTalentCompatibility": {
+    "suite": "check_talents114.cjs",
+    "checks": 107,
+    "individualOlderPurchases": 960,
+    "combinedOlderPurchases": 2040
+  },
+  "layoutChecks": 47,
+  "viewports": [
+    [
+      320,
+      568
+    ],
+    [
+      375,
+      667
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      428,
+      926
+    ],
+    [
+      844,
+      390
+    ],
+    [
+      1280,
+      800
+    ]
+  ],
+  "targets": [
+    {
+      "name": "species",
+      "returncode": 0,
+      "seconds": 56.54
+    },
+    {
+      "name": "species-creation",
+      "returncode": 0,
+      "seconds": 32.55
+    },
+    {
+      "name": "talents114",
+      "returncode": 0,
+      "seconds": 69.45
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 19.26
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 150.4
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 32.96
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 53.61
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 34.59
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 38.85
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 37.72
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 40.23
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 27.48
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 26.7
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 25.43
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 17.88
+    }
+  ],
+  "localCreationSaveResume": [
+    {
+      "species": "bothan",
+      "talent": "Convincing Demeanor",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "rodian",
+      "talent": "Expert Tracker",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "duros",
+      "talent": "Galaxy Mapper",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "jawa",
+      "talent": "Utinni!",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    }
+  ],
+  "hostedVerification": {
+    "status": "pending"
+  },
+  "limits": [
+    "Time reductions remain narrative.",
+    "Tracking and scavenging checks must supply their context flag.",
+    "Jawa sensory, brightness and silhouette effects remain narrative.",
+    "Other older species profiles remain outside this batch.",
+    "Browser emulation does not constitute physical iPhone Safari testing."
+  ]
+}
