@@ -691,7 +691,63 @@
     "Existing Well Read owners choose missing skills explicitly; old saves are not populated with invented choices or refunded for earlier skill purchases."
   ],
   "hostedVerification": {
-    "status": "pending deployment",
-    "expectedGitBlob": "c1c96f61c7484927266f604626821e0a75842c6e"
+    "status": "passed",
+    "sourceCommit": "2ab94d6f7dd278196a268a76a0032aa466f3e882",
+    "sourceTree": "ee9ad2e649dc17777cfa8e56c1075ccd20ce7e5e",
+    "deployment": {
+      "id": 39064981690,
+      "head_sha": "2ab94d6f7dd278196a268a76a0032aa466f3e882",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39064981690"
+    },
+    "distribution": {
+      "status": "passed",
+      "commit": "2ab94d6f7dd278196a268a76a0032aa466f3e882",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=2ab94d6f7dd2&check=1792267401",
+      "httpStatus": 200,
+      "bytes": 4036583,
+      "gitBlob": "c1c96f61c7484927266f604626821e0a75842c6e",
+      "sha256": "c883ebf3fd34a06df9afa115b8afe4263d6738be3682392a0e74c2febc21135b"
+    },
+    "flows": [
+      {
+        "spec": "Figurehead",
+        "career": "Commander",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "spec": "Instructor",
+        "career": "Commander",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "spec": "Strategist",
+        "career": "Commander",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      }
+    ],
+    "errors": []
   }
 }

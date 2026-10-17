@@ -62,3 +62,9 @@ The final-build verification completed successfully. Next: Beast Rider, Hotshot 
 All eighteen browser/source suites passed 2,730 checks without application errors. All ten general regression targets passed, including 266 smoke checks and 112 diagnostics. Three new and twenty-two earlier visible local creation/save/resume flows passed. `npm run build:check` reproduces the tested distribution, and `git diff --check` passes.
 
 The same distribution was used throughout: Git blob `c1c96f61c7484927266f604626821e0a75842c6e`, 4,036,583 bytes, SHA-256 `c883ebf3fd34a06df9afa115b8afe4263d6738be3682392a0e74c2febc21135b`. No runtime changes followed this run. See [machine-readable evidence](lead-example-audit-verification.json).
+
+## Hosted proof
+
+Published source commit `2ab94d6f7dd278196a268a76a0032aa466f3e882`, tree `ee9ad2e649dc17777cfa8e56c1075ccd20ce7e5e`. [Pages deployment](https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39064981690) completed successfully. [Working game](https://felicianovalle-dev.github.io/swrpgtest/?v=2ab94d6f7dd2) returned HTTP 200 and exactly matched the tested distribution: Git blob `c1c96f61c7484927266f604626821e0a75842c6e`, 4,036,583 bytes, SHA-256 `c883ebf3fd34a06df9afa115b8afe4263d6738be3682392a0e74c2febc21135b`.
+
+Fresh hosted Figurehead at 390×844, Instructor at 375×667 and Strategist at 1280×800 passed visible creation, original-ID purchases, finalization, manual save, reload and Resume. Character, campaign, XP, purchases and talent choices were preserved, including Strategist’s three Well Read choices. No horizontal page overflow or application errors occurred. These isolated contexts contained no user saves.
