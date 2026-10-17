@@ -1,0 +1,591 @@
+{
+  "build": "96.22-species-repairs",
+  "package": "1.9.28",
+  "baselineCommit": "1844bc7b838e250e64f9d9f8e4084ea339466329",
+  "saveSchema": 92,
+  "testedIndex": {
+    "bytes": 4083431,
+    "gitBlob": "e2b6ad8cbb3cd1efa640a1fbcc652efb268ae07a",
+    "sha256": "ef33e159d58464cb79adb247be8026f5a880f6a6e4a59c1e6886f132e1ddea7d"
+  },
+  "source": {
+    "title": "Complete Species Guide v6",
+    "kind": "fan supplement",
+    "copyPages": 358,
+    "sha256": "68b34c10313bdac68a9256022b1627260e3f9416273f6489bbec6e12a430fa68",
+    "visuallyReviewedPages": {
+      "Sluissi": 261,
+      "Weequay": 312,
+      "Wookiee": 316,
+      "Toydarian": 289,
+      "Trandoshan": 290,
+      "Twi'lek": 296,
+      "Nautolan": 188,
+      "Mon Calamari": 180
+    }
+  },
+  "baseStatChanges": false,
+  "newSpecies": 0,
+  "newSaveFields": false,
+  "newInnateRank": {
+    "Sluissi": "Solid Repairs 1"
+  },
+  "remainingFreshReviewProfiles": [
+    "Clone",
+    "Geonosian",
+    "Kaminoan",
+    "Umbaran",
+    "Lasat",
+    "Togruta",
+    "Zeltron",
+    "Tiss'shar",
+    "Zabrak",
+    "Mikkian",
+    "Dowutin",
+    "Phydolon",
+    "Gand",
+    "Miraluka",
+    "Dantari"
+  ],
+  "roadmap": "docs/project-roadmap.md",
+  "newSpeciesChecks": 32,
+  "previousSpeciesChecks": 70,
+  "olderTalentChecks": 107,
+  "layoutChecks": 47,
+  "olderPurchaseCompatibility": {
+    "individual": 960,
+    "combined": 2040
+  },
+  "targets": [
+    {
+      "name": "species118",
+      "returncode": 0,
+      "seconds": 129.21
+    },
+    {
+      "name": "creation118",
+      "returncode": 0,
+      "seconds": 93.6
+    },
+    {
+      "name": "species117",
+      "returncode": 0,
+      "seconds": 61.51
+    },
+    {
+      "name": "creation117",
+      "returncode": 0,
+      "seconds": 49.65
+    },
+    {
+      "name": "species116",
+      "returncode": 0,
+      "seconds": 77.2
+    },
+    {
+      "name": "creation116",
+      "returncode": 0,
+      "seconds": 38.14
+    },
+    {
+      "name": "species115",
+      "returncode": 0,
+      "seconds": 54.62
+    },
+    {
+      "name": "creation115",
+      "returncode": 0,
+      "seconds": 30.53
+    },
+    {
+      "name": "talents114",
+      "returncode": 0,
+      "seconds": 67.84
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 17.94
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 151.12
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 34.42
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 54.07
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 34.26
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 35.62
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 36.26
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 40.8
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 28.64
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 26.33
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 25.15
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 19.15
+    }
+  ],
+  "localCreationSaveResume": [
+    {
+      "species": "sluissi",
+      "speciesChoice": null,
+      "repairActions": true,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 320,
+      "height": 568,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "sluissi",
+      "speciesChoice": null,
+      "repairActions": true,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "weequay",
+      "speciesChoice": "Athletics",
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "weequay",
+      "speciesChoice": "Resilience",
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "wookiee",
+      "speciesChoice": null,
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "toydarian",
+      "speciesChoice": null,
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "trandoshan",
+      "speciesChoice": "Brawl",
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "trandoshan",
+      "speciesChoice": "Perception",
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "twilek",
+      "speciesChoice": "Charm",
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "twilek",
+      "speciesChoice": "Deception",
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "nautolan",
+      "speciesChoice": null,
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "moncal",
+      "speciesChoice": null,
+      "repairActions": false,
+      "talent": "Solid Repairs",
+      "spec": "Mechanic",
+      "career": "Technician",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "cerean",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 320,
+      "height": 568,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "cerean",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "lannik",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "lannik",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "gungan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "keldor",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "cerean",
+      "kind": "legacy finalized campaign",
+      "width": 390,
+      "height": 844,
+      "choice": true,
+      "saveReload": true,
+      "pastSpendingPreserved": true,
+      "storyPreserved": true,
+      "overflow": false
+    },
+    {
+      "species": "chiss",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 320,
+      "height": 568,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "mirialan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "pantoran",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "sullustan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "sullustan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "bothan",
+      "talent": "Convincing Demeanor",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "rodian",
+      "talent": "Expert Tracker",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "duros",
+      "talent": "Galaxy Mapper",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "jawa",
+      "talent": "Utinni!",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    }
+  ],
+  "hostedVerification": {
+    "status": "pending"
+  },
+  "limits": [
+    "Other vehicle repairs and the other eight-profile batch traits remain narrative.",
+    "Fifteen older profiles still need a fresh source review.",
+    "Source checking does not certify full species automation or the remaining roadmap phases.",
+    "Repair action tests use controlled dice; they do not establish combat balance.",
+    "Browser emulation does not constitute physical iPhone Safari testing."
+  ]
+}

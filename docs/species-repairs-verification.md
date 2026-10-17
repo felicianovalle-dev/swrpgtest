@@ -23,4 +23,6 @@ The repository now includes a resumable [project roadmap](project-roadmap.md), l
 
 ## Verification
 
-Pending final regression results.
+All 21 regression targets passed on the exact HTML fingerprint in [the machine-readable report](species-repairs-verification.json). Coverage includes 32 new source/continuation/repair/backlog checks, 70 earlier species checks, 107 older-talent checks (960 individual and 2,040 combined purchases), 47 layout checks at six viewports, the campaign suite and ten general system suites. Twenty-eight local browser flows passed, including all twelve new flows covering the eight profiles, every starting-rank branch and Sluissi at mobile/desktop sizes. Sluissi flows click actual hull-repair and combat damage-control controls, confirm stacking with a purchased rank, and preserve the repaired combat state through manual save/reload/Resume. Repair outcomes use controlled dice, not a balance simulation. Physical iPhone Safari was not newly tested.
+
+Hosted verification will be recorded after publication.
