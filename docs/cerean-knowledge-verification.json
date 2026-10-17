@@ -366,7 +366,120 @@
     }
   ],
   "hostedVerification": {
-    "status": "pending"
+    "status": "passed",
+    "deployment": {
+      "id": 39079506255,
+      "head_sha": "7abad1c222b261c5aa61e27c49a7a81ea9d7328f",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39079506255"
+    },
+    "servedBytes": {
+      "status": "passed",
+      "commit": "7abad1c222b261c5aa61e27c49a7a81ea9d7328f",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=7abad1c222b2&check=1792280068",
+      "httpStatus": 200,
+      "bytes": 4077653,
+      "gitBlob": "dd5b151809f92f021464b99fd59706462980e90a",
+      "sha256": "b528ac32315c835303508f9a3cde6ebf7c156f972badb02847b018ee960ed925"
+    },
+    "creationAndLegacySaveResume": [
+      {
+        "species": "cerean",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 320,
+        "height": 568,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "cerean",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "lannik",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "lannik",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "gungan",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 428,
+        "height": 926,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "keldor",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "cerean",
+        "kind": "legacy finalized campaign",
+        "width": 390,
+        "height": 844,
+        "choice": true,
+        "saveReload": true,
+        "pastSpendingPreserved": true,
+        "storyPreserved": true,
+        "overflow": false
+      }
+    ]
   },
   "limits": [
     "Lannik Indomitable/silhouette, Gungan aquatic/High Jump and Kel Dor breathing/vision remain narrative.",
