@@ -200,7 +200,81 @@
     }
   ],
   "hostedVerification": {
-    "status": "pending"
+    "status": "passed",
+    "deployment": {
+      "id": 39076907017,
+      "head_sha": "eba4bbcc6e2082822e308e1c308580c116d2ff23",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39076907017"
+    },
+    "servedBytes": {
+      "status": "passed",
+      "commit": "eba4bbcc6e2082822e308e1c308580c116d2ff23",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=eba4bbcc6e20&check=1792277680",
+      "httpStatus": 200,
+      "bytes": 4067060,
+      "gitBlob": "2b63986dac360946626a274c38625f5913651846",
+      "sha256": "9280e7889672df0f3a414886188fe8f8df9a6649d8cc7f080c38ed3498db897f"
+    },
+    "creationSaveResume": [
+      {
+        "species": "bothan",
+        "talent": "Convincing Demeanor",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "rodian",
+        "talent": "Expert Tracker",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "duros",
+        "talent": "Galaxy Mapper",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 428,
+        "height": 926,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "jawa",
+        "talent": "Utinni!",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "sourceRoute": true,
+        "savedIdsPreserved": true
+      }
+    ]
   },
   "limits": [
     "Time reductions remain narrative.",
