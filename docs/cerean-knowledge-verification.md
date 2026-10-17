@@ -12,4 +12,6 @@ Cerean Intellectuals now provides two distinct chosen Knowledge career skills wi
 
 ## Verification
 
-Pending final regression results.
+All 19 regression targets passed on the exact HTML fingerprint in [the machine-readable report](cerean-knowledge-verification.json). Coverage includes 26 new species/choice/refund/import assertions, 44 earlier species checks, 107 older-talent checks (960 individual and 2,040 combined purchases), 47 layout checks at six viewports, the campaign suite and ten general system suites. Sixteen local browser flows passed: six new character flows for this batch, one legacy finalized Cerean choice/save/Resume flow, and nine earlier species flows. Cerean selection and Review were visually inspected at 320 px and desktop size. Physical iPhone Safari was not newly tested.
+
+Hosted verification will be recorded after publication.

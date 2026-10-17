@@ -1,0 +1,376 @@
+{
+  "build": "96.21-cerean-knowledge",
+  "package": "1.9.27",
+  "baselineCommit": "e0705777db461376be0f7d400b158938774a3aa4",
+  "saveSchema": 92,
+  "testedIndex": {
+    "bytes": 4077653,
+    "gitBlob": "dd5b151809f92f021464b99fd59706462980e90a",
+    "sha256": "b528ac32315c835303508f9a3cde6ebf7c156f972badb02847b018ee960ed925"
+  },
+  "source": {
+    "title": "Complete Species Guide v6",
+    "kind": "fan supplement",
+    "copyPages": 358,
+    "sha256": "68b34c10313bdac68a9256022b1627260e3f9416273f6489bbec6e12a430fa68",
+    "visuallyReviewedPages": {
+      "Cerean": 50,
+      "Lannik": 164,
+      "Gungan": 117,
+      "Kel Dor": 143
+    },
+    "LannikXP": "95, as printed in the supplied fan profile; retained unchanged"
+  },
+  "baseStatChanges": false,
+  "newSpecies": 0,
+  "newOptionalSaveFields": [
+    "speciesCareerSkills117"
+  ],
+  "ability": "Cerean Intellectuals: two chosen Knowledge career skills, no free ranks, no repricing of past spending",
+  "choiceRules": {
+    "distinctKnownKnowledgeSkills": 2,
+    "fixedAfterConfirmation": true,
+    "newCharacterChoiceRequiredBeforeFinalization": true,
+    "legacyFinalizedChoiceAvailable": true,
+    "creationRefundGuard": true,
+    "creationResetClearsChoices": true,
+    "malformedImportsRejectedBeforeMutation": true,
+    "olderSaveWithoutChoiceAcceptedAndIsolated": true
+  },
+  "newSpeciesChecks": 26,
+  "previousSpeciesChecks": 44,
+  "olderTalentChecks": 107,
+  "layoutChecks": 47,
+  "olderPurchaseCompatibility": {
+    "individual": 960,
+    "combined": 2040
+  },
+  "targets": [
+    {
+      "name": "species117",
+      "returncode": 0,
+      "seconds": 63.45
+    },
+    {
+      "name": "creation117",
+      "returncode": 0,
+      "seconds": 52.11
+    },
+    {
+      "name": "species116",
+      "returncode": 0,
+      "seconds": 81.74
+    },
+    {
+      "name": "creation116",
+      "returncode": 0,
+      "seconds": 41.18
+    },
+    {
+      "name": "species115",
+      "returncode": 0,
+      "seconds": 55.59
+    },
+    {
+      "name": "creation115",
+      "returncode": 0,
+      "seconds": 30.68
+    },
+    {
+      "name": "talents114",
+      "returncode": 0,
+      "seconds": 68.3
+    },
+    {
+      "name": "browser",
+      "returncode": 0,
+      "seconds": 17.81
+    },
+    {
+      "name": "campaign",
+      "returncode": 0,
+      "seconds": 153.21
+    },
+    {
+      "name": "check_world94",
+      "returncode": 0,
+      "seconds": 36.13
+    },
+    {
+      "name": "check_work96",
+      "returncode": 0,
+      "seconds": 53.84
+    },
+    {
+      "name": "check_save97",
+      "returncode": 0,
+      "seconds": 34.55
+    },
+    {
+      "name": "check_home",
+      "returncode": 0,
+      "seconds": 37.85
+    },
+    {
+      "name": "check_workshop",
+      "returncode": 0,
+      "seconds": 39.74
+    },
+    {
+      "name": "check_save_reliability",
+      "returncode": 0,
+      "seconds": 43.44
+    },
+    {
+      "name": "check_gameplay_audit",
+      "returncode": 0,
+      "seconds": 29.55
+    },
+    {
+      "name": "check_story_combat",
+      "returncode": 0,
+      "seconds": 28.41
+    },
+    {
+      "name": "check_mission_playthrough",
+      "returncode": 0,
+      "seconds": 27.91
+    },
+    {
+      "name": "check_setbacks",
+      "returncode": 0,
+      "seconds": 17.8
+    }
+  ],
+  "localCreationSaveResume": [
+    {
+      "species": "cerean",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 320,
+      "height": 568,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "cerean",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "lannik",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "lannik",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "gungan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "keldor",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "cerean",
+      "kind": "legacy finalized campaign",
+      "width": 390,
+      "height": 844,
+      "choice": true,
+      "saveReload": true,
+      "pastSpendingPreserved": true,
+      "storyPreserved": true,
+      "overflow": false
+    },
+    {
+      "species": "chiss",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 320,
+      "height": 568,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "mirialan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "pantoran",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "sullustan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "sullustan",
+      "talent": "Skilled Jockey",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "speciesReview": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "bothan",
+      "talent": "Convincing Demeanor",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 390,
+      "height": 844,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "rodian",
+      "talent": "Expert Tracker",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 375,
+      "height": 667,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "duros",
+      "talent": "Galaxy Mapper",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 428,
+      "height": 926,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    },
+    {
+      "species": "jawa",
+      "talent": "Utinni!",
+      "spec": "Pilot",
+      "career": "Smuggler",
+      "width": 1280,
+      "height": 800,
+      "creation": true,
+      "purchase": true,
+      "saveReload": true,
+      "overflow": false,
+      "sourceRoute": true,
+      "savedIdsPreserved": true
+    }
+  ],
+  "hostedVerification": {
+    "status": "pending"
+  },
+  "limits": [
+    "Lannik Indomitable/silhouette, Gungan aquatic/High Jump and Kel Dor breathing/vision remain narrative.",
+    "Other older species remain outside this batch.",
+    "Browser emulation does not constitute physical iPhone Safari testing."
+  ]
+}
