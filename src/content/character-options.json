@@ -432,6 +432,170 @@
       "note": "Knowledge (Education) 1 is included. Helium Breathers require a helium mask and goggles in a normal atmosphere. Oxygen is a rating-4 dangerous atmosphere; resolve breathing and vision effects narratively.",
       "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.143",
       "verifiedPage117": 143
+    },
+    "sluissi": {
+      "name": "Sluissi",
+      "xp": 90,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 3,
+        "Cunning": 1,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Discipline": 1,
+        "Mechanics": 1
+      },
+      "note": "Discipline 1 and Mechanics 1 are included. Starship Workers includes Solid Repairs 1: ship repair actions restore one additional hull trauma on success, stacking with purchased ranks. Other vehicle repairs are resolved narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.261",
+      "verifiedPage118": 261,
+      "bonusTalents97": {
+        "Solid Repairs": 1
+      }
+    },
+    "weequay": {
+      "name": "Weequay",
+      "xp": 90,
+      "wt": 10,
+      "st": 11,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 3,
+        "Willpower": 2,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Athletics",
+        "Resilience"
+      ],
+      "note": "Choose Athletics or Resilience for one starting rank. Pheromones allow silent communication with your own clan within long range, undetectable to species without advanced olfaction; resolve this communication narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.312",
+      "verifiedPage118": 312
+    },
+    "wookiee": {
+      "name": "Wookiee",
+      "xp": 90,
+      "wt": 14,
+      "st": 9,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 1,
+        "Presence": 2
+      },
+      "free": {
+        "Brawl": 1
+      },
+      "note": "Brawl 1 is included. Climbing Claws add a Boost on surfaces claws can pierce and can deal +1 Brawl damage as wounds. Wookiee Rage adds +1 Brawl/Melee damage while wounded, or +2 while critically injured. Resolve these abilities narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.316",
+      "verifiedPage118": 316
+    },
+    "toydarian": {
+      "name": "Toydarian",
+      "xp": 90,
+      "wt": 9,
+      "st": 12,
+      "c": {
+        "Brawn": 1,
+        "Agility": 1,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 3
+      },
+      "note": "Force Resistance increases the difficulty of telepathic Force powers targeting you by two. Hoverers can move about a meter above the ground, ignoring fall damage and terrain penalties. Resolve these traits and silhouette 0 narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.289",
+      "verifiedPage118": 289
+    },
+    "trandoshan": {
+      "name": "Trandoshan",
+      "xp": 85,
+      "wt": 12,
+      "st": 9,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Brawl",
+        "Perception"
+      ],
+      "note": "Choose Brawl or Perception for one starting rank. Claws add +1 Brawl damage as wounds with Critical rating 3. Infrared Vision removes darkness Setback. Regeneration restores one extra wound when natural rest or bacta already restores at least one; limbs regrow over months. Resolve these traits narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.290",
+      "verifiedPage118": 290
+    },
+    "twilek": {
+      "name": "Twi'lek",
+      "xp": 100,
+      "wt": 10,
+      "st": 11,
+      "c": {
+        "Brawn": 1,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 3
+      },
+      "freeChoice": [
+        "Charm",
+        "Deception"
+      ],
+      "note": "Choose Charm or Deception for one starting rank. Desert Adaptations removes hot/dry Setback and adds one in cold/wet conditions; resolve environmental effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.296",
+      "verifiedPage118": 296
+    },
+    "nautolan": {
+      "name": "Nautolan",
+      "xp": 90,
+      "wt": 11,
+      "st": 11,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 1,
+        "Presence": 2
+      },
+      "free": {
+        "Athletics": 1
+      },
+      "note": "Athletics 1 is included. Aquatic breathing/movement and humidity/dryness effects are narrative. Low-Light Vision removes darkness Setback and adds one for brightness. Pheromone Detection adds a Boost to identify a liar or emotional state; resolve these situational effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.188",
+      "verifiedPage118": 188
+    },
+    "moncal": {
+      "name": "Mon Calamari",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 3,
+        "Cunning": 1,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Knowledge (Education)": 1
+      },
+      "note": "Knowledge (Education) 1 is included. Aquatic allows underwater breathing and removes underwater movement penalties; remove humidity Setback and add one for dry conditions. Resolve these environmental effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.180",
+      "verifiedPage118": 180
     }
   },
   "careers": {

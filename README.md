@@ -130,3 +130,5 @@ presentation. `scripts/check_home.cjs` covers objective routing, navigation with
 economic changes, release-panel placement, and preservation of user names.
 Browser checks cover the compact Home and its objective action at all seven
 existing viewports, alongside navigation, saving, rotation, and real reloads.
+
+The [project roadmap](docs/project-roadmap.md) records completed work, remaining priorities and the next resume point. Source checks and feature automation are tracked separately.
