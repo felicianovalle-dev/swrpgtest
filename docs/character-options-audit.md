@@ -318,7 +318,7 @@ Older finalized saves keep their original quests, purchase benefits, and economy
 
 ## Remaining content work
 
-Fresh source reviews for the remaining 9 older full trees, a full audit of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
+The original 48 older layout reviews are complete. Further source reviews of older species, signature abilities, special talent actions, wider Force-power coverage, full-length adventure ports, era-specific galaxy/NPC content, and ordinary-character balance remain follow-up work. The in-game About → Character options & source coverage panel exposes these boundaries.
 
 ## Older EotE core audit: Assassin, Scoundrel and Slicer
 
@@ -360,3 +360,9 @@ All 60 original IDs, names, positions, XP costs and activation labels remain. Se
 ## Stay on Target audit: Beast Rider, Hotshot and Rigger
 
 All 60 original IDs, names, positions and XP costs remain. Four connections are restored and fifteen unsupported routes removed on printed pp.27, 29 and 31 / physical pp.28, 30 and 32. Improved Spur and Improved Dead to Rights become Active. Thirty-seven scoped rules include 22 book-glossary entries from printed pp.32–33 / physical pp.33–34 and 15 previously reviewed shared entries, bringing the literal source-name union to 486. Beast Wrangler’s Boost now requires a tame/wrangle context rather than a generic beast context. This completes all 48 original older layouts. Manual animal, vehicle, signature-vehicle and narrative talent effects remain disclosed on cards. See [verification](stay-target-audit-verification.md).
+
+## Existing species benefits (1.9.25)
+
+Bothan, Rodian, Duros and Jawa baseline stats and starting skills match the supplied Complete Species Guide v6. Their omitted innate talent ranks now participate in the existing talent engine: Convincing Demeanor, Expert Tracker, Galaxy Mapper and Utinni! respectively. They stack with purchased ranks without adding purchased nodes, charging XP or changing save schema 92. Existing saves receive the benefit from their species automatically.
+
+This review uses the supplied 358-page copy: Bothan p.44, Rodian p.233, Duros p.87 and Jawa p.137. Earlier citations use another supplied copy with different pagination; these page numbers identify this review only. The guide is a fan supplement. Tracking/scavenging contexts must be flagged by the check caller. Time reductions and Jawa night vision, brightness, scent and silhouette effects remain narrative, as stated on the species notes. See [species-benefits-verification.md](species-benefits-verification.md).
