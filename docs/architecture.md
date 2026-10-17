@@ -207,3 +207,8 @@ Precise Aim previews weapon validity before charging. It reserves chosen whole-n
 ## Lead by Example original-layout audit
 
 `npm run test:talents:lead-by-example` checks three original-ID layouts, seven removed shortcuts, 37 scoped rules, saved purchases, Well Read choices and six viewports. `npm run test:creation:lead-by-example` exercises three visible creation/save/resume flows and accepts a hosted URL. The `lead113` table preserves all earlier catalog records. Well Read adds a validated `talentChoices98.wellRead` map keyed by specialization and original node ID; it records three different Knowledge skills, grants career eligibility only while the talent is owned, and permits older owners to choose missing skills without repurchasing. It shares the existing atomic purchase-choice lifecycle. No free ranks or retroactive XP refunds are awarded. Schema and storage keys remain 92. See `docs/lead-example-audit-verification.md`.
+
+
+## Stay on Target original-layout audit
+
+`npm run test:talents:stay-on-target` checks three original-ID layouts, 19 route corrections, two activation labels, 37 scoped rules, saved purchases and supported animal/piloting/Mechanics modifiers at six viewports. `npm run test:creation:stay-on-target` exercises three visible creation/save/resume flows and accepts a hosted URL. The `target114` table preserves every earlier catalog entry. Beast Wrangler uses explicit `ctx.wrangle` for tame/wrangle checks; generic `ctx.beast` retains its earlier Hunter behavior without adding Beast Wrangler. Expert Handler still requires riding plus Survival. There are no new state fields, migrations or resource costs. Schema and storage keys remain 92. See `docs/stay-target-audit-verification.md`.

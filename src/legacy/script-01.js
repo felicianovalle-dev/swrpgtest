@@ -3808,7 +3808,7 @@ function talentCheckMods(actor,skill,ctx={}){
     if((skill==='Piloting (Space)'||skill==='Piloting (Planetary)'))setback=Math.max(0,setback-talentRank('Skilled Jockey'));
     if(skill==='Astrogation')setback=Math.max(0,setback-talentRank('Galaxy Mapper'));
     if(skill==='Leadership')boost+=talentRank('Command');if(ctx.initiative&&(skill==='Cool'||skill==='Vigilance'))setback=Math.max(0,setback-talentRank('Ready for Anything'));
-    if(ctx.beast)boost+=talentRank('Hunter')+talentRank('Beast Wrangler');if(ctx.riding&&skill==='Survival')setback=Math.max(0,setback-talentRank('Expert Handler'));
+    if(ctx.beast)boost+=talentRank('Hunter');if(ctx.wrangle)boost+=talentRank('Beast Wrangler');if(ctx.riding&&skill==='Survival')setback=Math.max(0,setback-talentRank('Expert Handler'));
     if(skill==='Mechanics')setback=Math.max(0,setback-talentRank('Gearhead'));
     if(['Mechanics','Medicine'].includes(skill)&&ctx.cybernetic)setback=Math.max(0,setback-talentRank('Cyberneticist'));
     if(['Mechanics','Computers'].includes(skill)&&ctx.droid)setback=Math.max(0,setback-talentRank('Deft Maker'));

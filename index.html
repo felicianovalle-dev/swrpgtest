@@ -5695,7 +5695,7 @@ function talentCheckMods(actor,skill,ctx={}){
     if((skill==='Piloting (Space)'||skill==='Piloting (Planetary)'))setback=Math.max(0,setback-talentRank('Skilled Jockey'));
     if(skill==='Astrogation')setback=Math.max(0,setback-talentRank('Galaxy Mapper'));
     if(skill==='Leadership')boost+=talentRank('Command');if(ctx.initiative&&(skill==='Cool'||skill==='Vigilance'))setback=Math.max(0,setback-talentRank('Ready for Anything'));
-    if(ctx.beast)boost+=talentRank('Hunter')+talentRank('Beast Wrangler');if(ctx.riding&&skill==='Survival')setback=Math.max(0,setback-talentRank('Expert Handler'));
+    if(ctx.beast)boost+=talentRank('Hunter');if(ctx.wrangle)boost+=talentRank('Beast Wrangler');if(ctx.riding&&skill==='Survival')setback=Math.max(0,setback-talentRank('Expert Handler'));
     if(skill==='Mechanics')setback=Math.max(0,setback-talentRank('Gearhead'));
     if(['Mechanics','Medicine'].includes(skill)&&ctx.cybernetic)setback=Math.max(0,setback-talentRank('Cyberneticist'));
     if(['Mechanics','Computers'].includes(skill)&&ctx.droid)setback=Math.max(0,setback-talentRank('Deft Maker'));
@@ -33707,6 +33707,473 @@ window.CharacterCatalog97 = (() => {
       "bookReviewed": true,
       "auditedExisting": true,
       "ruleSet": "lead113"
+    },
+    "Beast Rider": {
+      "names": [
+        "Forager",
+        "Toughened",
+        "Outdoorsman",
+        "Beast Wrangler",
+        "Outdoorsman",
+        "Expert Tracker",
+        "Toughened",
+        "Expert Handler",
+        "Expert Tracker",
+        "Beast Wrangler",
+        "Let's Ride",
+        "Grit",
+        "Improved Spur",
+        "Spur",
+        "Natural Outdoorsman",
+        "Expert Handler",
+        "Supreme Spur",
+        "Dedication",
+        "Grit",
+        "Soothing Tone"
+      ],
+      "nodeIds": [
+        "br00",
+        "br01",
+        "br02",
+        "br03",
+        "br10",
+        "br11",
+        "br12",
+        "br13",
+        "br20",
+        "br21",
+        "br22",
+        "br23",
+        "br30",
+        "br31",
+        "br32",
+        "br33",
+        "br40",
+        "br41",
+        "br42",
+        "br43"
+      ],
+      "types": [
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          17,
+          18
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Stay on Target \u00b7 p.27",
+      "collection": "stay-on-target",
+      "page": 28,
+      "bookPdfPage": 28,
+      "bookFile": "stay-on-target",
+      "bookPage": 27,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "target114"
+    },
+    "Hotshot": {
+      "names": [
+        "Shortcut",
+        "High-G Training",
+        "Skilled Jockey",
+        "Grit",
+        "Second Chances",
+        "Grit",
+        "Shortcut",
+        "High-G Training",
+        "Dead to Rights",
+        "High-G Training",
+        "Grit",
+        "Intense Presence",
+        "Second Chances",
+        "Corellian Sendoff",
+        "Koiogran Turn",
+        "Grit",
+        "Improved Dead to Rights",
+        "Improved Corellian Sendoff",
+        "Dedication",
+        "Showboat"
+      ],
+      "nodeIds": [
+        "hot00",
+        "hot01",
+        "hot02",
+        "hot03",
+        "hot10",
+        "hot11",
+        "hot12",
+        "hot13",
+        "hot20",
+        "hot21",
+        "hot22",
+        "hot23",
+        "hot30",
+        "hot31",
+        "hot32",
+        "hot33",
+        "hot40",
+        "hot41",
+        "hot42",
+        "hot43"
+      ],
+      "types": [
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Active",
+        "Active",
+        "Active",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Active"
+      ],
+      "edges": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ],
+        [
+          18,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Stay on Target \u00b7 p.29",
+      "collection": "stay-on-target",
+      "page": 30,
+      "bookPdfPage": 30,
+      "bookFile": "stay-on-target",
+      "bookPage": 29,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "target114"
+    },
+    "Rigger": {
+      "names": [
+        "Black Market Contacts",
+        "Toughened",
+        "Gearhead",
+        "Larger Project",
+        "Grit",
+        "Fancy Paint Job",
+        "Signature Vehicle",
+        "Larger Project",
+        "Black Market Contacts",
+        "Overstocked Ammo",
+        "Tuned Maneuvering Thrusters",
+        "Bolstered Armor",
+        "Toughened",
+        "Customized Cooling Unit",
+        "Gearhead",
+        "Fortified Vacuum Seal",
+        "Dedication",
+        "Tuned Maneuvering Thrusters",
+        "Not Today",
+        "Reinforced Frame"
+      ],
+      "nodeIds": [
+        "rig00",
+        "rig01",
+        "rig02",
+        "rig03",
+        "rig10",
+        "rig11",
+        "rig12",
+        "rig13",
+        "rig20",
+        "rig21",
+        "rig22",
+        "rig23",
+        "rig30",
+        "rig31",
+        "rig32",
+        "rig33",
+        "rig40",
+        "rig41",
+        "rig42",
+        "rig43"
+      ],
+      "types": [
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Passive",
+        "Active",
+        "Passive"
+      ],
+      "edges": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          16
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          13,
+          17
+        ],
+        [
+          14,
+          18
+        ],
+        [
+          15,
+          19
+        ]
+      ],
+      "universal": false,
+      "source": "Stay on Target \u00b7 p.31",
+      "collection": "stay-on-target",
+      "page": 32,
+      "bookPdfPage": 32,
+      "bookFile": "stay-on-target",
+      "bookPage": 31,
+      "layoutReviewed": true,
+      "bookReviewed": true,
+      "auditedExisting": true,
+      "ruleSet": "target114"
     }
   },
   "universals": {
@@ -54179,10 +54646,443 @@ window.CharacterCatalog97 = (() => {
       "summary": "Choose three different Knowledge skills per rank. They permanently become career skills; this grants no free skill ranks.",
       "resolutionNote": "Purchasing asks for three valid Knowledge skills and saves them. Existing owners can choose skills without repurchasing; only owned talent choices affect career skills."
     }
+  },
+  "talentRules114": {
+    "Beast Wrangler": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Add one Boost per rank to checks made to tame or wrangle creatures.",
+      "resolutionNote": "Party checks explicitly tagged wrangling add the ranked Boost. Generic beast checks do not qualify; apply taming/wrangling context to other workflows manually."
+    },
+    "Black Market Contacts": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 132,
+      "pdfPage": 141,
+      "source": "Edge of the Empire Core \u00b7 p.132",
+      "summary": "When buying illegal, exotic or black market goods, reduce rarity by up to your ranks. Each level removed adds 50% of the item\u2019s base cost.",
+      "resolutionNote": "Restricted-item purchases offer rarity reduction and a markup on the local price. Apply exotic-item eligibility, whole ranks and any base-price adjustment manually."
+    },
+    "Bolstered Armor": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Increase the armor of your Signature Vehicle by one per rank.",
+      "resolutionNote": "Apply the ranked armor increase only to the designated Signature Vehicle manually; this does not increase your personal soak.",
+      "resolution": "manual"
+    },
+    "Corellian Sendoff": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "While piloting, make a Hard Cool action against two enemy vehicles within close range, each of equal or smaller silhouette than yours. Success causes a minor collision between them.",
+      "resolutionNote": "Resolve piloting, the two eligible targets, range, Hard check and collision manually. This is not a normal vehicle weapon attack.",
+      "resolution": "manual"
+    },
+    "Customized Cooling Unit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Increase your Signature Vehicle\u2019s system strain threshold by two per rank.",
+      "resolutionNote": "Apply the designated vehicle\u2019s ranked threshold increase manually. This does not restore current system strain or raise your personal strain threshold.",
+      "resolution": "manual"
+    },
+    "Dead to Rights": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "summary": "Spend a Destiny Point to add half Agility, rounded up, to one successful hit with vehicle or starship-mounted weapons.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve the Destiny expenditure and one-hit mounted-weapon bonus manually.",
+      "force": false
+    },
+    "Dedication": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 134,
+      "pdfPage": 143,
+      "source": "Edge of the Empire Core \u00b7 p.134",
+      "summary": "Permanently increase one chosen characteristic by one, to a maximum of 6.",
+      "resolutionNote": "The purchase asks for a characteristic and applies its increase once. Canceling spends no XP."
+    },
+    "Expert Handler": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Remove one Setback per rank from Survival checks made to ride beasts.",
+      "resolutionNote": "Party Survival checks explicitly marked riding remove the ranked Setback. Ordinary Survival and other skills do not qualify; resolve other workflows manually."
+    },
+    "Expert Tracker": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 142,
+      "pdfPage": 145,
+      "source": "Force and Destiny Core \u00b7 p.142",
+      "summary": "Remove one Setback per rank from checks to find tracks or track targets. Survival tracking takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks on party checks explicitly marked as tracking. Resolve tracking time manually."
+    },
+    "Fancy Paint Job": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Upgrade your Charm, Deception and Negotiation ability once when those checks are made in the presence of your Signature Vehicle.",
+      "resolutionNote": "Resolve the designated vehicle, its presence and the one ability upgrade manually. Other social skills do not qualify.",
+      "resolution": "manual"
+    },
+    "Forager": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 143,
+      "pdfPage": 146,
+      "source": "Force and Destiny Core \u00b7 p.143",
+      "summary": "Remove up to two Setbacks from checks to find food, water or shelter. Survival foraging takes half the normal time.",
+      "resolutionNote": "Removes two setbacks on party checks explicitly marked as foraging. Resolve foraging time manually."
+    },
+    "Fortified Vacuum Seal": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Increase your Signature Vehicle\u2019s hull trauma threshold by one per rank.",
+      "resolutionNote": "Apply the ranked vehicle threshold increase manually; this does not repair current hull trauma or increase personal wound threshold.",
+      "resolution": "manual"
+    },
+    "Gearhead": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 30,
+      "pdfPage": 34,
+      "source": "Keeping the Peace \u00b7 p.30",
+      "summary": "Remove one Setback per rank from Mechanics checks. Halve the credit cost of adding mods to attachments; extra ranks do not halve the cost again.",
+      "resolutionNote": "Removes Mechanics setbacks automatically. Halve attachment-modification credit costs manually."
+    },
+    "Grit": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 136,
+      "pdfPage": 145,
+      "source": "Edge of the Empire Core \u00b7 p.136",
+      "summary": "Increase your strain threshold by one per rank.",
+      "resolutionNote": "Adds to your strain threshold automatically."
+    },
+    "High-G Training": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "When the vehicle you are currently piloting would suffer system strain, voluntarily suffer personal strain up to your ranks to reduce that system strain equally, to a minimum of zero.",
+      "resolutionNote": "Resolve current piloting, whole strain payment and the corresponding vehicle reduction manually. Either voluntary or involuntary vehicle system strain can trigger this talent.",
+      "resolution": "manual"
+    },
+    "Improved Corellian Sendoff": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Corellian Sendoff causes a major collision instead of a minor collision.",
+      "resolutionNote": "Resolve the base action, check and target restrictions manually; this improvement changes collision severity, not the number of targets.",
+      "resolution": "manual"
+    },
+    "Improved Dead to Rights": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 145,
+      "pdfPage": 146,
+      "source": "Age of Rebellion Core \u00b7 p.145",
+      "summary": "Dead to Rights adds full Agility damage to one hit instead of half; its Destiny cost remains.",
+      "resolution": "manual",
+      "resolutionNote": "Resolve Dead to Rights with full Agility damage manually.",
+      "force": false
+    },
+    "Improved Spur": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "You may voluntarily suffer one strain to attempt Spur as a maneuver, with its Survival difficulty reduced to Average.",
+      "resolutionNote": "Resolve the rider\u2019s strain, maneuver, Average check and the base mount effect manually. The rider\u2019s cost is separate from the beast\u2019s ongoing strain.",
+      "resolution": "manual"
+    },
+    "Intense Presence": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 145,
+      "pdfPage": 148,
+      "source": "Force and Destiny Core \u00b7 p.145",
+      "summary": "Spend one Destiny Point to recover strain equal to your Presence.",
+      "resolutionNote": "The utility control spends a light Destiny Point and recovers strain equal to Presence."
+    },
+    "Koiogran Turn": {
+      "type": "Active",
+      "activation": "Active (Maneuver)",
+      "ranked": false,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "While piloting a vehicle with speed four or higher, suffer two strain and perform a maneuver to remove all opponents\u2019 Gain the Advantage effects on your vehicle.",
+      "resolutionNote": "Resolve speed eligibility, piloting, personal strain, the maneuver and affected opponents manually. This does not remove ordinary attack successes or hull trauma.",
+      "resolution": "manual"
+    },
+    "Larger Project": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 32,
+      "pdfPage": 33,
+      "source": "Stay on Target \u00b7 p.32",
+      "summary": "Your Signature Vehicle\u2019s maximum eligible silhouette increases by one per rank above its normal limit of three.",
+      "resolutionNote": "Track the chosen owned vehicle and silhouette limit of three plus ranks manually. This does not give you a vehicle or enlarge its actual silhouette.",
+      "resolution": "manual"
+    },
+    "Let's Ride": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "page": 151,
+      "pdfPage": 152,
+      "source": "Age of Rebellion Core \u00b7 p.151",
+      "force": false,
+      "summary": "Once per round, mount or dismount a vehicle or beast, or enter a vehicle cockpit or weapon station, as an incidental.",
+      "resolutionNote": "Resolve the eligible movement and once-per-round limit manually.",
+      "resolution": "manual"
+    },
+    "Natural Outdoorsman": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 148,
+      "pdfPage": 151,
+      "source": "Force and Destiny Core \u00b7 p.148",
+      "summary": "Once per session, reroll one Resilience or Survival check.",
+      "resolutionNote": "Offers one failed Resilience or Survival reroll per session. Rerolling a successful check requires manual resolution."
+    },
+    "Not Today": {
+      "type": "Active",
+      "activation": "Active (Incidental, Out of Turn)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Once per session, spend one Destiny Point when your Signature Vehicle would be destroyed to save it. A destructive Critical Hit is still suffered, but its effect is ignored; other survival details are decided with the GM.",
+      "resolutionNote": "Resolve the designated vehicle, destruction trigger, Destiny payment, Critical Hit record and session limit manually. This is not an automatic full repair.",
+      "resolution": "manual"
+    },
+    "Outdoorsman": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 149,
+      "pdfPage": 152,
+      "source": "Force and Destiny Core \u00b7 p.149",
+      "summary": "Remove one Setback per rank from terrain and environmental checks. Overland travel takes half the normal time; additional ranks do not shorten it further.",
+      "resolutionNote": "Removes setbacks on party checks explicitly marked as outdoors. Resolve overland travel time manually."
+    },
+    "Overstocked Ammo": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Increase Limited Ammo ratings by one per rank for weapons mounted on your Signature Vehicle.",
+      "resolutionNote": "Apply the mounted-weapon Limited Ammo increase manually. This does not refill spent ammunition or add Limited Ammo to weapons without it.",
+      "resolution": "manual"
+    },
+    "Reinforced Frame": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Your Signature Vehicle gains Massive one: attacks against it treat their weapon\u2019s Critical rating as one higher.",
+      "resolutionNote": "Resolve the designated vehicle and increased Critical activation cost manually. This does not add one to Critical Injury severity or personal armor.",
+      "resolution": "manual"
+    },
+    "Second Chances": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Once per encounter after rolling but before resolving a skill check, reroll selected positive dice up to your ranks and accept their new results. Force dice cannot be rerolled.",
+      "resolutionNote": "Choose eligible positive dice manually, retain the others, recalculate cancellations and track encounter use. This does not reroll the entire pool.",
+      "resolution": "manual"
+    },
+    "Shortcut": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "page": 155,
+      "pdfPage": 156,
+      "source": "Age of Rebellion Core \u00b7 p.155",
+      "force": false,
+      "summary": "During a chase, add one Boost per rank to checks made to catch or escape an opponent.",
+      "resolutionNote": "Resolve chase-specific Boost dice manually; ordinary Piloting checks do not gain them automatically.",
+      "resolution": "manual"
+    },
+    "Showboat": {
+      "type": "Active",
+      "activation": "Active (Incidental)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Once per round while piloting, suffer two strain before your next check. Add a Triumph on success or a Despair on failure, without that symbol\u2019s usual Success or Failure component.",
+      "resolutionNote": "Resolve current piloting, strain, round limit, next check and the added symbol manually. This does not change the check\u2019s net Success or Failure count.",
+      "resolution": "manual"
+    },
+    "Signature Vehicle": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Choose one owned vehicle of silhouette three or lower, increased by Larger Project ranks. Upgrade Mechanics checks to work on it once. A lost or destroyed vehicle may be replaced with GM agreement and time; two characters cannot designate the same vehicle.",
+      "resolutionNote": "Record the eligible owned vehicle, one ability upgrade and any replacement manually. This does not grant a free vehicle or automatically alter ship statistics.",
+      "resolution": "manual"
+    },
+    "Skilled Jockey": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 152,
+      "pdfPage": 155,
+      "source": "Force and Destiny Core \u00b7 p.152",
+      "summary": "Remove one Setback per rank from Piloting (Planetary) and Piloting (Space).",
+      "resolutionNote": "Removes setbacks from PC piloting checks."
+    },
+    "Soothing Tone": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Once per encounter while riding a beast, make an Average Knowledge (Xenology) action. Success lets that beast recover strain equal to Successes, or heal that many wounds if it has no strain threshold.",
+      "resolutionNote": "Resolve the ridden beast, check, action, recovery type and encounter limit manually. This does not heal the rider or every nearby beast.",
+      "resolution": "manual"
+    },
+    "Spur": {
+      "type": "Active",
+      "activation": "Active (Action)",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "While riding a beast, make a Hard Survival action. Success raises its top speed by one. At the start of each turn you may end the effect; maintaining it makes the beast suffer two strain.",
+      "resolutionNote": "Resolve the action, check, mount\u2019s top speed, continuing strain and expiry manually. Spur does not unlock actions or maneuvers the beast could not normally perform.",
+      "resolution": "manual"
+    },
+    "Supreme Spur": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": false,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "The beast suffers one strain to maintain Spur instead of the normal two.",
+      "resolutionNote": "Resolve the base Spur effect and reduced continuing mount strain manually. This does not remove the rider\u2019s one-strain Improved Spur cost.",
+      "resolution": "manual"
+    },
+    "Toughened": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 145,
+      "pdfPage": 154,
+      "source": "Edge of the Empire Core \u00b7 p.145",
+      "summary": "Increase your wound threshold by two per rank.",
+      "resolutionNote": "Adds to your wound threshold automatically."
+    },
+    "Tuned Maneuvering Thrusters": {
+      "type": "Passive",
+      "activation": "Passive",
+      "ranked": true,
+      "force": false,
+      "page": 33,
+      "pdfPage": 34,
+      "source": "Stay on Target \u00b7 p.33",
+      "summary": "Increase your Signature Vehicle\u2019s handling by one per rank.",
+      "resolutionNote": "Apply the designated vehicle\u2019s ranked handling increase manually. This does not increase vehicle speed or a personal characteristic.",
+      "resolution": "manual"
+    }
   }
 }
 ;
-  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106,noDis107:data.talentRules107,flyCasual108:data.talentRules108,specialMods109:data.talentRules109,dangerous110:data.talentRules110,unknown111:data.talentRules111,far112:data.talentRules112,lead113:data.talentRules113};
+  const ruleSets={aor100:data.talentRules100,core101:data.talentRules101,fndCore102:data.talentRules102,fndCore103:data.talentRules103,fndCore104:data.talentRules104,fndSupp105:data.talentRules105,eoteCore106:data.talentRules106,noDis107:data.talentRules107,flyCasual108:data.talentRules108,specialMods109:data.talentRules109,dangerous110:data.talentRules110,unknown111:data.talentRules111,far112:data.talentRules112,lead113:data.talentRules113,target114:data.talentRules114};
   function rulesFor(spec){return ruleSets[data.trees[spec]?.ruleSet];}
   Object.assign(SPECIES, data.species);
   Object.assign(CAREERS, data.careers);
@@ -55303,7 +56203,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.17-lead-example-audit';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.18-stay-target-audit';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 

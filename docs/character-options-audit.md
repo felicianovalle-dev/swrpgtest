@@ -355,3 +355,8 @@ All 60 original IDs, names, positions and XP costs remain. Five missing connecti
 ## Lead by Example audit: Figurehead, Instructor and Strategist
 
 All 60 original IDs, names, positions, XP costs and activation labels remain. Seven unsupported connections are removed on printed pp.29, 31 and 33 / physical pp.30, 32 and 34. Thirty-seven scoped rules include 17 book-glossary entries from printed pp.34–35 / physical pp.35–36 and 20 previously reviewed shared entries, bringing the literal source-name union to 469. Well Read now records three distinct Knowledge career skills, persists them through save/resume and supports existing owners without repurchase. Canceling or invalid selections charge no XP; no free skill ranks are granted. This completes 45 of the original 48 layouts; three remain. See [verification](lead-example-audit-verification.md).
+
+
+## Stay on Target audit: Beast Rider, Hotshot and Rigger
+
+All 60 original IDs, names, positions and XP costs remain. Four connections are restored and fifteen unsupported routes removed on printed pp.27, 29 and 31 / physical pp.28, 30 and 32. Improved Spur and Improved Dead to Rights become Active. Thirty-seven scoped rules include 22 book-glossary entries from printed pp.32–33 / physical pp.33–34 and 15 previously reviewed shared entries, bringing the literal source-name union to 486. Beast Wrangler’s Boost now requires a tame/wrangle context rather than a generic beast context. This completes all 48 original older layouts. Manual animal, vehicle, signature-vehicle and narrative talent effects remain disclosed on cards. See [verification](stay-target-audit-verification.md).
