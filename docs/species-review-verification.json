@@ -259,7 +259,95 @@
     }
   ],
   "hostedVerification": {
-    "status": "pending"
+    "status": "passed",
+    "deployment": {
+      "id": 39078036559,
+      "head_sha": "6cfa818a022067fe8458e40a90a341df33ad91a6",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39078036559"
+    },
+    "servedBytes": {
+      "status": "passed",
+      "commit": "6cfa818a022067fe8458e40a90a341df33ad91a6",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=6cfa818a0220&check=1792278726",
+      "httpStatus": 200,
+      "bytes": 4070430,
+      "gitBlob": "af4182c331b51e889898bd78e6c53b44eacc22f1",
+      "sha256": "4dddf5d06b819e545a6277cc5d4e8cf53dd791ad28a790cd70f2a700257f5062"
+    },
+    "creationSaveResume": [
+      {
+        "species": "chiss",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 320,
+        "height": 568,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "mirialan",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "pantoran",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "sullustan",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 428,
+        "height": 926,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "sullustan",
+        "talent": "Skilled Jockey",
+        "spec": "Pilot",
+        "career": "Smuggler",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      }
+    ]
   },
   "limits": [
     "Lighting and temperature traits remain narrative.",
