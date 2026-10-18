@@ -132,3 +132,5 @@ Browser checks cover the compact Home and its objective action at all seven
 existing viewports, alongside navigation, saving, rotation, and real reloads.
 
 The [project roadmap](docs/project-roadmap.md) records completed work, remaining priorities and the next resume point. Source checks and feature automation are tracked separately.
+
+Latest species update: [1.9.29 source and Coercion verification](docs/species-coercion-verification.md).

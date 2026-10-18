@@ -2277,6 +2277,7 @@ function dicePoolHTML(p){
   if(!p)return'<span class="tiny">—</span>';
   let dice=[['proficiency','Y'],['ability','G'],['boost','B'],['challenge','R'],['difficulty','P'],['setback','K']];
   let out=dice.filter(([k])=>p[k]).map(([k,l])=>`<span class="die-chip die-${k}" title="${k}">${l}×${p[k]}</span>`).join('');
+  if(p.autoAdvantage)out+=`<span class="result-chip good">+${p.autoAdvantage} automatic Advantage</span>`;
   return `<span class="dice-pool">${out||'<span class="tiny">—</span>'}</span>`
 }
 function resultHTML(r){
@@ -3706,8 +3707,8 @@ function forceAvailable(){return Math.max(0,effectiveForceRating()-(S.forceCommi
 function availableXp(){return S.finalized?S.earnedXp:S.xpStart-S.xpSpent}function charge(cost,label){if(availableXp()<cost){bLog(`Not enough XP: ${label} costs ${cost}.`);return false}if(S.finalized)S.earnedXp-=cost;else S.xpSpent+=cost;bLog(`Purchased ${label} (${cost} XP).`);return true}
 function refund(cost,label){if(S.finalized)S.earnedXp+=cost;else S.xpSpent=Math.max(0,S.xpSpent-cost);bLog(`Refunded ${label} (${cost} XP).`)}
 function makePool(ch,rank,diff=2,boost=0,setback=0,upgrade=0){let hi=Math.max(ch,rank),lo=Math.min(ch,rank),p={ability:hi-lo,proficiency:lo,difficulty:diff,challenge:0,boost,setback};return upgradeDifficultyPool(p,upgrade)}
-function rollNarr(p){let o={s:0,f:0,a:0,t:0,tr:0,de:0};Object.entries(p).forEach(([k,n])=>{for(let i=0;i<n;i++){let face=NARR[k][Math.floor(Math.random()*NARR[k].length)];Object.entries(face).forEach(([q,v])=>o[q]+=v)}});o.ns=o.s-o.f;o.na=o.a-o.t;o.ok=o.ns>0;return o}
-function ptxt(p){return [['proficiency','🟡'],['ability','🟢'],['boost','🔵'],['challenge','🔴'],['difficulty','🟣'],['setback','⚫']].filter(([k])=>p[k]).map(([k,e])=>`${e}${p[k]}`).join(' ')||'—'}
+function rollNarr(p){let o={s:0,f:0,a:p.autoAdvantage||0,t:0,tr:0,de:0};Object.entries(p).forEach(([k,n])=>{if(k==='autoAdvantage')return;for(let i=0;i<n;i++){let face=NARR[k][Math.floor(Math.random()*NARR[k].length)];Object.entries(face).forEach(([q,v])=>o[q]+=v)}});o.ns=o.s-o.f;o.na=o.a-o.t;o.ok=o.ns>0;return o}
+function ptxt(p){return [['proficiency','🟡'],['ability','🟢'],['boost','🔵'],['challenge','🔴'],['difficulty','🟣'],['setback','⚫']].filter(([k])=>p[k]).map(([k,e])=>`${e}${p[k]}`).join(' ')+(p.autoAdvantage?' · +'+p.autoAdvantage+' automatic Advantage':'')||'—'}
 function rtxt(r){return `${r.ns>0?r.ns+' Success':r.ns<0?Math.abs(r.ns)+' Failure':'No net Success'} · ${r.na>0?r.na+' Advantage':r.na<0?Math.abs(r.na)+' Threat':'No net Advantage/Threat'}${r.tr?' · '+r.tr+' Triumph':''}${r.de?' · '+r.de+' Despair':''}`}
 function rollForce(n){let light=0,dark=0,faces=[];for(let i=0;i<n;i++){let f=FORCE_FACES[Math.floor(Math.random()*12)];light+=f.light||0;dark+=f.dark||0;faces.push(f.light?`◯${f.light}`:`●${f.dark}`)}return{light,dark,faces}}
 function isDarkSide(){return S.morality<30}
@@ -3828,10 +3829,11 @@ function actorPool(actor,skill,ctx={}){
       m=talentCheckMods(actor,skill,ctx),id=partyActorForCharacteristic(actor),st=id?actorState(id):null,cm=id?criticalCheckMods(id,skill,ch):{diff:0,setback:0,upgrade:0,removeBoost:false},
       pendingUpgrade=st?.conditions.nextUpgrade||0,pendingDifficulty=st?.conditions.nextDifficulty||0,
       diff=m.diff+(id?crippledDifficulty(id,skill):0)+pendingDifficulty+cm.diff,
-      speciesBoost=id==='pc'?((S.species==='mikkian'&&skill==='Perception')||(S.species==='zabrak'&&skill==='Coercion')?1:0):0,
+      speciesBoost=id==='pc'?((S.species==='mikkian'&&skill==='Perception')?1:0):0,
       boost=m.boost+approvalBoost(actor,skill)+crewRoleBoost(actor,skill)+(id==='pc'&&S.foreseeBoost?1:0)+speciesBoost,
       setback=m.setback+(st?.conditions.disoriented>0?1:0)+(st?.conditions.nextSetback||0)+cm.setback,
       p=makePool(val,rank,diff,cm.removeBoost?0:boost,setback,(ctx.upgrade||0)+pendingUpgrade+cm.upgrade);
+  if(id==='pc'&&S.species==='zabrak'&&skill==='Coercion')p.autoAdvantage=1;
   let up=ctx.abilityUpgrade||0;upgradePositivePool(p,up);
   if(ctx.difficultyDowngrade)while(ctx.difficultyDowngrade-->0){if((p.challenge||0)>0){p.challenge--;p.difficulty=(p.difficulty||0)+1}}
   if(id==='pc'&&ctx.academic)downgradeDifficultyPool(p,talentRank('Respected Scholar'));
@@ -6993,7 +6995,7 @@ async function runSableReachSmoke(){
     });
     let originalSpecies=S.species;
     S.species='zabrak';let zpool=actorPool(actorById('pc'),'Coercion',{diff:1});
-    test('Zabrak Fearsome Countenance bonus',()=>zpool.p.boost>=1);
+    test('Zabrak Fearsome Countenance bonus',()=>zpool.p.autoAdvantage===1);
     S.species='mikkian';let mpool=actorPool(actorById('pc'),'Perception',{diff:1});
     test('Mikkian sensory tendril bonus',()=>mpool.p.boost>=1);
     S.species=originalSpecies;

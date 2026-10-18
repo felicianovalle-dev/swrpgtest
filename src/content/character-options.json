@@ -596,6 +596,88 @@
       "note": "Knowledge (Education) 1 is included. Aquatic allows underwater breathing and removes underwater movement penalties; remove humidity Setback and add one for dry conditions. Resolve these environmental effects narratively.",
       "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.180",
       "verifiedPage118": 180
+    },
+    "lasat": {
+      "name": "Lasat",
+      "xp": 95,
+      "wt": 9,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 3,
+        "Willpower": 1,
+        "Presence": 2
+      },
+      "freeChoice": [
+        "Mechanics",
+        "Survival"
+      ],
+      "note": "Mechanics 1 or Survival 1 is included. Ears and Fur removes environmental Setback for hot or cold conditions. Night Vision removes darkness Setback and adds one Setback in bright light. Resolve these environmental effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.165",
+      "verifiedPage119": 165
+    },
+    "togruta": {
+      "name": "Togruta",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 1,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 3,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Perception": 1
+      },
+      "note": "Perception 1 is included. Pack Instincts grants two Boost dice, rather than one, when you perform the assist maneuver. Resolve this assistance narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.287",
+      "verifiedPage119": 287
+    },
+    "zeltron": {
+      "name": "Zeltron",
+      "xp": 100,
+      "wt": 10,
+      "st": 12,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 1,
+        "Presence": 3
+      },
+      "free": {
+        "Charm": 1
+      },
+      "note": "Charm 1 is included. Pheromones adds a Boost to Charm and one Advantage to Deception and Negotiation against targets who breathe and are not wearing breath masks. Empathy may be used once per encounter as a maneuver to sense emotions and presence within short range, or to upgrade an opposed Deception difficulty twice. Resolve these situational effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.333",
+      "verifiedPage119": 333
+    },
+    "zabrak": {
+      "name": "Zabrak",
+      "xp": 95,
+      "wt": 11,
+      "st": 12,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Brawl",
+        "Survival"
+      ],
+      "note": "Brawl 1 or Survival 1 is included. Fearsome Countenances adds one automatic Advantage to your Coercion checks. This is included in your check results; it does not grant a Boost die.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.330",
+      "verifiedPage119": 330
     }
   },
   "careers": {

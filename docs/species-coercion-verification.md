@@ -1,0 +1,11 @@
+# Species and Coercion verification — 1.9.29
+
+Build `96.23-species-coercion`; save schema 92 is unchanged.
+
+Reviewed the supplied 358-page Complete Species Guide v6 fan supplement: Lasat p.165, Togruta p.287, Zeltron p.333, Zabrak p.330. Base characteristics, thresholds, XP and starting ranks match the saved data. The guide's Lasat profile is the existing game profile; this does not assert equivalence with later official or screen portrayals.
+
+Corrected Zabrak Fearsome Countenances from a Boost die to one automatic Advantage on the player character's Coercion checks. The pool preview explains the symbol; each roll and reroll adds it once. It cancels Threat normally, does not add Success, and does not apply to other skills or companions. No XP, purchases, existing character stats or required save fields were changed. The last check result already saved by an earlier version is retained; subsequent checks use the correction.
+
+The other three profiles' environmental, assistance, pheromone and empathy rules remain narrative. Their species notes now explain the conditions. Eleven profiles remain unverified; the four Rise of the Separatists profiles require their missing supplied source. No source PDFs or private file links are included in the repository.
+
+Final verification pending.

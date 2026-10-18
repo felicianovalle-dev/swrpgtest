@@ -4164,6 +4164,7 @@ function dicePoolHTML(p){
   if(!p)return'<span class="tiny">—</span>';
   let dice=[['proficiency','Y'],['ability','G'],['boost','B'],['challenge','R'],['difficulty','P'],['setback','K']];
   let out=dice.filter(([k])=>p[k]).map(([k,l])=>`<span class="die-chip die-${k}" title="${k}">${l}×${p[k]}</span>`).join('');
+  if(p.autoAdvantage)out+=`<span class="result-chip good">+${p.autoAdvantage} automatic Advantage</span>`;
   return `<span class="dice-pool">${out||'<span class="tiny">—</span>'}</span>`
 }
 function resultHTML(r){
@@ -5593,8 +5594,8 @@ function forceAvailable(){return Math.max(0,effectiveForceRating()-(S.forceCommi
 function availableXp(){return S.finalized?S.earnedXp:S.xpStart-S.xpSpent}function charge(cost,label){if(availableXp()<cost){bLog(`Not enough XP: ${label} costs ${cost}.`);return false}if(S.finalized)S.earnedXp-=cost;else S.xpSpent+=cost;bLog(`Purchased ${label} (${cost} XP).`);return true}
 function refund(cost,label){if(S.finalized)S.earnedXp+=cost;else S.xpSpent=Math.max(0,S.xpSpent-cost);bLog(`Refunded ${label} (${cost} XP).`)}
 function makePool(ch,rank,diff=2,boost=0,setback=0,upgrade=0){let hi=Math.max(ch,rank),lo=Math.min(ch,rank),p={ability:hi-lo,proficiency:lo,difficulty:diff,challenge:0,boost,setback};return upgradeDifficultyPool(p,upgrade)}
-function rollNarr(p){let o={s:0,f:0,a:0,t:0,tr:0,de:0};Object.entries(p).forEach(([k,n])=>{for(let i=0;i<n;i++){let face=NARR[k][Math.floor(Math.random()*NARR[k].length)];Object.entries(face).forEach(([q,v])=>o[q]+=v)}});o.ns=o.s-o.f;o.na=o.a-o.t;o.ok=o.ns>0;return o}
-function ptxt(p){return [['proficiency','🟡'],['ability','🟢'],['boost','🔵'],['challenge','🔴'],['difficulty','🟣'],['setback','⚫']].filter(([k])=>p[k]).map(([k,e])=>`${e}${p[k]}`).join(' ')||'—'}
+function rollNarr(p){let o={s:0,f:0,a:p.autoAdvantage||0,t:0,tr:0,de:0};Object.entries(p).forEach(([k,n])=>{if(k==='autoAdvantage')return;for(let i=0;i<n;i++){let face=NARR[k][Math.floor(Math.random()*NARR[k].length)];Object.entries(face).forEach(([q,v])=>o[q]+=v)}});o.ns=o.s-o.f;o.na=o.a-o.t;o.ok=o.ns>0;return o}
+function ptxt(p){return [['proficiency','🟡'],['ability','🟢'],['boost','🔵'],['challenge','🔴'],['difficulty','🟣'],['setback','⚫']].filter(([k])=>p[k]).map(([k,e])=>`${e}${p[k]}`).join(' ')+(p.autoAdvantage?' · +'+p.autoAdvantage+' automatic Advantage':'')||'—'}
 function rtxt(r){return `${r.ns>0?r.ns+' Success':r.ns<0?Math.abs(r.ns)+' Failure':'No net Success'} · ${r.na>0?r.na+' Advantage':r.na<0?Math.abs(r.na)+' Threat':'No net Advantage/Threat'}${r.tr?' · '+r.tr+' Triumph':''}${r.de?' · '+r.de+' Despair':''}`}
 function rollForce(n){let light=0,dark=0,faces=[];for(let i=0;i<n;i++){let f=FORCE_FACES[Math.floor(Math.random()*12)];light+=f.light||0;dark+=f.dark||0;faces.push(f.light?`◯${f.light}`:`●${f.dark}`)}return{light,dark,faces}}
 function isDarkSide(){return S.morality<30}
@@ -5715,10 +5716,11 @@ function actorPool(actor,skill,ctx={}){
       m=talentCheckMods(actor,skill,ctx),id=partyActorForCharacteristic(actor),st=id?actorState(id):null,cm=id?criticalCheckMods(id,skill,ch):{diff:0,setback:0,upgrade:0,removeBoost:false},
       pendingUpgrade=st?.conditions.nextUpgrade||0,pendingDifficulty=st?.conditions.nextDifficulty||0,
       diff=m.diff+(id?crippledDifficulty(id,skill):0)+pendingDifficulty+cm.diff,
-      speciesBoost=id==='pc'?((S.species==='mikkian'&&skill==='Perception')||(S.species==='zabrak'&&skill==='Coercion')?1:0):0,
+      speciesBoost=id==='pc'?((S.species==='mikkian'&&skill==='Perception')?1:0):0,
       boost=m.boost+approvalBoost(actor,skill)+crewRoleBoost(actor,skill)+(id==='pc'&&S.foreseeBoost?1:0)+speciesBoost,
       setback=m.setback+(st?.conditions.disoriented>0?1:0)+(st?.conditions.nextSetback||0)+cm.setback,
       p=makePool(val,rank,diff,cm.removeBoost?0:boost,setback,(ctx.upgrade||0)+pendingUpgrade+cm.upgrade);
+  if(id==='pc'&&S.species==='zabrak'&&skill==='Coercion')p.autoAdvantage=1;
   let up=ctx.abilityUpgrade||0;upgradePositivePool(p,up);
   if(ctx.difficultyDowngrade)while(ctx.difficultyDowngrade-->0){if((p.challenge||0)>0){p.challenge--;p.difficulty=(p.difficulty||0)+1}}
   if(id==='pc'&&ctx.academic)downgradeDifficultyPool(p,talentRank('Respected Scholar'));
@@ -8880,7 +8882,7 @@ async function runSableReachSmoke(){
     });
     let originalSpecies=S.species;
     S.species='zabrak';let zpool=actorPool(actorById('pc'),'Coercion',{diff:1});
-    test('Zabrak Fearsome Countenance bonus',()=>zpool.p.boost>=1);
+    test('Zabrak Fearsome Countenance bonus',()=>zpool.p.autoAdvantage===1);
     S.species='mikkian';let mpool=actorPool(actorById('pc'),'Perception',{diff:1});
     test('Mikkian sensory tendril bonus',()=>mpool.p.boost>=1);
     S.species=originalSpecies;
@@ -15836,6 +15838,88 @@ window.CharacterCatalog97 = (() => {
       "note": "Knowledge (Education) 1 is included. Aquatic allows underwater breathing and removes underwater movement penalties; remove humidity Setback and add one for dry conditions. Resolve these environmental effects narratively.",
       "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.180",
       "verifiedPage118": 180
+    },
+    "lasat": {
+      "name": "Lasat",
+      "xp": 95,
+      "wt": 9,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 3,
+        "Willpower": 1,
+        "Presence": 2
+      },
+      "freeChoice": [
+        "Mechanics",
+        "Survival"
+      ],
+      "note": "Mechanics 1 or Survival 1 is included. Ears and Fur removes environmental Setback for hot or cold conditions. Night Vision removes darkness Setback and adds one Setback in bright light. Resolve these environmental effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.165",
+      "verifiedPage119": 165
+    },
+    "togruta": {
+      "name": "Togruta",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 1,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 3,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Perception": 1
+      },
+      "note": "Perception 1 is included. Pack Instincts grants two Boost dice, rather than one, when you perform the assist maneuver. Resolve this assistance narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.287",
+      "verifiedPage119": 287
+    },
+    "zeltron": {
+      "name": "Zeltron",
+      "xp": 100,
+      "wt": 10,
+      "st": 12,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 1,
+        "Presence": 3
+      },
+      "free": {
+        "Charm": 1
+      },
+      "note": "Charm 1 is included. Pheromones adds a Boost to Charm and one Advantage to Deception and Negotiation against targets who breathe and are not wearing breath masks. Empathy may be used once per encounter as a maneuver to sense emotions and presence within short range, or to upgrade an opposed Deception difficulty twice. Resolve these situational effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.333",
+      "verifiedPage119": 333
+    },
+    "zabrak": {
+      "name": "Zabrak",
+      "xp": 95,
+      "wt": 11,
+      "st": 12,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Brawl",
+        "Survival"
+      ],
+      "note": "Brawl 1 or Survival 1 is included. Fearsome Countenances adds one automatic Advantage to your Coercion checks. This is included in your check results; it does not grant a Boost die.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.330",
+      "verifiedPage119": 330
     }
   },
   "careers": {
@@ -56621,7 +56705,7 @@ window.CampaignContent97 = (() => {
   function renderAudit() {
     const parent=$('about97');if(!parent)return;let box=$('catalogAudit97');if(!box){box=document.createElement('section');box.id='catalogAudit97';box.className='creation-profile97';parent.prepend(box);}
     const c=catalog.coverage();
-    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Cerean, Lannik, Gungan and Kel Dor have also been checked. Cerean Intellectuals now supports two chosen Knowledge career skills without free ranks. Lannik, Gungan and Kel Dor situational effects remain narrative. Sluissi, Weequay, Wookiee, Toydarian, Trandoshan, Twi’lek, Nautolan and Mon Calamari have also been checked. Sluissi now includes Solid Repairs; the other reviewed traits remain narrative. Fifteen older profiles still await a fresh source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
+    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Cerean, Lannik, Gungan and Kel Dor have also been checked. Cerean Intellectuals now supports two chosen Knowledge career skills without free ranks. Lannik, Gungan and Kel Dor situational effects remain narrative. Sluissi, Weequay, Wookiee, Toydarian, Trandoshan, Twi’lek, Nautolan and Mon Calamari have also been checked. Sluissi now includes Solid Repairs; the other reviewed traits remain narrative. Lasat, Togruta, Zeltron and Zabrak have also been checked. Zabrak Coercion now includes one automatic Advantage instead of a Boost die. The other three profiles’ situational effects remain narrative. Eleven older profiles still await a fresh source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
   }
   function render() { renderSetup();renderPersonal();renderOpening();renderCreationExtras();renderAudit();const q=S.story61?.active,t=STORY_TEMPLATES_61[q?.templateId],panel=$('story61tab');if(t?.campaign97&&panel&&!panel.querySelector('.campaign-source97')){const p=document.createElement('p');p.className='campaign-source97';p.textContent=`${t.campaign97.kind} · ${t.campaign97.source}`;panel.appendChild(p);} }
   function install() {
@@ -56638,7 +56722,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.22-species-repairs';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.23-species-coercion';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 

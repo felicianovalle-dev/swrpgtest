@@ -1,10 +1,10 @@
 # Sable Reach project roadmap
 
-Current published release: **1.9.28**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
+Current published release before this batch: **1.9.28**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The eight-profile 1.9.28 batch is complete and published. Continue with the fifteen remaining profiles below, starting with Clone, then finish the reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The four-profile 1.9.29 batch (Lasat, Togruta, Zeltron and Zabrak) is in verification. Eleven profiles remain. Rise of the Separatists was not found among the accessible supplied Drive files; Clone, Geonosian, Kaminoan and Umbaran remain unverified. Continue with the other guide profiles while that source gap remains, then finish reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -21,17 +21,17 @@ On resumption, inspect current GitHub main, this roadmap, and the latest verific
 
 ## 1. Finish species
 
-Fresh source-review backlog after the eight-profile batch:
+Source-review backlog:
 
 - [ ] Clone
 - [ ] Geonosian
 - [ ] Kaminoan
 - [ ] Umbaran
-- [ ] Lasat
-- [ ] Togruta
-- [ ] Zeltron
+- [x] Lasat
+- [x] Togruta
+- [x] Zeltron
 - [ ] Tiss'shar
-- [ ] Zabrak
+- [x] Zabrak
 - [ ] Mikkian
 - [ ] Dowutin
 - [ ] Phydolon
@@ -115,3 +115,7 @@ The papercraft game, detailed visual creator and Paper Mario-style exploration/c
 
 - 1.9.27: Cerean Intellectuals and four species checks. [Verification](cerean-knowledge-verification.md).
 - 1.9.28: eight species reviews, Sluissi starting repairs and this resumable roadmap. Verified: 21 regression targets, 28 local browser flows and 12 hosted flows passed. [Verification](species-repairs-verification.md).
+
+## Update 1.9.29
+
+Lasat (p.165), Togruta (p.287), Zeltron (p.333) and Zabrak (p.330) were visually checked against the supplied 358-page Complete Species Guide v6 fan supplement. Base stats, XP, thresholds and free starting-rank choices match; none were changed. Zabrak Coercion now receives one automatic Advantage instead of a Boost die, including rerolls, with no character bonus field or XP charge. The other three profiles' situational effects remain narrative and are described in their species notes. Final verification pending.
