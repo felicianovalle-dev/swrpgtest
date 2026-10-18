@@ -684,7 +684,130 @@
     }
   ],
   "hostedVerification": {
-    "status": "pending"
+    "status": "passed",
+    "deployment": {
+      "id": 39082336312,
+      "head_sha": "b4499ea02a1a14f864474e6e99e9b04c1df3860b",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39082336312"
+    },
+    "servedBytes": {
+      "status": "passed",
+      "commit": "b4499ea02a1a14f864474e6e99e9b04c1df3860b",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=b4499ea02a1a&check=1792282816",
+      "httpStatus": 200,
+      "bytes": 4086642,
+      "gitBlob": "d09f27cd2491134b7108978fd0acd55a9d7b2d68",
+      "sha256": "2c6c068ad708267be7e7dba7d74abfff023f5a41e5a22e0e8695e93c22c6f5f4"
+    },
+    "creationCoercionSaveResume": [
+      {
+        "species": "lasat",
+        "speciesChoice": "Mechanics",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 320,
+        "height": 568,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "lasat",
+        "speciesChoice": "Survival",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "togruta",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "zeltron",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 428,
+        "height": 926,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "zabrak",
+        "speciesChoice": "Brawl",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 320,
+        "height": 568,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "zabrak",
+        "speciesChoice": "Survival",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "zabrak",
+        "speciesChoice": "Brawl",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      }
+    ]
   },
   "limits": [
     "Lasat, Togruta and Zeltron situational effects remain narrative.",
