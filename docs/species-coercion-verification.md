@@ -6,6 +6,8 @@ Reviewed the supplied 358-page Complete Species Guide v6 fan supplement: Lasat p
 
 Corrected Zabrak Fearsome Countenances from a Boost die to one automatic Advantage on the player character's Coercion checks. The pool preview explains the symbol; each roll and reroll adds it once. It cancels Threat normally, does not add Success, and does not apply to other skills or companions. No XP, purchases, existing character stats or required save fields were changed. The last check result already saved by an earlier version is retained; subsequent checks use the correction.
 
-The other three profiles' environmental, assistance, pheromone and empathy rules remain narrative. Their species notes now explain the conditions. Eleven profiles remain unverified; the four Rise of the Separatists profiles require their missing supplied source. No source PDFs or private file links are included in the repository.
+The other three profiles' environmental, assistance, pheromone and empathy rules remain narrative. Their species notes now explain the conditions. Eleven profiles remain unverified; Rise of the Separatists was located among the supplied uploads, so its four profiles are next for review. No source PDFs or private file links are included in the repository.
 
-Final verification pending.
+All 23 regression targets passed on the exact HTML fingerprint in [the machine-readable report](species-coercion-verification.json). Coverage includes 20 new species/continuation/Coercion checks, 102 earlier species checks, 107 older-talent checks (960 individual and 2,040 combined purchases), 47 layout checks at six viewports, campaign checks and ten general system suites. All 35 local browser flows passed, including seven new flows covering the four species, both Lasat and Zabrak starting-rank choices and Zabrak at mobile/desktop widths. Zabrak flows use the real Coercion resolver, inspect the visible automatic-symbol label and retain the roll through manual save/reload/Resume. Controlled dice verify rules, not balance. Physical iPhone Safari was not newly tested.
+
+Hosted verification pending.

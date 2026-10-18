@@ -4,7 +4,7 @@ Current published release before this batch: **1.9.28**. The user authorized con
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The four-profile 1.9.29 batch (Lasat, Togruta, Zeltron and Zabrak) is in verification. Eleven profiles remain. Rise of the Separatists was not found among the accessible supplied Drive files; Clone, Geonosian, Kaminoan and Umbaran remain unverified. Continue with the other guide profiles while that source gap remains, then finish reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The four-profile 1.9.29 batch (Lasat, Togruta, Zeltron and Zabrak) is in verification. Eleven profiles remain. Rise of the Separatists was located among the supplied uploads after the Drive search. Next review Clone, Geonosian, Kaminoan and Umbaran against that book, then the remaining guide profiles and reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -118,4 +118,4 @@ The papercraft game, detailed visual creator and Paper Mario-style exploration/c
 
 ## Update 1.9.29
 
-Lasat (p.165), Togruta (p.287), Zeltron (p.333) and Zabrak (p.330) were visually checked against the supplied 358-page Complete Species Guide v6 fan supplement. Base stats, XP, thresholds and free starting-rank choices match; none were changed. Zabrak Coercion now receives one automatic Advantage instead of a Boost die, including rerolls, with no character bonus field or XP charge. The other three profiles' situational effects remain narrative and are described in their species notes. Final verification pending.
+Lasat (p.165), Togruta (p.287), Zeltron (p.333) and Zabrak (p.330) were visually checked against the supplied 358-page Complete Species Guide v6 fan supplement. Base stats, XP, thresholds and free starting-rank choices match; none were changed. Zabrak Coercion now receives one automatic Advantage instead of a Boost die, including rerolls, with no character bonus field or XP charge. The other three profiles' situational effects remain narrative and are described in their species notes. Local verification passed: 23 regression targets and 35 browser flows. Hosted verification pending. [Verification](species-coercion-verification.md).

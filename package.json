@@ -34,11 +34,12 @@
     "test:creation:lead-by-example": "node scripts/check_creation113.cjs local",
     "test:talents:stay-on-target": "node scripts/check_talents114.cjs",
     "test:creation:stay-on-target": "node scripts/check_creation114.cjs local",
-    "test:species": "node scripts/check_species115.cjs && node scripts/check_species116.cjs && node scripts/check_species117.cjs && node scripts/check_species118.cjs",
+    "test:species": "node scripts/check_species115.cjs && node scripts/check_species116.cjs && node scripts/check_species117.cjs && node scripts/check_species118.cjs && node scripts/check_species119.cjs",
     "test:creation:species": "node scripts/check_creation115.cjs local",
     "test:creation:species-review": "node scripts/check_creation116.cjs local",
     "test:creation:cerean": "node scripts/check_creation117.cjs local",
-    "test:creation:species-repairs": "node scripts/check_creation118.cjs local"
+    "test:creation:species-repairs": "node scripts/check_creation118.cjs local",
+    "test:creation:species-coercion": "node scripts/check_creation119.cjs local"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.10",
