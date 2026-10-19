@@ -1,10 +1,10 @@
 # Sable Reach project roadmap
 
-Current published release: **1.9.29**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
+Current published release before this batch: **1.9.29**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The four-profile 1.9.29 batch (Lasat, Togruta, Zeltron and Zabrak) is complete and published. Eleven profiles remain. Rise of the Separatists was located among the supplied uploads after the Drive search. Next review Clone, Geonosian, Kaminoan and Umbaran against that book, then the remaining guide profiles and reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The 1.9.30 Clone, Geonosian, Kaminoan and Umbaran batch is in verification. Seven fresh reviews remain, starting with Tiss’shar, followed by Mikkian, Dowutin, Phydolon, Gand, Miraluka and Dantari. Finish these and reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -23,10 +23,10 @@ On resumption, inspect current GitHub main, this roadmap, and the latest verific
 
 Source-review backlog:
 
-- [ ] Clone
-- [ ] Geonosian
-- [ ] Kaminoan
-- [ ] Umbaran
+- [x] Clone
+- [x] Geonosian
+- [x] Kaminoan
+- [x] Umbaran
 - [x] Lasat
 - [x] Togruta
 - [x] Zeltron
@@ -119,3 +119,7 @@ The papercraft game, detailed visual creator and Paper Mario-style exploration/c
 ## Update 1.9.29
 
 Lasat (p.165), Togruta (p.287), Zeltron (p.333) and Zabrak (p.330) were visually checked against the supplied 358-page Complete Species Guide v6 fan supplement. Base stats, XP, thresholds and free starting-rank choices match; none were changed. Zabrak Coercion now receives one automatic Advantage instead of a Boost die, including rerolls, with no character bonus field or XP charge. The other three profiles' situational effects remain narrative and are described in their species notes. Verified: 23 regression targets, 35 local browser flows and 7 hosted flows passed. [Verification](species-coercion-verification.md).
+
+## Update 1.9.30
+
+Reviewed four Rise of the Separatists profiles (printed pp.12, 13, 15, 16). Added Clone Physical Training, Kaminoan Researcher and Charm Setback, Umbaran social Boosts, and the Geonosian included-skill choice for new and existing characters. Base stats and past XP spending are unchanged. Geonosian choice is optional on old finalized characters and required on new characters. Flight, assistance, lighting, incoming social modifiers and research time remain narrative. Local verification passed: 25 regression targets and 42 browser flows. Hosted verification pending. [Verification](clone-wars-species-verification.md).

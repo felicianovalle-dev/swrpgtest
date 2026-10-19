@@ -50,6 +50,7 @@
     game.campaign?.validateSnapshot(data);
     window.Talents98?.validateSnapshot(data);
     window.Species117?.validateSnapshot(data);
+    window.Species120?.validateSnapshot(data);
     return data;
   }
   function candidates() {

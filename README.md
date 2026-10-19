@@ -134,3 +134,5 @@ existing viewports, alongside navigation, saving, rotation, and real reloads.
 The [project roadmap](docs/project-roadmap.md) records completed work, remaining priorities and the next resume point. Source checks and feature automation are tracked separately.
 
 Latest species update: [1.9.29 source and Coercion verification](docs/species-coercion-verification.md).
+
+Latest Clone Wars update: [1.9.30 species and continuation verification](docs/clone-wars-species-verification.md).
