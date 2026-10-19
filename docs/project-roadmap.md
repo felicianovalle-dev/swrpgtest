@@ -1,10 +1,10 @@
 # Sable Reach project roadmap
 
-Current published release: **1.9.30**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
+Current published release before this batch: **1.9.30**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The 1.9.30 Clone, Geonosian, Kaminoan and Umbaran batch is complete and published. Seven fresh reviews remain, starting with Tiss’shar, followed by Mikkian, Dowutin, Phydolon, Gand, Miraluka and Dantari. Finish these and reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The Tiss’shar 1.9.31 update is in verification. Six fresh reviews remain: Mikkian, Dowutin, Phydolon, Gand, Miraluka and Dantari. Continue with Mikkian, using the cited official source where the existing profile uses it; distinguish official profiles from fan-guide variants. Finish reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -30,7 +30,7 @@ Source-review backlog:
 - [x] Lasat
 - [x] Togruta
 - [x] Zeltron
-- [ ] Tiss'shar
+- [x] Tiss'shar
 - [x] Zabrak
 - [ ] Mikkian
 - [ ] Dowutin
@@ -123,3 +123,7 @@ Lasat (p.165), Togruta (p.287), Zeltron (p.333) and Zabrak (p.330) were visually
 ## Update 1.9.30
 
 Reviewed four Rise of the Separatists profiles (printed pp.12, 13, 15, 16). Added Clone Physical Training, Kaminoan Researcher and Charm Setback, Umbaran social Boosts, and the Geonosian included-skill choice for new and existing characters. Base stats and past XP spending are unchanged. Geonosian choice is optional on old finalized characters and required on new characters. Flight, assistance, lighting, incoming social modifiers and research time remain narrative. Verified: 25 regression targets, 42 local browser flows and 7 hosted flows passed. [Verification](clone-wars-species-verification.md).
+
+## Update 1.9.31
+
+Reviewed Tiss’shar against the supplied fan guide p.283. New creation uses Intellect 3 and Presence 1; loading and benefit claims preserve older saved characteristics. Added all six subspecies benefits, one-time claims for older characters, rank/XP safeguards and derived talent stacking. Lighting and natural weapons remain narrative. Local verification passed: 27 regression targets and 51 browser flows. Hosted verification pending. [Verification](tissshar-subspecies-verification.md).

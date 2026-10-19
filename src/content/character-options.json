@@ -762,6 +762,26 @@
       "note": "Deception 1 is included. Entrancing Gaze adds one Boost to your Charm, Deception and Negotiation checks. Shadow Dweller removes up to two Setback caused by darkness and adds two Setback in bright natural light; resolve lighting effects narratively.",
       "source": "Rise of the Separatists \u00b7 p.16",
       "verifiedPage120": 16
+    },
+    "tissshar": {
+      "name": "Tiss'shar",
+      "xp": 85,
+      "wt": 11,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 3,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 1
+      },
+      "free": {
+        "Negotiation": 1
+      },
+      "note": "Negotiation 1 is included. Choose one of six subspecies on Identity for its included skill or talent rank. Night Vision removes darkness Setback and adds one Setback in bright light. Claws and Teeth deals +1 Brawl damage as wounds with Critical 3; spending two Advantage to hit with teeth adds Pierce 1 and Vicious 2. Resolve lighting and natural-weapon effects narratively.",
+      "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.283",
+      "verifiedPage121": 283
     }
   },
   "careers": {

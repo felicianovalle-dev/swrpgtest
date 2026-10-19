@@ -136,3 +136,5 @@ The [project roadmap](docs/project-roadmap.md) records completed work, remaining
 Latest species update: [1.9.29 source and Coercion verification](docs/species-coercion-verification.md).
 
 Latest Clone Wars update: [1.9.30 species and continuation verification](docs/clone-wars-species-verification.md).
+
+Latest species update: [1.9.31 Tiss’shar subspecies verification](docs/tissshar-subspecies-verification.md).

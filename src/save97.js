@@ -51,6 +51,7 @@
     window.Talents98?.validateSnapshot(data);
     window.Species117?.validateSnapshot(data);
     window.Species120?.validateSnapshot(data);
+    window.Species121?.validateSnapshot(data);
     return data;
   }
   function candidates() {
