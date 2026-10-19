@@ -138,3 +138,5 @@ Latest species update: [1.9.29 source and Coercion verification](docs/species-co
 Latest Clone Wars update: [1.9.30 species and continuation verification](docs/clone-wars-species-verification.md).
 
 Latest species update: [1.9.31 Tiss’shar subspecies verification](docs/tissshar-subspecies-verification.md).
+
+Latest official species update: [1.9.32 Knights of Fate verification](docs/knights-species-verification.md).

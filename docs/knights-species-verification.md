@@ -1,0 +1,19 @@
+# Knights of Fate species verification — 1.9.32
+
+Build `96.26-knights-species`; save schema 92 remains unchanged. Visually checked the supplied official Knights of Fate scan: Dowutin printed p.19 (PDF 21), Mikkian p.21 (PDF 23), Phydolon p.22 (PDF 24). All saved base characteristics, thresholds, starting XP and included skill-rank choices match the official profiles; none are changed. These official profiles differ from the Complete Species Guide fan variants, so the official versions already used by the game are retained.
+
+Mikkian already adds one Boost to all the PC’s Perception checks, not only auditory checks. Dowutin’s Resilience 1 is included. Large (silhouette 1 or 2 chosen at creation) and Immovable remain narrative: as an out-of-turn incidental, suffer 3 strain, or 1 strain at silhouette 2, to avoid Immobilized, prone or involuntary movement. Size-dependent combat handling is not certified by this review.
+
+Phydolon’s Cool-or-Discipline starting rank is included. New Day already provides two wounds of natural healing and a nightly natural Critical Injury recovery attempt, without another weekly attempt at the week boundary. This update verifies those existing behaviors and explains them in the species notes. The shared failure log now says “on this attempt” rather than “this week,” so a failed nightly attempt does not imply a week-long wait.
+
+Recovery now offers “Another Phydolon is present” when the PC is a Phydolon recovering strain with Cool or Discipline. Unchecked, the existing isolation adjustment reduces positive recovery by one, minimum one; checked, no isolation penalty applies. Rapid Recovery is included before that adjustment. The existing zero-result behavior remains unchanged: no positive recovery means no strain healed. This is an explicit retained interpretation, not a new benefit granted on a failed check.
+
+Presence is temporary context, not character data. It clears on load, leaving Recovery, encounter/day changes, world travel, and changes of patient or recovery action. It does not alter XP, skill ranks, purchases or saved recovery results. The control is hidden for other species, companion patients and Medicine/critical treatment. Companion species are not inferred from the campaign roster; the player confirms the narrative situation. No new save field is introduced.
+
+A related save-safety defect was confirmed: changing the species starting-skill dropdown after finalization reset creation purchases and characteristics. The dropdown is now disabled for finalized characters, and its handler rejects a dispatched change event without changing state. Creation remains editable. Separate one-time missing-benefit claims for older characters remain available.
+
+Three fresh species reviews remain: Gand, Miraluka and Dantari. Source review does not certify complete species automation or later roadmap phases. Source PDFs, private file links and personal campaign lore are excluded from the repository.
+
+All 29 regression targets passed on the exact HTML fingerprint in [the machine-readable report](knights-species-verification.json). Coverage includes 29 new official-profile/continuation/recovery checks, 193 earlier species checks, 107 older-talent checks (960 individual and 2,040 combined purchases), 47 layout checks at six viewports, campaign checks and ten general system suites. All 56 local browser flows passed. Five new flows cover Mikkian at phone/desktop widths, Dowutin, and both Phydolon starting-skill branches. Phydolon flows click actual recovery and New Day controls, check alone/accompanied results and preview text, and preserve recovered wounds/strain through manual save/reload/Resume while clearing the temporary presence checkbox. Controlled rolls verify rules and continuation, not balance. Physical iPhone Safari was not newly tested.
+
+Hosted verification pending.

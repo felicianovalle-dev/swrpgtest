@@ -782,6 +782,67 @@
       "note": "Negotiation 1 is included. Choose one of six subspecies on Identity for its included skill or talent rank. Night Vision removes darkness Setback and adds one Setback in bright light. Claws and Teeth deals +1 Brawl damage as wounds with Critical 3; spending two Advantage to hit with teeth adds Pierce 1 and Vicious 2. Resolve lighting and natural-weapon effects narratively.",
       "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.283",
       "verifiedPage121": 283
+    },
+    "mikkian": {
+      "name": "Mikkian",
+      "xp": 100,
+      "wt": 10,
+      "st": 11,
+      "c": {
+        "Brawn": 1,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 2
+      },
+      "free": {
+        "Discipline": 1
+      },
+      "note": "Discipline 1 is included. Sensory Tendrils adds one Boost to all your Perception checks. This profile follows Knights of Fate; the fan species guide has a different profile.",
+      "source": "Knights of Fate \u00b7 p.21",
+      "verifiedPage122": 21
+    },
+    "dowutin": {
+      "name": "Dowutin",
+      "xp": 85,
+      "wt": 15,
+      "st": 8,
+      "c": {
+        "Brawn": 3,
+        "Agility": 1,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Resilience": 1
+      },
+      "note": "Resilience 1 is included. Large lets you choose silhouette 1 or 2 at creation; record that choice narratively. Immovable is an out-of-turn incidental: suffer 3 strain (1 if silhouette 2) to avoid being Immobilized, knocked prone or moved against your will. Resolve the choice, strain cost and avoided effect narratively.",
+      "source": "Knights of Fate \u00b7 p.19",
+      "verifiedPage122": 19
+    },
+    "phydolon": {
+      "name": "Phydolon",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Cool",
+        "Discipline"
+      ],
+      "note": "Cool 1 or Discipline 1 is included. Symbiotic Resilience gives one extra wound of natural healing and a Critical Injury recovery attempt after each full night of rest; these are included in New Day. When alone, Symbiont Isolation reduces positive end-of-encounter strain recovery by one, minimum one. On Recovery, confirm whether another Phydolon is present to skip that penalty. A check with no positive recovery restores no strain. This follows Knights of Fate, rather than the fan-guide variant.",
+      "source": "Knights of Fate \u00b7 p.22",
+      "verifiedPage122": 22
     }
   },
   "careers": {

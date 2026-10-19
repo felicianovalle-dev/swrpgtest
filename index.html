@@ -4958,7 +4958,7 @@ function renderRecovery(){
   updateRecoveryPreview()
 }
 function updateRecoveryPreview(){
-  if(!$('recoveryPreview'))return;
+  if(!$('recoveryPreview'))return;window.Species122?.renderRecovery();
   let hid=$('healerSelect').value||'pc',pid=$('patientSelect').value||'pc',act=$('recoveryAction').value,skill='Medicine',diff=medicineDifficulty(pid),note='',pst=actorState(pid);
   let wrap=$('criticalSelectWrap'),sel=$('criticalSelect');
   if(wrap)wrap.classList.toggle('hidden',act!=='critical');
@@ -4976,6 +4976,7 @@ function updateRecoveryPreview(){
     let ck=`${medicalWeek()}:${pid}:${cr.uid}`,used=!!S.medical.critTreated[ck];
     note=`Treating ${cr.name} uses ${cr.sev} (${acquisitionLabel(diff)}) difficulty. Source-verified frequency: one treatment attempt for this injury per narrative week.${used?' This injury already had its attempt this week.':''}`
   }
+  if(pid==='pc'&&S.species==='phydolon'&&(act==='cool'||act==='discipline'))note+=window.Species122?.hasPhydolonCompanion()?' Another Phydolon is present: no isolation penalty.':' Alone: positive strain recovery is reduced by one, minimum one; a check with no positive recovery restores no strain.';
   let selfPenalty=(skill==='Medicine'&&hid===pid)?2:0,finalDiff=diff+selfPenalty;
   if(selfPenalty)note+=` Self-treatment increases Medicine difficulty by two.`;
   let p=recoveryActorPool(hid,skill,finalDiff);$('recoveryPreview').innerHTML=`<b>${actorById(hid).name}</b> uses ${skill} on ${actorById(pid).name}<br><div style="margin-top:6px">${dicePoolHTML(p)}</div><div class="tiny" style="margin-top:7px">${note} Recovery assumes access to proper medical equipment.</div>`
@@ -5007,11 +5008,11 @@ function performRecovery(){
     } else bLog(`Medicine check fails: ${rtxt(r)}.`)
   }else if(act==='cool'||act==='discipline'){
     let healed=Math.max(0,r.ns)+(pid==='pc'?talentRank('Rapid Recovery'):0);
-    if(pid==='pc'&&S.species==='phydolon'&&healed>0)healed=Math.max(1,healed-1);
+    if(pid==='pc'&&S.species==='phydolon'&&!window.Species122?.hasPhydolonCompanion()&&healed>0)healed=Math.max(1,healed-1);
     actorHealStrain(pid,healed);
     let hardBoiled=pid==='pc'?Math.min(Math.max(0,r.na),talentRank('Hard-Boiled')):0;
     if(hardBoiled)actorHealWounds('pc',hardBoiled);
-    bLog(`${actorById(pid).name} catches their breath with ${skill}: ${rtxt(r)} · recovers ${healed} strain${hardBoiled?` and ${hardBoiled} wound${hardBoiled===1?'':'s'} from Hard-Boiled`:''}${pid==='pc'&&S.species==='phydolon'?' after Symbiont Isolation':''}.`)
+    bLog(`${actorById(pid).name} catches their breath with ${skill}: ${rtxt(r)} · recovers ${healed} strain${hardBoiled?` and ${hardBoiled} wound${hardBoiled===1?'':'s'} from Hard-Boiled`:''}${pid==='pc'&&S.species==='phydolon'?(window.Species122?.hasPhydolonCompanion()?' with another Phydolon present':' after Symbiont Isolation'):''}.`)
   }else if(act==='critical'){
     let ck=`${medicalWeek()}:${pid}:${cr.uid}`;S.medical.critTreated[ck]=true;
     if(r.ok){
@@ -5055,7 +5056,7 @@ function naturalWeeklyCriticalRecovery(id){
     bLog(`${a.name} naturally recovers from ${cr.name}: ${rtxt(r)}.`);
     if(r.tr&&st.criticals.length){let extra=st.criticals[0];st.criticals=st.criticals.filter(x=>x.uid!==extra.uid);clearHealedCritCondition(id,extra);bLog(`Triumph: ${a.name} also recovers from ${extra.name}.`)}
   }else{
-    actorHealWounds(id,1);bLog(`${a.name} does not recover from ${cr.name} this week (${rtxt(r)}), but recovers 1 additional wound.`)
+    actorHealWounds(id,1);bLog(`${a.name} does not recover from ${cr.name} on this attempt (${rtxt(r)}), but recovers 1 additional wound.`)
   }
 }
 function startNewDay(){
@@ -5886,7 +5887,7 @@ function renderNavTab(id){
   let el=$(id);if(!el)return;document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.tab===id));document.querySelectorAll('.tab').forEach(x=>x.classList.add('hidden'));el.classList.remove('hidden');
   if(id==='guide')renderGuide();if(id==='adventure')renderAdventure();if(id==='ship')renderShip()
 }
-function renderIdentity(){let sp=SPECIES[S.species];let chooser=sp.freeChoice?.length?`<label style="display:block;margin-top:10px">Species skill rank<select id="speciesSkillPick">${sp.freeChoice.map(x=>`<option ${x===S.speciesSkillChoice?'selected':''}>${x}</option>`).join('')}</select></label>`:'';$('speciesInfo').innerHTML=`<div class="row"><div><b>${sp.name}</b><div class="small">${sp.note}</div><div class="tiny">${sp.source||''}</div></div><span class="pill">Starting XP ${sp.xp}</span></div><div class="pills" style="margin-top:9px">${Object.entries(sp.c).map(([k,v])=>`<span class="pill">${k} ${v}</span>`).join('')}</div>${chooser}`;if($('speciesSkillPick'))$('speciesSkillPick').onchange=()=>{S.speciesSkillChoice=$('speciesSkillPick').value;resetCreationPurchases();bLog(`Species skill set to ${S.speciesSkillChoice}.`);renderAll()}}
+function renderIdentity(){let sp=SPECIES[S.species];let chooser=sp.freeChoice?.length?`<label style="display:block;margin-top:10px">Species skill rank<select id="speciesSkillPick" ${S.finalized?'disabled':''}>${sp.freeChoice.map(x=>`<option ${x===S.speciesSkillChoice?'selected':''}>${x}</option>`).join('')}</select></label>`:'';$('speciesInfo').innerHTML=`<div class="row"><div><b>${sp.name}</b><div class="small">${sp.note}</div><div class="tiny">${sp.source||''}</div></div><span class="pill">Starting XP ${sp.xp}</span></div><div class="pills" style="margin-top:9px">${Object.entries(sp.c).map(([k,v])=>`<span class="pill">${k} ${v}</span>`).join('')}</div>${chooser}`;if($('speciesSkillPick'))$('speciesSkillPick').onchange=()=>{if(S.finalized){$('speciesSkillPick').value=S.speciesSkillChoice;return;}S.speciesSkillChoice=$('speciesSkillPick').value;resetCreationPurchases();bLog(`Species skill set to ${S.speciesSkillChoice}.`);renderAll()}}
 function renderCareer(){let c=CAREERS[S.career],spec=c.specs[S.spec],cap=careerPickCap();if($('careerFreeLabel'))$('careerFreeLabel').textContent=`Choose ${cap} free career-skill ranks`;$('careerInfo').innerHTML=`<b>${S.career} / ${S.spec}</b> <span class="tag">${c.line||'Star Wars RPG'}</span><div class="small">Career skills: ${c.skills.join(', ')}</div><div class="small" style="margin-top:4px">Specialization skills: ${spec.join(', ')}</div><div class="small" style="margin-top:4px">Free ranks: choose ${cap} career skills + 2 specialization skills.${c.forceStart?' This career begins with Force Rating 1.':''}</div>`;$('careerPicks').innerHTML=c.skills.map(sk=>`<button class="chip ${S.freeCareer.includes(sk)?'on':''}" data-cp="${sk}">${sk}</button>`).join('');$('specPicks').innerHTML=spec.map(sk=>`<button class="chip ${S.freeSpec.includes(sk)?'on':''}" data-sp="${sk}">${sk}</button>`).join('');document.querySelectorAll('[data-cp]').forEach(b=>b.onclick=()=>toggleFree('career',b.dataset.cp));document.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>toggleFree('spec',b.dataset.sp))}
 function renderSkills(){let cs=careerSkills();$('skillList').innerHTML=Object.keys(SKILL_CHAR).sort((a,b)=>(cs.has(b)?1:0)-(cs.has(a)?1:0)||a.localeCompare(b)).map(sk=>{let r=S.skills[sk]||0;return`<div class="skill"><div class="${cs.has(sk)?'career':''}"><b>${sk}</b>${cs.has(sk)?' ★':''}<div class="tiny">${SKILL_CHAR[sk]}</div></div><div>Rank <b>${r}</b></div><div>${skillCost(sk)} XP</div><div><button data-bs="${sk}">+</button> <button data-us="${sk}" ${r>freeFloor(sk)?'':'disabled'}>−</button></div></div>`}).join('');document.querySelectorAll('[data-bs]').forEach(b=>b.onclick=()=>buySkill(b.dataset.bs));document.querySelectorAll('[data-us]').forEach(b=>b.onclick=()=>undoSkill(b.dataset.us))}
 function renderChars(){$('charGrid').innerHTML=Object.entries(S.chars).map(([ch,v])=>`<div class="char"><div class="tiny">${ch}</div><div class="v">${v}</div><div class="tiny">Next ${v<5?(v+1)*10+' XP':'MAX'}</div><button data-bc="${ch}" ${S.finalized?'disabled':''}>Increase</button><button data-uc="${ch}" ${(S.charSpend[ch]||[]).length&&!S.finalized?'':'disabled'}>Undo</button></div>`).join('');document.querySelectorAll('[data-bc]').forEach(b=>b.onclick=()=>buyChar(b.dataset.bc));document.querySelectorAll('[data-uc]').forEach(b=>b.onclick=()=>undoChar(b.dataset.uc))}
@@ -16025,6 +16026,67 @@ window.CharacterCatalog97 = (() => {
       "note": "Negotiation 1 is included. Choose one of six subspecies on Identity for its included skill or talent rank. Night Vision removes darkness Setback and adds one Setback in bright light. Claws and Teeth deals +1 Brawl damage as wounds with Critical 3; spending two Advantage to hit with teeth adds Pierce 1 and Vicious 2. Resolve lighting and natural-weapon effects narratively.",
       "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.283",
       "verifiedPage121": 283
+    },
+    "mikkian": {
+      "name": "Mikkian",
+      "xp": 100,
+      "wt": 10,
+      "st": 11,
+      "c": {
+        "Brawn": 1,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 2
+      },
+      "free": {
+        "Discipline": 1
+      },
+      "note": "Discipline 1 is included. Sensory Tendrils adds one Boost to all your Perception checks. This profile follows Knights of Fate; the fan species guide has a different profile.",
+      "source": "Knights of Fate \u00b7 p.21",
+      "verifiedPage122": 21
+    },
+    "dowutin": {
+      "name": "Dowutin",
+      "xp": 85,
+      "wt": 15,
+      "st": 8,
+      "c": {
+        "Brawn": 3,
+        "Agility": 1,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Resilience": 1
+      },
+      "note": "Resilience 1 is included. Large lets you choose silhouette 1 or 2 at creation; record that choice narratively. Immovable is an out-of-turn incidental: suffer 3 strain (1 if silhouette 2) to avoid being Immobilized, knocked prone or moved against your will. Resolve the choice, strain cost and avoided effect narratively.",
+      "source": "Knights of Fate \u00b7 p.19",
+      "verifiedPage122": 19
+    },
+    "phydolon": {
+      "name": "Phydolon",
+      "xp": 100,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Cool",
+        "Discipline"
+      ],
+      "note": "Cool 1 or Discipline 1 is included. Symbiotic Resilience gives one extra wound of natural healing and a Critical Injury recovery attempt after each full night of rest; these are included in New Day. When alone, Symbiont Isolation reduces positive end-of-encounter strain recovery by one, minimum one. On Recovery, confirm whether another Phydolon is present to skip that penalty. A check with no positive recovery restores no strain. This follows Knights of Fate, rather than the fan-guide variant.",
+      "source": "Knights of Fate \u00b7 p.22",
+      "verifiedPage122": 22
     }
   },
   "careers": {
@@ -56814,7 +56876,7 @@ window.CampaignContent97 = (() => {
   function renderAudit() {
     const parent=$('about97');if(!parent)return;let box=$('catalogAudit97');if(!box){box=document.createElement('section');box.id='catalogAudit97';box.className='creation-profile97';parent.prepend(box);}
     const c=catalog.coverage();
-    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Cerean, Lannik, Gungan and Kel Dor have also been checked. Cerean Intellectuals now supports two chosen Knowledge career skills without free ranks. Lannik, Gungan and Kel Dor situational effects remain narrative. Sluissi, Weequay, Wookiee, Toydarian, Trandoshan, Twi’lek, Nautolan and Mon Calamari have also been checked. Sluissi now includes Solid Repairs; the other reviewed traits remain narrative. Lasat, Togruta, Zeltron and Zabrak have also been checked. Zabrak Coercion now includes one automatic Advantage instead of a Boost die. The other three profiles’ situational effects remain narrative. Clone, Geonosian, Kaminoan and Umbaran have now been checked against Rise of the Separatists. Clone includes Physical Training, Kaminoan includes Researcher and its Charm Setback, Umbaran includes Entrancing Gaze, and Geonosian supports one chosen starting skill rank. Flight, assistance, lighting and targeted social effects still require narrative resolution. Tiss’shar has also been checked against the Complete Species Guide. New Tiss’shar use Intellect 3 and Presence 1; existing saved characteristics remain unchanged. All six subspecies choices grant their included skill or talent. Natural weapons and lighting remain narrative. Six older profiles still await a fresh source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
+    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Cerean, Lannik, Gungan and Kel Dor have also been checked. Cerean Intellectuals now supports two chosen Knowledge career skills without free ranks. Lannik, Gungan and Kel Dor situational effects remain narrative. Sluissi, Weequay, Wookiee, Toydarian, Trandoshan, Twi’lek, Nautolan and Mon Calamari have also been checked. Sluissi now includes Solid Repairs; the other reviewed traits remain narrative. Lasat, Togruta, Zeltron and Zabrak have also been checked. Zabrak Coercion now includes one automatic Advantage instead of a Boost die. The other three profiles’ situational effects remain narrative. Clone, Geonosian, Kaminoan and Umbaran have now been checked against Rise of the Separatists. Clone includes Physical Training, Kaminoan includes Researcher and its Charm Setback, Umbaran includes Entrancing Gaze, and Geonosian supports one chosen starting skill rank. Flight, assistance, lighting and targeted social effects still require narrative resolution. Tiss’shar has also been checked against the Complete Species Guide. New Tiss’shar use Intellect 3 and Presence 1; existing saved characteristics remain unchanged. All six subspecies choices grant their included skill or talent. Natural weapons and lighting remain narrative. Mikkian, Dowutin and Phydolon have also been checked against Knights of Fate; their official stats are retained instead of fan-guide variants. Mikkian already adds its Perception Boost. Phydolon nightly recovery is verified, and Recovery now asks whether another Phydolon is present for Symbiont Isolation. Dowutin size and Immovable remain narrative. Three older profiles still await a fresh source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
   }
   function render() { renderSetup();renderPersonal();renderOpening();renderCreationExtras();renderAudit();const q=S.story61?.active,t=STORY_TEMPLATES_61[q?.templateId],panel=$('story61tab');if(t?.campaign97&&panel&&!panel.querySelector('.campaign-source97')){const p=document.createElement('p');p.className='campaign-source97';p.textContent=`${t.campaign97.kind} · ${t.campaign97.source}`;panel.appendChild(p);} }
   function install() {
@@ -56831,7 +56893,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.25-tissshar-subspecies';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.26-knights-species';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 
@@ -56955,6 +57017,25 @@ window.CampaignContent97 = (() => {
  }
  window.Species121={pending,choose,validateSnapshot,renderReview,skillChoice,skillBonus,talentBonus};
  game.on('render',render);game.on('hydrate',data=>{if(data.tisssharSubtype121===undefined)delete S.tisssharSubtype121;render();});game.on('navigate',({id})=>{if(['identity','review'].includes(id))render();});
+})();
+
+/* Encounter-local recovery context. Never persists into a character save. */
+(()=>{
+ 'use strict';
+ let scope=null;
+ const active=()=>S.species==='phydolon'&&$('patientSelect')?.value==='pc'&&['cool','discipline'].includes($('recoveryAction')?.value);
+ const key=()=>`${S.species}:${S.medical.encounter}:${S.medical.day}:${S.world?.day}:${S.world?.currentHub}:${$('patientSelect')?.value}:${$('recoveryAction')?.value}`;
+ function hasPhydolonCompanion(){return active()&&scope===key()&&$('phydolonCompanion122')?.checked===true;}
+ function clearContext(){scope=null;if($('phydolonCompanion122'))$('phydolonCompanion122').checked=false;}
+ function renderRecovery(){
+  if(!$('recoveryPreview'))return;
+  let box=$('phydolonContext122');
+  if(!box){box=document.createElement('div');box.id='phydolonContext122';box.className='creation-note97';box.innerHTML='<label style="display:flex;align-items:center;gap:8px"><input style="width:auto;flex:0 0 auto" type="checkbox" id="phydolonCompanion122"> Another Phydolon is present</label><p>When alone, Symbiont Isolation reduces positive end-of-encounter strain recovery by one, to a minimum of one. Confirm who is present for this recovery. This context is cleared on load, a new encounter/day, leaving Recovery, or a change of recovery action or patient.</p>';$('recoveryPreview').before(box);$('phydolonCompanion122').onchange=updateRecoveryPreview;}
+  const current=key();if(!active()||scope!==current)$('phydolonCompanion122').checked=false;scope=active()?current:null;box.classList.toggle('hidden',!active());
+ }
+ window.Species122={renderRecovery,hasPhydolonCompanion,clearContext};
+ Game97.on('hydrate',()=>{clearContext();renderRecovery();});
+ Game97.on('navigate',({id})=>{if(id==='recovery')renderRecovery();else clearContext();});
 })();
 
 try{Game97.boot();markBoot90('Ready to play.',true)}catch(e){showRuntimeError(`Opening failed: ${e.message}`)}</script>

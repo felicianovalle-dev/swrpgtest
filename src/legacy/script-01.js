@@ -3071,7 +3071,7 @@ function renderRecovery(){
   updateRecoveryPreview()
 }
 function updateRecoveryPreview(){
-  if(!$('recoveryPreview'))return;
+  if(!$('recoveryPreview'))return;window.Species122?.renderRecovery();
   let hid=$('healerSelect').value||'pc',pid=$('patientSelect').value||'pc',act=$('recoveryAction').value,skill='Medicine',diff=medicineDifficulty(pid),note='',pst=actorState(pid);
   let wrap=$('criticalSelectWrap'),sel=$('criticalSelect');
   if(wrap)wrap.classList.toggle('hidden',act!=='critical');
@@ -3089,6 +3089,7 @@ function updateRecoveryPreview(){
     let ck=`${medicalWeek()}:${pid}:${cr.uid}`,used=!!S.medical.critTreated[ck];
     note=`Treating ${cr.name} uses ${cr.sev} (${acquisitionLabel(diff)}) difficulty. Source-verified frequency: one treatment attempt for this injury per narrative week.${used?' This injury already had its attempt this week.':''}`
   }
+  if(pid==='pc'&&S.species==='phydolon'&&(act==='cool'||act==='discipline'))note+=window.Species122?.hasPhydolonCompanion()?' Another Phydolon is present: no isolation penalty.':' Alone: positive strain recovery is reduced by one, minimum one; a check with no positive recovery restores no strain.';
   let selfPenalty=(skill==='Medicine'&&hid===pid)?2:0,finalDiff=diff+selfPenalty;
   if(selfPenalty)note+=` Self-treatment increases Medicine difficulty by two.`;
   let p=recoveryActorPool(hid,skill,finalDiff);$('recoveryPreview').innerHTML=`<b>${actorById(hid).name}</b> uses ${skill} on ${actorById(pid).name}<br><div style="margin-top:6px">${dicePoolHTML(p)}</div><div class="tiny" style="margin-top:7px">${note} Recovery assumes access to proper medical equipment.</div>`
@@ -3120,11 +3121,11 @@ function performRecovery(){
     } else bLog(`Medicine check fails: ${rtxt(r)}.`)
   }else if(act==='cool'||act==='discipline'){
     let healed=Math.max(0,r.ns)+(pid==='pc'?talentRank('Rapid Recovery'):0);
-    if(pid==='pc'&&S.species==='phydolon'&&healed>0)healed=Math.max(1,healed-1);
+    if(pid==='pc'&&S.species==='phydolon'&&!window.Species122?.hasPhydolonCompanion()&&healed>0)healed=Math.max(1,healed-1);
     actorHealStrain(pid,healed);
     let hardBoiled=pid==='pc'?Math.min(Math.max(0,r.na),talentRank('Hard-Boiled')):0;
     if(hardBoiled)actorHealWounds('pc',hardBoiled);
-    bLog(`${actorById(pid).name} catches their breath with ${skill}: ${rtxt(r)} · recovers ${healed} strain${hardBoiled?` and ${hardBoiled} wound${hardBoiled===1?'':'s'} from Hard-Boiled`:''}${pid==='pc'&&S.species==='phydolon'?' after Symbiont Isolation':''}.`)
+    bLog(`${actorById(pid).name} catches their breath with ${skill}: ${rtxt(r)} · recovers ${healed} strain${hardBoiled?` and ${hardBoiled} wound${hardBoiled===1?'':'s'} from Hard-Boiled`:''}${pid==='pc'&&S.species==='phydolon'?(window.Species122?.hasPhydolonCompanion()?' with another Phydolon present':' after Symbiont Isolation'):''}.`)
   }else if(act==='critical'){
     let ck=`${medicalWeek()}:${pid}:${cr.uid}`;S.medical.critTreated[ck]=true;
     if(r.ok){
@@ -3168,7 +3169,7 @@ function naturalWeeklyCriticalRecovery(id){
     bLog(`${a.name} naturally recovers from ${cr.name}: ${rtxt(r)}.`);
     if(r.tr&&st.criticals.length){let extra=st.criticals[0];st.criticals=st.criticals.filter(x=>x.uid!==extra.uid);clearHealedCritCondition(id,extra);bLog(`Triumph: ${a.name} also recovers from ${extra.name}.`)}
   }else{
-    actorHealWounds(id,1);bLog(`${a.name} does not recover from ${cr.name} this week (${rtxt(r)}), but recovers 1 additional wound.`)
+    actorHealWounds(id,1);bLog(`${a.name} does not recover from ${cr.name} on this attempt (${rtxt(r)}), but recovers 1 additional wound.`)
   }
 }
 function startNewDay(){
@@ -3999,7 +4000,7 @@ function renderNavTab(id){
   let el=$(id);if(!el)return;document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.tab===id));document.querySelectorAll('.tab').forEach(x=>x.classList.add('hidden'));el.classList.remove('hidden');
   if(id==='guide')renderGuide();if(id==='adventure')renderAdventure();if(id==='ship')renderShip()
 }
-function renderIdentity(){let sp=SPECIES[S.species];let chooser=sp.freeChoice?.length?`<label style="display:block;margin-top:10px">Species skill rank<select id="speciesSkillPick">${sp.freeChoice.map(x=>`<option ${x===S.speciesSkillChoice?'selected':''}>${x}</option>`).join('')}</select></label>`:'';$('speciesInfo').innerHTML=`<div class="row"><div><b>${sp.name}</b><div class="small">${sp.note}</div><div class="tiny">${sp.source||''}</div></div><span class="pill">Starting XP ${sp.xp}</span></div><div class="pills" style="margin-top:9px">${Object.entries(sp.c).map(([k,v])=>`<span class="pill">${k} ${v}</span>`).join('')}</div>${chooser}`;if($('speciesSkillPick'))$('speciesSkillPick').onchange=()=>{S.speciesSkillChoice=$('speciesSkillPick').value;resetCreationPurchases();bLog(`Species skill set to ${S.speciesSkillChoice}.`);renderAll()}}
+function renderIdentity(){let sp=SPECIES[S.species];let chooser=sp.freeChoice?.length?`<label style="display:block;margin-top:10px">Species skill rank<select id="speciesSkillPick" ${S.finalized?'disabled':''}>${sp.freeChoice.map(x=>`<option ${x===S.speciesSkillChoice?'selected':''}>${x}</option>`).join('')}</select></label>`:'';$('speciesInfo').innerHTML=`<div class="row"><div><b>${sp.name}</b><div class="small">${sp.note}</div><div class="tiny">${sp.source||''}</div></div><span class="pill">Starting XP ${sp.xp}</span></div><div class="pills" style="margin-top:9px">${Object.entries(sp.c).map(([k,v])=>`<span class="pill">${k} ${v}</span>`).join('')}</div>${chooser}`;if($('speciesSkillPick'))$('speciesSkillPick').onchange=()=>{if(S.finalized){$('speciesSkillPick').value=S.speciesSkillChoice;return;}S.speciesSkillChoice=$('speciesSkillPick').value;resetCreationPurchases();bLog(`Species skill set to ${S.speciesSkillChoice}.`);renderAll()}}
 function renderCareer(){let c=CAREERS[S.career],spec=c.specs[S.spec],cap=careerPickCap();if($('careerFreeLabel'))$('careerFreeLabel').textContent=`Choose ${cap} free career-skill ranks`;$('careerInfo').innerHTML=`<b>${S.career} / ${S.spec}</b> <span class="tag">${c.line||'Star Wars RPG'}</span><div class="small">Career skills: ${c.skills.join(', ')}</div><div class="small" style="margin-top:4px">Specialization skills: ${spec.join(', ')}</div><div class="small" style="margin-top:4px">Free ranks: choose ${cap} career skills + 2 specialization skills.${c.forceStart?' This career begins with Force Rating 1.':''}</div>`;$('careerPicks').innerHTML=c.skills.map(sk=>`<button class="chip ${S.freeCareer.includes(sk)?'on':''}" data-cp="${sk}">${sk}</button>`).join('');$('specPicks').innerHTML=spec.map(sk=>`<button class="chip ${S.freeSpec.includes(sk)?'on':''}" data-sp="${sk}">${sk}</button>`).join('');document.querySelectorAll('[data-cp]').forEach(b=>b.onclick=()=>toggleFree('career',b.dataset.cp));document.querySelectorAll('[data-sp]').forEach(b=>b.onclick=()=>toggleFree('spec',b.dataset.sp))}
 function renderSkills(){let cs=careerSkills();$('skillList').innerHTML=Object.keys(SKILL_CHAR).sort((a,b)=>(cs.has(b)?1:0)-(cs.has(a)?1:0)||a.localeCompare(b)).map(sk=>{let r=S.skills[sk]||0;return`<div class="skill"><div class="${cs.has(sk)?'career':''}"><b>${sk}</b>${cs.has(sk)?' ★':''}<div class="tiny">${SKILL_CHAR[sk]}</div></div><div>Rank <b>${r}</b></div><div>${skillCost(sk)} XP</div><div><button data-bs="${sk}">+</button> <button data-us="${sk}" ${r>freeFloor(sk)?'':'disabled'}>−</button></div></div>`}).join('');document.querySelectorAll('[data-bs]').forEach(b=>b.onclick=()=>buySkill(b.dataset.bs));document.querySelectorAll('[data-us]').forEach(b=>b.onclick=()=>undoSkill(b.dataset.us))}
 function renderChars(){$('charGrid').innerHTML=Object.entries(S.chars).map(([ch,v])=>`<div class="char"><div class="tiny">${ch}</div><div class="v">${v}</div><div class="tiny">Next ${v<5?(v+1)*10+' XP':'MAX'}</div><button data-bc="${ch}" ${S.finalized?'disabled':''}>Increase</button><button data-uc="${ch}" ${(S.charSpend[ch]||[]).length&&!S.finalized?'':'disabled'}>Undo</button></div>`).join('');document.querySelectorAll('[data-bc]').forEach(b=>b.onclick=()=>buyChar(b.dataset.bc));document.querySelectorAll('[data-uc]').forEach(b=>b.onclick=()=>undoChar(b.dataset.uc))}
