@@ -1212,7 +1212,137 @@
     }
   ],
   "hostedVerification": {
-    "status": "pending"
+    "status": "passed",
+    "deployment": {
+      "id": 39185681548,
+      "head_sha": "c5a8904968c68d6199a74d0c3e29a17304d5df2e",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39185681548"
+    },
+    "servedBytes": {
+      "status": "passed",
+      "commit": "c5a8904968c68d6199a74d0c3e29a17304d5df2e",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=c5a8904968c6&check=1792373487",
+      "httpStatus": 200,
+      "bytes": 4111452,
+      "gitBlob": "c5d9f9333afcc1a8b601751c24318e67718d8b58",
+      "sha256": "371905654c2477066f47245dc54bce1a6f7d933ec3f47059ebdbba38488e24a9"
+    },
+    "creationAndLegacyContinuation": [
+      {
+        "species": "gand",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 320,
+        "height": 568,
+        "respiration": "lungless",
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "gand",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "respiration": "ammonia",
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "gand",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 1280,
+        "height": 800,
+        "respiration": "ammonia",
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "miraluka",
+        "speciesChoice": "Perception",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 375,
+        "height": 667,
+        "respiration": null,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "miraluka",
+        "speciesChoice": "Vigilance",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 428,
+        "height": 926,
+        "respiration": null,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "dantari",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "respiration": null,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "gand",
+        "respiration": "lungless",
+        "legacy": true,
+        "onceOnly": true,
+        "saveReload": true,
+        "overflow": false
+      },
+      {
+        "species": "gand",
+        "respiration": "ammonia",
+        "legacy": true,
+        "onceOnly": true,
+        "saveReload": true,
+        "overflow": false
+      }
+    ]
   },
   "limits": [
     "The 44 existing profiles have recorded source reviews; the complete guide is not imported.",
