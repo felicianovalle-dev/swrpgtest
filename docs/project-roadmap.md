@@ -1,10 +1,10 @@
 # Sable Reach project roadmap
 
-Current published release: **1.9.32**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
+Current published release before this batch: **1.9.32**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The Knights of Fate 1.9.32 batch (Mikkian, Dowutin and Phydolon) is complete and published. Three fresh reviews remain: Gand, Miraluka and Dantari. Continue with Gand. Distinguish official profiles from fan-guide variants and preserve old progress. Finish reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The final existing-profile source-review batch (Gand, Miraluka and Dantari), including the Gand respiration choice, is in verification. No fresh reviews remain in the existing roster; species work is still incomplete. Continue with an inventory of remaining manual species effects and their required context before selecting an implementation batch. Distinguish official profiles from fan-guide variants and preserve old progress. Finish reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -35,9 +35,9 @@ Source-review backlog:
 - [x] Mikkian
 - [x] Dowutin
 - [x] Phydolon
-- [ ] Gand
-- [ ] Miraluka
-- [ ] Dantari
+- [x] Gand
+- [x] Miraluka
+- [x] Dantari
 
 This batch's source reviews:
 
@@ -131,3 +131,7 @@ Reviewed Tiss’shar against the supplied fan guide p.283. New creation uses Int
 ## Update 1.9.32
 
 Reviewed official Knights of Fate profiles: Dowutin p.19, Mikkian p.21, Phydolon p.22. Official baseline stats and prior progress are unchanged. Verified existing Perception Boost and nightly Phydolon recovery. Added temporary accompanied/alone recovery context for Symbiont Isolation; no new save fields. Locked the finalized starting-skill control and guarded its handler to prevent accidental creation resets. Dowutin size and Immovable remain narrative. Verified: 29 regression targets, 56 local browser flows and 5 hosted flows passed. [Verification](knights-species-verification.md).
+
+## Update 1.9.33
+
+Reviewed Gand (p.106), Miraluka (p.178) and Dantari (p.70) against the supplied 358-page fan guide. Base stats and starting ranks are unchanged. Added a once-only Gand respiration choice, including +10 XP for With lungs and explicit older-save claims. Remaining breathing, Rituals, Miraluka sight and Dantari technology effects are manual and disclosed. Local verification passed: 31 regression targets and 64 browser flows. Hosted verification pending. [Verification](gand-guide-verification.md).

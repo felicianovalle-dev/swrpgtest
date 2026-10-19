@@ -52,6 +52,7 @@
     window.Species117?.validateSnapshot(data);
     window.Species120?.validateSnapshot(data);
     window.Species121?.validateSnapshot(data);
+    window.Species123?.validateSnapshot(data);
     return data;
   }
   function candidates() {

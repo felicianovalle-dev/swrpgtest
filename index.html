@@ -5622,7 +5622,7 @@ function careerSkills(){
   if(window.CharacterCatalog97)for(const sk of CharacterCatalog97.bonusSkills())s.add(sk);
   return s
 }
-function resetCreationPurchases(){delete S.speciesCareerSkills117;if(S.species!=='tissshar')delete S.tisssharSubtype121;if(S.species!=='geonosian')delete S.geonosianSkill120;S.talentChoices98={};S.talentImports98=[];S.speciesBonus97=[];S.universalKnowledge97={};let sp=SPECIES[S.species];S.chars={...sp.c};S.charSpend={};S.skills={...(sp.free||{})};let subtypeSkill121=window.Species121?.skillChoice();if(subtypeSkill121)S.skills[subtypeSkill121]=(S.skills[subtypeSkill121]||0)+1;if(S.species==='geonosian'&&SKILL_CHAR[S.geonosianSkill120])S.skills[S.geonosianSkill120]=1;if(sp.freeChoice?.length){let pick=S.speciesSkillChoice&&sp.freeChoice.includes(S.speciesSkillChoice)?S.speciesSkillChoice:sp.freeChoice[0];S.speciesSkillChoice=pick;S.skills[pick]=(S.skills[pick]||0)+1}S.xpSpent=0;S.freeCareer=[];S.freeSpec=[];S.talents=new Set();S.dedication={};S.ownedSpecs=[S.spec];S.specTalents={[S.spec]:S.talents};S.talentView=S.spec;S.universalSpecs=[];S.universalTalents={'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()};S.universalView='Force Sensitive Exile';S.forceRating=isForceCareer()?1:0;S.forceOwned={Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()};S.forceCommitted={sense:false,brawn:false,agility:false};S.foreseeBoost=0}function selectSpecies(reset=true){if(S.finalized)return;delete S.tisssharSubtype121;delete S.geonosianSkill120;let sp=SPECIES[$('species').value];S.species=$('species').value;S.speciesSkillChoice=sp.freeChoice?.[0]||null;S.base={...sp.c};S.xpStart=sp.xp;resetCreationPurchases();if(reset)bLog(`Species set to ${sp.name}; creation purchases reset.`);renderAll()}
+function resetCreationPurchases(){delete S.speciesCareerSkills117;if(S.species!=='gand')delete S.gandRespiration123;if(S.species!=='tissshar')delete S.tisssharSubtype121;if(S.species!=='geonosian')delete S.geonosianSkill120;S.talentChoices98={};S.talentImports98=[];S.speciesBonus97=[];S.universalKnowledge97={};let sp=SPECIES[S.species];S.chars={...sp.c};S.charSpend={};S.skills={...(sp.free||{})};let subtypeSkill121=window.Species121?.skillChoice();if(subtypeSkill121)S.skills[subtypeSkill121]=(S.skills[subtypeSkill121]||0)+1;if(S.species==='geonosian'&&SKILL_CHAR[S.geonosianSkill120])S.skills[S.geonosianSkill120]=1;if(sp.freeChoice?.length){let pick=S.speciesSkillChoice&&sp.freeChoice.includes(S.speciesSkillChoice)?S.speciesSkillChoice:sp.freeChoice[0];S.speciesSkillChoice=pick;S.skills[pick]=(S.skills[pick]||0)+1}S.xpSpent=0;S.freeCareer=[];S.freeSpec=[];S.talents=new Set();S.dedication={};S.ownedSpecs=[S.spec];S.specTalents={[S.spec]:S.talents};S.talentView=S.spec;S.universalSpecs=[];S.universalTalents={'Force Sensitive Exile':new Set(),'Force-Sensitive Emergent':new Set()};S.universalView='Force Sensitive Exile';S.forceRating=isForceCareer()?1:0;S.forceOwned={Move:new Set(),Sense:new Set(),Enhance:new Set(),Influence:new Set(),Foresee:new Set()};S.forceCommitted={sense:false,brawn:false,agility:false};S.foreseeBoost=0}function selectSpecies(reset=true){if(S.finalized)return;delete S.gandRespiration123;delete S.tisssharSubtype121;delete S.geonosianSkill120;let sp=SPECIES[$('species').value];S.species=$('species').value;S.speciesSkillChoice=sp.freeChoice?.[0]||null;S.base={...sp.c};S.xpStart=sp.xp;resetCreationPurchases();if(reset)bLog(`Species set to ${sp.name}; creation purchases reset.`);renderAll()}
 function selectCareer(reset=true){if(S.finalized)return;let chosen=$('careerSelect').value;if(chosen==='Clone Soldier'&&S.species!=='clone'){$('careerSelect').value=S.career;bLog('Choose the Clone species to use Clone Soldier.');return}S.career=chosen;if(CAREERS[S.career].forceStart){S.framework='Morality';if($('framework'))$('framework').value='Morality'}let specs=Object.keys(CAREERS[S.career].specs);$('specSelect').innerHTML=specs.map(x=>`<option>${x}</option>`).join('');S.spec=specs[0];if(!S.finalized)resetCreationPurchases();if(reset)bLog(`Career set to ${S.career}; creation purchases reset for the new career.`);renderAll()}
 function selectSpec(){if(S.finalized)return;let chosen=$('specSelect').value;if(window.CharacterCatalog97?.requirement(chosen).forceRating){$('specSelect').value=S.spec;bLog('Begin as a Padawan. Acquire this advanced Jedi specialization after reaching its required Force Rating.');return}S.spec=chosen;if(!S.finalized)resetCreationPurchases();bLog(`Specialization set to ${S.spec}; creation purchases reset.`);renderAll()}
 function toggleFree(kind,sk){if(S.finalized)return;if(!(kind==='career'?CAREERS[S.career].skills:CAREERS[S.career].specs[S.spec]).includes(sk))return;let arr=kind==='career'?S.freeCareer:S.freeSpec,cap=kind==='career'?careerPickCap():2;if(arr.includes(sk)){arr.splice(arr.indexOf(sk),1);S.skills[sk]=Math.max(0,(S.skills[sk]||0)-1)}else if(arr.length<cap){if((S.skills[sk]||0)>=2){bLog('Starting skill ranks cannot exceed 2.');return}arr.push(sk);S.skills[sk]=(S.skills[sk]||0)+1}else bLog(`Only ${cap} free ${kind} picks are allowed.`);renderAll()}
@@ -5963,7 +5963,7 @@ function renderHud(){
   $('adventureTab').disabled=!S.finalized;if($('shipTab'))$('shipTab').disabled=!S.ship?.owned;updateGlobalStatus();renderQuickHud();applyVisualSettings()
 }
 function renderLogs(){$('buildLog').innerHTML=S.buildLog.map(x=>`<div>${x}</div>`).join('')||'<div class="small">No build events yet.</div>';$('gameLog').innerHTML=S.gameLog.map(x=>`<div>${x}</div>`).join('')||'<div class="small">No session events yet.</div>'}
-function finalize(){if(S.finalized)return;if(window.Species121?.pending()){bLog('Choose your Tiss’shar subspecies first.');renderNavTab('identity');return;}if(window.Species120?.pending()){bLog('Choose your included Geonosian skill rank first.');renderNavTab('identity');return;}if(window.Species117?.pending()){bLog('Choose your two Intellectuals Knowledge career skills first.');renderNavTab('career');return;}if(window.Game97?.campaign?.hasSetup()&&!Game97.campaign.checkBeforeFinalize())return;let cap=careerPickCap();if(S.freeCareer.length!==cap||S.freeSpec.length!==2){bLog('Complete your free skill selections first.');return}S.name=$('name').value.trim()||'Unnamed Drifter';let carry=Math.max(0,S.xpStart-S.xpSpent);S.earnedXp+=carry;S.finalized=true;let forms=['Niman Disciple','Soresu Defender','Makashi Duelist','Ataru Striker','Shien Expert','Shii-Cho Knight'];S.weapon=forms.includes(S.spec)?'lightsaber':S.career==='Bounty Hunter'||S.career==='Hired Gun'?'carbine':S.career==='Smuggler'?'pistol':'holdout';S.armor=S.armor||'heavyClothing';S.ep15={initialized:true,location:'cantina',mainStage:0,dungeonStage:0,quests:{},rep:{Rebels:0,Hutts:0,Empire:0,Guild:0,Local:0},intel:0,salvage:0,visited:{},flags:{},loot:{},completed:[],lastNpc:null};ensurePhase15State();ensureInventory();bLog(`Character finalized. ${carry} unspent creation XP carried into advancement. Episode 0 unlocked.`);renderAll();renderNavTab('adventure')}
+function finalize(){if(S.finalized)return;if(window.Species123?.pending()){bLog('Choose your Gand respiration subtype first.');renderNavTab('identity');return;}if(window.Species121?.pending()){bLog('Choose your Tiss’shar subspecies first.');renderNavTab('identity');return;}if(window.Species120?.pending()){bLog('Choose your included Geonosian skill rank first.');renderNavTab('identity');return;}if(window.Species117?.pending()){bLog('Choose your two Intellectuals Knowledge career skills first.');renderNavTab('career');return;}if(window.Game97?.campaign?.hasSetup()&&!Game97.campaign.checkBeforeFinalize())return;let cap=careerPickCap();if(S.freeCareer.length!==cap||S.freeSpec.length!==2){bLog('Complete your free skill selections first.');return}S.name=$('name').value.trim()||'Unnamed Drifter';let carry=Math.max(0,S.xpStart-S.xpSpent);S.earnedXp+=carry;S.finalized=true;let forms=['Niman Disciple','Soresu Defender','Makashi Duelist','Ataru Striker','Shien Expert','Shii-Cho Knight'];S.weapon=forms.includes(S.spec)?'lightsaber':S.career==='Bounty Hunter'||S.career==='Hired Gun'?'carbine':S.career==='Smuggler'?'pistol':'holdout';S.armor=S.armor||'heavyClothing';S.ep15={initialized:true,location:'cantina',mainStage:0,dungeonStage:0,quests:{},rep:{Rebels:0,Hutts:0,Empire:0,Guild:0,Local:0},intel:0,salvage:0,visited:{},flags:{},loot:{},completed:[],lastNpc:null};ensurePhase15State();ensureInventory();bLog(`Character finalized. ${carry} unspent creation XP carried into advancement. Episode 0 unlocked.`);renderAll();renderNavTab('adventure')}
 function serializableState(){
   ensurePhase9State();ensurePhase16State();return {...S,schemaVersion:52,talents:[...S.talents],specTalents:Object.fromEntries(Object.entries(S.specTalents).map(([k,v])=>[k,[...v]])),forceOwned:Object.fromEntries(Object.entries(S.forceOwned).map(([k,v])=>[k,[...v]])),
     universalTalents:Object.fromEntries(Object.entries(S.universalTalents).map(([k,v])=>[k,[...v]]))}
@@ -16087,6 +16087,67 @@ window.CharacterCatalog97 = (() => {
       "note": "Cool 1 or Discipline 1 is included. Symbiotic Resilience gives one extra wound of natural healing and a Critical Injury recovery attempt after each full night of rest; these are included in New Day. When alone, Symbiont Isolation reduces positive end-of-encounter strain recovery by one, minimum one. On Recovery, confirm whether another Phydolon is present to skip that penalty. A check with no positive recovery restores no strain. This follows Knights of Fate, rather than the fan-guide variant.",
       "source": "Knights of Fate \u00b7 p.22",
       "verifiedPage122": 22
+    },
+    "gand": {
+      "name": "Gand",
+      "xp": 85,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "free": {
+        "Discipline": 1
+      },
+      "note": "Discipline 1 is included. Choose Lungless (85 starting XP) or With lungs (95 starting XP). Breathing is manual: Lungless ignores suffocation penalties; With lungs needs an ammonia mask in ordinary environments, where oxygen is a rating-8 dangerous atmosphere. No mask is automatically added. Rituals is manual: once per session while tracking a target, a Hard Discipline meditation can reveal a relevant, potentially ambiguous vision.",
+      "source": "Complete Species Guide v6.0 \u00b7 fan profile \u00b7 p.106",
+      "verifiedPage123": 106
+    },
+    "miraluka": {
+      "name": "Miraluka",
+      "xp": 110,
+      "wt": 9,
+      "st": 11,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Perception",
+        "Vigilance"
+      ],
+      "note": "Choose Perception or Vigilance 1. Manual sight rules: Blind upgrades all checks twice, or Perception/Vigilance three times. At creation, Force Vision can cost 15 XP even at Force Rating 0; it removes Blind and ignores lighting/concealment unless disconnected from the Force. The Sense/Farsight basic-power mentor discount is also manual. These options and modifiers are not yet applied or charged by the game.",
+      "source": "Complete Species Guide v6.0 \u00b7 fan profile \u00b7 p.178",
+      "verifiedPage123": 178
+    },
+    "dantari": {
+      "name": "Dantari",
+      "xp": 110,
+      "wt": 11,
+      "st": 11,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Survival": 1
+      },
+      "note": "Survival 1 is included. Primitive is manual: upgrade checks involving unfamiliar advanced technology once. Familiarity can remove the penalty for individual technology at GM discretion; at creation, 10 XP can permanently remove Primitive. The game does not yet apply or charge for that option.",
+      "source": "Complete Species Guide v6.0 \u00b7 fan profile \u00b7 p.70",
+      "verifiedPage123": 70
     }
   },
   "careers": {
@@ -56117,6 +56178,7 @@ window.Talents98?.attach(window.Game97);
     window.Species117?.validateSnapshot(data);
     window.Species120?.validateSnapshot(data);
     window.Species121?.validateSnapshot(data);
+    window.Species123?.validateSnapshot(data);
     return data;
   }
   function candidates() {
@@ -56728,6 +56790,7 @@ window.CampaignContent97 = (() => {
   function issues(state=S) {
     if(!hasSetup(state))return [];
     const c=config(state), errors=[];
+    if(window.Species123?.pending(state))errors.push('Choose your Gand respiration subtype on Identity.');
     if(window.Species121?.pending(state))errors.push('Choose your Tiss’shar subspecies on Identity.');
     if(window.Species120?.pending(state))errors.push('Choose your included Geonosian skill rank on Identity.');
     if(window.Species117?.pending(state))errors.push('Choose two Knowledge career skills for Intellectuals on the Career screen.');
@@ -56828,7 +56891,7 @@ window.CampaignContent97 = (() => {
   }
   function refreshReview() {
     renderSpeciesTalents();
-    window.Species117?.renderReview();window.Species120?.renderReview();window.Species121?.renderReview();
+    window.Species117?.renderReview();window.Species120?.renderReview();window.Species121?.renderReview();window.Species123?.renderReview();
     if(!hasSetup()||!$('reviewBody'))return;const c=config(),p=c.profile,errors=issues();let box=$('campaignReview97');
     if(!box){box=document.createElement('div');box.id='campaignReview97';box.className='creation-profile97';$('reviewBody').appendChild(box);}
     box.innerHTML=`<h3>Your beginning</h3><p><b>${esc(content.eras[c.era].name)}</b> · ${esc(content.factions[c.faction].name)}<br>${esc(STORY_TEMPLATES_61[c.mission].name)}</p><p>500 credits · ${esc(WEAPONS[c.weapon].name)} · Heavy clothing · Shared transport: ${esc(p.shipName.trim()||'First Light')}</p><p>${esc(p.callsign?`${p.callsign} · `:'')}${esc(p.motivation)}${p.pronouns?` · ${esc(p.pronouns)}`:''}</p>${p.appearance?`<p>${esc(p.appearance)}</p>`:''}${p.background?`<p>${esc(p.background)}</p>`:''}${p.goal?`<p><b>Personal goal:</b> ${esc(p.goal)}</p>`:''}${S.finalized?'':errorHTML(errors)}<p class="campaign-source97">Unspent starting XP carries into advancement once. Starting equipment and transport are supplied by this game beginning.</p>`;
@@ -56893,7 +56956,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.26-knights-species';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.27-gand-respiration';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 
@@ -57036,6 +57099,43 @@ window.CampaignContent97 = (() => {
  window.Species122={renderRecovery,hasPhydolonCompanion,clearContext};
  Game97.on('hydrate',()=>{clearContext();renderRecovery();});
  Game97.on('navigate',({id})=>{if(id==='recovery')renderRecovery();else clearContext();});
+})();
+
+/* Gand respiration: a once-only starting choice; breathing remains narrative. */
+(()=>{
+ 'use strict';
+ const game=window.Game97,esc=pxEsc67;
+ const choices={lungless:{name:'Lungless',xp:0},ammonia:{name:'With lungs · ammonia breather',xp:10}};
+ const selected=(state=S)=>state.species==='gand'&&typeof state.gandRespiration123==='string'&&Object.hasOwn(choices,state.gandRespiration123)?choices[state.gandRespiration123]:null;
+ const pending=(state=S)=>state.species==='gand'&&!selected(state);
+ function choose(id){
+  if(!pending()||typeof id!=='string'||!Object.hasOwn(choices,id))return false;
+  const choice=choices[id],start=S.xpStart+choice.xp,earned=S.earnedXp+(S.finalized?choice.xp:0);
+  if(!Number.isSafeInteger(start)||!Number.isSafeInteger(earned))return false;
+  S.gandRespiration123=id;S.xpStart=start;S.earnedXp=earned;
+  bLog(`${choice.name} confirmed.${choice.xp?` The included 10 XP ${S.finalized?'is available for advancement':'increases your starting budget'}.`:''} Past purchases and characteristics are unchanged. Breathing is resolved narratively.`);
+  renderAll();return true;
+ }
+ function validateSnapshot(state){
+  const id=state.gandRespiration123;
+  if(id!==undefined&&(state.species!=='gand'||typeof id!=='string'||!Object.hasOwn(choices,id)))throw new Error('Invalid Gand respiration subtype.');
+ }
+ function renderReview(){
+  $('gandReview123')?.remove();if(S.species!=='gand'||!$('reviewBody'))return;
+  const choice=selected(),box=document.createElement('div');box.id='gandReview123';box.className='creation-profile97';
+  box.innerHTML=`<h3>Gand respiration</h3>${choice?`<p>${esc(choice.name)} · starting XP ${S.xpStart}. Breathing remains manual.</p>`:'<p>Choose your respiration subtype on Identity. Existing characters can confirm their missing choice once.</p><button class="btn" id="gandReviewChoose123">Choose respiration</button>'}`;
+  $('reviewBody').appendChild(box);$('gandReviewChoose123')?.addEventListener('click',()=>renderNavTab('identity'));
+  if(!S.finalized&&pending()&&$('finalize'))$('finalize').disabled=true;
+ }
+ function render(){
+  $('gandChoice123')?.remove();renderReview();if(S.species!=='gand'||!$('speciesInfo'))return;
+  const choice=selected(),box=document.createElement('div');box.id='gandChoice123';box.className='creation-note97';
+  const pill=$('speciesInfo').querySelector('.row > .pill');if(pill)pill.textContent=`Starting XP ${S.xpStart}`;
+  box.innerHTML=choice?`<h3>${esc(choice.name)} · confirmed</h3><p>The choice is fixed. ${choice.xp?'The included 10 XP has already been granted.':'No extra XP is granted.'} Breathing and Rituals remain manual.</p>`:`<h3>Choose your respiration</h3><p>Lungless ignores suffocation penalties. With lungs grants 10 extra starting XP, but needs an ammonia mask in ordinary environments; oxygen is a rating-8 dangerous atmosphere. Breathing remains manual and no mask is automatically added. The choice is fixed when confirmed.${S.finalized?' An older character can confirm once; With lungs grants the missing 10 XP for advancement without changing purchases.':''}</p><label>Respiration<select id="gandRespiration123"><option value="">Choose a subtype</option><option value="lungless">Lungless · no extra XP</option><option value="ammonia">With lungs · +10 XP</option></select></label><button class="btn" id="gandConfirm123" disabled>Confirm respiration</button>`;
+  $('speciesInfo').after(box);if(!choice){$('gandRespiration123').onchange=()=>{$('gandConfirm123').disabled=!Object.hasOwn(choices,$('gandRespiration123').value)};$('gandConfirm123').onclick=()=>choose($('gandRespiration123').value);}
+ }
+ window.Species123={pending,choose,validateSnapshot,renderReview};
+ game.on('render',render);game.on('hydrate',data=>{if(data.gandRespiration123===undefined)delete S.gandRespiration123;render();});game.on('navigate',({id})=>{if(['identity','review'].includes(id))render();});
 })();
 
 try{Game97.boot();markBoot90('Ready to play.',true)}catch(e){showRuntimeError(`Opening failed: ${e.message}`)}</script>

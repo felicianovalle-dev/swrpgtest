@@ -843,6 +843,67 @@
       "note": "Cool 1 or Discipline 1 is included. Symbiotic Resilience gives one extra wound of natural healing and a Critical Injury recovery attempt after each full night of rest; these are included in New Day. When alone, Symbiont Isolation reduces positive end-of-encounter strain recovery by one, minimum one. On Recovery, confirm whether another Phydolon is present to skip that penalty. A check with no positive recovery restores no strain. This follows Knights of Fate, rather than the fan-guide variant.",
       "source": "Knights of Fate \u00b7 p.22",
       "verifiedPage122": 22
+    },
+    "gand": {
+      "name": "Gand",
+      "xp": 85,
+      "wt": 10,
+      "st": 10,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "free": {
+        "Discipline": 1
+      },
+      "note": "Discipline 1 is included. Choose Lungless (85 starting XP) or With lungs (95 starting XP). Breathing is manual: Lungless ignores suffocation penalties; With lungs needs an ammonia mask in ordinary environments, where oxygen is a rating-8 dangerous atmosphere. No mask is automatically added. Rituals is manual: once per session while tracking a target, a Hard Discipline meditation can reveal a relevant, potentially ambiguous vision.",
+      "source": "Complete Species Guide v6.0 \u00b7 fan profile \u00b7 p.106",
+      "verifiedPage123": 106
+    },
+    "miraluka": {
+      "name": "Miraluka",
+      "xp": 110,
+      "wt": 9,
+      "st": 11,
+      "c": {
+        "Brawn": 2,
+        "Agility": 2,
+        "Intellect": 2,
+        "Cunning": 2,
+        "Willpower": 3,
+        "Presence": 1
+      },
+      "freeChoice": [
+        "Perception",
+        "Vigilance"
+      ],
+      "note": "Choose Perception or Vigilance 1. Manual sight rules: Blind upgrades all checks twice, or Perception/Vigilance three times. At creation, Force Vision can cost 15 XP even at Force Rating 0; it removes Blind and ignores lighting/concealment unless disconnected from the Force. The Sense/Farsight basic-power mentor discount is also manual. These options and modifiers are not yet applied or charged by the game.",
+      "source": "Complete Species Guide v6.0 \u00b7 fan profile \u00b7 p.178",
+      "verifiedPage123": 178
+    },
+    "dantari": {
+      "name": "Dantari",
+      "xp": 110,
+      "wt": 11,
+      "st": 11,
+      "c": {
+        "Brawn": 3,
+        "Agility": 2,
+        "Intellect": 1,
+        "Cunning": 2,
+        "Willpower": 2,
+        "Presence": 2
+      },
+      "free": {
+        "Survival": 1
+      },
+      "note": "Survival 1 is included. Primitive is manual: upgrade checks involving unfamiliar advanced technology once. Familiarity can remove the penalty for individual technology at GM discretion; at creation, 10 XP can permanently remove Primitive. The game does not yet apply or charge for that option.",
+      "source": "Complete Species Guide v6.0 \u00b7 fan profile \u00b7 p.70",
+      "verifiedPage123": 70
     }
   },
   "careers": {

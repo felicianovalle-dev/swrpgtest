@@ -33,6 +33,7 @@
   function issues(state=S) {
     if(!hasSetup(state))return [];
     const c=config(state), errors=[];
+    if(window.Species123?.pending(state))errors.push('Choose your Gand respiration subtype on Identity.');
     if(window.Species121?.pending(state))errors.push('Choose your Tiss’shar subspecies on Identity.');
     if(window.Species120?.pending(state))errors.push('Choose your included Geonosian skill rank on Identity.');
     if(window.Species117?.pending(state))errors.push('Choose two Knowledge career skills for Intellectuals on the Career screen.');
@@ -133,7 +134,7 @@
   }
   function refreshReview() {
     renderSpeciesTalents();
-    window.Species117?.renderReview();window.Species120?.renderReview();window.Species121?.renderReview();
+    window.Species117?.renderReview();window.Species120?.renderReview();window.Species121?.renderReview();window.Species123?.renderReview();
     if(!hasSetup()||!$('reviewBody'))return;const c=config(),p=c.profile,errors=issues();let box=$('campaignReview97');
     if(!box){box=document.createElement('div');box.id='campaignReview97';box.className='creation-profile97';$('reviewBody').appendChild(box);}
     box.innerHTML=`<h3>Your beginning</h3><p><b>${esc(content.eras[c.era].name)}</b> · ${esc(content.factions[c.faction].name)}<br>${esc(STORY_TEMPLATES_61[c.mission].name)}</p><p>500 credits · ${esc(WEAPONS[c.weapon].name)} · Heavy clothing · Shared transport: ${esc(p.shipName.trim()||'First Light')}</p><p>${esc(p.callsign?`${p.callsign} · `:'')}${esc(p.motivation)}${p.pronouns?` · ${esc(p.pronouns)}`:''}</p>${p.appearance?`<p>${esc(p.appearance)}</p>`:''}${p.background?`<p>${esc(p.background)}</p>`:''}${p.goal?`<p><b>Personal goal:</b> ${esc(p.goal)}</p>`:''}${S.finalized?'':errorHTML(errors)}<p class="campaign-source97">Unspent starting XP carries into advancement once. Starting equipment and transport are supplied by this game beginning.</p>`;
@@ -198,6 +199,6 @@
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.26-knights-species';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.27-gand-respiration';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
