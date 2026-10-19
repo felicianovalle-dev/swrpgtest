@@ -792,7 +792,126 @@
     }
   ],
   "hostedVerification": {
-    "status": "pending"
+    "status": "passed",
+    "deployment": {
+      "id": 39180675500,
+      "head_sha": "84a88d830d9bfafcd439b9d5cfd3a910a957387f",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39180675500"
+    },
+    "servedBytes": {
+      "status": "passed",
+      "commit": "84a88d830d9bfafcd439b9d5cfd3a910a957387f",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=84a88d830d9b&check=1792369548",
+      "httpStatus": 200,
+      "bytes": 4093673,
+      "gitBlob": "737e51d937458434c5e9b28eb959fbf12d0a4979",
+      "sha256": "e884ab04a4cbe9f226bfb34248b8421f731fb066a251239e8aa75c5977acd616"
+    },
+    "creationAndLegacyContinuation": [
+      {
+        "species": "clone",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 320,
+        "height": 568,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "clone",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 1280,
+        "height": 800,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "geonosian",
+        "speciesChoice": "Astrogation",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 320,
+        "height": 568,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "geonosian",
+        "speciesChoice": "Lightsaber",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "kaminoan",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 375,
+        "height": 667,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "umbaran",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 428,
+        "height": 926,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "geonosian",
+        "kind": "legacy finalized campaign",
+        "width": 390,
+        "height": 844,
+        "choice": true,
+        "saveReload": true,
+        "pastSpendingPreserved": true,
+        "storyPreserved": true,
+        "overflow": false
+      }
+    ]
   },
   "limits": [
     "Flight, assistance, lighting, incoming social modifiers and Researcher time remain narrative.",
