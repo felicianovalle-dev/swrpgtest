@@ -1,10 +1,10 @@
 # Sable Reach project roadmap
 
-Current published release before this batch: **1.9.31**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
+Current published release: **1.9.32**. The user authorized continuing through this roadmap and updating GitHub. Complete and test each update before starting another phase. This document records actual completion; source verification is separate from automation.
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The Knights of Fate 1.9.32 batch (Mikkian, Dowutin and Phydolon) is in verification. Three fresh reviews remain: Gand, Miraluka and Dantari. Continue with Gand. Distinguish official profiles from fan-guide variants and preserve old progress. Finish reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The Knights of Fate 1.9.32 batch (Mikkian, Dowutin and Phydolon) is complete and published. Three fresh reviews remain: Gand, Miraluka and Dantari. Continue with Gand. Distinguish official profiles from fan-guide variants and preserve old progress. Finish reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -130,4 +130,4 @@ Reviewed Tiss’shar against the supplied fan guide p.283. New creation uses Int
 
 ## Update 1.9.32
 
-Reviewed official Knights of Fate profiles: Dowutin p.19, Mikkian p.21, Phydolon p.22. Official baseline stats and prior progress are unchanged. Verified existing Perception Boost and nightly Phydolon recovery. Added temporary accompanied/alone recovery context for Symbiont Isolation; no new save fields. Locked the finalized starting-skill control and guarded its handler to prevent accidental creation resets. Dowutin size and Immovable remain narrative. Local verification passed: 29 regression targets and 56 browser flows. Hosted verification pending. [Verification](knights-species-verification.md).
+Reviewed official Knights of Fate profiles: Dowutin p.19, Mikkian p.21, Phydolon p.22. Official baseline stats and prior progress are unchanged. Verified existing Perception Boost and nightly Phydolon recovery. Added temporary accompanied/alone recovery context for Symbiont Isolation; no new save fields. Locked the finalized starting-skill control and guarded its handler to prevent accidental creation resets. Dowutin size and Immovable remain narrative. Verified: 29 regression targets, 56 local browser flows and 5 hosted flows passed. [Verification](knights-species-verification.md).

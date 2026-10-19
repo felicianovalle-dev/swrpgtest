@@ -1016,7 +1016,105 @@
     }
   ],
   "hostedVerification": {
-    "status": "pending"
+    "status": "passed",
+    "deployment": {
+      "id": 39183987545,
+      "head_sha": "70a327243b2a6323307f31e482447979a94987ba",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39183987545"
+    },
+    "servedBytes": {
+      "status": "passed",
+      "commit": "70a327243b2a6323307f31e482447979a94987ba",
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=70a327243b2a&check=1792372163",
+      "httpStatus": 200,
+      "bytes": 4104728,
+      "gitBlob": "999621d3b84d51b41e89901670c29a86a1713a17",
+      "sha256": "09b0f8bfd19b82be38f24bdb74b9bacc638d4110271d644be56aad98d77cd5e1"
+    },
+    "creationAndLegacyContinuation": [
+      {
+        "species": "mikkian",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 320,
+        "height": 568,
+        "recoveryActions": false,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "mikkian",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 1280,
+        "height": 800,
+        "recoveryActions": false,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "dowutin",
+        "speciesChoice": null,
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 375,
+        "height": 667,
+        "recoveryActions": false,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "phydolon",
+        "speciesChoice": "Cool",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 390,
+        "height": 844,
+        "recoveryActions": true,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      },
+      {
+        "species": "phydolon",
+        "speciesChoice": "Discipline",
+        "talent": "Solid Repairs",
+        "spec": "Mechanic",
+        "career": "Technician",
+        "width": 428,
+        "height": 926,
+        "recoveryActions": true,
+        "creation": true,
+        "purchase": true,
+        "saveReload": true,
+        "overflow": false,
+        "speciesReview": true,
+        "savedIdsPreserved": true
+      }
+    ]
   },
   "limits": [
     "Dowutin size and Immovable remain narrative.",
