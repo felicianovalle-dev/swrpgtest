@@ -1,0 +1,669 @@
+{
+  "baselineCommit": "06225d8",
+  "release": "1.9.34",
+  "rosterCount": 44,
+  "profilesWithRemainingEffects": 33,
+  "scope": "Implementation inventory; not a fresh full sourcebook review or full gameplay certification.",
+  "profiles": [
+    {
+      "id": "aqualishAquala",
+      "name": "Aqualish (Aquala)",
+      "source": "Complete Species Guide v6 · fan profile · p.23",
+      "startingRanks": {
+        "Brawl": 1,
+        "Resilience": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "aquatic movement",
+        "cold/wet environment"
+      ],
+      "profileNote": "Brawl and Resilience ranks are included. Aquatic movement and cold/wet adaptation are resolved narratively."
+    },
+    {
+      "id": "aqualishQuara",
+      "name": "Aqualish (Quara)",
+      "source": "Complete Species Guide v6 · fan profile · p.23",
+      "startingRanks": {
+        "Brawl": 1,
+        "Coercion": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "aquatic movement",
+        "outdoor tracking"
+      ],
+      "profileNote": "Brawl and Coercion ranks are included. Aquatic movement and outdoor tracking adaptation are resolved narratively."
+    },
+    {
+      "id": "aqualishUalaq",
+      "name": "Aqualish (Ualaq)",
+      "source": "Complete Species Guide v6 · fan profile · p.23",
+      "startingRanks": {
+        "Brawl": 1
+      },
+      "startingRankChoices": [
+        "Survival",
+        "Perception"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "aquatic movement",
+        "vision"
+      ],
+      "profileNote": "Brawl rank is included; choose Survival or Perception. Aquatic movement and vision adaptation are resolved narratively."
+    },
+    {
+      "id": "bothan",
+      "name": "Bothan",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.44",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Perception",
+        "Streetwise"
+      ],
+      "includedTalents": {
+        "Convincing Demeanor": 1
+      },
+      "remainingContext": [],
+      "profileNote": "Choose Perception or Streetwise for one starting rank. Skilled Spies includes Convincing Demeanor 1: removes one Setback from Deception and Skulduggery checks."
+    },
+    {
+      "id": "cerean",
+      "name": "Cerean",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.50",
+      "startingRanks": {
+        "Vigilance": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Vigilance 1 is included. Intellectuals lets you choose two Knowledge career skills on the Career screen. It grants no free skill ranks."
+    },
+    {
+      "id": "chiss",
+      "name": "Chiss",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.60",
+      "startingRanks": {
+        "Cool": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "lighting-related Setback"
+      ],
+      "profileNote": "Cool 1 is included. Infrared Vision removes lighting-related Setback; resolve this situational benefit narratively."
+    },
+    {
+      "id": "clone",
+      "name": "Clone",
+      "source": "Rise of the Separatists · p.12",
+      "startingRanks": {
+        "Resilience": 1,
+        "Knowledge (Warfare)": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {
+        "Physical Training": 1
+      },
+      "remainingContext": [],
+      "profileNote": "Knowledge (Warfare) 1, Resilience 1 and Physical Training 1 are included. Physical Training adds one Boost per rank to Athletics and Resilience checks, stacking with purchased ranks."
+    },
+    {
+      "id": "dantari",
+      "name": "Dantari",
+      "source": "Complete Species Guide v6.0 · fan profile · p.70",
+      "startingRanks": {
+        "Survival": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "creation-only Primitive removal",
+        "item familiarity"
+      ],
+      "profileNote": "Survival 1 is included. Primitive is manual: upgrade checks involving unfamiliar advanced technology once. Familiarity can remove the penalty for individual technology at GM discretion; at creation, 10 XP can permanently remove Primitive. The game does not yet apply or charge for that option."
+    },
+    {
+      "id": "devaronian",
+      "name": "Devaronian",
+      "source": "Complete Species Guide v6 · fan profile · p.75",
+      "startingRanks": {
+        "Deception": 1,
+        "Survival": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Deception and Survival ranks are included. Multiple Livers adds three Boost to PC Resilience checks explicitly marked as poison or toxin, including alcohol. On Skills, confirm the poison context and preview or roll your check."
+    },
+    {
+      "id": "dowutin",
+      "name": "Dowutin",
+      "source": "Knights of Fate · p.19",
+      "startingRanks": {
+        "Resilience": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "silhouette choice",
+        "Immovable reaction and strain"
+      ],
+      "profileNote": "Resilience 1 is included. Large lets you choose silhouette 1 or 2 at creation; record that choice narratively. Immovable is an out-of-turn incidental: suffer 3 strain (1 if silhouette 2) to avoid being Immobilized, knocked prone or moved against your will. Resolve the choice, strain cost and avoided effect narratively."
+    },
+    {
+      "id": "duros",
+      "name": "Duros",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.87",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Astrogation",
+        "Piloting (Space)"
+      ],
+      "includedTalents": {
+        "Galaxy Mapper": 1
+      },
+      "remainingContext": [
+        "navigation duration"
+      ],
+      "profileNote": "Choose Astrogation or Piloting (Space) for one starting rank. Intuitive Navigation includes Galaxy Mapper 1: removes one Setback from Astrogation checks. Route-calculation time reduction is resolved narratively."
+    },
+    {
+      "id": "gand",
+      "name": "Gand",
+      "source": "Complete Species Guide v6.0 · fan profile · p.106",
+      "startingRanks": {
+        "Discipline": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "respiration/equipment/atmosphere",
+        "session-limited Rituals and GM vision"
+      ],
+      "profileNote": "Discipline 1 is included. Choose Lungless (85 starting XP) or With lungs (95 starting XP). Breathing is manual: Lungless ignores suffocation penalties; With lungs needs an ammonia mask in ordinary environments, where oxygen is a rating-8 dangerous atmosphere. No mask is automatically added. Rituals is manual: once per session while tracking a target, a Hard Discipline meditation can reveal a relevant, potentially ambiguous vision."
+    },
+    {
+      "id": "geonosian",
+      "name": "Geonosian",
+      "source": "Rise of the Separatists · p.13",
+      "startingRanks": {},
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "assisting/receiving actor, Boost and assistant strain",
+        "flight"
+      ],
+      "profileNote": "Choose one included skill rank on the Identity screen. Industrious adds one extra Boost when you provide assistance and heals you 1 strain. You can fly. Resolve assistance and flight narratively."
+    },
+    {
+      "id": "gungan",
+      "name": "Gungan",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.117",
+      "startingRanks": {
+        "Athletics": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "aquatic movement/breathing",
+        "humidity/dryness",
+        "High Jump, strain and round limit"
+      ],
+      "profileNote": "Athletics 1 is included. Aquatic breathing, movement and humidity/dryness effects are resolved narratively. High Jump: once per round as a maneuver, suffer 3 strain to move two range bands vertically or horizontally; resolve this movement narratively."
+    },
+    {
+      "id": "human",
+      "name": "Human",
+      "source": "Complete Species Guide",
+      "startingRanks": {},
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": ""
+    },
+    {
+      "id": "jawa",
+      "name": "Jawa",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.137",
+      "startingRanks": {
+        "Mechanics": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {
+        "Utinni!": 1
+      },
+      "remainingContext": [
+        "scavenging duration",
+        "lighting",
+        "scent",
+        "silhouette"
+      ],
+      "profileNote": "Mechanics 1 is included. Scavengers includes Utinni! 1: removes one Setback on checks flagged as scavenging. Scavenging time, night vision, brightness, scent and silhouette 0 are resolved narratively."
+    },
+    {
+      "id": "kaminoan",
+      "name": "Kaminoan",
+      "source": "Rise of the Separatists · p.15",
+      "startingRanks": {
+        "Medicine": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {
+        "Researcher": 1
+      },
+      "remainingContext": [
+        "incoming social actor/target",
+        "research duration"
+      ],
+      "profileNote": "Medicine 1 and Researcher 1 are included. Researcher removes one Setback per rank from Knowledge checks; research time reduction remains narrative. Expressionless adds one Setback to your Charm checks. Other characters add one Setback to social checks targeting you; resolve their targeting effects narratively."
+    },
+    {
+      "id": "keldor",
+      "name": "Kel Dor",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.143",
+      "startingRanks": {
+        "Knowledge (Education)": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "breathing equipment/atmosphere",
+        "goggles and vision"
+      ],
+      "profileNote": "Knowledge (Education) 1 is included. Helium Breathers require a helium mask and goggles in a normal atmosphere. Oxygen is a rating-4 dangerous atmosphere; resolve breathing and vision effects narratively."
+    },
+    {
+      "id": "lannik",
+      "name": "Lannik",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.164",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Knowledge (Warfare)",
+        "Streetwise"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "critical-injury/fear/disorientation Setback causes",
+        "silhouette"
+      ],
+      "profileNote": "Choose Knowledge (Warfare) or Streetwise for one starting rank. Indomitable removes Setback from critical injuries, fear or disorientation; resolve this and silhouette 0 narratively."
+    },
+    {
+      "id": "lasat",
+      "name": "Lasat",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.165",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Mechanics",
+        "Survival"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "hot/cold",
+        "darkness/brightness"
+      ],
+      "profileNote": "Mechanics 1 or Survival 1 is included. Ears and Fur removes environmental Setback for hot or cold conditions. Night Vision removes darkness Setback and adds one Setback in bright light. Resolve these environmental effects narratively."
+    },
+    {
+      "id": "mikkian",
+      "name": "Mikkian",
+      "source": "Knights of Fate · p.21",
+      "startingRanks": {
+        "Discipline": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Discipline 1 is included. Sensory Tendrils adds one Boost to all your Perception checks. This profile follows Knights of Fate; the fan species guide has a different profile."
+    },
+    {
+      "id": "miraluka",
+      "name": "Miraluka",
+      "source": "Complete Species Guide v6.0 · fan profile · p.178",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Perception",
+        "Vigilance"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "creation-only Force Vision purchase and mentor discount",
+        "Blind upgrades, concealment and Force connection"
+      ],
+      "profileNote": "Choose Perception or Vigilance 1. Manual sight rules: Blind upgrades all checks twice, or Perception/Vigilance three times. At creation, Force Vision can cost 15 XP even at Force Rating 0; it removes Blind and ignores lighting/concealment unless disconnected from the Force. The Sense/Farsight basic-power mentor discount is also manual. These options and modifiers are not yet applied or charged by the game."
+    },
+    {
+      "id": "mirialan",
+      "name": "Mirialan",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.179",
+      "startingRanks": {
+        "Discipline": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Discipline 1 is included."
+    },
+    {
+      "id": "moncal",
+      "name": "Mon Calamari",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.180",
+      "startingRanks": {
+        "Knowledge (Education)": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "aquatic breathing/movement",
+        "humidity/dryness"
+      ],
+      "profileNote": "Knowledge (Education) 1 is included. Aquatic allows underwater breathing and removes underwater movement penalties; remove humidity Setback and add one for dry conditions. Resolve these environmental effects narratively."
+    },
+    {
+      "id": "nautolan",
+      "name": "Nautolan",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.188",
+      "startingRanks": {
+        "Athletics": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "aquatic breathing/movement",
+        "humidity/dryness",
+        "lighting",
+        "lie/emotion task"
+      ],
+      "profileNote": "Athletics 1 is included. Aquatic breathing/movement and humidity/dryness effects are narrative. Low-Light Vision removes darkness Setback and adds one for brightness. Pheromone Detection adds a Boost to identify a liar or emotional state; resolve these situational effects narratively."
+    },
+    {
+      "id": "neimoidian",
+      "name": "Neimoidian",
+      "source": "Complete Species Guide v6 · fan profile · p.190",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Deception",
+        "Negotiation"
+      ],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Choose Deception or Negotiation for the included species rank."
+    },
+    {
+      "id": "pantoran",
+      "name": "Pantoran",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.207",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Cool",
+        "Negotiation"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "cold/hot"
+      ],
+      "profileNote": "Choose Cool or Negotiation for one starting rank. Cold Adaptations removes cold-related Setback and adds one Setback in hot conditions; resolve these environmental effects narratively."
+    },
+    {
+      "id": "phydolon",
+      "name": "Phydolon",
+      "source": "Knights of Fate · p.22",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Cool",
+        "Discipline"
+      ],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Cool 1 or Discipline 1 is included. Symbiotic Resilience gives one extra wound of natural healing and a Critical Injury recovery attempt after each full night of rest; these are included in New Day. When alone, Symbiont Isolation reduces positive end-of-encounter strain recovery by one, minimum one. On Recovery, confirm whether another Phydolon is present to skip that penalty. A check with no positive recovery restores no strain. This follows Knights of Fate, rather than the fan-guide variant."
+    },
+    {
+      "id": "quarren",
+      "name": "Quarren",
+      "source": "Complete Species Guide v6 · fan profile · p.220",
+      "startingRanks": {
+        "Negotiation": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "aquatic movement",
+        "humidity/dryness"
+      ],
+      "profileNote": "Negotiation rank is included. Aquatic movement and humid/dry adaptation are resolved narratively."
+    },
+    {
+      "id": "rattataki",
+      "name": "Rattataki",
+      "source": "Complete Species Guide v6 · fan profile · p.227",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Ranged (Heavy)",
+        "Ranged (Light)"
+      ],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Choose Ranged (Heavy) or Ranged (Light) for the included species rank."
+    },
+    {
+      "id": "rodian",
+      "name": "Rodian",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.233",
+      "startingRanks": {
+        "Survival": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {
+        "Expert Tracker": 1
+      },
+      "remainingContext": [
+        "tracking duration"
+      ],
+      "profileNote": "Survival 1 is included. Hunting Culture includes Expert Tracker 1: removes one Setback on checks flagged as tracking. Tracking time reduction is resolved narratively."
+    },
+    {
+      "id": "selkath",
+      "name": "Selkath",
+      "source": "Complete Species Guide v6 · fan profile · p.245",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Coercion",
+        "Medicine"
+      ],
+      "includedTalents": {
+        "Surgeon": 1
+      },
+      "remainingContext": [
+        "aquatic movement",
+        "humidity/dryness"
+      ],
+      "profileNote": "Choose Coercion or Medicine. Surgeon adds one wound healed with successful Medicine treatment. Aquatic movement and humid/dry adaptation are resolved narratively."
+    },
+    {
+      "id": "sluissi",
+      "name": "Sluissi",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.261",
+      "startingRanks": {
+        "Discipline": 1,
+        "Mechanics": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {
+        "Solid Repairs": 1
+      },
+      "remainingContext": [
+        "other vehicle repair actor/type/cap"
+      ],
+      "profileNote": "Discipline 1 and Mechanics 1 are included. Starship Workers includes Solid Repairs 1: ship repair actions restore one additional hull trauma on success, stacking with purchased ranks. Other vehicle repairs are resolved narratively."
+    },
+    {
+      "id": "sullustan",
+      "name": "Sullustan",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.267",
+      "startingRanks": {
+        "Astrogation": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {
+        "Skilled Jockey": 1
+      },
+      "remainingContext": [
+        "darkness/brightness"
+      ],
+      "profileNote": "Astrogation 1 is included. Born Pilots includes Skilled Jockey 1: removes one Setback from Piloting (Planetary) and Piloting (Space) checks. Large Eyes removes darkness-related Setback and adds one in bright conditions; resolve lighting effects narratively."
+    },
+    {
+      "id": "tissshar",
+      "name": "Tiss'shar",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.283",
+      "startingRanks": {
+        "Negotiation": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "darkness/brightness",
+        "claws/teeth damage and Advantage spend"
+      ],
+      "profileNote": "Negotiation 1 is included. Choose one of six subspecies on Identity for its included skill or talent rank. Night Vision removes darkness Setback and adds one Setback in bright light. Claws and Teeth deals +1 Brawl damage as wounds with Critical 3; spending two Advantage to hit with teeth adds Pierce 1 and Vicious 2. Resolve lighting and natural-weapon effects narratively."
+    },
+    {
+      "id": "togruta",
+      "name": "Togruta",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.287",
+      "startingRanks": {
+        "Perception": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "assisting and receiving actor"
+      ],
+      "profileNote": "Perception 1 is included. Pack Instincts grants two Boost dice, rather than one, when you perform the assist maneuver. Resolve this assistance narratively."
+    },
+    {
+      "id": "toydarian",
+      "name": "Toydarian",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.289",
+      "startingRanks": {},
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "incoming telepathic Force power",
+        "hovering/falls/terrain",
+        "silhouette"
+      ],
+      "profileNote": "Force Resistance increases the difficulty of telepathic Force powers targeting you by two. Hoverers can move about a meter above the ground, ignoring fall damage and terrain penalties. Resolve these traits and silhouette 0 narratively."
+    },
+    {
+      "id": "trandoshan",
+      "name": "Trandoshan",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.290",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Brawl",
+        "Perception"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "natural weapon selection",
+        "darkness",
+        "qualifying natural/bacta healing",
+        "long-term limb regrowth"
+      ],
+      "profileNote": "Choose Brawl or Perception for one starting rank. Claws add +1 Brawl damage as wounds with Critical rating 3. Infrared Vision removes darkness Setback. Regeneration restores one extra wound when natural rest or bacta already restores at least one; limbs regrow over months. Resolve these traits narratively."
+    },
+    {
+      "id": "twilek",
+      "name": "Twi'lek",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.296",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Charm",
+        "Deception"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "hot/dry and cold/wet"
+      ],
+      "profileNote": "Choose Charm or Deception for one starting rank. Desert Adaptations removes hot/dry Setback and adds one in cold/wet conditions; resolve environmental effects narratively."
+    },
+    {
+      "id": "umbaran",
+      "name": "Umbaran",
+      "source": "Rise of the Separatists · p.16",
+      "startingRanks": {
+        "Deception": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "darkness/bright natural light"
+      ],
+      "profileNote": "Deception 1 is included. Entrancing Gaze adds one Boost to your Charm, Deception and Negotiation checks. Shadow Dweller removes up to two Setback caused by darkness and adds two Setback in bright natural light; resolve lighting effects narratively."
+    },
+    {
+      "id": "weequay",
+      "name": "Weequay",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.312",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Athletics",
+        "Resilience"
+      ],
+      "includedTalents": {},
+      "remainingContext": [
+        "clan, range and observer senses"
+      ],
+      "profileNote": "Choose Athletics or Resilience for one starting rank. Pheromones allow silent communication with your own clan within long range, undetectable to species without advanced olfaction; resolve this communication narratively."
+    },
+    {
+      "id": "wookiee",
+      "name": "Wookiee",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.316",
+      "startingRanks": {
+        "Brawl": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "claw-damage source variant",
+        "Rage and current wounds/Critical Injuries",
+        "GM climbing skill substitutions beyond Athletics"
+      ],
+      "profileNote": "Brawl 1 is included. Climbing Claws adds one Boost to PC Athletics checks explicitly marked as climbing a surface claws can pierce. On Skills, confirm the surface and preview or roll your check. Wookiee Rage and claw damage require manual resolution."
+    },
+    {
+      "id": "zabrak",
+      "name": "Zabrak",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.330",
+      "startingRanks": {},
+      "startingRankChoices": [
+        "Brawl",
+        "Survival"
+      ],
+      "includedTalents": {},
+      "remainingContext": [],
+      "profileNote": "Brawl 1 or Survival 1 is included. Fearsome Countenances adds one automatic Advantage to your Coercion checks. This is included in your check results; it does not grant a Boost die."
+    },
+    {
+      "id": "zeltron",
+      "name": "Zeltron",
+      "source": "Complete Species Guide v6.0 fan supplement · 358-page copy · p.333",
+      "startingRanks": {
+        "Charm": 1
+      },
+      "startingRankChoices": [],
+      "includedTalents": {},
+      "remainingContext": [
+        "target physiology and mask",
+        "Empathy maneuver, encounter limit and opposed check"
+      ],
+      "profileNote": "Charm 1 is included. Pheromones adds a Boost to Charm and one Advantage to Deception and Negotiation against targets who breathe and are not wearing breath masks. Empathy may be used once per encounter as a maneuver to sense emotions and presence within short range, or to upgrade an opposed Deception difficulty twice. Resolve these situational effects narratively."
+    }
+  ]
+}

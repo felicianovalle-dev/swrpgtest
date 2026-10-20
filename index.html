@@ -1893,7 +1893,7 @@ const NARR={boost:[{},{},{s:1},{s:1,a:1},{a:2},{a:1}],setback:[{},{},{f:1},{f:1}
 const FORCE_FACES=[{dark:1},{dark:1},{dark:1},{dark:1},{dark:1},{dark:1},{dark:2},{light:1},{light:1},{light:2},{light:2},{light:2}];
 const SKILL_CHAR={'Astrogation':'Intellect','Athletics':'Brawn','Brawl':'Brawn','Charm':'Presence','Coercion':'Willpower','Computers':'Intellect','Cool':'Presence','Coordination':'Agility','Deception':'Cunning','Discipline':'Willpower','Gunnery':'Agility','Leadership':'Presence','Lightsaber':'Brawn','Mechanics':'Intellect','Medicine':'Intellect','Melee':'Brawn','Negotiation':'Presence','Perception':'Cunning','Piloting (Planetary)':'Agility','Piloting (Space)':'Agility','Ranged (Heavy)':'Agility','Ranged (Light)':'Agility','Resilience':'Brawn','Skulduggery':'Cunning','Stealth':'Agility','Streetwise':'Cunning','Survival':'Cunning','Vigilance':'Willpower','Knowledge (Core Worlds)':'Intellect','Knowledge (Education)':'Intellect','Knowledge (Lore)':'Intellect','Knowledge (Outer Rim)':'Intellect','Knowledge (Underworld)':'Intellect','Knowledge (Warfare)':'Intellect','Knowledge (Xenology)':'Intellect'};
 const SPECIES={
-human:{name:'Human',xp:110,wt:10,st:10,c:{Brawn:2,Agility:2,Intellect:2,Cunning:2,Willpower:2,Presence:2},note:'Adaptable baseline. The source profile grants two ranks in any two non-career skills; that flexible picker is still pending.',source:'Complete Species Guide'},
+human:{name:'Human',xp:110,wt:10,st:10,c:{Brawn:2,Agility:2,Intellect:2,Cunning:2,Willpower:2,Presence:2},note:'Adaptable baseline. On Career, choose one included rank in each of two distinct non-career skills.',source:'Complete Species Guide'},
 clone:{name:'Clone',xp:100,wt:11,st:11,c:{Brawn:2,Agility:2,Intellect:2,Cunning:2,Willpower:2,Presence:2},free:{Resilience:1,'Knowledge (Warfare)':1},note:'Military training package.',source:'Rise of the Separatists'},
 geonosian:{name:'Geonosian',xp:140,wt:9,st:9,c:{Brawn:2,Agility:2,Intellect:2,Cunning:1,Willpower:1,Presence:1},note:'High starting XP with low Cunning, Willpower, and Presence.',source:'Rise of the Separatists'},
 kaminoan:{name:'Kaminoan',xp:100,wt:9,st:10,c:{Brawn:1,Agility:2,Intellect:3,Cunning:2,Willpower:2,Presence:2},free:{Medicine:1},note:'Intellect-focused baseline and medical training.',source:'Rise of the Separatists'},
@@ -5676,6 +5676,8 @@ function actors(){ensurePhase13State();return[{id:'pc',name:S.name,c:S.chars,sk:
 function talentCheckMods(actor,skill,ctx={}){
   let boost=ctx.boost||0,setback=ctx.setback||0,diff=ctx.diff??2;
   if(actor.id==='pc'){
+    if(S.species==='devaronian'&&skill==='Resilience'&&(ctx.poison===true||ctx.toxin===true))boost+=3;
+    if(S.species==='wookiee'&&skill==='Athletics'&&ctx.climb===true&&ctx.clawPierceable===true)boost++;
     if(S.species==='kaminoan'&&skill==='Charm')setback++;
     if(ctx.toxin||ctx.poison)boost+=talentRank('Blooded');
     if(ctx.outdoors)setback=Math.max(0,setback-talentRank('Outdoorsman'));
@@ -5785,7 +5787,7 @@ function chooseDeadlyAccuracySkill(){
   S.deadlyAccuracySkill=pick;bLog(`Deadly Accuracy is keyed to ${pick}.`);renderAll()
 }
 function performBest(skill,ctx={}){
-  let preview=bestActor(skill,ctx),live={...ctx,commit:true};
+  let preview=ctx.actorId==='pc'?actorPool(actorById('pc'),skill,ctx):bestActor(skill,ctx),live={...ctx,commit:true};
   if(preview.actor.id!=='pc'){
     let pc=actorById('pc'),override=false;
     if(hasTalent('Force of Will')&&!S.sessionUsed.forceOfWill&&confirm(`${preview.actor.name} is currently the recommended character. Use Force of Will so ${S.name} makes this check with Willpower instead?`)){
@@ -15324,13 +15326,14 @@ window.CharacterCatalog97 = (() => {
         "Willpower": 2,
         "Presence": 1
       },
-      "note": "Deception and Survival ranks are included. Multiple Livers gives three boosts to poison-related Resilience checks; resolve that situational bonus narratively.",
+      "note": "Deception and Survival ranks are included. Multiple Livers adds three Boost to PC Resilience checks explicitly marked as poison or toxin, including alcohol. On Skills, confirm the poison context and preview or roll your check.",
       "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.75",
       "verifiedPage97": 75,
       "free": {
         "Deception": 1,
         "Survival": 1
-      }
+      },
+      "effectSource124": "Complete Species Guide v6 \u00b7 fan supplement \u00b7 366-page Drive copy \u00b7 p.72 \u00b7 Multiple Livers only"
     },
     "neimoidian": {
       "name": "Neimoidian",
@@ -15738,9 +15741,10 @@ window.CharacterCatalog97 = (() => {
       "free": {
         "Brawl": 1
       },
-      "note": "Brawl 1 is included. Climbing Claws add a Boost on surfaces claws can pierce and can deal +1 Brawl damage as wounds. Wookiee Rage adds +1 Brawl/Melee damage while wounded, or +2 while critically injured. Resolve these abilities narratively.",
+      "note": "Brawl 1 is included. Climbing Claws adds one Boost to PC Athletics checks explicitly marked as climbing a surface claws can pierce. On Skills, confirm the surface and preview or roll your check. Wookiee Rage and claw damage require manual resolution.",
       "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.316",
-      "verifiedPage118": 316
+      "verifiedPage118": 316,
+      "effectSource124": "Complete Species Guide v6 \u00b7 fan supplement \u00b7 366-page Drive copy \u00b7 p.313 \u00b7 climbing Boost only"
     },
     "toydarian": {
       "name": "Toydarian",
@@ -56939,7 +56943,7 @@ window.CampaignContent97 = (() => {
   function renderAudit() {
     const parent=$('about97');if(!parent)return;let box=$('catalogAudit97');if(!box){box=document.createElement('section');box.id='catalogAudit97';box.className='creation-profile97';parent.prepend(box);}
     const c=catalog.coverage();
-    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Cerean, Lannik, Gungan and Kel Dor have also been checked. Cerean Intellectuals now supports two chosen Knowledge career skills without free ranks. Lannik, Gungan and Kel Dor situational effects remain narrative. Sluissi, Weequay, Wookiee, Toydarian, Trandoshan, Twi’lek, Nautolan and Mon Calamari have also been checked. Sluissi now includes Solid Repairs; the other reviewed traits remain narrative. Lasat, Togruta, Zeltron and Zabrak have also been checked. Zabrak Coercion now includes one automatic Advantage instead of a Boost die. The other three profiles’ situational effects remain narrative. Clone, Geonosian, Kaminoan and Umbaran have now been checked against Rise of the Separatists. Clone includes Physical Training, Kaminoan includes Researcher and its Charm Setback, Umbaran includes Entrancing Gaze, and Geonosian supports one chosen starting skill rank. Flight, assistance, lighting and targeted social effects still require narrative resolution. Tiss’shar has also been checked against the Complete Species Guide. New Tiss’shar use Intellect 3 and Presence 1; existing saved characteristics remain unchanged. All six subspecies choices grant their included skill or talent. Natural weapons and lighting remain narrative. Mikkian, Dowutin and Phydolon have also been checked against Knights of Fate; their official stats are retained instead of fan-guide variants. Mikkian already adds its Perception Boost. Phydolon nightly recovery is verified, and Recovery now asks whether another Phydolon is present for Symbiont Isolation. Dowutin size and Immovable remain narrative. Three older profiles still await a fresh source audit.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
+    box.innerHTML=`<h2>Character options & source coverage</h2><p>${c.careers} official careers · ${c.placements} career placements · ${c.trees} distinct career trees · ${c.universal} universal trees · ${c.species} species profiles.</p><p>${c.full} career layouts are recorded as full; ${c.simplified} use standardized data and ${c.prototype} still use prototypes. This audit does not certify every existing full tree or every talent effect against a sourcebook. ${Object.values(catalog.data.trees).filter(record=>record.auditedExisting).length} older full layouts have been checked against their sourcebooks. ${[...new Set(Object.values(CAREERS).flatMap(c=>Object.keys(c.specs)))].filter(name=>catalog.status(name)==='Full layout in saved build').length} older full layouts still await a fresh source check. The 25 Clone Wars and universal layouts were checked against the supplied tree collections. The 12 former prototype layouts were checked against the supplied Edge of the Empire core book and collection. Mechanic, Scout, and 14 Force and Destiny layouts were also checked against the supplied books and collections. The remaining 20 Age of Rebellion layouts were checked against the supplied core and career books. Earlier purchases are preserved; no career layouts remain simplified.</p><p>Six new species, with three Aqualish variants, use the supplied Complete Species Guide v6. Their characteristics, thresholds, XP, and starting ranks were checked on the cited pages. The guide is a fan supplement. Bothan, Rodian, Duros and Jawa base stats and starting benefits were also checked; their species-granted talents now count alongside purchased ranks. Tracking, navigation and scavenging time reductions and Jawa sensory traits require narrative resolution. Chiss, Mirialan, Pantoran and Sullustan have also been checked; Sullustan now includes Skilled Jockey. Lighting and temperature traits remain narrative. Review shows species talent ranks separately from purchased talents. Cerean, Lannik, Gungan and Kel Dor have also been checked. Cerean Intellectuals now supports two chosen Knowledge career skills without free ranks. Lannik, Gungan and Kel Dor situational effects remain narrative. Sluissi, Weequay, Wookiee, Toydarian, Trandoshan, Twi’lek, Nautolan and Mon Calamari have also been checked. Sluissi now includes Solid Repairs; the other reviewed traits remain narrative. Lasat, Togruta, Zeltron and Zabrak have also been checked. Zabrak Coercion now includes one automatic Advantage instead of a Boost die. The other three profiles’ situational effects remain narrative. Clone, Geonosian, Kaminoan and Umbaran have now been checked against Rise of the Separatists. Clone includes Physical Training, Kaminoan includes Researcher and its Charm Setback, Umbaran includes Entrancing Gaze, and Geonosian supports one chosen starting skill rank. Flight, assistance, lighting and targeted social effects still require narrative resolution. Tiss’shar has also been checked against the Complete Species Guide. New Tiss’shar use Intellect 3 and Presence 1; existing saved characteristics remain unchanged. All six subspecies choices grant their included skill or talent. Natural weapons and lighting remain narrative. Mikkian, Dowutin and Phydolon have also been checked against Knights of Fate; their official stats are retained instead of fan-guide variants. Mikkian already adds its Perception Boost. Phydolon nightly recovery is verified, and Recovery now asks whether another Phydolon is present for Symbiont Isolation. Dowutin size and Immovable remain narrative. Gand, Miraluka and Dantari have also been reviewed, completing the existing 44-profile source-review backlog. Species effects remain incomplete. Devaronian poison-related Resilience and qualifying Wookiee Athletics climbing checks now add their species Boost through explicit context controls on Skills.</p><div class="catalog-scroll97"><table class="catalog-table97"><thead><tr><th>Career</th><th>Specializations and layout status</th></tr></thead><tbody>${Object.entries(CAREERS).map(([name,career])=>`<tr><th>${esc(name)}</th><td>${Object.keys(career.specs).map(n=>`${esc(n)} · ${esc(catalog.status(n))}`).join('<br>')}</td></tr>`).join('')}</tbody></table></div><details><summary>Universal options</summary><p>${Object.keys(UNIVERSAL_TREES).map(esc).join(' · ')}</p><p>New universal layouts follow the supplied collections. Sourcebook rules remain the authority. Unimplemented special actions require narrative resolution.</p></details><details><summary>Campaign and adventure scope</summary><p>Four era start points and six story paths select the opening and suitable short missions. These are original Sable Reach scenarios inspired by Rise of the Separatists, Collapse of the Republic, Dawn of Rebellion, Under a Black Sun, Operation: Shadowpoint, and Lure of the Lost. They are not full ports of published adventures.</p><p>The existing galaxy, NPCs, procedural contracts, and older adventures retain their prior setting; they are not a complete era simulation. The new starts use the shared Sable Reach maps. Existing campaigns are preserved without retroactively assigning an era or replacing their quests.</p><p>Signature abilities, many special talent actions, and the entire 300-plus-species compilation are not fully implemented.</p></details>`;
   }
   function render() { renderSetup();renderPersonal();renderOpening();renderCreationExtras();renderAudit();const q=S.story61?.active,t=STORY_TEMPLATES_61[q?.templateId],panel=$('story61tab');if(t?.campaign97&&panel&&!panel.querySelector('.campaign-source97')){const p=document.createElement('p');p.className='campaign-source97';p.textContent=`${t.campaign97.kind} · ${t.campaign97.source}`;panel.appendChild(p);} }
   function install() {
@@ -56956,7 +56960,7 @@ window.CampaignContent97 = (() => {
   game.on('install',install);game.on('render',render);game.on('hydrate',()=>{catalog.installOptions();render();});
   game.on('ready',()=>{if(!S.finalized&&!game.saves.candidates().some(row=>row.valid&&row.kind!=='recovery'))game.resume.current();});
   game.on('navigate',({id,internal})=>{if(!internal&&!S.finalized&&hasSetup()&&!['playhub80','save97','about97'].includes(id)){const c=config();c.step=id;S.campaign97=c;}if(['campaignSetup97','personal97','opening97','identity','career','review','force'].includes(id))render();});
-  BUILD_INFO.version='96.27-gand-respiration';BUILD_INFO.saveSchema=92;
+  BUILD_INFO.version='96.28-species-context';BUILD_INFO.saveSchema=92;
   window.__SABLE_REACH__={...window.__SABLE_REACH__,version:BUILD_INFO.version};
 })();
 
@@ -57136,6 +57140,49 @@ window.CampaignContent97 = (() => {
  }
  window.Species123={pending,choose,validateSnapshot,renderReview};
  game.on('render',render);game.on('hydrate',data=>{if(data.gandRespiration123===undefined)delete S.gandRespiration123;render();});game.on('navigate',({id})=>{if(['identity','review'].includes(id))render();});
+})();
+
+/* Check-local declarations. Only the rolled result/context enters S.last. */
+(()=>{
+ 'use strict';
+ let selectedSpecies=null,qualifies=false,difficulty=2,boost=0,setback=0;
+ const supported=()=>['devaronian','wookiee'].includes(S.species);
+ const bounded=(value,max)=>Number.isInteger(Number(value))?Math.max(0,Math.min(max,Number(value))):0;
+ const skill=()=>S.species==='devaronian'?'Resilience':'Athletics';
+ const context=()=>({actorId:'pc',speciesCheck124:true,diff:difficulty,boost,setback,...(S.species==='devaronian'?{poison:qualifies}:{climb:true,clawPierceable:qualifies})});
+ function clearContext(){selectedSpecies=null;qualifies=false;difficulty=2;boost=0;setback=0;}
+ function renderPool(){
+  if(!$('speciesPool124')||!supported())return;
+  const q=actorPool(actorById('pc'),skill(),context()),poison=S.species==='devaronian';
+  $('speciesPool124').innerHTML=`<p>${pxEsc67(S.name)} · ${skill()} · ${qualifies?(poison?'Multiple Livers: +3 Boost':'Climbing Claws: +1 Boost'):'No species bonus'}</p>${dicePoolHTML(q.p)}`;
+ }
+ function roll(){
+  if(!supported()||!S.finalized||S.combat)return false;
+  const out=performBest(skill(),context());
+  qualifies=false;render();$('speciesRoll124')?.focus({preventScroll:true});renderHud();safeAutosave();return out;
+ }
+ function render(){
+  if(!$('skills'))return;
+  if(selectedSpecies!==S.species){clearContext();selectedSpecies=S.species;}
+  let box=$('speciesChecks124');
+  if(!supported()){box?.remove();return;}
+  if(!box){box=document.createElement('section');box.id='speciesChecks124';box.className='creation-note97';$('skills').append(box);}
+  const poison=S.species==='devaronian',last=S.last;
+  box.innerHTML=`<h3>${poison?'Poison resistance':'Climbing'} check</h3><p>${poison?'Multiple Livers adds 3 Boost when resisting poison, including alcohol. Other Resilience checks receive no species bonus.':'Climbing Claws adds 1 Boost to an Athletics check when climbing a surface your claws can pierce. Other Athletics checks receive no climbing bonus.'}</p>
+   <label style="display:flex;align-items:center;gap:8px"><input id="speciesQualifies124" type="checkbox" style="width:auto;flex:0 0 auto" ${qualifies?'checked':''}> ${poison?'This check resists poison':'The climbing surface can be pierced by claws'}</label>
+   <div class="grid g3"><label>Difficulty<select id="speciesDifficulty124">${[0,1,2,3,4,5].map(n=>`<option value="${n}" ${difficulty===n?'selected':''}>${n}</option>`).join('')}</select></label><label>Other Boost dice<input id="speciesBoost124" type="number" min="0" max="10" value="${boost}"></label><label>Setback dice<input id="speciesSetback124" type="number" min="0" max="10" value="${setback}"></label></div>
+   <div id="speciesPool124" aria-live="polite"></div>
+   <button id="speciesRoll124" class="btn primary" ${!S.finalized||S.combat?'disabled':''}>Roll your ${skill()} check</button><p>${!S.finalized?'Finalize your character to roll.':S.combat?'Finish the active combat before using this check.':'Uses your character and the normal check, Destiny and talent rules. No XP or credits are awarded.'} Confirm the circumstance for each roll; it clears after rolling, leaving Skills, or loading.</p>
+   ${last?.ctx?.speciesCheck124?`<div id="speciesLast124" role="status"><b>Last check · ${pxEsc67(last.q.skill)}</b>${dicePoolHTML(last.q.p)}${resultHTML(last.r)}</div>`:''}`;
+  $('speciesQualifies124').onchange=()=>{qualifies=$('speciesQualifies124').checked;renderPool();};
+  for(const [id,max,set] of [['speciesDifficulty124',5,v=>difficulty=v],['speciesBoost124',10,v=>boost=v],['speciesSetback124',10,v=>setback=v]])$(id).onchange=()=>{const value=bounded($(id).value,max);set(value);$(id).value=String(value);renderPool();};
+  $('speciesRoll124').onclick=roll;
+  renderPool();
+ }
+ window.Species124={render,clearContext};
+ Game97.on('render',render);
+ Game97.on('hydrate',()=>{clearContext();render();});
+ Game97.on('navigate',({id,internal})=>{if(id==='skills')render();else if(!internal){clearContext();render();}});
 })();
 
 try{Game97.boot();markBoot90('Ready to play.',true)}catch(e){showRuntimeError(`Opening failed: ${e.message}`)}</script>

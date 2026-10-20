@@ -1,6 +1,6 @@
 {
   "name": "sable-reach-pwa",
-  "version": "1.9.33",
+  "version": "1.9.34",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
@@ -43,7 +43,9 @@
     "test:creation:clone-wars-species": "node scripts/check_creation120.cjs local",
     "test:creation:tissshar": "node scripts/check_creation121.cjs local",
     "test:creation:knights-species": "node scripts/check_creation122.cjs local",
-    "test:creation:gand": "node scripts/check_creation123.cjs local"
+    "test:creation:gand": "node scripts/check_creation123.cjs local",
+    "test:species:context": "node scripts/check_species124.cjs",
+    "test:browser:species-context": "node scripts/check_creation124.cjs local"
   },
   "devDependencies": {
     "@napi-rs/canvas": "1.0.10",

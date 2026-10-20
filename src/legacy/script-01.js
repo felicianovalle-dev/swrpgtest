@@ -6,7 +6,7 @@ const NARR={boost:[{},{},{s:1},{s:1,a:1},{a:2},{a:1}],setback:[{},{},{f:1},{f:1}
 const FORCE_FACES=[{dark:1},{dark:1},{dark:1},{dark:1},{dark:1},{dark:1},{dark:2},{light:1},{light:1},{light:2},{light:2},{light:2}];
 const SKILL_CHAR={'Astrogation':'Intellect','Athletics':'Brawn','Brawl':'Brawn','Charm':'Presence','Coercion':'Willpower','Computers':'Intellect','Cool':'Presence','Coordination':'Agility','Deception':'Cunning','Discipline':'Willpower','Gunnery':'Agility','Leadership':'Presence','Lightsaber':'Brawn','Mechanics':'Intellect','Medicine':'Intellect','Melee':'Brawn','Negotiation':'Presence','Perception':'Cunning','Piloting (Planetary)':'Agility','Piloting (Space)':'Agility','Ranged (Heavy)':'Agility','Ranged (Light)':'Agility','Resilience':'Brawn','Skulduggery':'Cunning','Stealth':'Agility','Streetwise':'Cunning','Survival':'Cunning','Vigilance':'Willpower','Knowledge (Core Worlds)':'Intellect','Knowledge (Education)':'Intellect','Knowledge (Lore)':'Intellect','Knowledge (Outer Rim)':'Intellect','Knowledge (Underworld)':'Intellect','Knowledge (Warfare)':'Intellect','Knowledge (Xenology)':'Intellect'};
 const SPECIES={
-human:{name:'Human',xp:110,wt:10,st:10,c:{Brawn:2,Agility:2,Intellect:2,Cunning:2,Willpower:2,Presence:2},note:'Adaptable baseline. The source profile grants two ranks in any two non-career skills; that flexible picker is still pending.',source:'Complete Species Guide'},
+human:{name:'Human',xp:110,wt:10,st:10,c:{Brawn:2,Agility:2,Intellect:2,Cunning:2,Willpower:2,Presence:2},note:'Adaptable baseline. On Career, choose one included rank in each of two distinct non-career skills.',source:'Complete Species Guide'},
 clone:{name:'Clone',xp:100,wt:11,st:11,c:{Brawn:2,Agility:2,Intellect:2,Cunning:2,Willpower:2,Presence:2},free:{Resilience:1,'Knowledge (Warfare)':1},note:'Military training package.',source:'Rise of the Separatists'},
 geonosian:{name:'Geonosian',xp:140,wt:9,st:9,c:{Brawn:2,Agility:2,Intellect:2,Cunning:1,Willpower:1,Presence:1},note:'High starting XP with low Cunning, Willpower, and Presence.',source:'Rise of the Separatists'},
 kaminoan:{name:'Kaminoan',xp:100,wt:9,st:10,c:{Brawn:1,Agility:2,Intellect:3,Cunning:2,Willpower:2,Presence:2},free:{Medicine:1},note:'Intellect-focused baseline and medical training.',source:'Rise of the Separatists'},
@@ -3789,6 +3789,8 @@ function actors(){ensurePhase13State();return[{id:'pc',name:S.name,c:S.chars,sk:
 function talentCheckMods(actor,skill,ctx={}){
   let boost=ctx.boost||0,setback=ctx.setback||0,diff=ctx.diff??2;
   if(actor.id==='pc'){
+    if(S.species==='devaronian'&&skill==='Resilience'&&(ctx.poison===true||ctx.toxin===true))boost+=3;
+    if(S.species==='wookiee'&&skill==='Athletics'&&ctx.climb===true&&ctx.clawPierceable===true)boost++;
     if(S.species==='kaminoan'&&skill==='Charm')setback++;
     if(ctx.toxin||ctx.poison)boost+=talentRank('Blooded');
     if(ctx.outdoors)setback=Math.max(0,setback-talentRank('Outdoorsman'));
@@ -3898,7 +3900,7 @@ function chooseDeadlyAccuracySkill(){
   S.deadlyAccuracySkill=pick;bLog(`Deadly Accuracy is keyed to ${pick}.`);renderAll()
 }
 function performBest(skill,ctx={}){
-  let preview=bestActor(skill,ctx),live={...ctx,commit:true};
+  let preview=ctx.actorId==='pc'?actorPool(actorById('pc'),skill,ctx):bestActor(skill,ctx),live={...ctx,commit:true};
   if(preview.actor.id!=='pc'){
     let pc=actorById('pc'),override=false;
     if(hasTalent('Force of Will')&&!S.sessionUsed.forceOfWill&&confirm(`${preview.actor.name} is currently the recommended character. Use Force of Will so ${S.name} makes this check with Willpower instead?`)){

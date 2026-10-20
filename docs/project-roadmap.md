@@ -4,7 +4,7 @@ Current published release: **1.9.33**. The user authorized continuing through th
 
 ## Resume point
 
-Species review and missing starting benefits are the active workstream. The final existing-profile source-review batch (Gand, Miraluka and Dantari), including the Gand respiration choice, is complete and published. No fresh reviews remain in the existing roster; species work is still incomplete. Continue with an inventory of remaining manual species effects and their required context before selecting an implementation batch. Distinguish official profiles from fan-guide variants and preserve old progress. Finish reviewed species' manual effects before marking species work complete.
+Species review and missing starting benefits are the active workstream. The final existing-profile source-review batch (Gand, Miraluka and Dantari), including the Gand respiration choice, is complete and published. No fresh reviews remain in the existing roster; species work is still incomplete. The [44-profile effects inventory](species-effects-inventory.md) is complete. The 1.9.34 poison/climbing update is authorized for publication. Finish its hosted verification, then continue with typed lighting/climate check context. Distinguish official profiles from fan-guide variants and preserve old progress. Finish reviewed species' manual effects before marking species work complete.
 
 On resumption, inspect current GitHub main, this roadmap, and the latest verification report. Preserve existing characters, XP, purchases and story progress. Update this roadmap with the completed work, tests, release and next unfinished item after each published batch.
 
@@ -135,3 +135,7 @@ Reviewed official Knights of Fate profiles: Dowutin p.19, Mikkian p.21, Phydolon
 ## Update 1.9.33
 
 Reviewed Gand (p.106), Miraluka (p.178) and Dantari (p.70) against the supplied 358-page fan guide. Base stats and starting ranks are unchanged. Added a once-only Gand respiration choice, including +10 XP for With lungs and explicit older-save claims. Remaining breathing, Rituals, Miraluka sight and Dantari technology effects are manual and disclosed. Verified: 31 regression targets, 64 local browser flows and 8 hosted flows passed. [Verification](gand-guide-verification.md).
+
+## Update 1.9.34 — deployment in progress
+
+Added Devaronian poison/toxin Resilience Boost, Wookiee claw-pierceable Athletics climbing Boost, explicit Skills preview/roll controls, transient context, retained keyboard focus and corrected stale copy. Stats, starting ranks, XP, purchases and save schema stay unchanged. The source copy differs from the older baseline; resolve variants before changing characteristics or implementing Wookiee claw damage. [Verification](species-context-verification.md). Deployment and hosted verification must complete before another phase.

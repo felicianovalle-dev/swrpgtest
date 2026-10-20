@@ -80,13 +80,14 @@
         "Willpower": 2,
         "Presence": 1
       },
-      "note": "Deception and Survival ranks are included. Multiple Livers gives three boosts to poison-related Resilience checks; resolve that situational bonus narratively.",
+      "note": "Deception and Survival ranks are included. Multiple Livers adds three Boost to PC Resilience checks explicitly marked as poison or toxin, including alcohol. On Skills, confirm the poison context and preview or roll your check.",
       "source": "Complete Species Guide v6 \u00b7 fan profile \u00b7 p.75",
       "verifiedPage97": 75,
       "free": {
         "Deception": 1,
         "Survival": 1
-      }
+      },
+      "effectSource124": "Complete Species Guide v6 \u00b7 fan supplement \u00b7 366-page Drive copy \u00b7 p.72 \u00b7 Multiple Livers only"
     },
     "neimoidian": {
       "name": "Neimoidian",
@@ -494,9 +495,10 @@
       "free": {
         "Brawl": 1
       },
-      "note": "Brawl 1 is included. Climbing Claws add a Boost on surfaces claws can pierce and can deal +1 Brawl damage as wounds. Wookiee Rage adds +1 Brawl/Melee damage while wounded, or +2 while critically injured. Resolve these abilities narratively.",
+      "note": "Brawl 1 is included. Climbing Claws adds one Boost to PC Athletics checks explicitly marked as climbing a surface claws can pierce. On Skills, confirm the surface and preview or roll your check. Wookiee Rage and claw damage require manual resolution.",
       "source": "Complete Species Guide v6.0 fan supplement \u00b7 358-page copy \u00b7 p.316",
-      "verifiedPage118": 316
+      "verifiedPage118": 316,
+      "effectSource124": "Complete Species Guide v6 \u00b7 fan supplement \u00b7 366-page Drive copy \u00b7 p.313 \u00b7 climbing Boost only"
     },
     "toydarian": {
       "name": "Toydarian",

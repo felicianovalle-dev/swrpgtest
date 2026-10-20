@@ -1,0 +1,153 @@
+{
+  "build": "96.28-species-context",
+  "package": "1.9.34",
+  "saveSchema": 92,
+  "testedIndex": {
+    "bytes": 4116320,
+    "sha256": "c6c372e6eb3fd8a24a54a53440c9e1a1b97c00ed24019895e3787e3f9bb7b49f"
+  },
+  "approvedCandidateChecksumMatches": true,
+  "focused": {
+    "passed": 24,
+    "checks": [
+      "Multiple Livers adds three Boost",
+      "Toxin alias works without duplicate grants",
+      "Normal checks, wrong skills and crew gain no bonus",
+      "Species context requires booleans",
+      "Other dice are preserved and input context is immutable",
+      "Blooded stacks with the species bonus",
+      "Repeated previews do not duplicate bonuses",
+      "Skills controls and preview agree",
+      "Visible edits retain keyboard focus",
+      "Numeric controls reject fractions and clamp out-of-range values",
+      "UI roll applies correct dice and preserves XP/progress",
+      "Following ordinary roll does not inherit poison",
+      "Recorded result survives loading without recomputation",
+      "Unrolled context is transient and clears on navigation",
+      "Unfinalized and active-combat characters cannot use the panel",
+      "Climbing needs both qualifying tags",
+      "Claws do not boost Brawl, poison or other actors",
+      "Climbing stacks with Physical Training and retains Setback",
+      "Wookiee UI rolls Athletics and clears context",
+      "Explicit PC request bypasses best-actor substitution",
+      "Ordinary party checks retain best-actor selection",
+      "Wookiee load preserves progress and result but clears active context",
+      "Other species gain no grants or panel",
+      "Stale source coverage and Human text are corrected"
+    ]
+  },
+  "localBrowser": {
+    "build": "96.28-species-context",
+    "target": "http://127.0.0.1:42751/",
+    "checks": [
+      {
+        "species": "devaronian",
+        "width": 320,
+        "creation": true,
+        "purchasePreserved": true,
+        "eligibleRoll": true,
+        "ordinaryRoll": true,
+        "contextCleared": true,
+        "keyboardFocus": true,
+        "manualSaveReloadResume": true,
+        "savedRollPreserved": true,
+        "overflow": false
+      },
+      {
+        "species": "devaronian",
+        "width": 390,
+        "creation": true,
+        "purchasePreserved": true,
+        "eligibleRoll": true,
+        "ordinaryRoll": true,
+        "contextCleared": true,
+        "keyboardFocus": true,
+        "manualSaveReloadResume": true,
+        "savedRollPreserved": true,
+        "overflow": false
+      },
+      {
+        "species": "devaronian",
+        "width": 1280,
+        "creation": true,
+        "purchasePreserved": true,
+        "eligibleRoll": true,
+        "ordinaryRoll": true,
+        "contextCleared": true,
+        "keyboardFocus": true,
+        "manualSaveReloadResume": true,
+        "savedRollPreserved": true,
+        "overflow": false
+      },
+      {
+        "species": "wookiee",
+        "width": 320,
+        "creation": true,
+        "purchasePreserved": true,
+        "eligibleRoll": true,
+        "ordinaryRoll": true,
+        "contextCleared": true,
+        "keyboardFocus": true,
+        "manualSaveReloadResume": true,
+        "savedRollPreserved": true,
+        "overflow": false
+      },
+      {
+        "species": "wookiee",
+        "width": 390,
+        "creation": true,
+        "purchasePreserved": true,
+        "eligibleRoll": true,
+        "ordinaryRoll": true,
+        "contextCleared": true,
+        "keyboardFocus": true,
+        "manualSaveReloadResume": true,
+        "savedRollPreserved": true,
+        "overflow": false
+      },
+      {
+        "species": "wookiee",
+        "width": 1280,
+        "creation": true,
+        "purchasePreserved": true,
+        "eligibleRoll": true,
+        "ordinaryRoll": true,
+        "contextCleared": true,
+        "keyboardFocus": true,
+        "manualSaveReloadResume": true,
+        "savedRollPreserved": true,
+        "overflow": false
+      }
+    ],
+    "errors": [],
+    "complete": true
+  },
+  "freshRegressions": {
+    "complete": false,
+    "results": [
+      {
+        "name": "check_species115.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 57678
+      },
+      {
+        "name": "check_species116.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 81271
+      },
+      {
+        "name": "check_species117.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 61529
+      }
+    ]
+  },
+  "priorIdenticalCandidateRegressionSuites": 12,
+  "deployment": {
+    "status": "in progress",
+    "hostedVerificationComplete": false
+  }
+}
