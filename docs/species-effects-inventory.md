@@ -53,7 +53,7 @@ Baseline: published 1.9.33 (`06225d8`), updated for the 1.9.34 poison/climbing r
 
 ## Implementation order
 
-1. Finish this release’s deployment and hosted verification.
+1. Completed: v1.9.34 deployed; hosted HTML, service worker and six flows verified.
 2. Add typed lighting/climate causes, counts and explicit controls; retain unrelated Setback.
 3. Add qualifying Trandoshan recovery, natural weapon selection and Wookiee Rage.
 4. Add assistance with both actor identities and targeted social contexts.

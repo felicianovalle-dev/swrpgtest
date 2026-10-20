@@ -4,7 +4,8 @@
   "saveSchema": 92,
   "testedIndex": {
     "bytes": 4116320,
-    "sha256": "c6c372e6eb3fd8a24a54a53440c9e1a1b97c00ed24019895e3787e3f9bb7b49f"
+    "sha256": "c6c372e6eb3fd8a24a54a53440c9e1a1b97c00ed24019895e3787e3f9bb7b49f",
+    "gitBlob": "9837cec3fe9ffe1a1aabeeadb128caf9e91e4c2d"
   },
   "approvedCandidateChecksumMatches": true,
   "focused": {
@@ -123,7 +124,7 @@
     "complete": true
   },
   "freshRegressions": {
-    "complete": false,
+    "complete": true,
     "results": [
       {
         "name": "check_species115.cjs",
@@ -142,12 +143,179 @@
         "code": 0,
         "signal": null,
         "ms": 61529
+      },
+      {
+        "name": "check_species119.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 63871
+      },
+      {
+        "name": "check_species118.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 121269
+      },
+      {
+        "name": "check_species120.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 85267
+      },
+      {
+        "name": "check_species122.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 75589
+      },
+      {
+        "name": "check_species121.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 162142
+      },
+      {
+        "name": "check_save_reliability.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 44983
+      },
+      {
+        "name": "check_setbacks.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 19511
+      },
+      {
+        "name": "check_species123.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 104114
+      },
+      {
+        "name": "check_campaign97.cjs",
+        "code": 0,
+        "signal": null,
+        "ms": 149974
       }
     ]
   },
-  "priorIdenticalCandidateRegressionSuites": 12,
   "deployment": {
-    "status": "in progress",
-    "hostedVerificationComplete": false
-  }
+    "status": "success",
+    "sourceCommit": "3a4ca37e794dd00bd2a543d1d0cb66691b394836",
+    "workflow": {
+      "id": 39356658001,
+      "name": "pages build and deployment",
+      "status": "completed",
+      "conclusion": "success",
+      "head_sha": "3a4ca37e794dd00bd2a543d1d0cb66691b394836",
+      "html_url": "https://github.com/felicianovalle-dev/swrpgtest/actions/runs/39356658001"
+    },
+    "hostedHTML": {
+      "url": "https://felicianovalle-dev.github.io/swrpgtest/?v=3a4ca37e794d",
+      "bytes": 4116320,
+      "sha256": "c6c372e6eb3fd8a24a54a53440c9e1a1b97c00ed24019895e3787e3f9bb7b49f",
+      "expected": "c6c372e6eb3fd8a24a54a53440c9e1a1b97c00ed24019895e3787e3f9bb7b49f",
+      "matches": true
+    },
+    "hostedServiceWorker": [
+      {
+        "path": "sw.js",
+        "bytes": 1270,
+        "sha256": "715d24108da72d2df4664ef31ea12e0e0660dcec4bc942c7a80c5b28ed1fc4b1",
+        "expected": "715d24108da72d2df4664ef31ea12e0e0660dcec4bc942c7a80c5b28ed1fc4b1",
+        "matches": true
+      }
+    ],
+    "hostedBrowser": {
+      "build": "96.28-species-context",
+      "target": "https://felicianovalle-dev.github.io/swrpgtest/?v=3a4ca37e794d",
+      "checks": [
+        {
+          "species": "devaronian",
+          "width": 320,
+          "creation": true,
+          "purchasePreserved": true,
+          "eligibleRoll": true,
+          "ordinaryRoll": true,
+          "contextCleared": true,
+          "keyboardFocus": true,
+          "manualSaveReloadResume": true,
+          "savedRollPreserved": true,
+          "overflow": false
+        },
+        {
+          "species": "devaronian",
+          "width": 390,
+          "creation": true,
+          "purchasePreserved": true,
+          "eligibleRoll": true,
+          "ordinaryRoll": true,
+          "contextCleared": true,
+          "keyboardFocus": true,
+          "manualSaveReloadResume": true,
+          "savedRollPreserved": true,
+          "overflow": false
+        },
+        {
+          "species": "devaronian",
+          "width": 1280,
+          "creation": true,
+          "purchasePreserved": true,
+          "eligibleRoll": true,
+          "ordinaryRoll": true,
+          "contextCleared": true,
+          "keyboardFocus": true,
+          "manualSaveReloadResume": true,
+          "savedRollPreserved": true,
+          "overflow": false
+        },
+        {
+          "species": "wookiee",
+          "width": 320,
+          "creation": true,
+          "purchasePreserved": true,
+          "eligibleRoll": true,
+          "ordinaryRoll": true,
+          "contextCleared": true,
+          "keyboardFocus": true,
+          "manualSaveReloadResume": true,
+          "savedRollPreserved": true,
+          "overflow": false
+        },
+        {
+          "species": "wookiee",
+          "width": 390,
+          "creation": true,
+          "purchasePreserved": true,
+          "eligibleRoll": true,
+          "ordinaryRoll": true,
+          "contextCleared": true,
+          "keyboardFocus": true,
+          "manualSaveReloadResume": true,
+          "savedRollPreserved": true,
+          "overflow": false
+        },
+        {
+          "species": "wookiee",
+          "width": 1280,
+          "creation": true,
+          "purchasePreserved": true,
+          "eligibleRoll": true,
+          "ordinaryRoll": true,
+          "contextCleared": true,
+          "keyboardFocus": true,
+          "manualSaveReloadResume": true,
+          "savedRollPreserved": true,
+          "overflow": false
+        }
+      ],
+      "errors": [],
+      "complete": true
+    },
+    "hostedVerificationComplete": true,
+    "verifiedAtUTC": "2026-10-20T02:07:08.663492+00:00"
+  },
+  "nativeIPhoneSafariVerified": false,
+  "catalogDataPreservedExceptTwoNotesAndEffectSourceAnnotations": true
 }
